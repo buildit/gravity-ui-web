@@ -1,0 +1,41 @@
+{
+  "name": "@buildit/gravity-ui-sass",
+  "version": "0.0.1",
+  "description": "A SASS UI library from the Buildit's Gravity design system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildit/gravity-ui-sass.git"
+  },
+  "keywords": [
+    "sass",
+    "ui",
+    "css",
+    "web",
+    "design",
+    "gravity",
+    "buildit",
+    "eyeglass",
+    "style",
+    "design-system",
+    "style-guide"
+  ],
+  "author": {
+    "name": "Buildit",
+    "url": "http://buildit.wiprodigital.com/"
+  },
+  "contributors": [
+    "Matteo Pescarin",
+    "Ben Oakenfull",
+    "Marcos Peebles",
+    "James Nash <james.nash@wipro.com> (http://cirrus.twiddles.com/)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buildit/gravity-ui-sass/issues"
+  },
+  "homepage": "https://github.com/buildit/gravity-ui-sass#readme"
+}
