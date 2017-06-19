@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "color-hex-case": "upper",
+    "color-hex-length": "long",
+    "number-leading-zero": "never",
+    "at-rule-empty-line-before": null
+  }
+}
