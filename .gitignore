@@ -1,3 +1,9 @@
+# Exlclude build Output
+dist/
+
+
+######### App / OS-specific guff ##########
+
 ### macOS ###
 *.DS_Store
 .AppleDouble
