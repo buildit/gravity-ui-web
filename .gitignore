@@ -5,7 +5,7 @@ dist/
 ######### App / OS-specific guff ##########
 
 ### macOS ###
-*.DS_Store
+.DS_Store
 .AppleDouble
 .LSOverride
 

@@ -1,7 +1,16 @@
 /******************************************************
- * PATTERN LAB NODE
- * EDITION-NODE-GULP
- * The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.
+ * GRAVITY UI LIB + LIVING STYLE GUIDE
+ * 
+ * Contains tasks to:
+ * 
+ * - Build the UI lib
+ * - Build the living style guide
+ * 
+ * Note that substantial chunks of this file were
+ * originally copied from Pattern Lab's Node Gulp
+ * Edition gulpfile:
+ * https://github.com/pattern-lab/edition-node-gulp/blob/master/gulpfile.js
+ * 
 ******************************************************/
 const gulp = require('gulp');
 const path = require('path');
@@ -10,7 +19,6 @@ const sass = require('gulp-sass');
 const eyeglass = require('eyeglass');
 const argv = require('minimist')(process.argv.slice(2));
 const chalk = require('chalk');
-const concat = require('gulp-concat');
 
 /**
  * Normalize all paths to be plain, paths with no leading './',
@@ -34,7 +42,7 @@ function normalizePath() {
 
 gulp.task('pl-sass', function () {
   const sassOptions = {
-  //   includePaths: [paths().source.sass].concat(require('node-neat').includePaths)
+    // TODO: Eyeglass integration
   };
 
   return gulp.src(path.resolve(paths().source.sass, '**/*.scss'))
@@ -78,14 +86,6 @@ gulp.task('pl-copy:assets', function () {
 // CSS Copy base style
 gulp.task('pl-copy:css:style', function () {
   return gulp.src(normalizePath(paths().source.css) + '/**/*.css')
-    .pipe(gulp.dest(normalizePath(paths().public.css)))
-    .pipe(browserSync.stream());
-});
-
-// CSS Concat and copy pattern-scaffolding
-gulp.task('pl-copy:css:scaffolding', function () {
-  return gulp.src(normalizePath(paths().source.css) + '/*pattern-scaffolding*.css')
-    .pipe(concat('pattern-scaffolding.css'))
     .pipe(gulp.dest(normalizePath(paths().public.css)))
     .pipe(browserSync.stream());
 });
@@ -149,7 +149,6 @@ gulp.task('pl-assets', gulp.series(
     'pl-copy:font',
     'pl-sass',
     'pl-copy:css:style',
-    'pl-copy:css:scaffolding',
     'pl-copy:styleguide',
     'pl-copy:styleguide-css'
   ),
@@ -233,7 +232,7 @@ function watch() {
       name: 'CSS',
       paths: [normalizePath(paths().source.css, '**', '*.css')],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series(['pl-copy:css:style', 'pl-copy:css:scaffolding'], reloadCSS)
+      tasks: gulp.series('pl-copy:css:style', reloadCSS)
     },
     {
       name: 'Styleguide Files',
