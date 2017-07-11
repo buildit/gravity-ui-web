@@ -1,9 +1,75 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-sass-guidelines",
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-selector-bem-pattern",
+    "stylelint-order"
+  ],
+  "ignoreFiles": "node_modules",
   "rules": {
-    "color-hex-case": "upper",
-    "color-hex-length": "long",
-    "number-leading-zero": "never",
-    "at-rule-empty-line-before": null
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": [ "attribute" ]
+      }
+    ],
+    "max-nesting-depth": 2,
+    "color-named": [
+      "never",
+       {
+         "ignore": ["inside-function"]
+       }
+    ],
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ],
+    "no-duplicate-selectors": true,
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": ["consecutive-duplicates-with-different-values"]
+      }
+    ],
+    "scss/selector-no-redundant-nesting-selector": true,
+    "scss/at-extend-no-missing-placeholder": true,
+    "scss/dollar-variable-no-missing-interpolation": true,
+    "scss/at-mixin-argumentless-call-parentheses": "never",
+    "plugin/selector-bem-pattern": {
+      "preset": "bem",
+      "presetOptions": {
+        "namespace": "ln"
+      },
+      "componentName": "(([a-z0-9]+(?!-$)-?)+)",
+      "componentSelectors": {
+        "initial": "\\.{componentName}(((__|--)(([a-z0-9\\[\\]'=]+(?!-$)-?)+))+)?$"
+      },
+      "ignoreSelectors": [
+        ".*\\.js-.*"
+      ]
+    },
+    "order/order": [
+      {
+        "type": "at-rule",
+        "name": "extend"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": false
+      },
+      "custom-properties",
+      "dollar-variables",
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": true
+      },
+      "rules"
+    ]
   }
 }
