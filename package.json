@@ -1,6 +1,6 @@
 {
   "name": "@buildit/gravity-ui-sass",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A SASS UI library from the Buildit's Gravity design system",
   "main": "index.js",
   "scripts": {
@@ -51,6 +51,9 @@
     "styleguidekit-assets-default": "^3.4.0",
     "styleguidekit-mustache-default": "^3.1.0",
     "stylelint": "^7.11.1",
-    "stylelint-config-standard": "^16.0.0"
+    "stylelint-config-sass-guidelines": "^2.2.0",
+    "stylelint-order": "^0.5.0",
+    "stylelint-scss": "^1.5.1",
+    "stylelint-selector-bem-pattern": "^1.1.0"
   }
 }
