@@ -41,7 +41,7 @@
     "plugin/selector-bem-pattern": {
       "preset": "bem",
       "presetOptions": {
-        "namespace": "ln"
+        "namespace": "ms2"
       },
       "componentName": "(([a-z0-9]+(?!-$)-?)+)",
       "componentSelectors": {
