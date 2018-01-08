@@ -4,8 +4,8 @@
   "description": "A SASS UI library from the Buildit's Gravity design system",
   "main": "index.js",
   "scripts": {
-    "styleguide": "gulp patternlab:build",
-    "start": "gulp patternlab:serve",
+    "styleguide": "gulp styleguide",
+    "start": "gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -47,9 +47,10 @@
     "gulp": "gulpjs/gulp#4.0",
     "gulp-sass": "^3.1.0",
     "minimist": "^1.2.0",
-    "patternlab-node": "^2.9.3",
-    "styleguidekit-assets-default": "^3.4.0",
-    "styleguidekit-mustache-default": "^3.1.0",
+    "@pattern-lab/patternlab-node": "^3.0.0-alpha.5",
+    "@pattern-lab/patternengine-node-mustache": "^2.0.0-alpha.1",
+    "@pattern-lab/styleguidekit-assets-default": "^4.0.0-alpha.2",
+    "@pattern-lab/styleguidekit-mustache-default": "^4.0.0-alpha.1",
     "stylelint": "^7.11.1",
     "stylelint-config-sass-guidelines": "^2.2.0",
     "stylelint-order": "^0.5.0",
