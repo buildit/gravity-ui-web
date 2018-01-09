@@ -1,0 +1,94 @@
+{
+  "palettes": [
+    {
+      "name": "Primary accents",
+      "colors": [
+        {
+          "name": "Darkest egg yolk",
+          "var": "$color-accent-egg-darkest",
+          "color": "#503102"
+        },
+        {
+          "name": "Dark egg yolk",
+          "var": "$color-accent-egg-dark",
+          "color": "#AD6802"
+        },
+        {
+          "name": "Egg yolk",
+          "var": "$color-accent-egg",
+          "color": "#FF9A02"
+        },
+        {
+          "name": "Light egg yolk",
+          "var": "$color-accent-egg-light",
+          "color": "#FFBD59"
+        },
+        {
+          "name": "Lightest egg yolk",
+          "var": "$color-accent-egg-lightest",
+          "color": "#FFE7C2"
+        }
+      ]
+    },
+    {
+      "name": "Secondary accents",
+      "colors": [
+        {
+          "name": "Darkest blue",
+          "var": "$color-accent-blue-darkest",
+          "color": "#032D3F"
+        },
+        {
+          "name": "Dark blue",
+          "var": "$color-accent-blue-dark",
+          "color": "#0B5872"
+        },
+        {
+          "name": "Blue",
+          "var": "$color-accent-blue",
+          "color": "#2A7B96"
+        },
+        {
+          "name": "Light blue",
+          "var": "$color-accent-blue-light",
+          "color": "#5FA2B9"
+        },
+        {
+          "name": "Lightest blue",
+          "var": "$color-accent-blue-lightest",
+          "color": "#D5E9F0"
+        }
+      ]
+    },
+    {
+      "name": "Neutrals",
+      "colors": [
+        {
+          "name": "Darkest grey",
+          "var": "$color-neutral-grey-darkest",
+          "color": "#261E1E"
+        },
+        {
+          "name": "Dark grey",
+          "var": "$color-neutral-grey-dark",
+          "color": "#554949"
+        },
+        {
+          "name": "Grey",
+          "var": "$color-neutral-grey",
+          "color": "#8C8181"
+        },
+        {
+          "name": "Light grey",
+          "var": "$color-neutral-grey-light",
+          "color": "#C0BCBC"
+        },
+        {
+          "name": "Lightest grey",
+          "var": "$color-neutral-grey-lightest",
+          "color": "#F7F5F5"
+        }
+      ]
+    }
+  ]
+}

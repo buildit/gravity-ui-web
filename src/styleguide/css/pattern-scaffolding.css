@@ -1,0 +1,36 @@
+
+/* Color palette previews */
+.sg-colors {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sg-colors__color {
+  list-style-type: none;
+  width: 20%;
+  min-width: 12rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin: 0;
+}
+
+.sg-colors__swatch,
+.sg-colors__name,
+.sg-colors__var {
+  display: block;
+}
+
+.sg-colors__swatch {
+  height: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.sg-colors__name {
+  font-family: sans-serif;
+}
+
+.sg-colors__var {
+
+}
