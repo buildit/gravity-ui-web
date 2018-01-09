@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/buildit/gravity-ui-sass#readme",
   "devDependencies": {
-    "@buildit/gravy": "^1.3.0",
+    "@buildit/gravy": "^1.5.0",
     "browser-sync": "^2.18.12",
     "chalk": "^1.1.3",
     "eyeglass": "^1.2.1",
