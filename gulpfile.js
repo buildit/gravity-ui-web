@@ -1,16 +1,16 @@
 /******************************************************
  * GRAVITY UI LIB + LIVING STYLE GUIDE
- * 
+ *
  * Contains tasks to:
- * 
+ *
  * - Build the UI lib
  * - Build the living style guide
- * 
+ *
  * Note that substantial chunks of this file were
  * originally copied from Pattern Lab's Node Gulp
  * Edition gulpfile:
  * https://github.com/pattern-lab/edition-node-gulp/blob/master/gulpfile.js
- * 
+ *
 ******************************************************/
 const gulp = require('gulp');
 const path = require('path');
@@ -66,10 +66,10 @@ gulp.task('pl-copy:img', function () {
 });
 
 // Favicon copy
-// gulp.task('pl-copy:favicon', function () {
-//   return gulp.src('favicon.ico', {cwd: normalizePath(paths().source.root)} )
-//     .pipe(gulp.dest(normalizePath(paths().public.root)));
-// });
+gulp.task('pl-copy:favicon', function () {
+  return gulp.src('favicon.ico', {cwd: normalizePath(paths().source.root)} )
+    .pipe(gulp.dest(normalizePath(paths().public.root)));
+});
 
 // Fonts copy
 gulp.task('pl-copy:font', function () {
@@ -145,7 +145,7 @@ gulp.task('pl-assets', gulp.series(
     'pl-copy:assets',
     'pl-copy:js',
     'pl-copy:img',
-    // 'pl-copy:favicon',
+    'pl-copy:favicon',
     'pl-copy:font',
     'pl-sass',
     'pl-copy:css:style',
