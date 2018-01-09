@@ -1,3 +1,11 @@
+/* Color palette previews */
+.sg-pattern-sub-heading {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
 
 /* Color palette previews */
 .sg-colors {
@@ -42,6 +50,16 @@
   margin: 0 0 2rem 0;
 }
 
-.sg-fonts__font > p {
+.sg-fonts__weight {
+  font-family: sans-serif;
+  display: block;
+}
+
+.sg-fonts__css {
+  display: block;
   margin: 0 0 0.5rem 0;
+}
+
+.sg-fonts__sample {
+  margin: 0 0 0.5rem 2rem;
 }
