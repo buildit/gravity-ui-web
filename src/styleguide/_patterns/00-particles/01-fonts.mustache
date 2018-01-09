@@ -1,0 +1,18 @@
+{{#fonts}}
+  <h2>{{name}}</h2>
+  <ul class="sg-fonts">
+    {{#weights}}
+      <li class="sg-fonts__font">
+        <p style="font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: normal;">{{excerpt.medium}}</p>
+        <kbd>font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: normal;</kbd>
+      </li>
+      {{#hasItalic}}
+        <li class="sg-fonts__font">
+          <p style="font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: italic;">{{excerpt.medium}}</p>
+          <kbd>font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: italic;</kbd>
+        </li>
+      {{/hasItalic}}
+    {{/weights}}
+  </ul>
+{{/fonts}}
+
