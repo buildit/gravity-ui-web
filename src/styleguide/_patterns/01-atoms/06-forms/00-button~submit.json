@@ -1,0 +1,6 @@
+{
+  "control": {
+    "type": "submit",
+    "label": "Submit something"
+  }
+}
