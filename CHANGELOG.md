@@ -10,4 +10,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Initial README, CHANGELOG, etc. docs
 - Stylelint rules
 - Gulp setup for running SASS compilation and Pattern Lab
+- Initial set of UI patterns for Pattern Lab
 
