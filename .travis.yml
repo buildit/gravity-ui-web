@@ -1,0 +1,34 @@
+language: node_js
+node_js:
+  - "lts/*"
+cache:
+  directories:
+    - "node_modules"
+
+env:
+  - PROD_TAG_REGEXP="^v\d+\.\d+\..+" #Regexp for release (deploy to Prod) tags
+
+install:
+  - npm install
+
+script:
+  - npm run-script styleguide
+
+before_deploy:
+  - pip install --user awscli
+
+deploy:
+  # deploy develop to Staging
+  - provider: script
+    script: ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION}
+    skip_cleanup: true
+    on:
+      branch: develop
+
+  # deploy tags matching v#.#.*  to Production
+  - provider: script
+    script: ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION}
+    skip_cleanup: true
+    on:
+      tags: true
+      condition: $TRAVIS_TAG =~ $PROD_TAG_REGEXP
