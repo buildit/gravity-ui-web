@@ -19,9 +19,8 @@
 }
 
 html {
-  font-size: $font-size-base;
+  // font-size & line-height are set by Gravy. See gravy.scss
   font-family: $font-family-default;
-  line-height: $line-height-default;
   color: $color-fg-default;
 
   background-color: $color-bg-default;
