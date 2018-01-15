@@ -1,0 +1,26 @@
+/**
+  Some low-specifity defaults inspired by Heydon Pickering's Aximoatic CSS
+
+  * https://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+  * https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/
+*/
+
+
+// Default vertical margin between block elements
+* + * {
+  margin-top: $space-m;
+}
+
+// Make everything inherit key typography properties by default
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit; // Note, border-color defaults to this too, unless overridden
+}
+
+html {
+  font-size: $font-size-base;
+  font-family: $font-family-default;
+  line-height: $line-height-default;
+  color: $color-fg-default;
+}
