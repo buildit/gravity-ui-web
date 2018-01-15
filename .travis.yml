@@ -6,7 +6,7 @@ cache:
     - "node_modules"
 
 env:
-  - PROD_TAG_REGEXP="^v\d+\.\d+\..+" #Regexp for release (deploy to Prod) tags
+  - PROD_TAG_REGEXP="^v\d+\.\d+\.\d+.*$" #Regexp for release (deploy to Prod) tags
 
 install:
   - npm install

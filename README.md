@@ -34,7 +34,7 @@ Release a new version to npm:  **OBSOLETE** Publishing will be handled by Travis
 
 - Any pushed commit got build (`npm run-script styleguide`)
 - Any successful build of `develop` branch get deployed to Staging
-- Any successful build of a Tag  matching the pattern `v#.#.*`  (case-sensitive) get deployed to Production
+- Any successful build of a Tag that begins with `v#.#.#`  (case-sensitive) get deployed to Production
 
 ### Travis CI Setup
 
