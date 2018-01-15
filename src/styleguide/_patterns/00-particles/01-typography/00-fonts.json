@@ -1,0 +1,20 @@
+{
+  "fonts": [
+    {
+      "name": "Default sans-serif",
+      "cssFontFamily": "sans-serif",
+      "weights": [
+        {
+          "name": "Normal",
+          "cssFontWeight": "normal",
+          "hasItalic": true
+        },
+        {
+          "name": "Bold",
+          "cssFontWeight": "bold",
+          "hasItalic": true
+        }
+      ]
+    }
+  ]
+}

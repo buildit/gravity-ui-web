@@ -1,0 +1,67 @@
+<table>
+  {{#table.caption}}<caption>{{table.caption}}</caption>{{/table.caption}}
+
+  {{! Header rows }}
+  {{#table.head}}
+  <thead>
+    {{#rows}}
+      <tr>
+        {{#.}}
+          {{#isHeaderCell}}<th>{{/isHeaderCell}}
+          {{^isHeaderCell}}<td>{{/isHeaderCell}}
+            {{content}}
+          {{#isHeaderCell}}</th>{{/isHeaderCell}}
+          {{^isHeaderCell}}</td>{{/isHeaderCell}}
+        {{/.}}
+      </tr>
+    {{/rows}}
+  </thead>
+  {{/table.head}}
+
+  {{! Plain table rows (not inside a <tbody>) }}
+  {{#table.rows}}
+    <tr>
+      {{#.}}
+        {{#isHeaderCell}}<th>{{/isHeaderCell}}
+        {{^isHeaderCell}}<td>{{/isHeaderCell}}
+          {{content}}
+        {{#isHeaderCell}}</th>{{/isHeaderCell}}
+        {{^isHeaderCell}}</td>{{/isHeaderCell}}
+      {{/.}}
+    </tr>
+  {{/table.rows}}
+
+  {{! <tbody> groups of rows }}
+  {{#table.body}}
+  <tbody>
+    {{#rows}}
+      <tr>
+        {{#.}}
+          {{#isHeaderCell}}<th>{{/isHeaderCell}}
+          {{^isHeaderCell}}<td>{{/isHeaderCell}}
+            {{content}}
+          {{#isHeaderCell}}</th>{{/isHeaderCell}}
+          {{^isHeaderCell}}</td>{{/isHeaderCell}}
+        {{/.}}
+      </tr>
+    {{/rows}}
+  </tbody>
+  {{/table.body}}
+
+  {{! <tbody> groups of rows }}
+  {{#table.foot}}
+  <tfoot>
+    {{#rows}}
+      <tr>
+        {{#.}}
+          {{#isHeaderCell}}<th>{{/isHeaderCell}}
+          {{^isHeaderCell}}<td>{{/isHeaderCell}}
+            {{content}}
+          {{#isHeaderCell}}</th>{{/isHeaderCell}}
+          {{^isHeaderCell}}</td>{{/isHeaderCell}}
+        {{/.}}
+      </tr>
+    {{/rows}}
+  </tfoot>
+  {{/table.foot}}
+</table>

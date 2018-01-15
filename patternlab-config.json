@@ -1,19 +1,19 @@
 {
   "paths" : {
     "source" : {
-      "root": "./src/",
-      "patterns" : "./src/_patterns/",
-      "data" : "./src/_data/",
-      "meta": "./src/_meta/",
-      "annotations" : "./src/_annotations/",
+      "root": "./src/styleguide/",
+      "patterns" : "./src/styleguide/_patterns/",
+      "data" : "./src/styleguide/_data/",
+      "meta": "./src/styleguide/_meta/",
+      "annotations" : "./src/styleguide/_annotations/",
       "styleguide" : "./node_modules/styleguidekit-assets-default/dist/",
       "patternlabFiles" : "./node_modules/styleguidekit-mustache-default/views/",
-      "js" : "./src/js",
-      "images" : "./src/images",
-      "fonts" : "./src/fonts",
-      "css" : "./src/css/",
-      "sass": "./src/sass/",
-      "assets": "./src/assets/"
+      "js" : "./src/styleguide/js",
+      "images" : "./src/styleguide/images",
+      "fonts" : "./src/styleguide/fonts",
+      "css" : "./src/styleguide/css/",
+      "sass": "./src/ui-lib/sass/",
+      "assets": "./src/styleguide/assets/"
     },
     "public" : {
       "root" : "./dist/",

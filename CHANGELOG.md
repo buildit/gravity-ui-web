@@ -1,14 +1,14 @@
 # Changelog
-All notable changes to this project will be documented in this file.
+All notable changes to the [`gravity-ui-sass` project](./README.md) will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 ### Added
-- CHANGELOG
+- Initial SASS scaffolding
+- Initial README, CHANGELOG, etc. docs
+- Stylelint rules
+- Gulp setup for running SASS compilation and Pattern Lab
+- Initial set of UI patterns for Pattern Lab
 
-### Changed
-- fixed initial semver
-- updated stylelint rules and dependencies
-- updated README.md with information about versioning and release process

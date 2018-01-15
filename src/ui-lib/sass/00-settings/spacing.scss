@@ -1,0 +1,33 @@
+/**
+  Space values to be used for margins, paddings, etc.
+
+  Inspired by posts like:
+  * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
+*/
+
+@function space($n) {
+  $space-base-size: 1rem;
+  $space-multiplier: 2;
+
+  $result: $space-base-size;
+
+  @if $n > 0 {
+    @for $i from 1 through $n {
+      $result: $result * $space-multiplier;
+    }
+  }
+  @else if $n < 0 {
+    @for $i from $n through -1 {
+      $result: $result / $space-multiplier;
+    }
+  }
+
+  @return $result;
+}
+
+
+$space-xs: space(-2);
+$space-s: space(-1);
+$space-m: space(0);
+$space-l: space(1);
+$space-xl: space(2);
