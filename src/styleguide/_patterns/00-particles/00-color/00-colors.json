@@ -1,62 +1,62 @@
 {
   "palettes": [
     {
-      "name": "Primary accents",
+      "name": "Primary: Yellows",
       "colors": [
         {
-          "name": "Darkest egg yolk",
-          "var": "$color-accent-egg-darkest",
-          "color": "#503102"
+          "name": "Latte",
+          "var": "$color-buildit-latte",
+          "color": "#4f2f00"
         },
         {
-          "name": "Dark egg yolk",
-          "var": "$color-accent-egg-dark",
-          "color": "#AD6802"
+          "name": "Cuppa",
+          "var": "$color-buildit-cuppa",
+          "color": "#ac6700"
         },
         {
-          "name": "Egg yolk",
-          "var": "$color-accent-egg",
-          "color": "#FF9A02"
+          "name": "Egg Yolk",
+          "var": "$color-buildit-egg-yolk",
+          "color": "#ff9900"
         },
         {
-          "name": "Light egg yolk",
-          "var": "$color-accent-egg-light",
+          "name": "'Murican Cheese",
+          "var": "$color-buildit-murican-cheese",
           "color": "#FFBD59"
         },
         {
-          "name": "Lightest egg yolk",
-          "var": "$color-accent-egg-lightest",
-          "color": "#FFE7C2"
+          "name": "Eggshell",
+          "var": "$color-buildit-eggshell",
+          "color": "#ffe7c2"
         }
       ]
     },
     {
-      "name": "Secondary accents",
+      "name": "Secondary: Teals",
       "colors": [
         {
-          "name": "Darkest blue",
-          "var": "$color-accent-blue-darkest",
-          "color": "#032D3F"
+          "name": "Twilight",
+          "var": "$color-buildit-twilight",
+          "color": "#012b3d"
         },
         {
-          "name": "Dark blue",
-          "var": "$color-accent-blue-dark",
-          "color": "#0B5872"
+          "name": "Deep Ocean",
+          "var": "$color-buildit-deep-ocean",
+          "color": "#095771"
         },
         {
-          "name": "Blue",
-          "var": "$color-accent-blue",
-          "color": "#2A7B96"
+          "name": "Tealy McTealface",
+          "var": "$color-buildit-tealy-mc-tealface",
+          "color": "#287a95"
         },
         {
-          "name": "Light blue",
-          "var": "$color-accent-blue-light",
-          "color": "#5FA2B9"
+          "name": "Bread Mould",
+          "var": "$color-buildit-bread-mould",
+          "color": "#5ea1b8"
         },
         {
-          "name": "Lightest blue",
-          "var": "$color-accent-blue-lightest",
-          "color": "#D5E9F0"
+          "name": "Nuclear Winter",
+          "var": "$color-buildit-nuclear-winter",
+          "color": "#d5e9f0"
         }
       ]
     },
@@ -64,29 +64,29 @@
       "name": "Neutrals",
       "colors": [
         {
-          "name": "Darkest grey",
-          "var": "$color-neutral-grey-darkest",
-          "color": "#261E1E"
+          "name": "Charcoal",
+          "var": "$color-buildit-charcoal",
+          "color": "#241c1c"
         },
         {
-          "name": "Dark grey",
-          "var": "$color-neutral-grey-dark",
-          "color": "#554949"
+          "name": "Asphalt",
+          "var": "$color-buildit-asphalt",
+          "color": "#544848"
         },
         {
-          "name": "Grey",
-          "var": "$color-neutral-grey",
-          "color": "#8C8181"
+          "name": "Warm Grey",
+          "var": "$color-buildit-warm-grey",
+          "color": "#8b8080"
         },
         {
-          "name": "Light grey",
-          "var": "$color-neutral-grey-light",
-          "color": "#C0BCBC"
+          "name": "Ashtray",
+          "var": "$color-buildit-ashtray",
+          "color": "#c0bbbb"
         },
         {
-          "name": "Lightest grey",
-          "var": "$color-neutral-grey-lightest",
-          "color": "#F7F5F5"
+          "name": "Dirty Snow White",
+          "var": "$color-buildit-dirty-snow-white",
+          "color": "#f7f5f5"
         }
       ]
     }
