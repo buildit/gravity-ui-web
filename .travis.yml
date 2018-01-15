@@ -6,16 +6,13 @@ cache:
     - "node_modules"
 
 env:
-  - PROD_TAG_REGEXP="^v\d+\.\d+\.\d+.*" #Regexp for release (deploy to Prod) tags
+  - PROD_TAG_REGEXP="^v[0-9]+\.[0-9]+\.[0-9]+.*" #Regexp for release (deploy to Prod) tags
 
 install:
   - npm install
 
 script:
   - npm run-script styleguide
-
-after_success:
-  - set | grep TRAVIS
 
 before_deploy:
   - pip install --user awscli
@@ -34,5 +31,4 @@ deploy:
     skip_cleanup: true
     on:
       tags: true
-      all_branches: true
       condition: $TRAVIS_TAG =~ $PROD_TAG_REGEXP
