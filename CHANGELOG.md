@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- Initial SASS scaffolding
 - Initial README, CHANGELOG, etc. docs
 - Stylelint rules
 - Gulp setup for running SASS compilation and Pattern Lab
