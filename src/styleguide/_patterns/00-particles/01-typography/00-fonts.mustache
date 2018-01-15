@@ -4,13 +4,13 @@
     {{#weights}}
       <li class="sg-fonts__font">
         <strong class="sg-fonts__weight">{{name}} weight</strong>
-        <kbd class="sg-fonts__css">font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: normal;</kbd>
+        <code class="sg-fonts__css">font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: normal;</code>
         <p class="sg-fonts__sample" style="font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: normal;">{{excerpt.medium}}</p>
       </li>
       {{#hasItalic}}
         <li class="sg-fonts__font">
           <strong class="sg-fonts__weight">{{name}} weight (italic)</strong>
-          <kbd class="sg-fonts__css">font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: italic;</kbd>
+          <code class="sg-fonts__css">font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: italic;</code>
           <p class="sg-fonts__sample" style="font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: italic;">{{excerpt.medium}}</p>
         </li>
       {{/hasItalic}}
