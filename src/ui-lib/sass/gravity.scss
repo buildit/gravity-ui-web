@@ -8,6 +8,7 @@
 // === Settings layer ===
 // Used with preprocessors and contain font, colors definitions, etc.
 // Must not output any CSS.
+@import '00-settings/gravy';
 @import '00-settings/colors';
 @import '00-settings/spacing';
 @import '00-settings/typography';
