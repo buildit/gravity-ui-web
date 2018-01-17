@@ -30,7 +30,9 @@ function reloadCSS(done) {
 }
 
 
-
+/**
+ * Starts BrowserSync.
+ */
 function initTask(done) {
   browserSync.init({
     server: {
