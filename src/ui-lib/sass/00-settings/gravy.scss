@@ -1,2 +1,22 @@
 @import 'gravy';
-@include gravy-init();
+
+$gravy: (
+  typefaces: (
+    primary: (
+      stack: ('Roboto', sans-serif),
+      weights: (
+        regular: 400,
+        bold: 'bold'
+      )
+    ),
+    secondary: (
+      stack: ('Cabin', sans-serif),
+      weights: (
+        regular: 400,
+        bold: 600
+      )
+    )
+  )
+);
+
+@include gravy-init;

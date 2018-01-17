@@ -13,15 +13,15 @@
 
 // Make everything inherit key typography properties by default
 * {
+  color: inherit; // Note, border-color defaults to this too, unless overridden
   font-family: inherit;
   line-height: inherit;
-  color: inherit; // Note, border-color defaults to this too, unless overridden
 }
 
 html {
   // font-size & line-height are set by Gravy. See gravy.scss
-  font-family: $font-family-default;
-  color: $color-fg-default;
+  @include gravy-font('primary');
 
   background-color: $color-bg-default;
+  color: $color-fg-default;
 }
