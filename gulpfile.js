@@ -48,6 +48,7 @@ gulp.task('pl-sass', function () {
   return gulp.src(path.resolve(paths().source.sass, 'gravity.scss'))
     .pipe(sass(eyeglass(sassOptions)).on('error', sass.logError))
     .pipe(gulp.dest(path.resolve(paths().public.css)))
+    .pipe(browserSync.stream());
 })
 
 /******************************************************
