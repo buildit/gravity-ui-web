@@ -5,6 +5,8 @@
   * https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/
 */
 
+@include gravy-init;
+@include gravy-text-defaults;
 
 // Default vertical margin between block elements
 * + * {
