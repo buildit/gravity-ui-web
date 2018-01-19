@@ -16,5 +16,12 @@ $gravy: (
         bold: 600
       )
     )
+  ),
+  typi: (
+    base: (
+      null: (ms(0), 1.5),
+      small: (ms(1)),
+      large: (ms(2))
+    )
   )
 );
