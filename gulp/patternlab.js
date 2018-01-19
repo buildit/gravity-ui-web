@@ -12,7 +12,7 @@ const gulp = require('gulp');
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
 const chalk = require('chalk');
-const helpers = require('./helpers.js');
+const normalizePath = require('../index.js').normalizePath;
 const browserSync = require('./browsersync.js');
 
 const taskNamePrefix = 'patternlab:';
@@ -35,48 +35,48 @@ function getConfiguredCleanOption() {
 ******************************************************/
 
 function copyJsTask () {
-  return gulp.src('**/*.js', {cwd: helpers.normalizePath(paths().source.js)} )
-    .pipe(gulp.dest(helpers.normalizePath(paths().public.js)));
+  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
+    .pipe(gulp.dest(normalizePath(paths().public.js)));
 };
 copyJsTask.displayName = taskNamePrefix + 'cp:js';
 copyJsTask.description = 'Copies *.js files from source to dist folder.';
 
 
 function copyImagesTask () {
-  return gulp.src('**/*.*',{cwd: helpers.normalizePath(paths().source.images)} )
-    .pipe(gulp.dest(helpers.normalizePath(paths().public.images)));
+  return gulp.src('**/*.*',{cwd: normalizePath(paths().source.images)} )
+    .pipe(gulp.dest(normalizePath(paths().public.images)));
 };
 copyImagesTask.displayName = taskNamePrefix + 'cp:img';
 copyImagesTask.description = 'Copies image files from source to dist folder.';
 
 
 function copyFaviconTask () {
-  return gulp.src('favicon.ico', {cwd: helpers.normalizePath(paths().source.root)} )
-    .pipe(gulp.dest(helpers.normalizePath(paths().public.root)));
+  return gulp.src('favicon.ico', {cwd: normalizePath(paths().source.root)} )
+    .pipe(gulp.dest(normalizePath(paths().public.root)));
 };
 copyFaviconTask.displayName = taskNamePrefix + 'cp:favicon';
 copyFaviconTask.description = 'Copies favicon.ico from source to dist folder.';
 
 
 function copyFontsTask () {
-  return gulp.src('*', {cwd: helpers.normalizePath(paths().source.fonts)})
-    .pipe(gulp.dest(helpers.normalizePath(paths().public.fonts)));
+  return gulp.src('*', {cwd: normalizePath(paths().source.fonts)})
+    .pipe(gulp.dest(normalizePath(paths().public.fonts)));
 };
 copyFontsTask.displayName = taskNamePrefix + 'cp:fonts';
 copyFontsTask.description = 'Copies fonts dir from source to dist folder.';
 
 
 function copyAssetsTask () {
-  return gulp.src('*', {cwd: helpers.normalizePath(paths().source.assets)})
-    .pipe(gulp.dest(helpers.normalizePath(paths().public.assets)));
+  return gulp.src('*', {cwd: normalizePath(paths().source.assets)})
+    .pipe(gulp.dest(normalizePath(paths().public.assets)));
 };
 copyAssetsTask.displayName = taskNamePrefix + 'cp:assets';
 copyAssetsTask.description = 'Copies assets dir from source to dist folder.';
 
 
 function copyCssTask () {
-  return gulp.src(helpers.normalizePath(paths().source.css) + '/**/*.css')
-    .pipe(gulp.dest(helpers.normalizePath(paths().public.css)))
+  return gulp.src(normalizePath(paths().source.css) + '/**/*.css')
+    .pipe(gulp.dest(normalizePath(paths().public.css)))
     .pipe(browserSync.stream());
 };
 copyCssTask.displayName = taskNamePrefix + 'cp:css';
@@ -85,8 +85,8 @@ copyCssTask.description = 'Copies CSS files from source to dist folder.';
 
 // Tasks to copy Styleguide Kit assets and CSS
 function skFilesTask () {
-  return gulp.src(helpers.normalizePath(paths().source.styleguide) + '/**/!(*.css)')
-    .pipe(gulp.dest(helpers.normalizePath(paths().public.root)))
+  return gulp.src(normalizePath(paths().source.styleguide) + '/**/!(*.css)')
+    .pipe(gulp.dest(normalizePath(paths().public.root)))
     .pipe(browserSync.stream());
 };
 skFilesTask.displayName = taskNamePrefix + 'sk:files';
@@ -94,11 +94,11 @@ skFilesTask.description = 'Copies files required by Pattern Lab\'s Styleguide Ki
 
 
 function skCssTask () {
-  return gulp.src(helpers.normalizePath(paths().source.styleguide) + '/**/*.css')
+  return gulp.src(normalizePath(paths().source.styleguide) + '/**/*.css')
     .pipe(gulp.dest(function (file) {
       //flatten anything inside the styleguide into a single output dir per http://stackoverflow.com/a/34317320/1790362
       file.path = path.join(file.base, path.basename(file.path));
-      return helpers.normalizePath(path.join(paths().public.styleguide, '/css'));
+      return normalizePath(path.join(paths().public.styleguide, '/css'));
     }))
     .pipe(browserSync.stream());
 };
@@ -211,7 +211,7 @@ function getSupportedTemplateExtensions() {
 
 function getTemplateWatches() {
   return getSupportedTemplateExtensions().map(function (dotExtension) {
-    return helpers.normalizePath(paths().source.patterns, '**', '*' + dotExtension);
+    return normalizePath(paths().source.patterns, '**', '*' + dotExtension);
   });
 }
 
@@ -219,27 +219,27 @@ function plWatchOnlyTask() {
   const watchers = [
     {
       name: 'CSS',
-      paths: [helpers.normalizePath(paths().source.css, '**', '*.css')],
+      paths: [normalizePath(paths().source.css, '**', '*.css')],
       config: { awaitWriteFinish: true },
       tasks: gulp.series(copyCssTask, browserSync.reloadCSS)
     },
     {
       name: 'Styleguide Files',
-      paths: [helpers.normalizePath(paths().source.styleguide, '**', '*')],
+      paths: [normalizePath(paths().source.styleguide, '**', '*')],
       config: { awaitWriteFinish: true },
       tasks: gulp.series(skFilesTask, skCssTask, browserSync.reloadCSS)
     },
     {
       name: 'Source Files',
       paths: [
-        helpers.normalizePath(paths().source.patterns, '**', '*.json'),
-        helpers.normalizePath(paths().source.patterns, '**', '*.md'),
-        helpers.normalizePath(paths().source.data, '**', '*.json'),
-        helpers.normalizePath(paths().source.fonts, '**', '*'),
-        helpers.normalizePath(paths().source.images, '**', '*'),
-        helpers.normalizePath(paths().source.js, '**', '*'),
-        helpers.normalizePath(paths().source.meta, '**', '*'),
-        helpers.normalizePath(paths().source.annotations, '**', '*')
+        normalizePath(paths().source.patterns, '**', '*.json'),
+        normalizePath(paths().source.patterns, '**', '*.md'),
+        normalizePath(paths().source.data, '**', '*.json'),
+        normalizePath(paths().source.fonts, '**', '*'),
+        normalizePath(paths().source.images, '**', '*'),
+        normalizePath(paths().source.js, '**', '*'),
+        normalizePath(paths().source.meta, '**', '*'),
+        normalizePath(paths().source.annotations, '**', '*')
       ].concat(getTemplateWatches()),
       config: { awaitWriteFinish: true },
       tasks: gulp.series(build, browserSync.reload)

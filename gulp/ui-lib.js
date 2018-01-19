@@ -1,25 +1,22 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const eyeglass = require('eyeglass');
-const path = require('path');
 const chalk = require('chalk');
-const helpers = require('./helpers.js');
-const browserSync = require('./browsersync.js');
 
-const paths = require('../patternlab-config.json').paths;
+const gravityUiSass = require('../index.js');
+const browserSync = require('./browsersync.js');
 
 const taskNamePrefix = 'ui-lib:';
 
-//"sass": "./src/ui-lib/sass/",
 
 function sassBuildTask () {
   const sassOptions = {
     // TODO: Eyeglass integration
   };
 
-  return gulp.src(path.resolve(paths.source.sass, 'gravity.scss'))
+  return gulp.src(gravityUiSass.srcSassFilePath)
     .pipe(sass(eyeglass(sassOptions)).on('error', sass.logError))
-    .pipe(gulp.dest(path.resolve(paths.public.css)))
+    .pipe(gulp.dest(gravityUiSass.bldUiLibDir))
     .pipe(browserSync.stream());
 }
 sassBuildTask.displayName = taskNamePrefix + 'sass';
@@ -31,7 +28,7 @@ function watchTask() {
   const watchers = [
     {
       name: 'SASS',
-      paths: [helpers.normalizePath(paths.source.sass, '**', '*.scss')],
+      paths: [gravityUiSass.normalizePath(gravityUiSass.srcSassDir, '**', '*.scss')],
       config: { awaitWriteFinish: true },
       tasks: gulp.series(sassBuildTask, browserSync.reloadCSS)
     }

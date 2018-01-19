@@ -5,9 +5,7 @@
 
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-const helpers = require('./helpers.js');
-
-const paths = require('../patternlab-config.json').paths;
+const gravityUiSass = require('../index.js');
 
 const taskNamePrefix = 'browsersync:';
 
@@ -36,7 +34,7 @@ function reloadCSS(done) {
 function initTask(done) {
   browserSync.init({
     server: {
-      baseDir: helpers.normalizePath(paths.public.root)
+      baseDir: gravityUiSass.bldRootDir
     },
     snippetOptions: {
       // Ignore all HTML files within the templates folder
