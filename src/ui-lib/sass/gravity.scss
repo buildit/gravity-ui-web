@@ -8,10 +8,11 @@
 // === Settings layer ===
 // Used with preprocessors and contain font, colors definitions, etc.
 // Must not output any CSS.
+@import '00-settings/typography';
+@import '00-settings/modularscale';
 @import '00-settings/gravy';
 @import '00-settings/colors';
 @import '00-settings/spacing';
-@import '00-settings/typography';
 
 // === Tools layer ===
 // Globally used mixins and functions.
@@ -21,6 +22,7 @@
 // === Generic layer ===
 // Reset and/or normalize styles, box-sizing definition, etc.
 // This is the first layer which generates actual CSS.
+@import 'normalize';
 @import '02-generic/heydon';
 
 // === Elements layer ===

@@ -1,0 +1,6 @@
+@import 'modularscale';
+
+$modularscale: (
+  ratio: $major-third,
+  base: $base-font-size
+);
