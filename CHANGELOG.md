@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added NVM config
 - Added basic font styles
 - `gravity-ui-sass` is now an [SASS Eyeglass](https://github.com/sass-eyeglass/eyeglass) module
+- Package now exposes paths to CSS and SASS to cosnumers via its main entry point (`index.js`)
 
 ### Changed
 - Improved Stylelint config
