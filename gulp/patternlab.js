@@ -75,9 +75,9 @@ plInstallPluginTask.displayName = taskNamePrefix + 'installplugin';
  * BUILD TASK
 ******************************************************/
 
-function plBuildTask(watch) {
+function plBuildTask() {
   return patternlab.build({
-    watch: watch || argv.watch,
+    watch: argv.watch,
     cleanPublic: config.cleanPublic
   }).then(() => {
     // do something else when this promise resolves
@@ -92,7 +92,12 @@ plBuildTask.description = 'Compiles the patterns and frontend, outputting to con
 ******************************************************/
 
 function plWatchTask() {
-  return plBuildTask(true);
+  return patternlab.build({
+    watch: true,
+    cleanPublic: config.cleanPublic
+  }).then(() => {
+    // do something else when this promise resolves
+  });
 }
 plWatchTask.displayName = taskNamePrefix + 'watch';
 plWatchTask.description = 'Builds the styleguide and starts watching styleguide source files.';
