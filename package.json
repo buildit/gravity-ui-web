@@ -73,6 +73,7 @@
   "eyeglass": {
     "sassDir": "src/ui-lib/sass",
     "name": "gravity-ui-sass",
+    "exports": false,
     "needs": "^1.3.0"
   }
 }

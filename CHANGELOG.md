@@ -9,9 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added NVM config
 - Added basic font styles
+- `gravity-ui-sass` is now an [SASS Eyeglass](https://github.com/sass-eyeglass/eyeglass) module
 
 ### Changed
 - Improved Stylelint config
+- Split gulpfile.js into modules
 
 
 ## [0.1.0] - 2018-01-16
