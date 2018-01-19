@@ -1,0 +1,65 @@
+/* Color palette previews */
+.sg-pattern-sub-heading {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+/* Color palette previews */
+.sg-colors {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sg-colors__color {
+  list-style-type: none;
+  width: 20%;
+  min-width: 12rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin: 0;
+}
+
+.sg-colors__swatch,
+.sg-colors__name,
+.sg-colors__var {
+  display: block;
+}
+
+.sg-colors__swatch {
+  height: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.sg-colors__name {
+  font-family: sans-serif;
+}
+
+
+/* Color palette previews */
+.sg-fonts {
+  padding: 0;
+}
+
+.sg-fonts__font {
+  list-style-type: none;
+  margin: 0 0 2rem 0;
+}
+
+.sg-fonts__weight {
+  font-family: sans-serif;
+  display: block;
+}
+
+.sg-fonts__css {
+  display: block;
+  margin: 0 0 0.5rem 0;
+}
+
+.sg-fonts__sample {
+  margin: 0 0 0.5rem 2rem;
+}

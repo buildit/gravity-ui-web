@@ -1,18 +1,26 @@
 {
   "name": "@buildit/gravity-ui-sass",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A SASS UI library from the Buildit's Gravity design system",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "dist/css/gravity.css",
+    "src/ui-lib/"
+  ],
   "scripts": {
+    "build": "gulp",
     "styleguide": "gulp styleguide",
     "start": "gulp serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint",
+    "lint": "stylelint src/ui-lib/sass/**/*.scss"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/buildit/gravity-ui-sass.git"
   },
   "keywords": [
+    "eyeglass-module",
     "sass",
     "ui",
     "css",
@@ -30,7 +38,7 @@
     "url": "http://buildit.wiprodigital.com/"
   },
   "contributors": [
-    "Matteo Pescarin",
+    "Matteo Pescarin (http://peach.smartart.it)",
     "Ben Oakenfull",
     "Marcos Peebles",
     "James Nash (http://cirrus.twiddles.com/)"
@@ -44,17 +52,31 @@
     "browser-sync": "^2.18.12",
     "chalk": "^1.1.3",
     "eyeglass": "^1.2.1",
-    "gulp": "gulpjs/gulp#4.0",
+    "gulp": "^4.0.0",
     "gulp-sass": "^3.1.0",
     "minimist": "^1.2.0",
     "@pattern-lab/patternlab-node": "^3.0.0-alpha.5",
     "@pattern-lab/patternengine-node-mustache": "^2.0.0-alpha.1",
     "@pattern-lab/styleguidekit-assets-default": "^4.0.0-alpha.2",
     "@pattern-lab/styleguidekit-mustache-default": "^4.0.0-alpha.1",
-    "stylelint": "^7.11.1",
-    "stylelint-config-sass-guidelines": "^2.2.0",
-    "stylelint-order": "^0.5.0",
-    "stylelint-scss": "^1.5.1",
-    "stylelint-selector-bem-pattern": "^1.1.0"
+    "modularscale-sass": "^3.0.4",
+    "normalize-scss": "^7.0.0",
+    "stylelint": "^8.4.0",
+    "stylelint-config-sass-guidelines": "^4.1.0",
+    "stylelint-order": "^0.8.0",
+    "stylelint-scss": "^2.2.0"
+  },
+  "dependencies": {
+    "@buildit/gravy": "github:buildit/gravy#v2.0.0-beta.1"
+  },
+  "engines": {
+    "node": "^8.9.4",
+    "npm": "^5.6.0"
+  },
+  "eyeglass": {
+    "sassDir": "src/ui-lib/sass",
+    "name": "gravity-ui-sass",
+    "exports": false,
+    "needs": "^1.3.0"
   }
 }

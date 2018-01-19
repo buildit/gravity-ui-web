@@ -1,0 +1,20 @@
+{{#fonts}}
+  <h4 class="sg-pattern-sub-heading">{{name}}</h4>
+  <ul class="sg-fonts">
+    {{#weights}}
+      <li class="sg-fonts__font">
+        <strong class="sg-fonts__weight">{{name}} weight</strong>
+        <code class="sg-fonts__css">font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: normal;</code>
+        <p class="sg-fonts__sample" style="font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: normal;">{{excerpt.medium}}</p>
+      </li>
+      {{#hasItalic}}
+        <li class="sg-fonts__font">
+          <strong class="sg-fonts__weight">{{name}} weight (italic)</strong>
+          <code class="sg-fonts__css">font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: italic;</code>
+          <p class="sg-fonts__sample" style="font-family: {{cssFontFamily}}; font-weight: {{cssFontWeight}}; font-style: italic;">{{excerpt.medium}}</p>
+        </li>
+      {{/hasItalic}}
+    {{/weights}}
+  </ul>
+{{/fonts}}
+

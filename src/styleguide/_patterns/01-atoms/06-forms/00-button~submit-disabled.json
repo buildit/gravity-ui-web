@@ -1,0 +1,7 @@
+{
+  "control": {
+    "type": "submit",
+    "label": "Submit something",
+    "disabled": true
+  }
+}

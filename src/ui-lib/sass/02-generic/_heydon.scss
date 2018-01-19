@@ -1,0 +1,29 @@
+/**
+  Some low-specifity defaults inspired by Heydon Pickering's Aximoatic CSS
+
+  * https://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+  * https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/
+*/
+
+@include gravy-init;
+@include gravy-text-defaults;
+
+// Default vertical margin between block elements
+* + * {
+  margin-top: $space-m;
+}
+
+// Make everything inherit key typography properties by default
+* {
+  color: inherit; // Note, border-color defaults to this too, unless overridden
+  font-family: inherit;
+  line-height: inherit;
+}
+
+html {
+  // font-size & line-height are set by Gravy. See gravy.scss
+  @include gravy-font('primary');
+
+  background-color: $color-bg-default;
+  color: $color-fg-default;
+}
