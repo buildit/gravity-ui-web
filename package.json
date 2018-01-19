@@ -63,7 +63,7 @@
     "stylelint-selector-bem-pattern": "^1.1.0"
   },
   "dependencies": {
-    "@buildit/gravy": "github:buildit/gravy#v2.0.0-alpha.2"
+    "@buildit/gravy": "github:buildit/gravy#v2.0.0-beta.1"
   },
   "engines": {
     "node": "^8.9.4",
