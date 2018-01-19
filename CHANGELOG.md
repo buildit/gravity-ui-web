@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added NVM config
 - Added basic font styles
+- Added normalize and modularscale SASS libs
 
 ### Changed
 - Improved Stylelint config
