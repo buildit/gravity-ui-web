@@ -4,10 +4,17 @@ All notable changes to the [`gravity-ui-sass` project](./README.md) will be docu
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
 ## [Unreleased]
+### Added
+- Added NVM config
+- Added basic font styles
+
+### Changed
+- Improved Stylelint config
 
 
-## [1.0.0] - 2018-01-16
+## [0.1.0] - 2018-01-16
 ### Added
 - Initial SASS scaffolding
 - Initial README, CHANGELOG, etc. docs

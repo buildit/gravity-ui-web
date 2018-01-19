@@ -12,8 +12,8 @@
     "build": "gulp",
     "styleguide": "gulp styleguide",
     "start": "gulp serve",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "stylelint src/sass/**/*.scss"
+    "test": "npm run lint",
+    "lint": "stylelint src/ui-lib/sass/**/*.scss"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
     "url": "http://buildit.wiprodigital.com/"
   },
   "contributors": [
-    "Matteo Pescarin",
+    "Matteo Pescarin (http://peach.smartart.it)",
     "Ben Oakenfull",
     "Marcos Peebles",
     "James Nash (http://cirrus.twiddles.com/)"
@@ -59,13 +59,12 @@
     "styleguidekit-assets-default": "^3.4.0",
     "styleguidekit-mustache-default": "^3.1.0",
     "stylelint": "^7.11.1",
-    "stylelint-config-sass-guidelines": "^2.2.0",
+    "stylelint-config-sass-guidelines": "^4.1.0",
     "stylelint-order": "^0.5.0",
-    "stylelint-scss": "^1.5.1",
-    "stylelint-selector-bem-pattern": "^1.1.0"
+    "stylelint-scss": "^1.5.1"
   },
   "dependencies": {
-    "@buildit/gravy": "github:buildit/gravy#v2.0.0-alpha.2"
+    "@buildit/gravy": "github:buildit/gravy#v2.0.0-beta.1"
   },
   "engines": {
     "node": "^8.9.4",
