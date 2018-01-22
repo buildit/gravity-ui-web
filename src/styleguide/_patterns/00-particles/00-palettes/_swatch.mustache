@@ -1,0 +1,37 @@
+<div class="sg-swatch" style="background-color: #{{color.hex}}">
+  {{#color.wcag}}
+  <div class="sg-swatch-check">
+    <ul class="sg-swatch-check__group">
+      <li class="sg-swatch-check__item sg-swatch-check__item--light sg-swatch-check__item--small">
+        <span class="sg-swatch-check__item-label">{{color.wcag.light.small}}</span>
+      </li>
+      <li class="sg-swatch-check__item sg-swatch-check__item--light sg-swatch-check__item--big">
+        <span class="sg-swatch-check__item-label">{{color.wcag.light.big}}</span>
+      </li>
+    </ul>
+    <ul class="sg-swatch-check__group">
+      <li class="sg-swatch-check__item sg-swatch-check__item--dark sg-swatch-check__item--small">
+        <span class="sg-swatch-check__item-label">{{color.wcag.dark.small}}</span>
+      </li>
+      <li class="sg-swatch-check__item sg-swatch-check__item--dark sg-swatch-check__item--big">
+        <span class="sg-swatch-check__item-label">{{color.wcag.dark.big}}</span>
+      </li>
+    </ul>
+  </div>
+  {{/color.wcag}}
+</div>
+<p class="sg-label"><strong>{{color.name}}</strong></p>
+<dl class="sg-datalist sg-datalist--code">
+  <dt><span class="sg-datalist__label">SCSS</span></dt>
+  <dd><code>{{color.varname}}</code></dd>
+  <dt><span class="sg-datalist__label">HEX</span></dt>
+  <dd><code class="sg-datatype--hex">#{{color.hex}}</code></dd>
+  {{#color.rgb}}
+    <dt><span class="sg-datalist__label">RGB</span></dt>
+    <dd><code>{{color.rgb}}</code></dd>
+  {{/color.rgb}}
+  {{#color.cmyk}}
+    <dt><span class="sg-datalist__label">CMYK</span></dt>
+    <dd><code>{{color.cmyk}}</code></dd>
+  {{/color.cmyk}}
+</dl>
