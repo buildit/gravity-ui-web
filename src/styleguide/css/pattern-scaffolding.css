@@ -11,18 +11,31 @@
 
 /** @define sg-colors */
 .sg-colors {
-  display: flex;
+  display: block;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
   list-style: none;
 }
 
-.sg-colors > li {
-  margin: 0 0.5em 0.5em 0;
+@media all and (min-width: 30em) {
+  .sg-colors {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .sg-colors {
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.sg-colors__color {
+  margin: 0 0 0.5em;
   padding: 0.3em;
   border: 1px solid #ddd;
-  flex: auto;
   max-width: 14em;
   min-width: 5em;
 }
@@ -149,7 +162,6 @@
 
 .sg-datalist--code > dd {
   margin-left: 0;
-  font-family: monospace;
 }
 
 .sg-datalist--flat {
@@ -181,5 +193,12 @@
 }
 
 .sg-datatype--hex {
+  font-family: monospace;
   text-transform: uppercase;
+}
+
+.sg-datatype--var {
+  font-family: monospace;
+  font-size: 0.6em;
+  line-height: 1.2;
 }
