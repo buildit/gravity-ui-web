@@ -48,6 +48,9 @@
     "url": "https://github.com/buildit/gravity-ui-sass/issues"
   },
   "homepage": "https://github.com/buildit/gravity-ui-sass#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "chalk": "^1.1.3",
