@@ -199,6 +199,18 @@
 
 .sg-datatype--var {
   font-family: monospace;
-  font-size: 0.6em;
-  line-height: 1.2;
+}
+
+@media all and (min-width: 600px) {
+  .sg-datatype--var {
+    font-size: 0.8em;
+    line-height: 1.2;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .sg-datatype--var {
+    font-size: 0.6em;
+    line-height: 1.2;
+  }
 }
