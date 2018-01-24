@@ -82,6 +82,6 @@ The build output will go into `dist/` and, in this instance, only contains the a
 * Coding standards (TBC)
 * Contribution guidelines (TBC)
 * [`git` branching strategy](./docs/branching-strategy.md)
-* [Release process](./docs/release-process.md)
+* [Release process](./docs/releasing.md)
 * [Travis CI setup](./docs/travis-ci.md) (for automated build & deplpoyments)
 

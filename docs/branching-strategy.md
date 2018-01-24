@@ -1,6 +1,6 @@
 # Braching strategy
 
-This project uses a simple branching strategy inspired by [git-flow](http://nvie.com/posts/a-successful-git-branching-model/):
+This project currently uses a simple branching strategy that is inspired by [git-flow](http://nvie.com/posts/a-successful-git-branching-model/). _Diet Git Glow_, if you will.
 
 ## `develop` branch
 
