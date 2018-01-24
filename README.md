@@ -61,7 +61,7 @@ To only build the style guide (which is, in effect, a static HTML website) but _
 $ npm run styleguide
 ```
 
-note that this will _also_ build the UI library. The build output will go into `dist/`. You can view the style guide locally by opening `dist/index.html`.
+Note that this will _also_ build the UI library. The build output will go into `dist/`. You can view the style guide locally by opening `dist/index.html` in your browser.
 
 This is mainly intended for automated build and deployments to our hosted [Buildit Living Style Guide](http://style.buildit.digital/).
 
@@ -81,6 +81,7 @@ The build output will go into `dist/` and, in this instance, only contains the a
 
 * Coding standards (TBC)
 * Contribution guidelines (TBC)
-* Release process
-* Travis CI setup (for automated build & deplpoyments)
+* [`git` branching strategy](./docs/branching-strategy.md)
+* [Release process](./docs/release-process.md)
+* [Travis CI setup](./docs/travis-ci.md) (for automated build & deplpoyments)
 
