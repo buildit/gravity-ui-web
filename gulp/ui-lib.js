@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const svgo = require('gulp-svgo');
 const eyeglass = require('eyeglass');
 const chalk = require('chalk');
 
@@ -23,6 +24,25 @@ sassBuildTask.displayName = taskNamePrefix + 'sass';
 sassBuildTask.description = 'Compiles SASS.';
 
 
+function svgBuildTask () {
+  const svgoOptions = {
+
+  };
+
+  return gulp.src(gravityUiSass.normalizePath(gravityUiSass.srcImgDir, '**', '*.svg'))
+    .pipe(svgo(svgoOptions))
+    .pipe(gulp.dest(gravityUiSass.bldImgDir))
+    .pipe(browserSync.stream());
+}
+svgBuildTask.displayName = taskNamePrefix + 'svg';
+svgBuildTask.description = 'Optimises SVG images.';
+
+
+// Composite task to do complete UI lib build
+const buildTasks = gulp.parallel(sassBuildTask, svgBuildTask);
+buildTasks.displayName = taskNamePrefix + 'build';
+buildTasks.description = 'Builds the Gravity UI library.';
+
 
 function watchTask() {
   const watchers = [
@@ -31,6 +51,12 @@ function watchTask() {
       paths: [gravityUiSass.normalizePath(gravityUiSass.srcSassDir, '**', '*.scss')],
       config: { awaitWriteFinish: true },
       tasks: gulp.series(sassBuildTask, browserSync.reloadCSS)
+    },
+    {
+      name: 'SVG',
+      paths: [gravityUiSass.normalizePath(gravityUiSass.srcImgDir, '**', '*.svg')],
+      config: { awaitWriteFinish: true },
+      tasks: svgBuildTask
     }
   ];
 
@@ -41,13 +67,15 @@ function watchTask() {
   });
   console.log();
 }
-watchTask.watchTask = taskNamePrefix + 'watch';
-watchTask.watchTask = 'Watches UI library files';
+watchTask.displayName = taskNamePrefix + 'watch';
+watchTask.description = 'Watches UI library files';
 
 
 
 module.exports = {
   sassBuildTask,
+  svgBuildTask,
+  buildTasks,
   watchTask
 };
 

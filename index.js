@@ -21,11 +21,13 @@ const srcUiLibDir = path.join(srcRootDir, uiLibDirName);
 const bldUiLibDir = path.join(bldRootDir, uiLibDirName);
 
 const srcSassDir = path.join(srcUiLibDir, 'sass');
+const srcImgDir = path.join(srcUiLibDir, 'images');
 const mainSassFilename = 'gravity.scss';
 const srcSassFilePath = path.join(srcSassDir, mainSassFilename);
 
 const cssFilename = 'gravity.css';
 const bldCssFilePath = path.join(bldUiLibDir, cssFilename);
+const bldImgDir = path.join(bldUiLibDir, 'images');
 
 module.exports = {
   /**
@@ -53,6 +55,10 @@ module.exports = {
   mainSassFilename,
   srcSassFilePath,
 
+  // Image locations
+  srcImgDir,
+  bldImgDir,
+
   // Expose root build output dir
   bldRootDir,
   bldUiLibDir,
@@ -60,4 +66,6 @@ module.exports = {
   // Expose compiled CSS stuff
   cssFilename,
   bldCssFilePath,
+
+
 };
