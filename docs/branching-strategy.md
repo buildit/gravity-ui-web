@@ -1,10 +1,12 @@
 # Braching strategy
 
-This project currently uses a simple branching strategy that is inspired by [git-flow](http://nvie.com/posts/a-successful-git-branching-model/). _Diet Git Glow_, if you will.
+This project currently uses a simple branching strategy that is inspired by [git-flow](http://nvie.com/posts/a-successful-git-branching-model/). _Diet Git Flow_, if you will.
 
 ## `develop` branch
 
 The most recently delivered development changes reside in `develop`.
+
+Commits to the `develop` branch trigger an automated build and deployment of the Buildit Living Style Guide [staging environment](http://style-staging.buildit.digital/). (Refer to our [Travis CI doc](./travis-ci.md) for further details)
 
 This has been configured as a restricted branch on GitHub and only project maintainers are able to push to this branch (or merge pull requests into it).
 
@@ -26,4 +28,4 @@ The `master` branch always contains the most recent _production ready_ code.
 
 This has been configured as a restricted branch on GitHub and only project maintainers are able to push to this branch (or merge pull requests into it).
 
-After being merged into `master`, new releases are tagged using the semver format (`v1.2.3`) by the project maintainers. This then triggers and automated build and deployment of both the [Buildit Living Style Guide](http://style.buildit.digital/) and the [`@buildit/gravity-ui-sass` NPM package](https://www.npmjs.com/package/@buildit/gravity-ui-sass).
+After being merged into `master`, new releases are tagged using the semver format (`v1.2.3`) by the project maintainers. This then triggers an automated build and deployment of both the [Buildit Living Style Guide](http://style.buildit.digital/) and the [`@buildit/gravity-ui-sass` NPM package](https://www.npmjs.com/package/@buildit/gravity-ui-sass).
