@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Basic developer and branching strategy docs
 
+### Changed
+- Colour particles in style guide now display a11y info
+
+
 ## [0.2.0] - 2018-01-19
 ### Added
 - NVM config
