@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Added
+- Basic developer and branching strategy docs
+
 ### Changed
 - Colour particles in style guide now display a11y info
 
