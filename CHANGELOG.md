@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Colour particles in style guide now display a11y info
 
+### Fixed
+- Pre-compiled CSS is now correctly included in published NPM package
+
 
 ## [0.2.0] - 2018-01-19
 ### Added

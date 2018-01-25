@@ -5,7 +5,7 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "dist/css/gravity.css",
+    "dist/ui-lib/",
     "src/ui-lib/"
   ],
   "scripts": {
