@@ -27,7 +27,6 @@
 
 @media all and (min-width: 1024px) {
   .sg-colors {
-    grid-gap: 10px;
     grid-template-columns: repeat(5, 1fr);
   }
 }
@@ -211,6 +210,5 @@
 @media all and (min-width: 1200px) {
   .sg-datatype--var {
     font-size: 0.6em;
-    line-height: 1.2;
   }
 }
