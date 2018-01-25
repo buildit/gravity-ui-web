@@ -1,0 +1,89 @@
+{
+  "colors": [
+    {
+      "color": {
+        "name": "Latte",
+        "varname": "$color-buildit-latte",
+        "hex": "4f2f00",
+        "wcag": {
+          "light": {
+            "small": "pass",
+            "big": "pass"
+          },
+          "dark": {
+            "small": "fail",
+            "big": "fail"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Cuppa",
+        "varname": "$color-buildit-cuppa",
+        "hex": "ac6700",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "pass"
+          },
+          "dark": {
+            "small": "pass",
+            "big": "pass"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Egg Yolk",
+        "varname": "$color-buildit-egg-yolk",
+        "hex": "ff9900",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "fail"
+          },
+          "dark": {
+            "small": "pass",
+            "big": "pass"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "&lsquo;Murican Cheese",
+        "varname": "$color-buildit-murican-cheese",
+        "hex": "FFBD59",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "fail"
+          },
+          "dark": {
+            "small": "pass",
+            "big": "pass"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Eggshell",
+        "varname": "$color-buildit-eggshell",
+        "hex": "ffe7c2",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "fail"
+          },
+          "dark": {
+            "small": "pass",
+            "big": "pass"
+          }
+        }
+      }
+    }
+  ]
+}

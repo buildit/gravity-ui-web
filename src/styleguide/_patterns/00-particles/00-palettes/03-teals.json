@@ -1,0 +1,89 @@
+{
+  "colors": [
+    {
+      "color": {
+        "name": "Twilight",
+        "varname": "$color-buildit-twilight",
+        "hex": "012b3d",
+        "wcag": {
+          "light": {
+            "small": "pass",
+            "big": "pass"
+          },
+          "dark": {
+            "small": "fail",
+            "big": "fail"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Deep Ocean",
+        "varname": "$color-buildit-deep-ocean",
+        "hex": "095771",
+        "wcag": {
+          "light": {
+            "small": "pass",
+            "big": "pass"
+          },
+          "dark": {
+            "small": "fail",
+            "big": "fail"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Tealy McTealface",
+        "varname": "$color-buildit-tealy-mc-tealface",
+        "hex": "287a95",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "pass"
+          },
+          "dark": {
+            "small": "fail",
+            "big": "pass"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Bread Mould",
+        "varname": "$color-buildit-bread-mould",
+        "hex": "5ea1b8",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "fail"
+          },
+          "dark": {
+            "small": "pass",
+            "big": "pass"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Nuclear Winter",
+        "varname": "$color-buildit-nuclear-winter",
+        "hex": "d5e9f0",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "fail"
+          },
+          "dark": {
+            "small": "pass",
+            "big": "pass"
+          }
+        }
+      }
+    }
+  ]
+}
