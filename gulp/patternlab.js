@@ -12,7 +12,7 @@ const gulp = require('gulp');
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
 const chalk = require('chalk');
-const normalizePath = require('../index.js').normalizePath;
+const normalizePath = require('./paths.js').normalizePath;
 const browserSync = require('./browsersync.js');
 
 const taskNamePrefix = 'patternlab:';

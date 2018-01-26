@@ -5,7 +5,7 @@
 
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-const gravityUiSass = require('../index.js');
+const bldRootDir = require('./paths.js').bldRootDir;
 
 const taskNamePrefix = 'browsersync:';
 
@@ -34,7 +34,7 @@ function reloadCSS(done) {
 function initTask(done) {
   browserSync.init({
     server: {
-      baseDir: gravityUiSass.bldRootDir
+      baseDir: bldRootDir
     },
     snippetOptions: {
       // Ignore all HTML files within the templates folder
