@@ -36,9 +36,14 @@ function srcSymbolsTask () {
         'style': 'display: none;',
         'aria-hidden': 'true'
       },
-      templates: ['default-svg']
+      templates: [
+        'default-svg',
+        paths.normalizePath(__dirname, 'templates', 'symbols.json')
+      ]
     }))
-    .pipe(rename(paths.svgSymbolsFilename))
+    .pipe(rename({
+      basename: paths.symbolsBasename
+    }))
     .pipe(gulp.dest(paths.bldUiLibDir))
     .pipe(browserSync.stream());
 }

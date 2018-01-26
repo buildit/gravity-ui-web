@@ -22,7 +22,7 @@ gulp.task('clean', function(){
   return del(gravityUiSass.normalizePath(gravityUiSass.bldRootDir, '*'));
 });
 
-gulp.task('styleguide', gulp.parallel(plTasks.plBuildTask, uiLibTasks.buildTasks));
+gulp.task('styleguide', gulp.series(uiLibTasks.buildTasks, plTasks.plBuildTask));
 
 gulp.task('serve', gulp.series(
   'styleguide',

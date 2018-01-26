@@ -13,6 +13,7 @@
 @import '00-settings/gravy';
 @import '00-settings/colors';
 @import '00-settings/spacing';
+@import '00-settings/strokes';
 
 // === Tools layer ===
 // Globally used mixins and functions.
@@ -32,6 +33,8 @@
 @import '03-elements/inline-text';
 @import '03-elements/block-text';
 @import '03-elements/forms';
+@import '03-elements/media';
+@import '03-elements/tables';
 
 // === Objects layer ===
 // Class-based selectors which define undecorated design patterns, for example

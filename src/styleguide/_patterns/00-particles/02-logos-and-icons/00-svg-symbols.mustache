@@ -1,0 +1,24 @@
+<table class="sg-symbol-table">
+  <thead>
+    <tr>
+      <th>Preview</th>
+      <th>ID</th>
+      <th>Original dimensions</th>
+    </tr>
+  <thead>
+  <tbody>
+  {{#symbols}}
+    <tr>
+      <td>
+        {{> particles-svg-symbol-ref:sg-symbol-table__preview }}
+      </td>
+      <td>
+        <code>#{{id}}</code>
+      </td>
+      <td>
+        <code>{{width}}</code> &times; <code>{{height}}</code>
+      </td>
+    </tr>
+  {{/symbols}}
+  </tbody>
+</table>

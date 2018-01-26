@@ -36,8 +36,10 @@ const srcSassFilePath = path.join(srcSassDir, mainSassFilename);
 const cssFilename = 'gravity.css';
 const bldCssFilePath = path.join(bldUiLibDir, cssFilename);
 
-const svgSymbolsFilename = 'symbols.svg';
-const bldSvgSymbolsFilePath = path.join(bldUiLibDir, svgSymbolsFilename);
+const symbolsBasename = 'symbols';
+const bldSvgSymbolsFilePath = path.join(bldUiLibDir, `${symbolsBasename}.svg`);
+const bldSvgSymbolsInfoFilePath = path.join(bldUiLibDir, `${symbolsBasename}.json`);
+
 
 
 module.exports = {
@@ -68,8 +70,9 @@ module.exports = {
   srcSassFilePath,
 
   // SVG symbols (used for icons & logo)
-  svgSymbolsFilename,
+  symbolsBasename,
   bldSvgSymbolsFilePath,
+  bldSvgSymbolsInfoFilePath,
 
   // Expose root build output dir
   bldRootDir,
