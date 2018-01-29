@@ -47,7 +47,7 @@ preSvgSymbolsTask.description = 'Copies Gravity\'s symbols.svg file to the patte
 function preSvgSymbolsInfoTask () {
   return gulp.src(pkgPaths.bldSvgSymbolsInfoFilePath)
     .pipe(rename('00-svg-symbols.json'))
-    .pipe(gulp.dest(pkgPaths.normalizePath(paths().source.patterns, '00-particles', '02-logos-and-icons')));
+    .pipe(gulp.dest(pkgPaths.normalizePath(paths().source.patterns, '00-particles', '05-logos-and-icons')));
 };
 preSvgSymbolsInfoTask.displayName = taskNamePrefix + 'pre:symbols-info';
 preSvgSymbolsInfoTask.description = 'Copies Gravity\'s symbols.json file to the patterns folder.';
