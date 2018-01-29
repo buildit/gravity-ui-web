@@ -1,6 +1,11 @@
 @import 'gravy';
 
 $gravy: (
+  breakpoints: (
+    small: 36rem,
+    medium: 48rem,
+    large: 62rem
+  ),
   typefaces: (
     primary: (
       stack: ('Roboto', sans-serif),

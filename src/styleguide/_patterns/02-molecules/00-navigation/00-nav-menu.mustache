@@ -1,0 +1,14 @@
+<ul class="grav-c-nav-menu">
+{{#links}}
+  {{^isCurrent}}
+  <li>
+    {{> atoms-link }}
+  </li>
+  {{/isCurrent}}
+  {{#isCurrent}}
+  <li class="grav-c-nav-menu__item--current">
+    <a>{{control.label}}</a>
+  </li>
+  {{/isCurrent}}
+{{/links}}
+</ul>

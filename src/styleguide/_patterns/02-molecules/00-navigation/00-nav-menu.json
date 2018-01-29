@@ -1,0 +1,30 @@
+{
+  "links": [
+    {
+      "control": {
+        "label": "Lorem ipsum"
+      }
+    },
+    {
+      "control": {
+        "label": "Quis autem vel eum"
+      }
+    },
+    {
+      "control": {
+        "label": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem"
+      }
+    },
+    {
+      "isCurrent": true,
+      "control": {
+        "label": "Neque porro quisquam est"
+      }
+    },
+    {
+      "control": {
+        "label": "Nemo enim ipsam voluptatem"
+      }
+    }
+  ]
+}

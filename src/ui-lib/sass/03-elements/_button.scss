@@ -1,0 +1,38 @@
+
+@mixin grav-button-styles($interactive, $contrast, $hover) {
+  padding: $grav-sp-inset-squished-s;
+  background-color: $interactive;
+  border: $grav-st-thickness $grav-st-style $interactive;
+  color: $contrast;
+
+  &:hover {
+    background-color: $hover;
+    border-color: $hover;
+  }
+
+  &:active {
+    background-color: $contrast;
+    border-color: unset;
+    color: $interactive;
+  }
+
+  &:disabled {
+    &,
+    &:hover {
+      background-color: $grav-co-disabled;
+      border-color: $grav-co-disabled;
+      color: $grav-co-disabled-contrast;
+    }
+  }
+}
+
+
+button,
+[type=button],
+[type=reset] {
+  @include grav-button-styles($grav-co-interactive-secondary, $grav-co-interactive-secondary-contrast, $grav-co-interactive-secondary-hover);
+}
+
+[type=submit] {
+  @include grav-button-styles($grav-co-interactive-primary, $grav-co-interactive-primary-contrast, $grav-co-interactive-primary-hover);
+}
