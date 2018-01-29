@@ -5,7 +5,7 @@
   * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
 */
 
-@function space($n) {
+@function grav-sp-calc($n) {
   $space-base-size: 1rem;
   $space-multiplier: 2;
 
@@ -26,8 +26,8 @@
 }
 
 
-$space-xs: space(-2);
-$space-s: space(-1);
-$space-m: space(0);
-$space-l: space(1);
-$space-xl: space(2);
+$grav-sp-xs: grav-sp-calc(-2);
+$grav-sp-s: grav-sp-calc(-1);
+$grav-sp-m: grav-sp-calc(0);
+$grav-sp-l: grav-sp-calc(1);
+$grav-sp-xl: grav-sp-calc(2);

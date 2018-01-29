@@ -3,30 +3,33 @@
 */
 
 // === "RAW" Buildit brand colours ===
+// These should NOT be referenced directly by CSS properties - instead
+// the Mapping variables (defined below) should always be used.
 
 // Primary: Yellows
-$color-buildit-latte: #4f2f00;
-$color-buildit-cuppa: #ac6700;
-$color-buildit-egg-yolk: #f90;
-$color-buildit-murican-cheese: #ffbc58;
-$color-buildit-eggshell: #ffe7c2;
+$grav-co-primary-latte: #4f2f00;
+$grav-co-primary-cuppa: #ac6700;
+$grav-co-primary-egg-yolk: #f90;
+$grav-co-primary-murican-cheese: #ffbc58;
+$grav-co-primary-eggshell: #ffe7c2;
 
 // Secondary: Teals
-$color-buildit-twilight: #012b3d;
-$color-buildit-deep-ocean: #095771;
-$color-buildit-tealy-mc-tealface: #287a95;
-$color-buildit-bread-mould: #5ea1b8;
-$color-buildit-nuclear-winter: #d5e9f0;
+$grav-co-secondary-twilight: #012b3d;
+$grav-co-secondary-deep-ocean: #095771;
+$grav-co-secondary-tealy-mc-tealface: #287a95;
+$grav-co-secondary-bread-mould: #5ea1b8;
+$grav-co-secondary-nuclear-winter: #d5e9f0;
 
 // Neutrals
-$color-buildit-charcoal: #241c1c;
-$color-buildit-asphalt: #544848;
-$color-buildit-warm-grey: #8b8080;
-$color-buildit-ashtray: #c0bbbb;
-$color-buildit-dirty-snow-white: #f7f5f5;
+$grav-co-neutral-charcoal: #241c1c;
+$grav-co-neutral-asphalt: #544848;
+$grav-co-neutral-warm-grey: #8b8080;
+$grav-co-neutral-ashtray: #c0bbbb;
+$grav-co-neutral-dirty-snow-white: #f7f5f5;
 
 
 // === Mappings ===
 
-$color-fg-default: $color-buildit-charcoal;
-$color-bg-default: $color-buildit-dirty-snow-white;
+// Document colour defaults
+$grav-co-fg: $grav-co-neutral-charcoal;
+$grav-co-bg: $grav-co-neutral-dirty-snow-white;
