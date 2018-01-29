@@ -1,12 +1,12 @@
 
 table {
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
 }
 
 th,
 td {
-  border-width: $stroke-thickness;
-  border-style: $stroke-style;
   padding: $space-s;
+  border-style: $stroke-style;
+  border-width: $stroke-thickness;
 }
