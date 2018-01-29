@@ -223,3 +223,37 @@
   display: block;
   height: 2rem;
 }
+
+
+
+.sg-size-list > dt {
+  font-weight: bold;
+}
+
+.sg-size-list__sample {
+  height: 1rem;
+  background-color: #287A95;
+}
+
+
+.sg-inset-list > dt {
+  font-weight: bold;
+}
+
+.sg-inset-list__sample {
+  border: 1px solid #544848;
+  max-width: 8rem;
+}
+
+.sg-inset-list__sample > div {
+  position: relative;
+  box-sizing: border-box;
+  height: 6rem;
+  background-color: #FF9900;
+}
+
+.sg-inset-list__sample > div > div {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: white;
+}

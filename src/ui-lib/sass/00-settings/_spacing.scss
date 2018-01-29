@@ -26,8 +26,18 @@
 }
 
 
+// Global set of one-dimensional space sizes
 $grav-sp-xs: grav-sp-calc(-2);
 $grav-sp-s: grav-sp-calc(-1);
 $grav-sp-m: grav-sp-calc(0);
 $grav-sp-l: grav-sp-calc(1);
 $grav-sp-xl: grav-sp-calc(2);
+
+// Global set of two-dimensional insets (typically used as padding values)
+$grav-sp-inset-s: $grav-sp-s;
+$grav-sp-inset-m: $grav-sp-m;
+$grav-sp-inset-l: $grav-sp-l;
+
+$grav-sp-inset-squished-s: $grav-sp-xs $grav-sp-s;
+$grav-sp-inset-squished-m: $grav-sp-s $grav-sp-m;
+$grav-sp-inset-squished-l: $grav-sp-m $grav-sp-l;
