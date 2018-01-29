@@ -30,7 +30,13 @@ sassBuildTask.description = 'Compiles SASS.';
 
 function srcSymbolsTask () {
   return gulp.src(paths.normalizePath(paths.srcSymbolsDir, '**', '*.svg'))
-    .pipe(svgo())
+    .pipe(svgo({
+      plugins: [
+        {
+          removeTitle: false
+        }
+      ]
+    }))
     .pipe(svgSymbols({
       svgAttrs: {
         'style': 'display: none;',
