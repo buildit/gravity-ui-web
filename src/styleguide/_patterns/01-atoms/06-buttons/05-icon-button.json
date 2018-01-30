@@ -3,5 +3,5 @@
     "type": "button",
     "label": "Do something"
   },
-  "id": "menu"
+  "symbolId": "menu"
 }
