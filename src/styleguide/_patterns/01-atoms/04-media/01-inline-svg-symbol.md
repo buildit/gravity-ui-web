@@ -4,7 +4,7 @@ Displays an SVG `<symbol>` defined elsewhere in the document. The desired symbol
 
 **Note**: The referenced SVG symbol must have a `<title>` element containing the text alternative (equivalent to the `alt` attribute on `<img>`), as this will be used by assistive technologies.
 
-**Note:** Most browsers will give this UI element a default size of `300px` × `150px` (the [default for "replaced elements"](https://www.sitepoint.com/replaced-elements-html-myths-realities/)), unless you override it via CSS. _This will happen regardless of the referenced `<symbol>`'s `viewBox` attribute value._ Instead, the referenced `<symbol>`'s aspect ratio will be preserved but, it will be scaled to fit the size of the outwe `<svg>` container.
+**Note:** Most browsers will give this UI element a default size of `300px` × `150px` (the [default for "replaced elements"](https://www.sitepoint.com/replaced-elements-html-myths-realities/)), unless you override it via CSS. _This will happen regardless of the referenced `<symbol>`'s `viewBox` attribute value._ Instead, the referenced `<symbol>`'s aspect ratio will be preserved but, it will be scaled to fit the size of the outer `<svg>` container. If you set `width` and `height` attributes on the outer `<svg>` container, then they will set the _intrinsic_ size. After that, scaling behaves just like it would for an `<img>` (e.g. settings a different width via CSS, will scale the image proportionally).
 
 
 ## Background

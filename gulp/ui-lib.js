@@ -34,6 +34,12 @@ function srcSymbolsTask () {
       plugins: [
         {
           removeTitle: false
+        },
+        {
+          removeViewBox: false
+        },
+        {
+          removeDimensions: true
         }
       ]
     }))

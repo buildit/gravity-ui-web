@@ -221,7 +221,8 @@
 
 .sg-symbol-table__preview {
   display: block;
-  height: 2rem;
+  height: 100%;
+  width: auto;
 }
 
 
