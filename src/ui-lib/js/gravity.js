@@ -35,8 +35,8 @@
 
     toggleButtons.forEach((toggleButton) => {
       toggleButton.addEventListener('click', (e) => {
-        let pressed = e.target.getAttribute('aria-pressed') === 'true';
-        e.target.setAttribute('aria-pressed', String(!pressed));
+        let pressed = toggleButton.getAttribute('aria-pressed') === 'true';
+        toggleButton.setAttribute('aria-pressed', String(!pressed));
       })
     });
   }

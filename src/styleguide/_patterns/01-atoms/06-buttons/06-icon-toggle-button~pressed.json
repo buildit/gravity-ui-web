@@ -1,6 +1,7 @@
 {
   "control": {
     "label": "Toggle something",
-    "pressed": false
-  }
+    "pressed": true
+  },
+  "symbolId": "menu"
 }

@@ -8,6 +8,7 @@ The `type` attribute controls the behavior of the button when it is activated. I
 * `button`: Does nothing
 * `reset`: Resets the form
 
+Note, you can nest an icon within a button (only supported on `<button>` elements, not `<input type="button">`). If your button _only_ contains an icon, then you must use the Icon Button component instead.
 
 ## See also
 

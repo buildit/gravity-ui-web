@@ -1,6 +1,6 @@
 {
   "control": {
-    "label": "Unicorn Mode",
+    "label": "Toggle something",
     "pressed": true
   }
 }

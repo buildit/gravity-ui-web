@@ -1,6 +1,24 @@
+/* == Styles shared by all buttons == */
+
+[type=button],
+[type=reset],
+[type=submit],
+// Button with no type attribute defaults to "submit"
+button:not([type]) {
+  padding: $grav-sp-inset-squished-xs;
+
+  // Scale icons in buttons to match the line-height
+  > .grav-c-icon {
+    margin-right: $grav-sp-xs;
+    width: auto;
+    height: 1em * $gravity-line-height;
+    vertical-align: top;
+  }
+}
+
+/* == Styles for specific kinds of buttons == */
 
 @mixin grav-button-styles($interactive, $contrast, $hover, $isToggle: false) {
-  padding: $grav-sp-inset-squished-s;
   background-color: $interactive;
   border: $grav-st-thickness $grav-st-style $interactive;
   color: $contrast;
@@ -35,7 +53,6 @@
   }
 }
 
-
 [type=button] {
   @include grav-button-styles($grav-co-interactive-secondary, $grav-co-interactive-secondary-contrast, $grav-co-interactive-secondary-hover, true);
 }
@@ -44,7 +61,7 @@
   @include grav-button-styles($grav-co-interactive-secondary, $grav-co-interactive-secondary-contrast, $grav-co-interactive-secondary-hover);
 }
 
-button:not([type]), // Button with no type attribute defaults to "submit"
-[type=submit] {
+[type=submit],
+button:not([type]) {
   @include grav-button-styles($grav-co-interactive-primary, $grav-co-interactive-primary-contrast, $grav-co-interactive-primary-hover);
 }

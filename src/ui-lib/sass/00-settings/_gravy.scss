@@ -1,5 +1,7 @@
 @import 'gravy';
 
+$gravity-line-height: 1.5;
+
 $gravy: (
   breakpoints: (
     small: 36rem,
@@ -24,7 +26,7 @@ $gravy: (
   ),
   typi: (
     base: (
-      null: (ms(0), 1.5),
+      null: (ms(0), $gravity-line-height),
       small: (ms(1)),
       large: (ms(2))
     )
