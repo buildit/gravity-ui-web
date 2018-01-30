@@ -1,5 +1,5 @@
 
-@mixin grav-button-styles($interactive, $contrast, $hover) {
+@mixin grav-button-styles($interactive, $contrast, $hover, $isToggle: false) {
   padding: $grav-sp-inset-squished-s;
   background-color: $interactive;
   border: $grav-st-thickness $grav-st-style $interactive;
@@ -16,6 +16,15 @@
     color: $interactive;
   }
 
+  @if $isToggle {
+    &[aria-pressed=true] {
+      // Same styles as :active
+      background-color: $contrast;
+      border-color: unset;
+      color: $interactive;
+    }
+  }
+
   &:disabled {
     &,
     &:hover {
@@ -27,12 +36,15 @@
 }
 
 
-button,
-[type=button],
+[type=button] {
+  @include grav-button-styles($grav-co-interactive-secondary, $grav-co-interactive-secondary-contrast, $grav-co-interactive-secondary-hover, true);
+}
+
 [type=reset] {
   @include grav-button-styles($grav-co-interactive-secondary, $grav-co-interactive-secondary-contrast, $grav-co-interactive-secondary-hover);
 }
 
+button:not([type]), // Button with no type attribute defaults to "submit"
 [type=submit] {
   @include grav-button-styles($grav-co-interactive-primary, $grav-co-interactive-primary-contrast, $grav-co-interactive-primary-hover);
 }

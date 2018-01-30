@@ -40,7 +40,8 @@ const symbolsBasename = 'symbols';
 const bldSvgSymbolsFilePath = path.join(bldUiLibDir, `${symbolsBasename}.svg`);
 const bldSvgSymbolsInfoFilePath = path.join(bldUiLibDir, `${symbolsBasename}.json`);
 
-
+const jsFilename = 'gravity.js';
+const bldJsFilePath = path.join(bldUiLibDir, jsFilename);
 
 module.exports = {
   /**
@@ -73,6 +74,10 @@ module.exports = {
   symbolsBasename,
   bldSvgSymbolsFilePath,
   bldSvgSymbolsInfoFilePath,
+
+  // Client-side JS
+  jsFilename,
+  bldJsFilePath,
 
   // Expose root build output dir
   bldRootDir,

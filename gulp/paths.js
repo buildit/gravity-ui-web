@@ -11,10 +11,12 @@ const pkgPaths = require('../index.js');
 
 const srcImgDir = path.join(pkgPaths.srcUiLibDir, 'images');
 const srcSymbolsDir = path.join(pkgPaths.srcUiLibDir, 'svg-symbols');
+const srcJsDir = path.join(pkgPaths.srcUiLibDir, 'js');
 
 module.exports = {
   srcImgDir,
   srcSymbolsDir,
+  srcJsDir,
 
   ...pkgPaths
 }
