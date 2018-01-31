@@ -9,9 +9,9 @@ button:not([type]) {
 
   // Scale icons in buttons to match the line-height
   > .grav-c-icon {
-    margin-right: $grav-sp-xs;
     width: auto;
     height: 1em * $gravity-line-height;
+    margin-right: $grav-sp-xs;
     vertical-align: top;
   }
 }
@@ -19,8 +19,8 @@ button:not([type]) {
 /* == Styles for specific kinds of buttons == */
 
 @mixin grav-button-styles($interactive, $contrast, $hover, $isToggle: false) {
-  background-color: $interactive;
   border: $grav-st-thickness $grav-st-style $interactive;
+  background-color: $interactive;
   color: $contrast;
 
   &:hover {

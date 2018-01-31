@@ -20,7 +20,7 @@
   }
 
   // Media queries
-  @media (min-width: gravy-breakpoint(medium)) {
+  @media (min-width: gravy-breakpoint(small)) {
     $items-per-row: 4;
 
     > ul {

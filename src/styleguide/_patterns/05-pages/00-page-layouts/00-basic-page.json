@@ -1,0 +1,27 @@
+{
+  "title": "About us",
+  "links": [
+    {
+      "url": false,
+      "control": {
+        "label": "About us"
+      }
+    },
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
+      }
+    },
+    {
+      "control": {
+        "label": "Careers"
+      }
+    },
+    {
+      "control": {
+        "label": "Locations"
+      }
+    }
+  ]
+}

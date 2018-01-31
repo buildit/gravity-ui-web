@@ -25,6 +25,7 @@
 // This is the first layer which generates actual CSS.
 @import 'normalize';
 @import '02-generic/heydon';
+@import '02-generic/layout';
 
 // === Elements layer ===
 // Styling for bare HTML elements (like H1, A, etc.).
@@ -36,6 +37,7 @@
 @import '03-elements/tables';
 @import '03-elements/buttons';
 @import '03-elements/forms';
+@import '03-elements/main-content';
 
 // === Objects layer ===
 // Class-based selectors which define undecorated design patterns, for example

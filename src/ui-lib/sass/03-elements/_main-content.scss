@@ -1,0 +1,8 @@
+main {
+  max-width: $grav-page-content-max-width;
+  margin: 0 $grav-page-content-inset;
+
+  @media (min-width: gravy-breakpoint(medium)) {
+    margin: 0 auto;
+  }
+}

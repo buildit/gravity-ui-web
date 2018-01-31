@@ -39,6 +39,7 @@ dt + dt,
 dd,
 th,
 td,
-option {
+option,
+header[role=banner] {
   margin-top: 0;
 }

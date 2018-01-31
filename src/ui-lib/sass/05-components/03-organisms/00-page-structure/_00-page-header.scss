@@ -1,9 +1,16 @@
-body > header[role=banner] {
+header[role=banner] {
+  // Note: The Page Header always spans the full width of the viewport. This
+  // is in case we want to give it any kind of full-bleed background styling.
+  // The child elements within therefore need to respect the maximum content
+  // width ($grav-page-content-max-width) themselves, where necessary.
 
   > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: $grav-page-content-max-width;
+    margin: 0 $grav-page-content-inset;
+    padding: $grav-sp-m 0;
   }
 
   .grav-c-logo {
@@ -13,14 +20,35 @@ body > header[role=banner] {
 
   .grav-c-icon-toggle-button {
     margin: 0 0 0 $grav-sp-m;
-    flex-shrink: 0;
+    flex-shrink: 0; // prevents button getting squished on narrow viewports
   }
 
-  // Media queries
-  @media (min-width: gravy-breakpoint(medium)) {
+  .grav-c-nav-menu {
+    margin: 0 auto;
+    max-width: $grav-page-content-max-width;
+  }
+
+
+  // === Media queries ===
+
+  @media (min-width: gravy-breakpoint(small)) {
+    // Hide the menu button since the nav menu changes to
+    // horiztonal, always-visible at this size
+    .grav-c-icon-toggle-button {
+      display: none;
+    }
+
+    // Bump up logo size
     .grav-c-logo {
       height: 2.5rem;
       width: auto;
+    }
+  }
+
+  @media (min-width: gravy-breakpoint(medium)) {
+    > div {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

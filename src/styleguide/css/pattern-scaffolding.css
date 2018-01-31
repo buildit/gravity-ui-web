@@ -258,3 +258,8 @@
   position: absolute;
   background-color: white;
 }
+
+.sg-main {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
