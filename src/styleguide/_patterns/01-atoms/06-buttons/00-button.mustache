@@ -1,4 +1,4 @@
-<button type="{{control.type}}"{{#control.disabled}} disabled{{/control.disabled}}>
+<button{{#control.type}} type="{{control.type}}"{{/control.type}}{{#control.disabled}} disabled{{/control.disabled}}>
   {{#symbolId}}{{> atoms-icon}}{{/symbolId}}
   {{control.label}}
 </button>

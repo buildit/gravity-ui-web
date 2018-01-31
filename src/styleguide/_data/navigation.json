@@ -16,7 +16,7 @@
       }
     },
     {
-      "isCurrent": true,
+      "url": false,
       "control": {
         "label": "Neque porro quisquam est"
       }

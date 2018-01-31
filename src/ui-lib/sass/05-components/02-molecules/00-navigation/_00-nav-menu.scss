@@ -8,53 +8,16 @@
       padding: 0;
       list-style-type: none;
 
-      > a {
-        // Common styling to all links within the nav menu
-        // including the current page one (which is non-interactive)
-        border-style: $grav-st-style;
-        border-width: $grav-st-thickness;
-        display: block;
-        padding: $grav-sp-inset-squished-xs;
-        text-decoration: none;
-
-        &[href] {
-          &:link,
-          &:visited {
-            background-color: $grav-co-interactive-secondary;
-            border-color: $grav-co-interactive-secondary;
-            color: $grav-co-interactive-secondary-contrast;
-          }
-
-          &:hover {
-            background-color: $grav-co-interactive-secondary-hover;
-            border-color: $grav-co-interactive-secondary-hover;
-          }
-
-          &:active {
-            background-color: $grav-co-interactive-secondary-contrast;
-            border-color: unset;
-            color: $grav-co-interactive-secondary;
-          }
-        }
-      }
-
       // Add small vertical gap successive list items
       & + li {
         margin-top: $grav-st-thickness;
       }
+
+      > .grav-c-block-link {
+        display: block;
+      }
     }
   }
-
-
-  // The list item representing the current page
-  &__item--current {
-    > a {
-      background-color: $grav-co-interactive-primary;
-      border-color: $grav-co-interactive-primary;
-      color: $grav-co-interactive-primary-contrast;
-    }
-  }
-
 
   // Media queries
   @media (min-width: gravy-breakpoint(medium)) {
@@ -69,7 +32,7 @@
       > li {
         flex-basis: calc((100% - #{$items-per-row - 1} * #{$grav-st-thickness}) / #{$items-per-row});
 
-        > a {
+        > .grav-c-block-link {
           height: 100%;
         }
 
