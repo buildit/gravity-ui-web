@@ -1,46 +1,50 @@
 .grav-c-nav-menu {
-  padding: 0;
 
-  > li {
-    margin: 0;
+  > ul {
     padding: 0;
-    list-style-type: none;
 
-    > a {
-      // Common styling to all links within the nav menu
-      // including the current page one (which is non-interactive)
-      border-style: $grav-st-style;
-      border-width: $grav-st-thickness;
-      display: block;
-      padding: $grav-sp-inset-squished-xs;
-      text-decoration: none;
+    > li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
 
-      &[href] {
-        &:link,
-        &:visited {
-          background-color: $grav-co-interactive-secondary;
-          border-color: $grav-co-interactive-secondary;
-          color: $grav-co-interactive-secondary-contrast;
-        }
+      > a {
+        // Common styling to all links within the nav menu
+        // including the current page one (which is non-interactive)
+        border-style: $grav-st-style;
+        border-width: $grav-st-thickness;
+        display: block;
+        padding: $grav-sp-inset-squished-xs;
+        text-decoration: none;
 
-        &:hover {
-          background-color: $grav-co-interactive-secondary-hover;
-          border-color: $grav-co-interactive-secondary-hover;
-        }
+        &[href] {
+          &:link,
+          &:visited {
+            background-color: $grav-co-interactive-secondary;
+            border-color: $grav-co-interactive-secondary;
+            color: $grav-co-interactive-secondary-contrast;
+          }
 
-        &:active {
-          background-color: $grav-co-interactive-secondary-contrast;
-          border-color: unset;
-          color: $grav-co-interactive-secondary;
+          &:hover {
+            background-color: $grav-co-interactive-secondary-hover;
+            border-color: $grav-co-interactive-secondary-hover;
+          }
+
+          &:active {
+            background-color: $grav-co-interactive-secondary-contrast;
+            border-color: unset;
+            color: $grav-co-interactive-secondary;
+          }
         }
       }
-    }
 
-    // Add small vertical gap successive list items
-    & + li {
-      margin-top: $grav-st-thickness;
+      // Add small vertical gap successive list items
+      & + li {
+        margin-top: $grav-st-thickness;
+      }
     }
   }
+
 
   // The list item representing the current page
   &__item--current {
@@ -56,21 +60,23 @@
   @media (min-width: gravy-breakpoint(medium)) {
     $items-per-row: 4;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
 
-    & > li {
-      flex-basis: calc((100% - #{$items-per-row - 1} * #{$grav-st-thickness}) / #{$items-per-row});
+      > li {
+        flex-basis: calc((100% - #{$items-per-row - 1} * #{$grav-st-thickness}) / #{$items-per-row});
 
-      & > a {
-        height: 100%;
-      }
+        > a {
+          height: 100%;
+        }
 
-      // Remove vertical gap from first row of links
-      &:nth-child(-n + #{$items-per-row}) {
-        margin-top: 0;
+        // Remove vertical gap from first row of links
+        &:nth-child(-n + #{$items-per-row}) {
+          margin-top: 0;
+        }
       }
     }
   }
