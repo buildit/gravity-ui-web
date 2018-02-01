@@ -10,7 +10,7 @@ button:not([type]) {
   // Scale icons in buttons to match the line-height
   > .grav-c-icon {
     width: auto;
-    height: 1em * $gravity-line-height;
+    height: 1em * $grav-line-height;
     margin-right: $grav-sp-xs;
     vertical-align: top;
   }

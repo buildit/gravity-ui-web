@@ -1,4 +1,4 @@
-# Purpose
+## Purpose
 
 Block Links are simply Links that have been styled to appear visually similar to buttons. This helps them stand out and also increases the clickable area, making them easier to click or tap.
 

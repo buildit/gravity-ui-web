@@ -36,18 +36,31 @@ function getConfiguredCleanOption() {
  * are then processed by Pattern Lab in the usual way
 ******************************************************/
 
+// Exported array of glob patterns that clean tasks can use to
+// delete any files generated at build-time
+const generatedFileGlobs = [];
+
+const generatedPatternsDir = pkgPaths.normalizePath(paths().source.patterns, '_generated');
+generatedFileGlobs.push(path.join(generatedPatternsDir, '*'));
+generatedFileGlobs.push('!' + path.join(generatedPatternsDir, 'README.md')); // Prevent README.md from being deleted
+
 function preSvgSymbolsTask () {
   return gulp.src(pkgPaths.bldSvgSymbolsFilePath)
     .pipe(rename('symbols.mustache'))
-    .pipe(gulp.dest(pkgPaths.normalizePath(paths().source.patterns, '_generated')));
+    .pipe(gulp.dest(generatedPatternsDir));
 };
 preSvgSymbolsTask.displayName = taskNamePrefix + 'pre:symbols';
 preSvgSymbolsTask.description = 'Copies Gravity\'s symbols.svg file to the patterns folder.';
 
+
+const generatedSymbolInfoFilename = '00-svg-symbols.json';
+const generatedSymbolInfoDir = pkgPaths.normalizePath(paths().source.patterns, '00-particles', '05-logos-and-icons');
+generatedFileGlobs.push(path.join(generatedSymbolInfoDir, generatedSymbolInfoFilename));
+
 function preSvgSymbolsInfoTask () {
   return gulp.src(pkgPaths.bldSvgSymbolsInfoFilePath)
-    .pipe(rename('00-svg-symbols.json'))
-    .pipe(gulp.dest(pkgPaths.normalizePath(paths().source.patterns, '00-particles', '05-logos-and-icons')));
+    .pipe(rename(generatedSymbolInfoFilename))
+    .pipe(gulp.dest(generatedSymbolInfoDir));
 };
 preSvgSymbolsInfoTask.displayName = taskNamePrefix + 'pre:symbols-info';
 preSvgSymbolsInfoTask.description = 'Copies Gravity\'s symbols.json file to the patterns folder.';
@@ -171,7 +184,7 @@ function plPatternsOnlyTask (done) {
   patternlab.patternsonly(done, getConfiguredCleanOption());
 };
 plPatternsOnlyTask.displayName = taskNamePrefix + 'patternsonly';
-plPatternsOnlyTask.description = 'Compiles the patterns only, outputting to config.pkgPaths.public';
+plPatternsOnlyTask.description = 'Compiles the patterns only, outputting to config.paths.public';
 
 
 function plListStarterKitsTask (done) {
@@ -187,7 +200,7 @@ function plLoadStarterKitsTask (done) {
   done();
 };
 plLoadStarterKitsTask.displayName = taskNamePrefix + 'loadstarterkit';
-plLoadStarterKitsTask.description = 'Load a starterkit into config.pkgPaths.source/*';
+plLoadStarterKitsTask.description = 'Load a starterkit into config.paths.source/*';
 
 
 function plInstallPluginTask (done) {
@@ -222,7 +235,7 @@ function build(done) {
 
 const plBuildTask = gulp.series(preBuildTask, plAssetsTask, build);
 plBuildTask.displayName = taskNamePrefix + 'build';
-plBuildTask.description = 'Compiles the patterns and frontend, outputting to config.pkgPaths.public';
+plBuildTask.description = 'Compiles the patterns and frontend, outputting to config.paths.public';
 
 
 /******************************************************
@@ -322,5 +335,8 @@ module.exports = {
 
   // Watch tasks
   plWatchOnlyTask,
-  plWatchTask
+  plWatchTask,
+
+  // Generated file paths
+  generatedFileGlobs
 }

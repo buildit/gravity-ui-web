@@ -28,7 +28,7 @@ sassBuildTask.description = 'Compiles SASS.';
 
 
 
-function srcSymbolsTask () {
+function svgSymbolsTask () {
   return gulp.src(paths.normalizePath(paths.srcSymbolsDir, '**', '*.svg'))
     .pipe(svgo({
       plugins: [
@@ -59,8 +59,8 @@ function srcSymbolsTask () {
     .pipe(gulp.dest(paths.bldUiLibDir))
     .pipe(browserSync.stream());
 }
-srcSymbolsTask.displayName = taskNamePrefix + 'svg-symbols';
-srcSymbolsTask.description = 'Compiles symbols.svg file.';
+svgSymbolsTask.displayName = taskNamePrefix + 'svg-symbols';
+svgSymbolsTask.description = 'Compiles symbols.svg file.';
 
 
 function copyJsTask() {
@@ -72,7 +72,7 @@ copyJsTask.description = 'Copies JS files.';
 
 
 // Composite task to do complete UI lib build
-const buildTasks = gulp.parallel(sassBuildTask, srcSymbolsTask, copyJsTask);
+const buildTasks = gulp.parallel(sassBuildTask, svgSymbolsTask, copyJsTask);
 buildTasks.displayName = taskNamePrefix + 'build';
 buildTasks.description = 'Builds the Gravity UI library.';
 
@@ -89,7 +89,7 @@ function watchTask() {
       name: 'SVG Sprites',
       paths: [paths.normalizePath(paths.srcSymbolsDir, '**', '*.svg')],
       config: { awaitWriteFinish: true },
-      tasks: srcSymbolsTask
+      tasks: svgSymbolsTask
     },
     {
       name: 'JS',
@@ -113,7 +113,7 @@ watchTask.description = 'Watches UI library files';
 
 module.exports = {
   sassBuildTask,
-  srcSymbolsTask,
+  svgSymbolsTask,
   buildTasks,
   watchTask
 };

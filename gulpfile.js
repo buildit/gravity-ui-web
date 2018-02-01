@@ -11,7 +11,7 @@
 
 const gulp = require('gulp');
 const del = require('del');
-const gravityUiSass = require('./index.js');
+const pkgPaths = require('./index.js');
 const plTasks = require('./gulp/patternlab.js');
 const bsTasks = require('./gulp/browsersync.js');
 const uiLibTasks = require('./gulp/ui-lib.js');
@@ -19,7 +19,10 @@ const uiLibTasks = require('./gulp/ui-lib.js');
 // Define composite tasks:
 
 gulp.task('clean', function(){
-  return del(gravityUiSass.normalizePath(gravityUiSass.bldRootDir, '*'));
+  return del([
+    pkgPaths.normalizePath(pkgPaths.bldRootDir, '*'),
+    ...plTasks.generatedFileGlobs
+  ]);
 });
 
 gulp.task('styleguide', gulp.series(uiLibTasks.buildTasks, plTasks.plBuildTask));
