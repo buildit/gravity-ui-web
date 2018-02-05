@@ -21,13 +21,21 @@ before_deploy:
 deploy:
   # deploy develop to Staging
   - provider: script
-    script: ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION}
+    script: 
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" && 
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" && 
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" && 
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css"
     skip_cleanup: true
     on:
       branch: develop
   # deploy tags matching v#.#.*  to Production
   - provider: script
-    script: ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION}
+    script: 
+      - ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" && 
+      - ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" && 
+      - ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" && 
+      - ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css"
     skip_cleanup: true
     on:
       tags: true
