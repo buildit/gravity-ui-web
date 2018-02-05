@@ -1,8 +1,8 @@
 .grav-c-block-link {
-  border-style: $grav-st-style;
-  border-width: $grav-st-thickness;
   display: inline-block;
   padding: $grav-sp-inset-squished-xs;
+  border-style: $grav-st-style;
+  border-width: $grav-st-thickness;
   text-decoration: none;
 
   &[href] {

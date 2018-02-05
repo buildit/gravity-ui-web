@@ -1,13 +1,9 @@
-<dl class="sg-size-list">
 {{#sizes}}
-  <dt>{{name}}</dt>
-  <dd class="sg-size-list__sample" style="width: {{length}};">
-  </dd>
-  <dd class="sg-size-list__value">
-    Value: <code>{{length}}</code>
-  </dd>
-  <dd class="sg-size-list__var">
-    SASS var: <code>{{var}}</code>
-  </dd>
+  <p><strong>{{name}}</strong></p>
+  <dl class="sg-datalist sg-datalist--code">
+    <dt><span class="sg-datalist__label">Size</span></dt>
+    <dd><span class="sg-example--inline-block" style="width: {{length}};"></span><code>{{length}}</code></dd>
+    <dt><span class="sg-datalist__label">SASS</span></dt>
+    <dd><code>{{var}}</code></dd>
+  </dl>
 {{/sizes}}
-</dl>

@@ -32,10 +32,10 @@
 }
 
 .sg-colors__color {
+  max-width: 14em;
   margin: 0 0 0.5em;
   padding: 0.3em;
   border: 1px solid #ddd;
-  max-width: 14em;
   min-width: 5em;
 }
 
@@ -119,8 +119,8 @@
 
 .sg-swatch-check__item-label {
   padding: 2px 4px;
-  border-radius: 5px;
   background-color: #241c1c;
+  border-radius: 5px;
   color: #f7f5f5;
   font-size: 0.7em;
   text-align: center;
@@ -135,19 +135,20 @@
 
 /** @define sg-datalist */
 .sg-datalist {
-  margin-bottom: 0;
   padding: 0;
+  margin-bottom: 0;
 }
 
 @media all and (min-width: 42em) {
   .sg-datalist {
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-column-gap: 0.5rem;
+    grid-template-columns: max-content auto;
   }
 }
 
 .sg-datalist > * {
-  margin: 0 0 1em;
+  margin: 0;
   padding: 0;
 }
 
@@ -177,20 +178,21 @@
 
 @media all and (min-width: 42em) {
   .sg-datalist > dt {
-    padding-right: 0.5em;
+    padding-right: 0;
     text-align: right;
   }
 }
 
 .sg-datalist__label {
   padding: 2px 4px;
-  border-radius: 5px;
   background-color: #ddd;
+  border-radius: 5px;
   color: #000;
   font-size: 0.7em;
   text-transform: uppercase;
 }
 
+/** @define sg-datatype */
 .sg-datatype--hex {
   font-family: monospace;
   text-transform: uppercase;
@@ -213,6 +215,34 @@
   }
 }
 
+/** @define sg-example */
+.sg-example--inline-block {
+  content: ' ';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: #8b8080;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.sg-example--padded-block {
+  max-width: 8rem;
+  background-color: #f90;
+}
+
+.sg-example--padded-block > div {
+  height: 6rem;
+  position: relative;
+  background-color: #f90;
+  box-sizing: border-box;
+}
+
+.sg-example--padded-block > div > div {
+  position: absolute;
+  background-color: #8b8080;
+  box-sizing: border-box;
+}
 
 .sg-symbol-table td,
 .sg-symbol-table th {
@@ -221,42 +251,12 @@
 
 .sg-symbol-table__preview {
   display: block;
-  height: 100%;
   width: auto;
+  height: 100%;
 }
-
-
-
-.sg-size-list > dt {
-  font-weight: bold;
-}
-
-.sg-size-list__sample {
-  height: 1rem;
-  background-color: #287A95;
-}
-
 
 .sg-inset-list > dt {
   font-weight: bold;
-}
-
-.sg-inset-list__sample {
-  border: 1px solid #544848;
-  max-width: 8rem;
-}
-
-.sg-inset-list__sample > div {
-  position: relative;
-  box-sizing: border-box;
-  height: 6rem;
-  background-color: #FF9900;
-}
-
-.sg-inset-list__sample > div > div {
-  box-sizing: border-box;
-  position: absolute;
-  background-color: white;
 }
 
 .sg-main {

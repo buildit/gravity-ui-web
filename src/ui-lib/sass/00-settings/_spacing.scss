@@ -34,10 +34,10 @@ $grav-sp-l: grav-sp-calc(1);
 $grav-sp-xl: grav-sp-calc(2);
 
 // Global set of two-dimensional insets (typically used as padding values)
-$grav-sp-inset-xs: $grav-sp-xs;
-$grav-sp-inset-s: $grav-sp-s;
-$grav-sp-inset-m: $grav-sp-m;
-$grav-sp-inset-l: $grav-sp-l;
+$grav-sp-inset-xs: $grav-sp-xs $grav-sp-xs;
+$grav-sp-inset-s: $grav-sp-s $grav-sp-s;
+$grav-sp-inset-m: $grav-sp-m $grav-sp-m;
+$grav-sp-inset-l: $grav-sp-l $grav-sp-l;
 
 $grav-sp-inset-squished-xs: $grav-sp-xs $grav-sp-s;
 $grav-sp-inset-squished-s: $grav-sp-s $grav-sp-m;
