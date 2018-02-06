@@ -8,22 +8,38 @@
 @include gravy-init;
 @include gravy-text-defaults;
 
-// Default vertical margin between block elements
-* + * {
-  margin-top: $space-m;
-}
 
-// Make everything inherit key typography properties by default
 * {
+  // Zero any margins coming from user-agent stylesheets
+  margin: 0;
+
+  // Make everything inherit key typography properties by default
   color: inherit; // Note, border-color defaults to this too, unless overridden
   font-family: inherit;
   line-height: inherit;
+}
+
+// Default vertical margin *between* block elements
+* + * {
+  margin-top: $grav-sp-m;
 }
 
 html {
   // font-size & line-height are set by Gravy. See gravy.scss
   @include gravy-font('primary');
 
-  background-color: $color-bg-default;
-  color: $color-fg-default;
+  background-color: $grav-co-bg;
+  color: $grav-co-fg;
+}
+
+// Exceptions to the * + * rule
+body,
+br,
+dt + dt,
+dd,
+th,
+td,
+option,
+header[role=banner] {
+  margin-top: 0;
 }

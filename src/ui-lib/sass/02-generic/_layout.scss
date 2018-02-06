@@ -1,0 +1,5 @@
+// The minimum gap between the edge of the viewport and page content
+$grav-page-content-inset: $grav-sp-m;
+
+// The maximum width of the page content
+$grav-page-content-max-width: calc(#{gravy-breakpoint(medium)} - #{2 * $grav-page-content-inset});

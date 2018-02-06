@@ -3,7 +3,7 @@
     {
       "color": {
         "name": "Latte",
-        "varname": "$color-buildit-latte",
+        "varname": "$grav-co-primary-latte",
         "hex": "4f2f00",
         "wcag": {
           "light": {
@@ -20,7 +20,7 @@
     {
       "color": {
         "name": "Cuppa",
-        "varname": "$color-buildit-cuppa",
+        "varname": "$grav-co-primary-cuppa",
         "hex": "ac6700",
         "wcag": {
           "light": {
@@ -37,7 +37,7 @@
     {
       "color": {
         "name": "Egg Yolk",
-        "varname": "$color-buildit-egg-yolk",
+        "varname": "$grav-co-primary-egg-yolk",
         "hex": "ff9900",
         "wcag": {
           "light": {
@@ -54,7 +54,7 @@
     {
       "color": {
         "name": "&lsquo;Murican Cheese",
-        "varname": "$color-buildit-murican-cheese",
+        "varname": "$grav-co-primary-murican-cheese",
         "hex": "FFBD59",
         "wcag": {
           "light": {
@@ -71,7 +71,7 @@
     {
       "color": {
         "name": "Eggshell",
-        "varname": "$color-buildit-eggshell",
+        "varname": "$grav-co-primary-eggshell",
         "hex": "ffe7c2",
         "wcag": {
           "light": {

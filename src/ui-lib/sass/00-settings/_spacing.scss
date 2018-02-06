@@ -5,7 +5,7 @@
   * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
 */
 
-@function space($n) {
+@function grav-sp-calc($n) {
   $space-base-size: 1rem;
   $space-multiplier: 2;
 
@@ -26,8 +26,20 @@
 }
 
 
-$space-xs: space(-2);
-$space-s: space(-1);
-$space-m: space(0);
-$space-l: space(1);
-$space-xl: space(2);
+// Global set of one-dimensional space sizes
+$grav-sp-xs: grav-sp-calc(-2);
+$grav-sp-s: grav-sp-calc(-1);
+$grav-sp-m: grav-sp-calc(0);
+$grav-sp-l: grav-sp-calc(1);
+$grav-sp-xl: grav-sp-calc(2);
+
+// Global set of two-dimensional insets (typically used as padding values)
+$grav-sp-inset-xs: $grav-sp-xs $grav-sp-xs;
+$grav-sp-inset-s: $grav-sp-s $grav-sp-s;
+$grav-sp-inset-m: $grav-sp-m $grav-sp-m;
+$grav-sp-inset-l: $grav-sp-l $grav-sp-l;
+
+$grav-sp-inset-squished-xs: $grav-sp-xs $grav-sp-s;
+$grav-sp-inset-squished-s: $grav-sp-s $grav-sp-m;
+$grav-sp-inset-squished-m: $grav-sp-m $grav-sp-l;
+$grav-sp-inset-squished-l: $grav-sp-l $grav-sp-xl;

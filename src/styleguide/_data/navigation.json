@@ -1,0 +1,40 @@
+{
+  "links": [
+    {
+      "control": {
+        "label": "Lorem ipsum"
+      }
+    },
+    {
+      "control": {
+        "label": "Quis autem"
+      }
+    },
+    {
+      "control": {
+        "label": "Sed ut perspiciatis unde omnis"
+      }
+    },
+    {
+      "url": false,
+      "control": {
+        "label": "Neque porro"
+      }
+    },
+    {
+      "control": {
+        "label": "Nemo"
+      }
+    },
+    {
+      "control": {
+        "label": "Unquam sit"
+      }
+    },
+    {
+      "control": {
+        "label": "Mors tua vita mea"
+      }
+    }
+  ]
+}
