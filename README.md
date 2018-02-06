@@ -80,7 +80,7 @@ The build output will go into `dist/` and, in this instance, only contains the a
 ### Further information
 
 * Coding standards (TBC)
-    * [Naming conventions](./docs/naming-conventions.md)
+  * [Naming conventions](./docs/naming-conventions.md)
 * Contribution guidelines (TBC)
 * [`git` branching strategy](./docs/branching-strategy.md)
 * [Release process](./docs/releasing.md)
