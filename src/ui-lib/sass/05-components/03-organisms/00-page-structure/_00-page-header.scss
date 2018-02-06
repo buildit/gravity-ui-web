@@ -6,16 +6,16 @@ header[role=banner] {
 
   > div {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: $grav-page-content-max-width;
     margin: 0 $grav-page-content-inset;
     padding: $grav-sp-m 0;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .grav-c-logo {
-    fill: $grav-co-fg;
     display: block;
+    fill: $grav-co-fg;
   }
 
   .grav-c-icon-toggle-button {
@@ -24,8 +24,8 @@ header[role=banner] {
   }
 
   .grav-c-nav-menu {
-    margin: 0 auto;
     max-width: $grav-page-content-max-width;
+    margin: 0 auto;
   }
 
 
@@ -40,8 +40,8 @@ header[role=banner] {
 
     // Bump up logo size
     .grav-c-logo {
-      height: 2.5rem;
       width: auto;
+      height: 2.5rem;
     }
   }
 

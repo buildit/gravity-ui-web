@@ -1,46 +1,93 @@
 .grav-c-nav-menu {
+  $items-per-row: 4;
+
+  // toggle-menu button
+  > .grav-c-icon-toggle-button {
+    border: 0;
+    background-color: $grav-co-neutral-charcoal;
+
+    @media (min-width: gravy-breakpoint(small)) {
+      display: none;
+    }
+
+    &[aria-pressed='true'] {
+      background-color: $grav-co-neutral-dirty-snow-white;
+      color: $grav-co-neutral-charcoal;
+    }
+  }
+
+  > .grav-c-icon-toggle-button[aria-pressed] ~ ul,
+  > .grav-c-icon-toggle-button[aria-pressed='false'] ~ ul {
+    display: none;
+
+    @media (min-width: gravy-breakpoint(small)) {
+      display: flex;
+    }
+  }
+
+  > .grav-c-icon-toggle-button[aria-pressed='true'] ~ ul {
+    display: block;
+  }
 
   > ul {
     padding: 0;
 
-    > li {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-
-      // Add small vertical gap successive list items
-      & + li {
-        margin-top: $grav-st-thickness;
-      }
-
-      > .grav-c-block-link {
-        display: block;
-      }
+    @media (min-width: gravy-breakpoint(small)) {
+      align-items: stretch;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 
-  // Media queries
-  @media (min-width: gravy-breakpoint(small)) {
-    $items-per-row: 4;
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 
-    > ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: stretch;
+    @media (min-width: gravy-breakpoint(small)) {
+      flex-basis: calc((100% - #{$items-per-row - 1} * #{$grav-st-thickness}) / #{$items-per-row});
+    }
 
-      > li {
-        flex-basis: calc((100% - #{$items-per-row - 1} * #{$grav-st-thickness}) / #{$items-per-row});
+    // Add small vertical gap successive list items
+    + li {
+      margin-top: $grav-st-thickness;
+    }
+  }
 
-        > .grav-c-block-link {
-          height: 100%;
-        }
+  // Remove vertical gap from first row of links
+  li:nth-child(-n + #{$items-per-row}) {
+    @media (min-width: gravy-breakpoint(small)) {
+      margin-top: 0;
+    }
+  }
 
-        // Remove vertical gap from first row of links
-        &:nth-child(-n + #{$items-per-row}) {
-          margin-top: 0;
-        }
-      }
+  // styling of the menu links
+  .grav-c-block-link {
+    display: block;
+    border: 0;
+    background-color: $grav-co-primary-egg-yolk;
+    color: $grav-co-neutral-charcoal;
+
+    @media (min-width: gravy-breakpoint(small)) {
+      height: 100%;
+    }
+
+    &:link,
+    &:visited {
+      background-color: $grav-co-neutral-charcoal;
+    }
+
+    &:active {
+      color: $grav-co-neutral-ashtray;
+    }
+
+    &:hover {
+      background-color: $grav-co-neutral-asphalt;
+    }
+
+    &:not([href]) {
+      background-color: $grav-co-primary-egg-yolk;
+      color: $grav-co-neutral-charcoal;
     }
   }
 }
