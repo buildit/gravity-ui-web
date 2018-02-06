@@ -14,7 +14,7 @@
     "styleguide": "gulp styleguide",
     "start": "gulp serve",
     "test": "npm run lint",
-    "lint": "stylelint src/ui-lib/sass/**/*.scss"
+    "lint": "stylelint 'src/ui-lib/sass/**/*.scss'"
   },
   "repository": {
     "type": "git",
