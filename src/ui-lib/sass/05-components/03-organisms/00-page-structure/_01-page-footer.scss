@@ -1,8 +1,28 @@
 footer[role=contentinfo] {
   @include typi('small-text');
   margin-top: vr(3);
-  padding: $grav-sp-m;
+  padding: $grav-sp-xl $grav-sp-m;
   background-color: $grav-co-neutral-charcoal;
   color: $grav-co-neutral-dirty-snow-white;
   text-align: center;
+
+  a[href]:link {
+    color: $grav-co-neutral-dirty-snow-white;
+  }
+
+  a[href]:hover {
+    color: $grav-co-neutral-ashtray;
+  }
+
+  .grav-c-logo {
+    display: block;
+    width: auto;
+    height: 1em;
+    margin: 0 auto;
+    border-bottom: 1px solid $grav-co-neutral-dirty-snow-white;
+
+    &:hover {
+      border-bottom-color: $grav-co-neutral-ashtray;
+    }
+  }
 }

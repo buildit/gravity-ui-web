@@ -24,5 +24,8 @@
   "system": {
     "input": "npm install @buildit/gravity-ui-sass",
     "output": "Press any key to continue..."
+  },
+  "footer": {
+    "copy": "something something something"
   }
 }
