@@ -1,0 +1,8 @@
+footer[role=contentinfo] {
+  @include typi('small-text');
+  margin-top: vr(3);
+  padding: $grav-sp-m;
+  background-color: $grav-co-neutral-charcoal;
+  color: $grav-co-neutral-dirty-snow-white;
+  text-align: center;
+}
