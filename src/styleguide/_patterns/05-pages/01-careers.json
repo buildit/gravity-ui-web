@@ -1,8 +1,7 @@
 {
-  "title": "About us",
+  "title": "Careers",
   "links": [
     {
-      "url": false,
       "control": {
         "label": "About us"
       }
@@ -14,7 +13,7 @@
       }
     },
     {
-      "url": "link.pages-careers",
+      "url": false,
       "control": {
         "label": "Careers"
       }
@@ -24,8 +23,5 @@
         "label": "Locations"
       }
     }
-  ],
-  "footer": {
-    "copy": "made with ❤️"
-  }
+  ]
 }
