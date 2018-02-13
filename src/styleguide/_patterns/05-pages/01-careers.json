@@ -23,5 +23,125 @@
         "label": "Locations"
       }
     }
+  ],
+  "footer": {
+    "copy": "made with ❤️"
+  },
+  "locations": [
+    {
+      "location": "London, United Kingdom",
+      "jobs": [
+        {
+          "job": {
+            "title": "Technical Rourcing Lead",
+            "type": "permanent"
+          }
+        },
+        {
+          "job": {
+            "title": "Creative Technologist",
+            "type": "permanent"
+          }
+        },
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "permanent"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "permanent"
+          }
+        }
+      ]
+    },
+    {
+      "location": "Chicago, United States",
+      "jobs": [
+        {
+          "job": {
+            "title": "Senior Platform Engineer",
+            "type": "permanent"
+          }
+        },
+        {
+          "job": {
+            "title": "Senior Front End Engineer",
+            "type": "permanent"
+          }
+        }
+      ]
+    },
+    {
+      "location": "Denver, United States",
+      "jobs": [
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "permanent"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "permanent"
+          }
+        }
+      ]
+    },
+    {
+      "location": "Bengaluru, India",
+      "jobs": [
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "permanent"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "permanent"
+          }
+        },
+        {
+          "job": {
+            "title": "Full Stack Engineer",
+            "type": "permanent"
+          }
+        }
+      ]
+    },
+    {
+      "location": "Gdańsk, Poland",
+      "jobs": [
+        {
+          "job": {
+            "title": "Technical Rourcing Lead",
+            "type": "permanent"
+          }
+        },
+        {
+          "job": {
+            "title": "Creative Technologist",
+            "type": "permanent"
+          }
+        },
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "permanent"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "permanent"
+          }
+        }
+      ]
+    }
   ]
 }

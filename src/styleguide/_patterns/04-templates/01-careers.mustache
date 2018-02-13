@@ -1,45 +1,15 @@
 {{> organisms-page-header }}
 <main>
   <h1>{{title}}</h1>
-  <h2>City, Country</h2>
-  <ul>
-    <li>
-      <h3>Position title</h3>
-      <p>Type</p>
-    </li>
-    <li>
-      <h3>Position title</h3>
-      <p>Type</p>
-    </li>
-    <li>
-      <h3>Position title</h3>
-      <p>Type</p>
-    </li>
-    <li>
-      <h3>Position title</h3>
-      <p>Type</p>
-    </li>
-  </ul>
 
-  <h2>City, Country</h2>
-  <ul>
-    <li>
-      <h3>Position title</h3>
-      <p>Type</p>
-    </li>
-    <li>
-      <h3>Position title</h3>
-      <p>Type</p>
-    </li>
-    <li>
-      <h3>Position title</h3>
-      <p>Type</p>
-    </li>
-    <li>
-      <h3>Position title</h3>
-      <p>Type</p>
-    </li>
-  </ul>
+  {{#locations}}
+    {{> organisms-job-list }}
+  {{/locations}}
+
+  <section>
+    <h2>How does it work?</h2>
+    <p>{{excerpt.medium}}</p>
+  </section>
 
 </main>
 {{! organisms-page-footer }}

@@ -27,5 +27,16 @@
   },
   "footer": {
     "copy": "something something something"
-  }
+  },
+  "location": "Visakhapatnam, India",
+  "locations": [
+    {}, {}, {}
+  ],
+  "job": {
+    "title": "Lead Implementation Planner",
+    "type": "full-time"
+  },
+  "jobs": [
+    {}, {}, {}
+  ]
 }

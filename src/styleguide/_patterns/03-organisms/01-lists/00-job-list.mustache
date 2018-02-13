@@ -1,0 +1,11 @@
+<section>
+  <h2>{{location}}</h2>
+  <p><a href="">Read more about this location</a></p>
+  <ul>
+    {{#jobs}}
+      <li>
+        {{> molecules-job-card }}
+      </li>
+    {{/jobs}}
+  </ul>
+</section>
