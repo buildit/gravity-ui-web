@@ -5,7 +5,9 @@
 [type=submit],
 // Button with no type attribute defaults to "submit"
 button:not([type]) {
+  @include gravy-font(primary, bold);
   padding: $grav-sp-inset-squished-xs;
+  cursor: pointer;
 
   // Scale icons in buttons to match the line-height
   > .grav-c-icon {
@@ -49,6 +51,7 @@ button:not([type]) {
       background-color: $grav-co-disabled;
       border-color: $grav-co-disabled;
       color: $grav-co-disabled-contrast;
+      cursor: auto;
     }
   }
 }
