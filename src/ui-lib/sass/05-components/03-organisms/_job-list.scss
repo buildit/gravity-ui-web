@@ -3,7 +3,12 @@
 
   > p:first-of-type {
     @include typi(small-text);
-    margin-top: $grav-sp-l;
+    margin-top: $grav-sp-m;
+  }
+
+  > ul {
+    padding-left: $grav-sp-m;
+    list-style-type: none;
   }
 
   li {
