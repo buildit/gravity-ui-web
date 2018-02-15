@@ -1,5 +1,8 @@
 {
   "title": "About us",
+  "control": {
+    "label": "Menu"
+  },
   "links": [
     {
       "url": false,

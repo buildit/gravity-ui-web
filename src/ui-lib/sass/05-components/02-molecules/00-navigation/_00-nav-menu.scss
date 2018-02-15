@@ -1,75 +1,86 @@
 .grav-c-nav-menu {
   $items-per-row: 4;
+  $trigger-breakpoint: gravy-breakpoint(medium);
+  width: 100%;
+  text-align: right;
+
+  @media (min-width: $trigger-breakpoint) {
+    width: auto;
+  }
 
   // toggle-menu button
-  > .grav-c-icon-toggle-button {
-    border: 0;
+  > button {
+    margin-right: $grav-sp-m;
+    border: $grav-st-thickness solid $grav-co-neutral-asphalt;
     background-color: $grav-co-neutral-charcoal;
 
-    @media (min-width: gravy-breakpoint(small)) {
+    @media (min-width: $trigger-breakpoint) {
       display: none;
     }
 
     &[aria-pressed='true'] {
-      background-color: $grav-co-neutral-dirty-snow-white;
-      color: $grav-co-neutral-charcoal;
+      background-color: $grav-co-neutral-charcoal;
+      color: $grav-co-neutral-dirty-snow-white;
+    }
+
+    &:active {
+      color: $grav-co-neutral-dirty-snow-white;
+    }
+
+    &:hover {
+      background-color: $grav-co-neutral-charcoal;
+      cursor: pointer;
     }
   }
 
-  > .grav-c-icon-toggle-button[aria-pressed] ~ ul,
-  > .grav-c-icon-toggle-button[aria-pressed='false'] ~ ul {
+  > button[aria-pressed] ~ ul,
+  > button[aria-pressed='false'] ~ ul {
     display: none;
 
-    @media (min-width: gravy-breakpoint(small)) {
+    @media (min-width: $trigger-breakpoint) {
       display: flex;
+      margin-top: 0;
     }
   }
 
-  > .grav-c-icon-toggle-button[aria-pressed='true'] ~ ul {
+  > button[aria-pressed='true'] ~ ul {
     display: block;
   }
 
   > ul {
+    width: 100%;
+    margin-top: $grav-sp-s;
     padding: 0;
 
-    @media (min-width: gravy-breakpoint(small)) {
-      align-items: stretch;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    @media (min-width: $trigger-breakpoint) {
+      text-align: right;
     }
   }
 
   li {
     margin: 0;
-    padding: 0;
     list-style-type: none;
 
-    @media (min-width: gravy-breakpoint(small)) {
-      flex-basis: calc((100% - #{$items-per-row - 1} * #{$grav-st-thickness}) / #{$items-per-row});
-    }
-
-    // Add small vertical gap successive list items
-    + li {
-      margin-top: $grav-st-thickness;
-    }
-  }
-
-  // Remove vertical gap from first row of links
-  li:nth-child(-n + #{$items-per-row}) {
-    @media (min-width: gravy-breakpoint(small)) {
-      margin-top: 0;
+    @media (min-width: $trigger-breakpoint) {
+      text-align: center;
     }
   }
 
   // styling of the menu links
   .grav-c-block-link {
     display: block;
+    padding-right: $grav-sp-m;
     border: 0;
-    background-color: $grav-co-primary-egg-yolk;
-    color: $grav-co-neutral-charcoal;
+    background-color: $grav-co-neutral-charcoal;
+    border-right: $grav-sp-xs solid $grav-co-neutral-dirty-snow-white;
+    color: $grav-co-neutral-dirty-snow-white;
 
-    @media (min-width: gravy-breakpoint(small)) {
+    @media (min-width: $trigger-breakpoint) {
+      display: inline-block;
       height: 100%;
+      padding-right: $grav-sp-s;
+      border-bottom: $grav-st-thickness solid $grav-co-neutral-dirty-snow-white;
+      border-right-width: 0;
     }
 
     &:link,
@@ -82,12 +93,12 @@
     }
 
     &:hover {
-      background-color: $grav-co-neutral-asphalt;
+      background-color: $grav-co-neutral-charcoal;
     }
 
     &:not([href]) {
-      background-color: $grav-co-primary-egg-yolk;
-      color: $grav-co-neutral-charcoal;
+      background-color: $grav-co-neutral-charcoal;
+      color: $grav-co-neutral-dirty-snow-white;
     }
   }
 }

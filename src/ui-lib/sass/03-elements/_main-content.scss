@@ -3,7 +3,7 @@ main {
   margin-right: $grav-page-content-inset;
   margin-left: $grav-page-content-inset;
 
-  @media (min-width: gravy-breakpoint(medium)) {
+  @media (min-width: gravy-breakpoint(regular)) {
     margin-right: auto;
     margin-left: auto;
   }
