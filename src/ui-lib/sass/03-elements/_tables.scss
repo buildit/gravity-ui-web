@@ -4,6 +4,10 @@ table {
   border-collapse: collapse;
 }
 
+th {
+  @include gravy-font(primary, bold);
+}
+
 th,
 td {
   padding: $grav-sp-inset-squished-s;
