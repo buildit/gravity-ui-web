@@ -1,5 +1,12 @@
 .job-list {
+  margin-top: $grav-sp-xl;
+
   > p:first-of-type {
     @include typi(small-text);
+    margin-top: $grav-sp-l;
+  }
+
+  li {
+    margin-top: $grav-sp-s;
   }
 }
