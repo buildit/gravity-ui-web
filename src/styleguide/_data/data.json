@@ -28,7 +28,10 @@
   "footer": {
     "copy": "something something something"
   },
-  "location": "Visakhapatnam, India",
+  "location": {
+    "city": "Visakhapatnam",
+    "country": "India"
+  },
   "locations": [
     {}, {}, {}
   ],

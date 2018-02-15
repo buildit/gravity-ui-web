@@ -1,6 +1,5 @@
 .job-list {
   > p:first-of-type {
-    margin-top: 0;
-    font-style: italic;
+    @include typi(small-text);
   }
 }

@@ -1,6 +1,5 @@
 <section class="job-list">
-  <h2>{{location}}</h2>
-  <p><a href="">Read more about this location</a></p>
+  <h2>{{location.city}}, {{location.country}}</h2>
   <ul>
     {{#jobs}}
       <li>
@@ -8,4 +7,5 @@
       </li>
     {{/jobs}}
   </ul>
+  <p><a href="">More information about the {{location.city}} office.</a></p>
 </section>

@@ -29,7 +29,10 @@
   },
   "locations": [
     {
-      "location": "London, United Kingdom",
+      "location": {
+        "city": "London",
+        "country": "United Kingdom"
+      },
       "jobs": [
         {
           "job": {
@@ -58,7 +61,10 @@
       ]
     },
     {
-      "location": "Chicago, United States",
+      "location": {
+        "city": "Chicago",
+        "country": "United States"
+      },
       "jobs": [
         {
           "job": {
@@ -75,7 +81,10 @@
       ]
     },
     {
-      "location": "Denver, United States",
+      "location": {
+        "city": "Denver",
+        "country": "United States"
+      },
       "jobs": [
         {
           "job": {
@@ -92,7 +101,10 @@
       ]
     },
     {
-      "location": "Bengaluru, India",
+      "location": {
+        "city": "Bengaluru",
+        "country": "India"
+      },
       "jobs": [
         {
           "job": {
@@ -115,7 +127,10 @@
       ]
     },
     {
-      "location": "Gdańsk, Poland",
+      "location": {
+        "city": "Gdańsk",
+        "country": "Poland"
+      },
       "jobs": [
         {
           "job": {
