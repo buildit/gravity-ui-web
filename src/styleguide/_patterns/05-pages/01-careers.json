@@ -1,0 +1,162 @@
+{
+  "title": "Careers",
+  "links": [
+    {
+      "control": {
+        "label": "About us"
+      }
+    },
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
+      }
+    },
+    {
+      "url": false,
+      "control": {
+        "label": "Careers"
+      }
+    },
+    {
+      "control": {
+        "label": "Locations"
+      }
+    }
+  ],
+  "footer": {
+    "copy": "made with ❤️"
+  },
+  "locations": [
+    {
+      "location": {
+        "city": "London",
+        "country": "United Kingdom"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Technical Rourcing Lead",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Creative Technologist",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Chicago",
+        "country": "United States"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Senior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Senior Front End Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Denver",
+        "country": "United States"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Bengaluru",
+        "country": "India"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "contract"
+          }
+        },
+        {
+          "job": {
+            "title": "Full Stack Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Gdańsk",
+        "country": "Poland"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Technical Rourcing Lead",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Creative Technologist",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    }
+  ]
+}

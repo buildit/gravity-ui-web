@@ -54,9 +54,11 @@
 @import '05-components/01-atoms/10-navigation/00-block-link';
 
 @import '05-components/02-molecules/00-navigation/00-nav-menu';
+@import '05-components/02-molecules/job-card';
 
 @import '05-components/03-organisms/00-page-structure/00-page-header';
 @import '05-components/03-organisms/00-page-structure/01-page-footer';
+@import '05-components/03-organisms/job-list';
 
 // === Utilities layer ===
 // Utilities and helper classes with ability to override anything which goes before in the
