@@ -3,44 +3,59 @@
 // The child elements within therefore need to respect the maximum content
 // width ($grav-page-content-max-width) themselves, where necessary.
 header[role=banner] {
+  background-color: $grav-co-neutral-charcoal;
+
   > div {
-    display: flex;
     max-width: $grav-page-content-max-width;
-    margin: 0 $grav-page-content-inset;
-    padding: $grav-sp-m 0;
-    align-items: center;
-    justify-content: space-between;
+    position: relative;
+    margin: 0;
 
     @media (min-width: gravy-breakpoint(medium)) {
+      display: grid;
       margin-right: auto;
       margin-left: auto;
+      align-items: center;
+      grid-template-columns: 300px 1fr;
+    }
+  }
+
+  .logo-main {
+    display: block;
+    position: relative;
+    padding: $grav-sp-m 6rem $grav-sp-m $grav-sp-m;
+    z-index: 1;
+
+    @media (min-width: gravy-breakpoint(medium)) {
+      padding-right: $grav-sp-m;
+    }
+
+    @media (min-width: gravy-breakpoint(regular)) {
+      padding-left: 0;
     }
   }
 
   .grav-c-logo {
     display: block;
-    fill: $grav-co-fg;
+    fill: $grav-co-bg;
 
     // Bump up logo size
-    @media (min-width: gravy-breakpoint(small)) {
-      width: auto;
+    @media (min-width: gravy-breakpoint(medium)) {
       height: 2.5rem;
-    }
-  }
-
-  .grav-c-icon-toggle-button {
-    margin: 0 0 0 $grav-sp-m;
-    flex-shrink: 0; // prevents button getting squished on narrow viewports
-
-    // Hide the menu button since the nav menu changes to
-    // horiztonal, always-visible at this size
-    @media (min-width: gravy-breakpoint(small)) {
-      display: none;
     }
   }
 
   .grav-c-nav-menu {
     max-width: $grav-page-content-max-width;
-    margin: 0 auto;
+    position: absolute;
+    top: $grav-sp-m;
+    right: 0;
+    margin: 0;
+
+    @media (min-width: gravy-breakpoint(medium)) {
+      position: initial;
+      top: auto;
+      right: auto;
+      justify-self: flex-end;
+    }
   }
 }
