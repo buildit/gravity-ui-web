@@ -41,5 +41,19 @@
   },
   "jobs": [
     {}, {}, {}
+  ],
+  "steps": [
+    {
+      "title": "This is the first step",
+      "description": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros."
+    },
+    {
+      "title": "This is the first step",
+      "description": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros."
+    },
+    {
+      "title": "This is the first step",
+      "description": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros."
+    }
   ]
 }
