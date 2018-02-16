@@ -35,4 +35,8 @@
   > li:nth-child(odd)::after {
     display: none;
   }
+
+  p {
+    margin-top: 0;
+  }
 }
