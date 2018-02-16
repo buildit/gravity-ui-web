@@ -21,7 +21,9 @@ header[role=banner] {
 
   .logo-main {
     display: block;
+    position: relative;
     padding: $grav-sp-m 6rem $grav-sp-m $grav-sp-m;
+    z-index: 1;
 
     @media (min-width: gravy-breakpoint(medium)) {
       padding-right: $grav-sp-m;

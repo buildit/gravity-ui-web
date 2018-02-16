@@ -10,9 +10,11 @@
 
   // toggle-menu button
   > button {
+    position: relative;
     margin-right: $grav-sp-m;
     border: $grav-st-thickness solid $grav-co-neutral-asphalt;
     background-color: $grav-co-neutral-charcoal;
+    z-index: 1;
 
     @media (min-width: $trigger-breakpoint) {
       display: none;
