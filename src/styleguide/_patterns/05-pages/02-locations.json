@@ -1,0 +1,230 @@
+{
+  "title": "Careers",
+  "links": [
+    {
+      "control": {
+        "label": "About us"
+      }
+    },
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
+      }
+    },
+    {
+      "url": false,
+      "control": {
+        "label": "Careers"
+      }
+    },
+    {
+      "control": {
+        "label": "Locations"
+      }
+    }
+  ],
+  "footer": {
+    "copy": "made with ❤️"
+  },
+  "locations": [
+    {
+      "location": {
+        "city": "London",
+        "country": "United Kingdom"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Technical Rourcing Lead",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Creative Technologist",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Chicago",
+        "country": "United States"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Senior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Senior Front End Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Denver",
+        "country": "United States"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Bengaluru",
+        "country": "India"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "contract"
+          }
+        },
+        {
+          "job": {
+            "title": "Full Stack Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Gdańsk",
+        "country": "Poland"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Technical Rourcing Lead",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Creative Technologist",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    }
+  ],
+  "offices": [
+    {
+      "office": {
+        "name": "Bengaluru",
+        "addressline1": "72 Electronic City",
+        "addressline2": "Hosur Road",
+        "city": "London",
+        "postcode": "Bangalore 560100",
+        "country": "India",
+        "img": "/ui-lib/bengaluru.jpg"
+      }
+    },
+    {
+      "office": {
+        "name": "Dublin",
+        "addressline1": "Alexandra House",
+        "addressline2": "3 Ballsbridge Park",
+        "city": "",
+        "postcode": "Dublin 4",
+        "country": "Ireland",
+        "img": "/ui-lib/dublin.jpg"
+      }
+    },
+    {
+      "office": {
+        "name": "Denver",
+        "addressline1": "1550 Wewatta Street",
+        "addressline2": "",
+        "city": "Denver",
+        "postcode": "CO 80202",
+        "country": "USA",
+        "img": "/ui-lib/denver.jpg"
+      }
+    },
+    {
+      "office": {
+        "name": "New York",
+        "addressline1": "77 Sands Street",
+        "addressline2": "",
+        "city": "Brooklyn",
+        "postcode": "NY 11201",
+        "country": "USA",
+        "img": "/ui-lib/new-york.jpg"
+      }
+    },
+    {
+      "office": {
+        "name": "Edinburgh",
+        "addressline1": "2 Castle Terrace",
+        "addressline2": "",
+        "city": "Edinburgh",
+        "postcode": "EH1 2EL",
+        "country": "UK",
+        "img": "/ui-lib/edinburgh.jpg"
+      }
+    },
+    {
+      "office": {
+        "name": "London",
+        "addressline1": "2 Finsbury Avenue",
+        "addressline2": "",
+        "city": "London",
+        "postcode": "EC2M 2PA",
+        "country": "UK",
+        "img": "/ui-lib/london.jpg"
+      }
+    }
+  ]
+}

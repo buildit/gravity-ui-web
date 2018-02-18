@@ -1,4 +1,6 @@
 a[href] {
+  @include gravy-font(primary, bold);
+
   &:link {
     color: $grav-co-interactive-secondary;
   }
@@ -17,6 +19,10 @@ a[href] {
   }
 }
 
+b,
+strong {
+  @include gravy-font(primary, bold);
+}
 
 code,
 kbd,

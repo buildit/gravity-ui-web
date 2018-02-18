@@ -1,0 +1,35 @@
+.grav-o-locations-layout {
+  display: grid;
+  grid-template-areas: "tile1 image1" "tile2 image1" "tile3 tile4" "image2 tile5" "image2 tile6";
+  grid-template-rows: 300px 300px 300px 300px 300px 300px;
+  grid-template-columns: 1fr 1fr;
+  .grav-c-tile {
+    &:nth-of-type(1) {
+      grid-area: tile1;
+    }
+    &:nth-of-type(2) {
+      grid-area: tile2;
+    }
+    &:nth-of-type(3) {
+      grid-area: tile3;
+    }
+    &:nth-of-type(4) {
+      grid-area: tile4;
+    }
+    &:nth-of-type(5) {
+      grid-area: tile5;
+    }
+    &:nth-of-type(6) {
+      grid-area: tile6;
+    }
+  }
+  >img {
+    margin: 0;
+  }
+  >img:first-of-type {
+    grid-area: image1;
+  }
+  >img:last-of-type {
+    grid-area: image2;
+  }
+}

@@ -70,9 +70,13 @@ function copyJsTask() {
 copyJsTask.displayName = taskNamePrefix + 'js';
 copyJsTask.description = 'Copies JS files.';
 
+function copyImgTask() {
+  return gulp.src('./src/ui-lib/images/**/*.{gif,jpg,png,svg}')
+    .pipe(gulp.dest(paths.bldUiLibDir));
+}
 
 // Composite task to do complete UI lib build
-const buildTasks = gulp.parallel(sassBuildTask, svgSymbolsTask, copyJsTask);
+const buildTasks = gulp.parallel(sassBuildTask, svgSymbolsTask, copyJsTask, copyImgTask);
 buildTasks.displayName = taskNamePrefix + 'build';
 buildTasks.description = 'Builds the Gravity UI library.';
 
