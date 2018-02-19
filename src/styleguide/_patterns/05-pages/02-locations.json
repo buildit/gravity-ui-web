@@ -1,5 +1,5 @@
 {
-  "title": "Careers",
+  "title": "We are global",
   "links": [
     {
       "control": {
@@ -168,7 +168,8 @@
         "city": "London",
         "postcode": "Bangalore 560100",
         "country": "India",
-        "img": "/ui-lib/bengaluru.jpg"
+        "img": "/ui-lib/bengaluru.jpg",
+        "img-alt": ""
       }
     },
     {
@@ -179,7 +180,8 @@
         "city": "",
         "postcode": "Dublin 4",
         "country": "Ireland",
-        "img": "/ui-lib/dublin.jpg"
+        "img": "/ui-lib/dublin.jpg",
+        "img-alt": ""
       }
     },
     {
@@ -190,7 +192,8 @@
         "city": "Denver",
         "postcode": "CO 80202",
         "country": "USA",
-        "img": "/ui-lib/denver.jpg"
+        "img": "/ui-lib/denver.jpg",
+        "img-alt": ""
       }
     },
     {
@@ -201,7 +204,8 @@
         "city": "Brooklyn",
         "postcode": "NY 11201",
         "country": "USA",
-        "img": "/ui-lib/new-york.jpg"
+        "img": "/ui-lib/new-york.jpg",
+        "img-alt": ""
       }
     },
     {
@@ -212,7 +216,8 @@
         "city": "Edinburgh",
         "postcode": "EH1 2EL",
         "country": "UK",
-        "img": "/ui-lib/edinburgh.jpg"
+        "img": "/ui-lib/edinburgh.jpg",
+        "img-alt": ""
       }
     },
     {
@@ -223,8 +228,24 @@
         "city": "London",
         "postcode": "EC2M 2PA",
         "country": "UK",
-        "img": "/ui-lib/london.jpg"
+        "img": "/ui-lib/london.jpg",
+        "img-alt": ""
       }
     }
-  ]
+  ],
+  "careers-images": [
+    {
+      "image": {
+        "path": "/ui-lib/office.jpg",
+        "alt": ""
+      }
+    },
+    {
+      "image": {
+        "path": "/ui-lib/coding.jpg",
+        "alt": ""
+      }
+    }
+  ],
+  "symbolId": "menu"
 }

@@ -38,7 +38,7 @@
     "addresscity": "London",
     "postcode": "EC2M 2PA",
     "country": "UK",
-    "image": "http://via.placeholder.com/425x300"
+    "img": "http://via.placeholder.com/425x300/000000/ffffff"
   },
   "job": {
     "title": "Lead Implementation Planner",

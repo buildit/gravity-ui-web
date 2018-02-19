@@ -3,11 +3,11 @@
   <h1>{{title}}</h1>
   <div class="grav-o-locations-layout">
     {{#offices}}
-      {{> molecules-image-card}}
+      {{> molecules-location-card}}
     {{/offices}}
-    <img src="http://via.placeholder.com/425x600" alt="">
-    <img src="http://via.placeholder.com/425x600" alt="">
+    {{#careers-images}}
+      <img src="{{image.path}}" alt="{{image.alt}}">
+    {{/careers-images}}
   </div>
-
 </main>
 {{> organisms-page-footer }}

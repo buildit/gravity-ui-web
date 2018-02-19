@@ -1,9 +1,17 @@
 .grav-o-locations-layout {
-  display: grid;
-  grid-template-areas: "tile1 image1" "tile2 image1" "tile3 tile4" "image2 tile5" "image2 tile6";
-  grid-template-rows: 300px 300px 300px 300px 300px 300px;
   grid-template-columns: 1fr 1fr;
-  .grav-c-tile {
+
+  @media (min-width: gravy-breakpoint(regular)) {
+    display: grid;
+    grid-template-rows: repeat(6, 300px);
+    grid-template-areas: "tile1 image1" 
+                         "tile2 image1"
+                         "tile3 tile4"
+                         "image2 tile5"
+                         "image2 tile6";
+  }
+
+  .grav-c-location-card {
     &:nth-of-type(1) {
       grid-area: tile1;
     }
@@ -23,13 +31,19 @@
       grid-area: tile6;
     }
   }
-  >img {
-    margin: 0;
+
+  > img {
+    display: none;
+    
+    @media (min-width: gravy-breakpoint(regular)) {
+      display: block;
+      margin: 0;
+    }
   }
-  >img:first-of-type {
+  > img:first-of-type {
     grid-area: image1;
   }
-  >img:last-of-type {
+  > img:last-of-type {
     grid-area: image2;
   }
 }

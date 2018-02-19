@@ -1,0 +1,33 @@
+.grav-c-location-card {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.grav-c-location-card__content {
+  position: relative;
+  padding: $grav-sp-l $grav-sp-m $grav-sp-m;
+  z-index: 10;
+}
+
+.grav-c-location-card__img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  z-index: 5;
+  transform: translateY(-100%);
+
+  > img {
+    filter: opacity(0.05) contrast(300%) sepia(80%);
+    width: 100%;
+  }
+}
+
+.grav-c-location-card__cta {
+  position: absolute;
+  right: $grav-sp-m;
+  bottom: $grav-sp-m;
+}
