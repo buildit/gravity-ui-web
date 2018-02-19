@@ -11,29 +11,50 @@
     margin-top: 0;
     margin-left: $grav-sp-l;
     counter-increment: steps;
-    border-left: $grav-st-thickness dashed $grav-co-primary-egg-yolk;
+    border-color: $grav-co-primary-egg-yolk;
+    border-style: dashed;
+    border-width: 0;
+    border-left-width: $grav-st-thickness;
   }
 
-  > li:last-child {
-    border-left-width: 0;
+  > li:last-child,
+  > li:nth-child(odd):last-child {
+    border-width: 0;
   }
 
-  > li::before,
-  > li:nth-child(even)::before,
-  > li:nth-child(odd)::after {
+  > li:nth-child(odd) {
+    @media all and (min-width: gravy-breakpoint(regular)) {
+      text-align: right;
+      padding-left: 0;
+      padding-right: $grav-sp-l;
+      margin-left: 0;
+      margin-right: 50%;
+      border-right-width: $grav-st-thickness;
+      border-left-width: 0;
+    }
+  }
+
+  > li:nth-child(even) {
+    @media all and (min-width: gravy-breakpoint(regular)) {
+      margin-left: 50%;
+    }
+  }
+
+  > li::before {
+    position: absolute;
+    left: -$grav-sp-l;
     content: 'Step ' counters(steps, '.');
     @include gravy-font(secondary, bold);
     padding: $grav-sp-inset-squished-xs;
     background-color: $grav-co-primary-egg-yolk;
   }
 
-  > li::before {
-    position: absolute;
-    left: -$grav-sp-l;
-  }
-
-  > li:nth-child(odd)::after {
-    display: none;
+  > li:nth-child(odd)::before {
+    @media all and (min-width: gravy-breakpoint(regular)) {
+      display: block;
+      left: auto;
+      right: -$grav-sp-l;
+    }
   }
 
   p {
