@@ -57,7 +57,7 @@ button:not([type]) {
 }
 
 [type=button] {
-  @include grav-button-styles($grav-co-interactive-secondary, $grav-co-interactive-secondary-contrast, $grav-co-interactive-secondary-hover, true);
+  @include grav-button-styles($grav-co-interactive-primary, $grav-co-interactive-primary-contrast, $grav-co-interactive-primary-hover, true);
 }
 
 [type=reset] {

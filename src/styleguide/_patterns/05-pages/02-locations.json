@@ -247,5 +247,7 @@
       }
     }
   ],
-  "symbolId": "menu"
+  "control": {
+    "label": "Show on a map"
+  }
 }

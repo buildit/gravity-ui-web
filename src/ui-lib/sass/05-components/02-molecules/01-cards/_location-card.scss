@@ -6,8 +6,7 @@
 
 .grav-c-location-card__content {
   position: relative;
-  padding: $grav-sp-l $grav-sp-m $grav-sp-m;
-  z-index: 10;
+  padding: $grav-sp-m;
 }
 
 .grav-c-location-card__img {
@@ -17,12 +16,21 @@
   bottom: 0;
   left: 0;
   margin: 0;
-  z-index: 5;
   transform: translateY(-100%);
 
   > img {
     filter: opacity(0.05) contrast(300%) sepia(80%);
     width: 100%;
+    margin-top: -8%;
+    transition: filter 0.25s;
+
+    @media (min-width: gravy-breakpoint(regular)) {
+      margin-top: 0;
+    }
+
+    .grav-c-location-card:hover & {
+      filter: opacity(0.065) contrast(300%) sepia(0%);
+    }
   }
 }
 
