@@ -1,13 +1,7 @@
 {{> organisms-page-header }}
 <main>
   <h1>{{title}}</h1>
-  <div class="grav-o-locations-layout">
-    {{#offices}}
-      {{> molecules-location-card}}
-    {{/offices}}
-    {{#careers-images}}
-      <img src="{{image.path}}" alt="{{image.alt}}">
-    {{/careers-images}}
-  </div>
+  {{> organisms-office-list }}
+
 </main>
 {{> organisms-page-footer }}

@@ -33,18 +33,30 @@
     "country": "India"
   },
   "office": {
-    "city": "London",
+    "name": "London",
     "addressline1": "2 Finsbury Avenue",
-    "addresscity": "London",
+    "addressline2": "",
+    "city": "London",
     "postcode": "EC2M 2PA",
     "country": "UK",
-    "img": "http://via.placeholder.com/425x300/000000/ffffff"
+    "img": "http://via.placeholder.com/425x300/000000/ffffff",
+    "img-alt": ""
   },
   "job": {
     "title": "Lead Implementation Planner",
     "type": "full-time"
   },
+  "image": {
+    "path": "http://via.placeholder.com/425x600/000000/ffffff",
+    "alt": ""
+  },
   "jobs": [
     {}, {}, {}
+  ],
+  "offices": [
+    {}, {}, {}, {}, {}, {}
+  ],
+  "careers-images": [
+    {}, {}
   ]
 }

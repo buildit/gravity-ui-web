@@ -165,7 +165,7 @@
         "name": "Bengaluru",
         "addressline1": "72 Electronic City",
         "addressline2": "Hosur Road",
-        "city": "London",
+        "city": "",
         "postcode": "Bangalore 560100",
         "country": "India",
         "img": "/ui-lib/bengaluru.jpg",

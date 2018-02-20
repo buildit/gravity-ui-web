@@ -1,10 +1,11 @@
 <div class="grav-c-location-card">
   <div class="grav-c-location-card__content">
     <h2>{{office.name}}</h2>
-    <p>{{office.addressline1}}<br>
-      {{office.addresscity}}<br>
-      {{office.postcode}}<br>
-      {{office.country}}
+    <p>{{#office.addressline1}}{{office.addressline1}}<br>{{/office.addressline1}}
+      {{#office.addressline2}}{{office.addressline2}}<br>{{/office.addressline2}}
+      {{#office.city}}{{office.city}}<br>{{/office.city}}
+      {{#office.postcode}}{{office.postcode}}<br>{{/office.postcode}}
+      {{#office.country}}{{office.country}}{{/office.country}}
     </p>
   </div>
   <div class="grav-c-location-card__img">
