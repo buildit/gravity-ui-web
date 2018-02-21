@@ -21,7 +21,7 @@
   > img {
     filter: opacity(0.05) contrast(300%) sepia(80%);
     width: 100%;
-    margin-top: -8%;
+    margin-top: -8%; // Magic number to improve focal point of image
     transition: filter 0.25s;
 
     @media (min-width: gravy-breakpoint(regular)) {
