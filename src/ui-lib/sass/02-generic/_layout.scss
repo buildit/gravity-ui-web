@@ -2,5 +2,4 @@
 $grav-page-content-inset: $grav-sp-m;
 
 // The maximum width of the page content
-// $grav-page-content-max-width: calc(#{gravy-breakpoint(regular)} - #{2 * $grav-page-content-inset});
-$grav-page-content-max-width: calc(#{gravy-breakpoint(regular)} - 50px);
+$grav-page-content-max-width: calc(#{gravy-breakpoint(regular)} - #{2 * $grav-page-content-inset});

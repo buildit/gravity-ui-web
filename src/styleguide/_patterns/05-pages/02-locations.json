@@ -13,12 +13,12 @@
       }
     },
     {
-      "url": false,
       "control": {
         "label": "Careers"
       }
     },
     {
+      "url": false,
       "control": {
         "label": "Locations"
       }
