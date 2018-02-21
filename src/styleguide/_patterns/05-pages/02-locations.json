@@ -253,19 +253,5 @@
         "label": "Show on a map"
       }
     }
-  ],
-  "careers-images": [
-    {
-      "image": {
-        "path": "/ui-lib/office.jpg",
-        "alt": ""
-      }
-    },
-    {
-      "image": {
-        "path": "/ui-lib/coding.jpg",
-        "alt": ""
-      }
-    }
-  ],
+  ]
 }
