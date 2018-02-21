@@ -71,7 +71,7 @@ copyJsTask.displayName = taskNamePrefix + 'js';
 copyJsTask.description = 'Copies JS files.';
 
 function copyImgTask() {
-  return gulp.src('./src/ui-lib/images/**/*.{gif,jpg,png,svg}')
+  return gulp.src(`${paths.srcImgDir}/**/*.{gif,jpg,png,svg}`)
     .pipe(gulp.dest(paths.bldUiLibDir));
 }
 
