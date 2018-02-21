@@ -174,18 +174,6 @@
     },
     {
       "office": {
-        "name": "Dublin",
-        "addressline1": "Alexandra House",
-        "addressline2": "3 Ballsbridge Park",
-        "city": "",
-        "postcode": "Dublin 4",
-        "country": "Ireland",
-        "img": "/ui-lib/dublin.jpg",
-        "img-alt": ""
-      }
-    },
-    {
-      "office": {
         "name": "Denver",
         "addressline1": "1550 Wewatta Street",
         "addressline2": "",
@@ -198,13 +186,13 @@
     },
     {
       "office": {
-        "name": "New York",
-        "addressline1": "77 Sands Street",
-        "addressline2": "",
-        "city": "Brooklyn",
-        "postcode": "NY 11201",
-        "country": "USA",
-        "img": "/ui-lib/new-york.jpg",
+        "name": "Dublin",
+        "addressline1": "Alexandra House",
+        "addressline2": "3 Ballsbridge Park",
+        "city": "",
+        "postcode": "Dublin 4",
+        "country": "Ireland",
+        "img": "/ui-lib/dublin.jpg",
         "img-alt": ""
       }
     },
@@ -229,6 +217,18 @@
         "postcode": "EC2M 2PA",
         "country": "UK",
         "img": "/ui-lib/london.jpg",
+        "img-alt": ""
+      }
+    },
+    {
+      "office": {
+        "name": "New York",
+        "addressline1": "77 Sands Street",
+        "addressline2": "",
+        "city": "Brooklyn",
+        "postcode": "NY 11201",
+        "country": "USA",
+        "img": "/ui-lib/new-york.jpg",
         "img-alt": ""
       }
     }
