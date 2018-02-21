@@ -33,80 +33,17 @@
   "locations": [
     {
       "location": {
-        "city": "London",
-        "country": "United Kingdom"
+        "name": "Bengaluru",
+        "addressline1": "72 Electronic City",
+        "addressline2": "Hosur Road",
+        "city": "",
+        "postcode": "Bangalore 560100",
+        "country": "India",
+        "img": "/ui-lib/bengaluru.jpg",
+        "img-alt": ""
       },
-      "jobs": [
-        {
-          "job": {
-            "title": "Technical Rourcing Lead",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Creative Technologist",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Junior Platform Engineer",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Front-End Engineer",
-            "type": "full time"
-          }
-        }
-      ]
-    },
-    {
-      "location": {
-        "city": "Chicago",
-        "country": "United States"
-      },
-      "jobs": [
-        {
-          "job": {
-            "title": "Senior Platform Engineer",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Senior Front End Engineer",
-            "type": "full time"
-          }
-        }
-      ]
-    },
-    {
-      "location": {
-        "city": "Denver",
-        "country": "United States"
-      },
-      "jobs": [
-        {
-          "job": {
-            "title": "Junior Platform Engineer",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Front-End Engineer",
-            "type": "full time"
-          }
-        }
-      ]
-    },
-    {
-      "location": {
-        "city": "Bengaluru",
-        "country": "India"
+      "control": {
+        "label": "Show on a map"
       },
       "jobs": [
         {
@@ -131,8 +68,90 @@
     },
     {
       "location": {
-        "city": "Gdańsk",
-        "country": "Poland"
+        "name": "Denver",
+        "addressline1": "1550 Wewatta Street",
+        "addressline2": "",
+        "city": "Denver",
+        "postcode": "CO 80202",
+        "country": "USA",
+        "img": "/ui-lib/denver.jpg",
+        "img-alt": ""
+      },
+      "control": {
+        "label": "Show on a map"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "name": "Dublin",
+        "addressline1": "Alexandra House",
+        "addressline2": "3 Ballsbridge Park",
+        "city": "",
+        "postcode": "Dublin 4",
+        "country": "Ireland",
+        "img": "/ui-lib/dublin.jpg",
+        "img-alt": ""
+      },
+      "control": {
+        "label": "Show on a map"
+      }
+    },
+    {
+      "location": {
+        "name": "Edinburgh",
+        "addressline1": "2 Castle Terrace",
+        "addressline2": "",
+        "city": "Edinburgh",
+        "postcode": "EH1 2EL",
+        "country": "UK",
+        "img": "/ui-lib/edinburgh.jpg",
+        "img-alt": ""
+      },
+      "control": {
+        "label": "Show on a map"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Senior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Senior Front End Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "name": "Gdańsk",
+        "addressline1": "ul. Grunwaldzka 409",
+        "addressline2": "Alchemia Ferrum 6th floor",
+        "city": "",
+        "postcode": "80-309 Gdańsk",
+        "country": "Poland",
+        "img": "/ui-lib/gdansk.jpg",
+        "img-alt": ""
+      },
+      "control": {
+        "label": "Show on a map"
       },
       "jobs": [
         {
@@ -160,71 +179,9 @@
           }
         }
       ]
-    }
-  ],
-  "offices": [
-    {
-      "office": {
-        "name": "Bengaluru",
-        "addressline1": "72 Electronic City",
-        "addressline2": "Hosur Road",
-        "city": "",
-        "postcode": "Bangalore 560100",
-        "country": "India",
-        "img": "/ui-lib/bengaluru.jpg",
-        "img-alt": ""
-      },
-      "control": {
-        "label": "Show on a map"
-      }
     },
     {
-      "office": {
-        "name": "Denver",
-        "addressline1": "1550 Wewatta Street",
-        "addressline2": "",
-        "city": "Denver",
-        "postcode": "CO 80202",
-        "country": "USA",
-        "img": "/ui-lib/denver.jpg",
-        "img-alt": ""
-      },
-      "control": {
-        "label": "Show on a map"
-      }
-    },
-    {
-      "office": {
-        "name": "Dublin",
-        "addressline1": "Alexandra House",
-        "addressline2": "3 Ballsbridge Park",
-        "city": "",
-        "postcode": "Dublin 4",
-        "country": "Ireland",
-        "img": "/ui-lib/dublin.jpg",
-        "img-alt": ""
-      },
-      "control": {
-        "label": "Show on a map"
-      }
-    },
-    {
-      "office": {
-        "name": "Edinburgh",
-        "addressline1": "2 Castle Terrace",
-        "addressline2": "",
-        "city": "Edinburgh",
-        "postcode": "EH1 2EL",
-        "country": "UK",
-        "img": "/ui-lib/edinburgh.jpg",
-        "img-alt": ""
-      },
-      "control": {
-        "label": "Show on a map"
-      }
-    },
-    {
-      "office": {
+      "location": {
         "name": "London",
         "addressline1": "2 Finsbury Avenue",
         "addressline2": "",
@@ -236,10 +193,36 @@
       },
       "control": {
         "label": "Show on a map"
-      }
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Technical Rourcing Lead",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Creative Technologist",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front-End Engineer",
+            "type": "full time"
+          }
+        }
+      ]
     },
     {
-      "office": {
+      "location": {
         "name": "New York",
         "addressline1": "77 Sands Street",
         "addressline2": "",
