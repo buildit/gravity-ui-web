@@ -1,5 +1,8 @@
 {
   "title": "We are global",
+  "control": {
+    "label": "Menu"
+  },
   "links": [
     {
       "control": {
@@ -170,6 +173,9 @@
         "country": "India",
         "img": "/ui-lib/bengaluru.jpg",
         "img-alt": ""
+      },
+      "control": {
+        "label": "Show on a map"
       }
     },
     {
@@ -182,6 +188,9 @@
         "country": "USA",
         "img": "/ui-lib/denver.jpg",
         "img-alt": ""
+      },
+      "control": {
+        "label": "Show on a map"
       }
     },
     {
@@ -194,6 +203,9 @@
         "country": "Ireland",
         "img": "/ui-lib/dublin.jpg",
         "img-alt": ""
+      },
+      "control": {
+        "label": "Show on a map"
       }
     },
     {
@@ -206,6 +218,9 @@
         "country": "UK",
         "img": "/ui-lib/edinburgh.jpg",
         "img-alt": ""
+      },
+      "control": {
+        "label": "Show on a map"
       }
     },
     {
@@ -218,6 +233,9 @@
         "country": "UK",
         "img": "/ui-lib/london.jpg",
         "img-alt": ""
+      },
+      "control": {
+        "label": "Show on a map"
       }
     },
     {
@@ -230,6 +248,9 @@
         "country": "USA",
         "img": "/ui-lib/new-york.jpg",
         "img-alt": ""
+      },
+      "control": {
+        "label": "Show on a map"
       }
     }
   ],
@@ -247,7 +268,4 @@
       }
     }
   ],
-  "control": {
-    "label": "Show on a map"
-  }
 }
