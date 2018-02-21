@@ -1,4 +1,7 @@
 <div class="grav-c-location-card">
+  <div class="grav-c-location-card__img">
+    <img src="{{office.img}}" width="425" height="300" alt="">
+  </div>
   <div class="grav-c-location-card__content">
     <h2>{{office.name}}</h2>
     <p>{{#office.addressline1}}{{office.addressline1}}<br>{{/office.addressline1}}
@@ -7,9 +10,6 @@
       {{#office.postcode}}{{office.postcode}}<br>{{/office.postcode}}
       {{#office.country}}{{office.country}}{{/office.country}}
     </p>
-  </div>
-  <div class="grav-c-location-card__img">
-    <img src="{{office.img}}" width="425" height="300" alt="">
   </div>
   <div class="grav-c-location-card__cta">
     {{> atoms-link:grav-c-block-link }}

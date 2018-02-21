@@ -7,26 +7,32 @@
 .grav-c-location-card__content {
   position: relative;
   padding: $grav-sp-m;
+  margin: 0;
+
+  > p {
+    position: relative;
+  }
 }
 
 .grav-c-location-card__img {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  transform: translateY(-100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-  > img {
-    filter: opacity(0.05) contrast(300%) sepia(80%);
-    width: 100%;
-    margin-top: -8%; // Magic number to improve focal point of image
-    transition: filter 0.25s;
+    @media (min-width: gravy-breakpoint(small)) {
+      top: -8%;
+    }
 
     @media (min-width: gravy-breakpoint(regular)) {
-      margin-top: 0;
+      top: 0;
     }
+
+  > img {
+    width: 100%;
+    filter: opacity(0.05) contrast(300%) sepia(80%);
+    transition: filter 0.25s;
 
     .grav-c-location-card:hover & {
       filter: opacity(0.065) contrast(300%) sepia(0%);

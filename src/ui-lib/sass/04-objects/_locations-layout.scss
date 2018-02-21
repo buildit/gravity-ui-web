@@ -1,9 +1,11 @@
 .grav-o-locations-layout {
-  grid-template-columns: 1fr 1fr;
-
   @media (min-width: gravy-breakpoint(regular)) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media (min-width: gravy-breakpoint(large)) {
+      grid-auto-rows: 300px;
+    }
   }
 
   > img {
