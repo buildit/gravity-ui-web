@@ -38,7 +38,7 @@
         "postcode": "Bangalore 560100",
         "country": "India",
         "img": "../../images/bengaluru.jpg",
-        "img-alt": ""
+        "img-alt": "Bengaluru skyline"
       },
       "control": {
         "label": "Show on a map"
@@ -73,7 +73,7 @@
         "postcode": "CO 80202",
         "country": "USA",
         "img": "../../images/denver.jpg",
-        "img-alt": ""
+        "img-alt": "Denver skyline"
       },
       "control": {
         "label": "Show on a map"
@@ -102,7 +102,7 @@
         "postcode": "Dublin 4",
         "country": "Ireland",
         "img": "../../images/dublin.jpg",
-        "img-alt": ""
+        "img-alt": "Dublin skyline"
       },
       "control": {
         "label": "Show on a map"
@@ -117,7 +117,7 @@
         "postcode": "EH1 2EL",
         "country": "UK",
         "img": "../../images/edinburgh.jpg",
-        "img-alt": ""
+        "img-alt": "Edinburgh skyline"
       },
       "control": {
         "label": "Show on a map"
@@ -146,7 +146,7 @@
         "postcode": "80-309 Gdańsk",
         "country": "Poland",
         "img": "../../images/gdansk.jpg",
-        "img-alt": ""
+        "img-alt": "Gdańsk skyline"
       },
       "control": {
         "label": "Show on a map"
@@ -187,7 +187,7 @@
         "postcode": "EC2M 2PA",
         "country": "UK",
         "img": "../../images/london.jpg",
-        "img-alt": ""
+        "img-alt": "London skline"
       },
       "control": {
         "label": "Show on a map"
@@ -228,7 +228,7 @@
         "postcode": "NY 11201",
         "country": "USA",
         "img": "../../images/new-york.jpg",
-        "img-alt": ""
+        "img-alt": "New York skyline"
       },
       "control": {
         "label": "Show on a map"
