@@ -33,6 +33,10 @@ $gravy: (
     ),
     small-text: (
       null: ms(-1)
+    ),
+    large-text: (
+      null: (ms(1)),
+      large: (ms(2))
     )
   )
 );

@@ -1,3 +1,8 @@
 pre {
   font-family: monospace;
 }
+
+blockquote {
+  @include typi('large-text');
+  text-align: center;
+}
