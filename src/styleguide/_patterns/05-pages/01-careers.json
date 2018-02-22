@@ -1,7 +1,11 @@
 {
   "title": "Careers",
+  "control": {
+    "label": "Menu"
+  },
   "links": [
     {
+      "url": "link.pages-about",
       "control": {
         "label": "About us"
       }

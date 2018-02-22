@@ -1,5 +1,8 @@
 {
   "title": "About us",
+  "control": {
+    "label": "Menu"
+  },
   "links": [
     {
       "url": false,
@@ -180,6 +183,48 @@
     {
       "title": "That's it",
       "description": "That's pretty much it. There will be one more phone call to confirm transfer details with you, and possible start dates."
+    }
+  ],
+  "img-cards": [
+    {
+      "card": {
+        "image": {
+          "src": "/images/spaceman.svg",
+          "alt": "A man in a space suit, possibly in space."
+        },
+        "title": "Innovative",
+        "content": "Self-confessed geeks, always curious to explore technology and better ways of working that deliver maximum business impact."
+      }
+    },
+    {
+      "card": {
+        "image": {
+          "src": "/images/cube.svg",
+          "alt": "A cube made of interconnected nodes, with one highlighted node."
+        },
+        "title": "Problem solvers",
+        "content": "Managing complexity is our raison d’etre, adapting to users, building within frameworks, and maintaining the big picture."
+      }
+    },
+    {
+      "card": {
+        "image": {
+          "src": "/images/bull.svg",
+          "alt": "A stylised head of a bull."
+        },
+        "title": "No \"bull\"",
+        "content": "From open-minded to open source, as natural collaborators we are not afraid to 'do the right thing' for our clients and their customers."
+      }
+    },
+    {
+      "card": {
+        "image": {
+          "src": "/images/r2d2.svg",
+          "alt": "A stylised version of R2-D2 from Star Wars."
+        },
+        "title": "Battle tested",
+        "content": "Resilience is our most valuable quality, with teams that own, commit and have the ability to adapt to unique organisational aspirations and challenges."
+      }
     }
   ]
 }
