@@ -29,10 +29,6 @@
     "copy": "something something something"
   },
   "location": {
-    "city": "Visakhapatnam",
-    "country": "India"
-  },
-  "office": {
     "name": "London",
     "addressline1": "2 Finsbury Avenue",
     "addressline2": "",

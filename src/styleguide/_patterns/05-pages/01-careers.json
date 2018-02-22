@@ -19,6 +19,7 @@
       }
     },
     {
+      "url": "../../patterns/05-pages-02-locations/05-pages-02-locations.rendered.html",
       "control": {
         "label": "Locations"
       }
@@ -36,7 +37,7 @@
         "city": "",
         "postcode": "Bangalore 560100",
         "country": "India",
-        "img": "/ui-lib/bengaluru.jpg",
+        "img": "../../images/bengaluru.jpg",
         "img-alt": ""
       },
       "control": {
@@ -71,7 +72,7 @@
         "city": "Denver",
         "postcode": "CO 80202",
         "country": "USA",
-        "img": "/ui-lib/denver.jpg",
+        "img": "../../images/denver.jpg",
         "img-alt": ""
       },
       "control": {
@@ -100,7 +101,7 @@
         "city": "",
         "postcode": "Dublin 4",
         "country": "Ireland",
-        "img": "/ui-lib/dublin.jpg",
+        "img": "../../images/dublin.jpg",
         "img-alt": ""
       },
       "control": {
@@ -115,7 +116,7 @@
         "city": "Edinburgh",
         "postcode": "EH1 2EL",
         "country": "UK",
-        "img": "/ui-lib/edinburgh.jpg",
+        "img": "../../images/edinburgh.jpg",
         "img-alt": ""
       },
       "control": {
@@ -144,7 +145,7 @@
         "city": "",
         "postcode": "80-309 Gdańsk",
         "country": "Poland",
-        "img": "/ui-lib/gdansk.jpg",
+        "img": "../../images/gdansk.jpg",
         "img-alt": ""
       },
       "control": {
@@ -185,7 +186,7 @@
         "city": "London",
         "postcode": "EC2M 2PA",
         "country": "UK",
-        "img": "/ui-lib/london.jpg",
+        "img": "../../images/london.jpg",
         "img-alt": ""
       },
       "control": {
@@ -226,7 +227,7 @@
         "city": "Brooklyn",
         "postcode": "NY 11201",
         "country": "USA",
-        "img": "/ui-lib/new-york.jpg",
+        "img": "../../images/new-york.jpg",
         "img-alt": ""
       },
       "control": {
