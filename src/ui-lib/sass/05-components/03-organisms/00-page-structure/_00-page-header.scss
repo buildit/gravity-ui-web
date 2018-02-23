@@ -17,6 +17,10 @@ header[role=banner] {
       align-items: center;
       grid-template-columns: 300px 1fr;
     }
+
+    @media (min-width: gravy-breakpoint(large)) {
+      max-width: $grav-page-content-max-width-large;
+    }
   }
 
   .logo-main {
@@ -56,6 +60,10 @@ header[role=banner] {
       top: auto;
       right: auto;
       justify-self: flex-end;
+    }
+
+    @media (min-width: gravy-breakpoint(large)) {
+      max-width: $grav-page-content-max-width-large;
     }
   }
 }
