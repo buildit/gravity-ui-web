@@ -41,5 +41,16 @@
   },
   "jobs": [
     {}, {}, {}
-  ]
+  ],
+  "img-cards": [
+    {}, {}, {}, {}, {}
+  ],
+  "card": {
+    "image": {
+      "src": "../../images/img-random-1.png",
+      "alt": "A placeholder image with an arbitrary aspect ratio."
+    },
+    "title": "Labore et dolore magna aliqua",
+    "content": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros."
+  }
 }
