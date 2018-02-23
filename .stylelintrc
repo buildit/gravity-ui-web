@@ -82,7 +82,11 @@
         "padding-bottom",
         "padding-left",
         "border",
-        "border-*"
+        "border-width",
+        "border-top-width",
+        "border-right-width",
+        "border-bottom-width",
+        "border-left-width"
       ],
       {
         "unspecified": "bottomAlphabetical"
