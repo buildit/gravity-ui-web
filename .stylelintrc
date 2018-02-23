@@ -62,6 +62,8 @@
       [
         "content",
         "display",
+        "flex",
+        "flex-wrap",
         "width",
         "max-width",
         "height",
