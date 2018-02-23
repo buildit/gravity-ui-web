@@ -185,6 +185,78 @@
       "description": "That's pretty much it. There will be one more phone call to confirm transfer details with you, and possible start dates."
     }
   ],
+  "sections": [
+    {
+      "section": {
+        "title": "Our Vision &amp; Purpose",
+        "paragraphs": [
+          {
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+          },
+          {
+            "blockquote": "One-line pull-out quote about vision and purpose"
+          },
+          {
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "title": "What we do",
+        "paragraphs": [
+          {
+            "paragraph": "We solve hard engineering problems with our customers, and help them deliver world-class products. We help them improve the way they solve business problems, ultimately <em>changing the way they change</em>."
+          },
+          {
+            "paragraph": "We help organisations understand what they need to do to survive in an ever more rapidly changing world."
+          },
+          {
+            "paragraph": "True transformation only happens when change touches all areas of a company. We believe that change must be holistic and consider all aspects of the organisational stack, from recruitment to procurement, from operations to engineering, and from sales to support. We call this <strong>vertical transformation</strong>."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "title": "How we do it",
+        "paragraphs": [
+          {
+            "paragraph": "We are problem solvers who hone our craft through experimentation, continuous improvement and the applcation of systems thinking."
+          },
+          {
+            "paragraph": "We learn by failing safely. We empower people through trust and autonomy."
+          },
+          {
+            "paragraph": "We enable learning behaviours through <em>high psychological safety</em>; and empower people through <strong>trust</strong> and <strong>autonomy</strong>."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "title": "We are",
+        "img-cards": true
+      }
+    },
+    {
+      "section": {
+        "title": "Our people",
+        "paragraphs": [
+          {
+            "paragraph": "Buildit has an <strong>open structure</strong>, which means that employees work within <em>wide boundaries</em>."
+          },
+          {
+            "paragraph": "The environment and culture which is shaped by Buildit’s people, is driven by several key factors including; transparency, curiosity, inclusivity, pragmatism and responsibility. Buildit employees work in an environment where everyone is encouraged to continually develop through a cohesive unit of learning, and perhaps more importantly, given the autonomy to do so."
+          },
+          {
+            "paragraph": "We work with our partners across <a href=\"https://wiprodigital.com\">Wipro Digital</a>, such as <a href=\"https://design.it\">Designit</a>."
+          }
+        ]
+      }
+    }
+  ],
   "img-cards": [
     {
       "card": {
@@ -203,7 +275,7 @@
           "alt": "A cube made of interconnected nodes, with one highlighted node."
         },
         "title": "Problem solvers",
-        "content": "Managing complexity is our raison d’etre, adapting to users, building within frameworks, and maintaining the big picture."
+        "content": "We enjoy finding ways to make complicated tasks easy. We tackle root-causes, not symptomps. We are user-centric but keep an eye on the big picture."
       }
     },
     {
@@ -213,7 +285,7 @@
           "alt": "A stylised head of a bull."
         },
         "title": "No \"bull\"",
-        "content": "From open-minded to open source, as natural collaborators we are not afraid to 'do the right thing' for our clients and their customers."
+        "content": "From open-minded to open source, as natural collaborators we are not afraid to <em>'do the right thing'</em> for our clients and their customers."
       }
     },
     {

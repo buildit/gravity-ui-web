@@ -5,6 +5,7 @@
   },
   "links": [
     {
+      "url": "link.pages-about",
       "control": {
         "label": "About us"
       }
