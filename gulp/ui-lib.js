@@ -70,7 +70,6 @@ function copyJsTask() {
 copyJsTask.displayName = taskNamePrefix + 'js';
 copyJsTask.description = 'Copies JS files.';
 
-
 // Composite task to do complete UI lib build
 const buildTasks = gulp.parallel(sassBuildTask, svgSymbolsTask, copyJsTask);
 buildTasks.displayName = taskNamePrefix + 'build';

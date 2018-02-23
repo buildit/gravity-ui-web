@@ -1,0 +1,47 @@
+.grav-c-location-card {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.grav-c-location-card__content {
+  position: relative;
+  padding: $grav-sp-m;
+  margin: 0;
+
+  > p {
+    position: relative;
+  }
+}
+
+.grav-c-location-card__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @media (min-width: gravy-breakpoint(small)) {
+      top: -8%;
+    }
+
+    @media (min-width: gravy-breakpoint(regular)) {
+      top: 0;
+    }
+
+  > img {
+    width: 100%;
+    filter: opacity(0.05) contrast(300%) sepia(80%);
+    transition: filter 0.25s;
+
+    .grav-c-location-card:hover & {
+      filter: opacity(0.065) contrast(300%) sepia(0%);
+    }
+  }
+}
+
+.grav-c-location-card__cta {
+  position: absolute;
+  right: $grav-sp-m;
+  bottom: $grav-sp-m;
+}

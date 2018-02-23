@@ -29,18 +29,24 @@
     "copy": "something something something"
   },
   "location": {
-    "city": "Visakhapatnam",
-    "country": "India"
+    "name": "London",
+    "addressline1": "2 Finsbury Avenue",
+    "addressline2": "",
+    "city": "London",
+    "postcode": "EC2M 2PA",
+    "country": "UK",
+    "img": "http://via.placeholder.com/425x300/000000/ffffff",
+    "img-alt": "Placeholder image"
   },
-  "locations": [
-    {}, {}, {}
-  ],
   "job": {
     "title": "Lead Implementation Planner",
     "type": "full-time"
   },
   "jobs": [
     {}, {}, {}
+  ],
+  "locations": [
+    {}, {}, {}, {}, {}, {}, {}, {}, {}
   ],
   "steps": [
     {
