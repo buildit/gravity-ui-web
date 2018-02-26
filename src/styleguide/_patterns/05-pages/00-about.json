@@ -207,13 +207,13 @@
         "title": "What we do",
         "paragraphs": [
           {
-            "paragraph": "We solve hard engineering problems with our customers, and help them deliver world-class products. We help them improve the way they solve business problems, ultimately <em>changing the way they change</em>."
+            "paragraph": "We solve hard engineering problems with our customers, and help them deliver world-class products. We help them improve the way they solve business problems, ultimately changing the way they change."
           },
           {
             "paragraph": "We help organisations understand what they need to do to survive in an ever more rapidly changing world."
           },
           {
-            "paragraph": "True transformation only happens when change touches all areas of a company. We believe that change must be holistic and consider all aspects of the organisational stack, from recruitment to procurement, from operations to engineering, and from sales to support. We call this <strong>vertical transformation</strong>."
+            "paragraph": "True transformation only happens when change touches all areas of a company. We believe that change must be holistic and consider all aspects of the organisational stack, from recruitment to procurement, from operations to engineering, and from sales to support. We call this vertical transformation."
           }
         ]
       }
@@ -223,13 +223,10 @@
         "title": "How we do it",
         "paragraphs": [
           {
-            "paragraph": "We are problem solvers who hone our craft through experimentation, continuous improvement and the applcation of systems thinking."
+            "paragraph": "We are problem solvers who hone our craft through experimentation, continuous improvement and systems thinking."
           },
           {
-            "paragraph": "We learn by failing safely. We empower people through trust and autonomy."
-          },
-          {
-            "paragraph": "We enable learning behaviours through <em>high psychological safety</em>; and empower people through <strong>trust</strong> and <strong>autonomy</strong>."
+            "paragraph": "We enable learning behaviours through high psychological safety; and empower people through trust and autonomy."
           }
         ]
       }
@@ -291,13 +288,13 @@
         "title": "Our people",
         "paragraphs": [
           {
-            "paragraph": "Buildit has an <strong>open structure</strong>, which means that employees work within <em>wide boundaries</em>."
+            "paragraph": "Buildit has an open structure, which means that employees work within wide boundaries."
           },
           {
             "paragraph": "The environment and culture which is shaped by Buildit’s people, is driven by several key factors including; transparency, curiosity, inclusivity, pragmatism and responsibility. Buildit employees work in an environment where everyone is encouraged to continually develop through a cohesive unit of learning, and perhaps more importantly, given the autonomy to do so."
           },
           {
-            "paragraph": "We work with our partners across <a href=\"https://wiprodigital.com\">Wipro Digital</a>, such as <a href=\"https://design.it\">Designit</a>."
+            "paragraph": "Our partners are:"
           },
           {
             "inlineRow": true,
