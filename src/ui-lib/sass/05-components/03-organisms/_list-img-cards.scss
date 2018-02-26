@@ -1,0 +1,41 @@
+.grav-c-list-img-cards {
+  $breakpoint-1: gravy-breakpoint(medium);
+  $breakpoint-2: gravy-breakpoint(large);
+  margin-top: $grav-sp-xl;
+  margin-bottom: $grav-sp-xl;
+  padding: 0;
+  list-style-type: none;
+
+  @media all and (min-width: $breakpoint-1) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  > li {
+    text-align: center;
+
+    @media all and (min-width: $breakpoint-1) {
+      max-width: 50%;
+      padding: 0 $grav-sp-l;
+    }
+  }
+
+  > li:nth-child(2) {
+    @media all and (min-width: $breakpoint-1) {
+      margin-top: 0;
+    }
+  }
+
+  > li + li {
+    margin-top: $grav-sp-xl;
+  }
+
+  &__title {
+    @include typi('large-text');
+    @include gravy-font('secondary');
+  }
+
+  p {
+    @include typi('small-text');
+  }
+}
