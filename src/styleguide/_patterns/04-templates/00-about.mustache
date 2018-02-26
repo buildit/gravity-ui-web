@@ -8,17 +8,10 @@
       {{#section.paragraphs}}
         {{#paragraph}}<p>{{{paragraph}}}</p>{{/paragraph}}
         {{#blockquote}}<blockquote>{{{blockquote}}}</blockquote>{{/blockquote}}
+        {{#inlineRow}}{{>organisms-list-inline-row}}{{/inlineRow}}
+        {{#imgCards}}{{>organisms-list-img-cards}}{{/imgCards}}
       {{/section.paragraphs}}
-      {{#section.img-cards}}
-        {{> organisms-list-img-cards }}
-      {{/section.img-cards}}
     </section>
   {{/sections}}
-  <section>
-    <ul class="grav-c-list-inline-row">
-      <li><a href="https://wiprodigital.com" title="Wipro Digital">{{>atoms-wiprodigital}}</a></li>
-      <li><a href="https://designit.com" title="Designit">{{>atoms-designit}}</a></li>
-    </ul>
-  </section>
 </main>
 {{> organisms-page-footer }}

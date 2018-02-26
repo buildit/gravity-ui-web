@@ -72,5 +72,13 @@
     },
     "title": "Labore et dolore magna aliqua",
     "content": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros."
+  },
+  "inlineItems": [
+    {}, {}, {}
+  ],
+  "item": {
+    "href": "http://example.com",
+    "title": "an interesting title",
+    "content": "A Linked Item"
   }
 }

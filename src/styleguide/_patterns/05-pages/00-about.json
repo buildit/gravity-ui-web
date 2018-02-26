@@ -237,7 +237,53 @@
     {
       "section": {
         "title": "We are",
-        "img-cards": true
+        "paragraphs": [
+          {
+            "imgCards": true,
+            "img-cards": [
+              {
+                "card": {
+                  "image": {
+                    "src": "/images/spaceman.svg",
+                    "alt": "A man in a space suit, possibly in space."
+                  },
+                  "title": "Innovative",
+                  "content": "Self-confessed geeks, always curious to explore technology and better ways of working that deliver maximum business impact."
+                }
+              },
+              {
+                "card": {
+                  "image": {
+                    "src": "/images/cube.svg",
+                    "alt": "A cube made of interconnected nodes, with one highlighted node."
+                  },
+                  "title": "Problem solvers",
+                  "content": "We enjoy finding ways to make complicated tasks easy. We tackle root-causes, not symptomps. We are user-centric but keep an eye on the big picture."
+                }
+              },
+              {
+                "card": {
+                  "image": {
+                    "src": "/images/bull.svg",
+                    "alt": "A stylised head of a bull."
+                  },
+                  "title": "No \"bull\"",
+                  "content": "From open-minded to open source, as natural collaborators we are not afraid to <em>'do the right thing'</em> for our clients and their customers."
+                }
+              },
+              {
+                "card": {
+                  "image": {
+                    "src": "/images/r2d2.svg",
+                    "alt": "A stylised version of R2-D2 from Star Wars."
+                  },
+                  "title": "Battle tested",
+                  "content": "Resilience is our most valuable quality, with teams that own, commit and have the ability to adapt to unique organisational aspirations and challenges."
+                }
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -252,50 +298,27 @@
           },
           {
             "paragraph": "We work with our partners across <a href=\"https://wiprodigital.com\">Wipro Digital</a>, such as <a href=\"https://design.it\">Designit</a>."
+          },
+          {
+            "inlineRow": true,
+            "inlineItems": [
+              {
+                "item": {
+                  "href": "https://wiprodigital.com",
+                  "title": "Wipro Digital",
+                  "content": "<svg role=\"img\" class=\"grav-c-logo\" aria-label=\"\" width=\"178\" height=\"33\"><use xlink:href=\"#logo-wiprodigital\"></use></svg>"
+                }
+              },
+              {
+                "item": {
+                  "href": "https://designit.com",
+                  "title": "Designit",
+                  "content": "<svg role=\"img\" class=\"grav-c-logo\" aria-label=\"\" width=\"103\" height=\"33\"><use xlink:href=\"#logo-designit\"></use></svg>"
+                }
+              }
+            ]
           }
         ]
-      }
-    }
-  ],
-  "img-cards": [
-    {
-      "card": {
-        "image": {
-          "src": "/images/spaceman.svg",
-          "alt": "A man in a space suit, possibly in space."
-        },
-        "title": "Innovative",
-        "content": "Self-confessed geeks, always curious to explore technology and better ways of working that deliver maximum business impact."
-      }
-    },
-    {
-      "card": {
-        "image": {
-          "src": "/images/cube.svg",
-          "alt": "A cube made of interconnected nodes, with one highlighted node."
-        },
-        "title": "Problem solvers",
-        "content": "We enjoy finding ways to make complicated tasks easy. We tackle root-causes, not symptomps. We are user-centric but keep an eye on the big picture."
-      }
-    },
-    {
-      "card": {
-        "image": {
-          "src": "/images/bull.svg",
-          "alt": "A stylised head of a bull."
-        },
-        "title": "No \"bull\"",
-        "content": "From open-minded to open source, as natural collaborators we are not afraid to <em>'do the right thing'</em> for our clients and their customers."
-      }
-    },
-    {
-      "card": {
-        "image": {
-          "src": "/images/r2d2.svg",
-          "alt": "A stylised version of R2-D2 from Star Wars."
-        },
-        "title": "Battle tested",
-        "content": "Resilience is our most valuable quality, with teams that own, commit and have the ability to adapt to unique organisational aspirations and challenges."
       }
     }
   ]
