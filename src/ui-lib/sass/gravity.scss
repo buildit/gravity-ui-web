@@ -14,6 +14,7 @@
 @import '00-settings/colors';
 @import '00-settings/spacing';
 @import '00-settings/strokes';
+@import '00-settings/animations';
 
 // === Tools layer ===
 // Globally used mixins and functions.
@@ -53,6 +54,7 @@
 @import '05-components/01-atoms/04-media/25-icon';
 @import '05-components/01-atoms/06-buttons/05-icon-button';
 @import '05-components/01-atoms/06-buttons/06-icon-toggle-button';
+@import '05-components/01-atoms/06-buttons/07-cta';
 @import '05-components/01-atoms/10-navigation/00-block-link';
 
 @import '05-components/02-molecules/00-navigation/00-nav-menu';

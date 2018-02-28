@@ -12,7 +12,7 @@
     padding-left: $grav-sp-l;
     border-width: 0;
     border-left-width: $grav-st-thickness;
-    border-color: $grav-co-primary-satsuma;
+    border-color: $grav-co-accent-primary;
     border-style: dashed;
     counter-increment: steps;
   }
@@ -42,17 +42,19 @@
 
   > li::before {
     @include gravy-font(secondary, bold);
-    content: 'Step ' counters(steps, '.');
+    content: counters(steps, '.');
+    width: 1rem;
     position: absolute;
-    left: -$grav-sp-l;
+    left: -$grav-sp-m;
     padding: $grav-sp-inset-squished-xs;
-    background-color: $grav-co-primary-satsuma;
+    background-color: $grav-co-accent-primary;
+    text-align: center;
   }
 
   > li:nth-child(odd)::before {
     @media all and (min-width: gravy-breakpoint(regular)) {
       display: block;
-      right: -$grav-sp-l;
+      right: -$grav-sp-m;
       left: auto;
     }
   }
