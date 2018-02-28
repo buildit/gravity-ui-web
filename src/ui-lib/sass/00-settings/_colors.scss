@@ -7,9 +7,12 @@
 // the Mapping variables (defined below) should always be used.
 
 // Primary: Yellows
-$grav-co-primary-latte: #4f2f00;
-$grav-co-primary-cuppa: #ac6700;
-$grav-co-primary-egg-yolk: #f90;
+// $grav-co-primary-latte: #4f2f00;
+// $grav-co-primary-cuppa: #ac6700;
+// $grav-co-primary-egg-yolk: #f90;
+$grav-co-primary-dark-choco: #571500;
+$grav-co-primary-acorn: #ad3c00;
+$grav-co-primary-satsuma: #ff7913;
 $grav-co-primary-murican-cheese: #ffbc58;
 $grav-co-primary-eggshell: #ffe7c2;
 
@@ -37,10 +40,10 @@ $grav-co-bg: $grav-co-neutral-dirty-snow-white;
 // Accent colours for interactive elements like links and buttons
 // (The $grav-co-*-contrast colors can be used together with the corresponding
 // $grav-co-* to make an accessible FG/BG combo.)
-$grav-co-interactive-primary: $grav-co-primary-cuppa;
+$grav-co-interactive-primary: $grav-co-primary-acorn;
 $grav-co-interactive-primary-contrast: $grav-co-bg;
-$grav-co-interactive-primary-hover: $grav-co-primary-egg-yolk;
-$grav-co-interactive-primary-visited: $grav-co-primary-latte;
+$grav-co-interactive-primary-hover: $grav-co-primary-satsuma;
+$grav-co-interactive-primary-visited: $grav-co-primary-dark-choco;
 
 $grav-co-interactive-secondary: $grav-co-secondary-deep-ocean;
 $grav-co-interactive-secondary-contrast: $grav-co-bg;

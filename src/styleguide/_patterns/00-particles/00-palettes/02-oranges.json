@@ -2,9 +2,9 @@
   "colors": [
     {
       "color": {
-        "name": "Latte",
-        "varname": "$grav-co-primary-latte",
-        "hex": "4f2f00",
+        "name": "Dark Choco",
+        "varname": "$grav-co-primary-dark-choco",
+        "hex": "571500",
         "wcag": {
           "light": {
             "small": "pass",
@@ -19,26 +19,26 @@
     },
     {
       "color": {
-        "name": "Cuppa",
-        "varname": "$grav-co-primary-cuppa",
-        "hex": "ac6700",
+        "name": "Acorn",
+        "varname": "$grav-co-primary-acorn",
+        "hex": "ad3c00",
         "wcag": {
           "light": {
-            "small": "fail",
+            "small": "pass",
             "big": "pass"
           },
           "dark": {
-            "small": "pass",
-            "big": "pass"
+            "small": "fail",
+            "big": "fail"
           }
         }
       }
     },
     {
       "color": {
-        "name": "Egg Yolk",
-        "varname": "$grav-co-primary-egg-yolk",
-        "hex": "ff9900",
+        "name": "Satsuma",
+        "varname": "$grav-co-primary-satsuma",
+        "hex": "ff7913",
         "wcag": {
           "light": {
             "small": "fail",
