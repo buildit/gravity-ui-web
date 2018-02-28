@@ -12,7 +12,7 @@
     padding-left: $grav-sp-l;
     border-width: 0;
     border-left-width: $grav-st-thickness;
-    border-color: $grav-co-primary-egg-yolk;
+    border-color: $grav-co-primary-satsuma;
     border-style: dashed;
     counter-increment: steps;
   }
@@ -46,7 +46,7 @@
     position: absolute;
     left: -$grav-sp-l;
     padding: $grav-sp-inset-squished-xs;
-    background-color: $grav-co-primary-egg-yolk;
+    background-color: $grav-co-primary-satsuma;
   }
 
   > li:nth-child(odd)::before {
