@@ -1,6 +1,6 @@
 ## Purpose
 
-The CTA (or Call To Action) is a button with the primary intention of grabbing the user attention and direct him somewhere else.
+The CTA (or Call To Action) is a button with the primary intention of grabbing the user attention and direct them somewhere else.
 
 A submit button is _not_ a CTA. A _read more_ link **is**.
 
