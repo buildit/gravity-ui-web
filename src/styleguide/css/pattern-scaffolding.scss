@@ -1,3 +1,11 @@
+@import '../../ui-lib/sass/00-settings/typography';
+// @import '../../ui-lib/sass/00-settings/modularscale';
+// @import '../../ui-lib/sass/00-settings/gravy';
+@import '../../ui-lib/sass/00-settings/colors';
+@import '../../ui-lib/sass/00-settings/spacing';
+@import '../../ui-lib/sass/00-settings/strokes';
+
+
 /* Color palette previews */
 .sg-pattern-sub-heading {
   margin: 0 0 1rem;
@@ -228,13 +236,13 @@
 
 .sg-example--padded-block {
   max-width: 8rem;
-  background-color: #f90;
+  background-color: $grav-co-primary-satsuma;
 }
 
 .sg-example--padded-block > div {
   height: 6rem;
   position: relative;
-  background-color: #f90;
+  background-color: $grav-co-primary-satsuma;
   box-sizing: border-box;
 }
 
