@@ -1,0 +1,60 @@
+.grav-c-cta,
+[href].grav-c-cta,
+[href]:link.grav-c-cta {
+  @include gravy-font(secondary, regular);
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: $grav-sp-inset-squished-xs;
+  border-width: 0;
+  background-color: transparent;
+  color: $grav-co-fg;
+  text-decoration: none;
+  z-index: 0;
+
+  &:focus,
+  &:hover {
+    background-color: transparent;
+
+    &::after {
+      height: 100%;
+      background-color: $grav-co-accent-primary-light;
+    }
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: $grav-st-thickness-large;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $grav-co-accent-primary;
+    transition-duration: $grav-tr-speed;
+    transition-property: height, background-color;
+    z-index: -1;
+  }
+
+  &--inverted {
+    color: $grav-co-bg;
+  }
+
+  &[disabled],
+  &--disabled,
+  &.is-disabled {
+    border: 0;
+    background-color: transparent;
+    box-shadow: inset 0 -#{$grav-st-thickness-large} $grav-co-disabled;
+    color: $grav-co-disabled;
+    cursor: default;
+
+    &:hover {
+      background-color: transparent;
+      color: $grav-co-disabled;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}

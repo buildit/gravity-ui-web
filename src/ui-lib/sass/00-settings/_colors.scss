@@ -6,10 +6,7 @@
 // These should NOT be referenced directly by CSS properties - instead
 // the Mapping variables (defined below) should always be used.
 
-// Primary: Yellows
-// $grav-co-primary-latte: #4f2f00;
-// $grav-co-primary-cuppa: #ac6700;
-// $grav-co-primary-egg-yolk: #f90;
+// Primary: Oranges
 $grav-co-primary-dark-choco: #571500;
 $grav-co-primary-acorn: #ad3c00;
 $grav-co-primary-satsuma: #ff7913;
@@ -50,5 +47,23 @@ $grav-co-interactive-secondary-contrast: $grav-co-bg;
 $grav-co-interactive-secondary-hover: $grav-co-secondary-tealy-mc-tealface;
 $grav-co-interactive-secondary-visited: $grav-co-secondary-twilight;
 
+// primary accent colour
+// this is going to be used for grabbing attention from the user
+$grav-co-accent-primary: $grav-co-primary-satsuma;
+$grav-co-accent-primary-light: $grav-co-primary-murican-cheese;
+$grav-co-accent-primary-lighter: $grav-co-primary-eggshell;
+$grav-co-accent-primary-dark: $grav-co-primary-acorn;
+$grav-co-accent-primary-darker: $grav-co-primary-dark-choco;
+
+// secondary accent colour
+// this is going to be used to style secondary elements, like certain types of borders, solid backgrounds.
+// needs to be used sparsely.
+$grav-co-accent-secondary: $grav-co-secondary-tealy-mc-tealface;
+$grav-co-accent-secondary-light: $grav-co-secondary-bread-mould;
+$grav-co-accent-secondary-lighter: $grav-co-secondary-nuclear-winter;
+$grav-co-accent-secondary-dark: $grav-co-secondary-deep-ocean;
+$grav-co-accent-secondary-darker: $grav-co-secondary-twilight;
+
+// disabled colours
 $grav-co-disabled: $grav-co-neutral-ashtray;
 $grav-co-disabled-contrast: $grav-co-neutral-asphalt;
