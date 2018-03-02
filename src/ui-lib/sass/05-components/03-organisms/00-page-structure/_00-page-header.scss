@@ -5,7 +5,7 @@
 header[role=banner] {
   background-color: $grav-co-neutral-charcoal;
 
-  &.is-light {
+  &.is-light { // stylelint-disable selector-no-qualifying-type
     background-color: transparent;
 
 

@@ -36,6 +36,7 @@
 
     .is-light & {
       background-color: $grav-co-bg;
+      color: $grav-co-fg;
     }
   }
 
@@ -78,7 +79,7 @@
     padding-right: $grav-sp-m;
     border: 0;
     border-right-width: $grav-st-thickness-large;
-    background-color: $grav-co-neutral-charcoal;
+    background-color: $grav-co-fg;
     border-color: $grav-co-bg;
     border-style: solid;
     color: $grav-co-bg;
@@ -93,7 +94,7 @@
 
     &:link,
     &:visited {
-      background-color: $grav-co-neutral-charcoal;
+      background-color: $grav-co-fg;
     }
 
     &:active {
@@ -101,12 +102,17 @@
     }
 
     &:hover {
-      background-color: $grav-co-neutral-charcoal;
+      background-color: $grav-co-fg;
     }
 
     &:not([href]) {
-      background-color: $grav-co-neutral-charcoal;
-      color: $grav-co-neutral-dirty-snow-white;
+      background-color: $grav-co-fg;
+      color: $grav-co-bg;
+    }
+
+    .is-light & {
+      background-color: $grav-co-bg;
+      color: $grav-co-fg;
     }
   }
 }
