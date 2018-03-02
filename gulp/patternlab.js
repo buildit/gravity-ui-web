@@ -118,7 +118,6 @@ copyAssetsTask.description = 'Copies assets dir from source to dist folder.';
 function copyCssTask () {
   return gulp.src(pkgPaths.normalizePath(paths().source.css) + '/**/*.scss')
     .pipe(sass(eyeglass(sass.sync().on('error', sass.logError))))
-    //.pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.css)))
     .pipe(browserSync.stream());
 };
