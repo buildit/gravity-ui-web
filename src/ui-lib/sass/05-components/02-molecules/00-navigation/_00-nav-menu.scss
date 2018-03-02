@@ -13,7 +13,7 @@
     position: relative;
     margin-right: $grav-sp-m;
     border: $grav-st-thickness solid $grav-co-neutral-asphalt;
-    background-color: $grav-co-neutral-charcoal;
+    background-color: $grav-co-fg;
     z-index: 1;
 
     @media (min-width: $trigger-breakpoint) {
@@ -21,7 +21,7 @@
     }
 
     &[aria-pressed='true'] {
-      background-color: $grav-co-neutral-charcoal;
+      background-color: inherit;
       color: $grav-co-neutral-dirty-snow-white;
     }
 
@@ -30,8 +30,12 @@
     }
 
     &:hover {
-      background-color: $grav-co-neutral-charcoal;
+      background-color: inherit;
       cursor: pointer;
+    }
+
+    .is-light & {
+      background-color: $grav-co-bg;
     }
   }
 
@@ -73,16 +77,18 @@
     display: block;
     padding-right: $grav-sp-m;
     border: 0;
+    border-right-width: $grav-st-thickness-large;
     background-color: $grav-co-neutral-charcoal;
-    border-right: $grav-sp-xs solid $grav-co-neutral-dirty-snow-white;
-    color: $grav-co-neutral-dirty-snow-white;
+    border-color: $grav-co-bg;
+    border-style: solid;
+    color: $grav-co-bg;
 
     @media (min-width: $trigger-breakpoint) {
       display: inline-block;
       height: 100%;
       padding-right: $grav-sp-s;
-      border-bottom: $grav-st-thickness solid $grav-co-neutral-dirty-snow-white;
       border-right-width: 0;
+      border-bottom-width: $grav-st-thickness;
     }
 
     &:link,
