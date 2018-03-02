@@ -1,6 +1,6 @@
 @import '../../ui-lib/sass/00-settings/typography';
-// @import '../../ui-lib/sass/00-settings/modularscale';
-// @import '../../ui-lib/sass/00-settings/gravy';
+@import '../../ui-lib/sass/00-settings/modularscale';
+@import '../../ui-lib/sass/00-settings/gravy';
 @import '../../ui-lib/sass/00-settings/colors';
 @import '../../ui-lib/sass/00-settings/spacing';
 @import '../../ui-lib/sass/00-settings/strokes';
@@ -229,7 +229,7 @@
   display: inline-block;
   width: 1em;
   height: 1em;
-  background-color: #8b8080;
+  background-color: $grav-co-neutral-warm-grey;
   margin-right: 0.5rem;
   vertical-align: middle;
 }
@@ -248,7 +248,7 @@
 
 .sg-example--padded-block > div > div {
   position: absolute;
-  background-color: #8b8080;
+  background-color: $grav-co-neutral-warm-grey;
   box-sizing: border-box;
 }
 
