@@ -1,0 +1,35 @@
+{
+  "title": "Buildit @ Wipro Digital",
+  "control": {
+    "label": "Menu"
+  },
+  "links": [
+    {
+      "url": "link.pages-about",
+      "control": {
+        "label": "About us"
+      }
+    },
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
+      }
+    },
+    {
+      "url": "link.pages-careers",
+      "control": {
+        "label": "Careers"
+      }
+    },
+    {
+      "url": "link.pages-location",
+      "control": {
+        "label": "Locations"
+      }
+    }
+  ],
+  "footer": {
+    "copy": "made with ❤️"
+  }
+}
