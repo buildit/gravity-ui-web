@@ -15,35 +15,24 @@ header[role=banner] {
   }
 
   > div {
-    max-width: $grav-page-content-max-width;
+    @include grav-l-container;
     position: relative;
-    margin: 0;
 
     @media (min-width: gravy-breakpoint(medium)) {
       display: grid;
-      margin-right: auto;
-      margin-left: auto;
       align-items: center;
       grid-template-columns: 300px 1fr;
-    }
-
-    @media (min-width: gravy-breakpoint(large)) {
-      max-width: $grav-page-content-max-width-large;
     }
   }
 
   .logo-main {
     display: block;
     position: relative;
-    padding: $grav-sp-m 6rem $grav-sp-m $grav-sp-m;
+    padding: $grav-sp-m 6rem $grav-sp-m 0;
     z-index: 1;
 
     @media (min-width: gravy-breakpoint(medium)) {
       padding-right: $grav-sp-m;
-    }
-
-    @media (min-width: gravy-breakpoint(regular)) {
-      padding-left: 0;
     }
   }
 
