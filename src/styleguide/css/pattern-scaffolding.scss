@@ -1,59 +1,327 @@
-/**
-  Import all SASS partials that make up Gravity's UI library
+// /**
+//   Import all SASS partials that make up Gravity's UI library
 
-  Partials are organised as per Harry Roberts' ITCSS architecture.
-  See: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
-*/
+//   Partials are organised as per Harry Roberts' ITCSS architecture.
+//   See: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+// */
 
-// === Settings layer ===
-// Used with preprocessors and contain font, colors definitions, etc.
-// Must not output any CSS.
-@import '../../ui-lib/sass/00-settings/typography';
-@import '../../ui-lib/sass/00-settings/modularscale';
-@import '../../ui-lib/sass/00-settings/gravy';
-@import '../../ui-lib/sass/00-settings/colors';
-@import '../../ui-lib/sass/00-settings/spacing';
-@import '../../ui-lib/sass/00-settings/strokes';
+// // === Settings layer ===
+// // Used with preprocessors and contain font, colors definitions, etc.
+// // Must not output any CSS.
+// @import '../../ui-lib/sass/00-settings/typography';
+// @import '../../ui-lib/sass/00-settings/modularscale';
+// @import '../../ui-lib/sass/00-settings/gravy';
+// @import '../../ui-lib/sass/00-settings/colors';
+// @import '../../ui-lib/sass/00-settings/spacing';
+// @import '../../ui-lib/sass/00-settings/strokes';
 
-// === Tools layer ===
-// Globally used mixins and functions.
-// Must not output any CSS.
-
-
-// === Generic layer ===
-// Reset and/or normalize styles, box-sizing definition, etc.
-// This is the first layer which generates actual CSS.
+// // === Tools layer ===
+// // Globally used mixins and functions.
+// // Must not output any CSS.
 
 
-// === Elements layer ===
-// Styling for bare HTML elements (like H1, A, etc.).
-// These come with default styling from the browser so we can redefine them here.
+// // === Generic layer ===
+// // Reset and/or normalize styles, box-sizing definition, etc.
+// // This is the first layer which generates actual CSS.
 
 
-// === Objects layer ===
-// Class-based selectors which define undecorated design patterns, for example
-// media object known from OOCSS.
-
-@import 'objects/main';
+// // === Elements layer ===
+// // Styling for bare HTML elements (like H1, A, etc.).
+// // These come with default styling from the browser so we can redefine them here.
 
 
-// === Components layer ===
-// Specific UI components. This is where majority of our work takes place and our UI
-// components are often composed of Objects and Components.
+// // === Objects layer ===
+// // Class-based selectors which define undecorated design patterns, for example
+// // media object known from OOCSS.
 
-@import 'components/colors';
-@import 'components/datalist';
-@import 'components/datatype';
-@import 'components/example';
-@import 'components/fonts';
-@import 'components/label';
-@import 'components/sub-heading';
-@import 'components/swatch';
-@import 'components/symbol';
+// @import 'objects/main';
+// @import 'objects/symbol';
 
 
-// === Utilities layer ===
-// Utilities and helper classes with ability to override anything which goes before in the
-// triangle, eg. hide helper class.
+// // === Components layer ===
+// // Specific UI components. This is where majority of our work takes place and our UI
+// // components are often composed of Objects and Components.
 
-@import 'utilities/utilities';
+// @import 'components/colors';
+// @import 'components/datalist';
+// @import 'components/datatype';
+// @import 'components/example';
+// @import 'components/fonts';
+// @import 'components/label';
+// @import 'components/sub-heading';
+// @import 'components/swatch';
+
+
+// // === Utilities layer ===
+// // Utilities and helper classes with ability to override anything which goes before in the
+// // triangle, eg. hide helper class.
+
+// @import 'utilities/utilities';
+
+/* Color palette previews */
+.sg-pattern-sub-heading {
+  margin: 0 0 1rem;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+/* Color palette previews */
+
+/** @define sg-colors */
+.sg-colors {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media all and (min-width: 30em) {
+  .sg-colors {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .sg-colors {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.sg-colors__color {
+  max-width: 100%;
+  margin: 0 0 0.5em;
+  padding: 0.3em;
+  border: 1px solid #ddd;
+  min-width: 5em;
+}
+
+/* Color palette previews */
+.sg-fonts {
+  padding: 0;
+}
+
+.sg-fonts__font {
+  margin: 0 0 2rem;
+  list-style-type: none;
+}
+
+.sg-fonts__weight {
+  display: block;
+  font-family: sans-serif;
+}
+
+.sg-fonts__css {
+  display: block;
+  margin: 0 0 0.5rem;
+}
+
+.sg-fonts__sample {
+  margin: 0 0 0.5rem 2rem;
+}
+
+/** @define sg-swatch */
+.sg-swatch {
+  display: block;
+  height: 6em;
+  margin-bottom: 0.3em;
+}
+
+/** @define sg-swatch-check */
+.sg-swatch-check {
+  display: grid;
+  height: 6em;
+  grid-template-columns: 50% 50%;
+}
+
+.sg-swatch-check__group {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: 50% 50%;
+  justify-self: center;
+  list-style-type: none;
+}
+
+.sg-swatch-check__item {
+  align-self: end;
+  text-align: center;
+}
+
+.sg-swatch-check__item:nth-child(1) {
+  margin-right: 5px;
+}
+
+.sg-swatch-check__item::before {
+  content: 'A';
+  display: block;
+  height: 1em;
+}
+
+.sg-swatch-check__item--light::before {
+  color: #f7f5f5;
+}
+
+.sg-swatch-check__item--dark::before {
+  color: #241c1c;
+}
+
+.sg-swatch-check__item--small::before {
+  font-size: 12px;
+}
+
+.sg-swatch-check__item--big::before {
+  font-size: 18px;
+}
+
+.sg-swatch-check__item-label {
+  padding: 2px 4px;
+  background-color: #241c1c;
+  border-radius: 5px;
+  color: #f7f5f5;
+  font-size: 0.7em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/** @define sg-label */
+.sg-label {
+  font-size: 90%;
+  line-height: 1;
+}
+
+/** @define sg-datalist */
+.sg-datalist {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+@media all and (min-width: 42em) {
+  .sg-datalist {
+    display: grid;
+    grid-column-gap: 0.5rem;
+    grid-template-columns: max-content auto;
+  }
+}
+
+.sg-datalist > * {
+  margin: 0;
+  padding: 0;
+}
+
+.sg-datalist--code > * {
+  align-self: center;
+}
+
+.sg-datalist--code > dt {
+  margin-bottom: 0;
+}
+
+.sg-datalist--code > dd {
+  margin-left: 0;
+}
+
+.sg-datalist--flat {
+  margin: 0;
+  grid-template-columns: 4em 1fr 4em 1fr 4em 1fr 4em 1fr;
+}
+
+@media all and (min-width: 42em) {
+  .sg-datalist--code > dd,
+  .sg-datalist--flat > dd {
+    margin-bottom: 0;
+  }
+}
+
+@media all and (min-width: 42em) {
+  .sg-datalist > dt {
+    padding-right: 0;
+    text-align: right;
+  }
+}
+
+.sg-datalist__label {
+  padding: 2px 4px;
+  background-color: #ddd;
+  border-radius: 5px;
+  color: #000;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+
+/** @define sg-datatype */
+.sg-datatype--hex {
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.sg-datatype--var {
+  font-family: monospace;
+}
+
+@media all and (min-width: 600px) {
+  .sg-datatype--var {
+    font-size: 0.8em;
+    line-height: 1.2;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .sg-datatype--var {
+    font-size: 0.6em;
+  }
+}
+
+/** @define sg-example */
+.sg-example--inline-block {
+  content: ' ';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: #8b8080;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.sg-example--padded-block {
+  max-width: 8rem;
+  background-color: #f90;
+}
+
+.sg-example--padded-block > div {
+  height: 6rem;
+  position: relative;
+  background-color: #f90;
+  box-sizing: border-box;
+}
+
+.sg-example--padded-block > div > div {
+  position: absolute;
+  background-color: #8b8080;
+  box-sizing: border-box;
+}
+
+.sg-symbol-table td,
+.sg-symbol-table th {
+  vertical-align: top;
+}
+
+.sg-symbol-table__preview {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.sg-main {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.sg-pattern-extra,
+.sg-pattern-breadcrumb,
+.sg-pattern-extra-toggle {
+  margin-top: 0;
+}
