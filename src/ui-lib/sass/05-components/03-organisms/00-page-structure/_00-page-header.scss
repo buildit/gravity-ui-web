@@ -10,9 +10,13 @@ header[role=banner] {
 
 
     .grav-c-logo {
-      fill: inherit;
+      fill: $grav-co-neutral-asphalt;
+
+      &:hover {
+        fill: $grav-co-neutral-warm-grey;
+      }
     }
-  }
+   }
 
   > div {
     @include grav-l-container;

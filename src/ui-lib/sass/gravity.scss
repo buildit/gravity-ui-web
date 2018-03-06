@@ -38,7 +38,7 @@
 @import '03-elements/tables';
 @import '03-elements/buttons';
 @import '03-elements/forms';
-@import '03-elements/containers';
+@import '03-elements/section';
 @import '03-elements/main';
 
 // === Objects layer ===
@@ -51,6 +51,7 @@
 // === Components layer ===
 // Specific UI components. This is where majority of our work takes place and our UI
 // components are often composed of Objects and Components.
+@import '05-components/01-atoms/01-block-text/pullout';
 @import '05-components/01-atoms/04-media/20-logo';
 @import '05-components/01-atoms/04-media/25-icon';
 @import '05-components/01-atoms/06-buttons/05-icon-button';
