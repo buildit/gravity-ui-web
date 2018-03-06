@@ -1,4 +1,5 @@
-main {
+// a simple mixin to create a container for the page
+@mixin grav-l-container {
   max-width: $grav-page-content-max-width;
   margin-right: $grav-page-content-inset;
   margin-left: $grav-page-content-inset;

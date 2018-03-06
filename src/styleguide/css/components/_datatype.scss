@@ -1,0 +1,22 @@
+/** @define sg-datatype */
+.sg-datatype--hex {
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.sg-datatype--var {
+  font-family: monospace;
+}
+
+@media all and (min-width: 600px) {
+  .sg-datatype--var {
+    font-size: 0.8em;
+    line-height: 1.2;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .sg-datatype--var {
+    font-size: 0.6em;
+  }
+}

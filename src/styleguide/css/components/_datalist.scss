@@ -1,0 +1,58 @@
+/** @define sg-datalist */
+.sg-datalist {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+@media all and (min-width: 42em) {
+  .sg-datalist {
+    display: grid;
+    grid-column-gap: 0.5rem;
+    grid-template-columns: max-content auto;
+  }
+}
+
+.sg-datalist > * {
+  margin: 0;
+  padding: 0;
+}
+
+.sg-datalist--code > * {
+  align-self: center;
+}
+
+.sg-datalist--code > dt {
+  margin-bottom: 0;
+}
+
+.sg-datalist--code > dd {
+  margin-left: 0;
+}
+
+.sg-datalist--flat {
+  margin: 0;
+  grid-template-columns: 4em 1fr 4em 1fr 4em 1fr 4em 1fr;
+}
+
+@media all and (min-width: 42em) {
+  .sg-datalist--code > dd,
+  .sg-datalist--flat > dd {
+    margin-bottom: 0;
+  }
+}
+
+@media all and (min-width: 42em) {
+  .sg-datalist > dt {
+    padding-right: 0;
+    text-align: right;
+  }
+}
+
+.sg-datalist__label {
+  padding: 2px 4px;
+  background-color: #ddd;
+  border-radius: 5px;
+  color: #000;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}

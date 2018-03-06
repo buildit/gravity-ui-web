@@ -9,6 +9,8 @@
 ******************************************************/
 
 const gulp = require('gulp');
+const sass = require('gulp-sass');
+const eyeglass = require('eyeglass');
 const rename = require("gulp-rename");
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
@@ -114,7 +116,8 @@ copyAssetsTask.description = 'Copies assets dir from source to dist folder.';
 
 
 function copyCssTask () {
-  return gulp.src(pkgPaths.normalizePath(paths().source.css) + '/**/*.css')
+  return gulp.src(pkgPaths.normalizePath(paths().source.css) + '/**/*.scss')
+    .pipe(sass(eyeglass(sass.sync().on('error', sass.logError))))
     .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.css)))
     .pipe(browserSync.stream());
 };
