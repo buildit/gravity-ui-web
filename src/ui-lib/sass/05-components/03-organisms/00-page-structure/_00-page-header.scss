@@ -5,6 +5,15 @@
 header[role=banner] {
   background-color: $grav-co-neutral-charcoal;
 
+  &.is-light { // stylelint-disable selector-no-qualifying-type
+    background-color: transparent;
+
+
+    .grav-c-logo {
+      fill: inherit;
+    }
+  }
+
   > div {
     max-width: $grav-page-content-max-width;
     position: relative;

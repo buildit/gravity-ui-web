@@ -1,8 +1,8 @@
-<header role="banner">
+<header role="banner"{{#header.light}} class="is-light"{{/header.light}}>
   <div>
     <div class="logo-main">
       <a href="{{{url}}}">
-        {{> atoms-logotype(label: "buildit @ wipro digital") }}
+        {{> atoms-logotype-icon(label: "buildit @ wipro digital") }}
       </a>
     </div>
     {{> molecules-nav-menu }}
