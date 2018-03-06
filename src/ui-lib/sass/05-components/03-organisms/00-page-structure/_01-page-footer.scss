@@ -1,10 +1,14 @@
 footer[role=contentinfo] {
   @include typi('small-text');
   margin-top: vr(3);
-  padding: $grav-sp-xl $grav-sp-m;
   background-color: $grav-co-neutral-charcoal;
   color: $grav-co-neutral-dirty-snow-white;
-  text-align: center;
+
+  > * {
+    @include grav-l-container;
+    padding: $grav-sp-xl $grav-sp-m;
+    text-align: center;
+  }
 
   a[href]:link {
     color: $grav-co-neutral-dirty-snow-white;

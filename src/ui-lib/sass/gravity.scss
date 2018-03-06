@@ -19,7 +19,7 @@
 // === Tools layer ===
 // Globally used mixins and functions.
 // Must not output any CSS.
-
+@import '01-tools/container';
 
 // === Generic layer ===
 // Reset and/or normalize styles, box-sizing definition, etc.
@@ -38,7 +38,6 @@
 @import '03-elements/tables';
 @import '03-elements/buttons';
 @import '03-elements/forms';
-@import '03-elements/main-content';
 @import '03-elements/containers';
 
 // === Objects layer ===
@@ -71,3 +70,4 @@
 // === Utilities layer ===
 // Utilities and helper classes with ability to override anything which goes before in the
 // triangle, eg. hide helper class.
+@import '06-utilities/container';
