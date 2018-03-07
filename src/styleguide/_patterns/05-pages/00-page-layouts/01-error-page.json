@@ -1,11 +1,20 @@
 {
-  "title": "About us",
+  "title": "404",
   "control": {
     "label": "Menu"
   },
+  "excerpt": {
+    "short": "Sorry! We looked everywhere but we can't find the page you're looking for."
+  },
+  "go-home": {
+    "url": "/",
+    "control": {
+      "label": "Go back to the homepage"
+    }
+  },
   "links": [
     {
-      "url": false,
+      "url": "link.pages-about",
       "control": {
         "label": "About us"
       }
@@ -23,7 +32,6 @@
       }
     },
     {
-      "url": "link.pages-locations",
       "control": {
         "label": "Locations"
       }
