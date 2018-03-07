@@ -80,5 +80,16 @@
     "href": "http://example.com",
     "title": "an interesting title",
     "content": "A Linked Item"
+  },
+  "hero": {
+    "background": "/images/img-random-1.png",
+    "content": [
+      {
+        "pullout": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      }
+    ]
   }
 }

@@ -28,6 +28,9 @@
       }
     }
   ],
+  "header": {
+    "url": "link.pages-homepage"
+  },
   "footer": {
     "copy": "made with ❤️"
   },
