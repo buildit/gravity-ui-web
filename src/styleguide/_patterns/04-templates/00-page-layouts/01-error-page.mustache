@@ -1,9 +1,12 @@
 {{> organisms-page-header }}
 <main class="grav-o-container">
-  <h1>{{title}}</h1>
-  <p>{{excerpt.short}}</p>
-  {{#go-home}}
-    {{> atoms-block-link }}
-  {{/go-home}}
+  <section class="grav-o-section--centered">
+    <pre class="grav-c-ascii-art" aria-hidden="true">(╯°Д°)╯︵ ┻━┻</pre>
+    <h1>{{title}}</h1>
+    <p>{{excerpt.short}}</p>
+    {{#go-home}}
+      {{> atoms-block-cta }}
+    {{/go-home}}
+  </section>
 </main>
 {{> organisms-page-footer }}

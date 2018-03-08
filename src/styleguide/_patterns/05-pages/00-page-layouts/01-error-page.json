@@ -9,7 +9,7 @@
   "go-home": {
     "url": "/",
     "control": {
-      "label": "Go back to the homepage"
+      "label": "Go to the homepage"
     }
   },
   "links": [
