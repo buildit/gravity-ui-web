@@ -23,6 +23,7 @@
       }
     },
     {
+      "url": "link.pages-locations",
       "control": {
         "label": "Locations"
       }
