@@ -13,12 +13,11 @@
   }
 
   > ul {
-    padding-left: $grav-sp-m;
+    padding-left: 0;
     list-style-type: none;
 
     @media all and (min-width: gravy-breakpoint(small)) {
       columns: 2;
-      padding-left: 0;
     }
 
     @media all and (min-width: gravy-breakpoint(regular)) {
