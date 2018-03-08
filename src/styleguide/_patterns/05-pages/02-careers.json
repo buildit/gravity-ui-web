@@ -1,5 +1,8 @@
 {
   "title": "Careers",
+  "content": {
+    "copy": "We are hiring for various roles in these locations. If you don't see the role you're looking for, please feel free to get in touch with us."
+  },
   "control": {
     "label": "Menu"
   },
@@ -61,6 +64,30 @@
           "job": {
             "title": "Front-End Engineer",
             "type": "contract"
+          }
+        },
+        {
+          "job": {
+            "title": "Full Stack Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Full Stack Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Full Stack Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Full Stack Engineer",
+            "type": "full time"
           }
         },
         {
