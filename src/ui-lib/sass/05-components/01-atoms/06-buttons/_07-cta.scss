@@ -10,11 +10,18 @@
   background-color: transparent;
   color: $grav-co-fg;
   text-decoration: none;
+  transition-duration: $grav-tr-speed;
+  transition-property: color;
   z-index: 0;
+
+  &:visited {
+    color: inherit;
+  }
 
   &:focus,
   &:hover {
     background-color: transparent;
+    color: $grav-co-fg;
 
     &::after {
       height: 100%;

@@ -1,4 +1,6 @@
 section {
+  margin-top: 0;
+
   + section {
     margin-top: $grav-sp-xl;
   }

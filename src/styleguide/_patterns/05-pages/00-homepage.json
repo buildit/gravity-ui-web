@@ -1,0 +1,53 @@
+{
+  "title": "Buildit @ Wipro Digital",
+  "control": {
+    "label": "Menu"
+  },
+  "hero": {
+    "background": "/images/buildit-roundtable-bw.jpg",
+    "content": [
+      {
+        "pullout": "Buildit is a transformation studio.<br>We are a company that helps create better companies."
+      },
+      {
+        "paragraph": "<a href='link.pages-about' class=\"grav-c-cta grav-c-cta--inverted\">About us</a>"
+      }
+    ]
+  },
+  "excerpt": {
+    "medium": "We solve hard engineering problems with our customers,<br>and help them deliver world-class products."
+  },
+  "links": [
+    {
+      "url": "link.pages-about",
+      "control": {
+        "label": "About us"
+      }
+    },
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
+      }
+    },
+    {
+      "url": "link.pages-careers",
+      "control": {
+        "label": "Careers"
+      }
+    },
+    {
+      "url": "link.pages-location",
+      "control": {
+        "label": "Locations"
+      }
+    }
+  ],
+  "header": {
+    "url": "link.pages-homepage",
+    "light": true
+  },
+  "footer": {
+    "copy": "made with ❤️"
+  }
+}

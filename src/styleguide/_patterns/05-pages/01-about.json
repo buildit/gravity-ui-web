@@ -23,11 +23,15 @@
       }
     },
     {
+      "url": "link.pages-locations",
       "control": {
         "label": "Locations"
       }
     }
   ],
+  "header": {
+    "url": "link.pages-homepage"
+  },
   "footer": {
     "copy": "made with ❤️"
   },

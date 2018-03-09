@@ -1,12 +1,11 @@
 {{> organisms-page-header }}
 <main class="grav-o-container">
   <section class="grav-o-section--centered">
-    <pre class="grav-c-ascii-art" aria-hidden="true">(╯°Д°)╯︵ ┻━┻</pre>
-    <h1>{{title}}</h1>
+    <h1>{{> atoms-ascii-art }} {{title}}</h1>
     <p>{{excerpt.short}}</p>
-    {{#go-home}}
-      {{> atoms-block-cta }}
-    {{/go-home}}
+    <div class="grav-o-container">
+      <a href="#the-hiring-process" class="grav-c-cta">Go to the homepage</a>
+    </div>
   </section>
 </main>
 {{> organisms-page-footer }}
