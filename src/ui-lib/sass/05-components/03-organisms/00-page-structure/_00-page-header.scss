@@ -24,9 +24,16 @@ header[role=banner] {
     padding-bottom: $grav-sp-m;
 
     @media (min-width: gravy-breakpoint(medium)) {
+      padding-right: $grav-sp-m;
+      padding-left: $grav-sp-m;
       display: grid;
       align-items: center;
       grid-template-columns: 300px 1fr;
+    }
+
+    @media (min-width: gravy-breakpoint(regular)) {
+      padding-right: 0;
+      padding-left: 0;
     }
 
     @include clear(false, true);
@@ -38,7 +45,6 @@ header[role=banner] {
     margin: 0 $grav-sp-m;
 
     @media (min-width: gravy-breakpoint(medium)) {
-      padding-right: $grav-sp-m;
       margin: 0;
     }
   }

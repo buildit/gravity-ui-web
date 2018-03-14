@@ -59,6 +59,8 @@
     list-style-type: none;
 
     @media (min-width: $trigger-breakpoint) {
+      display: flex;
+      margin-top: 0;
       text-align: right;
     }
   }
@@ -110,7 +112,7 @@
 
     .is-light & {
       background-color: $grav-co-bg;
-      color: $grav-co-fg;
+      color: $grav-co-neutral-asphalt;
     }
   }
 }
