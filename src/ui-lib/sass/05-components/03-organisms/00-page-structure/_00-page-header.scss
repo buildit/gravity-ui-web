@@ -19,24 +19,27 @@ header[role=banner] {
    }
 
   > div {
-    @include grav-l-container;
-    position: relative;
+    @include grav-l-container(true);
+    padding-top: $grav-sp-m;
+    padding-bottom: $grav-sp-m;
 
     @media (min-width: gravy-breakpoint(medium)) {
       display: grid;
       align-items: center;
       grid-template-columns: 300px 1fr;
     }
+
+    @include clear(false, true);
   }
 
   .logo-main {
-    display: block;
-    position: relative;
-    padding: $grav-sp-m 6rem $grav-sp-m 0;
-    z-index: 1;
+    width: 70%; // 2/3 of the space
+    float: left;
+    margin: 0 $grav-sp-m;
 
     @media (min-width: gravy-breakpoint(medium)) {
       padding-right: $grav-sp-m;
+      margin: 0;
     }
   }
 
@@ -50,12 +53,13 @@ header[role=banner] {
     }
   }
 
+  .grav-c-nav-menu__toggle {
+    float: right;
+    margin-right: $grav-sp-m;
+  }
+
   .grav-c-nav-menu {
     max-width: $grav-page-content-max-width;
-    position: absolute;
-    top: $grav-sp-m;
-    right: 0;
-    margin: 0;
 
     @media (min-width: gravy-breakpoint(medium)) {
       position: initial;
@@ -67,5 +71,7 @@ header[role=banner] {
     @media (min-width: gravy-breakpoint(large)) {
       max-width: $grav-page-content-max-width-large;
     }
+
+    @include clear;
   }
 }

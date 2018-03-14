@@ -1,0 +1,17 @@
+@mixin clear($before: true, $after: false) {
+  @if ($before) {
+    &::before {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  @if ($after) {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
