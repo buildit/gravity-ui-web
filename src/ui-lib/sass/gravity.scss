@@ -45,6 +45,7 @@
 // Class-based selectors which define undecorated design patterns, for example
 // media object known from OOCSS.
 @import '04-objects/locations-layout';
+@import '04-objects/section';
 @import '04-objects/container';
 
 
@@ -52,6 +53,7 @@
 // Specific UI components. This is where majority of our work takes place and our UI
 // components are often composed of Objects and Components.
 @import '05-components/01-atoms/01-block-text/pullout';
+@import '05-components/01-atoms/01-block-text/05-ascii-art';
 @import '05-components/01-atoms/04-media/20-logo';
 @import '05-components/01-atoms/04-media/25-icon';
 @import '05-components/01-atoms/06-buttons/05-icon-button';
