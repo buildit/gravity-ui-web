@@ -1,17 +1,11 @@
-@mixin clear($before: true, $after: false) {
-  @if ($before) {
-    &::before {
-      content: "";
-      display: table;
-      clear: both;
-    }
+@mixin clear($pseudo: 'before') {
+  @if (not $pseudo == 'before' or not $pseudo == 'after') {
+    @error 'pseudo class #{$pseudo} not valid';
   }
 
-  @if ($after) {
-    &::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+  &::#{$pseudo} {
+    content: '';
+    display: table;
+    clear: both;
   }
 }

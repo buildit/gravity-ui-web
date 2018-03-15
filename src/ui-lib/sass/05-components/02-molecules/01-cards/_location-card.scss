@@ -6,8 +6,8 @@
 
 .grav-c-location-card__content {
   position: relative;
-  padding: $grav-sp-m;
   margin: 0;
+  padding: $grav-sp-m;
 
   > p {
     position: relative;
@@ -15,19 +15,19 @@
 }
 
 .grav-c-location-card__img {
-    position: absolute;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: gravy-breakpoint(small)) {
+    top: -8%;
+  }
+
+  @media (min-width: gravy-breakpoint(regular)) {
     top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    @media (min-width: gravy-breakpoint(small)) {
-      top: -8%;
-    }
-
-    @media (min-width: gravy-breakpoint(regular)) {
-      top: 0;
-    }
+  }
 
   > img {
     width: 100%;

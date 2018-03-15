@@ -42,7 +42,7 @@
   }
 }
 
-.grav-c-nav-menu__toggle ~ .grav-c-nav-menu {
+.grav-c-nav-menu {
   $trigger-breakpoint: gravy-breakpoint(medium);
   $items-per-row: 4;
   width: 100%;
@@ -80,7 +80,7 @@
     border: 0;
     border-right-width: $grav-st-thickness-large;
     background-color: $grav-co-fg;
-    border-color: $grav-co-bg;
+    border-color: $grav-co-accent-secondary-dark;
     border-style: solid;
     color: $grav-co-bg;
 
@@ -103,16 +103,23 @@
 
     &:hover {
       background-color: $grav-co-fg;
+      border-color: $grav-co-accent-secondary;
+      color: $grav-co-neutral-ashtray;
     }
 
     &:not([href]) {
       background-color: $grav-co-fg;
+      border-color: $grav-co-bg;
       color: $grav-co-bg;
     }
 
     .is-light & {
       background-color: $grav-co-bg;
       color: $grav-co-neutral-asphalt;
+    }
+
+    .is-light &:hover {
+      color: $grav-co-neutral-warm-grey;
     }
   }
 }

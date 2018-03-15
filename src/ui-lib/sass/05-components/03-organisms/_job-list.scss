@@ -3,8 +3,8 @@
 
   @media all and (min-width: gravy-breakpoint(regular)) {
     display: grid;
-    grid-template-columns: 30% 1fr;
     grid-gap: $grav-sp-m;
+    grid-template-columns: 30% 1fr;
   }
 
   > header > p {
