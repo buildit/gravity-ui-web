@@ -1,10 +1,12 @@
 .grav-c-job-list {
-  margin-top: $grav-sp-xl;
+  * + & {
+    margin-top: $grav-sp-xl;
+  }
 
   @media all and (min-width: gravy-breakpoint(regular)) {
     display: grid;
-    grid-template-columns: 30% 1fr;
     grid-gap: $grav-sp-m;
+    grid-template-columns: 30% 1fr;
   }
 
   > header > p {
@@ -22,10 +24,10 @@
 
     @media all and (min-width: gravy-breakpoint(regular)) {
       margin-top: 0;
-    }
+    } 
   }
 
-  li:not(:first-child) {
+  li + li {
     margin-top: $grav-sp-s;
   }
 }
