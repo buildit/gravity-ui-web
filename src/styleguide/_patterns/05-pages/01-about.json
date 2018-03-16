@@ -193,7 +193,7 @@
     {
       "section": {
         "title": "Our Vision &amp; Purpose",
-        "paragraphs": [
+        "content": [
           {
             "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
           },
@@ -209,7 +209,7 @@
     {
       "section": {
         "title": "What we do",
-        "paragraphs": [
+        "content": [
           {
             "paragraph": "We solve hard engineering problems with our customers, and help them deliver world-class products. We help them improve the way they solve business problems, ultimately changing the way they change."
           },
@@ -225,7 +225,7 @@
     {
       "section": {
         "title": "How we do it",
-        "paragraphs": [
+        "content": [
           {
             "paragraph": "We are problem solvers who hone our craft through experimentation, continuous improvement and systems thinking."
           },
@@ -238,7 +238,7 @@
     {
       "section": {
         "title": "We are",
-        "paragraphs": [
+        "content": [
           {
             "imgCards": true,
             "img-cards": [
@@ -290,7 +290,7 @@
     {
       "section": {
         "title": "Our people",
-        "paragraphs": [
+        "content": [
           {
             "paragraph": "Buildit has an open structure, which means that employees work within wide boundaries."
           },
