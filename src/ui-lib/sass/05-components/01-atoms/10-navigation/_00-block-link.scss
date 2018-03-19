@@ -1,33 +1,30 @@
 .grav-c-block-link {
   display: inline-block;
   padding: $grav-sp-inset-squished-xs;
-  border-width: $grav-st-thickness;
+  padding-right: $grav-sp-m;
+  border: 0;
+  border-right-width: $grav-st-thickness-large;
+  background-color: $grav-co-fg;
   border-style: $grav-st-style;
   text-decoration: none;
+  color: $grav-co-bg;
 
   &[href] {
     &:link,
     &:visited {
-      background-color: $grav-co-interactive-secondary;
       border-color: $grav-co-interactive-secondary;
       color: $grav-co-interactive-secondary-contrast;
     }
 
+    &:active,
     &:hover {
-      background-color: $grav-co-interactive-secondary-hover;
-      border-color: $grav-co-interactive-secondary-hover;
-    }
-
-    &:active {
-      background-color: $grav-co-interactive-secondary-contrast;
-      border-color: unset;
-      color: $grav-co-interactive-secondary;
-    }
+      
+      border-color: $grav-co-accent-secondary;
+      color: $grav-co-neutral-ashtray;
+    }   
   }
-
   &:not([href]) {
-    background-color: $grav-co-interactive-primary;
-    border-color: $grav-co-interactive-primary;
-    color: $grav-co-interactive-primary-contrast;
+      border-color: $grav-co-bg;
+      color: $grav-co-bg;
   }
 }
