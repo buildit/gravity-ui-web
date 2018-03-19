@@ -36,5 +36,17 @@
         "label": "Mors tua vita mea"
       }
     }
+  ],
+  "externalLinks": [
+    {
+      "control": {
+        "label": "Lorem ipsum"
+      }
+    },
+    {
+      "control": {
+        "label": "Quis autem"
+      }
+    }
   ]
 }
