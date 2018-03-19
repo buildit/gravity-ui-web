@@ -1,6 +1,6 @@
 .grav-c-location-card {
   display: grid;
-  grid-column-gap: 1em;
+  grid-gap: 1em;
   grid-template-areas:
     'title'
     'info'
@@ -23,12 +23,17 @@
     grid-area: title;
   }
 
-  address {
+  p {
+    margin: 0;
     grid-area: info;
+  }
+
+  a {
+    margin: 0;
+    grid-area: map;
   }
 
   img {
     border-radius: 5px;
-    grid-area: map;
   }
 }
