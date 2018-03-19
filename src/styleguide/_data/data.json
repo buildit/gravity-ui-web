@@ -94,5 +94,31 @@
         "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       }
     ]
+  },
+  "section": {
+    "title": "This is the title for a section",
+    "class": "grav-o-container",
+    "content": [
+      {
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "orderedList": {
+          "items": ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit.", "Aliquam tincidunt mauris eu risus.", "Vestibulum auctor dapibus neque."]
+        }
+      },
+      {
+        "blockquote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+      },
+      {
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "inlineRow": true
+      },
+      {
+        "imgCards": true
+      }
+    ]
   }
 }

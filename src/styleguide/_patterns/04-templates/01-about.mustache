@@ -3,15 +3,7 @@
   <h1>{{title}}</h1>
 
   {{#sections}}
-    <section>
-      <h2>{{{section.title}}}</h2>
-      {{#section.paragraphs}}
-        {{#paragraph}}<p>{{{paragraph}}}</p>{{/paragraph}}
-        {{#blockquote}}<blockquote>{{{blockquote}}}</blockquote>{{/blockquote}}
-        {{#inlineRow}}{{>organisms-list-inline-row}}{{/inlineRow}}
-        {{#imgCards}}{{>organisms-list-img-cards}}{{/imgCards}}
-      {{/section.paragraphs}}
-    </section>
+    {{>organisms-section}}
   {{/sections}}
 </main>
 {{> organisms-page-footer }}

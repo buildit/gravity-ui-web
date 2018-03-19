@@ -1,0 +1,31 @@
+.grav-c-toggle-menu {
+  margin-top: 0;
+  border: $grav-st-thickness solid $grav-co-neutral-asphalt;
+  background-color: inherit;
+  color: $grav-co-bg;
+
+  &:hover {
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:focus {
+    color: $grav-co-bg;
+  }
+
+  &[aria-pressed='true'] {
+    background-color: inherit;
+    color: $grav-co-bg;
+  }
+
+  &--inverted,
+  .is-light & {
+    background-color: inherit;
+    color: inherit;
+
+    &[aria-pressed='true'] {
+      border-color: $grav-co-accent-secondary;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+ul,
+ol {
+  padding-left: 0;
+  list-style-position: inside;
+
+  @media all and (min-width: gravy-breakpoint(regular)) {
+    list-style-position: outside;
+  }
+
+  li + li {
+    margin-top: $grav-sp-m;
+  }
+}
