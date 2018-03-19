@@ -1,34 +1,47 @@
 .grav-c-location-card {
-  display: grid;
-  grid-column-gap: 1em;
-  grid-template-areas:
-    'title'
-    'info'
-    'map';
-  grid-template-columns: 1fr;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
 
-  @media (min-width: gravy-breakpoint(small)) {
-    grid-template-areas:
-      'title title'
-      'map info';
-    grid-template-columns: 1fr 1fr;
-  }
+.grav-c-location-card__content {
+  position: relative;
+  padding: $grav-sp-m;
+  margin: 0;
 
-  @media (min-width: gravy-breakpoint(medium)) {
-    margin-top: 2em;
-    flex-basis: calc(50% - 2em);
+  > p {
+    position: relative;
   }
+}
 
-  h2 {
-    grid-area: title;
-  }
+.grav-c-location-card__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-  address {
-    grid-area: info;
-  }
+    @media (min-width: gravy-breakpoint(small)) {
+      top: -8%;
+    }
 
-  img {
-    border-radius: 5px;
-    grid-area: map;
+    @media (min-width: gravy-breakpoint(regular)) {
+      top: 0;
+    }
+
+  > img {
+    width: 100%;
+    filter: opacity(0.05) contrast(300%) sepia(80%);
+    transition: filter 0.25s;
+
+    .grav-c-location-card:hover & {
+      filter: opacity(0.065) contrast(300%) sepia(0%);
+    }
   }
+}
+
+.grav-c-location-card__cta {
+  position: absolute;
+  right: $grav-sp-m;
+  bottom: $grav-sp-m;
 }

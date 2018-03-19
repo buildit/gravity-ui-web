@@ -1,11 +1,17 @@
 <div class="grav-c-location-card">
-  <h2>{{location.name}}</h2>
-  <address>
-    {{#location.addressline1}}{{location.addressline1}}<br>{{/location.addressline1}}
-    {{#location.addressline2}}{{location.addressline2}}<br>{{/location.addressline2}}
-    {{#location.city}}{{location.city}}<br>{{/location.city}}
-    {{#location.postcode}}{{location.postcode}}<br>{{/location.postcode}}
-    {{#location.country}}{{location.country}}{{/location.country}}
-  </address>
-  <img src="{{location.img}}" alt="{{location.img-alt}}">
+  <div class="grav-c-location-card__img">
+    <img src="{{location.img}}" alt="{{location.img-alt}}">
+  </div>
+  <div class="grav-c-location-card__content">
+    <h2>{{location.name}}</h2>
+    <p>{{#location.addressline1}}{{location.addressline1}}<br>{{/location.addressline1}}
+      {{#location.addressline2}}{{location.addressline2}}<br>{{/location.addressline2}}
+      {{#location.city}}{{location.city}}<br>{{/location.city}}
+      {{#location.postcode}}{{location.postcode}}<br>{{/location.postcode}}
+      {{#location.country}}{{location.country}}{{/location.country}}
+    </p>
+  </div>
+  <div class="grav-c-location-card__cta">
+    {{> atoms-link:grav-c-block-link }}
+  </div>
 </div>
