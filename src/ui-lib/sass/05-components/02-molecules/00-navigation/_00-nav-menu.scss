@@ -73,6 +73,16 @@
     }
   }
 
+  li:not(.grav-c-nav-menu__external-link) + li.grav-c-nav-menu__external-link {
+    margin-top: $grav-sp-s;
+
+    @media (min-width: $trigger-breakpoint) {
+      margin-left: $grav-sp-s;
+      margin-top: 0;
+    }
+  }
+
+
   // styling of the menu links
   .grav-c-block-link {
     display: block;
