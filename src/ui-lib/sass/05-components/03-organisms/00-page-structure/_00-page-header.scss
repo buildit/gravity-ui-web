@@ -16,6 +16,15 @@ header[role=banner] {
     .grav-c-logo:hover {
       fill: $grav-co-neutral-warm-grey;
     }
+
+    .grav-c-block-link {
+      background-color: $grav-co-bg;
+      color: $grav-co-neutral-asphalt;
+    }
+
+    .grav-c-block-link:hover {
+      color: $grav-co-neutral-warm-grey;
+    }
   }
 
   > div {
@@ -59,9 +68,27 @@ header[role=banner] {
     }
   }
 
-  .grav-c-nav-menu__toggle {
+  .grav-c-toggle-menu {
     margin-right: $grav-sp-m;
     float: right;
+
+    @media (min-width: gravy-breakpoint(medium)) {
+      display: none;
+    }
+
+    &[aria-pressed] ~ .grav-c-nav-menu,
+    &[aria-pressed='false'] ~ .grav-c-nav-menu {
+      display: none;
+
+      @media (min-width: gravy-breakpoint(medium)) { // stylelint-disable max-nesting-depth
+        display: flex;
+        margin-top: 0;
+      }
+    }
+
+    &[aria-pressed='true'] ~ .grav-c-nav-menu {
+      display: block;
+    }
   }
 
   .grav-c-nav-menu {

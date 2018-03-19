@@ -1,47 +1,3 @@
-.grav-c-nav-menu__toggle {
-  $trigger-breakpoint: gravy-breakpoint(medium);
-  margin-top: 0;
-  border: $grav-st-thickness solid $grav-co-neutral-asphalt;
-  background-color: $grav-co-fg;
-
-  @media (min-width: $trigger-breakpoint) {
-    display: none;
-  }
-
-  &[aria-pressed='true'] {
-    background-color: inherit;
-    color: $grav-co-neutral-dirty-snow-white;
-  }
-
-  &:active {
-    color: $grav-co-neutral-dirty-snow-white;
-  }
-
-  &:hover {
-    background-color: inherit;
-    cursor: pointer;
-  }
-
-  .is-light & {
-    background-color: $grav-co-bg;
-    color: $grav-co-fg;
-  }
-
-  &[aria-pressed] ~ .grav-c-nav-menu,
-  &[aria-pressed='false'] ~ .grav-c-nav-menu {
-    display: none;
-
-    @media (min-width: $trigger-breakpoint) {
-      display: flex;
-      margin-top: 0;
-    }
-  }
-
-  &[aria-pressed='true'] ~ .grav-c-nav-menu {
-    display: block;
-  }
-}
-
 .grav-c-nav-menu {
   $trigger-breakpoint: gravy-breakpoint(medium);
   $items-per-row: 4;
@@ -111,15 +67,6 @@
       background-color: $grav-co-fg;
       border-color: $grav-co-bg;
       color: $grav-co-bg;
-    }
-
-    .is-light & {
-      background-color: $grav-co-bg;
-      color: $grav-co-neutral-asphalt;
-    }
-
-    .is-light &:hover {
-      color: $grav-co-neutral-warm-grey;
     }
   }
 }
