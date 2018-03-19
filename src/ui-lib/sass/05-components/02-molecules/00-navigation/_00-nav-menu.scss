@@ -1,6 +1,6 @@
 .grav-c-nav-menu {
-  $items-per-row: 4;
   $trigger-breakpoint: gravy-breakpoint(medium);
+  $items-per-row: 4;
   width: 100%;
   text-align: right;
 
@@ -8,65 +8,21 @@
     width: auto;
   }
 
-  // toggle-menu button
-  > button {
-    position: relative;
-    margin-right: $grav-sp-m;
-    border: $grav-st-thickness solid $grav-co-neutral-asphalt;
-    background-color: $grav-co-fg;
-    z-index: 1;
-
-    @media (min-width: $trigger-breakpoint) {
-      display: none;
-    }
-
-    &[aria-pressed='true'] {
-      background-color: inherit;
-      color: $grav-co-neutral-dirty-snow-white;
-    }
-
-    &:active {
-      color: $grav-co-neutral-dirty-snow-white;
-    }
-
-    &:hover {
-      background-color: inherit;
-      cursor: pointer;
-    }
-
-    .is-light & {
-      background-color: $grav-co-bg;
-      color: $grav-co-fg;
-    }
-  }
-
-  > button[aria-pressed] ~ ul,
-  > button[aria-pressed='false'] ~ ul {
-    display: none;
-
-    @media (min-width: $trigger-breakpoint) {
-      display: flex;
-      margin-top: 0;
-    }
-  }
-
-  > button[aria-pressed='true'] ~ ul {
-    display: block;
-  }
-
   > ul {
     width: 100%;
     margin-top: $grav-sp-s;
     padding: 0;
+    list-style-type: none;
 
     @media (min-width: $trigger-breakpoint) {
+      display: flex;
+      margin-top: 0;
       text-align: right;
     }
   }
 
   li {
     margin: 0;
-    list-style-type: none;
 
     @media (min-width: $trigger-breakpoint) {
       text-align: center;
@@ -80,7 +36,7 @@
     border: 0;
     border-right-width: $grav-st-thickness-large;
     background-color: $grav-co-fg;
-    border-color: $grav-co-bg;
+    border-color: $grav-co-accent-secondary-dark;
     border-style: solid;
     color: $grav-co-bg;
 
@@ -103,16 +59,14 @@
 
     &:hover {
       background-color: $grav-co-fg;
+      border-color: $grav-co-accent-secondary;
+      color: $grav-co-neutral-ashtray;
     }
 
     &:not([href]) {
       background-color: $grav-co-fg;
+      border-color: $grav-co-bg;
       color: $grav-co-bg;
-    }
-
-    .is-light & {
-      background-color: $grav-co-bg;
-      color: $grav-co-fg;
     }
   }
 }
