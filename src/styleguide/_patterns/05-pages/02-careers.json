@@ -41,19 +41,84 @@
   "locations": [
     {
       "location": {
-        "name": "Bengaluru",
-        "addressline1": "72 Electronic City",
-        "addressline2": "Hosur Road",
-        "city": "",
-        "postcode": "Bangalore 560100",
-        "country": "India",
-        "img": "../../images/bengaluru.jpg",
-        "img-alt": "Bengaluru skyline"
-      },
-      "control": {
-        "label": "Show on a map"
+        "city": "Dublin",
+        "country": "Ireland"
       },
       "jobs": [
+        {
+          "job": {
+            "title": "Mobile Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Delivery Lead",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front End Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Software Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "DevOps Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "London",
+        "country": "UK"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Head of Engineering",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Software Engineering Consultant",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Senior Software Engineering Consultant",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Lead Platform Engineer",
+            "type": "full time"
+          }
+        },
         {
           "job": {
             "title": "Junior Platform Engineer",
@@ -62,34 +127,30 @@
         },
         {
           "job": {
-            "title": "Front-End Engineer",
-            "type": "contract"
-          }
-        },
-        {
-          "job": {
-            "title": "Full Stack Engineer",
+            "title": "Front End Engineer",
             "type": "full time"
           }
         },
         {
           "job": {
-            "title": "Full Stack Engineer",
+            "title": "Experienced Android Engineer",
             "type": "full time"
           }
         },
         {
           "job": {
-            "title": "Full Stack Engineer",
+            "title": "Creative Technologist",
             "type": "full time"
           }
-        },
-        {
-          "job": {
-            "title": "Full Stack Engineer",
-            "type": "full time"
-          }
-        },
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Pune",
+        "country": "India"
+      },
+      "jobs": [
         {
           "job": {
             "title": "Full Stack Engineer",
@@ -100,61 +161,8 @@
     },
     {
       "location": {
-        "name": "Denver",
-        "addressline1": "1550 Wewatta Street",
-        "addressline2": "",
-        "city": "Denver",
-        "postcode": "CO 80202",
-        "country": "USA",
-        "img": "../../images/denver.jpg",
-        "img-alt": "Denver skyline"
-      },
-      "control": {
-        "label": "Show on a map"
-      },
-      "jobs": [
-        {
-          "job": {
-            "title": "Junior Platform Engineer",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Front-End Engineer",
-            "type": "full time"
-          }
-        }
-      ]
-    },
-    {
-      "location": {
-        "name": "Dublin",
-        "addressline1": "Alexandra House",
-        "addressline2": "3 Ballsbridge Park",
-        "city": "",
-        "postcode": "Dublin 4",
-        "country": "Ireland",
-        "img": "../../images/dublin.jpg",
-        "img-alt": "Dublin skyline"
-      },
-      "control": {
-        "label": "Show on a map"
-      }
-    },
-    {
-      "location": {
-        "name": "Edinburgh",
-        "addressline1": "2 Castle Terrace",
-        "addressline2": "",
-        "city": "Edinburgh",
-        "postcode": "EH1 2EL",
-        "country": "UK",
-        "img": "../../images/edinburgh.jpg",
-        "img-alt": "Edinburgh skyline"
-      },
-      "control": {
-        "label": "Show on a map"
+        "city": "Dallas",
+        "country": "USA"
       },
       "jobs": [
         {
@@ -173,22 +181,19 @@
     },
     {
       "location": {
-        "name": "Gdańsk",
-        "addressline1": "ul. Grunwaldzka 409",
-        "addressline2": "Alchemia Ferrum 6th floor",
-        "city": "",
-        "postcode": "80-309 Gdańsk",
-        "country": "Poland",
-        "img": "../../images/gdansk.jpg",
-        "img-alt": "Gdańsk skyline"
-      },
-      "control": {
-        "label": "Show on a map"
+        "city": "Denver",
+        "country": "USA"
       },
       "jobs": [
         {
           "job": {
-            "title": "Technical Rourcing Lead",
+            "title": "Senior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Senior Front End Engineer",
             "type": "full time"
           }
         },
@@ -197,16 +202,18 @@
             "title": "Creative Technologist",
             "type": "full time"
           }
-        },
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Houston",
+        "country": "USA"
+      },
+      "jobs": [
         {
           "job": {
-            "title": "Junior Platform Engineer",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Front-End Engineer",
+            "title": "Senior Front End Engineer",
             "type": "full time"
           }
         }
@@ -214,22 +221,19 @@
     },
     {
       "location": {
-        "name": "London",
-        "addressline1": "2 Finsbury Avenue",
-        "addressline2": "",
-        "city": "London",
-        "postcode": "EC2M 2PA",
-        "country": "UK",
-        "img": "../../images/london.jpg",
-        "img-alt": "London skline"
-      },
-      "control": {
-        "label": "Show on a map"
+        "city": "New York",
+        "country": "USA"
       },
       "jobs": [
         {
           "job": {
-            "title": "Technical Rourcing Lead",
+            "title": "Senior Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Senior Front End Engineer",
             "type": "full time"
           }
         },
@@ -238,35 +242,34 @@
             "title": "Creative Technologist",
             "type": "full time"
           }
-        },
-        {
-          "job": {
-            "title": "Junior Platform Engineer",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Front-End Engineer",
-            "type": "full time"
-          }
         }
       ]
     },
     {
       "location": {
-        "name": "New York",
-        "addressline1": "77 Sands Street",
-        "addressline2": "",
-        "city": "Brooklyn",
-        "postcode": "NY 11201",
-        "country": "USA",
-        "img": "../../images/new-york.jpg",
-        "img-alt": "New York skyline"
+        "city": "Gdańsk",
+        "country": "Poland"
       },
-      "control": {
-        "label": "Show on a map"
-      }
+      "jobs": [
+        {
+          "job": {
+            "title": "Platform Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Front End Engineer",
+            "type": "full time"
+          }
+        },
+        {
+          "job": {
+            "title": "Full Stack Engineer",
+            "type": "full time"
+          }
+        }
+      ]
     }
   ],
   "steps": [
