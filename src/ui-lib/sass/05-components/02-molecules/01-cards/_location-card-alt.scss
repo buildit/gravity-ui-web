@@ -1,6 +1,7 @@
 .grav-c-location-card {
   display: grid;
-  grid-gap: 1em;
+  margin-top: $grav-sp-l;
+  grid-gap: $grav-sp-m;
   grid-template-areas:
     'title'
     'info'
@@ -15,7 +16,6 @@
   }
 
   @media (min-width: gravy-breakpoint(medium)) {
-    margin-top: 2em;
     flex-basis: calc(50% - 2em);
   }
 
@@ -34,6 +34,6 @@
   }
 
   img {
-    border-radius: 5px;
+    border-radius: $grav-st-radius;
   }
 }
