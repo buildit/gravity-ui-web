@@ -10,6 +10,7 @@
     &:visited {
       background-color: $grav-co-interactive-secondary;
       border-color: $grav-co-interactive-secondary;
+      border-radius: $grav-st-radius;
       color: $grav-co-interactive-secondary-contrast;
     }
 
@@ -28,6 +29,7 @@
   &:not([href]) {
     background-color: $grav-co-interactive-primary;
     border-color: $grav-co-interactive-primary;
+    border-radius: $grav-st-radius;
     color: $grav-co-interactive-primary-contrast;
   }
 }
