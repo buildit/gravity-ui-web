@@ -1,0 +1,9 @@
+.grav-c-list-horizontal {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+
+  > li {
+    margin: 0 $grav-sp-s;
+  }
+}
