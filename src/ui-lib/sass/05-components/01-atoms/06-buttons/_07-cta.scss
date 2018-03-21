@@ -26,6 +26,7 @@
     &::after {
       height: 100%;
       background-color: $grav-co-accent-primary-light;
+      border-radius: $grav-st-radius;
     }
   }
 
@@ -51,6 +52,7 @@
   &.is-disabled {
     border: 0;
     background-color: transparent;
+    border-radius: 0;
     box-shadow: inset 0 -#{$grav-st-thickness-large} $grav-co-disabled;
     color: $grav-co-disabled;
     cursor: default;
