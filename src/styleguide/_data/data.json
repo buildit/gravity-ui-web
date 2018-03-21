@@ -29,7 +29,19 @@
     "output": "Press any key to continue..."
   },
   "footer": {
-    "copy": "something something something"
+    "copy": "something something something",
+    "social": [
+      {
+        "label": "Something",
+        "symbolId": "buildit-logo",
+        "url": "#"
+      },
+      {
+        "label": "Something",
+        "symbolId": "buildit-logo",
+        "url": "#"
+      }
+    ]
   },
   "location": {
     "name": "London",
