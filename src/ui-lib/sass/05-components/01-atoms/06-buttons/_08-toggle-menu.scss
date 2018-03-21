@@ -1,12 +1,41 @@
 .grav-c-toggle-menu {
+  display: flex;
+  height: 33px;
   margin-top: 0;
   border: $grav-st-thickness solid $grav-co-neutral-asphalt;
   background-color: inherit;
   color: $grav-co-bg;
+  text-align: center;
 
   &:hover {
     background-color: inherit;
     cursor: pointer;
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: auto;
+    
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      width: $grav-sp-m;
+      height: 2px;
+      background-color: $grav-co-bg;
+      transition: all 0.2s;
+    }
+    
+    &::before,
+    &::after, {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+    
+    &::before { top: -0.4rem;}
+    &::after { top: 0.4rem;}
+
   }
 
   &:active,
@@ -17,6 +46,20 @@
   &[aria-pressed='true'] {
     background-color: inherit;
     color: $grav-co-bg;
+  }
+
+  &[aria-pressed='true'] &__icon{
+    background-color: inherit;
+  }
+
+  &[aria-pressed='true'] &__icon::before{
+    transform: rotate(135deg);
+    top: 0;
+  }
+
+  &[aria-pressed='true'] &__icon::after{
+    transform: rotate(-135deg);
+    top: 0;
   }
 
   &--inverted,
