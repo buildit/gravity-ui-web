@@ -1,5 +1,8 @@
 main {
   margin-top: 0;
 
+  > h1:first-child {
+    margin-top: $grav-sp-l;
+  }
 
 }
