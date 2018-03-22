@@ -4,11 +4,36 @@
   margin-top: 0;
   border: $grav-st-thickness solid $grav-co-neutral-asphalt;
   background-color: inherit;
-  color: $grav-co-bg;
+  border-color: $grav-co-bg;
   text-align: center;
 
-  &:hover {
+  &--inverted,
+  .is-light & {
+    border-color: $grav-co-neutral-asphalt;
+
+    &__icon {
+      &,
+      &::before,
+      &::after {
+      background-color: $grav-co-neutral-asphalt;
+      }
+    }
+    
+    &[aria-pressed='true']  {
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: inherit;
+          border-color: $grav-co-neutral-asphalt;
+        }
+    }
+  }
+  
+  &:hover,
+  &:active,
+  &:focus {
     background-color: inherit;
+    border-color: $grav-co-accent-secondary;
     cursor: pointer;
   }
 
@@ -23,7 +48,7 @@
       width: $grav-sp-m;
       height: 2px;
       background-color: $grav-co-bg;
-      transition: all 0.2s;
+      transition: all 0.4s;
     }
     
     &::before,
@@ -38,37 +63,29 @@
 
   }
 
-  &:active,
-  &:focus {
-    color: $grav-co-bg;
-  }
+  &[aria-pressed='true']  {
+      border-color: $grav-co-accent-secondary;
+      background-color: inherit;
 
-  &[aria-pressed='true'] {
-    background-color: inherit;
-    color: $grav-co-bg;
+      &:hover,
+      &:active,
+      &:focus {
+      background-color: inherit;
+      border-color: $grav-co-bg;
+      }
   }
 
   &[aria-pressed='true'] &__icon{
     background-color: inherit;
-  }
 
-  &[aria-pressed='true'] &__icon::before{
-    transform: rotate(135deg);
-    top: 0;
-  }
+    &::before{
+      transform: rotate(135deg);
+      top: 0;
+    }
 
-  &[aria-pressed='true'] &__icon::after{
-    transform: rotate(-135deg);
-    top: 0;
-  }
-
-  &--inverted,
-  .is-light & {
-    background-color: inherit;
-    color: inherit;
-
-    &[aria-pressed='true'] {
-      border-color: $grav-co-accent-secondary;
+    &::after{
+      transform: rotate(-135deg);
+      top: 0;
     }
   }
 }
