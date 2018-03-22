@@ -23,6 +23,7 @@ button:not([type]) {
 @mixin grav-button-styles($interactive, $contrast, $hover, $isToggle: false) {
   border: $grav-st-thickness $grav-st-style $interactive;
   background-color: $interactive;
+  border-radius: $grav-st-radius;
   color: $contrast;
 
   &:hover {
