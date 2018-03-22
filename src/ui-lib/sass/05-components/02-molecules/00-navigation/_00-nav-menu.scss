@@ -29,7 +29,7 @@
     }
   }
 
-  li:not(.grav-c-nav-menu__external-link) + li.grav-c-nav-menu__external-link {
+  li:not(&__external-link) + li.&__external-link {
     margin-top: $grav-sp-s;
 
     @media (min-width: $trigger-breakpoint) {
