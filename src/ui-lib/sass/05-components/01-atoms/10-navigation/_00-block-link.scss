@@ -6,8 +6,9 @@
   border-right-width: $grav-st-thickness-large;
   background-color: $grav-co-fg;
   border-style: $grav-st-style;
-  text-decoration: none;
   color: $grav-co-bg;
+  text-decoration: none;
+  
 
   &[href] {
     &:link,
@@ -23,8 +24,9 @@
       color: $grav-co-neutral-ashtray;
     }   
   }
+  
   &:not([href]) {
-      border-color: $grav-co-bg;
-      color: $grav-co-bg;
+    border-color: $grav-co-bg;
+    color: $grav-co-bg;
   }
 }
