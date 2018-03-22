@@ -14,12 +14,6 @@
       }
     },
     {
-      "url": "https://medium.com/buildit",
-      "control": {
-        "label": "Blog"
-      }
-    },
-    {
       "url": false,
       "control": {
         "label": "Careers"
@@ -32,6 +26,17 @@
       }
     }
   ],
+
+  "externalLinks": [
+  
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
+      }
+    }
+  ],
+
   "header": {
     "url": "link.pages-homepage"
   },
@@ -73,7 +78,7 @@
             "type": "full time",
             "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/a9ae58f2-26b0-4ed8-b434-5b660017a8f2?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
           }
-        },
+        }
       ]
     },
     {
@@ -117,7 +122,7 @@
             "type": "full time",
             "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/2b137be9-568d-4c84-ba03-9241bab8a686?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
           }
-        },
+        }
       ]
     },
     {

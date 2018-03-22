@@ -11,12 +11,6 @@
       }
     },
     {
-      "url": "https://medium.com/buildit",
-      "control": {
-        "label": "Blog"
-      }
-    },
-    {
       "url": "link.pages-careers",
       "control": {
         "label": "Careers"
@@ -26,6 +20,14 @@
       "url": false,
       "control": {
         "label": "Locations"
+      }
+    }
+  ],
+  "externalLinks": [
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
       }
     }
   ],
