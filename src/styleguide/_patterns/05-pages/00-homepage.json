@@ -14,26 +14,38 @@
       }
     ]
   },
-  "section": {
-    "title": false,
-    "class": "grav-o-container",
-    "content": [
-      {
-        "paragraph": "We solve hard engineering problems with our customers,<br>and help them deliver world-class products."
-      },
-      {
-        "paragraph": "These are some of the areas we are passionate about:"
-      },
-      {
-        "orderedList": {
-          "items": ["System thinking", "Continuous delivery", "Lean UX", "Design systems", "Agile coaching", "Experiental learning"]
-        }
-      },
-      {
-        "paragraph": "To learn more, check out our <a href='https://medium.com/buildit/'>blog</a>."
+  "sections": [
+    {
+      "section": {
+        "title": false,
+        "class": "grav-o-container",
+        "content": [
+          {
+            "blockquote": "We solve hard engineering problems with our customers,<br>and help them deliver world-class products."
+          }
+        ]
       }
-    ]
-  },
+    },
+    {
+      "section": {
+        "title": false,
+        "class": "grav-o-container grav-u-has-centered-text",
+        "content": [
+          {
+            "paragraph": "These are some of the areas we are passionate about:"
+          },
+          {
+            "twoColumnsList": {
+              "items": ["System thinking", "Continuous delivery", "Lean UX", "Design systems", "Agile coaching", "Experiental learning"]
+            }
+          },
+          {
+            "paragraph": "To learn more, check out our <a href='https://medium.com/buildit/'>blog</a>."
+          }
+        ]
+      }
+    }
+  ],
   "links": [
     {
       "url": "link.pages-about",
