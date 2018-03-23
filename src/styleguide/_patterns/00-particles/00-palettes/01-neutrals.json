@@ -3,7 +3,7 @@
     {
       "color": {
         "name": "Charcoal",
-        "varname": "$color-buildit-charcoal",
+        "varname": "$grav-co-neutral-charcoal",
         "hex": "241c1c",
         "wcag": {
           "light": {
@@ -20,7 +20,7 @@
     {
       "color": {
         "name": "Asphalt",
-        "varname": "$color-buildit-asphalt",
+        "varname": "$grav-co-neutral-asphalt",
         "hex": "544848",
         "wcag": {
           "light": {
@@ -37,7 +37,7 @@
     {
       "color": {
         "name": "Warm Grey",
-        "varname": "$color-buildit-warm-grey",
+        "varname": "$grav-co-neutral-warm-grey",
         "hex": "8b8080",
         "wcag": {
           "light": {
@@ -54,7 +54,7 @@
     {
       "color": {
         "name": "Ashtray",
-        "varname": "$color-buildit-ashtray",
+        "varname": "$grav-co-neutral-ashtray",
         "hex": "c0bbbb",
         "wcag": {
           "light": {
@@ -71,7 +71,7 @@
     {
       "color": {
         "name": "Dirty Snow White",
-        "varname": "$color-buildit-dirty-snow-white",
+        "varname": "$grav-co-neutral-dirty-snow-white",
         "hex": "f7f5f5",
         "wcag": {
           "light": {

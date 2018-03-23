@@ -1,0 +1,109 @@
+// Note: The Page Header always spans the full width of the viewport. This
+// is in case we want to give it any kind of full-bleed background styling.
+// The child elements within therefore need to respect the maximum content
+// width ($grav-page-content-max-width) themselves, where necessary.
+header[role=banner] {
+  background-color: $grav-co-neutral-charcoal;
+
+  &.is-light { // stylelint-disable selector-no-qualifying-type
+    background-color: transparent;
+
+
+    .grav-c-logo {
+      fill: $grav-co-neutral-asphalt;
+    }
+
+    .grav-c-logo:hover {
+      fill: $grav-co-neutral-warm-grey;
+    }
+
+    .grav-c-block-link {
+      background-color: $grav-co-bg;
+      color: $grav-co-neutral-asphalt;
+    }
+
+    .grav-c-block-link:hover {
+      color: $grav-co-neutral-warm-grey;
+    }
+  }
+
+  > div {
+    @include grav-l-container(true);
+    @include clear('after');
+    padding-top: $grav-sp-m;
+    padding-bottom: $grav-sp-m;
+
+    @media (min-width: gravy-breakpoint(medium)) {
+      display: grid;
+      padding-right: $grav-sp-m;
+      padding-left: $grav-sp-m;
+      align-items: center;
+      grid-template-columns: 300px 1fr;
+    }
+
+    @media (min-width: gravy-breakpoint(regular)) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .logo-main {
+    width: 70%; // 2/3 ish of the space
+    margin: 0 $grav-sp-m;
+    float: left;
+
+    @media (min-width: gravy-breakpoint(medium)) {
+      width: auto;
+      margin: 0;
+    }
+  }
+
+  .grav-c-logo {
+    display: block;
+    fill: $grav-co-bg;
+
+    // Bump up logo size
+    @media (min-width: gravy-breakpoint(medium)) {
+      height: 2.5rem;
+    }
+  }
+
+  .grav-c-toggle-menu {
+    margin-right: $grav-sp-m;
+    float: right;
+
+    @media (min-width: gravy-breakpoint(medium)) {
+      display: none;
+    }
+
+    &[aria-pressed] ~ .grav-c-nav-menu,
+    &[aria-pressed='false'] ~ .grav-c-nav-menu {
+      display: none;
+
+      @media (min-width: gravy-breakpoint(medium)) { // stylelint-disable max-nesting-depth
+        display: flex;
+        margin-top: 0;
+      }
+    }
+
+    &[aria-pressed='true'] ~ .grav-c-nav-menu {
+      display: block;
+    }
+  }
+
+  .grav-c-nav-menu {
+    @include clear;
+    max-width: $grav-page-content-max-width;
+
+    @media (min-width: gravy-breakpoint(medium)) {
+      position: initial;
+      top: auto;
+      right: auto;
+      justify-self: flex-end;
+    }
+
+    @media (min-width: gravy-breakpoint(large)) {
+      max-width: $grav-page-content-max-width-large;
+    }
+  }
+}

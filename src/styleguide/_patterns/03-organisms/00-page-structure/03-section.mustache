@@ -1,0 +1,18 @@
+<section{{#section.class}} class="{{section.class}}"{{/section.class}}>
+  {{#section.title}}
+    <h2>{{{section.title}}}</h2>
+  {{/section.title}}
+  {{#section.content}}
+    {{#paragraph}}<p>{{{paragraph}}}</p>{{/paragraph}}
+    {{#blockquote}}<blockquote>{{{blockquote}}}</blockquote>{{/blockquote}}
+    {{#inlineRow}}{{>organisms-list-inline-row}}{{/inlineRow}}
+    {{#imgCards}}{{>organisms-list-img-cards}}{{/imgCards}}
+    {{#twoColumnsList}}
+    <ul class="grav-c-list-two-columns">
+      {{#items}}
+      <li>{{.}}</li>
+      {{/items}}
+    </ul>
+    {{/twoColumnsList}}
+  {{/section.content}}
+</section>

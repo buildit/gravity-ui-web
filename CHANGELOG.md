@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.0] - 2018-03-23
+
+### Added
+- Page header
+- Page footer
+- Careers page
+- Location page
+- About page
+- New Buildit Logo
+- Wipro Digital Logo
+- Designit Logo
+- CTA button
+- Homepage
+- Error page template
+- Alternate Location page
+- Social media icons and links
+
+### Changed
+- Improved typography
+- Sassified pattern-scaffolding
+
+### Fixed
+- Pipeline tweaks
+- Fixed color swatches on small screens
 
 ## [0.2.1] - 2018-01-25
 ### Added

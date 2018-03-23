@@ -3,7 +3,7 @@
     {
       "color": {
         "name": "Twilight",
-        "varname": "$color-buildit-twilight",
+        "varname": "$grav-co-secondary-twilight",
         "hex": "012b3d",
         "wcag": {
           "light": {
@@ -20,7 +20,7 @@
     {
       "color": {
         "name": "Deep Ocean",
-        "varname": "$color-buildit-deep-ocean",
+        "varname": "$grav-co-secondary-deep-ocean",
         "hex": "095771",
         "wcag": {
           "light": {
@@ -37,7 +37,7 @@
     {
       "color": {
         "name": "Tealy McTealface",
-        "varname": "$color-buildit-tealy-mc-tealface",
+        "varname": "$grav-co-secondary-tealy-mc-tealface",
         "hex": "287a95",
         "wcag": {
           "light": {
@@ -54,7 +54,7 @@
     {
       "color": {
         "name": "Bread Mould",
-        "varname": "$color-buildit-bread-mould",
+        "varname": "$grav-co-secondary-bread-mould",
         "hex": "5ea1b8",
         "wcag": {
           "light": {
@@ -71,7 +71,7 @@
     {
       "color": {
         "name": "Nuclear Winter",
-        "varname": "$color-buildit-nuclear-winter",
+        "varname": "$grav-co-secondary-nuclear-winter",
         "hex": "d5e9f0",
         "wcag": {
           "light": {

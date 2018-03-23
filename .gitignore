@@ -1,5 +1,9 @@
-# Exlclude build Output
+# Exclude build Output
 dist/
+
+# Exclude generated files
+src/styleguide/_patterns/_generated/*.mustache
+src/styleguide/_patterns/00-particles/05-logos-and-icons/00-svg-symbols.json
 
 
 ######### App / OS-specific guff ##########

@@ -1,0 +1,21 @@
+.grav-c-hero {
+  padding: $grav-sp-xl 0;
+  background-blend-mode: hard-light;
+  background-color: $grav-co-accent-secondary-dark;
+  background-position-x: center;
+  background-size: cover;
+  color: $grav-co-bg;
+  text-align: center;
+
+  @media all and (max-width: gravy-breakpoint(regular)) {
+    background-image: none !important;
+  }
+
+  > * {
+    @include grav-l-container;
+  }
+
+  > * + * {
+    margin-top: $grav-sp-xl;
+  }
+}

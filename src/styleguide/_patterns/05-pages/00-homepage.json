@@ -1,0 +1,105 @@
+{
+  "title": "Buildit @ Wipro Digital",
+  "control": {
+    "label": "Menu"
+  },
+  "hero": {
+    "background": "/images/buildit-roundtable-bw.jpg",
+    "content": [
+      {
+        "pullout": "Buildit is a transformation studio.<br>We are a company that helps create better companies."
+      },
+      {
+        "paragraph": "<a href='link.pages-about' class=\"grav-c-cta grav-c-cta--inverted\">About us</a>"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "section": {
+        "title": false,
+        "class": "grav-o-container",
+        "content": [
+          {
+            "blockquote": "We solve hard engineering problems with our customers,<br>and help them deliver world-class products."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "title": false,
+        "class": "grav-o-container grav-u-text-centered",
+        "content": [
+          {
+            "paragraph": "These are some of the areas we are passionate about:"
+          },
+          {
+            "twoColumnsList": {
+              "items": ["System thinking", "Continuous delivery", "Lean UX", "Design systems", "Agile coaching", "Experiental learning"]
+            }
+          },
+          {
+            "paragraph": "To learn more, check out our <a href='https://medium.com/buildit/'>blog</a>."
+          }
+        ]
+      }
+    }
+  ],
+  "links": [
+    {
+      "url": "link.pages-about",
+      "control": {
+        "label": "About us"
+      }
+    },
+    
+    {
+      "url": "link.pages-careers",
+      "control": {
+        "label": "Careers"
+      }
+    },
+    {
+      "url": "link.pages-locations",
+      "control": {
+        "label": "Locations"
+      }
+    }
+  ],
+
+  "externalLinks": [
+  
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
+      }
+    }
+  ],
+
+  "header": {
+    "url": "link.pages-homepage",
+    "light": true
+  },
+  "footer": {
+    "copy": "made with ❤️",
+    "social": [
+      {
+        "label": "Instagram",
+        "symbolId": "instagram-brand-icon",
+        "url": "https://www.instagram.com/buildit_tech"
+      },
+      { 
+        "label": "Twitter",
+        "symbolId": "twitter-brand-icon",
+        "url": "https://twitter.com/buildit_tech"
+      },
+      { 
+        "label": "LinkedIn",
+        "symbolId": "linkedin-brand-icon",
+        "url": "https://www.linkedin.com/company/buildit"
+      }
+    ]
+  }
+}

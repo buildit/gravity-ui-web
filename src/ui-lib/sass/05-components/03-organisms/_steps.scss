@@ -1,0 +1,65 @@
+.grav-c-steps {
+  margin-top: $grav-sp-l;
+  padding: 0;
+  counter-reset: steps;
+  list-style-type: none;
+
+  > li {
+    position: relative;
+    margin-top: 0;
+    margin-left: $grav-sp-l;
+    padding-bottom: $grav-sp-m;
+    padding-left: $grav-sp-l;
+    border-width: 0;
+    border-left-width: $grav-st-thickness;
+    border-color: $grav-co-accent-primary;
+    border-style: dashed;
+    counter-increment: steps;
+  }
+
+  > li:last-child,
+  > li:nth-child(odd):last-child {
+    border-width: 0;
+  }
+
+  > li:nth-child(odd) {
+    @media all and (min-width: gravy-breakpoint(regular)) {
+      margin-right: 50%;
+      margin-left: 0;
+      padding-right: $grav-sp-l;
+      padding-left: 0;
+      border-right-width: $grav-st-thickness;
+      border-left-width: 0;
+      text-align: right;
+    }
+  }
+
+  > li:nth-child(even) {
+    @media all and (min-width: gravy-breakpoint(regular)) {
+      margin-left: 50%;
+    }
+  }
+
+  > li::before {
+    @include gravy-font(secondary, bold);
+    content: counters(steps, '.');
+    width: 1rem;
+    position: absolute;
+    left: -$grav-sp-m;
+    padding: $grav-sp-inset-squished-xs;
+    background-color: $grav-co-accent-primary;
+    text-align: center;
+  }
+
+  > li:nth-child(odd)::before {
+    @media all and (min-width: gravy-breakpoint(regular)) {
+      display: block;
+      right: -$grav-sp-m;
+      left: auto;
+    }
+  }
+
+  p {
+    margin-top: 0;
+  }
+}

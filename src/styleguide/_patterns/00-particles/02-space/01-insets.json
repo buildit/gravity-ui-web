@@ -1,0 +1,22 @@
+{
+  "insets": [
+    {
+      "name": "Small",
+      "var": "$grav-sp-inset-s",
+      "vLength": "0.5rem",
+      "hLength": "0.5rem"
+    },
+    {
+      "name": "Medium",
+      "var": "$grav-sp-inset-m",
+      "vLength": "1rem",
+      "hLength": "1rem"
+    },
+    {
+      "name": "Large",
+      "var": "$grav-sp-inset-l",
+      "vLength": "2rem",
+      "hLength": "2rem"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+.grav-c-job-card {
+  > span::before {
+    content: ' - ';
+  }
+}

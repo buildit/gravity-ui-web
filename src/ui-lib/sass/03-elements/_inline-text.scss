@@ -1,3 +1,29 @@
+a[href] {
+  @include gravy-font(primary, bold);
+
+  &:link {
+    color: $grav-co-interactive-secondary;
+  }
+
+  &:hover {
+    color: $grav-co-interactive-secondary-hover;
+  }
+
+  &:active {
+    background: $grav-co-interactive-secondary;
+    color: inherit;
+  }
+
+  &:visited {
+    color: $grav-co-interactive-secondary-visited;
+  }
+}
+
+b,
+strong {
+  @include gravy-font(primary, bold);
+}
+
 code,
 kbd,
 samp {

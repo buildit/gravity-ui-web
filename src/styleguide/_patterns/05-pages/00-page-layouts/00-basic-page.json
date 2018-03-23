@@ -1,0 +1,52 @@
+{
+  "title": "About us",
+  "control": {
+    "label": "Menu"
+  },
+  "links": [
+    {
+      "url": false,
+      "control": {
+        "label": "About us"
+      }
+    },
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
+      }
+    },
+    {
+      "url": "link.pages-careers",
+      "control": {
+        "label": "Careers"
+      }
+    },
+    {
+      "url": "link.pages-locations",
+      "control": {
+        "label": "Locations"
+      }
+    }
+  ],
+  "footer": {
+    "copy": "made with ❤️",
+    "social": [
+      {
+        "label": "Instagram",
+        "symbolId": "instagram-brand-icon",
+        "url": "https://www.instagram.com/buildit_tech"
+      },
+      { 
+        "label": "Twitter",
+        "symbolId": "twitter-brand-icon",
+        "url": "https://twitter.com/buildit_tech"
+      },
+      { 
+        "label": "LinkedIn",
+        "symbolId": "linkedin-brand-icon",
+        "url": "https://www.linkedin.com/company/buildit"
+      }
+    ]
+  }
+}
