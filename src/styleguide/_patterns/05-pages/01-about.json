@@ -11,12 +11,6 @@
       }
     },
     {
-      "url": "https://medium.com/buildit",
-      "control": {
-        "label": "Blog"
-      }
-    },
-    {
       "url": "link.pages-careers",
       "control": {
         "label": "Careers"
@@ -26,6 +20,14 @@
       "url": "link.pages-locations",
       "control": {
         "label": "Locations"
+      }
+    }
+  ],
+  "externalLinks": [
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
       }
     }
   ],
@@ -190,22 +192,6 @@
     }
   ],
   "sections": [
-    {
-      "section": {
-        "title": "Our Vision &amp; Purpose",
-        "content": [
-          {
-            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-          },
-          {
-            "blockquote": "One-line pull-out quote about vision and purpose"
-          },
-          {
-            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-          }
-        ]
-      }
-    },
     {
       "section": {
         "title": "What we do",
