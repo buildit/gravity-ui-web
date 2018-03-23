@@ -29,7 +29,7 @@
     {
       "section": {
         "title": false,
-        "class": "grav-o-container grav-u-has-centered-text",
+        "class": "grav-o-container grav-u-text-centered",
         "content": [
           {
             "paragraph": "These are some of the areas we are passionate about:"
