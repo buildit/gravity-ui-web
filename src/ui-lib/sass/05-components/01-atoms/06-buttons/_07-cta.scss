@@ -54,9 +54,8 @@
 
     &:focus::after,
     &:hover::after {
-        height: 100%;
-        background-color: $grav-co-interactive-secondary-hover;
-      }
+      height: 100%;
+      background-color: $grav-co-interactive-secondary-hover;
     }
 
     &::after {
