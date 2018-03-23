@@ -1,3 +1,7 @@
-.grav-o-section--centered {
-  text-align: center;
+.grav-o-section {
+  margin-top: $grav-sp-l;
+
+  &--centered {
+    text-align: center;
+  }
 }
