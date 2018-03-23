@@ -7,12 +7,12 @@
     {{#blockquote}}<blockquote>{{{blockquote}}}</blockquote>{{/blockquote}}
     {{#inlineRow}}{{>organisms-list-inline-row}}{{/inlineRow}}
     {{#imgCards}}{{>organisms-list-img-cards}}{{/imgCards}}
-    {{#orderedList}}
-    <ul>
+    {{#twoColumnsList}}
+    <ul class="grav-c-list-two-columns">
       {{#items}}
       <li>{{.}}</li>
       {{/items}}
     </ul>
-    {{/orderedList}}
+    {{/twoColumnsList}}
   {{/section.content}}
 </section>

@@ -57,6 +57,7 @@
 // components are often composed of Objects and Components.
 @import '05-components/01-atoms/01-block-text/pullout';
 @import '05-components/01-atoms/01-block-text/05-ascii-art';
+@import '05-components/01-atoms/02-lists/03-list-two-columns';
 @import '05-components/01-atoms/04-media/20-logo';
 @import '05-components/01-atoms/04-media/25-icon';
 @import '05-components/01-atoms/06-buttons/05-icon-button';
@@ -81,3 +82,4 @@
 // === Utilities layer ===
 // Utilities and helper classes with ability to override anything which goes before in the
 // triangle, eg. hide helper class.
+@import '06-utilities/text';
