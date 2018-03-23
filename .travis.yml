@@ -56,5 +56,5 @@ notifications:
       - secure: lqpbNypYyLua0TCRYQvi8QXoVyTtUdohsvIERQA4NMt3gW2/8NHXNGDUAFfJq8fYTUY+cF9lzunYngeInsb/x54fQbNqAL6/V6NxVDaUyKAKJsBKfngeKAfiAkp7JPQlEoE9uRXmvalIBTTwcv26/uwgqeXimF9DTRpa56PYI6LZX6Y1+A8DEfUd5rXzT6NrehawsSUsSeZCo5Mla/umbKuAkEzqCuiXBdgcDOn9IoqMbRRq004fC0Gh8ysjf5Oap86bdWeRomufBz9Cf0ewXUD74EuRlTHj1Ykfpb0U95LsjMSyrsjxBmt9j2ElAt+vlBHKCZi40FNZIHaXYaolhsTWy9iwXs2txcFbfHBgvnJ/2sKFTaVU6hDQuWV7wga/Hd3JAvoyRiDBEzV2iokQBzmkv3xw+hdw/hUX0/BavMuiRVpgbMB4SRl5auCLBdJ6Of/bTX4RNOyeDWG944RmdO9xbiAJd8sMtf2sp239zxkZUzZ1sRTZs1TbsOtJRJ2TbFLpi4EWQTMQkc7UXWGdyLX0vX9sLfoYatNYchtcEuXBPsSmAwNE/nfv7B4WKTTCgSn5mmGqUadqpc0/t1Jk7P9ZLla9Y4JNj66U4sR1yuT25mcCbxaz3tr2VY7QUFQPt9CbMUUGTRRIK8sLRydoCSVs+KXgMvmZcLUhNlwsf/k=
     on_pull_requests: true
     on_success: change
-after_success:
-  - if [[ ${TRAVIS_TAG} =~ (${NPM_TAG_REGEXP}) ]]; then curl -X POST --data-urlencode "payload={\"text\": \"A successful deployment occurred with tag ${TRAVIS_TAG} for project ${TRAVIS_REPO_SLUG} \"}" ${SLACK_NOTIFICATION_URL}; fi
+after_deploy:
+  - ./scripts/notify.sh
