@@ -29,17 +29,18 @@
     }
   }
 
+  li:not(#{&}__external-link) + li#{&}__external-link {
+    margin-top: $grav-sp-s;
+
+    @media (min-width: $trigger-breakpoint) {
+      margin-top: 0;
+      margin-left: $grav-sp-s;
+    }
+  }
+
+
   // styling of the menu links
   .grav-c-block-link {
-    display: block;
-    padding-right: $grav-sp-m;
-    border: 0;
-    border-right-width: $grav-st-thickness-large;
-    background-color: $grav-co-fg;
-    border-color: $grav-co-accent-secondary-dark;
-    border-style: solid;
-    color: $grav-co-bg;
-
     @media (min-width: $trigger-breakpoint) {
       display: inline-block;
       height: 100%;
@@ -48,25 +49,5 @@
       border-bottom-width: $grav-st-thickness;
     }
 
-    &:link,
-    &:visited {
-      background-color: $grav-co-fg;
-    }
-
-    &:active {
-      color: $grav-co-neutral-ashtray;
-    }
-
-    &:hover {
-      background-color: $grav-co-fg;
-      border-color: $grav-co-accent-secondary;
-      color: $grav-co-neutral-ashtray;
-    }
-
-    &:not([href]) {
-      background-color: $grav-co-fg;
-      border-color: $grav-co-bg;
-      color: $grav-co-bg;
-    }
   }
 }

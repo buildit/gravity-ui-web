@@ -53,12 +53,7 @@
         "label": "About us"
       }
     },
-    {
-      "url": "https://medium.com/buildit",
-      "control": {
-        "label": "Blog"
-      }
-    },
+    
     {
       "url": "link.pages-careers",
       "control": {
@@ -72,6 +67,17 @@
       }
     }
   ],
+
+  "externalLinks": [
+  
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
+      }
+    }
+  ],
+
   "header": {
     "url": "link.pages-homepage",
     "light": true

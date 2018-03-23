@@ -36,5 +36,17 @@
         "label": "Mors tua vita mea"
       }
     }
+  ],
+  "externalLinks": [
+    {
+      "control": {
+        "label": "Praesent eu"
+      }
+    },
+    {
+      "control": {
+        "label": "Donec sagittis"
+      }
+    }
   ]
 }
