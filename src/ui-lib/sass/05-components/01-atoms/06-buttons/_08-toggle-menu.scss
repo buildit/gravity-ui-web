@@ -1,31 +1,29 @@
+$grav-sp-icon: 0.35rem;
+$grav-tr-icon-hover: 0.1rem;
+$grav-tr-icon-rotate: 135deg;
+$grav-tr-icon-scale: 1.2;
+$grav-size-icon: 33px;
+
 .grav-c-toggle-menu {
   display: flex;
-  height: 33px;
+  height: $grav-size-icon;
   margin-top: 0;
-  border: $grav-st-thickness solid $grav-co-neutral-asphalt;
+  border: hidden;
   background-color: inherit;
-  border-color: $grav-co-bg;
   text-align: center;
-
+  
   &--inverted,
   .is-light & {
-    border-color: $grav-co-neutral-asphalt;
-
-    &__icon {
-      &,
-      &::before,
-      &::after {
+    &__icon,
+    &__icon::before,
+    &__icon::after {
       background-color: $grav-co-neutral-asphalt;
-      }
     }
-    
-    &[aria-pressed='true']  {
-        &:hover,
-        &:active,
-        &:focus {
-          background-color: inherit;
-          border-color: $grav-co-neutral-asphalt;
-        }
+     
+    &[aria-pressed='true']:hover,
+    &[aria-pressed='true']:active,
+    &[aria-pressed='true']:focus {
+      background-color: inherit;
     }
   }
   
@@ -33,59 +31,75 @@
   &:active,
   &:focus {
     background-color: inherit;
-    border-color: $grav-co-accent-secondary;
     cursor: pointer;
+
   }
 
   &__icon {
+    display: inline-block;
+    width: $grav-sp-m;
+    height: $grav-st-thickness;
     position: relative;
     margin-top: auto;
-    
-    &,
+    background-color: $grav-co-bg;
+    transition: all $grav-tr-speed-fast;
+
     &::before,
     &::after {
-      display: inline-block;
-      width: $grav-sp-m;
-      height: 2px;
-      background-color: $grav-co-bg;
-      transition: all 0.4s;
-    }
-    
-    &::before,
-    &::after, {
       content: '';
+      display: inline-block;
+
+      width: $grav-sp-m;
+      height: $grav-st-thickness;
       position: absolute;
       left: 0;
+      background-color: $grav-co-bg;
+
+      transition: all $grav-tr-speed-fast;
     }
+
+    &::before {top: -$grav-sp-icon;}
     
-    &::before { top: -0.4rem;}
-    &::after { top: 0.4rem;}
+    &::after {top: $grav-sp-icon;}
 
   }
-
-  &[aria-pressed='true']  {
-      border-color: $grav-co-accent-secondary;
-      background-color: inherit;
-
-      &:hover,
-      &:active,
-      &:focus {
-      background-color: inherit;
-      border-color: $grav-co-bg;
-      }
+  
+  &:hover &__icon::before {
+    transform: translateY(-$grav-tr-icon-hover);
   }
 
-  &[aria-pressed='true'] &__icon{
+  &:hover &__icon::after {
+    transform: translateY($grav-tr-icon-hover);
+  }
+
+  &[aria-pressed='true'] {
     background-color: inherit;
-
-    &::before{
-      transform: rotate(135deg);
+    transition: all $grav-tr-speed-fast;
+    
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: inherit;
+    }
+  }
+  
+  &[aria-pressed='true']:focus &__icon,
+  &[aria-pressed='true']:active &__icon,
+  &[aria-pressed='true']:hover &__icon {
+    transform: scale($grav-tr-icon-scale);
+  }
+  
+  &[aria-pressed='true'] &__icon {
+    background-color: inherit;
+    
+    &::before {
       top: 0;
+      transform: rotate($grav-tr-icon-rotate);
     }
 
-    &::after{
-      transform: rotate(-135deg);
+    &::after {
       top: 0;
+      transform: rotate(-$grav-tr-icon-rotate);
     }
   }
 }
