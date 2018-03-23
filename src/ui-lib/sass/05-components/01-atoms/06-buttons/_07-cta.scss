@@ -46,6 +46,24 @@
     color: $grav-co-bg;
   }
 
+  &--secondary {
+    &:focus,
+    &:hover {
+      color: $grav-co-bg;
+    }
+
+    &:focus::after,
+    &:hover::after {
+        height: 100%;
+        background-color: $grav-co-interactive-secondary-hover;
+      }
+    }
+
+    &::after {
+      background-color: $grav-co-interactive-secondary;
+    }
+  }
+
   &[disabled],
   &--disabled,
   &.is-disabled {
@@ -63,23 +81,5 @@
     &::after {
       display: none;
     }
-  }
-}
-
-.grav-c-cta--secondary,
-[href].grav-c-cta--secondary,
-[href]:link.grav-c-cta--secondary {
-  &:focus,
-  &:hover {
-    color: $grav-co-bg;
-
-    &::after {
-      height: 100%;
-      background-color: $grav-co-interactive-secondary-hover;
-    }
-  }
-
-  &::after {
-    background-color: $grav-co-interactive-secondary;
   }
 }
