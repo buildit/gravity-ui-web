@@ -5,15 +5,9 @@
   },
   "links": [
     {
-      "url": false,
+      "url": "link.pages-about",
       "control": {
         "label": "About us"
-      }
-    },
-    {
-      "url": "https://medium.com/buildit",
-      "control": {
-        "label": "Blog"
       }
     },
     {
@@ -26,6 +20,15 @@
       "url": "link.pages-locations",
       "control": {
         "label": "Locations"
+      }
+    }
+  ],
+  "externalLinks": [
+  
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
       }
     }
   ],

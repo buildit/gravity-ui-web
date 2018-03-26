@@ -20,20 +20,24 @@
       }
     },
     {
-      "url": "https://medium.com/buildit",
-      "control": {
-        "label": "Blog"
-      }
-    },
-    {
       "url": "link.pages-careers",
       "control": {
         "label": "Careers"
       }
     },
     {
+      "url": "link.pages-locations",
       "control": {
         "label": "Locations"
+      }
+    }
+  ],
+  "externalLinks": [
+  
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
       }
     }
   ],
