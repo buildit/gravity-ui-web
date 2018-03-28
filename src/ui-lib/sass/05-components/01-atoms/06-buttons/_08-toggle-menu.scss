@@ -41,7 +41,7 @@
     position: relative;
     margin-top: auto;
     background-color: $grav-co-bg;
-    transition: all $grav-tr-speed-fast;
+    transition: all $grav-tr-speed-slow;
 
     &::before,
     &::after {
