@@ -10,6 +10,14 @@
   height: $grav-size-icon;
   margin-top: 0;
   border-style: hidden;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus,
+  &[aria-pressed] {
+    background: none;
+  }
   
   &--inverted,
   .is-light & {
@@ -26,14 +34,6 @@
     }
   }
   
-  &,
-  &:hover,
-  &:active,
-  &:focus,
-  &[aria-pressed] {
-    background: none;
-  }
-
   &__icon {
     display: inline-block;
     width: $grav-sp-m;
