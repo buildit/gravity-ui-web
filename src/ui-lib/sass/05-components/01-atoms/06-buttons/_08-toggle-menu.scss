@@ -1,16 +1,15 @@
-$grav-sp-icon: 0.35rem;
-$grav-tr-icon-hover: 0.1rem;
-$grav-tr-icon-rotate: 135deg;
-$grav-tr-icon-scale: 1.2;
-$grav-size-icon: 33px;
-
 .grav-c-toggle-menu {
+
+  $grav-sp-icon: 0.35rem;
+  $grav-tr-icon-hover: 0.1rem;
+  $grav-tr-icon-rotate: 135deg;
+  $grav-tr-icon-scale: 1.2;
+  $grav-size-icon: 33px;
+
   display: flex;
   height: $grav-size-icon;
   margin-top: 0;
-  border: hidden;
-  background-color: inherit;
-  text-align: center;
+  border-style: hidden;
   
   &--inverted,
   .is-light & {
@@ -27,18 +26,18 @@ $grav-size-icon: 33px;
     }
   }
   
+  &,
   &:hover,
   &:active,
-  &:focus {
-    background-color: inherit;
-    cursor: pointer;
-
+  &:focus,
+  &[aria-pressed] {
+    background: none;
   }
 
   &__icon {
     display: inline-block;
     width: $grav-sp-m;
-    height: $grav-st-thickness;
+    height: $grav-st-thickness-medium;
     position: relative;
     margin-top: auto;
     background-color: $grav-co-bg;
@@ -50,12 +49,12 @@ $grav-size-icon: 33px;
       display: inline-block;
 
       width: $grav-sp-m;
-      height: $grav-st-thickness;
+      height: $grav-st-thickness-medium;
       position: absolute;
       left: 0;
       background-color: $grav-co-bg;
 
-      transition: all $grav-tr-speed-fast;
+      transition: all $grav-tr-speed-slow;
     }
 
     &::before {top: -$grav-sp-icon;}
@@ -64,25 +63,18 @@ $grav-size-icon: 33px;
 
   }
   
+  &:focus &__icon::before,
+  &:active &__icon::before,
   &:hover &__icon::before {
     transform: translateY(-$grav-tr-icon-hover);
   }
 
+  &:focus &__icon::after,
+  &:active &__icon::after,
   &:hover &__icon::after {
     transform: translateY($grav-tr-icon-hover);
   }
 
-  &[aria-pressed='true'] {
-    background-color: inherit;
-    transition: all $grav-tr-speed-fast;
-    
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: inherit;
-    }
-  }
-  
   &[aria-pressed='true']:focus &__icon,
   &[aria-pressed='true']:active &__icon,
   &[aria-pressed='true']:hover &__icon {
