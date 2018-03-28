@@ -44,6 +44,62 @@
           }
         ]
       }
+    },
+    {
+      "section": {
+        "title": false,
+        "class": "grav-o-container grav-u-text-centered",
+        "content": [
+          {
+            "paragraph": "Here are some of the clients we have worked with:"
+          },
+          {
+            "imgLinks": true,
+            "img-Links": [
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/BP_logo.svg",
+                    "alt": "British Petroleum"
+                  },
+                  "href": "https://www.bp.com/",
+                  "title": "British Petroleum"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/BMW_logo.svg",
+                    "alt": "BMW"
+                  },
+                  "href": "https://www.bmw.co.uk/",
+                  "title": "BMW"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/chevron_logo.svg",
+                    "alt": "Chevron"
+                  },
+                  "href": "https://www.chevron.com/",
+                  "title": "Chevron"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/lbg_logo.svg",
+                    "alt": "Lloyds Banking Group"
+                  },
+                  "href": "http://www.lloydsbankinggroup.com/",
+                  "title": "Lloyds Banking Group"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "links": [
