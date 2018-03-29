@@ -30,10 +30,11 @@ const srcUiLibDir = path.join(srcRootDir, uiLibDirName);
 const bldUiLibDir = path.join(bldRootDir, uiLibDirName);
 
 const srcSassDir = path.join(srcUiLibDir, 'sass');
-const mainSassFilename = 'gravity.scss';
+const mainSassFilename = 'index.scss';
 const srcSassFilePath = path.join(srcSassDir, mainSassFilename);
 
-const cssFilename = 'gravity.css';
+const cssFileBasename = 'gravity';
+const cssFilename = `${cssFileBasename}.css`;
 const bldCssFilePath = path.join(bldUiLibDir, cssFilename);
 
 const symbolsBasename = 'symbols';
@@ -84,6 +85,7 @@ module.exports = {
   bldUiLibDir,
 
   // Expose compiled CSS stuff
+  cssFileBasename,
   cssFilename,
   bldCssFilePath,
 };
