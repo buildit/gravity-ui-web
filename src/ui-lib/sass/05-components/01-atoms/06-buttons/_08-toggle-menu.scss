@@ -26,12 +26,6 @@
     &__icon::after {
       background-color: $grav-co-neutral-asphalt;
     }
-     
-    &[aria-pressed='true']:hover,
-    &[aria-pressed='true']:active,
-    &[aria-pressed='true']:focus {
-      background-color: inherit;
-    }
   }
   
   &__icon {
