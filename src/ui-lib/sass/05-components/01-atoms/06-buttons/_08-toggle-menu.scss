@@ -1,31 +1,91 @@
 .grav-c-toggle-menu {
+
+  $grav-sp-icon: 0.35rem;
+  $grav-tr-icon-hover: 0.1rem;
+  $grav-tr-icon-rotate: 135deg;
+  $grav-tr-icon-scale: 1.2;
+  $grav-size-icon: 33px;
+
+  display: flex;
+  height: $grav-size-icon;
   margin-top: 0;
-  border: $grav-st-thickness solid $grav-co-neutral-asphalt;
-  background-color: inherit;
-  color: $grav-co-bg;
+  border-style: hidden;
+  background: none;
 
-  &:hover {
-    background-color: inherit;
-    cursor: pointer;
-  }
-
+  &:hover,
   &:active,
-  &:focus {
-    color: $grav-co-bg;
+  &:focus,
+  &[aria-pressed] {
+    background: none;
   }
-
-  &[aria-pressed='true'] {
-    background-color: inherit;
-    color: $grav-co-bg;
-  }
-
+  
   &--inverted,
   .is-light & {
-    background-color: inherit;
-    color: inherit;
+    &__icon,
+    &__icon::before,
+    &__icon::after {
+      background-color: $grav-co-neutral-asphalt;
+    }
+  }
+  
+  &__icon {
+    display: inline-block;
+    width: $grav-sp-m;
+    height: $grav-st-thickness-medium;
+    position: relative;
+    margin-top: auto;
+    background-color: $grav-co-bg;
+    transition: all $grav-tr-speed-slow;
 
-    &[aria-pressed='true'] {
-      border-color: $grav-co-accent-secondary;
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+
+      width: $grav-sp-m;
+      height: $grav-st-thickness-medium;
+      position: absolute;
+      left: 0;
+      background-color: $grav-co-bg;
+
+      transition: all $grav-tr-speed-slow;
+    }
+
+    &::before {top: -$grav-sp-icon;}
+    
+    &::after {top: $grav-sp-icon;}
+
+  }
+  
+  &:focus &__icon::before,
+  &:active &__icon::before,
+  &:hover &__icon::before {
+    transform: translateY(-$grav-tr-icon-hover);
+  }
+
+  &:focus &__icon::after,
+  &:active &__icon::after,
+  &:hover &__icon::after {
+    transform: translateY($grav-tr-icon-hover);
+  }
+
+  &[aria-pressed='true']:focus &__icon,
+  &[aria-pressed='true']:active &__icon,
+  &[aria-pressed='true']:hover &__icon {
+    transform: scale($grav-tr-icon-scale);
+  }
+  
+  &[aria-pressed='true'] &__icon {
+    background-color: inherit;
+    
+    &::before {
+      top: 0;
+      transform: rotate($grav-tr-icon-rotate);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(-$grav-tr-icon-rotate);
     }
   }
 }

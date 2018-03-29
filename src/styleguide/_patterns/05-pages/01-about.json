@@ -42,205 +42,22 @@
         "symbolId": "instagram-brand-icon",
         "url": "https://www.instagram.com/buildit_tech"
       },
-      { 
+      {
         "label": "Twitter",
         "symbolId": "twitter-brand-icon",
         "url": "https://twitter.com/buildit_tech"
       },
-      { 
+      {
         "label": "LinkedIn",
         "symbolId": "linkedin-brand-icon",
         "url": "https://www.linkedin.com/company/buildit"
       }
     ]
   },
-  "locations": [
-    {
-      "location": {
-        "city": "London",
-        "country": "United Kingdom"
-      },
-      "jobs": [
-        {
-          "job": {
-            "title": "Technical Rourcing Lead",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Creative Technologist",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Junior Platform Engineer",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Front-End Engineer",
-            "type": "full time"
-          }
-        }
-      ]
-    },
-    {
-      "location": {
-        "city": "Chicago",
-        "country": "United States"
-      },
-      "jobs": [
-        {
-          "job": {
-            "title": "Senior Platform Engineer",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Senior Front End Engineer",
-            "type": "full time"
-          }
-        }
-      ]
-    },
-    {
-      "location": {
-        "city": "Denver",
-        "country": "United States"
-      },
-      "jobs": [
-        {
-          "job": {
-            "title": "Junior Platform Engineer",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Front-End Engineer",
-            "type": "full time"
-          }
-        }
-      ]
-    },
-    {
-      "location": {
-        "city": "Bengaluru",
-        "country": "India"
-      },
-      "jobs": [
-        {
-          "job": {
-            "title": "Junior Platform Engineer",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Front-End Engineer",
-            "type": "contract"
-          }
-        },
-        {
-          "job": {
-            "title": "Full Stack Engineer",
-            "type": "full time"
-          }
-        }
-      ]
-    },
-    {
-      "location": {
-        "city": "Gdańsk",
-        "country": "Poland"
-      },
-      "jobs": [
-        {
-          "job": {
-            "title": "Technical Rourcing Lead",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Creative Technologist",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Junior Platform Engineer",
-            "type": "full time"
-          }
-        },
-        {
-          "job": {
-            "title": "Front-End Engineer",
-            "type": "full time"
-          }
-        }
-      ]
-    }
-  ],
-  "steps": [
-    {
-      "title": "Let's chat",
-      "description": "One of the Buildit talent team will call you for a quick chat to find out a little bit about you. For some roles we would ask you to complete an exercise after but we will let you know at this stage for sure!"
-    },
-    {
-      "title": "Let's chat (reprise)",
-      "description": "A chat on the phone or a video call with one of the Buildit studio team, where we talk a bit about us and how your experiences can help us. For some roles we would invite you to the Studio to meet face to face, we would also welcome you at the studio if this would be your preference."
-    },
-    {
-      "title": "Exercise - this stage is for Technical Roles",
-      "description": "Here we would like to see a little bit of your tech and coding skills. We will send you the details for the exercise, so that you can show us some awesome code. Your solution will be used in the next stage to build upon during a pairing session with a couple of our engineers."
-    },
-    {
-      "title": "Meet the team",
-      "description": "This involves a visit to one of our studios, where you get to meet a few of the team if haven't done so in the process. We'll get to talk in more detail about what we do, your experiences and ambitions. If you are an Engineer we will also spend a bit of time talking about your tech submission and we will pair program building a few more features."
-    },
-    {
-      "title": "That's it",
-      "description": "That's pretty much it. There will be one more phone call to confirm transfer details with you, and possible start dates."
-    }
-  ],
   "sections": [
     {
       "section": {
-        "title": "What we do",
-        "content": [
-          {
-            "paragraph": "We solve hard engineering problems with our customers, and help them deliver world-class products. We help them improve the way they solve business problems, ultimately changing the way they change."
-          },
-          {
-            "paragraph": "We help organisations understand what they need to do to survive in an ever more rapidly changing world."
-          },
-          {
-            "paragraph": "True transformation only happens when change touches all areas of a company. We believe that change must be holistic and consider all aspects of the organisational stack, from recruitment to procurement, from operations to engineering, and from sales to support. We call this vertical transformation."
-          }
-        ]
-      }
-    },
-    {
-      "section": {
-        "title": "How we do it",
-        "content": [
-          {
-            "paragraph": "We are problem solvers who hone our craft through experimentation, continuous improvement and systems thinking."
-          },
-          {
-            "paragraph": "We enable learning behaviours through high psychological safety; and empower people through trust and autonomy."
-          }
-        ]
-      }
-    },
-    {
-      "section": {
-        "title": "We are",
+        "title": "Who we are",
         "content": [
           {
             "imgCards": true,
@@ -262,7 +79,7 @@
                     "alt": "A cube made of interconnected nodes, with one highlighted node."
                   },
                   "title": "Problem solvers",
-                  "content": "We enjoy finding ways to make complicated tasks easy. We tackle root-causes, not symptomps. We are user-centric but keep an eye on the big picture."
+                  "content": "We enjoy finding ways to make complicated tasks easy. We tackle root-causes, not symptoms. We are user-centric but keep an eye on the big picture."
                 }
               },
               {
@@ -272,7 +89,7 @@
                     "alt": "A stylised head of a bull."
                   },
                   "title": "No \"bull\"",
-                  "content": "From open-minded to open source, as natural collaborators we are not afraid to <em>'do the right thing'</em> for our clients and their customers."
+                  "content": "From open-minded to open source, as natural collaborators, we are not afraid to <em>'do the right thing'</em> for our clients and their customers."
                 }
               },
               {
@@ -292,16 +109,54 @@
     },
     {
       "section": {
+        "title": "What we do",
+        "content": [
+          {
+            "paragraph": "We partner with our clients to solve hard problems, and help them deliver world-class products. We help them improve the way they solve business problems, ultimately changing the way they change."
+          },
+          {
+            "paragraph": "We help organisations understand what they need to do to survive in an ever more rapidly changing world."
+          },
+          {
+            "paragraph": "True transformation only happens when change touches all areas of a company. We believe that change must be holistic and consider all aspects of the organisational stack, from recruitment to procurement, from operations to engineering, and from sales to support. We call this vertical transformation."
+          },
+          {
+            "paragraph": "<em>Read more about some of the <a href='https://medium.com/buildit/technology/home'>technical challenges</a> we've faced, and our thoughts on <a href='https://medium.com/buildit/design-systems/home'>Design Systems</a> on our  Medium blog.</em>"
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "title": "How we do it",
+        "content": [
+          {
+            "paragraph": "We are problem solvers who hone our craft through experimentation, continuous improvement and systems thinking."
+          },
+          {
+            "paragraph": "We are pragmatic partners who seek out the challenging work in all engagements, whether at enterprise scale or startup speed. This requires us to not only be able to do what \"good looks like\", but to stand in the middle of something <em>not so good</em> and positively influence the outcome day to day."
+          },
+          {
+            "paragraph": "We enable learning behaviours through high psychological safety; we empower people through trust and autonomy."
+          },
+          {
+            "paragraph": "<em>Read more how we approach <a href='https://medium.com/buildit/org-change/home'>organisational change</a> on our Medium blog.</em>"
+          }
+        ]
+      }
+    },
+    {
+      "section": {
         "title": "Our people",
         "content": [
           {
             "paragraph": "Buildit has an open structure, which means that employees work within wide boundaries."
           },
           {
-            "paragraph": "The environment and culture which is shaped by Buildit’s people, is driven by several key factors including; transparency, curiosity, inclusivity, pragmatism and responsibility. Buildit employees work in an environment where everyone is encouraged to continually develop through a cohesive unit of learning, and perhaps more importantly, given the autonomy to do so."
+            "paragraph": "The environment and culture, which is shaped by Buildit’s people, is driven by several key factors including transparency, curiosity, inclusivity, pragmatism and responsibility. Buildit employees work in an environment where everyone is encouraged to continually develop through a cohesive unit of learning, and perhaps more importantly, given the autonomy to do so."
           },
           {
-            "paragraph": "Our partners are:"
+            "paragraph": "We are part of the larger <a href='http://wipro.com'>Wipro</a> network and partner with:"
           },
           {
             "inlineRow": true,

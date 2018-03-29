@@ -14,12 +14,13 @@ const taskNamePrefix = 'ui-lib:';
 
 
 function sassBuildTask () {
-  const sassOptions = {
-    // TODO: Eyeglass integration
-  };
+  const sassOptions = {};
 
   return gulp.src(paths.srcSassFilePath)
     .pipe(sass(eyeglass(sassOptions)).on('error', sass.logError))
+    .pipe(rename({
+      basename: paths.cssFileBasename,
+    }))
     .pipe(gulp.dest(paths.bldUiLibDir))
     .pipe(browserSync.stream());
 }
