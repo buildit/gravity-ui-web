@@ -1,7 +1,7 @@
 {
   "title": "Buildit @ Wipro Digital",
   "control": {
-    "label": "Menu"
+    "label": "Toggle menu"
   },
   "hero": {
     "background": "/images/buildit-roundtable-bw.jpg",
