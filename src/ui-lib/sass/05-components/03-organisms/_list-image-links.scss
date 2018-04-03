@@ -4,10 +4,6 @@
   columns: 2;
   list-style-type: none;
 
-  li:nth-child(n+5) {
-    margin-top: $grav-sp-m;
-  }
-
   a {
     img {
       filter: grayscale(100%);
@@ -33,6 +29,10 @@
 
         &:not(:last-child) {
           margin-right: $grav-sp-s;
+        }
+
+        &:nth-child(n+5) {
+          margin-top: $grav-sp-m;
         }
       
     }
