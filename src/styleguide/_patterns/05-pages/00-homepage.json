@@ -59,7 +59,7 @@
               {
                 "imgLink": {
                   "image": {
-                    "src": "/images/BP_logo.svg",
+                    "src": "/images/dummy1.svg",
                     "alt": "British Petroleum"
                   },
                   "href": "https://www.bp.com/",
@@ -69,17 +69,17 @@
               {
                 "imgLink": {
                   "image": {
-                    "src": "/images/BMW_logo.svg",
-                    "alt": "BMW"
+                    "src": "/images/dummy2.svg",
+                    "alt": "British Petroleum"
                   },
-                  "href": "https://www.bmw.co.uk/",
-                  "title": "BMW"
+                  "href": "https://www.bp.com/",
+                  "title": "British Petroleum"
                 }
               },
               {
                 "imgLink": {
                   "image": {
-                    "src": "/images/chevron_logo.svg",
+                    "src": "/images/dummy3.svg",
                     "alt": "Chevron"
                   },
                   "href": "https://www.chevron.com/",
@@ -89,7 +89,7 @@
               {
                 "imgLink": {
                   "image": {
-                    "src": "/images/lbg_logo.svg",
+                    "src": "/images/dummy4.svg",
                     "alt": "Lloyds Banking Group"
                   },
                   "href": "http://www.lloydsbankinggroup.com/",
