@@ -1,0 +1,45 @@
+.grav-c-list-image-links {
+  display: block;
+  column-gap: $grav-sp-l;
+  columns: 2;
+  list-style-type: none;
+
+  li:nth-child(n+5) {
+    margin-top: $grav-sp-m;
+  }
+
+  a {
+    img {
+      filter: grayscale(100%);
+      transition: all $grav-tr-speed-slow;    
+    }
+
+    img:hover,
+    img:focus,
+    img:active {
+      filter: none;
+      transform: translateY(-5px) scale(1.1);
+    }
+  }
+
+  @media all and (min-width: gravy-breakpoint(medium)) {
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+      margin-top: 0;
+      width: 20%;
+      flex-grow: 1;
+
+        &:not(:last-child) {
+          margin-right: $grav-sp-s;
+        }
+      
+    }
+  }
+}
+
+
+ 
+
+
