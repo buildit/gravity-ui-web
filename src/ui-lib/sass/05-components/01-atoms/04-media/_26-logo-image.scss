@@ -1,7 +1,8 @@
 .grav-c-logo-image {
-  width: auto;
-  height: 100px;
+  $grav-logo-size: 2.5rem;
 
+  width: auto;
+  height: $grav-logo-size;
 }
 
 
