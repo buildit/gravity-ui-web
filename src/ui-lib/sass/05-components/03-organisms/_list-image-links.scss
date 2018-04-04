@@ -23,18 +23,17 @@
     flex-wrap: wrap;
 
     > li {
-      margin-top: 0;
       width: 20%;
-      flex-grow: 1;
+      margin-top: 0;
+      flex-grow: 1; 
+    }
+    
+    > li:not(:last-child) {
+      margin-right: $grav-sp-s;
+    }
 
-        &:not(:last-child) {
-          margin-right: $grav-sp-s;
-        }
-
-        &:nth-child(n+5) {
-          margin-top: $grav-sp-m;
-        }
-      
+    >li:nth-child(n+5) {
+      margin-top: $grav-sp-m;
     }
   }
 }
