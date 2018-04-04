@@ -46,8 +46,6 @@
 // === Objects layer ===
 // Class-based selectors which define undecorated design patterns, for example
 // media object known from OOCSS.
-@import '04-objects/locations-layout';
-@import '04-objects/locations-layout-alt';
 @import '04-objects/section';
 @import '04-objects/container';
 
@@ -58,7 +56,7 @@
 @import '05-components/01-atoms/01-block-text/pullout';
 @import '05-components/01-atoms/01-block-text/05-ascii-art';
 @import '05-components/01-atoms/02-lists/01-list-horizontal';
-@import '05-components/01-atoms/02-lists/02-list-two-columns';
+@import '05-components/01-atoms/02-lists/02-two-columns-text';
 @import '05-components/01-atoms/04-media/20-logo';
 @import '05-components/01-atoms/04-media/25-icon';
 @import '05-components/01-atoms/04-media/26-logo-image';
@@ -70,7 +68,6 @@
 
 @import '05-components/02-molecules/00-navigation/00-nav-menu';
 @import '05-components/02-molecules/01-cards/location-card';
-@import '05-components/02-molecules/01-cards/location-card-alt';
 @import '05-components/02-molecules/01-cards/job-card';
 
 @import '05-components/03-organisms/00-page-structure/00-page-header';
@@ -79,7 +76,11 @@
 @import '05-components/03-organisms/steps';
 @import '05-components/03-organisms/list-img-cards';
 @import '05-components/03-organisms/list-inline-row';
+<<<<<<< HEAD:src/ui-lib/sass/gravity.scss
 @import '05-components/03-organisms/list-image-links';
+=======
+@import '05-components/03-organisms/two-columns-block';
+>>>>>>> develop:src/ui-lib/sass/index.scss
 @import '05-components/03-organisms/hero';
 
 // === Utilities layer ===

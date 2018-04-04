@@ -1,0 +1,23 @@
+.grav-c-two-columns-block {
+  @media (min-width: gravy-breakpoint(medium)) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  > * {
+    @media (min-width: gravy-breakpoint(medium)) {
+      flex-basis: calc(50% - 2em);
+    }
+  }
+
+  > *:nth-child(1) {
+    margin-top: 0;
+  }
+
+  > *:nth-child(2) {
+    @media (min-width: gravy-breakpoint(medium)) {
+      margin-top: 0;
+    }
+  }
+}

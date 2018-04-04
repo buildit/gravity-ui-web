@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+
+## [0.4.0] - 2018-03-29
+
+### Added
+- Animated nav toggle button
+
+### Changed
+- Miscellaneous copy changes, based on feedback from user testing
+
+### Fixed
+- Travis build script
+- Layout and links on basic and error page templates
+- Eyeglass SASS support
+
+
 ## [0.3.0] - 2018-03-23
 
 ### Added
