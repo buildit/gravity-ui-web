@@ -1,15 +1,9 @@
 .grav-c-hero {
+  position: relative;
   padding: $grav-sp-xl 0;
-  background-blend-mode: hard-light;
-  background-color: $grav-co-accent-secondary-dark;
-  background-position-x: center;
-  background-size: cover;
+  background: linear-gradient(180deg, $grav-co-accent-secondary 0%, $grav-co-accent-secondary-darker 100%);
   color: $grav-co-bg;
   text-align: center;
-
-  @media all and (max-width: gravy-breakpoint(regular)) {
-    background-image: none !important;
-  }
 
   > * {
     @include grav-l-container;
@@ -17,5 +11,15 @@
 
   > * + * {
     margin-top: $grav-sp-xl;
+  }
+
+  > canvas {
+    width: 100%;
+    max-width: initial;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
   }
 }

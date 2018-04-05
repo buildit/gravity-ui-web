@@ -8,6 +8,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 
+## [0.5.0] - 2018-04-05
+
+### Changed
+- Replaced old location page template with alternative one
+  - BREAKING: `grav-c-list-two-columns` renamed to `grav-c-two-columns-text`
+  - BREAKING: Markup and appearance of `grav-c-location-card` changed
+- Updated hero component to contains canvas element
+  - BREAKING: Markup and appearance of `grav-c-hero` changed
+- Buiildit logo and favicon images
+
+
+### Removed
+- Old location page template
+  - BREAKING: Removed `grav-o-locations-layout` class
+  - BREAKING: Removed `grav-o-locations-layout-alt` class
+
+
 ## [0.4.0] - 2018-03-29
 
 ### Added
