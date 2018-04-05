@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+
+## [0.5.0] - 2018-04-05
+
 ### Changed
 - Replaced old location page template with alternative one
   - BREAKING: `grav-c-list-two-columns` renamed to `grav-c-two-columns-text`
