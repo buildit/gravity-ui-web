@@ -1,6 +1,17 @@
 section {
   margin-top: 0;
 
+  > p {
+    max-width: 40em;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media all and (min-width: gravy-breakpoint(large)) {
+      margin-right: inherit;
+      margin-left: 2em;
+    }
+  }
+
   + section {
     margin-top: $grav-sp-xl;
   }
