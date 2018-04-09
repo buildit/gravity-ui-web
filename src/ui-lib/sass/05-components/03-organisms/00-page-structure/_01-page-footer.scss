@@ -51,4 +51,9 @@ footer[role=contentinfo] {
   ul {
     justify-content: center;
   }
+
+  /* stylelint-disable-next-line selector-no-qualifying-type */
+  &.grav-c-footer-no-margin {
+    margin-top: 0;
+  }
 }
