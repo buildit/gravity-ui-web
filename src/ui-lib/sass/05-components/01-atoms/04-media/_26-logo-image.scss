@@ -1,8 +1,16 @@
 .grav-c-logo-image {
-  $grav-logo-size: 2.5rem;
+  $logo-size-small: 28px;
+  $logo-size-medium: 38px;
+  $logo-size-large: 45px;
 
   width: auto;
-  height: $grav-logo-size;
+  max-height: $logo-size-small;
+
+  @media all and (min-width: gravy-breakpoint(medium)) {
+    max-height: $logo-size-medium;
+  }
+
+  @media all and (min-width: gravy-breakpoint(large)) {
+    max-height: $logo-size-large;
+  }
 }
-
-
