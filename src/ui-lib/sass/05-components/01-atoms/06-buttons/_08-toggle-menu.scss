@@ -19,7 +19,7 @@
   &[aria-pressed] {
     background: none;
   }
-  
+
   &--inverted,
   .is-light & {
     &__icon,
@@ -28,7 +28,7 @@
       background-color: $grav-co-neutral-asphalt;
     }
   }
-  
+
   &__icon {
     display: inline-block;
     width: $grav-width-icon;
@@ -53,11 +53,11 @@
     }
 
     &::before {top: -$grav-sp-icon;}
-    
+
     &::after {top: $grav-sp-icon;}
 
   }
-  
+
   &:focus &__icon::before,
   &:active &__icon::before,
   &:hover &__icon::before {
@@ -75,10 +75,10 @@
   &[aria-pressed='true']:hover &__icon {
     transform: scale($grav-tr-icon-scale);
   }
-  
+
   &[aria-pressed='true'] &__icon {
     background-color: inherit;
-    
+
     &::before {
       top: 0;
       transform: rotate($grav-tr-icon-rotate);
