@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+
+## [0.6.0]
+
 ### Changed
 - Copy changes to about and careers pages
-- Styling of hero component 
+- Styling of hero component
 
 ### Added
 - Sticky footer
