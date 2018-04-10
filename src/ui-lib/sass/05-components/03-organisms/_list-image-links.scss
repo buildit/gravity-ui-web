@@ -1,8 +1,7 @@
 .grav-c-list-image-links {
-  $banner-color-dark-grey: #e5e5e5;
 
   padding: $grav-sp-l $grav-sp-m calc(#{$grav-sp-l} - #{$grav-sp-m});
-  background-color: $banner-color-dark-grey;
+  background-color: $grav-co-neutral-ashtray;
   column-gap: $grav-sp-l;
   columns: 2;
   list-style-type: none;
