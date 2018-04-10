@@ -8,6 +8,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 
+## [0.6.0]
+
+### Changed
+- Copy changes to about and careers pages
+- Styling of hero component
+
+### Added
+- Sticky footer
+- Image list component for showcasing company logos
+
+### Fixed
+- Stylelint issues
+
+
 ## [0.5.0] - 2018-04-05
 
 ### Changed
