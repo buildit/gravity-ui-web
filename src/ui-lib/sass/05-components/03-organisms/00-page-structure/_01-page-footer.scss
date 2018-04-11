@@ -16,7 +16,8 @@ footer[role=contentinfo] {
     }
   }
 
-  a[href]:link {
+  a[href]:link,
+  a[href]:visited {
     color: $grav-co-neutral-dirty-snow-white;
   }
 
@@ -42,7 +43,7 @@ footer[role=contentinfo] {
   .grav-c-icon {
     height: 1.5em;
     fill: $grav-co-neutral-dirty-snow-white;
-    
+
     &:hover {
       fill: $grav-co-neutral-ashtray;
     }
