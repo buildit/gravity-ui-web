@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+
+## [0.6.1] - 2018-04-13
+
 ### Fixed
 - In the job-listing component, location names and job ads are now baseline aligned
 - Text in navigation block-links no longer wraps
@@ -14,7 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Visited footer links are no longer blue
 
 
-## [0.6.0]
+## [0.6.0] - 2018-04-10
 
 ### Changed
 - Copy changes to about and careers pages
