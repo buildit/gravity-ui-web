@@ -4,30 +4,45 @@
   }
 
   @media all and (min-width: gravy-breakpoint(regular)) {
-    display: grid;
-    grid-gap: $grav-sp-m;
-    grid-template-columns: 30% 1fr;
+    display: flex;
+    align-items: baseline;
   }
 
-  > header > p {
-    @include typi(small-text);
-    margin-top: 0;
+  > header {
+    width: 30%;
+    margin-right: $grav-sp-m;
+    flex-shrink: 0;
   }
 
   > ul {
     padding-left: 0;
+    flex-grow: 1;
     list-style-type: none;
 
     @media all and (min-width: gravy-breakpoint(small)) {
-      columns: 2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     @media all and (min-width: gravy-breakpoint(regular)) {
       margin-top: 0;
-    } 
+    }
   }
 
-  li + li {
-    margin-top: $grav-sp-s;
+  li {
+    + li {
+      margin-top: $grav-sp-s;
+    }
+
+    @media all and (min-width: gravy-breakpoint(small)) {
+      $jobs-per-row: 2;
+      width: calc((100% - #{$grav-sp-m}) / #{$jobs-per-row});
+
+      // Remove top margin from first row of job cards
+      &:nth-child(-n + #{$jobs-per-row}) { // stylelint-disable-line max-nesting-depth
+        margin-top: 0;
+      }
+    }
   }
 }
