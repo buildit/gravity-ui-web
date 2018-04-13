@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+- Added margin between logo and navlinks in header
+
 
 ## [0.6.1] - 2018-04-13
 
