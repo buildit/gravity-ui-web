@@ -8,7 +8,8 @@
   border-style: $grav-st-style;
   color: $grav-co-bg;
   text-decoration: none;
-  
+  white-space: nowrap;
+
 
   &[href] {
     &:link,
@@ -19,12 +20,12 @@
 
     &:active,
     &:hover {
-      
+
       border-color: $grav-co-accent-secondary;
       color: $grav-co-neutral-ashtray;
-    }   
+    }
   }
-  
+
   &:not([href]) {
     border-color: $grav-co-bg;
     color: $grav-co-bg;
