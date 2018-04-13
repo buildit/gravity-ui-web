@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+- Edge and IE11 were pushing hamburger icon downwards
+
 
 ## [0.6.1] - 2018-04-13
 
