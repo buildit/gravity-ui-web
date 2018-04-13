@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Fixed
+- In the job-listing component, location names and job ads are now baseline aligned
+- Text in navigation block-links no longer wraps
 - Visited footer links are no longer blue
 
 
