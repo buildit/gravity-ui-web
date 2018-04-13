@@ -11,6 +11,7 @@
   > header {
     width: 30%;
     margin-right: $grav-sp-m;
+    flex-shrink: 0;
   }
 
   > ul {
