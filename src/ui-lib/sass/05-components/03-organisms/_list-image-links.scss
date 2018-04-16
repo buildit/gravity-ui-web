@@ -1,6 +1,6 @@
 .grav-c-list-image-links {
   padding: $grav-sp-l;
-  column-gap: $grav-sp-l;
+  column-gap: $grav-sp-m;
   columns: 2;
   list-style-type: none;
 
@@ -32,7 +32,7 @@
     justify-content: center;
     
     > li {
-      margin-right: $grav-sp-l; 
+      margin-right: $grav-sp-m; 
     }
   }
 
@@ -41,7 +41,7 @@
     padding-left: $grav-sp-xxl;
 
     > li {
-      margin-right: $grav-sp-xl;
+      margin-right: $grav-sp-l;
     }
   }
 }
