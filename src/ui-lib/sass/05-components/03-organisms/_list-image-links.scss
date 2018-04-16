@@ -1,7 +1,5 @@
 .grav-c-list-image-links {
-
-  padding: $grav-sp-l $grav-sp-m calc(#{$grav-sp-l} - #{$grav-sp-m});
-  background-color: $grav-co-neutral-ashtray;
+  padding: $grav-sp-l;
   column-gap: $grav-sp-l;
   columns: 2;
   list-style-type: none;
@@ -11,8 +9,7 @@
     
     img {
       filter: grayscale(100%);
-      transition: all $grav-tr-speed-slower;    
-      
+      transition: all $grav-tr-speed-slower; 
     }
 
     img:hover,
@@ -24,20 +21,27 @@
   }
 
   >li {
-    margin-bottom: $grav-sp-m;
+    line-height: 0;
   }
 
   @media all and (min-width: gravy-breakpoint(medium)) {
     display: flex;
     flex-wrap: wrap;
-    padding: $grav-sp-xl $grav-sp-xl calc(#{$grav-sp-xl} - #{$grav-sp-l});
-    align-items: center;
+    margin: 0 $grav-sp-m 0;
+    padding-bottom: calc(#{$grav-sp-l} - #{$grav-sp-xs});
+    justify-content: center;
+    
+    > li {
+      margin: 0 $grav-sp-l $grav-sp-xs 0; 
+    }
+  }
+
+  @media all and (min-width: gravy-breakpoint(extra-large)) {
+    padding-right: $grav-sp-xxl;
+    padding-left: $grav-sp-xxl;
 
     > li {
-      margin-top: 0;
-      margin-right: $grav-sp-l;
-      margin-bottom: $grav-sp-l;
-      flex-grow: 1;
+      margin-right: $grav-sp-xl;
     }
   }
 }
