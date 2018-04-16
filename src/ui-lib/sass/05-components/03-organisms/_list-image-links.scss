@@ -21,6 +21,7 @@
   }
 
   >li {
+    margin-top: 0;
     line-height: 0;
   }
 
@@ -28,11 +29,10 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 $grav-sp-m 0;
-    padding-bottom: calc(#{$grav-sp-l} - #{$grav-sp-xs});
     justify-content: center;
     
     > li {
-      margin: 0 $grav-sp-l $grav-sp-xs 0; 
+      margin-right: $grav-sp-l; 
     }
   }
 
