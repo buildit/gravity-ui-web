@@ -36,9 +36,6 @@
           },
           {
             "paragraph": "To learn more, check out our <a href='https://medium.com/buildit/'>blog</a>."
-          },
-          {
-            "paragraph": "Here are some of the clients we have worked with:"
           }
         ]
       }
@@ -46,8 +43,11 @@
     {
       "section": {
         "title": false,
-        "class": "section--background-banner grav-u-text-centered",
+        "class": "grav-u-text-centered",
         "content": [
+          {
+            "paragraph": "Here are some of the clients we have worked with:"
+          },
           {
             "imgLinks": true,
             "imgLinksItems": [
@@ -79,16 +79,6 @@
                   },
                   "href": "http://www.hsbc.co.uk",
                   "title": "HSBC Bank"
-                }
-              },
-              {
-                "imgLink": {
-                  "image": {
-                    "src": "/images/logos/logo-cfc.png",
-                    "alt": "Chelsea FC"
-                  },
-                  "href": "https://www.chelseafc.com/",
-                  "title": "Chelsea FC"
                 }
               },
               {
@@ -144,16 +134,6 @@
               {
                 "imgLink": {
                   "image": {
-                    "src": "/images/logos/logo-healthtrust.png",
-                    "alt": "HealthTrust"
-                  },
-                  "href": "https://healthtrustpg.com/",
-                  "title": "HealthTrust"
-                }
-              },
-              {
-                "imgLink": {
-                  "image": {
                     "src": "/images/logos/logo-premier-health.png",
                     "alt": "Premier Health"
                   },
@@ -164,21 +144,21 @@
               {
                 "imgLink": {
                   "image": {
-                    "src": "/images/logos/logo-office-depot.png",
-                    "alt": "Lloyds Banking Group"
-                  },
-                  "href": "http://www.lloydsbankinggroup.com/",
-                  "title": "Lloyds Banking Group"
-                }
-              },
-              {
-                "imgLink": {
-                  "image": {
                     "src": "/images/logos/logo-BP.png",
                     "alt": "British Petroleum"
                   },
                   "href": "https://www.bp.com/",
                   "title": "British Petroleum"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-office-depot.png",
+                    "alt": "Lloyds Banking Group"
+                  },
+                  "href": "http://www.lloydsbankinggroup.com/",
+                  "title": "Lloyds Banking Group"
                 }
               },
               {
