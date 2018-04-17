@@ -2,7 +2,7 @@
   $image-width-m: calc(100% * (1/6) - #{$grav-sp-m});
   $image-width-l: calc(100% * (1/6) - #{$grav-sp-l});
 
-  padding: $grav-sp-l $grav-sp-xl $grav-sp-l;
+  padding: 0 $grav-sp-xl $grav-sp-l;
   column-gap: $grav-sp-m;
   columns: 2;
   list-style-type: none;
