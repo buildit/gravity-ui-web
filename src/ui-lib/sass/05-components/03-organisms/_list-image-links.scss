@@ -1,5 +1,8 @@
 .grav-c-list-image-links {
-  padding: $grav-sp-l;
+  $image-width-m: calc(100% * (1/6) - #{$grav-sp-m});
+  $image-width-l: calc(100% * (1/6) - #{$grav-sp-l});
+
+  padding: $grav-sp-l $grav-sp-xl $grav-sp-l;
   column-gap: $grav-sp-m;
   columns: 2;
   list-style-type: none;
@@ -28,11 +31,10 @@
   @media all and (min-width: gravy-breakpoint(medium)) {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 $grav-sp-m 0;
-    justify-content: center;
     
     > li {
-      margin-right: $grav-sp-m; 
+      flex: 1 0 $image-width-m;
+      margin-right: $grav-sp-m;
     }
   }
 
@@ -41,6 +43,7 @@
     padding-left: $grav-sp-xxl;
 
     > li {
+      flex: 1 0 $image-width-l;
       margin-right: $grav-sp-l;
     }
   }
