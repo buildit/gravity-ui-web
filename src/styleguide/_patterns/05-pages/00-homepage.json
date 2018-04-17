@@ -43,7 +43,7 @@
     {
       "section": {
         "title": false,
-        "class": "grav-u-text-centered",
+        "class": "grav-u-text-centered grav-u-background-banner",
         "content": [
           {
             "paragraph": "Here are some of the clients we have worked with:"
