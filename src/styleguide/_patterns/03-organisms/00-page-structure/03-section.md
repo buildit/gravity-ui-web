@@ -11,3 +11,8 @@ The pattern currently has the capacity of hosting a title (`<h2>`) followed by a
 - unordered list
 - list-inline-row
 - list-img-cards
+- list-image-links
+
+The pseudo-pattern ~banner showcases a state in which the section is styled with a coloured background that encompasses one end of the viewport to the other i.e. with no margin.
+
+The banner uses the container-banner stylesheet, and should ideally be used to group certain elements that are intended to stand out/be seperate from the rest of the page.
