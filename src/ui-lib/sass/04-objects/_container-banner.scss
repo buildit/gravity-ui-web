@@ -1,0 +1,9 @@
+.grav-o-container-banner {
+  padding: $grav-sp-xl;
+  background-color: $grav-co-neutral-ashtray;
+
+  @media all and (min-width: gravy-breakpoint(extra-large)) {
+    padding-right: $grav-sp-xxl;
+    padding-left: $grav-sp-xxl;
+  }
+}
