@@ -27,4 +27,8 @@
     left: 0;
     margin: 0;
   }
+
+  > :not(canvas) {
+    position: relative;
+  }
 }
