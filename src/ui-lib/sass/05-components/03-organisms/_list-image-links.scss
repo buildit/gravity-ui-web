@@ -1,8 +1,8 @@
 .grav-c-list-image-links {
+  $image-width-m: calc(100% * (1/6) - #{$grav-sp-m});
+  $image-width-l: calc(100% * (1/6) - #{$grav-sp-l});
 
-  padding: $grav-sp-l $grav-sp-m calc(#{$grav-sp-l} - #{$grav-sp-m});
-  background-color: $grav-co-neutral-ashtray;
-  column-gap: $grav-sp-l;
+  column-gap: $grav-sp-m;
   columns: 2;
   list-style-type: none;
 
@@ -11,8 +11,7 @@
     
     img {
       filter: grayscale(100%);
-      transition: all $grav-tr-speed-slower;    
-      
+      transition: all $grav-tr-speed-slower; 
     }
 
     img:hover,
@@ -24,20 +23,24 @@
   }
 
   >li {
-    margin-bottom: $grav-sp-m;
+    margin-top: 0;
+    line-height: 0;
   }
 
   @media all and (min-width: gravy-breakpoint(medium)) {
     display: flex;
     flex-wrap: wrap;
-    padding: $grav-sp-xl $grav-sp-xl calc(#{$grav-sp-xl} - #{$grav-sp-l});
-    align-items: center;
-
+    
     > li {
-      margin-top: 0;
+      flex: 1 0 $image-width-m;
+      margin-right: $grav-sp-m;
+    }
+  }
+
+  @media all and (min-width: gravy-breakpoint(extra-large)) {
+    > li {
+      flex: 1 0 $image-width-l;
       margin-right: $grav-sp-l;
-      margin-bottom: $grav-sp-l;
-      flex-grow: 1;
     }
   }
 }

@@ -7,7 +7,6 @@
   $grav-size-icon: 33px;
   $grav-width-icon: 20px;
 
-  display: flex;
   height: $grav-size-icon;
   margin-top: 0;
   background: none;
@@ -30,7 +29,7 @@
   }
 
   &__icon {
-    display: inline-block;
+    display: block;
     width: $grav-width-icon;
     height: $grav-st-thickness-medium;
     position: relative;
@@ -41,7 +40,7 @@
     &::before,
     &::after {
       content: '';
-      display: inline-block;
+      display: block;
 
       width: $grav-width-icon;
       height: $grav-st-thickness-medium;
