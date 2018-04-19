@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.7.0] - 2018-04-19
 ### Added
 - `.grav-o-container-banner` CSS class & component.
+- `extra-large` breakpoint.
 
 ### Changed
 - Travis build now uses `npm ci` instead of `npm install`
