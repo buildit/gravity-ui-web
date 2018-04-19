@@ -92,6 +92,7 @@ header[role=banner] {
 
     @media (min-width: gravy-breakpoint(medium)) {
       width: auto;
+      margin-left: $grav-sp-m;
     }
   }
 }
