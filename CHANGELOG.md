@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Edge and IE11 were pushing hamburger icon downwards
 - Added margin between logo and navlinks in header
+- Hero text is placed above canvas
+- 2 column block layout (as used in location page template) is flush with outer edges
 
 
 ## [0.6.1] - 2018-04-13
