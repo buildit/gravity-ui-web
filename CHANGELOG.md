@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Travis build now uses `npm ci` instead of `npm install`
 - Image links component no longer comes with grey background
+- Updated NPM dependencies to latest versions.
 
 ### Fixed
 - Edge and IE11 were pushing hamburger icon downwards
