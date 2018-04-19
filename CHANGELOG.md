@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- `.grav-o-container-banner` CSS class & component.
+
+### Changed
+- Travis build now uses `npm ci` instead of `npm install`
+- Image links component no longer comes with grey background
+
+
 
 ## [0.6.1] - 2018-04-13
 
