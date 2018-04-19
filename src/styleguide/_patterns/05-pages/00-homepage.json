@@ -43,7 +43,7 @@
     {
       "section": {
         "title": false,
-        "class": "grav-u-text-centered",
+        "class": "grav-u-text-centered grav-o-container-banner",
         "content": [
           {
             "paragraph": "Here are some of the clients we have worked with:"
@@ -51,16 +51,6 @@
           {
             "imgLinks": true,
             "imgLinksItems": [
-              {
-                "imgLink": {
-                  "image": {
-                    "src": "/images/logos/logo-citibank.png",
-                    "alt": "CitiBank"
-                  },
-                  "href": "https://www.citibank.co.uk",
-                  "title": "CitiBank"
-                }
-              },
               {
                 "imgLink": {
                   "image": {
@@ -74,27 +64,7 @@
               {
                 "imgLink": {
                   "image": {
-                    "src": "/images/logos/logo-abbot.png",
-                    "alt": "Abbott Laboratories"
-                  },
-                  "href": "www.abbott.co.uk",
-                  "title": "Abbott Laboratories"
-                }
-              },
-              {
-                "imgLink": {
-                  "image": {
-                    "src": "/images/logos/logo-office-depot.png",
-                    "alt": "Lloyds Banking Group"
-                  },
-                  "href": "http://www.lloydsbankinggroup.com/",
-                  "title": "Lloyds Banking Group"
-                }
-              },
-              {
-                "imgLink": {
-                  "image": {
-                    "src": "/images/logos/logo-lbg.svg",
+                    "src": "/images/logos/logo-lbg.png",
                     "alt": "Lloyds Banking Group"
                   },
                   "href": "http://www.lloydsbankinggroup.com/",
@@ -109,6 +79,16 @@
                   },
                   "href": "http://www.hsbc.co.uk",
                   "title": "HSBC Bank"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-RRD.png",
+                    "alt": "RR Donnelley"
+                  },
+                  "href": "https://www.rrdonnelley.com/",
+                  "title": "RR Donnelley"
                 }
               },
               {
@@ -134,31 +114,21 @@
               {
                 "imgLink": {
                   "image": {
-                    "src": "/images/logos/logo-healthtrust.png",
-                    "alt": "HealthTrust"
+                    "src": "/images/logos/logo-tdbank.png",
+                    "alt": "TD Bank"
                   },
-                  "href": "https://healthtrustpg.com/",
-                  "title": "HealthTrust"
+                  "href": "https://www.tdbank.com/",
+                  "title": "TD Bank"
                 }
               },
               {
                 "imgLink": {
                   "image": {
-                    "src": "/images/logos/logo-RRD.png",
-                    "alt": "RR Donnelley"
+                    "src": "/images/logos/logo-abbot.png",
+                    "alt": "Abbott Laboratories"
                   },
-                  "href": "https://www.rrdonnelley.com/",
-                  "title": "RR Donnelley"
-                }
-              },
-              {
-                "imgLink": {
-                  "image": {
-                    "src": "/images/logos/logo-cfc.png",
-                    "alt": "Chelsea FC"
-                  },
-                  "href": "https://www.chelseafc.com/",
-                  "title": "Chelsea FC"
+                  "href": "www.abbott.co.uk",
+                  "title": "Abbott Laboratories"
                 }
               },
               {
@@ -174,16 +144,36 @@
               {
                 "imgLink": {
                   "image": {
-                    "src": "/images/logos/logo-tdbank.png",
-                    "alt": "TD Bank"
+                    "src": "/images/logos/logo-BP.png",
+                    "alt": "British Petroleum"
                   },
-                  "href": "https://www.tdbank.com/",
-                  "title": "TD Bank"
+                  "href": "https://www.bp.com/",
+                  "title": "British Petroleum"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-office-depot.png",
+                    "alt": "Lloyds Banking Group"
+                  },
+                  "href": "http://www.lloydsbankinggroup.com/",
+                  "title": "Lloyds Banking Group"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-citibank.png",
+                    "alt": "CitiBank"
+                  },
+                  "href": "https://www.citibank.co.uk",
+                  "title": "CitiBank"
                 }
               }
             ]
           }
-        ]
+        ] 
       }
     }
   ],
