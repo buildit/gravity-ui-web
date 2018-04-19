@@ -1,23 +1,6 @@
 section {
   margin-top: 0;
 
-  p {
-    max-width: $grav-line-max-width;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @media all and (min-width: gravy-breakpoint(large)) {
-      margin-left: 1em;
-    }
-  }
-
   + section {
     margin-top: $grav-sp-xl;
   }

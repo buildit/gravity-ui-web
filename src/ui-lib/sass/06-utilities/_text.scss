@@ -1,3 +1,9 @@
 .grav-u-text-centered {
   text-align: center;
 }
+
+.grav-u-max-word-count-m {
+  max-width: gravy-breakpoint(regular);
+  margin-right: auto;
+  margin-left: auto;
+}
