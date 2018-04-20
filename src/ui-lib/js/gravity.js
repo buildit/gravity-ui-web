@@ -33,8 +33,10 @@
   function initToggleButtons() {
     const toggleButtons = document.querySelectorAll('[type=button][aria-pressed]');
 
-    toggleButtons.forEach((toggleButton) => {
-      toggleButton.addEventListener('click', (e) => {
+    // IE-compatible way of iterating over the NodeList
+    // (See: https://developer.mozilla.org/en-US/docs/Web/API/NodeList)
+    Array.prototype.forEach.call(toggleButtons, function(toggleButton) {
+      toggleButton.addEventListener('click', function(e) {
         let pressed = toggleButton.getAttribute('aria-pressed') === 'true';
         toggleButton.setAttribute('aria-pressed', String(!pressed));
       })
@@ -44,7 +46,7 @@
   /**
    * Runs the various init functions once the DOM has loaded.
    */
-  document.addEventListener("DOMContentLoaded", (e) => {
+  document.addEventListener("DOMContentLoaded", function(e) {
     initToggleButtons();
   });
 

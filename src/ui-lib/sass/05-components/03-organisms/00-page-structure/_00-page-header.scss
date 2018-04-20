@@ -53,11 +53,13 @@ header[role=banner] {
 
   .grav-c-logo {
     display: block;
+    max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
     fill: $grav-co-bg;
 
     // Bump up logo size
     @media (min-width: gravy-breakpoint(medium)) {
       height: 2.5rem;
+      max-height: none;
     }
   }
 
