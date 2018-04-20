@@ -1,0 +1,319 @@
+{
+  "title": "Careers",
+  "content": {
+    "copy": "<p>Doing things differently requires strength of character, empathy for those around you, good judgement, as well as being able to explain why to do something differently in the customer's language and at the right time.  This requires not just being able to do what good looks like but to stand in the middle of something not good and influence the outcome incrementally day to day to make it better.</p><p>Our people are at the core of this process.  Trust in our people underpins everything we do. Talented, passionate, hard-working, and some of the sharpest people you will ever meet.  The best thing about working here is the people you get to work with while solving hard problems.</p><p>If that sounds interesting to you, why don't you look at one of the job descriptions below and join our team?</p>"
+  },
+  "control": {
+    "label": "Menu"
+  },
+  "links": [
+    {
+      "url": "link.pages-about",
+      "control": {
+        "label": "About us"
+      }
+    },
+    {
+      "url": false,
+      "control": {
+        "label": "Careers"
+      }
+    },
+    {
+      "url": "link.pages-locations",
+      "control": {
+        "label": "Locations"
+      }
+    }
+  ],
+
+  "externalLinks": [
+
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
+      }
+    }
+  ],
+
+  "header": {
+    "url": "link.pages-homepage"
+  },
+  "footer": {
+    "copy": "made with ❤️",
+    "social": [
+      {
+        "label": "Instagram",
+        "symbolId": "instagram-brand-icon",
+        "url": "https://www.instagram.com/buildit_tech"
+      },
+      {
+        "label": "Twitter",
+        "symbolId": "twitter-brand-icon",
+        "url": "https://twitter.com/buildit_tech"
+      },
+      {
+        "label": "LinkedIn",
+        "symbolId": "linkedin-brand-icon",
+        "url": "https://www.linkedin.com/company/buildit"
+      }
+    ]
+  },
+  "locations": [
+    {
+      "location": {
+        "city": "Pune",
+        "country": "India"
+      },
+      "jobs": [
+        {
+          "job": {
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/cf67016f-57c8-4386-95a7-76048f2b0503?trid=2f4a2735-7172-45dd-aca7-63618dca8aff",
+            "title": "Full Stack Engineer",
+            "type": "full time"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Dallas",
+        "country": "USA"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Senior Platform Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/ac4e2f81-563f-44cd-9eb9-6c3b00b9de01?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Senior Front End Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/a9ae58f2-26b0-4ed8-b434-5b660017a8f2?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Denver",
+        "country": "USA"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Front End Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/07c641c3-a22e-4b48-8b7c-4da9cc840d61?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Platform Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/f6c90b92-0f45-4fe3-91bf-f1e52927709a?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Creative Technologist",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/df69d0f4-c07b-403b-988c-5b727bbd28ec?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Houston",
+        "country": "USA"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Senior Front End Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/2b137be9-568d-4c84-ba03-9241bab8a686?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "New York",
+        "country": "USA"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Front End Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/0dd72280-4ffa-426a-81cc-b9f89d1a10e6?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Platform Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/d4e71287-eebe-401e-974f-1a23b78e3b31?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Creative Technologist",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/e54a03db-fae7-4267-9248-5fdcc4a4c451?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "London",
+        "country": "UK"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Platform Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/020f8936-e246-45c7-82d7-c55311f4c62a?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Head of Engineering",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/29484278-f356-459a-a19b-4babc1323e9e?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Software Engineering Consultant",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/61e8e186-e74f-499b-8916-c7455245c34f?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Senior Software Engineering Consultant",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/e773b444-9318-4edb-9fa0-bca8adb1d011?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Lead Platform Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/a9291e76-3b68-445c-b5b0-606308b74e18?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Junior Platform Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/a0f81d16-6566-40dd-94bf-025893449715?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Front End Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/faedf555-16e2-40da-a7da-c00fddb582e1?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Creative Technologist",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/4e939ea8-2add-4a92-b0cd-a5687c66497c?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Dublin",
+        "country": "Ireland"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Platform Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/b3594334-c24c-4d35-b25b-2ed8910db9c2?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Software Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/ed5de06d-de5f-4643-a167-1f493ed5f982?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "DevOps Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/22d904e8-27cd-41d6-b850-f03528167654?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "Gdańsk",
+        "country": "Poland"
+      },
+      "jobs": [
+        {
+          "job": {
+            "title": "Platform Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/54acd469-1857-4864-a7a3-4cf2775e0888?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Front End Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/d4b92ea6-2873-47f8-a99a-092a4243db6e?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        },
+        {
+          "job": {
+            "title": "Full Stack Engineer",
+            "type": "full time",
+            "url": "https://jobs.smartrecruiters.com/ni/WiproDigital/4164b14a-8620-4ef3-9b30-ce2c8bb21183?trid=2f4a2735-7172-45dd-aca7-63618dca8aff"
+          }
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Let's chat",
+      "description": "One of the Buildit talent team will call you for a quick chat to find out a little bit about you. For some roles we would ask you to complete an exercise after but we will let you know at this stage for sure!"
+    },
+    {
+      "title": "Initial interview",
+      "description": "A chat on the phone or a video call with one of the Buildit studio team, where we talk a bit about us and how your experiences can help us. For some roles we would invite you to the Studio to meet face to face, we would also welcome you at the studio if this would be your preference."
+    },
+    {
+      "title": "Exercise - this stage is for Technical Roles",
+      "description": "Here we would like to see a little bit of your tech and coding skills. We will send you the details for the exercise, so that you can show us some awesome code. Your solution will be used in the next stage to build upon during a pairing session with a couple of our engineers."
+    },
+    {
+      "title": "Meet the team",
+      "description": "This involves a visit to one of our studios, where you get to meet a few of the team if haven't done so in the process. We'll get to talk in more detail about what we do, your experiences and ambitions. If you are an Engineer we will also spend a bit of time talking about your tech submission and we will pair program building a few more features."
+    },
+    {
+      "title": "Welcome to Buildit!",
+      "description": "That's pretty much it. There will be one more phone call to confirm transfer details with you, and possible start dates."
+    }
+  ]
+}

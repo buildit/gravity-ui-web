@@ -1,0 +1,236 @@
+{
+  "title": "Buildit @ Wipro Digital",
+  "control": {
+    "label": "Toggle menu"
+  },
+  "hero": {
+    "pullout": "Buildit is a global network of transformation studios.",
+    "paragraph": "We help connect the dots in an ever-changing world.",
+    "cta-label": "About us",
+    "url": "link.pages-about"
+  },
+  "sections": [
+    {
+      "section": {
+        "title": false,
+        "class": "grav-o-container",
+        "content": [
+          {
+            "blockquote": "We partner with our clients to solve hard problems,<br>and help them deliver world-class products."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "title": false,
+        "class": "grav-o-container grav-u-text-centered",
+        "content": [
+          {
+            "paragraph": "Some areas of practice we are passionate about:"
+          },
+          {
+            "twoColumnsList": {
+              "items": ["System thinking", "Continuous delivery", "Lean UX", "Design systems", "Agile coaching", "Experiental learning"]
+            }
+          },
+          {
+            "paragraph": "To learn more, check out our <a href='https://medium.com/buildit/'>blog</a>."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "title": false,
+        "class": "grav-u-text-centered grav-o-container-banner",
+        "content": [
+          {
+            "paragraph": "Here are some of the clients we have worked with:"
+          },
+          {
+            "imgLinks": true,
+            "imgLinksItems": [
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-us-bank.png",
+                    "alt": "U.S. Bank"
+                  },
+                  "href": "https://www.usbank.com/",
+                  "title": "U.S. Bank"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-lbg.png",
+                    "alt": "Lloyds Banking Group"
+                  },
+                  "href": "http://www.lloydsbankinggroup.com/",
+                  "title": "Lloyds Banking Group"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-HSBC.png",
+                    "alt": "HSBC Bank"
+                  },
+                  "href": "http://www.hsbc.co.uk",
+                  "title": "HSBC Bank"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-RRD.png",
+                    "alt": "RR Donnelley"
+                  },
+                  "href": "https://www.rrdonnelley.com/",
+                  "title": "RR Donnelley"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-make-a-wish.png",
+                    "alt": "Make-A-Wish Foundation"
+                  },
+                  "href": "https://www.make-a-wish.org.uk/",
+                  "title": "Make-A-Wish Foundation"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-HP.png",
+                    "alt": "Hewlett Packard Enterprise"
+                  },
+                  "href": "https://www.hpe.com",
+                  "title": "Hewlett Packard Enterprise"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-tdbank.png",
+                    "alt": "TD Bank"
+                  },
+                  "href": "https://www.tdbank.com/",
+                  "title": "TD Bank"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-abbot.png",
+                    "alt": "Abbott Laboratories"
+                  },
+                  "href": "www.abbott.co.uk",
+                  "title": "Abbott Laboratories"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-premier-health.png",
+                    "alt": "Premier Health"
+                  },
+                  "href": "https://www.premierhealth.com/",
+                  "title": "Premier Health"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-BP.png",
+                    "alt": "British Petroleum"
+                  },
+                  "href": "https://www.bp.com/",
+                  "title": "British Petroleum"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-office-depot.png",
+                    "alt": "Lloyds Banking Group"
+                  },
+                  "href": "http://www.lloydsbankinggroup.com/",
+                  "title": "Lloyds Banking Group"
+                }
+              },
+              {
+                "imgLink": {
+                  "image": {
+                    "src": "/images/logos/logo-citibank.png",
+                    "alt": "CitiBank"
+                  },
+                  "href": "https://www.citibank.co.uk",
+                  "title": "CitiBank"
+                }
+              }
+            ]
+          }
+        ] 
+      }
+    }
+  ],
+  "links": [
+    {
+      "url": "link.pages-about",
+      "control": {
+        "label": "About us"
+      }
+    },
+
+    {
+      "url": "link.pages-careers",
+      "control": {
+        "label": "Careers"
+      }
+    },
+    {
+      "url": "link.pages-locations",
+      "control": {
+        "label": "Locations"
+      }
+    }
+  ],
+
+  "externalLinks": [
+
+    {
+      "url": "https://medium.com/buildit",
+      "control": {
+        "label": "Blog"
+      }
+    }
+  ],
+
+  "header": {
+    "url": "link.pages-homepage",
+    "light": true
+  },
+  "footer": {
+    "copy": "made with ❤️",
+    "social": [
+      {
+        "label": "Instagram",
+        "symbolId": "instagram-brand-icon",
+        "url": "https://www.instagram.com/buildit_tech"
+      },
+      {
+        "label": "Twitter",
+        "symbolId": "twitter-brand-icon",
+        "url": "https://twitter.com/buildit_tech"
+      },
+      {
+        "label": "LinkedIn",
+        "symbolId": "linkedin-brand-icon",
+        "url": "https://www.linkedin.com/company/buildit"
+      }
+    ]
+  }
+}

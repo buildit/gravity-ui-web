@@ -1,0 +1,17 @@
+<button type="button" class="grav-c-toggle-menu" aria-pressed="{{control.pressed}}" aria-label="{{control.label}}">
+  <span class="grav-c-toggle-menu__icon"></span>
+</button>
+<nav class="grav-c-nav-menu">
+  <ul>
+  {{#links}}
+    <li>
+      {{> atoms-block-link }}
+    </li>
+  {{/links}}
+  {{#externalLinks}}
+    <li class="grav-c-nav-menu__external-link">
+      {{> atoms-block-link }}
+    </li>
+  {{/externalLinks}}
+  </ul>
+</nav>

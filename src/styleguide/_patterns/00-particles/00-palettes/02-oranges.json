@@ -1,0 +1,89 @@
+{
+  "colors": [
+    {
+      "color": {
+        "name": "Dark Choco",
+        "varname": "$grav-co-primary-dark-choco",
+        "hex": "571500",
+        "wcag": {
+          "light": {
+            "small": "pass",
+            "big": "pass"
+          },
+          "dark": {
+            "small": "fail",
+            "big": "fail"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Acorn",
+        "varname": "$grav-co-primary-acorn",
+        "hex": "ad3c00",
+        "wcag": {
+          "light": {
+            "small": "pass",
+            "big": "pass"
+          },
+          "dark": {
+            "small": "fail",
+            "big": "fail"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Satsuma",
+        "varname": "$grav-co-primary-satsuma",
+        "hex": "ff7913",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "fail"
+          },
+          "dark": {
+            "small": "pass",
+            "big": "pass"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "&lsquo;Murican Cheese",
+        "varname": "$grav-co-primary-murican-cheese",
+        "hex": "FFBD59",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "fail"
+          },
+          "dark": {
+            "small": "pass",
+            "big": "pass"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Eggshell",
+        "varname": "$grav-co-primary-eggshell",
+        "hex": "ffe7c2",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "fail"
+          },
+          "dark": {
+            "small": "pass",
+            "big": "pass"
+          }
+        }
+      }
+    }
+  ]
+}

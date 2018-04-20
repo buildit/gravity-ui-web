@@ -7,6 +7,15 @@
  * without needing to know the internal directory structure of this
  * package or having to hard-code file paths in their own build
  * scripts.
+ *
+ * Note, since this file is included in the published NPM package, it
+ * must not export paths or filenames that are excluded from the published
+ * package. Refer to the 'files' section in package.json to see exactly
+ * what gets published and what does not.
+ *
+ * Any path or file data that is required for development and builds but
+ * is excluded from the published NPM package should be added to
+ * gulp/paths.js instead of this file.
  */
 
 const path = require('path');
@@ -21,11 +30,19 @@ const srcUiLibDir = path.join(srcRootDir, uiLibDirName);
 const bldUiLibDir = path.join(bldRootDir, uiLibDirName);
 
 const srcSassDir = path.join(srcUiLibDir, 'sass');
-const mainSassFilename = 'gravity.scss';
+const mainSassFilename = 'index.scss';
 const srcSassFilePath = path.join(srcSassDir, mainSassFilename);
 
-const cssFilename = 'gravity.css';
+const cssFileBasename = 'gravity';
+const cssFilename = `${cssFileBasename}.css`;
 const bldCssFilePath = path.join(bldUiLibDir, cssFilename);
+
+const symbolsBasename = 'symbols';
+const bldSvgSymbolsFilePath = path.join(bldUiLibDir, `${symbolsBasename}.svg`);
+const bldSvgSymbolsInfoFilePath = path.join(bldUiLibDir, `${symbolsBasename}.json`);
+
+const jsFilename = 'gravity.js';
+const bldJsFilePath = path.join(bldUiLibDir, jsFilename);
 
 module.exports = {
   /**
@@ -49,15 +66,26 @@ module.exports = {
   },
 
   // Expose SASS-related stuff
+  srcUiLibDir,
   srcSassDir,
   mainSassFilename,
   srcSassFilePath,
+
+  // SVG symbols (used for icons & logo)
+  symbolsBasename,
+  bldSvgSymbolsFilePath,
+  bldSvgSymbolsInfoFilePath,
+
+  // Client-side JS
+  jsFilename,
+  bldJsFilePath,
 
   // Expose root build output dir
   bldRootDir,
   bldUiLibDir,
 
   // Expose compiled CSS stuff
+  cssFileBasename,
   cssFilename,
   bldCssFilePath,
 };

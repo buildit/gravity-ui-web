@@ -1,0 +1,9 @@
+{
+  "symbols": [<% _.forEach(icons, function(icon, index){ if(index > 0){ %>,<% }; %>
+      {
+        "symbolId": "<%= icon.id %>",
+        "width": "<%= icon.width %>",
+        "height": "<%= icon.height %>"
+      }<% }); %>
+  ]
+}

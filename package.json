@@ -1,19 +1,21 @@
 {
   "name": "@buildit/gravity-ui-sass",
-  "version": "0.2.0",
+  "version": "0.7.0",
   "description": "A SASS UI library from the Buildit's Gravity design system",
   "main": "index.js",
   "files": [
     "index.js",
-    "dist/css/gravity.css",
-    "src/ui-lib/"
+    "dist/ui-lib/",
+    "src/ui-lib/",
+    "eyeglass-exports.js"
   ],
   "scripts": {
+    "clean": "gulp clean",
     "build": "gulp",
     "styleguide": "gulp styleguide",
     "start": "gulp serve",
     "test": "npm run lint",
-    "lint": "stylelint src/ui-lib/sass/**/*.scss"
+    "lint": "stylelint 'src/ui-lib/sass/**/*.scss'"
   },
   "repository": {
     "type": "git",
@@ -41,42 +43,52 @@
     "Matteo Pescarin (http://peach.smartart.it)",
     "Ben Oakenfull",
     "Marcos Peebles",
-    "James Nash (http://cirrus.twiddles.com/)"
+    "James Nash (http://cirrus.twiddles.com/)",
+    "Valerio Francescangeli"
   ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/buildit/gravity-ui-sass/issues"
   },
   "homepage": "https://github.com/buildit/gravity-ui-sass#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "chalk": "^1.1.3",
-    "eyeglass": "^1.2.1",
+    "browser-sync": "^2.23.6",
+    "chalk": "^2.4.0",
+    "del": "^3.0.0",
+    "eyeglass": "^1.5.0",
     "gulp": "^4.0.0",
-    "gulp-sass": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-svg-symbols": "^3.1.0",
+    "gulp-svgo": "^1.4.0",
     "minimist": "^1.2.0",
     "@pattern-lab/patternlab-node": "^3.0.0-alpha.5",
     "@pattern-lab/patternengine-node-mustache": "^2.0.0-alpha.1",
     "@pattern-lab/styleguidekit-assets-default": "^4.0.0-alpha.2",
     "@pattern-lab/styleguidekit-mustache-default": "^4.0.0-alpha.1",
-    "modularscale-sass": "^3.0.4",
-    "normalize-scss": "^7.0.0",
-    "stylelint": "^8.4.0",
-    "stylelint-config-sass-guidelines": "^4.1.0",
-    "stylelint-order": "^0.8.0",
-    "stylelint-scss": "^2.2.0"
+    "styleguidekit-assets-default": "^3.5.2",
+    "styleguidekit-mustache-default": "^3.1.0",
+    "stylelint": "^9.2.0",
+    "stylelint-config-sass-guidelines": "^5.0.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.0.1"
   },
   "dependencies": {
-    "@buildit/gravy": "github:buildit/gravy#v2.0.0-beta.1"
+    "@buildit/gravy": "^2.0.1",
+    "modularscale-sass": "^3.0.5",
+    "normalize-scss": "^7.0.1"
   },
   "engines": {
-    "node": "^8.9.4",
-    "npm": "^5.6.0"
+    "node": "^8.11.1",
+    "npm": "^5.8.0"
   },
   "eyeglass": {
     "sassDir": "src/ui-lib/sass",
     "name": "gravity-ui-sass",
-    "exports": false,
-    "needs": "^1.3.0"
+    "exports": "eyeglass-exports.js",
+    "needs": "^1.4.1"
   }
 }

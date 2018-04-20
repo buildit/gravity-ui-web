@@ -5,6 +5,9 @@
     "medium" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "long" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
+  "preformatted-text": {
+    "ascii": "(╯°Д°)╯︵ ┻━┻"
+  },
   "term": {
     "label": "Consectetur",
     "definition": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros."
@@ -24,5 +27,120 @@
   "system": {
     "input": "npm install @buildit/gravity-ui-sass",
     "output": "Press any key to continue..."
+  },
+  "footer": {
+    "copy": "something something something",
+    "social": [
+      {
+        "label": "Something",
+        "symbolId": "buildit-logo",
+        "url": "#"
+      },
+      {
+        "label": "Something",
+        "symbolId": "buildit-logo",
+        "url": "#"
+      }
+    ]
+  },
+  "location": {
+    "name": "London",
+    "addressline1": "2 Finsbury Avenue",
+    "addressline2": "",
+    "city": "London",
+    "postcode": "EC2M 2PA",
+    "country": "UK",
+    "img": "http://via.placeholder.com/425x300/000000/ffffff",
+    "img-alt": "Placeholder image"
+  },
+  "job": {
+    "title": "Lead Implementation Planner",
+    "type": "full-time"
+  },
+  "jobs": [
+    {}, {}, {}
+  ],
+  "locations": [
+    {}, {}, {}, {}, {}, {}, {}, {}, {}
+  ],
+  "steps": [
+    {
+      "title": "This is the first step",
+      "description": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros."
+    },
+    {
+      "title": "This is the second step",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "title": "This is the third step",
+      "description": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros."
+    }
+  ],
+  "img-cards": [
+    {}, {}, {}, {}, {}
+  ],
+  "card": {
+    "image": {
+      "src": "../../images/img-random-1.png",
+      "alt": "A placeholder image with an arbitrary aspect ratio."
+    },
+    "title": "Labore et dolore magna aliqua",
+    "content": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros."
+  },
+
+  "imgLinksItems": [
+    {}, {}, {}, {}, {}
+  ],
+  "imgLink": {
+    "image": {
+      "src": "../../images/img-random-1.png",
+      "alt": "A placeholder logo image with an arbitrary aspect ratio."
+    },
+    "href": "http://example.com",
+    "title": "Vestibulum pharetra magna aliqua"
+  },
+  "inlineItems": [
+    {}, {}, {}
+  ],
+  "item": {
+    "href": "http://example.com",
+    "title": "an interesting title",
+    "content": "A Linked Item"
+  },
+  "hero": {
+    "pullout": "Big, attention-grabbing headline",
+    "paragraph": "Witty subtitle",
+    "cta-label": "Clickbaity label",
+    "url": "#"
+  },
+  "section": {
+    "title": "This is the title for a section",
+    "class": "grav-o-container",
+    "content": [
+      {
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "orderedList": {
+          "items": ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit.", "Aliquam tincidunt mauris eu risus.", "Vestibulum auctor dapibus neque."]
+        }
+      },
+      {
+        "blockquote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+      },
+      {
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "inlineRow": true
+      },
+      {
+        "imgCards": true
+      },
+      {
+        "imgLinks": true
+      }
+    ]
   }
 }

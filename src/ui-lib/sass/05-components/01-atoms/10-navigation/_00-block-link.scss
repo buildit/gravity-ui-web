@@ -1,0 +1,33 @@
+.grav-c-block-link {
+  display: inline-block;
+  padding: $grav-sp-inset-squished-xs;
+  padding-right: $grav-sp-m;
+  border: 0;
+  border-right-width: $grav-st-thickness-large;
+  background-color: $grav-co-fg;
+  border-style: $grav-st-style;
+  color: $grav-co-bg;
+  text-decoration: none;
+  white-space: nowrap;
+
+
+  &[href] {
+    &:link,
+    &:visited {
+      border-color: $grav-co-interactive-secondary;
+      color: $grav-co-interactive-secondary-contrast;
+    }
+
+    &:active,
+    &:hover {
+
+      border-color: $grav-co-accent-secondary;
+      color: $grav-co-neutral-ashtray;
+    }
+  }
+
+  &:not([href]) {
+    border-color: $grav-co-bg;
+    color: $grav-co-bg;
+  }
+}

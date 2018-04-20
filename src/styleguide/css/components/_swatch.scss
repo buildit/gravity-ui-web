@@ -1,0 +1,63 @@
+/** @define sg-swatch */
+.sg-swatch {
+  display: block;
+  height: 6em;
+  margin-bottom: 0.3em;
+}
+
+/** @define sg-swatch-check */
+.sg-swatch-check {
+  display: grid;
+  height: 6em;
+  grid-template-columns: 50% 50%;
+}
+
+.sg-swatch-check__group {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: 50% 50%;
+  justify-self: center;
+  list-style-type: none;
+}
+
+.sg-swatch-check__item {
+  align-self: end;
+  text-align: center;
+}
+
+.sg-swatch-check__item:nth-child(1) {
+  margin-right: 5px;
+}
+
+.sg-swatch-check__item::before {
+  content: 'A';
+  display: block;
+  height: 1em;
+}
+
+.sg-swatch-check__item--light::before {
+  color: $grav-co-neutral-dirty-snow-white;
+}
+
+.sg-swatch-check__item--dark::before {
+  color: $grav-co-neutral-charcoal;
+}
+
+.sg-swatch-check__item--small::before {
+  font-size: 12px;
+}
+
+.sg-swatch-check__item--big::before {
+  font-size: 18px;
+}
+
+.sg-swatch-check__item-label {
+  padding: 2px 4px;
+  background-color: $grav-co-neutral-charcoal;
+  border-radius: 5px;
+  color: $grav-co-neutral-dirty-snow-white;
+  font-size: 0.7em;
+  text-align: center;
+  text-transform: uppercase;
+}

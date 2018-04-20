@@ -1,0 +1,7 @@
+{
+  "control": {
+    "type": "button",
+    "label": "Do something"
+  },
+  "symbolId": "menu"
+}

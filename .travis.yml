@@ -1,34 +1,60 @@
 language: node_js
 node_js:
-  - "lts/*"
-cache:
-  directories:
-    - "node_modules"
+  - lts/*
+before_install:
+  - npm i -g npm@~5.8.0
 
 env:
-  - PROD_TAG_REGEXP="^v[0-9]+\.[0-9]+\.[0-9]+.*" #Regexp for release (deploy to Prod) tags
-
+  global:
+    - NPM_TAG_REGEXP="^v([0-9]{1,3}\.){2}[0-9]{1,3}.*$"
+    - NPM_USER_EMAIL_ADDRESS="buildit.dev@gmail.com"
+    - NPM_USERNAME="buildit.dev"
+    - PROD_TAG_REGEXP="^v[0-9]+\.[0-9]+\.[0-9]+.*"
+    - secure: "yuOsuEAFh3xvvhiAa1qFqdDJ8UY0jnmFB2Vb5fa88yTlQO8FCV2VWH45vlOAZ1EhEeAo/8LFO1iEV/8ykMQICqTeS+dXUxrut8PpIAccgfRO0OnuebY2KKSADbBKsw+lsMPXuaFNxn0mv0vuHMulX0oPR8f/Zx0ZJGf2jo7NuhUPvJhZPIT8cT9VxAdgk7wMdJ6qGIOla5e8icM14JS9lLg+GegL3ks34OZRJW1ciWPAgz/Qp437ByTutHsaRu+/5GXbCLS0k+vSQOzgB6vpcnG4YAPmVXrcFl2LfM3Tqc7yaC/JjPCY44RXvf3SGlsUy/12pbOZ4YYZ5eCXMwN+605YAHYL2uLelYNmhhTy5pYmJwFeO0MaBzS8QSmilhA6GPd0pjQiV/vA9uF4Mj9eUTK6+Tnw67oAWjND5JKr7cbKzVzK74Y8ekFGJbRCRGR0JoOuT5tDQ49tuYBFGiUc+WeE2FcdkLL6TDF3FJHVQ2VjYm6o4oyK7DhOizS606A1XtwvWWElrsTWLWPldKJiQLvxdAmYbWHzQ0DC3LLsA5ZAp3ZpSBCZKyAivMGpWaHkg/Dl9Y3O96cHQVDZepF/lftGoR2lhxNEzhH0USotJpbPdaKyo+4f1uDm7shzCduBYIngd2eTb/NLjCf5CkLjcOuGr50l7xY6g2UCaDBBtQM=" #SLACK_NOTIFICATION_URL
+    - secure: "a9edwLnErePBD3w7nEEkEQBm4XGrFH0SCuQfHx9PHsANP2YTwI7CThmZsyqFYj0SH+h3y16l6jm1gU9HeFFJfbWS5x/JbCJi3U4sX0O6mxANmM5VTR+yC0J85Xzdn/GIHWy842ly1OtEVggtQt+TJPGZaZmjIwZxTrbQNlHprbSENvrJkggUa/x41iwst1C0UalTyhLt/bo2Co3xN7Ct+QOdz6CeBLSVvB0FT3yyONzRR9C8c56qHEh+rZtU1haUZKkEn+4esn72atQ8uVSmvOq9VU02HHsU04Sc2NdceLzrWkPTgpMxoX3ZpHb0EO5Kf6FMmqoPkNynmF/sXCm+zfblSTY/zgXm7BdrThNIFaLMGOSCY/apIibZcO4CimFjT9ohMR5tDs3tWRyrILmmHlU6A5w9BANIGwHiJYr3wn9l4vNBafXAnUTLQU0qWDYB3lcIAXHNiV6KZ4f3CNc/FRU9tf+yN2wxCX3JY5oPFLKZ7SJ6E+t7LpVUwdyxsP+qF9JkoiVp7pi4kUjEtfnT9cdg6PHQ2buRV6Oh1wPNup8+HgDL3Go5hfok8eDisX4V3mTYTlUt9LfJ/vIOIlNDkQ9ZcZm8KhtdGMjGSUKvd5GdLiI/LW2kdlNOXUpG5XvkN8BhqjJfQbihjU5g2D0vFtw4HArz+ZWAtV8xCZ1Dbxg=" #ENCRYPTD_NPM_AUTH_TOKEN environment variable
 install:
-  - npm install
-
+  - npm ci
 script:
   - npm run-script styleguide
-
 before_deploy:
   - pip install --user awscli
-
 deploy:
   # deploy develop to Staging
   - provider: script
-    script: ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION}
+    script:
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css"
     skip_cleanup: true
     on:
       branch: develop
-
   # deploy tags matching v#.#.*  to Production
   - provider: script
-    script: ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION}
+    script:
+      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css"
     skip_cleanup: true
     on:
       tags: true
       condition: $TRAVIS_TAG =~ $PROD_TAG_REGEXP
+  # deploy tags matching v#.#.#  to NPM Registry
+  - provider: npm
+    email: "$NPM_USER_EMAIL_ADDRESS"
+    api_key:
+      secure: "sKOQoweksfJo6O5ymSG2uBjmWHAf5FaU3K5srE4COj0M3nEiepr3pRPAtxm1lHhw6nY3BbKaYcP/nmv01dXyBBWzcecyOIifL3Xm1ChPqEgB7W8QB2NlbueJhmeVsmfpYFaMik/Je0iMMHYocGMXCwaPzTJFdzXA7uVpts4dcEf0rT+MMriQvZKucoF4LMGkkScw7XTVwW4909X/QL2tF0IaoMaEKDKV2IuRsFgRCgWSTa42cwDkD4aQ635A9Vks9vi5ncR5crDE6KA7wgnm+iooStFxvEmwyLUMvRkYD1wjmVquA7nU3+c/ZDBDks1G5oUbXdI74lsSXIJ4h3Q701ym1uULj6AXMyo054TPgYe1AmePyYDPHsnDwsW2sRy7xzzgXL8RfpmDzBKeRF4Z0MQ3o6/VM/pnubZjoZlYtc961ugTj0zUY9yiVtJNZspnE4E+4qOoILYYexrNt86CrzrVOlKFVd+nsnuZeBHUNODcd3HTxCKCtMDgEyCsUHc59iovS/u4PmHqWWzarpjZ13Jzy/kN8Zce9CrQAZuqpZfxuA1L/xOz5tQAtUR8hCzoinT2MyTBKkhIxffQxkBEFHiEEbD75IEY1GIrS57IK42+KBeufL+61+ns2kBbicwrBJxhUSxKhS1MR3gwfqtKyHztH2bKwbPLY3SEiwoeXTU="
+    skip_cleanup: true
+    on:
+      repo: buildit/gravity-ui-sass
+      tags: true
+      condition: "$TRAVIS_TAG =~ $NPM_TAG_REGEXP"
+notifications:
+  slack:
+    rooms:
+      - secure: lqpbNypYyLua0TCRYQvi8QXoVyTtUdohsvIERQA4NMt3gW2/8NHXNGDUAFfJq8fYTUY+cF9lzunYngeInsb/x54fQbNqAL6/V6NxVDaUyKAKJsBKfngeKAfiAkp7JPQlEoE9uRXmvalIBTTwcv26/uwgqeXimF9DTRpa56PYI6LZX6Y1+A8DEfUd5rXzT6NrehawsSUsSeZCo5Mla/umbKuAkEzqCuiXBdgcDOn9IoqMbRRq004fC0Gh8ysjf5Oap86bdWeRomufBz9Cf0ewXUD74EuRlTHj1Ykfpb0U95LsjMSyrsjxBmt9j2ElAt+vlBHKCZi40FNZIHaXYaolhsTWy9iwXs2txcFbfHBgvnJ/2sKFTaVU6hDQuWV7wga/Hd3JAvoyRiDBEzV2iokQBzmkv3xw+hdw/hUX0/BavMuiRVpgbMB4SRl5auCLBdJ6Of/bTX4RNOyeDWG944RmdO9xbiAJd8sMtf2sp239zxkZUzZ1sRTZs1TbsOtJRJ2TbFLpi4EWQTMQkc7UXWGdyLX0vX9sLfoYatNYchtcEuXBPsSmAwNE/nfv7B4WKTTCgSn5mmGqUadqpc0/t1Jk7P9ZLla9Y4JNj66U4sR1yuT25mcCbxaz3tr2VY7QUFQPt9CbMUUGTRRIK8sLRydoCSVs+KXgMvmZcLUhNlwsf/k=
+    on_pull_requests: true
+    on_success: change
+after_deploy:
+  - ./scripts/notify.sh

@@ -1,0 +1,48 @@
+.grav-c-job-list {
+  * + & {
+    margin-top: $grav-sp-xl;
+  }
+
+  @media all and (min-width: gravy-breakpoint(regular)) {
+    display: flex;
+    align-items: baseline;
+  }
+
+  > header {
+    width: 30%;
+    margin-right: $grav-sp-m;
+    flex-shrink: 0;
+  }
+
+  > ul {
+    padding-left: 0;
+    flex-grow: 1;
+    list-style-type: none;
+
+    @media all and (min-width: gravy-breakpoint(small)) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media all and (min-width: gravy-breakpoint(regular)) {
+      margin-top: 0;
+    }
+  }
+
+  li {
+    + li {
+      margin-top: $grav-sp-s;
+    }
+
+    @media all and (min-width: gravy-breakpoint(small)) {
+      $jobs-per-row: 2;
+      width: calc((100% - #{$grav-sp-m}) / #{$jobs-per-row});
+
+      // Remove top margin from first row of job cards
+      &:nth-child(-n + #{$jobs-per-row}) { // stylelint-disable-line max-nesting-depth
+        margin-top: 0;
+      }
+    }
+  }
+}

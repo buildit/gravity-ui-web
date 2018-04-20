@@ -1,0 +1,89 @@
+{
+  "colors": [
+    {
+      "color": {
+        "name": "Charcoal",
+        "varname": "$grav-co-neutral-charcoal",
+        "hex": "241c1c",
+        "wcag": {
+          "light": {
+            "small": "pass",
+            "big": "pass"
+          },
+          "dark": {
+            "small": "fail",
+            "big": "fail"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Asphalt",
+        "varname": "$grav-co-neutral-asphalt",
+        "hex": "544848",
+        "wcag": {
+          "light": {
+            "small": "pass",
+            "big": "pass"
+          },
+          "dark": {
+            "small": "fail",
+            "big": "fail"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Warm Grey",
+        "varname": "$grav-co-neutral-warm-grey",
+        "hex": "8b8080",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "pass"
+          },
+          "dark": {
+            "small": "fail",
+            "big": "pass"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Ashtray",
+        "varname": "$grav-co-neutral-ashtray",
+        "hex": "c0bbbb",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "fail"
+          },
+          "dark": {
+            "small": "pass",
+            "big": "pass"
+          }
+        }
+      }
+    },
+    {
+      "color": {
+        "name": "Dirty Snow White",
+        "varname": "$grav-co-neutral-dirty-snow-white",
+        "hex": "f7f5f5",
+        "wcag": {
+          "light": {
+            "small": "fail",
+            "big": "fail"
+          },
+          "dark": {
+            "small": "pass",
+            "big": "pass"
+          }
+        }
+      }
+    }
+  ]
+}

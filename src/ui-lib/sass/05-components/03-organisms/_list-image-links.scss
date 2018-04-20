@@ -1,0 +1,51 @@
+.grav-c-list-image-links {
+  $image-width-m: calc(100% * (1/6) - #{$grav-sp-m});
+  $image-width-l: calc(100% * (1/6) - #{$grav-sp-l});
+
+  column-gap: $grav-sp-m;
+  columns: 2;
+  list-style-type: none;
+
+  a {  
+    font-size: 0;
+    
+    img {
+      filter: grayscale(100%);
+      transition: all $grav-tr-speed-slower; 
+    }
+
+    img:hover,
+    img:focus,
+    img:active {
+      filter: none;
+      transform: translateY(-5px) scale(1.1);
+    }
+  }
+
+  >li {
+    margin-top: 0;
+    line-height: 0;
+  }
+
+  @media all and (min-width: gravy-breakpoint(medium)) {
+    display: flex;
+    flex-wrap: wrap;
+    
+    > li {
+      flex: 1 0 $image-width-m;
+      margin-right: $grav-sp-m;
+    }
+  }
+
+  @media all and (min-width: gravy-breakpoint(extra-large)) {
+    > li {
+      flex: 1 0 $image-width-l;
+      margin-right: $grav-sp-l;
+    }
+  }
+}
+
+
+ 
+
+

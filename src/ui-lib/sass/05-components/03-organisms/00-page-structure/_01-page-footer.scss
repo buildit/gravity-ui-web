@@ -1,0 +1,60 @@
+footer[role=contentinfo] {
+  @include typi('small-text');
+  margin-top: vr(3);
+  padding: $grav-sp-l 0;
+  background-color: $grav-co-neutral-charcoal;
+  color: $grav-co-neutral-dirty-snow-white;
+
+
+  > * {
+    @include grav-l-container;
+    padding-bottom: $grav-sp-s;
+    text-align: center;
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  a[href]:link,
+  a[href]:visited {
+    color: $grav-co-neutral-dirty-snow-white;
+  }
+
+  a[href]:hover {
+    color: $grav-co-neutral-ashtray;
+  }
+
+  svg {
+    display: block;
+    width: auto;
+    height: 1em;
+    margin: 0 auto;
+  }
+
+  .grav-c-logo {
+    border-bottom: 1px solid $grav-co-neutral-dirty-snow-white;
+
+    &:hover {
+      border-bottom-color: $grav-co-neutral-ashtray;
+    }
+  }
+
+  .grav-c-icon {
+    height: 1.5em;
+    fill: $grav-co-neutral-dirty-snow-white;
+
+    &:hover {
+      fill: $grav-co-neutral-ashtray;
+    }
+  }
+
+  ul {
+    justify-content: center;
+  }
+
+  /* stylelint-disable-next-line selector-no-qualifying-type */
+  &.grav-c-footer-no-margin {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,53 @@
+.grav-c-nav-menu {
+  $trigger-breakpoint: gravy-breakpoint(medium);
+  $items-per-row: 4;
+  width: 100%;
+  text-align: right;
+
+  @media (min-width: $trigger-breakpoint) {
+    width: auto;
+  }
+
+  > ul {
+    width: 100%;
+    margin-top: $grav-sp-s;
+    padding: 0;
+    list-style-type: none;
+
+    @media (min-width: $trigger-breakpoint) {
+      display: flex;
+      margin-top: 0;
+      text-align: right;
+    }
+  }
+
+  li {
+    margin: 0;
+
+    @media (min-width: $trigger-breakpoint) {
+      text-align: center;
+    }
+  }
+
+  li:not(#{&}__external-link) + li#{&}__external-link {
+    margin-top: $grav-sp-s;
+
+    @media (min-width: $trigger-breakpoint) {
+      margin-top: 0;
+      margin-left: $grav-sp-s;
+    }
+  }
+
+
+  // styling of the menu links
+  .grav-c-block-link {
+    @media (min-width: $trigger-breakpoint) {
+      display: inline-block;
+      height: 100%;
+      padding-right: $grav-sp-s;
+      border-right-width: 0;
+      border-bottom-width: $grav-st-thickness;
+    }
+
+  }
+}

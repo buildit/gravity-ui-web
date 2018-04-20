@@ -1,0 +1,13 @@
+main {
+  margin-top: 0;
+
+  // Expand to fill remaining viewport height between header
+  // and footer on short pages, so that main content does
+  // not appear vertically centered on the page.
+  flex-grow: 1;
+
+  > h1:first-child {
+    margin-top: $grav-sp-l;
+  }
+
+}

@@ -9,9 +9,12 @@
 ******************************************************/
 
 const gulp = require('gulp');
+const sass = require('gulp-sass');
+const eyeglass = require('eyeglass');
+const rename = require("gulp-rename");
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
-
+const pkgPaths = require('./paths.js');
 const browserSync = require('./browsersync.js');
 
 const taskNamePrefix = 'patternlab:';
@@ -19,6 +22,62 @@ const taskNamePrefix = 'patternlab:';
 //read all paths from our namespaced config file
 const config = require('../patternlab-config.json');
 const patternlab = require('@pattern-lab/patternlab-node')(config);
+
+function paths() {
+  return config.paths;
+}
+
+/******************************************************
+ * PRE-BUILD TASKS
+ * Copies / creates any generated data or patterns that
+ * are then processed by Pattern Lab in the usual way
+******************************************************/
+
+// Exported array of glob patterns that clean tasks can use to
+// delete any files generated at build-time
+const generatedFileGlobs = [];
+
+const generatedPatternsDir = pkgPaths.normalizePath(paths().source.patterns, '_generated');
+generatedFileGlobs.push(path.join(generatedPatternsDir, '*'));
+generatedFileGlobs.push('!' + path.join(generatedPatternsDir, 'README.md')); // Prevent README.md from being deleted
+
+function preSvgSymbolsTask () {
+  return gulp.src(pkgPaths.bldSvgSymbolsFilePath)
+    .pipe(rename('symbols.mustache'))
+    .pipe(gulp.dest(generatedPatternsDir));
+};
+preSvgSymbolsTask.displayName = taskNamePrefix + 'pre:symbols';
+preSvgSymbolsTask.description = 'Copies Gravity\'s symbols.svg file to the patterns folder.';
+
+
+const generatedSymbolInfoFilename = '00-svg-symbols.json';
+const generatedSymbolInfoDir = pkgPaths.normalizePath(paths().source.patterns, '00-particles', '05-logos-and-icons');
+generatedFileGlobs.push(path.join(generatedSymbolInfoDir, generatedSymbolInfoFilename));
+
+function preSvgSymbolsInfoTask () {
+  return gulp.src(pkgPaths.bldSvgSymbolsInfoFilePath)
+    .pipe(rename(generatedSymbolInfoFilename))
+    .pipe(gulp.dest(generatedSymbolInfoDir));
+};
+preSvgSymbolsInfoTask.displayName = taskNamePrefix + 'pre:symbols-info';
+preSvgSymbolsInfoTask.description = 'Copies Gravity\'s symbols.json file to the patterns folder.';
+
+
+const preBuildTask = gulp.parallel(preSvgSymbolsTask, preSvgSymbolsInfoTask);
+
+
+/******************************************************
+ * COPY TASKS
+******************************************************/
+
+function copyCssTask () {
+  return gulp.src(pkgPaths.normalizePath(paths().source.css) + '/**/*.scss')
+    .pipe(sass(eyeglass(sass.sync().on('error', sass.logError))))
+    .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.css)))
+    .pipe(browserSync.stream());
+};
+copyCssTask.displayName = taskNamePrefix + 'cp:css';
+copyCssTask.description = 'Copies CSS files from source to dist folder.';
 
 
 /******************************************************
@@ -88,10 +147,21 @@ plBuildTask.description = 'Compiles the patterns and frontend, outputting to con
 
 
 /******************************************************
- * WATCH TASK
+ * WATCH TASKS
 ******************************************************/
 
-function plWatchTask() {
+function plWatchSassTask() {
+  gulp.watch(
+    pkgPaths.normalizePath(paths().source.css, '**', '*.scss'),
+    { awaitWriteFinish: true },
+    gulp.series(copyCssTask, browserSync.reloadCSS)
+  );
+}
+plWatchSassTask.displayName = taskNamePrefix + 'css:watch';
+plWatchSassTask.description = 'Watches for changes to styleguide SASS and compiles to CSS.';
+
+
+function plWatchSgTask() {
   return patternlab.build({
     watch: true,
     cleanPublic: config.cleanPublic
@@ -99,6 +169,11 @@ function plWatchTask() {
     // do something else when this promise resolves
   });
 }
+plWatchSgTask.displayName = taskNamePrefix + 'sg:watch';
+plWatchSgTask.description = 'Watches for changes to styleguide source files.';
+
+
+const plWatchTask = gulp.parallel(plWatchSassTask, plWatchSgTask);
 plWatchTask.displayName = taskNamePrefix + 'watch';
 plWatchTask.description = 'Builds the styleguide and starts watching styleguide source files.';
 
@@ -120,6 +195,14 @@ plServeTask.description = 'Builds styleguide and launches Pattern Lab\'s built-i
 
 
 module.exports = {
+  // Pre-build tasks
+  preSvgSymbolsTask,
+  preSvgSymbolsInfoTask,
+  preBuildTask,
+
+  // Copy tasks
+  copyCssTask,
+
   // CLI
   plVersionTask,
   plHelpTask,
@@ -131,9 +214,12 @@ module.exports = {
   // Build
   plBuildTask,
 
-  // Watch
+  // Watch tasks
   plWatchTask,
 
   // Serve
   plServeTask,
+
+  // Generated file paths
+  generatedFileGlobs
 }

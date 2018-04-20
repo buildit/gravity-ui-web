@@ -1,0 +1,12 @@
+<footer role="contentinfo" class="{{styleModifier}}">
+  <p>{{footer.copy}} <a href="{{{url}}}">{{> atoms-logotype(label: "buildit @ wipro digital") }}</a></p>
+  <ul class="grav-c-list-horizontal">
+    {{#footer.social}}
+      <li>
+        <a href="{{url}}">
+          {{> atoms-icon }}
+        </a>
+      </li>
+    {{/footer.social}}
+  </ul>
+</footer>
