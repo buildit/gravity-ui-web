@@ -5,6 +5,16 @@
 header[role=banner] {
   background-color: $grav-co-neutral-charcoal;
 
+  a {
+    &[href] {
+      @include gravy-font(primary);
+    }
+
+    &:not([href]) {
+      @include gravy-font(primary, bold);
+    }
+  }
+
   &.is-light { // stylelint-disable selector-no-qualifying-type
     background-color: transparent;
 
