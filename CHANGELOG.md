@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Fixed
+- Toggle buttons (incl. hamburger menu button) now work in IE11
+- Header now has normal height in IE11 on small screens
 
 
 ## [0.7.0] - 2018-04-19
