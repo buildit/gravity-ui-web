@@ -41,6 +41,26 @@ function svgSymbolsTask () {
         },
         {
           removeDimensions: true
+        },
+        {
+          sortAttrs: true
+        },
+        {
+          // Our SVG symbols should be shapes only,
+          // therefore removing styling attributes.
+          // If this breaks the appearance of an SVG, then the
+          // SVG file needs fixing.
+          removeAttrs: {
+            attrs: [
+              'fill',
+              'font-.*',
+              'letter-.*',
+              'opacity',
+              'stroke',
+              'style',
+              'word-.*'
+            ]
+          }
         }
       ]
     }))
