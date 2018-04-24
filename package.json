@@ -75,6 +75,7 @@
   },
   "dependencies": {
     "@buildit/gravy": "^2.0.1",
+    "gulp-cheerio": "^0.6.3",
     "modularscale-sass": "^3.0.5",
     "normalize-scss": "^7.0.1"
   },
