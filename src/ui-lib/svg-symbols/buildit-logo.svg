@@ -5,36 +5,71 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   aria-labelledby="buildit-logo-title"
-   viewBox="0 0 260 260"
-   height="260"
-   width="260">
-  <metadata>
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Buildit icon</dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <title id="buildit-logo-title">Buildit icon</title>
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="933.33331"
+   height="933.33331"
+   viewBox="0 0 700 700"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg10"
+   sodipodi:docname="buildit-logo.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1483"
+     inkscape:window-height="1108"
+     id="namedview12"
+     showgrid="false"
+     inkscape:zoom="0.25285714"
+     inkscape:cx="462.71186"
+     inkscape:cy="466.66667"
+     inkscape:window-x="823"
+     inkscape:window-y="43"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg10"
+     units="px" />
+  <metadata
+     id="metadata2">
+Created by potrace 1.11, written by Peter Selinger 2001-2013
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <ellipse
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.7548129;image-rendering:auto"
+     id="path4560"
+     cx="350"
+     cy="349.99997"
+     rx="350"
+     ry="350.00003"
+     class="grav-c-icon__secondary-element" />
   <g
-     transform="translate(0,-792.36217)"
-     id="layer1">
-    <rect
-       y="792.36218"
-       x="0"
-       height="260"
-       width="260"
-       id="rect4136"
-       style="opacity:0.98999999;fill:#241c1c;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+     transform="matrix(0.1,0,0,-0.1,0,700)"
+     id="g8"
+     style="fill:#000000;stroke:none">
     <path
-       d="m 133.89887,887.2724 q 18.19474,0 31.19098,9.09737 13.25616,9.09736 20.01421,24.43293 7.01797,15.07564 7.01797,33.27037 0,18.45466 -7.2779,33.79023 -7.01797,15.3356 -20.27413,24.4329 -12.99624,8.8375 -30.67113,8.8375 -22.87338,0 -37.949019,-13.5161 l -1.299624,10.9168 -26.772254,0 0,-194.94358 29.111578,0 0,77.19767 Q 113.10489,887.2724 133.89887,887.2724 Z M 130,996.70074 q 14.81571,0 23.39323,-11.69662 8.83745,-11.95654 8.83745,-30.93105 0,-18.97451 -8.83745,-30.67112 Q 144.81571,911.70533 130,911.70533 q -16.37526,0 -25.47263,11.17677 -9.097368,11.17676 -9.097368,31.19097 0,20.27414 9.097368,31.4509 9.09737,11.17677 25.47263,11.17677 z"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:medium;line-height:125%;font-family:Cabin;-inkscape-font-specification:'Cabin Semi-Bold';letter-spacing:0px;word-spacing:0px;fill:#f7f5f5;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="path4162" />
+       d="m 3285,6644 c -159,-13 -565,-81 -581,-97 -2,-2 -3,-401 -2,-886 l 3,-883 50,39 c 328,257 782,347 1208,239 602,-153 1012,-740 1044,-1496 17,-406 -87,-801 -294,-1114 -79,-120 -262,-309 -368,-378 -148,-97 -326,-169 -495,-199 -116,-21 -421,-18 -545,5 -217,40 -430,136 -578,259 -26,22 -50,38 -52,35 -2,-2 -9,-44 -15,-93 -5,-50 -13,-107 -16,-127 l -6,-38 h -324 -324 v 2175 c 0,1196 -2,2175 -5,2175 -10,0 -208,-121 -275,-168 C 1269,5783 923,5385 686,4913 522,4586 423,4253 368,3850 352,3725 352,3275 368,3150 423,2747 522,2414 686,2087 1131,1200 1963,579 2945,401 c 214,-38 298,-45 555,-45 257,0 341,7 555,45 982,178 1814,799 2259,1686 164,327 263,660 318,1063 7,56 12,199 12,350 0,257 -7,341 -45,555 -178,982 -799,1814 -1686,2259 -318,159 -648,260 -1021,311 -104,15 -505,27 -607,19 z"
+       id="path4"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 3395,4503 c -150,-18 -316,-85 -412,-165 -196,-163 -306,-431 -320,-783 -18,-429 94,-754 325,-947 65,-54 211,-123 307,-144 108,-24 295,-24 390,1 171,43 301,139 412,305 120,179 183,423 183,711 0,307 -69,548 -211,740 -81,110 -177,187 -295,237 -94,39 -264,60 -379,45 z"
+       id="path6"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
