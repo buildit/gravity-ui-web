@@ -8,6 +8,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 
+## [0.8.0] - 2018-04-25
+### Added
+- Hollow version of Buildit logo
+- Github icon
+- SVG symbols now have IDs on their `<title>` elements
+- New utility class `grav-u-max-word-count-m`. Useful to limit `p` max width for better readability
+
+### Changed
+- Buildit logo has been updated to new design
+- Inline SVG component now uses `aria-labelledby` to reference SVG symbol's title
+- Updated `favicon.ico` to new Buildit icon.
+- BREAKING: Renamed social media SVG IDs to `icon-*`
+- Inverted font-weight on `block-link`, now bold is used for the active link
+
+### Fixed
+- Toggle buttons (incl. hamburger menu button) now work in IE11
+- Header now has normal height in IE11 on small screens
+- SVG validation errors
+
+
 ## [0.7.0] - 2018-04-19
 ### Added
 - `.grav-o-container-banner` CSS class & component.
