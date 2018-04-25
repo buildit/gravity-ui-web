@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Inline SVG component now uses `aria-labelledby` to reference SVG symbol's title
 - Updated `favicon.ico` to new Buildit icon.
 - BREAKING: Renamed social media SVG IDs to `icon-*`
+- Inverted font-weight on `block-link`, now bold is used for the active link
 
 ### Fixed
 - Toggle buttons (incl. hamburger menu button) now work in IE11
