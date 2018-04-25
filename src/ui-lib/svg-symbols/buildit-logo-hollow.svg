@@ -15,6 +15,8 @@
    id="svg10"
    sodipodi:docname="buildit-logo-hollow.svg"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <title
+     id="title1441">Buildit</title>
   <defs
      id="defs14" />
   <sodipodi:namedview
@@ -31,10 +33,10 @@
      id="namedview12"
      showgrid="false"
      inkscape:zoom="0.357594"
-     inkscape:cx="234.51991"
+     inkscape:cx="-268.84424"
      inkscape:cy="541.95843"
-     inkscape:window-x="823"
-     inkscape:window-y="43"
+     inkscape:window-x="376"
+     inkscape:window-y="156"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg10"
      units="px" />
@@ -47,7 +49,7 @@ Created by potrace 1.11, written by Peter Selinger 2001-2013
     <dc:format>image/svg+xml</dc:format>
     <dc:type
        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-    <dc:title></dc:title>
+    <dc:title>Buildit</dc:title>
   </cc:Work>
 </rdf:RDF>
 </metadata>
