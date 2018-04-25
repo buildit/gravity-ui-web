@@ -21,6 +21,10 @@
     &:hover {
       color: $grav-co-neutral-asphalt;
     }
+    
+    &:active {
+      background: transparent;
+    }
   }
 
   svg {
