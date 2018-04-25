@@ -33,7 +33,7 @@
     }
   ],
   "externalLinks": [
-  
+
     {
       "url": "https://medium.com/buildit",
       "control": {
@@ -45,17 +45,17 @@
     "copy": "made with ❤️",
     "social": [
       {
-        "label": "Instagram",
+        "titleId": "instagram-brand-icon__title",
         "symbolId": "instagram-brand-icon",
         "url": "https://www.instagram.com/buildit_tech"
       },
-      { 
-        "label": "Twitter",
+      {
+        "titleId": "twitter-brand-icon__title",
         "symbolId": "twitter-brand-icon",
         "url": "https://twitter.com/buildit_tech"
       },
-      { 
-        "label": "LinkedIn",
+      {
+        "titleId": "linkedin-brand-icon__title",
         "symbolId": "linkedin-brand-icon",
         "url": "https://www.linkedin.com/company/buildit"
       }
