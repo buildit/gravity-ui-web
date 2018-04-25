@@ -8,12 +8,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Hollow version of Buildit logo
+- Github icon
 - SVG symbols now have IDs on their `<title>` elements
 
 ### Changed
 - Buildit logo has been updated to new design
 - Inline SVG component now uses `aria-labelledby` to reference SVG symbol's title
 - Updated `favicon.ico` to new Buildit icon.
+- BREAKING: Renamed social media SVG IDs to `icon-*`
 
 ### Fixed
 - Toggle buttons (incl. hamburger menu button) now work in IE11
