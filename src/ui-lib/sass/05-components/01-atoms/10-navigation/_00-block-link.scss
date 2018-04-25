@@ -12,6 +12,8 @@
 
 
   &[href] {
+    @include gravy-font(primary);
+
     &:link,
     &:visited {
       border-color: $grav-co-interactive-secondary;
@@ -27,6 +29,7 @@
   }
 
   &:not([href]) {
+    @include gravy-font(primary, bold);
     border-color: $grav-co-bg;
     color: $grav-co-bg;
   }
