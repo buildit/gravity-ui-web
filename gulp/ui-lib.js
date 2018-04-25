@@ -3,6 +3,8 @@ const sass = require('gulp-sass');
 const svgo = require('gulp-svgo');
 const svgSymbols = require('gulp-svg-symbols');
 const rename = require("gulp-rename");
+const cheerio = require('gulp-cheerio');
+const filter = require('gulp-filter');
 
 const eyeglass = require('eyeglass');
 const chalk = require('chalk');
@@ -28,6 +30,8 @@ sassBuildTask.displayName = taskNamePrefix + 'sass';
 sassBuildTask.description = 'Compiles SASS.';
 
 
+const titleIdSuffix = '__title';
+const svgFileFilter = filter('**/*.svg', { restore: true });
 
 function svgSymbolsTask () {
   return gulp.src(paths.normalizePath(paths.srcSymbolsDir, '**', '*.svg'))
@@ -41,6 +45,26 @@ function svgSymbolsTask () {
         },
         {
           removeDimensions: true
+        },
+        {
+          sortAttrs: true
+        },
+        {
+          // Our SVG symbols should be shapes only,
+          // therefore removing styling attributes.
+          // If this breaks the appearance of an SVG, then the
+          // SVG file needs fixing.
+          removeAttrs: {
+            attrs: [
+              'fill',
+              'font-.*',
+              'letter-.*',
+              'opacity',
+              'stroke',
+              'style',
+              'word-.*'
+            ]
+          }
         }
       ]
     }))
@@ -52,8 +76,28 @@ function svgSymbolsTask () {
       templates: [
         'default-svg',
         paths.normalizePath(__dirname, 'templates', 'symbols.json')
-      ]
+      ],
+      transformData: function(svg, defaultData, options) {
+        // Add the titleIdSuffix to the data passed into our
+        // symbols.json template
+        return Object.assign(defaultData, {
+          titleIdSuffix
+        });
+      }
     }))
+    .pipe(svgFileFilter) // Exclude JSON file from passing through cheerio
+    .pipe(cheerio(function($, file) {
+      // Add an ID to the <title> element of each SVG symbol
+      // This is so that we can later reference it via
+      // aria-labelledby for better a11y.
+      $('symbol').each(function(){
+        const symbol = $(this);
+        const symbolId = symbol.attr('id');
+        const title = symbol.children('title');
+        title.attr('id', symbolId + titleIdSuffix);
+      })
+    }))
+    .pipe(svgFileFilter.restore)
     .pipe(rename({
       basename: paths.symbolsBasename
     }))
