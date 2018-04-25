@@ -28,49 +28,43 @@ header[role=banner] {
   }
 
   > div {
-    @include grav-l-container(true);
-    @include clear('after');
+    @include grav-l-container;
+
+    display: flex;
+    flex-wrap: wrap;
     padding-top: $grav-sp-m;
     padding-bottom: $grav-sp-m;
+    align-items: center;
+    justify-content: space-between;
 
     @media (min-width: gravy-breakpoint(medium)) {
-      display: grid;
-      padding-right: $grav-sp-m;
-      padding-left: $grav-sp-m;
-      align-items: center;
-      grid-template-columns: 300px 1fr;
-    }
-
-    @media (min-width: gravy-breakpoint(regular)) {
-      padding-right: 0;
-      padding-left: 0;
+      // Force nav onto same line as logo
+      flex-wrap: nowrap;
     }
   }
 
   .logo-main {
     width: 70%; // 2/3 ish of the space
-    margin: 0 $grav-sp-m;
-    float: left;
 
     @media (min-width: gravy-breakpoint(medium)) {
       width: auto;
-      margin: 0;
     }
   }
 
   .grav-c-logo {
     display: block;
+    max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
     fill: $grav-co-bg;
 
     // Bump up logo size
     @media (min-width: gravy-breakpoint(medium)) {
       height: 2.5rem;
+      max-height: none;
     }
   }
 
   .grav-c-toggle-menu {
-    margin-right: $grav-sp-m;
-    float: right;
+    flex-shrink: 0;
 
     @media (min-width: gravy-breakpoint(medium)) {
       display: none;
@@ -92,18 +86,15 @@ header[role=banner] {
   }
 
   .grav-c-nav-menu {
-    @include clear;
-    max-width: $grav-page-content-max-width;
+    // Overflow, so that right edge of navlinks is flush
+    // with screen edge
+    width: calc(100% + #{$grav-page-content-inset});
+    margin-top: 0;
+    flex-shrink: 0;
 
     @media (min-width: gravy-breakpoint(medium)) {
-      position: initial;
-      top: auto;
-      right: auto;
-      justify-self: flex-end;
-    }
-
-    @media (min-width: gravy-breakpoint(large)) {
-      max-width: $grav-page-content-max-width-large;
+      width: auto;
+      margin-left: $grav-sp-m;
     }
   }
 }

@@ -1,3 +1,7 @@
 .grav-c-icon {
   fill: currentColor;
+
+  &__secondary-element {
+    opacity: 0;
+  }
 }

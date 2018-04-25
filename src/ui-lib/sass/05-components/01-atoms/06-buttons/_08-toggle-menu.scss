@@ -1,16 +1,16 @@
 .grav-c-toggle-menu {
 
-  $grav-sp-icon: 0.35rem;
-  $grav-tr-icon-hover: 0.1rem;
+  $grav-sp-icon: 7px;
+  $grav-tr-icon-hover: 2px;
   $grav-tr-icon-rotate: 135deg;
   $grav-tr-icon-scale: 1.2;
   $grav-size-icon: 33px;
+  $grav-width-icon: 20px;
 
-  display: flex;
   height: $grav-size-icon;
   margin-top: 0;
-  border-style: hidden;
   background: none;
+  border-style: hidden;
 
   &:hover,
   &:active,
@@ -18,7 +18,7 @@
   &[aria-pressed] {
     background: none;
   }
-  
+
   &--inverted,
   .is-light & {
     &__icon,
@@ -27,10 +27,10 @@
       background-color: $grav-co-neutral-asphalt;
     }
   }
-  
+
   &__icon {
-    display: inline-block;
-    width: $grav-sp-m;
+    display: block;
+    width: $grav-width-icon;
     height: $grav-st-thickness-medium;
     position: relative;
     margin-top: auto;
@@ -40,9 +40,9 @@
     &::before,
     &::after {
       content: '';
-      display: inline-block;
+      display: block;
 
-      width: $grav-sp-m;
+      width: $grav-width-icon;
       height: $grav-st-thickness-medium;
       position: absolute;
       left: 0;
@@ -52,11 +52,11 @@
     }
 
     &::before {top: -$grav-sp-icon;}
-    
+
     &::after {top: $grav-sp-icon;}
 
   }
-  
+
   &:focus &__icon::before,
   &:active &__icon::before,
   &:hover &__icon::before {
@@ -74,10 +74,10 @@
   &[aria-pressed='true']:hover &__icon {
     transform: scale($grav-tr-icon-scale);
   }
-  
+
   &[aria-pressed='true'] &__icon {
     background-color: inherit;
-    
+
     &::before {
       top: 0;
       transform: rotate($grav-tr-icon-rotate);

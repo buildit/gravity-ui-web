@@ -88,6 +88,18 @@
     "title": "Labore et dolore magna aliqua",
     "content": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros."
   },
+
+  "imgLinksItems": [
+    {}, {}, {}, {}, {}
+  ],
+  "imgLink": {
+    "image": {
+      "src": "../../images/img-random-1.png",
+      "alt": "A placeholder logo image with an arbitrary aspect ratio."
+    },
+    "href": "http://example.com",
+    "title": "Vestibulum pharetra magna aliqua"
+  },
   "inlineItems": [
     {}, {}, {}
   ],
@@ -97,15 +109,10 @@
     "content": "A Linked Item"
   },
   "hero": {
-    "background": "/images/img-random-1.png",
-    "content": [
-      {
-        "pullout": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      },
-      {
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      }
-    ]
+    "pullout": "Big, attention-grabbing headline",
+    "paragraph": "Witty subtitle",
+    "cta-label": "Clickbaity label",
+    "url": "#"
   },
   "section": {
     "title": "This is the title for a section",
@@ -130,6 +137,9 @@
       },
       {
         "imgCards": true
+      },
+      {
+        "imgLinks": true
       }
     ]
   }

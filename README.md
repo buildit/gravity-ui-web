@@ -13,8 +13,8 @@ A SASS UI library from the Buildit's Gravity design system.
 ### Pre-requisites
 
 * [SASS](http://sass-lang.com/) compilation setup in your project
-* `npm` (>= v5.6.0)
-* [Eyeglass](https://github.com/sass-eyeglass/eyeglass) (>= 1.3.0)
+* `npm` (>= v5.8.0)
+* [Eyeglass](https://github.com/sass-eyeglass/eyeglass) (>= 1.4.1)
 
 ### Installation
 
@@ -83,6 +83,19 @@ The build output will go into `dist/` and, in this instance, only contains the a
   * [Naming conventions](./docs/naming-conventions.md)
 * Contribution guidelines (TBC)
 * [`git` branching strategy](./docs/branching-strategy.md)
+
+## Deployment
+
+### Travis CI notes
+The current Travis CI configuration utilises `npm ci` to ensure reproducibility for every build.
+
+`.travis.yml` takes care of installing the correct npm version before running `npm ci`.
+
+To be able to run `npm ci` on your machine, and to be sure to create a `package-lock.json` file compatible with it, make sure to update to npm version 5.8.0.
+
+`.nvmrc` only allows us to specify Node.js version, but that alone is not enough at the moment, since Node.js 8 comes out of the box with npm version 5.6.0.
+
+### Further Information
 * [Release process](./docs/releasing.md)
 * [Travis CI setup](./docs/travis-ci.md) (for automated build & deplpoyments)
-
+* [npm ci docs](https://docs.npmjs.com/cli/ci)

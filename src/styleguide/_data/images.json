@@ -15,6 +15,10 @@
     "widescreen": {
       "src": "../../images/img-16x9.png",
       "alt": "A placeholder image with a 16:9 aspect ratio, like a widescreen TV."
+    },
+    "logo": {
+      "src": "../../images/logos/logo-lbg.svg",
+      "alt": "A test image for a logo with an arbitrary aspect ratio."
     }
   }
 }
