@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Hollow version of Buildit logo
 - Github icon
 - SVG symbols now have IDs on their `<title>` elements
+- New utility class `grav-u-max-word-count-m`. Useful to limit `p` max width for better readability
 
 ### Changed
 - Buildit logo has been updated to new design
