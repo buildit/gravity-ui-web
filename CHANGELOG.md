@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Buildit logo has been updated to new design
 - Inline SVG component now uses `aria-labelledby` to reference SVG symbol's title
+- Updated `favicon.ico` to new Buildit icon.
 
 ### Fixed
 - Toggle buttons (incl. hamburger menu button) now work in IE11
