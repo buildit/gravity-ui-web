@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Added
+- Github link in page footers
+
+### Fixed
+- Display of social media icons in style guide
 
 
 ## [0.8.0] - 2018-04-25
