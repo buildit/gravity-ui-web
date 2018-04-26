@@ -10,9 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ### Fixed
-- `a[href]` has new contrast appropriate active state text colour for  in `inline-text` that also overrides the visited state.
+- `a[href]` has new contrast appropriate active state text colour for  in `inline-text` that works better across all background colors also overrides the visited state.
+- removed unecessary background for `<a>` elements in active state 
 - `<a>` elements now are no longer smaller than their child elements in `list-inline-row` by being set to inline-block.
-- `<a>` has a transparent background active state `list-inline-row` to override default.
 - `<header role="banner">` page title now has a hover state across all pages
 
 ## [0.8.0] - 2018-04-25
