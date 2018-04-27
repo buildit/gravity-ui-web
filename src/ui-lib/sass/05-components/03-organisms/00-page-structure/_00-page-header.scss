@@ -2,9 +2,8 @@
 // is in case we want to give it any kind of full-bleed background styling.
 // The child elements within therefore need to respect the maximum content
 // width ($grav-page-content-max-width) themselves, where necessary.
-header[role=banner] {
+body > header {
   background-color: $grav-co-neutral-charcoal;
-  
 
   &.is-light { // stylelint-disable selector-no-qualifying-type
     background-color: transparent;
@@ -18,7 +17,8 @@ header[role=banner] {
       fill: $grav-co-neutral-warm-grey;
     }
 
-    .grav-c-block-link {
+    .grav-c-block-link:link,
+    .grav-c-block-link:visited {
       background-color: $grav-co-bg;
       color: $grav-co-neutral-asphalt;
     }
@@ -57,10 +57,6 @@ header[role=banner] {
     max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
     fill: $grav-co-bg;
 
-    &:hover {
-      fill: $grav-co-neutral-ashtray;
-    }
-
     // Bump up logo size
     @media (min-width: gravy-breakpoint(medium)) {
       height: 2.5rem;
@@ -75,6 +71,7 @@ header[role=banner] {
       display: none;
     }
 
+    /* stylelint-disable-next-line selector-max-compound-selectors */
     &[aria-pressed] ~ .grav-c-nav-menu,
     &[aria-pressed='false'] ~ .grav-c-nav-menu {
       display: none;
@@ -85,6 +82,7 @@ header[role=banner] {
       }
     }
 
+    /* stylelint-disable-next-line selector-max-compound-selectors */
     &[aria-pressed='true'] ~ .grav-c-nav-menu {
       display: block;
     }

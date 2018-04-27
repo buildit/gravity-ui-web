@@ -1,4 +1,4 @@
-footer[role=contentinfo] {
+body > footer {
   @include typi('small-text');
   margin-top: vr(3);
   padding: $grav-sp-l 0;
