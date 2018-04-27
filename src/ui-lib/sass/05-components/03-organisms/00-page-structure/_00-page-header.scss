@@ -4,7 +4,6 @@
 // width ($grav-page-content-max-width) themselves, where necessary.
 body > header {
   background-color: $grav-co-neutral-charcoal;
-  
 
   &.is-light { // stylelint-disable selector-no-qualifying-type
     background-color: transparent;
@@ -57,10 +56,6 @@ body > header {
     display: block;
     max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
     fill: $grav-co-bg;
-
-    &:hover {
-      fill: $grav-co-neutral-ashtray;
-    }
 
     // Bump up logo size
     @media (min-width: gravy-breakpoint(medium)) {
