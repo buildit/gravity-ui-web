@@ -8,23 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Github link in page footers
+- `<header role="banner">` page title now has a hover state across all pages
 
 ### Changed
 - Page header no longer uses `role="banner"`
 - Page footer no longer uses `role="contentinfo"`
-
-### Fixed
-- Display of social media icons in style guide
-
-
-
-### Added
-- `<header role="banner">` page title now has a hover state across all pages
-
-### Changed
 - `a[href]` has new contrast appropriate active state text colour in `inline-text`. Set to override visited state.
 
 ### Fixed
+- Display of social media icons in style guide
 - `<a>` elements now are no longer smaller than their child elements in `list-inline-row` by being set to inline-block.
 
 ### Removed
