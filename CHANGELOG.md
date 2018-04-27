@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Github link in page footers
 
+### Changed
+- Page header no longer uses `role="banner"`
+- Page footer no longer uses `role="contentinfo"`
+
 ### Fixed
 - Display of social media icons in style guide
 
