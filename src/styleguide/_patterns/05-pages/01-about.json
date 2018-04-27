@@ -38,19 +38,24 @@
     "copy": "made with ❤️",
     "social": [
       {
-        "titleId": "instagram-brand-icon__title",
-        "symbolId": "instagram-brand-icon",
+        "titleId": "icon-instagram__title",
+        "symbolId": "icon-instagram",
         "url": "https://www.instagram.com/buildit_tech"
       },
       {
-        "titleId": "twitter-brand-icon__title",
-        "symbolId": "twitter-brand-icon",
+        "titleId": "icon-twitter__title",
+        "symbolId": "icon-twitter",
         "url": "https://twitter.com/buildit_tech"
       },
       {
-        "titleId": "linkedin-brand-icon__title",
-        "symbolId": "linkedin-brand-icon",
+        "titleId": "icon-linkedin__title",
+        "symbolId": "icon-linkedin",
         "url": "https://www.linkedin.com/company/buildit"
+      },
+      {
+        "titleId": "icon-github__title",
+        "symbolId": "icon-github",
+        "url": "https://github.com/buildit"
       }
     ]
   },

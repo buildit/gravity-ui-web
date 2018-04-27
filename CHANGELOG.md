@@ -8,6 +8,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 
+## [0.9.0] - 2018-04-27
+### Added
+- Github link in page footers
+- Page header title now has a hover state across all pages
+
+### Changed
+- Page header no longer uses `role="banner"`
+- Page footer no longer uses `role="contentinfo"`
+- `a[href]` has new contrast appropriate active state text colour in `inline-text`. Set to override visited state.
+
+### Fixed
+- Display of social media icons in style guide
+- `<a>` elements now are no longer smaller than their child elements in `list-inline-row` by being set to inline-block.
+- Missing page margins in IE11
+
+### Removed
+- unecessary background for `<a>` element in active state 
+
+
 ## [0.8.0] - 2018-04-25
 ### Added
 - Hollow version of Buildit logo
