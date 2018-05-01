@@ -19,13 +19,13 @@ If there are any exceptions, please make sure to explain why this is the case:
 #### Patterns/templates
 
 - [ ] The patterns are devoid of any actual copy, the copy belongs to JSON files (see above).
-- [ ] The patterns follow the 10 principles of inclusive web design which Gravity adheres to.
+- [ ] The patterns follow the [10 principles of inclusive web design](https://www.designprinciplesftw.com/collections/the-ten-principles-of-inclusive-web-design) which Gravity adheres to.
 - [ ] The patterns have been tested within their intended use and in isolation 
 - [ ] The patterns should be styled _context-free_ (see above), e.g. no vertical margins should be set, the container should take care of that.
 
 #### SASS
 
-- [ ] The SASS (and related pattern files) follow the naming conventions, architecture and structure outlined in the documentation.
+- [ ] The SASS (and related pattern files) follow the [naming conventions](/docs/naming-conventions.md), architecture and structure outlined in the documentation.
 
 #### Other (images)
 
