@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Pull request template for GitHub
 
+### Changed
+
+- removed vertical margins from `grav-c-two-columns-text`
+
 ## [0.9.0] - 2018-04-27
 ### Added
 - Github link in page footers
