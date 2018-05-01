@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Pull request template for GitHub
 
 ## [0.9.0] - 2018-04-27
 ### Added
