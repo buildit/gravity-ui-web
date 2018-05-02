@@ -1,5 +1,6 @@
 {
   "header": {
-    "light": true
+    "light": true,
+    "url": false
   }
 }

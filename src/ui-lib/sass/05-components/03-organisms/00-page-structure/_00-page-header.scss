@@ -13,7 +13,8 @@ body > header {
       fill: $grav-co-neutral-asphalt;
     }
 
-    .grav-c-logo:hover {
+    /* stylelint-disable-next-line selector-max-compound-selectors */
+    a:hover .grav-c-logo {
       fill: $grav-co-neutral-warm-grey;
     }
 
@@ -49,6 +50,7 @@ body > header {
 
     @media (min-width: gravy-breakpoint(medium)) {
       width: auto;
+      flex-shrink: 0;
     }
   }
 
