@@ -7,18 +7,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+
+## [0.9.1] - 2018-05-03
 ### Added
 - Pull request template for GitHub
 
 ### Changed
-- removed vertical margins from `grav-c-two-columns-text`
+- Removed vertical margins from `grav-c-two-columns-text`
+- Page-header now supports wrapping the logo in an `<h1>` instead of an `<a>`
+- Blue gradient bg with white text removed from hero and replaced with dirty snow white bg with default body text colour
 
 ### Fixed
-- list items now have margins between one another when they are wrapped in `list-inline-row`
-- headings splitting over into seperate lines in `job-list`
+- List items now have margins between one another when they are wrapped in `list-inline-row`
+- Headings splitting over into seperate lines in `job-list`
 - Navigation bar being cropped in Firefox & Edge when viewport was scaled down
-- page-header now supports wrapping the logo in an `<h1>` instead of an `<a>`
-- Blue gradient bg with white text removed from hero and replaced with dirty snow white bg with default body text colour
+
 
 ## [0.9.0] - 2018-04-27
 ### Added
