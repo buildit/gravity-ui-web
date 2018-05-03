@@ -9,9 +9,13 @@
   }
 
   > header {
-    width: 30%;
+    
     margin-right: $grav-sp-m;
     flex-shrink: 0;
+
+    @media all and (min-width: gravy-breakpoint(regular)) {
+      width: 30%;
+    }
   }
 
   > ul {
