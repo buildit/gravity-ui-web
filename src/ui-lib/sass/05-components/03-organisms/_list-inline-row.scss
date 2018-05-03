@@ -15,10 +15,15 @@
   }
 
   a {
+    display: inline-block;
     text-decoration: underline;
 
     &:hover {
       color: $grav-co-neutral-asphalt;
+    }
+    
+    &:active {
+      background: transparent;
     }
   }
 

@@ -7,12 +7,72 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Pull request template for GitHub
+
 ### Changed
+
+- removed vertical margins from `grav-c-two-columns-text`
 - Blue gradient bg with white text removed from hero and replaced with dirty snow white bg with default body text colour
+
+## [0.9.0] - 2018-04-27
+### Added
+- Github link in page footers
+- Page header title now has a hover state across all pages
+
+### Changed
+- Page header no longer uses `role="banner"`
+- Page footer no longer uses `role="contentinfo"`
+- `a[href]` has new contrast appropriate active state text colour in `inline-text`. Set to override visited state.
+
+### Fixed
+- Display of social media icons in style guide
+- `<a>` elements now are no longer smaller than their child elements in `list-inline-row` by being set to inline-block.
+- Missing page margins in IE11
+
+### Removed
+- unecessary background for `<a>` element in active state 
+
+
+## [0.8.0] - 2018-04-25
+### Added
+- Hollow version of Buildit logo
+- Github icon
+- SVG symbols now have IDs on their `<title>` elements
+- New utility class `grav-u-max-word-count-m`. Useful to limit `p` max width for better readability
+
+### Changed
+- Buildit logo has been updated to new design
+- Inline SVG component now uses `aria-labelledby` to reference SVG symbol's title
+- Updated `favicon.ico` to new Buildit icon.
+- BREAKING: Renamed social media SVG IDs to `icon-*`
+- Inverted font-weight on `block-link`, now bold is used for the active link
+
+### Fixed
+- Toggle buttons (incl. hamburger menu button) now work in IE11
+- Header now has normal height in IE11 on small screens
+- SVG validation errors
+
+
+## [0.7.0] - 2018-04-19
+### Added
+- `.grav-o-container-banner` CSS class & component.
+- `extra-large` breakpoint.
+
+### Changed
+- Travis build now uses `npm ci` instead of `npm install`
+- BREAKING: Image links component no longer comes with grey background
+- Updated NPM dependencies to latest versions.
+
+### Fixed
+- Edge and IE11 were pushing hamburger icon downwards
+- Added margin between logo and navlinks in header
+- Hero text is placed above canvas
+- 2 column block layout (as used in location page template) is flush with outer edges
 
 
 ## [0.6.1] - 2018-04-13
-
 ### Fixed
 - In the job-listing component, location names and job ads are now baseline aligned
 - Text in navigation block-links no longer wraps
@@ -21,21 +81,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [0.6.0] - 2018-04-10
+### Added
+- Sticky footer
+- Image list component for showcasing company logos
 
 ### Changed
 - Copy changes to about and careers pages
 - Styling of hero component
-
-### Added
-- Sticky footer
-- Image list component for showcasing company logos
 
 ### Fixed
 - Stylelint issues
 
 
 ## [0.5.0] - 2018-04-05
-
 ### Changed
 - Replaced old location page template with alternative one
   - BREAKING: `grav-c-list-two-columns` renamed to `grav-c-two-columns-text`
@@ -44,7 +102,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - BREAKING: Markup and appearance of `grav-c-hero` changed
 - Buiildit logo and favicon images
 
-
 ### Removed
 - Old location page template
   - BREAKING: Removed `grav-o-locations-layout` class
@@ -52,7 +109,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [0.4.0] - 2018-03-29
-
 ### Added
 - Animated nav toggle button
 
@@ -66,7 +122,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [0.3.0] - 2018-03-23
-
 ### Added
 - Page header
 - Page footer
@@ -89,6 +144,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Pipeline tweaks
 - Fixed color swatches on small screens
+
 
 ## [0.2.1] - 2018-01-25
 ### Added
