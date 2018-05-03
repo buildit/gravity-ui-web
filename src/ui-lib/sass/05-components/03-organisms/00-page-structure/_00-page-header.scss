@@ -59,19 +59,11 @@ body > header {
     max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
     fill: $grav-co-bg;
 
-<<<<<<< HEAD
-    // Bump up logo size
-    @media (min-width: gravy-breakpoint(medium)) {
-      height: 2.5rem;
-      max-height: none;
-    }
-=======
     @media (min-width: gravy-breakpoint(medium)) {
       width: 100%;
       max-height: none;
     }
     
->>>>>>> develop
   }
 
   .grav-c-toggle-menu {
