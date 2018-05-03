@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+- Blue gradient bg with white text removed from hero and replaced with dirty snow white bg with default body text colour
+
 
 ## [0.6.1] - 2018-04-13
 
