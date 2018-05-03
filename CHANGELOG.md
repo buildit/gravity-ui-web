@@ -7,13 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-### Changed
+### Added
+- Pull request template for GitHub
 
+### Changed
 - removed vertical margins from `grav-c-two-columns-text`
 
 ### Fixed
 - Navigation bar being cropped in Firefox & Edge when viewport was scaled down
 
+- page-header now supports wrapping the logo in an `<h1>` instead of an `<a>`
+- Blue gradient bg with white text removed from hero and replaced with dirty snow white bg with default body text colour
 
 ## [0.9.0] - 2018-04-27
 ### Added
