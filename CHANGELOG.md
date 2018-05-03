@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - removed vertical margins from `grav-c-two-columns-text`
 
 ### Fixed
+- list items now have margins between one another when they are wrapped in `list-inline-row`
 - headings splitting over into seperate lines in `job-list`
 - Navigation bar being cropped in Firefox & Edge when viewport was scaled down
 - page-header now supports wrapping the logo in an `<h1>` instead of an `<a>`
