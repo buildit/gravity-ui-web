@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - removed vertical margins from `grav-c-two-columns-text`
 - page-header now supports wrapping the logo in an `<h1>` instead of an `<a>`
+- Blue gradient bg with white text removed from hero and replaced with dirty snow white bg with default body text colour
 
 ## [0.9.0] - 2018-04-27
 ### Added
