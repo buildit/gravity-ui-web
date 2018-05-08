@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
+
 
 ## [0.9.1] - 2018-05-03
 ### Added
