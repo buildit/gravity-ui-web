@@ -7,6 +7,64 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
+
+
+## [0.9.1] - 2018-05-03
+### Added
+- Pull request template for GitHub
+
+### Changed
+- Removed vertical margins from `grav-c-two-columns-text`
+- Page-header now supports wrapping the logo in an `<h1>` instead of an `<a>`
+- Blue gradient bg with white text removed from hero and replaced with dirty snow white bg with default body text colour
+
+### Fixed
+- List items now have margins between one another when they are wrapped in `list-inline-row`
+- Headings splitting over into seperate lines in `job-list`
+- Navigation bar being cropped in Firefox & Edge when viewport was scaled down
+
+
+## [0.9.0] - 2018-04-27
+### Added
+- Github link in page footers
+- Page header title now has a hover state across all pages
+
+### Changed
+- Page header no longer uses `role="banner"`
+- Page footer no longer uses `role="contentinfo"`
+- `a[href]` has new contrast appropriate active state text colour in `inline-text`. Set to override visited state.
+
+### Fixed
+- Display of social media icons in style guide
+- `<a>` elements now are no longer smaller than their child elements in `list-inline-row` by being set to inline-block.
+- Missing page margins in IE11
+
+### Removed
+- unecessary background for `<a>` element in active state 
+
+
+## [0.8.0] - 2018-04-25
+### Added
+- Hollow version of Buildit logo
+- Github icon
+- SVG symbols now have IDs on their `<title>` elements
+- New utility class `grav-u-max-word-count-m`. Useful to limit `p` max width for better readability
+
+### Changed
+- Buildit logo has been updated to new design
+- Inline SVG component now uses `aria-labelledby` to reference SVG symbol's title
+- Updated `favicon.ico` to new Buildit icon.
+- BREAKING: Renamed social media SVG IDs to `icon-*`
+- Inverted font-weight on `block-link`, now bold is used for the active link
+
+### Fixed
+- Toggle buttons (incl. hamburger menu button) now work in IE11
+- Header now has normal height in IE11 on small screens
+- SVG validation errors
+
 
 ## [0.7.0] - 2018-04-19
 ### Added

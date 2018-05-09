@@ -7,7 +7,7 @@
     "pullout": "Buildit is a global network of transformation studios.",
     "paragraph": "We help connect the dots in an ever-changing world.",
     "cta-label": "About us",
-    "url": "link.pages-about"
+    "url": "link.pages-about",
   },
   "sections": [
     {
@@ -127,7 +127,7 @@
                     "src": "/images/logos/logo-abbot.png",
                     "alt": "Abbott Laboratories"
                   },
-                  "href": "www.abbott.co.uk",
+                  "href": "http://www.abbott.co.uk",
                   "title": "Abbott Laboratories"
                 }
               },
@@ -173,7 +173,7 @@
               }
             ]
           }
-        ] 
+        ]
       }
     }
   ],
@@ -210,26 +210,31 @@
   ],
 
   "header": {
-    "url": "link.pages-homepage",
+    "url": false,
     "light": true
   },
   "footer": {
     "copy": "made with ❤️",
     "social": [
       {
-        "label": "Instagram",
-        "symbolId": "instagram-brand-icon",
+        "titleId": "icon-instagram__title",
+        "symbolId": "icon-instagram",
         "url": "https://www.instagram.com/buildit_tech"
       },
       {
-        "label": "Twitter",
-        "symbolId": "twitter-brand-icon",
+        "titleId": "icon-twitter__title",
+        "symbolId": "icon-twitter",
         "url": "https://twitter.com/buildit_tech"
       },
       {
-        "label": "LinkedIn",
-        "symbolId": "linkedin-brand-icon",
+        "titleId": "icon-linkedin__title",
+        "symbolId": "icon-linkedin",
         "url": "https://www.linkedin.com/company/buildit"
+      },
+      {
+        "titleId": "icon-github__title",
+        "symbolId": "icon-github",
+        "url": "https://github.com/buildit"
       }
     ]
   }

@@ -3,5 +3,6 @@
     "type": "button",
     "label": "Do something"
   },
-  "symbolId": "menu"
+  "symbolId": "buildit-logo-hollow",
+  "titleId": "buildit-logo-hollow__title"
 }
