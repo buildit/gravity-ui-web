@@ -6,26 +6,41 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+
+### Fixed
+
+- fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
+
+
+## [0.9.1] - 2018-05-03
+### Added
+- Pull request template for GitHub
+
+### Changed
+- Removed vertical margins from `grav-c-two-columns-text`
+- Page-header now supports wrapping the logo in an `<h1>` instead of an `<a>`
+- Blue gradient bg with white text removed from hero and replaced with dirty snow white bg with default body text colour
+
+### Fixed
+- List items now have margins between one another when they are wrapped in `list-inline-row`
+- Headings splitting over into seperate lines in `job-list`
+- Navigation bar being cropped in Firefox & Edge when viewport was scaled down
+
+
+## [0.9.0] - 2018-04-27
 ### Added
 - Github link in page footers
+- Page header title now has a hover state across all pages
 
 ### Changed
 - Page header no longer uses `role="banner"`
 - Page footer no longer uses `role="contentinfo"`
-
-### Fixed
-- Display of social media icons in style guide
-
-
-
-### Added
-- `<header role="banner">` page title now has a hover state across all pages
-
-### Changed
 - `a[href]` has new contrast appropriate active state text colour in `inline-text`. Set to override visited state.
 
 ### Fixed
+- Display of social media icons in style guide
 - `<a>` elements now are no longer smaller than their child elements in `list-inline-row` by being set to inline-block.
+- Missing page margins in IE11
 
 ### Removed
 - unecessary background for `<a>` element in active state 

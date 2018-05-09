@@ -5,15 +5,15 @@
   {{#section.content}}
     {{#paragraph}}<p>{{{paragraph}}}</p>{{/paragraph}}
     {{#blockquote}}<blockquote>{{{blockquote}}}</blockquote>{{/blockquote}}
-    {{#inlineRow}}{{>organisms-list-inline-row}}{{/inlineRow}}
-    {{#imgCards}}{{>organisms-list-img-cards}}{{/imgCards}}
-    {{#imgLinks}}{{>organisms-list-image-links}}{{/imgLinks}}
+    {{#inlineRow}}{{>molecules-list-inline-row}}{{/inlineRow}}
+    {{#imgCards}}{{>molecules-list-img-cards}}{{/imgCards}}
+    {{#imgLinks}}{{>molecules-list-image-links}}{{/imgLinks}}
     {{#twoColumnsList}}
-    <ul class="grav-c-two-columns-text">
-      {{#items}}
-      <li>{{.}}</li>
-      {{/items}}
-    </ul>
+      <ul class="grav-c-two-columns-text">
+        {{#items}}
+        <li>{{.}}</li>
+        {{/items}}
+      </ul>
     {{/twoColumnsList}}
   {{/section.content}}
 </section>

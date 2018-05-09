@@ -1,6 +1,6 @@
 {
   "name": "@buildit/gravity-ui-sass",
-  "version": "0.8.0",
+  "version": "0.9.1",
   "description": "A SASS UI library from the Buildit's Gravity design system",
   "main": "index.js",
   "files": [
