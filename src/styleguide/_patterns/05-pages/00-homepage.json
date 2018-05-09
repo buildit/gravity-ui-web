@@ -7,7 +7,7 @@
     "pullout": "Buildit is a global network of transformation studios.",
     "paragraph": "We help connect the dots in an ever-changing world.",
     "cta-label": "About us",
-    "url": "link.pages-about"
+    "url": "link.pages-about",
   },
   "sections": [
     {
@@ -127,7 +127,7 @@
                     "src": "/images/logos/logo-abbot.png",
                     "alt": "Abbott Laboratories"
                   },
-                  "href": "www.abbott.co.uk",
+                  "href": "http://www.abbott.co.uk",
                   "title": "Abbott Laboratories"
                 }
               },
@@ -210,7 +210,7 @@
   ],
 
   "header": {
-    "url": "link.pages-homepage",
+    "url": false,
     "light": true
   },
   "footer": {
