@@ -104,7 +104,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Stylelint issues
 
 
-## [0.5.0] - 2018-04-05
+## [0.5.0] - 2018-04-05
 ### Changed
 - Replaced old location page template with alternative one
   - BREAKING: `grav-c-list-two-columns` renamed to `grav-c-two-columns-text`
@@ -119,7 +119,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - BREAKING: Removed `grav-o-locations-layout-alt` class
 
 
-## [0.4.0] - 2018-03-29
+## [0.4.0] - 2018-03-29
 ### Added
 - Animated nav toggle button
 
@@ -132,8 +132,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Eyeglass SASS support
 
 
-## [0.3.0] - 2018-03-23
-### Added
+## [0.3.0] - 2018-03-23
+### Added
 - Page header
 - Page footer
 - Careers page
@@ -148,7 +148,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Alternate Location page
 - Social media icons and links
 
-### Changed
+### Changed
 - Improved typography
 - Sassified pattern-scaffolding
 
