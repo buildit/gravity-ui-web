@@ -38,6 +38,12 @@
     "scss/at-extend-no-missing-placeholder": true,
     "scss/dollar-variable-no-missing-interpolation": true,
     "scss/at-mixin-argumentless-call-parentheses": "never",
+    "scss/dollar-variable-pattern": [
+      "grav(-(co|sp|st))?-[-\\w]+",
+      {
+        "ignore": "local"
+      }
+    ],
     "order/order": [
       {
         "type": "at-rule",
