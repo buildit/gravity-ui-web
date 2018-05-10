@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changelog formatting errors
 - Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
 
+### Changed
+- Increased size and spacing of burger menu strokes
 
 ## [0.9.1] - 2018-05-03
 ### Added
