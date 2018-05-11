@@ -210,8 +210,7 @@
   ],
 
   "header": {
-    "url": false,
-    "light": true
+    "url": false
   },
   "footer": {
     "copy": "made with ❤️",
