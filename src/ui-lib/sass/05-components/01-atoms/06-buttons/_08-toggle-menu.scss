@@ -19,22 +19,13 @@
     background: none;
   }
 
-  &--inverted,
-  .is-light & {
-    &__icon,
-    &__icon::before,
-    &__icon::after {
-      background-color: $grav-co-neutral-asphalt;
-    }
-  }
-
   &__icon {
     display: block;
     width: $grav-width-icon;
     height: $grav-st-thickness-large;
     position: relative;
     margin-top: auto;
-    background-color: $grav-co-bg;
+    background-color: $grav-co-neutral-asphalt;
     transition: all $grav-tr-speed-slow;
 
     &::before,
@@ -46,7 +37,7 @@
       height: $grav-st-thickness-large;
       position: absolute;
       left: 0;
-      background-color: $grav-co-bg;
+      background-color: $grav-co-neutral-asphalt;
 
       transition: all $grav-tr-speed-slow;
     }
