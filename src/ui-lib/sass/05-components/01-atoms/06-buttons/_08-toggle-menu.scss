@@ -1,11 +1,11 @@
 .grav-c-toggle-menu {
 
-  $grav-sp-icon: 7px;
+  $grav-sp-icon: 11px;
   $grav-tr-icon-hover: 2px;
   $grav-tr-icon-rotate: 135deg;
   $grav-tr-icon-scale: 1.2;
-  $grav-size-icon: 33px;
-  $grav-width-icon: 20px;
+  $grav-size-icon: 50px;
+  $grav-width-icon: 33px;
 
   height: $grav-size-icon;
   margin-top: 0;
@@ -31,7 +31,7 @@
   &__icon {
     display: block;
     width: $grav-width-icon;
-    height: $grav-st-thickness-medium;
+    height: $grav-st-thickness-large;
     position: relative;
     margin-top: auto;
     background-color: $grav-co-bg;
@@ -43,7 +43,7 @@
       display: block;
 
       width: $grav-width-icon;
-      height: $grav-st-thickness-medium;
+      height: $grav-st-thickness-large;
       position: absolute;
       left: 0;
       background-color: $grav-co-bg;
