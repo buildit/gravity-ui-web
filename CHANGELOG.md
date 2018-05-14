@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Fixed
+- Removed unnecessary universal selector inside hero component, which caused layout issues in IE
 
 
 ## [0.9.1] - 2018-05-03
