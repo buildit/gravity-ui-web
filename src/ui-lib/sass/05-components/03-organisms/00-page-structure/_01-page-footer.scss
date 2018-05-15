@@ -25,15 +25,15 @@ body > footer {
   }
 
   svg {
-    display: block;
+    display: inline-block;
     margin: 0 auto;
     width: auto;
     height: 1em;
-    max-width: 7rem;
   }
 
   .grav-c-logo {
     border-bottom: 1px solid $grav-co-neutral-dirty-snow-white;
+    max-width: 7rem;
 
     &:hover {
       border-bottom-color: $grav-co-neutral-ashtray;
