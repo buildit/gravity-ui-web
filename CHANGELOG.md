@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Changelog formatting errors
 - Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
+- Removed unnecessary universal selector inside hero component, which caused layout issues in IE
 
 ### Changed
 - Increased size and spacing of burger menu strokes
