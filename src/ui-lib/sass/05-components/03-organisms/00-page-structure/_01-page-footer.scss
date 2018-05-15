@@ -26,9 +26,10 @@ body > footer {
 
   svg {
     display: block;
+    margin: 0 auto;
     width: auto;
     height: 1em;
-    margin: 0 auto;
+    max-width: 7rem;
   }
 
   .grav-c-logo {
@@ -40,6 +41,7 @@ body > footer {
   }
 
   .grav-c-icon {
+    max-width: 1.5em;
     height: 1.5em;
     fill: $grav-co-neutral-dirty-snow-white;
 
