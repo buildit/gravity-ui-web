@@ -9,9 +9,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Changelog formatting errors
 - Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
+- Removed unnecessary universal selector inside hero component, which caused layout issues in IE
 
 ### Changed
 - Increased size and spacing of burger menu strokes
+- Made all page headers transparent
+
+### Removed
+- dark background default in `block-link`
+- dark background default in `toggle-menu`
+- `page-header~light` .json file
+- `page-header` .json file
+- `dark-background` class
 
 ## [0.9.1] - 2018-05-03
 ### Added
