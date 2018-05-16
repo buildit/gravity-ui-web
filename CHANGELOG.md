@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Increased size and spacing of burger menu strokes
 - Made all page headers transparent
+- Names for colour palettes
 
 ### Removed
 - dark background default in `block-link`
