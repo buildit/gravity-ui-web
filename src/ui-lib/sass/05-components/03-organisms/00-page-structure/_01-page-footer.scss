@@ -28,7 +28,7 @@ body > footer {
     display: inline-block;
     margin: 0 auto;
     width: auto;
-    height: 1em;
+    height: 1rem;
   }
 
   .grav-c-logo {
@@ -41,8 +41,8 @@ body > footer {
   }
 
   .grav-c-icon {
-    max-width: 1.5em;
-    height: 1.5em;
+    max-width: 1.5rem;
+    height: 1.5rem;
     fill: $grav-co-neutral-dirty-snow-white;
 
     &:hover {
