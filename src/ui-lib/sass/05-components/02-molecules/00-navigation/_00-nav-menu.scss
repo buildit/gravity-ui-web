@@ -16,6 +16,7 @@
 
     @media (min-width: $trigger-breakpoint) {
       display: flex;
+      flex-wrap: wrap;
       margin-top: 0;
       text-align: right;
     }
@@ -26,6 +27,7 @@
 
     @media (min-width: $trigger-breakpoint) {
       text-align: center;
+      margin: 0 $grav-sp-m 0 0;
     }
   }
 
@@ -41,10 +43,11 @@
 
   // styling of the menu links
   .grav-c-block-link {
+    padding: $grav-sp-xs 0;
+
     @media (min-width: $trigger-breakpoint) {
       display: inline-block;
       height: 100%;
-      padding-right: $grav-sp-s;
       border-right-width: 0;
       border-bottom-width: $grav-st-thickness;
     }

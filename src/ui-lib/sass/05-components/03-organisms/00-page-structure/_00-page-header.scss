@@ -14,8 +14,7 @@ body > header {
     justify-content: space-between;
 
     @media (min-width: gravy-breakpoint(medium)) {
-      // Force nav onto same line as logo
-      flex-wrap: nowrap;
+      padding-top: 0;
     }
   }
 
@@ -23,7 +22,8 @@ body > header {
     width: 70%; // 2/3 ish of the space
 
     @media (min-width: gravy-breakpoint(medium)) {
-      width: auto;
+      margin: $grav-sp-m $grav-sp-m 0 0;
+      max-width: 250px;
       flex-shrink: 0;
     }
   }
@@ -35,7 +35,6 @@ body > header {
 
     @media (min-width: gravy-breakpoint(medium)) {
       width: 100%;
-      max-height: none;
     }
   }
 
@@ -58,7 +57,6 @@ body > header {
 
       @media (min-width: gravy-breakpoint(medium)) { // stylelint-disable max-nesting-depth
         display: flex;
-        margin-top: 0;
       }
     }
 
@@ -72,12 +70,11 @@ body > header {
     // Overflow, so that right edge of navlinks is flush
     // with screen edge
     width: calc(100% + #{$grav-page-content-inset});
-    margin-top: 0;
-    flex-shrink: 0;
+    margin: 0;
 
     @media (min-width: gravy-breakpoint(medium)) {
       width: auto;
-      margin-left: $grav-sp-m;
+      margin: $grav-sp-m 0 0 0;
     }
   }
 }
