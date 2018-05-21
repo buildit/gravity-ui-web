@@ -22,8 +22,8 @@ body > header {
     width: 70%; // 2/3 ish of the space
 
     @media (min-width: gravy-breakpoint(medium)) {
-      margin: $grav-sp-m $grav-sp-m 0 0;
       max-width: 250px;
+      margin: $grav-sp-m $grav-sp-m 0 0;
       flex-shrink: 0;
     }
   }
