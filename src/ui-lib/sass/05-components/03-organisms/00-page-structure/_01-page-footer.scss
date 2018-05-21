@@ -26,7 +26,7 @@ body > footer {
   }
 
   svg {
-    display: inline-block;
+    display: block;
     margin: 0 auto;
   }
 
@@ -42,6 +42,7 @@ body > footer {
 
   .grav-c-icon {
     fill: $grav-co-neutral-dirty-snow-white;
+    width: 24px;
     height: 24px;
 
     &:hover {
