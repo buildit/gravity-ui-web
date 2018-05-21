@@ -36,7 +36,7 @@ body > footer {
   }
 
   .grav-c-icon {
-    width: 24px;
+    width: 24px; // To ensure icon renders at the correct size in IE
     height: 24px;
     fill: $grav-co-neutral-dirty-snow-white;
 
