@@ -1,3 +1,5 @@
+$grav-c-nav-menu-link-margin: $grav-sp-s;
+
 .grav-c-nav-menu {
   $trigger-breakpoint: gravy-breakpoint(medium);
   $items-per-row: 4;
@@ -10,6 +12,8 @@
 
   > ul {
     width: 100%;
+    position: relative;
+    left: $grav-c-nav-menu-link-margin;
     margin-top: $grav-sp-s;
     padding: 0;
     list-style-type: none;
@@ -25,7 +29,7 @@
     margin: 0;
 
     @media (min-width: $trigger-breakpoint) {
-      margin: 0 $grav-sp-m 0 0;
+      margin: 0 $grav-c-nav-menu-link-margin 0 0;
     }
   }
 
@@ -36,20 +40,5 @@
       margin-top: 0;
       margin-left: $grav-sp-s;
     }
-  }
-
-  li:last-child {
-    margin-right: 0;
-  }
-
-  // styling of the menu links
-  .grav-c-block-link {
-    @media (min-width: $trigger-breakpoint) {
-      display: inline-block;
-      height: 100%;
-      border-right-width: 0;
-      border-bottom-width: $grav-st-thickness;
-    }
-
   }
 }

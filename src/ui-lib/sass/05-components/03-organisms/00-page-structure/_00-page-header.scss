@@ -67,9 +67,6 @@ body > header {
   }
 
   .grav-c-nav-menu {
-    // Overflow, so that right edge of navlinks is flush
-    // with screen edge
-    width: calc(100% + #{$grav-page-content-inset});
     margin: 0;
 
     @media (min-width: gravy-breakpoint(medium)) {
