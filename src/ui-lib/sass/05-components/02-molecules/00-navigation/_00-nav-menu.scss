@@ -12,8 +12,6 @@ $grav-c-nav-menu-link-margin: $grav-sp-s;
 
   > ul {
     width: 100%;
-    position: relative;
-    left: $grav-c-nav-menu-link-margin;
     margin-top: $grav-sp-s;
     padding: 0;
     list-style-type: none;
@@ -21,7 +19,8 @@ $grav-c-nav-menu-link-margin: $grav-sp-s;
     @media (min-width: $trigger-breakpoint) {
       display: flex;
       flex-wrap: wrap;
-      margin-top: 0;
+      flex-grow: 1;
+      margin: 0 (-$grav-c-nav-menu-link-margin) 0 (-$grav-sp-xs);
     }
   }
 
