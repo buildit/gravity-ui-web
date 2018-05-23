@@ -63,6 +63,10 @@ body > header {
     /* stylelint-disable-next-line selector-max-compound-selectors */
     &[aria-pressed='true'] ~ .grav-c-nav-menu {
       display: block;
+
+      @media (min-width: gravy-breakpoint(medium)) {
+        display: flex;
+      }
     }
   }
 
