@@ -4,10 +4,6 @@
   background: $grav-co-neutral-dirty-snow-white;
   text-align: center;
 
-  > * {
-    @include grav-l-container;
-  }
-
   .grav-c-pullout,
   p {
     margin-top: 0;

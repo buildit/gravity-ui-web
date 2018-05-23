@@ -7,13 +7,34 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-### Fixed
 
-- fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
+## [0.10.0] - 2018-05-23
+### Fixed
+- Changelog formatting errors
+- Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
+- Removed unnecessary universal selector inside hero component, which caused layout issues in IE
+- Fixed SVGs rendering at the wrong size in IE
+- Added a max width to the logo so there's more space for the primary nav
+- Primary nav will now wrap underneath the logo if there's not enough space for it
+- Updated versions of some dependencies to resolve security audit warnings
+
+### Changed
+- Increased size and spacing of burger menu strokes
+- Made all page headers transparent
+- Names for colour palettes
+- Stylelint rules now enforce Gravity's class and variable naming conventions
+- Breaking change: `grav-c-block-link` has now been renamed to `grav-c-nav-link`
+
+### Removed
+- dark background default in `block-link`
+- dark background default in `toggle-menu`
+- `page-header~light` .json file
+- `page-header` .json file
+- `dark-background` class
 
 
 ## [0.9.1] - 2018-05-03
-### Added
+### Added
 - Pull request template for GitHub
 
 ### Changed
@@ -104,7 +125,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Stylelint issues
 
 
-## [0.5.0] - 2018-04-05
+## [0.5.0] - 2018-04-05
 ### Changed
 - Replaced old location page template with alternative one
   - BREAKING: `grav-c-list-two-columns` renamed to `grav-c-two-columns-text`
@@ -119,7 +140,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - BREAKING: Removed `grav-o-locations-layout-alt` class
 
 
-## [0.4.0] - 2018-03-29
+## [0.4.0] - 2018-03-29
 ### Added
 - Animated nav toggle button
 
@@ -132,8 +153,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Eyeglass SASS support
 
 
-## [0.3.0] - 2018-03-23
-### Added
+## [0.3.0] - 2018-03-23
+### Added
 - Page header
 - Page footer
 - Careers page
@@ -148,7 +169,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Alternate Location page
 - Social media icons and links
 
-### Changed
+### Changed
 - Improved typography
 - Sassified pattern-scaffolding
 
