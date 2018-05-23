@@ -33,11 +33,17 @@
         "ignore": ["consecutive-duplicates-with-different-values"]
       }
     ],
-    "selector-class-pattern": "[a-z]+(?:(?:--|-|_)?[a-z]+)*",
+    "selector-class-pattern": "grav-[cou]-[a-z]+(?:(?:--|-|_)?[a-z]+)*",
     "scss/selector-no-redundant-nesting-selector": true,
     "scss/at-extend-no-missing-placeholder": true,
     "scss/dollar-variable-no-missing-interpolation": true,
     "scss/at-mixin-argumentless-call-parentheses": "never",
+    "scss/dollar-variable-pattern": [
+      "grav-(co|sp|st|tr|\\w\\w\\w+)-[-\\w]+",
+      {
+        "ignore": "local"
+      }
+    ],
     "order/order": [
       {
         "type": "at-rule",
