@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+
+
+## [0.10.0] - 2018-05-23
 ### Fixed
 - Changelog formatting errors
 - Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
@@ -28,6 +31,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `page-header~light` .json file
 - `page-header` .json file
 - `dark-background` class
+
 
 ## [0.9.1] - 2018-05-03
 ### Added
