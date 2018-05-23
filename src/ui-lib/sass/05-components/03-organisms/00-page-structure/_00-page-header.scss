@@ -71,8 +71,8 @@ body > header {
   }
 
   .grav-c-nav-menu {
-    margin: 0;
     width: calc(100% + #{$grav-sp-s});
+    margin: 0;
     flex-shrink: 0;
 
     @media (min-width: gravy-breakpoint(medium)) {

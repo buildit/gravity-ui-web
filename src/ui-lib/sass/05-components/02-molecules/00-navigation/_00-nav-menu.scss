@@ -18,8 +18,8 @@ $grav-c-nav-menu-link-margin: $grav-sp-s;
     @media (min-width: $trigger-breakpoint) {
       display: flex;
       flex-wrap: wrap;
-      flex-grow: 1;
       margin: 0 (-$grav-c-nav-menu-link-margin) 0 (-$grav-sp-s);
+      flex-grow: 1;
     }
   }
 
