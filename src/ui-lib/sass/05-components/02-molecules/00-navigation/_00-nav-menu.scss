@@ -1,16 +1,9 @@
 .grav-c-nav-menu {
   $trigger-breakpoint: gravy-breakpoint(medium);
-  width: 100%;
   text-align: right;
-  margin: 0;
-
-  @media (min-width: $trigger-breakpoint) {
-    width: auto;
-    margin-top: $grav-sp-m;
-  }
 
   > ul {
-    margin: $grav-sp-s (-$grav-sp-s) 0;
+    margin: 0 (-$grav-sp-s);
     padding: 0;
     list-style-type: none;
 
