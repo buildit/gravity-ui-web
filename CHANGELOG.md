@@ -10,12 +10,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changelog formatting errors
 - Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
 - Removed unnecessary universal selector inside hero component, which caused layout issues in IE
+- Fixed SVGs rendering at the wrong size in IE
 - Updated versions of some dependencies to resolve security audit warnings
 
 ### Changed
 - Increased size and spacing of burger menu strokes
 - Made all page headers transparent
 - Names for colour palettes
+- Stylelint rules now enforce Gravity's class and variable naming conventions
 
 ### Removed
 - dark background default in `block-link`
