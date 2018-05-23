@@ -1,3 +1,5 @@
+$grav-page-heading-logo-width: 250px;
+
 // Note: The Page Header always spans the full width of the viewport. This
 // is in case we want to give it any kind of full-bleed background styling.
 // The child elements within therefore need to respect the maximum content
@@ -14,8 +16,7 @@ body > header {
     justify-content: space-between;
 
     @media (min-width: gravy-breakpoint(medium)) {
-      // Force nav onto same line as logo
-      flex-wrap: nowrap;
+      padding-top: 0;
     }
   }
 
@@ -23,7 +24,8 @@ body > header {
     width: 70%; // 2/3 ish of the space
 
     @media (min-width: gravy-breakpoint(medium)) {
-      width: auto;
+      max-width: 250px;
+      margin: $grav-sp-m $grav-sp-m 0 0;
       flex-shrink: 0;
     }
   }
@@ -35,7 +37,6 @@ body > header {
 
     @media (min-width: gravy-breakpoint(medium)) {
       width: 100%;
-      max-height: none;
     }
   }
 
@@ -58,26 +59,16 @@ body > header {
 
       @media (min-width: gravy-breakpoint(medium)) { // stylelint-disable max-nesting-depth
         display: flex;
-        margin-top: 0;
       }
     }
 
     /* stylelint-disable-next-line selector-max-compound-selectors */
     &[aria-pressed='true'] ~ .grav-c-nav-menu {
       display: block;
-    }
-  }
 
-  .grav-c-nav-menu {
-    // Overflow, so that right edge of navlinks is flush
-    // with screen edge
-    width: calc(100% + #{$grav-page-content-inset});
-    margin-top: 0;
-    flex-shrink: 0;
-
-    @media (min-width: gravy-breakpoint(medium)) {
-      width: auto;
-      margin-left: $grav-sp-m;
+      @media (min-width: gravy-breakpoint(medium)) {
+        display: flex;
+      }
     }
   }
 }

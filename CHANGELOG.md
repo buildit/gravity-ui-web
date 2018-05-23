@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
 - Removed unnecessary universal selector inside hero component, which caused layout issues in IE
 - Fixed SVGs rendering at the wrong size in IE
+- Added a max width to the logo so there's more space for the primary nav
+- Primary nav will now wrap underneath the logo if there's not enough space for it
 - Updated versions of some dependencies to resolve security audit warnings
 
 ### Changed
@@ -18,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Made all page headers transparent
 - Names for colour palettes
 - Stylelint rules now enforce Gravity's class and variable naming conventions
+- Breaking change: `grav-c-block-link` has now been renamed to `grav-c-nav-link`
 
 ### Removed
 - dark background default in `block-link`
