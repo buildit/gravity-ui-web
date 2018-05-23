@@ -61,6 +61,7 @@ Additionally, where appropriate, the following prefixes should be used in names 
 * `co` for colors (e.g. `$grav-co-primary-egg-yolk`)
 * `sp` for spacing (e.g. `$grav-sp-xl`)
 * `st` for strokes (e.g. `$grav-st-thick`)
+* `tr` for transform-related values (e.g. `$grav-tr-speed-slow`)
 
 Local variables (e.g. within mixins) should not use these prefixes. Any global variables that are _not_ one of the above types, should only use the `grav-` prefix.
 
