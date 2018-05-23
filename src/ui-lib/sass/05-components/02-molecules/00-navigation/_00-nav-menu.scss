@@ -2,7 +2,6 @@ $grav-c-nav-menu-link-margin: $grav-sp-s;
 
 .grav-c-nav-menu {
   $trigger-breakpoint: gravy-breakpoint(medium);
-  $items-per-row: 4;
   width: 100%;
   text-align: right;
 
@@ -20,16 +19,12 @@ $grav-c-nav-menu-link-margin: $grav-sp-s;
       display: flex;
       flex-wrap: wrap;
       flex-grow: 1;
-      margin: 0 (-$grav-c-nav-menu-link-margin) 0 (-$grav-sp-xs);
+      margin: 0 (-$grav-c-nav-menu-link-margin) 0 (-$grav-sp-s);
     }
   }
 
   li {
     margin: 0;
-
-    @media (min-width: $trigger-breakpoint) {
-      margin: 0 $grav-c-nav-menu-link-margin 0 0;
-    }
   }
 
   li:not(#{&}__external-link) + li#{&}__external-link {
