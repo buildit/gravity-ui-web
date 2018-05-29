@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [0.10.0] - 2018-05-23
+### Added
+- Mobile nav show/hide transition
+
 ### Fixed
 - Changelog formatting errors
 - Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
@@ -24,6 +27,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Names for colour palettes
 - Stylelint rules now enforce Gravity's class and variable naming conventions
 - Breaking change: `grav-c-block-link` has now been renamed to `grav-c-nav-link`
+- Increased font size of mobile nav
+- Breaking change: changed `is-active` and `logo-main` classes to meet new linting rules
 
 ### Removed
 - dark background default in `block-link`
