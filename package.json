@@ -15,7 +15,8 @@
     "styleguide": "gulp styleguide",
     "start": "gulp serve",
     "test": "npm run lint",
-    "lint": "stylelint 'src/ui-lib/sass/**/*.scss'"
+    "lint": "stylelint 'src/ui-lib/sass/**/*.scss'",
+    "precommit": "npm run test"
   },
   "repository": {
     "type": "git",
@@ -44,7 +45,8 @@
     "Ben Oakenfull",
     "Marcos Peebles",
     "James Nash (http://cirrus.twiddles.com/)",
-    "Valerio Francescangeli"
+    "Valerio Francescangeli",
+    "Daniel Bull"
   ],
   "license": "MIT",
   "bugs": {
