@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Changed
+- Separated toggle-menu button from nav-menu in pattern library
 
 
 ## [0.10.0] - 2018-05-23
