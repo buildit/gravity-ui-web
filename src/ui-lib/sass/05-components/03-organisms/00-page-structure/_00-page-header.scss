@@ -69,11 +69,9 @@ body > header {
     /* stylelint-disable-next-line selector-max-compound-selectors */
     &[aria-pressed='true'] ~ .grav-c-nav-menu {
       max-height: 100vh;
-      background: $grav-co-neutral-dirty-snow-white;
 
       @media (min-width: gravy-breakpoint(medium)) {
         display: flex;
-        background: transparent;
       }
     }
   }
