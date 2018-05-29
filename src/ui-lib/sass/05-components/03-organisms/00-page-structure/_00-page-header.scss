@@ -62,7 +62,7 @@ body > header {
       @media (min-width: gravy-breakpoint(medium)) { // stylelint-disable max-nesting-depth
         display: flex;
         max-height: none;
-        overflow: auto;
+        overflow: visible;
       }
     }
 
