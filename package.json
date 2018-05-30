@@ -16,7 +16,7 @@
     "start": "gulp serve",
     "test": "npm run lint",
     "lint": "stylelint 'src/ui-lib/sass/**/*.scss'",
-    "precommit": "npm test"
+    "precommit": "npm run lint"
   },
   "repository": {
     "type": "git",
