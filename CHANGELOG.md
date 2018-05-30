@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Separated toggle-menu button from nav-menu in pattern library
 
+### Added
+- Adding husky with precommit hook
+
 
 ## [0.10.0] - 2018-05-23
 ### Fixed
