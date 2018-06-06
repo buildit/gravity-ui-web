@@ -15,7 +15,8 @@
     "styleguide": "gulp styleguide",
     "start": "gulp serve",
     "test": "npm run lint",
-    "lint": "stylelint 'src/ui-lib/sass/**/*.scss'"
+    "lint": "stylelint 'src/ui-lib/sass/**/*.scss'",
+    "precommit": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -44,7 +45,8 @@
     "Ben Oakenfull",
     "Marcos Peebles",
     "James Nash (http://cirrus.twiddles.com/)",
-    "Valerio Francescangeli"
+    "Valerio Francescangeli",
+    "Daniel Bull"
   ],
   "license": "MIT",
   "bugs": {
@@ -66,6 +68,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-svg-symbols": "^3.1.0",
     "gulp-svgo": "^1.4.0",
+    "husky": "^0.14.3",
     "minimist": "^1.2.0",
     "patternlab-node": "^2.12.0",
     "styleguidekit-assets-default": "^3.5.2",
