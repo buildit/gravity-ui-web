@@ -26,4 +26,10 @@
       margin-left: $grav-sp-s;
     }
   }
+
+  .grav-c-nav-link {
+    @media (max-width: $trigger-breakpoint - 1) {
+      @include typi(huge-text);
+    }
+  }
 }
