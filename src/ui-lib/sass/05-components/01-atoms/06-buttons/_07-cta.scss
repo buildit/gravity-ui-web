@@ -61,7 +61,7 @@
 
   &[disabled],
   &--disabled,
-  &.is-disabled {
+  &.grav-u-is-disabled {
     border: 0;
     background-color: transparent;
     box-shadow: inset 0 -#{$grav-st-thickness-large} $grav-co-disabled;
