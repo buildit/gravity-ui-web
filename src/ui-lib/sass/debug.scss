@@ -1,24 +1,78 @@
-@mixin debug($message: '') {
-  $warning-color: #f00;
+/**
+  DEBUG.CSS
 
-  position: relative;
-  outline: 3px solid $warning-color;
+  Consumers of Gravity can include this CSS file in debug builds to
+  visually highlight issues that need fixing, such as:
 
-  &::after {
-    content: $message;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0.3rem;
-    background-color: rgba($warning-color, 0.7);
-    border-radius: 0 0 0.5rem;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
+  * Incorrect use of Gravity classes & components
+  * Undesirable HTML (e.g. a11y issues)
+
+  Note that this approach cannot exhaustively test all potential issues
+  in your UI code. It is intended to *complement* other linting and testing
+  techniques. It goes without saying that production builds should generally
+  NOT use this file.
+
+  This approach was inspired by:
+  * Eric Meyer's Diagnostic CSS - https://meyerweb.com/eric/tools/css/diagnostics/
+  * "CSS Diagnostics" on CSS Tricks - https://css-tricks.com/snippets/css/css-diagnostics/
+  * Karl Groves' Diagnosic CSS - http://www.karlgroves.com/2013/09/07/diagnostic-css-super-quick-web-accessibility-testing/
+*/
+
+// ====================================================================
+// Mixins for highlighting offending items on the page
+// ====================================================================
+
+/**
+  Adds a coloured outline around an element.
+
+  Optionally, if a message is provided it will be displayed in
+  the top left corner of the element. Note, that this will set
+  the element's position property to "relative"!
+*/
+@mixin highlight($highlight-color, $message) {
+  outline: 3px solid $highlight-color;
+
+  @if type-of($message) == string and  str-length($message) > 0 {
+    position: relative;
+
+    &::after {
+      content: $message;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.3rem;
+      background-color: rgba($highlight-color, 0.7);
+      border-radius: 0 0 0.5rem;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+    }
   }
 }
 
-.grav-o-container .grav-o-container {
-  @include debug('Nesting of .grav-o-container is not allowed.');
+/**
+  Highlights elements with errors in red.
+*/
+@mixin highlight-error($message: '') {
+  @include highlight(red, $message);
 }
+
+
+// ====================================================================
+// Tests for misuse of Gravity's classes and components
+// ====================================================================
+
+.grav-o-container .grav-o-container {
+  @include highlight-error('Nesting of .grav-o-container is not allowed.');
+}
+
+
+// ====================================================================
+// Tests for generic HTML & CSS naughtiness
+//
+// (We do not need to add things that the w3c validator catches - for
+// example missing alt attributes, deprecated elements, etc. - in here)
+// ====================================================================
+
+// TBC...
