@@ -6,8 +6,10 @@
   "hero": {
     "pullout": "Buildit is a global network of transformation studios.",
     "paragraph": "We help connect the dots in an ever-changing world.",
-    "cta-label": "About us",
-    "url": "link.pages-about",
+    "control": {
+      "label": "About us"
+    },
+    "url": "link.pages-about"
   },
   "sections": [
     {

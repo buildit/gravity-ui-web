@@ -1,0 +1,8 @@
+{
+  "homeLink": {
+    "url": "link.pages-homepage",
+    "control": {
+      "label": "Go to the homepage"
+    }
+  }
+}
