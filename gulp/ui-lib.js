@@ -15,16 +15,18 @@ const browserSync = require('./browsersync.js');
 const taskNamePrefix = 'ui-lib:';
 
 
-const mainSassFileFilter = filter(
-  `**/${paths.mainSassFilename.replace(/\.scss$/, '.css')}`,
-  { restore: true }
-);
-
 function sassBuildTask () {
   const sassOptions = {};
 
+  const mainSassFileFilter = filter(
+    `**/${paths.mainSassFilename.replace(/\.scss$/, '.css')}`,
+    {
+      restore: true
+    }
+  );
+
   return gulp.src(`${paths.srcSassDir}/*.scss`)
-    .pipe(sass(eyeglass(sassOptions)).on('error', sass.logError))
+    .pipe(sass(eyeglass(sassOptions))).on('error', sass.logError)
     // Only rename the main CSS file
     .pipe(mainSassFileFilter)
     .pipe(rename({
@@ -39,9 +41,10 @@ sassBuildTask.description = 'Compiles SASS.';
 
 
 const titleIdSuffix = '__title';
-const svgFileFilter = filter('**/*.svg', { restore: true });
 
 function svgSymbolsTask () {
+  const svgFileFilter = filter('**/*.svg', { restore: true });
+
   return gulp.src(paths.normalizePath(paths.srcSymbolsDir, '**', '*.svg'))
     .pipe(svgo({
       plugins: [
