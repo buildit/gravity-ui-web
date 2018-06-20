@@ -14,14 +14,10 @@
       color: $grav-co-neutral-asphalt;
     }
 
-    &:active,
-    &:hover {
+    &:hover,
+    &:active {
       border-color: $grav-co-accent-secondary;
       color: $grav-co-neutral-warm-grey;
     }
-  }
-
-  &:not([href]) {
-    @include gravy-font(primary, bold);
   }
 }
