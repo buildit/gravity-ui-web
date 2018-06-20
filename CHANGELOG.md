@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Adding husky with precommit hook
+- `debug.css` for visually flagging mark-up problems
 
 
 ## [0.10.0] - 2018-05-23
