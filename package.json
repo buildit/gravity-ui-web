@@ -57,7 +57,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.4",
+    "browser-sync": "^2.24.6",
     "chalk": "^2.4.1",
     "del": "^3.0.0",
     "eyeglass": "^1.5.0",
@@ -73,13 +73,13 @@
     "patternlab-node": "^2.12.0",
     "styleguidekit-assets-default": "^3.5.2",
     "styleguidekit-mustache-default": "^3.1.0",
-    "stylelint": "^9.2.0",
+    "stylelint": "^9.4.0",
     "stylelint-config-sass-guidelines": "^5.0.0",
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^3.1.0"
   },
   "dependencies": {
-    "@buildit/gravy": "^2.0.1",
+    "@buildit/gravy": "^2.0.2",
     "modularscale-sass": "^3.0.5",
     "normalize-scss": "^7.0.1"
   },
