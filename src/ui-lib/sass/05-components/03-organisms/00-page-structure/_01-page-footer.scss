@@ -25,28 +25,15 @@ body > footer {
     color: $grav-co-neutral-ashtray;
   }
 
-  svg {
-    display: block;
-    width: auto;
-    height: 1em;
-    margin: 0 auto;
-  }
-
   .grav-c-logo {
-    border-bottom: 1px solid $grav-co-neutral-dirty-snow-white;
-
-    &:hover {
-      border-bottom-color: $grav-co-neutral-ashtray;
-    }
+    max-width: 7rem;
+    height: 1rem;
+    border-bottom: 1px solid currentColor;
   }
 
   .grav-c-icon {
-    height: 1.5em;
-    fill: $grav-co-neutral-dirty-snow-white;
-
-    &:hover {
-      fill: $grav-co-neutral-ashtray;
-    }
+    width: 24px; // To ensure icon renders at the correct size in IE
+    height: 24px;
   }
 
   ul {

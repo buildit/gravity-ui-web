@@ -6,7 +6,9 @@
   // to fill all the available space between flex items.
   // More info: https://github.com/philipwalton/flexbugs#flexbug-15
   @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    width: $grav-page-content-max-width;
+    @media (min-width: gravy-breakpoint(regular)) {
+      align-self: center;
+    }
   }
 
   @if (not $no-margin) {

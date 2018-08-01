@@ -1,22 +1,23 @@
-a[href] {
+a {
   @include gravy-font(primary, bold);
 
-  &:link {
-    color: $grav-co-interactive-secondary;
-  }
+  &[href] {
+    &:link {
+      color: $grav-co-interactive-secondary;
+    }
 
-  &:hover {
-    color: $grav-co-interactive-secondary-hover;
-  }
+    &:visited {
+      color: $grav-co-interactive-secondary-visited;
+    }
 
-  &:visited {
-    color: $grav-co-interactive-secondary-visited;
-  }
+    &:hover {
+      color: $grav-co-interactive-secondary-hover;
+    }
 
-  &:active {
-    color: $grav-co-accent-primary-light;
+    &:active {
+      color: $grav-co-accent-primary-light;
+    }
   }
-  
 }
 
 b,

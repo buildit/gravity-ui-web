@@ -3,6 +3,12 @@
   "control": {
     "label": "Menu"
   },
+  "homeLink": {
+    "url": "link.pages-homepage",
+    "control": {
+      "label": "Go to the homepage"
+    }
+  },
   "excerpt": {
     "short": "Sorry! We looked everywhere but we can't find the page you're looking for."
   },

@@ -2,5 +2,5 @@
   <canvas></canvas>
   {{#hero.pullout}}<blockquote class="grav-c-pullout">{{{hero.pullout}}}</blockquote>{{/hero.pullout}}
   {{#hero.paragraph}}<p>{{{hero.paragraph}}}</p>{{/hero.paragraph}}
-  <a href="{{hero.url}}" class="grav-c-cta">{{hero.cta-label}}</a>
+  {{#hero}}{{> atoms-cta}}{{/hero}}
 </section>

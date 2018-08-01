@@ -2,6 +2,7 @@
 
 $grav-line-height: 1.5;
 
+// stylelint-disable-next-line scss/dollar-variable-pattern
 $gravy: (
   breakpoints: (
     small: 500px,
@@ -42,6 +43,11 @@ $gravy: (
       null: (ms(0)),
       small: (ms(1)),
       regular: (ms(2)),
-    )
+    ),
+    huge-text: (
+      null: (ms(2)),
+      small: (ms(3)),
+      regular: (ms(4)),
+    ),
   )
 );
