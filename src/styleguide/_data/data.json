@@ -111,7 +111,9 @@
   "hero": {
     "pullout": "Big, attention-grabbing headline",
     "paragraph": "Witty subtitle",
-    "cta-label": "Clickbaity label",
+    "control": {
+      "label": "Clickbaity label"
+    },
     "url": "#"
   },
   "section": {

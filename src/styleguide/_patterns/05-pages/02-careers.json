@@ -6,6 +6,12 @@
   "control": {
     "label": "Menu"
   },
+  "processLink": {
+    "url": "#the-hiring-process",
+    "control": {
+      "label": "Our hiring process"
+    }
+  },
   "links": [
     {
       "url": "link.pages-about",

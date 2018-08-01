@@ -18,11 +18,21 @@ const taskNamePrefix = 'ui-lib:';
 function sassBuildTask () {
   const sassOptions = {};
 
-  return gulp.src(paths.srcSassFilePath)
-    .pipe(sass(eyeglass(sassOptions)).on('error', sass.logError))
+  const mainSassFileFilter = filter(
+    `**/${paths.mainSassFilename.replace(/\.scss$/, '.css')}`,
+    {
+      restore: true
+    }
+  );
+
+  return gulp.src(`${paths.srcSassDir}/*.scss`)
+    .pipe(sass(eyeglass(sassOptions))).on('error', sass.logError)
+    // Only rename the main CSS file
+    .pipe(mainSassFileFilter)
     .pipe(rename({
       basename: paths.cssFileBasename,
     }))
+    .pipe(mainSassFileFilter.restore)
     .pipe(gulp.dest(paths.bldUiLibDir))
     .pipe(browserSync.stream());
 }
@@ -31,9 +41,10 @@ sassBuildTask.description = 'Compiles SASS.';
 
 
 const titleIdSuffix = '__title';
-const svgFileFilter = filter('**/*.svg', { restore: true });
 
 function svgSymbolsTask () {
+  const svgFileFilter = filter('**/*.svg', { restore: true });
+
   return gulp.src(paths.normalizePath(paths.srcSymbolsDir, '**', '*.svg'))
     .pipe(svgo({
       plugins: [
