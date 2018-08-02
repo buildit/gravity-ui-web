@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Adding husky with precommit hook
 - `debug.css` for visually flagging mark-up problems
 
+## Fixed
+- Nested `.grav-o-container` instances
+
 ### Removed
 - BREAKING: Button, secondary and disabled CTA variants have been removed. The `grav-c-cta` class can only be used with anchor links now.
 
