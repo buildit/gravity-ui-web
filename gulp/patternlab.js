@@ -187,6 +187,7 @@ plWatchTask.description = 'Builds the styleguide and starts watching styleguide 
 
 function plServeSgTask() {
   return patternlab.server.serve({
+    watch: true,
     cleanPublic: config.cleanPublic
   }).then(() => {
     // do something else when this promise resolves
