@@ -6,29 +6,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
-### Changed
-- Separated toggle-menu button from nav-menu in pattern library
-
 ### Added
 - Adding husky with precommit hook
 - `debug.css` for visually flagging mark-up problems
 
+### Changed
+- Separated toggle-menu button from nav-menu in pattern library
+
 ### Removed
 - BREAKING: Button, secondary and disabled CTA variants have been removed. The `grav-c-cta` class can only be used with anchor links now.
+
+## Fixed
+- Nested `.grav-o-container` instances
 
 
 ## [0.10.0] - 2018-05-23
 ### Added
 - Mobile nav show/hide transition
-
-### Fixed
-- Changelog formatting errors
-- Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
-- Removed unnecessary universal selector inside hero component, which caused layout issues in IE
-- Fixed SVGs rendering at the wrong size in IE
-- Added a max width to the logo so there's more space for the primary nav
-- Primary nav will now wrap underneath the logo if there's not enough space for it
-- Updated versions of some dependencies to resolve security audit warnings
 
 ### Changed
 - Increased size and spacing of burger menu strokes
@@ -45,6 +39,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `page-header~light` .json file
 - `page-header` .json file
 - `dark-background` class
+
+### Fixed
+- Changelog formatting errors
+- Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
+- Removed unnecessary universal selector inside hero component, which caused layout issues in IE
+- Fixed SVGs rendering at the wrong size in IE
+- Added a max width to the logo so there's more space for the primary nav
+- Primary nav will now wrap underneath the logo if there's not enough space for it
+- Updated versions of some dependencies to resolve security audit warnings
 
 
 ## [0.9.1] - 2018-05-03
@@ -72,13 +75,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Page footer no longer uses `role="contentinfo"`
 - `a[href]` has new contrast appropriate active state text colour in `inline-text`. Set to override visited state.
 
+### Removed
+- unecessary background for `<a>` element in active state 
+
 ### Fixed
 - Display of social media icons in style guide
 - `<a>` elements now are no longer smaller than their child elements in `list-inline-row` by being set to inline-block.
 - Missing page margins in IE11
-
-### Removed
-- unecessary background for `<a>` element in active state 
 
 
 ## [0.8.0] - 2018-04-25
