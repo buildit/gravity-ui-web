@@ -6,12 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
-### Changed
-- Separated toggle-menu button from nav-menu in pattern library
-
 ### Added
 - Adding husky with precommit hook
 - `debug.css` for visually flagging mark-up problems
+
+### Changed
+- Separated toggle-menu button from nav-menu in pattern library
+
+### Fixed
+- Security issue in `hoek` dependency (issue #115)
 
 ### Removed
 - BREAKING: Button, secondary and disabled CTA variants have been removed. The `grav-c-cta` class can only be used with anchor links now.
@@ -21,15 +24,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Mobile nav show/hide transition
 
-### Fixed
-- Changelog formatting errors
-- Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
-- Removed unnecessary universal selector inside hero component, which caused layout issues in IE
-- Fixed SVGs rendering at the wrong size in IE
-- Added a max width to the logo so there's more space for the primary nav
-- Primary nav will now wrap underneath the logo if there's not enough space for it
-- Updated versions of some dependencies to resolve security audit warnings
-
 ### Changed
 - Increased size and spacing of burger menu strokes
 - Made all page headers transparent
@@ -38,6 +32,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Breaking change: `grav-c-block-link` has now been renamed to `grav-c-nav-link`
 - Increased font size of mobile nav
 - Breaking change: changed `is-active` and `logo-main` classes to meet new linting rules
+
+### Fixed
+- Changelog formatting errors
+- Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
+- Removed unnecessary universal selector inside hero component, which caused layout issues in IE
+- Fixed SVGs rendering at the wrong size in IE
+- Added a max width to the logo so there's more space for the primary nav
+- Primary nav will now wrap underneath the logo if there's not enough space for it
+- Updated versions of some dependencies to resolve security audit warnings
 
 ### Removed
 - dark background default in `block-link`
