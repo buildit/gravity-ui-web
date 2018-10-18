@@ -21,7 +21,7 @@ const taskNamePrefix = 'patternlab:';
 
 //read all paths from our namespaced config file
 const config = require('../patternlab-config.json');
-const patternlab = require('@pattern-lab/patternlab-node')(config);
+const patternlab = require('@pattern-lab/core')(config);
 
 function paths() {
   return config.paths;
@@ -186,7 +186,7 @@ plWatchTask.description = 'Builds the styleguide and starts watching styleguide 
 ******************************************************/
 
 function plServeSgTask() {
-  return patternlab.serve({
+  return patternlab.server.serve({
     cleanPublic: config.cleanPublic
   }).then(() => {
     // do something else when this promise resolves

@@ -1,5 +1,6 @@
 # Exclude build Output
 dist/
+dependencyGraph.json
 
 # Exclude generated files
 src/styleguide/_patterns/_generated/*.mustache
