@@ -1,4 +1,7 @@
 # gravity-ui-sass
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/buildit/gravity-ui-sass.svg)](https://greenkeeper.io/)
+
 A SASS UI library from the Buildit's Gravity design system.
 
 ---
