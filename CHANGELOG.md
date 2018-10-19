@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Adding husky with precommit hook
 - `debug.css` for visually flagging mark-up problems
+- Updated dependencies (via Greenkeeper)
 
 ### Changed
 - Separated toggle-menu button from nav-menu in pattern library
