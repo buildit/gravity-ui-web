@@ -134,7 +134,7 @@ plInstallPluginTask.displayName = taskNamePrefix + 'installplugin';
  * BUILD TASK
 ******************************************************/
 
-function plBuildTask() {
+function plBuildSgTask() {
   return patternlab.build({
     watch: argv.watch,
     cleanPublic: config.cleanPublic
@@ -142,6 +142,14 @@ function plBuildTask() {
     // do something else when this promise resolves
   });
 }
+plBuildSgTask.displayName = taskNamePrefix + 'sg:build';
+plBuildSgTask.description = 'Builds the styleguide';
+
+
+const plBuildTask = gulp.series(
+  gulp.parallel(copyCssTask, preBuildTask),
+  plBuildSgTask
+);
 plBuildTask.displayName = taskNamePrefix + 'build';
 plBuildTask.description = 'Compiles the patterns and frontend, outputting to config.paths.public';
 
@@ -174,7 +182,7 @@ plWatchSgTask.description = 'Watches for changes to styleguide source files.';
 
 
 const plWatchTask = gulp.series(
-  copyCssTask,
+  gulp.parallel(copyCssTask, preBuildTask),
   gulp.parallel(plWatchSassTask, plWatchSgTask)
 );
 plWatchTask.displayName = taskNamePrefix + 'watch';
@@ -198,7 +206,7 @@ plServeSgTask.description = 'Builds styleguide HTML only and launches Pattern La
 
 
 const plServeTask = gulp.series(
-  copyCssTask,
+  gulp.parallel(copyCssTask, preBuildTask),
   gulp.parallel(plWatchSassTask, plServeSgTask)
 );
 plServeTask.displayName = taskNamePrefix + 'serve';
