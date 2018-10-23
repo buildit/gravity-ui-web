@@ -35,7 +35,9 @@ function paths() {
 
 // Exported array of glob patterns that clean tasks can use to
 // delete any files generated at build-time
-const generatedFileGlobs = [];
+const generatedFileGlobs = [
+  path.join(__dirname, '..', 'dependencyGraph.json')
+];
 
 const generatedPatternsDir = pkgPaths.normalizePath(paths().source.patterns, '_generated');
 generatedFileGlobs.push(path.join(generatedPatternsDir, '*'));
@@ -65,19 +67,18 @@ preSvgSymbolsInfoTask.description = 'Copies Gravity\'s symbols.json file to the 
 
 const preBuildTask = gulp.parallel(preSvgSymbolsTask, preSvgSymbolsInfoTask);
 
-
 /******************************************************
- * COPY TASKS
+ * STYLEGUIDE CSS TASKS
 ******************************************************/
 
-function copyCssTask () {
-  return gulp.src(pkgPaths.normalizePath(paths().source.css) + '/**/*.scss')
+function sassTask () {
+  return gulp.src(pkgPaths.normalizePath(paths().source.root) + '/sass/pattern-scaffolding.scss')
     .pipe(sass(eyeglass(sass.sync().on('error', sass.logError))))
     .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.css)))
     .pipe(browserSync.stream());
 };
-copyCssTask.displayName = taskNamePrefix + 'cp:css';
-copyCssTask.description = 'Copies CSS files from source to dist folder.';
+sassTask.displayName = taskNamePrefix + 'sass';
+sassTask.description = 'Compiles pattern library CSS files from source SASS.';
 
 
 /******************************************************
@@ -147,7 +148,7 @@ plBuildSgTask.description = 'Builds the styleguide';
 
 
 const plBuildTask = gulp.series(
-  gulp.parallel(copyCssTask, preBuildTask),
+  gulp.parallel(sassTask, preBuildTask),
   plBuildSgTask
 );
 plBuildTask.displayName = taskNamePrefix + 'build';
@@ -162,7 +163,7 @@ function plWatchSassTask() {
   gulp.watch(
     pkgPaths.normalizePath(paths().source.css, '**', '*.scss'),
     { awaitWriteFinish: true },
-    gulp.series(copyCssTask, browserSync.reloadCSS)
+    gulp.series(sassTask, browserSync.reloadCSS)
   );
 }
 plWatchSassTask.displayName = taskNamePrefix + 'css:watch';
@@ -182,7 +183,7 @@ plWatchSgTask.description = 'Watches for changes to styleguide source files.';
 
 
 const plWatchTask = gulp.series(
-  gulp.parallel(copyCssTask, preBuildTask),
+  gulp.parallel(sassTask, preBuildTask),
   gulp.parallel(plWatchSassTask, plWatchSgTask)
 );
 plWatchTask.displayName = taskNamePrefix + 'watch';
@@ -206,7 +207,7 @@ plServeSgTask.description = 'Builds styleguide HTML only and launches Pattern La
 
 
 const plServeTask = gulp.series(
-  gulp.parallel(copyCssTask, preBuildTask),
+  gulp.parallel(sassTask, preBuildTask),
   gulp.parallel(plWatchSassTask, plServeSgTask)
 );
 plServeTask.displayName = taskNamePrefix + 'serve';
