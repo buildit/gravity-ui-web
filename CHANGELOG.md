@@ -51,15 +51,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `page-header` .json file
 - `dark-background` class
 
-### Fixed
-- Changelog formatting errors
-- Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
-- Removed unnecessary universal selector inside hero component, which caused layout issues in IE
-- Fixed SVGs rendering at the wrong size in IE
-- Added a max width to the logo so there's more space for the primary nav
-- Primary nav will now wrap underneath the logo if there's not enough space for it
-- Updated versions of some dependencies to resolve security audit warnings
-
 
 ## [0.9.1] - 2018-05-03
 ### Added
