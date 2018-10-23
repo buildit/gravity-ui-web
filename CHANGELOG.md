@@ -14,11 +14,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Separated toggle-menu button from nav-menu in pattern library
 
+### Fixed
+- Security issue in `hoek` dependency (issue #115)
+- Nested `.grav-o-container` instances
+
 ### Removed
 - BREAKING: Button, secondary and disabled CTA variants have been removed. The `grav-c-cta` class can only be used with anchor links now.
-
-## Fixed
-- Nested `.grav-o-container` instances
 
 
 ## [0.10.0] - 2018-05-23
@@ -34,13 +35,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Increased font size of mobile nav
 - Breaking change: changed `is-active` and `logo-main` classes to meet new linting rules
 
-### Removed
-- dark background default in `block-link`
-- dark background default in `toggle-menu`
-- `page-header~light` .json file
-- `page-header` .json file
-- `dark-background` class
-
 ### Fixed
 - Changelog formatting errors
 - Fixed spurious info output in terminal by moving all list patterns under `molecules/lists`
@@ -49,6 +43,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added a max width to the logo so there's more space for the primary nav
 - Primary nav will now wrap underneath the logo if there's not enough space for it
 - Updated versions of some dependencies to resolve security audit warnings
+
+### Removed
+- dark background default in `block-link`
+- dark background default in `toggle-menu`
+- `page-header~light` .json file
+- `page-header` .json file
+- `dark-background` class
 
 
 ## [0.9.1] - 2018-05-03
