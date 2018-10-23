@@ -27,9 +27,9 @@ gulp.task('clean', function(){
 
 gulp.task('styleguide', gulp.series(uiLibTasks.buildTasks, plTasks.plBuildTask));
 
-gulp.task('serve', gulp.parallel(
-  gulp.series(uiLibTasks.sassBuildTask, uiLibTasks.watchTask),
-  plTasks.plServeTask
+gulp.task('serve', gulp.series(
+  uiLibTasks.buildTasks,
+  gulp.parallel(plTasks.plServeTask, uiLibTasks.watchTask),
 ));
 
 gulp.task('default', uiLibTasks.buildTasks);
