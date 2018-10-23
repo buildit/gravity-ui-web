@@ -97,16 +97,21 @@ function svgSymbolsTask () {
       }
     }))
     .pipe(svgFileFilter) // Exclude JSON file from passing through cheerio
-    .pipe(cheerio(function($, file) {
-      // Add an ID to the <title> element of each SVG symbol
-      // This is so that we can later reference it via
-      // aria-labelledby for better a11y.
-      $('symbol').each(function(){
-        const symbol = $(this);
-        const symbolId = symbol.attr('id');
-        const title = symbol.children('title');
-        title.attr('id', symbolId + titleIdSuffix);
-      })
+    .pipe(cheerio({
+      run: function($, file) {
+        // Add an ID to the <title> element of each SVG symbol
+        // This is so that we can later reference it via
+        // aria-labelledby for better a11y.
+        $('symbol').each(function(){
+          const symbol = $(this);
+          const symbolId = symbol.attr('id');
+          const title = symbol.children('title');
+          title.attr('id', symbolId + titleIdSuffix);
+        });
+      },
+      parserOptions: {
+        xmlMode: true
+      }
     }))
     .pipe(svgFileFilter.restore)
     .pipe(rename({
