@@ -10,7 +10,7 @@ const eyeglass = require('eyeglass');
 const chalk = require('chalk');
 
 const paths = require('./paths.js');
-const plServer = require('./patternlab.js').plServer;
+const { plServerReload, plServerRefreshCss } = require('./patternlab.js');
 
 const taskNamePrefix = 'ui-lib:';
 
@@ -140,20 +140,20 @@ function watchTask() {
     {
       name: 'SASS',
       paths: [paths.normalizePath(paths.srcSassDir, '**', '*.scss')],
-      config: { awaitWriteFinish: true },
-      tasks: gulp.series(sassBuildTask, plServer.refreshCSS)
+      config: {},
+      tasks: gulp.series(sassBuildTask, plServerRefreshCss)
     },
     {
       name: 'SVG Sprites',
       paths: [paths.normalizePath(paths.srcSymbolsDir, '**', '*.svg')],
-      config: { awaitWriteFinish: true },
+      config: {},
       tasks: svgSymbolsTask
     },
     {
       name: 'JS',
       paths: [paths.normalizePath(paths.srcJsDir, '**', '*.js')],
-      config: { awaitWriteFinish: true },
-      tasks: gulp.series(copyJsTask, plServer.reload)
+      config: {},
+      tasks: gulp.series(copyJsTask, plServerReload)
     }
   ];
 

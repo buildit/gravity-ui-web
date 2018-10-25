@@ -70,13 +70,13 @@ const preBuildTask = gulp.parallel(preSvgSymbolsTask, preSvgSymbolsInfoTask);
  * STYLEGUIDE CSS TASKS
 ******************************************************/
 
-function sassTask() {
+function plSassTask() {
   return gulp.src(pkgPaths.normalizePath(paths().source.root, 'sass', 'pattern-scaffolding.scss'))
     .pipe(sass(eyeglass(sass.sync().on('error', sass.logError))))
     .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.css)))
 };
-sassTask.displayName = taskNamePrefix + 'sass';
-sassTask.description = 'Compiles pattern library CSS files from source SASS.';
+plSassTask.displayName = taskNamePrefix + 'sass';
+plSassTask.description = 'Compiles pattern library CSS files from source SASS.';
 
 
 /******************************************************
@@ -137,8 +137,6 @@ function plBuildSgTask() {
   return patternlab.build({
     watch: argv.watch,
     cleanPublic: config.cleanPublic
-  }).then(() => {
-    // do something else when this promise resolves
   });
 }
 plBuildSgTask.displayName = taskNamePrefix + 'sg:build';
@@ -146,7 +144,7 @@ plBuildSgTask.description = 'Builds the styleguide';
 
 
 const plBuildTask = gulp.series(
-  gulp.parallel(sassTask, preBuildTask),
+  gulp.parallel(plSassTask, preBuildTask),
   plBuildSgTask
 );
 plBuildTask.displayName = taskNamePrefix + 'build';
@@ -160,8 +158,7 @@ plBuildTask.description = 'Compiles the patterns and frontend, outputting to con
 function plWatchSassTask() {
   gulp.watch(
     pkgPaths.normalizePath(paths().source.root, 'sass', '**', '*.scss'),
-    { awaitWriteFinish: true },
-    gulp.series(sassTask, patternlab.server.refreshCSS)
+    gulp.series(plSassTask, patternlab.server.refreshCSS)
   );
 }
 plWatchSassTask.displayName = taskNamePrefix + 'css:watch';
@@ -172,8 +169,6 @@ function plWatchSgTask() {
   return patternlab.build({
     watch: true,
     cleanPublic: config.cleanPublic
-  }).then(() => {
-    // do something else when this promise resolves
   });
 }
 plWatchSgTask.displayName = taskNamePrefix + 'sg:watch';
@@ -181,7 +176,7 @@ plWatchSgTask.description = 'Watches for changes to styleguide source files.';
 
 
 const plWatchTask = gulp.series(
-  gulp.parallel(sassTask, preBuildTask),
+  gulp.parallel(plSassTask, preBuildTask),
   gulp.parallel(plWatchSassTask, plWatchSgTask)
 );
 plWatchTask.displayName = taskNamePrefix + 'watch';
@@ -196,8 +191,6 @@ function plServeSgTask() {
   return patternlab.server.serve({
     watch: true,
     cleanPublic: config.cleanPublic
-  }).then(() => {
-    // do something else when this promise resolves
   });
 }
 plServeSgTask.displayName = taskNamePrefix + 'sg:serve';
@@ -205,7 +198,7 @@ plServeSgTask.description = 'Builds styleguide HTML only and launches Pattern La
 
 
 const plServeTask = gulp.series(
-  gulp.parallel(sassTask, preBuildTask),
+  gulp.parallel(plSassTask, preBuildTask),
   gulp.parallel(plWatchSassTask, plServeSgTask)
 );
 plServeTask.displayName = taskNamePrefix + 'serve';
@@ -239,7 +232,8 @@ module.exports = {
   // Generated file paths
   generatedFileGlobs,
 
-  // Export Pattern Lab server, so other
-  // tasks can trigger reloads
-  plServer: patternlab.server
+  // Export Pattern Lab server reload functions, so
+  // other tasks can trigger reloads
+  plServerReload: () => patternlab.server.reload(),
+  plServerRefreshCss: () => patternlab.server.refreshCSS(),
 }
