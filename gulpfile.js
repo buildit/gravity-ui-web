@@ -13,7 +13,6 @@ const gulp = require('gulp');
 const del = require('del');
 const pkgPaths = require('./index.js');
 const plTasks = require('./gulp/patternlab.js');
-const bsTasks = require('./gulp/browsersync.js');
 const uiLibTasks = require('./gulp/ui-lib.js');
 
 // Define composite tasks:

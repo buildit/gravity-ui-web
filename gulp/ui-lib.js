@@ -10,7 +10,7 @@ const eyeglass = require('eyeglass');
 const chalk = require('chalk');
 
 const paths = require('./paths.js');
-const browserSync = require('./browsersync.js');
+const plServer = require('./patternlab.js').plServer;
 
 const taskNamePrefix = 'ui-lib:';
 
@@ -34,7 +34,6 @@ function sassBuildTask () {
     }))
     .pipe(mainSassFileFilter.restore)
     .pipe(gulp.dest(paths.bldUiLibDir))
-    .pipe(browserSync.stream());
 }
 sassBuildTask.displayName = taskNamePrefix + 'sass';
 sassBuildTask.description = 'Compiles SASS.';
@@ -118,7 +117,6 @@ function svgSymbolsTask () {
       basename: paths.symbolsBasename
     }))
     .pipe(gulp.dest(paths.bldUiLibDir))
-    .pipe(browserSync.stream());
 }
 svgSymbolsTask.displayName = taskNamePrefix + 'svg-symbols';
 svgSymbolsTask.description = 'Compiles symbols.svg file.';
@@ -143,7 +141,7 @@ function watchTask() {
       name: 'SASS',
       paths: [paths.normalizePath(paths.srcSassDir, '**', '*.scss')],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series(sassBuildTask, browserSync.reloadCSS)
+      tasks: gulp.series(sassBuildTask, plServer.refreshCSS)
     },
     {
       name: 'SVG Sprites',
@@ -155,7 +153,7 @@ function watchTask() {
       name: 'JS',
       paths: [paths.normalizePath(paths.srcJsDir, '**', '*.js')],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series(copyJsTask, browserSync.reload)
+      tasks: gulp.series(copyJsTask, plServer.reload)
     }
   ];
 

@@ -60,7 +60,6 @@
     "@pattern-lab/core": "^3.0.0-beta.1",
     "@pattern-lab/engine-mustache": "^2.0.0-beta.0",
     "@pattern-lab/uikit-workshop": "^1.0.0-beta.0",
-    "browser-sync": "^2.26.3",
     "chalk": "^2.4.1",
     "del": "^3.0.0",
     "eyeglass": "^1.5.0",

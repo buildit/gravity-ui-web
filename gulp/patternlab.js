@@ -15,7 +15,6 @@ const rename = require("gulp-rename");
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
 const pkgPaths = require('./paths.js');
-const browserSync = require('./browsersync.js');
 
 const taskNamePrefix = 'patternlab:';
 
@@ -71,11 +70,10 @@ const preBuildTask = gulp.parallel(preSvgSymbolsTask, preSvgSymbolsInfoTask);
  * STYLEGUIDE CSS TASKS
 ******************************************************/
 
-function sassTask () {
-  return gulp.src(pkgPaths.normalizePath(paths().source.root) + '/sass/pattern-scaffolding.scss')
+function sassTask() {
+  return gulp.src(pkgPaths.normalizePath(paths().source.root, 'sass', 'pattern-scaffolding.scss'))
     .pipe(sass(eyeglass(sass.sync().on('error', sass.logError))))
     .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.css)))
-    .pipe(browserSync.stream());
 };
 sassTask.displayName = taskNamePrefix + 'sass';
 sassTask.description = 'Compiles pattern library CSS files from source SASS.';
@@ -161,9 +159,9 @@ plBuildTask.description = 'Compiles the patterns and frontend, outputting to con
 
 function plWatchSassTask() {
   gulp.watch(
-    pkgPaths.normalizePath(paths().source.css, '**', '*.scss'),
+    pkgPaths.normalizePath(paths().source.root, 'sass', '**', '*.scss'),
     { awaitWriteFinish: true },
-    gulp.series(sassTask, browserSync.reloadCSS)
+    gulp.series(sassTask, patternlab.server.refreshCSS)
   );
 }
 plWatchSassTask.displayName = taskNamePrefix + 'css:watch';
@@ -239,5 +237,9 @@ module.exports = {
   plServeTask,
 
   // Generated file paths
-  generatedFileGlobs
+  generatedFileGlobs,
+
+  // Export Pattern Lab server, so other
+  // tasks can trigger reloads
+  plServer: patternlab.server
 }
