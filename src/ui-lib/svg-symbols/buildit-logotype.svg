@@ -30,7 +30,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>buildit @ wipro digital</dc:title>
+        <dc:title>Buildit @ Wipro Digital</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -59,7 +59,7 @@
   <desc
      id="buildit-desc">Logo</desc>
   <title
-     id="buildit-title">buildit @ wipro digital</title>
+     id="buildit-title">Buildit @ Wipro Digital</title>
   <g
      id="g5147"
      transform="matrix(0.59844405,0,0,0.59843505,0,0.32544608)">
