@@ -4,8 +4,8 @@
     {{> atoms-ascii-art }}
     <h1>{{title}}</h1>
     <p>{{excerpt.short}}</p>
-    <div class="grav-o-container">
-      <a href="/" class="grav-c-cta">Go to the homepage</a>
+    <div>
+      {{#homeLink}}{{> atoms-cta }}{{/homeLink}}
     </div>
   </section>
 </main>

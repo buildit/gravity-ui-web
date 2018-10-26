@@ -3,7 +3,7 @@
   <h1>{{title}}</h1>
   {{{content.copy}}}
   <p class="grav-u-text-centered">
-    <a href="#the-hiring-process" class="grav-c-cta">Our hiring process</a>
+    {{#processLink}}{{> atoms-cta }}{{/processLink}}
   </p>
 
   {{#locations}}
