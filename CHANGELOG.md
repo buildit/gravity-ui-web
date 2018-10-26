@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Changed
+- Migrated style guide build to use Pattern Lab 3
 
 
 ## [0.11.0] - 2018-10-24
