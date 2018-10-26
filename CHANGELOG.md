@@ -6,13 +6,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+
+
+## [0.11.0] - 2018-10-24
 ### Added
+- Mobile nav show/hide transition
 - Adding husky with precommit hook
 - `debug.css` for visually flagging mark-up problems
 - Updated dependencies (via Greenkeeper)
 
 ### Changed
+- Increased font size of mobile nav
 - Separated toggle-menu button from nav-menu in pattern library
+- BREAKING: Renamed `logo-main` class to `grav-c-page-header__logo` to meet new linting rules
 
 ### Fixed
 - Security issue in `hoek` dependency (issue #115)
@@ -23,17 +29,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [0.10.0] - 2018-05-23
-### Added
-- Mobile nav show/hide transition
-
 ### Changed
 - Increased size and spacing of burger menu strokes
 - Made all page headers transparent
 - Names for colour palettes
 - Stylelint rules now enforce Gravity's class and variable naming conventions
 - Breaking change: `grav-c-block-link` has now been renamed to `grav-c-nav-link`
-- Increased font size of mobile nav
-- Breaking change: changed `is-active` and `logo-main` classes to meet new linting rules
 
 ### Fixed
 - Changelog formatting errors
