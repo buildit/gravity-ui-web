@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Made SVG icon titles more consistent
+- Updated various dependencies
+- Travis build now uses Node version specified in .nvmrc
 
 ## [0.11.0] - 2018-10-24
 ### Added
