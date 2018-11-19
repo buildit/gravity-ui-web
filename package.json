@@ -64,22 +64,22 @@
     "gulp-cheerio": "^0.6.3",
     "gulp-filter": "^5.1.0",
     "gulp-rename": "^1.2.3",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-svg-symbols": "^3.1.1",
     "gulp-svgo": "^1.5.4",
-    "husky": "^1.1.2",
+    "husky": "^1.1.4",
     "minimist": "^1.2.0",
     "patternlab-node": "^2.12.0",
     "styleguidekit-assets-default": "^3.5.2",
     "styleguidekit-mustache-default": "^3.1.0",
-    "stylelint": "^9.4.0",
-    "stylelint-config-sass-guidelines": "^5.0.0",
+    "stylelint": "^9.8.0",
+    "stylelint-config-sass-guidelines": "^5.2.0",
     "stylelint-order": "^1.0.0",
     "stylelint-scss": "^3.4.0"
   },
   "dependencies": {
-    "@buildit/gravy": "^2.0.2",
-    "modularscale-sass": "^3.0.5",
+    "@buildit/gravy": "^2.1.0",
+    "modularscale-sass": "^3.0.8",
     "normalize-scss": "^7.0.1"
   },
   "engines": {
