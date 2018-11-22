@@ -69,13 +69,13 @@
     "gulp-sass": "^4.0.2",
     "gulp-svg-symbols": "^3.1.1",
     "gulp-svgo": "^1.5.4",
-    "husky": "^1.1.4",
+    "husky": "^1.2.0",
     "minimist": "^1.2.0",
     "styleguidekit-assets-default": "^3.5.2",
     "styleguidekit-mustache-default": "^3.1.0",
     "stylelint": "^9.8.0",
     "stylelint-config-sass-guidelines": "^5.2.0",
-    "stylelint-order": "^1.0.0",
+    "stylelint-order": "^2.0.0",
     "stylelint-scss": "^3.4.0"
   },
   "dependencies": {
