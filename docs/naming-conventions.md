@@ -27,7 +27,7 @@ form { ... }
 
 The main advantages of this approach are:
 
-* More succient HTML and CSS code
+* More succinct HTML and CSS code
 * Promotes awareness and use of correct, semantic HTML
 * Means that there are less class names for new developers to learn (since we lean on bog-standard HTML and CSS as much as possible)
 
@@ -35,7 +35,7 @@ Wherever CSS class names are actually needed (typically for "Molecule"-level UI 
 
  * All class names are prefixed with `grav-` (to avoid naming clashes with consumers' own CSS classes)
  * As per the previous section, using appropriate HTML attributes and associated selectors is preferred over defining state or modifier classes. For instance, rather than a `.grav-s-disabled` class, we should instead simply use `:disabled`.
- 
+
  For example:
 
 ```css
@@ -49,7 +49,7 @@ Wherever CSS class names are actually needed (typically for "Molecule"-level UI 
 
 ### Further reading
 
-* Heydon Pickering's "[CSS Inheritance, The Cascade And Global Scope: Your New Old Worst Best Friends](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/)" 
+* Heydon Pickering's "[CSS Inheritance, The Cascade And Global Scope: Your New Old Worst Best Friends](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/)"
 
 
 ## SASS
