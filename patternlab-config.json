@@ -72,9 +72,7 @@
   "patternStateCascade": ["inprogress", "inreview", "complete"],
   "patternExportDirectory": "./pattern_exports/",
   "patternExportPatternPartials": [],
-  "serverOptions": {
-    "wait": 1000
-  },
+  "serverOptions": {},
   "starterkitSubDir": "dist",
   "styleGuideExcludes": [],
   "theme": {
