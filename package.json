@@ -56,7 +56,9 @@
     "access": "public"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "@pattern-lab/core": "^3.0.0-beta.1",
+    "@pattern-lab/engine-mustache": "^2.0.0-beta.0",
+    "@pattern-lab/uikit-workshop": "^1.0.0-beta.0",
     "chalk": "^2.4.1",
     "del": "^3.0.0",
     "eyeglass": "^2.0.0",
@@ -67,9 +69,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-svg-symbols": "^3.1.1",
     "gulp-svgo": "^1.5.4",
-    "husky": "^1.1.4",
+    "husky": "^1.2.0",
     "minimist": "^1.2.0",
-    "patternlab-node": "^2.12.0",
     "styleguidekit-assets-default": "^3.5.2",
     "styleguidekit-mustache-default": "^3.1.0",
     "stylelint": "^9.8.0",

@@ -14,22 +14,16 @@ const eyeglass = require('eyeglass');
 const rename = require("gulp-rename");
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
-const chalk = require('chalk');
 const pkgPaths = require('./paths.js');
-const browserSync = require('./browsersync.js');
 
 const taskNamePrefix = 'patternlab:';
 
 //read all paths from our namespaced config file
-const config = require('../patternlab-config.json'),
-  patternlab = require('patternlab-node')(config);
+const config = require('../patternlab-config.json');
+const patternlab = require('@pattern-lab/core')(config);
 
 function paths() {
   return config.paths;
-}
-
-function getConfiguredCleanOption() {
-  return config.cleanPublic;
 }
 
 /******************************************************
@@ -40,7 +34,9 @@ function getConfiguredCleanOption() {
 
 // Exported array of glob patterns that clean tasks can use to
 // delete any files generated at build-time
-const generatedFileGlobs = [];
+const generatedFileGlobs = [
+  path.join(__dirname, '..', 'dependencyGraph.json')
+];
 
 const generatedPatternsDir = pkgPaths.normalizePath(paths().source.patterns, '_generated');
 generatedFileGlobs.push(path.join(generatedPatternsDir, '*'));
@@ -70,97 +66,17 @@ preSvgSymbolsInfoTask.description = 'Copies Gravity\'s symbols.json file to the 
 
 const preBuildTask = gulp.parallel(preSvgSymbolsTask, preSvgSymbolsInfoTask);
 
-
 /******************************************************
- * COPY TASKS
+ * STYLEGUIDE CSS TASKS
 ******************************************************/
 
-function copyJsTask () {
-  return gulp.src('**/*.js', {cwd: pkgPaths.normalizePath(paths().source.js)} )
-    .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.js)));
-};
-copyJsTask.displayName = taskNamePrefix + 'cp:js';
-copyJsTask.description = 'Copies *.js files from source to dist folder.';
-
-
-function copyImagesTask () {
-  return gulp.src('**/*.*',{cwd: pkgPaths.normalizePath(paths().source.images)} )
-    .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.images)));
-};
-copyImagesTask.displayName = taskNamePrefix + 'cp:img';
-copyImagesTask.description = 'Copies image files from source to dist folder.';
-
-
-function copyFaviconTask () {
-  return gulp.src('favicon.ico', {cwd: pkgPaths.normalizePath(paths().source.root)} )
-    .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.root)));
-};
-copyFaviconTask.displayName = taskNamePrefix + 'cp:favicon';
-copyFaviconTask.description = 'Copies favicon.ico from source to dist folder.';
-
-
-function copyFontsTask () {
-  return gulp.src('*', {cwd: pkgPaths.normalizePath(paths().source.fonts)})
-    .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.fonts)));
-};
-copyFontsTask.displayName = taskNamePrefix + 'cp:fonts';
-copyFontsTask.description = 'Copies fonts dir from source to dist folder.';
-
-
-function copyAssetsTask () {
-  return gulp.src('*', {cwd: pkgPaths.normalizePath(paths().source.assets)})
-    .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.assets)));
-};
-copyAssetsTask.displayName = taskNamePrefix + 'cp:assets';
-copyAssetsTask.description = 'Copies assets dir from source to dist folder.';
-
-
-function copyCssTask () {
-  return gulp.src(pkgPaths.normalizePath(paths().source.css) + '/**/*.scss')
+function plSassTask() {
+  return gulp.src(pkgPaths.normalizePath(paths().source.root, 'sass', 'pattern-scaffolding.scss'))
     .pipe(sass(eyeglass(sass.sync().on('error', sass.logError))))
     .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.css)))
-    .pipe(browserSync.stream());
 };
-copyCssTask.displayName = taskNamePrefix + 'cp:css';
-copyCssTask.description = 'Copies CSS files from source to dist folder.';
-
-
-// Tasks to copy Styleguide Kit assets and CSS
-function skFilesTask () {
-  return gulp.src(pkgPaths.normalizePath(paths().source.styleguide) + '/**/!(*.css)')
-    .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.root)))
-    .pipe(browserSync.stream());
-};
-skFilesTask.displayName = taskNamePrefix + 'sk:files';
-skFilesTask.description = 'Copies files required by Pattern Lab\'s Styleguide Kit.';
-
-
-function skCssTask () {
-  return gulp.src(pkgPaths.normalizePath(paths().source.styleguide) + '/**/*.css')
-    .pipe(gulp.dest(function (file) {
-      //flatten anything inside the styleguide into a single output dir per http://stackoverflow.com/a/34317320/1790362
-      file.path = path.join(file.base, path.basename(file.path));
-      return pkgPaths.normalizePath(path.join(paths().public.styleguide, '/css'));
-    }))
-    .pipe(browserSync.stream());
-};
-skCssTask.displayName = taskNamePrefix + 'sk:css';
-skCssTask.description = 'Copies CSS required by Pattern Lab\'s UI Styleguide Kit.';
-
-
-// Composite to run all copy tasks in parallel
-const plAssetsTask = gulp.parallel(
-    copyAssetsTask,
-    copyJsTask,
-    copyImagesTask,
-    copyFaviconTask,
-    copyFontsTask,
-    copyCssTask,
-    skFilesTask,
-    skCssTask
-);
-plAssetsTask.displayName = taskNamePrefix + 'assets';
-plAssetsTask.description = `Runs all the ${taskNamePrefix}:cp:* and ${taskNamePrefix}:sk:* tasks in parallel.`;
+plSassTask.displayName = taskNamePrefix + 'sass';
+plSassTask.description = 'Compiles pattern library CSS files from source SASS.';
 
 
 /******************************************************
@@ -217,26 +133,20 @@ plInstallPluginTask.displayName = taskNamePrefix + 'installplugin';
  * BUILD TASK
 ******************************************************/
 
-/**
- * Performs the actual build step. Accomodates both async and sync
- * versions of Pattern Lab.
- * @param {function} done - Gulp done callback
- */
-function build(done) {
-  const buildResult = patternlab.build(() => {}, getConfiguredCleanOption());
-
-  // handle async version of Pattern Lab
-  if (buildResult instanceof Promise) {
-    return buildResult.then(done);
-  }
-
-  // handle sync version of Pattern Lab
-  done();
-  return null;
+function plBuildSgTask() {
+  return patternlab.build({
+    watch: argv.watch,
+    cleanPublic: config.cleanPublic
+  });
 }
+plBuildSgTask.displayName = taskNamePrefix + 'sg:build';
+plBuildSgTask.description = 'Builds the styleguide';
 
 
-const plBuildTask = gulp.series(preBuildTask, plAssetsTask, build);
+const plBuildTask = gulp.series(
+  gulp.parallel(plSassTask, preBuildTask),
+  plBuildSgTask
+);
 plBuildTask.displayName = taskNamePrefix + 'build';
 plBuildTask.description = 'Compiles the patterns and frontend, outputting to config.paths.public';
 
@@ -245,67 +155,55 @@ plBuildTask.description = 'Compiles the patterns and frontend, outputting to con
  * WATCH TASKS
 ******************************************************/
 
-// watch task utility functions
-function getSupportedTemplateExtensions() {
-  var engines = require('../node_modules/patternlab-node/core/lib/pattern_engines');
-  return engines.getSupportedFileExtensions();
+function plWatchSassTask() {
+  gulp.watch(
+    pkgPaths.normalizePath(paths().source.root, 'sass', '**', '*.scss'),
+    gulp.series(plSassTask, patternlab.server.refreshCSS)
+  );
 }
+plWatchSassTask.displayName = taskNamePrefix + 'css:watch';
+plWatchSassTask.description = 'Watches for changes to styleguide SASS and compiles to CSS.';
 
-function getTemplateWatches() {
-  return getSupportedTemplateExtensions().map(function (dotExtension) {
-    return pkgPaths.normalizePath(paths().source.patterns, '**', '*' + dotExtension);
+
+function plWatchSgTask() {
+  return patternlab.build({
+    watch: true,
+    cleanPublic: config.cleanPublic
   });
 }
+plWatchSgTask.displayName = taskNamePrefix + 'sg:watch';
+plWatchSgTask.description = 'Watches for changes to styleguide source files.';
 
-function plWatchOnlyTask() {
-  const watchers = [
-    {
-      name: 'CSS',
-      paths: [pkgPaths.normalizePath(paths().source.css, '**', '*.css')],
-      config: { awaitWriteFinish: true },
-      tasks: gulp.series(copyCssTask, browserSync.reloadCSS)
-    },
-    {
-      name: 'Styleguide Files',
-      paths: [pkgPaths.normalizePath(paths().source.styleguide, '**', '*')],
-      config: { awaitWriteFinish: true },
-      tasks: gulp.series(skFilesTask, skCssTask, browserSync.reloadCSS)
-    },
-    {
-      name: 'Source Files',
-      paths: [
-        pkgPaths.normalizePath(paths().source.patterns, '**', '*.json'),
-        pkgPaths.normalizePath(paths().source.patterns, '**', '*.md'),
-        pkgPaths.normalizePath(paths().source.data, '**', '*.json'),
-        pkgPaths.normalizePath(paths().source.fonts, '**', '*'),
-        pkgPaths.normalizePath(paths().source.images, '**', '*'),
-        pkgPaths.normalizePath(paths().source.js, '**', '*'),
-        pkgPaths.normalizePath(paths().source.meta, '**', '*'),
-        pkgPaths.normalizePath(paths().source.annotations, '**', '*')
-      ].concat(getTemplateWatches()),
-      config: { awaitWriteFinish: true },
-      tasks: gulp.series(build, browserSync.reload)
-    }
-  ];
 
-  watchers.forEach(watcher => {
-    console.log('\n' + chalk.bold('Watching ' + watcher.name + ':'));
-    watcher.paths.forEach(p => console.log('  ' + p));
-    gulp.watch(watcher.paths, watcher.config, watcher.tasks);
-  });
-  console.log();
-}
-plWatchOnlyTask.displayName = taskNamePrefix + 'watch-only';
-plWatchOnlyTask.description = 'Starts watching styleguide source files.';
+const plWatchTask = gulp.series(
+  gulp.parallel(plSassTask, preBuildTask),
+  gulp.parallel(plWatchSassTask, plWatchSgTask)
+);
+plWatchTask.displayName = taskNamePrefix + 'watch';
+plWatchTask.description = 'Builds the styleguide and starts watching styleguide source files.';
 
 
 /******************************************************
- * COMPOUND TASKS
+ * SERVE TASK
 ******************************************************/
 
-const plWatchTask = gulp.series(plBuildTask, plWatchOnlyTask);
-plWatchTask.displayName = taskNamePrefix + 'watch';
-plWatchTask.description = 'Builds styleguide and starts watching styleguide source files.';
+function plServeSgTask() {
+  return patternlab.server.serve({
+    watch: true,
+    cleanPublic: config.cleanPublic
+  });
+}
+plServeSgTask.displayName = taskNamePrefix + 'sg:serve';
+plServeSgTask.description = 'Builds styleguide HTML only and launches Pattern Lab\'s built-in server.';
+
+
+const plServeTask = gulp.series(
+  gulp.parallel(plSassTask, preBuildTask),
+  gulp.parallel(plWatchSassTask, plServeSgTask)
+);
+plServeTask.displayName = taskNamePrefix + 'serve';
+plServeTask.description = 'Builds styleguide and launches Pattern Lab\'s built-in server.';
+
 
 
 module.exports = {
@@ -313,17 +211,6 @@ module.exports = {
   preSvgSymbolsTask,
   preSvgSymbolsInfoTask,
   preBuildTask,
-
-  // Copy tasks
-  copyJsTask,
-  copyImagesTask,
-  copyFaviconTask,
-  copyFontsTask,
-  copyAssetsTask,
-  copyCssTask,
-  skFilesTask,
-  skCssTask,
-  plAssetsTask,
 
   // CLI
   plVersionTask,
@@ -337,9 +224,16 @@ module.exports = {
   plBuildTask,
 
   // Watch tasks
-  plWatchOnlyTask,
   plWatchTask,
 
+  // Serve
+  plServeTask,
+
   // Generated file paths
-  generatedFileGlobs
+  generatedFileGlobs,
+
+  // Export Pattern Lab server reload functions, so
+  // other tasks can trigger reloads
+  plServerReload: () => patternlab.server.reload(),
+  plServerRefreshCss: () => patternlab.server.refreshCSS(),
 }
