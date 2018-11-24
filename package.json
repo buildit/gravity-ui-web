@@ -61,7 +61,7 @@
     "@pattern-lab/uikit-workshop": "^1.0.0-beta.0",
     "chalk": "^2.4.1",
     "del": "^3.0.0",
-    "eyeglass": "^2.0.0",
+    "eyeglass": "^1.6.0",
     "gulp": "^4.0.0",
     "gulp-cheerio": "^0.6.3",
     "gulp-filter": "^5.1.0",
@@ -91,6 +91,6 @@
     "sassDir": "src/ui-lib/sass",
     "name": "gravity-ui-sass",
     "exports": "eyeglass-exports.js",
-    "needs": "^1.4.1"
+    "needs": "^1.4.1 || ^2.0.0"
   }
 }
