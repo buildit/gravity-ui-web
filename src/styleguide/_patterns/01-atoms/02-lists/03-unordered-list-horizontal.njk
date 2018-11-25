@@ -1,5 +1,5 @@
 <ul class="grav-c-list-horizontal">
-  {{#listItems.five}}
+  {% for item in listItems.five %}
     <li>{{excerpt.short}}</li>
-  {{/listItems.five}}
+  {% endfor %}
 </ul>

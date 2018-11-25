@@ -1,5 +1,5 @@
 <ul class="grav-c-two-columns-text">
-{{#listItems.five}}
+{% for item in listItems.five %}
   <li>{{excerpt.short}}</li>
-{{/listItems.five}}
+{% endfor %}
 </ul>

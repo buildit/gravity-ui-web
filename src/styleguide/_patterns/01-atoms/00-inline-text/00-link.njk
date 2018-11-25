@@ -1,0 +1,4 @@
+{% macro link(url, text, class) %}
+<a class="{{class}}"{% if url %} href="{{url}}"{% endif %}>{{text}}</a>
+{% endmacro %}
+{{ link(url, control.label, class ) | safe }}

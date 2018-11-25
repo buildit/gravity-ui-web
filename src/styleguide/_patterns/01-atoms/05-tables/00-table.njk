@@ -1,0 +1,45 @@
+{% macro renderRows(rows) %}
+  {% for row in rows %}
+    <tr>
+      {% for col in row %}
+        {% if col.isHeaderCell %}
+          <th>
+            {{ col.content | safe }}
+          </th>
+        {% else %}
+          <td>
+            {{ col.content | safe }}
+          </td>
+        {% endif %}
+      {% endfor %}
+    </tr>
+  {% endfor %}
+{% endmacro %}
+
+<table>
+  {% if table.caption %}<caption>{{table.caption}}</caption>{% endif %}
+
+  {# Header rows #}
+  {% if table.head %}
+  <thead>
+    {{ renderRows(table.head) | safe }}
+  </thead>
+  {% endif %}
+
+  {# Plain table rows (not inside a <tbody>) #}
+  {{ renderRows(table.rows) | safe }}
+
+  {# <tbody> groups of rows #}
+  {% for body in table.body %}
+  <tbody>
+    {{ renderRows(body.rows) | safe }}
+  </tbody>
+  {% endfor %}
+
+  {# Footer rows #}
+  {% if table.foot %}
+  <tfoot>
+    {{ renderRows(table.foot.rows) | safe }}
+  </tfoot>
+  {% endif %}
+</table>

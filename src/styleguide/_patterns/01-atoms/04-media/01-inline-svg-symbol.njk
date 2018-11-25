@@ -1,0 +1,13 @@
+{% macro inlineSvg(symbolId, width, height, titleId, class) %}
+<svg
+  role="img"
+  {% if class %}class="{{class}}"{% endif %}
+  {% if titleId %}aria-labelledby="{{titleId}}"{% endif %}
+  width="{{width}}"
+  height="{{height}}"
+>
+  <use xlink:href="#{{symbolId}}"></use>
+</svg>
+{% endmacro %}
+
+{{ inlineSvg(symbolId, width, height, titleId, class) | safe }}
