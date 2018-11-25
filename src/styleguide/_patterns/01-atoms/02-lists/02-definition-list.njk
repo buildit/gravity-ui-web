@@ -1,0 +1,10 @@
+<dl>
+{% for item in listItems.five %}
+  {% if item.term.label %}
+    <dt>{{ item.term.label }}</dt>
+  {% endif %}
+  {% if item.term.definition %}
+    <dd>{{ item.term.definition }}</dd>
+  {% endif %}
+{% endfor %}
+</dl>
