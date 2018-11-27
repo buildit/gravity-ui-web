@@ -1,13 +1,12 @@
-{% macro inlineSvg(symbolId, width, height, titleId, class) %}
-<svg
-  role="img"
-  {% if class %}class="{{class}}"{% endif %}
-  {% if titleId %}aria-labelledby="{{titleId}}"{% endif %}
-  width="{{width}}"
-  height="{{height}}"
->
+{%- macro inlineSvg(symbolId, width, height, titleId, class, customLabel) -%}
+<svg role="img"
+  {%- if class %} class="{{class}}"{%- endif -%}
+  {%- if customLabel %} aria-label="{{customLabel}}"
+  {%- elif titleId %} aria-labelledby="{{titleId}}"
+  {# The built-in symbols use __title as a suffix #}
+  {%- else %} aria-labelledby="{{symbolId}}__title"{%- endif %} width="{{width}}" height="{{height}}">
   <use xlink:href="#{{symbolId}}"></use>
 </svg>
-{% endmacro %}
+{%- endmacro -%}
 
-{{ inlineSvg(symbolId, width, height, titleId, class) | safe }}
+{{- inlineSvg(symbolId, width, height, titleId, class) | safe -}}

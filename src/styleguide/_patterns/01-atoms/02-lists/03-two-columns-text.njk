@@ -1,5 +1,9 @@
-<ul class="grav-c-two-columns-text">
-{% for item in listItems.five %}
-  <li>{{excerpt.short}}</li>
-{% endfor %}
-</ul>
+{%- from 'atoms-unordered-list' import unorderedList -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro twoColumnsText(items) -%}
+  {{ unorderedList(items, "grav-c-two-columns-text") | safe }}
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- twoColumnsText(listItems) | safe -}}

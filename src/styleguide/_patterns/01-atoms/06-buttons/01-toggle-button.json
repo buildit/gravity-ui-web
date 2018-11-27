@@ -1,6 +1,4 @@
 {
-  "control": {
-    "label": "Toggle something",
+    "text": "Toggle something",
     "pressed": false
-  }
 }

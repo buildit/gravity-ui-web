@@ -1,0 +1,14 @@
+{%- from 'atoms-icon' import icon -%}
+
+<footer class="{{ footer.class }}">
+  <p>{{footer.copy}} <br><a href="{{url}}">{% include 'atoms-logotype' %}</a></p>
+  <ul class="grav-c-list-horizontal">
+    {% for socialLink in footer.social -%}
+      <li>
+        <a href="{{socialLink.url}}">
+          {{ icon(socialLink.symbolId, socialLink.label) | safe }}
+        </a>
+      </li>
+    {%- endfor %}
+  </ul>
+</footer>

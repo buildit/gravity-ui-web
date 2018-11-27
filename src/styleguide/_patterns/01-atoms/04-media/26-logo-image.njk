@@ -1,1 +1,9 @@
-<img class="grav-c-logo-image" src="{{img.logo.src}}" alt="{{img.logo.alt}}"/>
+{%- from 'atoms-image' import image -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro logoImage(src, alt) -%}
+  {{ image(src, alt, "grav-c-logo-image") | safe }}
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- logoImage(img.logo.src, img.logo.alt) | safe -}}

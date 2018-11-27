@@ -1,1 +1,7 @@
-<kbd>{% if isKey %}<kbd>{% endif %}{{system.input}}{% if isKey %}</kbd>{% endif %}</kbd>
+{# Reusable macro for other templates to import: #}
+{%- macro input(htmlContent) -%}
+<kbd>{{ htmlContent | safe }}</kbd>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- input(text) | safe -}}

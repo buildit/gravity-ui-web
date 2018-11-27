@@ -1,0 +1,16 @@
+{
+  "definitions": [
+    {
+      "terms": ["Caffè latte"],
+      "descriptions": ["In Italy, caffè latte is almost always prepared at home, for breakfast only. The coffee is brewed with a stovetop Moka pot and poured into a cup containing heated milk. (Unlike the 'international' latte drink, the milk in the Italian original is generally not foamed, and sugar is added by the drinker, if at all.)"]
+    },
+    {
+      "terms": ["Software developer", "Coder", "Programmer", "Codemonkey"],
+      "descriptions": ["Someone who writes software."]
+    },
+    {
+      "terms": ["SME"],
+      "descriptions": ["Abbreviation for \"Small to Medium Enterprise\"", "Abbreviation for \"Subject Matter Expert\""]
+    }
+  ]
+}

@@ -1,1 +1,9 @@
-<address>{{excerpt.short}}</address>
+{# Reusable macro for other templates to import: #}
+{%- macro contactAddress(htmlContent) -%}
+<address>
+  {{- htmlContent | safe -}}
+</address>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- contactAddress(text) | safe -}}

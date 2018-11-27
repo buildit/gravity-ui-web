@@ -1,0 +1,7 @@
+{%- from 'molecules-location-card' import locationCard -%}
+
+<div class="grav-c-two-columns-block">
+  {%- for loc in locations %}
+    {{ locationCard(loc) | safe }}
+  {%- endfor %}
+</div>
