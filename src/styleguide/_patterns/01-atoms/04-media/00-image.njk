@@ -1,1 +1,5 @@
-<img src="{{img.random.src}}" alt="{{img.random.alt}}">
+{%- macro image(src, alt, class) -%}
+<img {%- if class %} class="{{class}}"{%- endif %} src="{{ src }}" alt="{{ alt }}">
+{%- endmacro -%}
+
+{{- image( img.random.src, img.random.alt ) -}}

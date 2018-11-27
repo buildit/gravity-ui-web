@@ -1,1 +1,11 @@
-<q cite="{{url}}">{{excerpt.short}}</q>
+{# Reusable macro for other templates to import: #}
+{%- macro quote(htmlContent, url) -%}
+<q
+  {%- if url %} cite="{{ url }}"{%- endif -%}
+>
+  {{- htmlContent | safe -}}
+</q>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- quote(text, url) | safe -}}

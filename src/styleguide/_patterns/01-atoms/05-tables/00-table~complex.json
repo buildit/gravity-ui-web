@@ -1,39 +1,39 @@
 {
-  "table": {
+  "tableData": {
     "caption": "Buildit Creative Tech Tribe required viewing list",
     "rows": false,
     "head": {
       "rows": [
         [
           {
-            "content": "Title",
+            "htmlContent": "Title",
             "isHeaderCell": true
           },
           {
-            "content": "Director",
+            "htmlContent": "Director",
             "isHeaderCell": true
           },
           {
-            "content": "Year",
+            "htmlContent": "Year",
             "isHeaderCell": true
           },
           {
-            "content": "Key quote",
+            "htmlContent": "Key quote",
             "isHeaderCell": true
           }
         ],
         [
           {
-            "content": "The name of the movie"
+            "htmlContent": "The name of the movie"
           },
           {
-            "content": "The person who directed it"
+            "htmlContent": "The person who directed it"
           },
           {
-            "content": "The year it was released"
+            "htmlContent": "The year it was released"
           },
           {
-            "content": "A famous quote from the film"
+            "htmlContent": "A famous quote from the film"
           }
         ]
       ]
@@ -43,44 +43,44 @@
         "rows": [
           [
             {
-              "content": "Snatch"
+              "htmlContent": "Snatch"
             },
             {
-              "content": "Guy Ritchie"
+              "htmlContent": "Guy Ritchie"
             },
             {
-              "content": "2000"
+              "htmlContent": "2000"
             },
             {
-              "content": "Of course fuckin' of course, I wasn't askin', I was tellin'."
+              "htmlContent": "Of course fuckin' of course, I wasn't askin', I was tellin'."
             }
           ],
           [
             {
-              "content": "Office Space"
+              "htmlContent": "Office Space"
             },
             {
-              "content": "Mike Judge"
+              "htmlContent": "Mike Judge"
             },
             {
-              "content": "1999"
+              "htmlContent": "1999"
             },
             {
-              "content": "Hello, Peter. What’s happening? Uh, we have sort of a problem here. Yeah. You apparently didn’t put one of the new coversheets on your TPS reports."
+              "htmlContent": "Hello, Peter. What’s happening? Uh, we have sort of a problem here. Yeah. You apparently didn’t put one of the new coversheets on your TPS reports."
             }
           ],
           [
             {
-              "content": "Lock, Stock and Two Smoking Barrels"
+              "htmlContent": "Lock, Stock and Two Smoking Barrels"
             },
             {
-              "content": "Guy Ritchie"
+              "htmlContent": "Guy Ritchie"
             },
             {
-              "content": "1998"
+              "htmlContent": "1998"
             },
             {
-              "content": "It's a deal, it's a steal. It's the sale of the fucking century. In fact, fuck it, Nick, I think I'll keep it."
+              "htmlContent": "It's a deal, it's a steal. It's the sale of the fucking century. In fact, fuck it, Nick, I think I'll keep it."
             }
           ]
         ]
@@ -89,30 +89,30 @@
         "rows": [
           [
             {
-              "content": "Aliens"
+              "htmlContent": "Aliens"
             },
             {
-              "content": "James Cameron"
+              "htmlContent": "James Cameron"
             },
             {
-              "content": "1986"
+              "htmlContent": "1986"
             },
             {
-              "content": "Game over, man. GAME OVER!"
+              "htmlContent": "Game over, man. GAME OVER!"
             }
           ],
           [
             {
-              "content": "The Matrix"
+              "htmlContent": "The Matrix"
             },
             {
-              "content": "The Wachowskis"
+              "htmlContent": "The Wachowskis"
             },
             {
-              "content": "1999"
+              "htmlContent": "1999"
             },
             {
-              "content": "There is no spoon."
+              "htmlContent": "There is no spoon."
             }
           ]
         ]
@@ -122,16 +122,16 @@
       "rows": [
         [
           {
-            "content": "5 unique titles"
+            "htmlContent": "5 unique titles"
           },
           {
-            "content": "4 unique directors"
+            "htmlContent": "4 unique directors"
           },
           {
-            "content": "4 unique years"
+            "htmlContent": "4 unique years"
           },
           {
-            "content": "5 unique quotes"
+            "htmlContent": "5 unique quotes"
           }
         ]
       ]

@@ -1,6 +1,5 @@
 {
-  "control": {
-    "type": "button",
-    "disabled": true
-  }
+  "text": "Not allowed to do something",
+  "type": "button",
+  "disabled": true
 }

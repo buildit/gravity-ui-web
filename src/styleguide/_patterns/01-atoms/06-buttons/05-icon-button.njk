@@ -1,0 +1,15 @@
+{%- from 'atoms-icon' import icon -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro iconButton(label, type, disabled, iconSymbolId, extraAttrs) -%}
+<button class="grav-c-icon-button" aria-label="{{ label }}"
+  {%- if type %} type="{{type}}"{%- endif -%}
+  {%- if disabled %} disabled{%- endif -%}
+  {%- for attr, value in extraAttrs %} {{attr}}="{{value}}"{%- endfor -%}
+>
+  {{ icon(iconSymbolId) | safe }}
+</button>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- iconButton(text, type, disabled, symbolId) | safe -}}

@@ -1,3 +1,9 @@
-<blockquote class="grav-c-pullout">
-  {{excerpt.medium}}
-</blockquote>
+{%- from 'atoms-blockquote' import blockquote -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro pullout(htmlContent) -%}
+  {{ blockquote(htmlContent, 'grav-c-pullout') }}
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- pullout(text) | safe -}}

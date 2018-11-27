@@ -1,5 +1,4 @@
 {
-  "control": {
-    "type": "button"
-  }
+  "text": "Do something",
+  "type": "button"
 }

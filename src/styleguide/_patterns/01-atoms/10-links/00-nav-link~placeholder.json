@@ -1,6 +1,4 @@
 {
-  "url": false,
-  "control": {
-    "label": "Somewhere"
-  }
+  "text": "Somewhere",
+  "url": false
 }

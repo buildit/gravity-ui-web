@@ -1,8 +1,8 @@
 {
+  "title": "Name of error",
+  "ascii": "(╯°Д°)╯︵ ┻━┻",
   "homeLink": {
-    "url": "link.pages-homepage",
-    "control": {
-      "label": "Go to the homepage"
-    }
+    "url": "link.templates-homepage",
+    "text": "Go to the homepage"
   }
 }

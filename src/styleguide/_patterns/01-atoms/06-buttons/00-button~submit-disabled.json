@@ -1,7 +1,5 @@
 {
-  "control": {
-    "type": "submit",
-    "label": "Submit something",
-    "disabled": true
-  }
+  "text": "Not allowed to submit something",
+  "type": "submit",
+  "disabled": true
 }

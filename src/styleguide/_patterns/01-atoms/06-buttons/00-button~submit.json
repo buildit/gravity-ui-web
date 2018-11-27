@@ -1,6 +1,4 @@
 {
-  "control": {
-    "type": "submit",
-    "label": "Submit something"
-  }
+  "text": "Submit something",
+  "type": "submit"
 }

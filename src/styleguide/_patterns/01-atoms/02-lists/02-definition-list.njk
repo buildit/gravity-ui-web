@@ -1,10 +1,30 @@
-<dl>
-{% for item in listItems.five %}
-  {% if item.term.label %}
-    <dt>{{ item.term.label }}</dt>
-  {% endif %}
-  {% if item.term.definition %}
-    <dd>{{ item.term.definition }}</dd>
-  {% endif %}
-{% endfor %}
-</dl>
+{# Reusable macro for other templates to import: #}
+{%- macro definitionList(definitions, classNames) -%}
+  <dl
+    {%- if classNames %} class="{{ classNames }}"{%- endif -%}
+  >
+  {% block definitionGroups -%}
+    {%- for group in definitions -%}
+      {%- block definitionGroup -%}
+        {%- for term in group.terms -%}
+          <dt
+            {%- if term.classNames %} class="{{ term.classNames }}"{%- endif -%}
+          >
+            {{- term.htmlContent if term.htmlContent else term | safe -}}
+          </dt>
+        {% endfor -%}
+        {%- for description in group.descriptions -%}
+          <dd
+            {%- if description.classNames %} class="{{ description.classNames }}"{%- endif -%}
+          >
+            {{- description.htmlContent if description.htmlContent else description | safe -}}
+          </dd>
+        {% endfor -%}
+      {%- endblock %}
+    {% endfor -%}
+  {%- endblock -%}
+  </dl>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{ definitionList(definitions, class) | safe }}

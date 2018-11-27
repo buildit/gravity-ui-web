@@ -1,5 +1,3 @@
-<ul class="grav-c-list-horizontal">
-  {% for item in listItems.five %}
-    <li>{{excerpt.short}}</li>
-  {% endfor %}
-</ul>
+{%- from 'atoms-unordered-list' import unorderedList -%}
+
+{{- unorderedList(listItems, "grav-c-list-horizontal") | safe -}}

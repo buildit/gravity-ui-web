@@ -1,45 +1,54 @@
-{% macro renderRows(rows) %}
-  {% for row in rows %}
+{# Local helper macro for rendering TRs and TD / THs #}
+{%- macro renderRows(rows) -%}
+  {%- for row in rows -%}
     <tr>
-      {% for col in row %}
-        {% if col.isHeaderCell %}
+      {% for col in row -%}
+        {%- if col.isHeaderCell -%}
           <th>
-            {{ col.content | safe }}
+            {{- col.htmlContent | safe -}}
           </th>
-        {% else %}
+        {%- else -%}
           <td>
-            {{ col.content | safe }}
+            {{- col.htmlContent | safe -}}
           </td>
-        {% endif %}
-      {% endfor %}
+        {%- endif %}
+      {% endfor -%}
     </tr>
-  {% endfor %}
-{% endmacro %}
+  {% endfor -%}
+{%- endmacro -%}
 
+{# Reusable macro for other templates to import: #}
+{%- macro table(tableData) -%}
 <table>
-  {% if table.caption %}<caption>{{table.caption}}</caption>{% endif %}
+  {%- if tableData.caption %}
+    <caption>{{tableData.caption}}</caption>
+  {% endif -%}
 
   {# Header rows #}
-  {% if table.head %}
+  {%- if tableData.head %}
   <thead>
-    {{ renderRows(table.head) | safe }}
+    {{ renderRows(tableData.head.rows) | safe -}}
   </thead>
-  {% endif %}
+  {% endif -%}
 
   {# Plain table rows (not inside a <tbody>) #}
-  {{ renderRows(table.rows) | safe }}
+  {{- renderRows(tableData.rows) | safe -}}
 
   {# <tbody> groups of rows #}
-  {% for body in table.body %}
+  {%- for body in tableData.body %}
   <tbody>
-    {{ renderRows(body.rows) | safe }}
+    {{ renderRows(body.rows) | safe -}}
   </tbody>
-  {% endfor %}
+  {% endfor -%}
 
   {# Footer rows #}
-  {% if table.foot %}
+  {%- if tableData.foot %}
   <tfoot>
-    {{ renderRows(table.foot.rows) | safe }}
+    {{ renderRows(tableData.foot.rows) | safe -}}
   </tfoot>
-  {% endif %}
+  {% endif -%}
 </table>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- table(tableData) | safe -}}

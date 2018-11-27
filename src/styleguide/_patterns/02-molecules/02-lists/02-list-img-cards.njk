@@ -1,0 +1,26 @@
+{%- extends 'atoms-unordered-list' -%}
+
+{%- from 'atoms-image' import image -%}
+
+{#
+  Extend the unordered-list's unorderedListItem block
+  to insert a card
+#}
+{%- block unorderedListItem -%}
+  <li>
+    {{ image(item.image.src, item.image.alt) | safe }}
+    <h3 class="grav-c-list-img-cards__title">{{item.title}}</h3>
+    <p>{{item.content}}</p>
+  </li>
+{% endblock -%}
+
+
+{# Reusable macro for other templates to import: #}
+{%- macro listImgCards(imgCards) -%}
+  {{ unorderedList(imgCards, "grav-c-list-img-cards") | safe }}
+{%- endmacro -%}
+
+{# Example rendering: #}
+{%- block example -%}
+  {{ listImgCards(imgCards) | safe }}
+{%- endblock -%}
