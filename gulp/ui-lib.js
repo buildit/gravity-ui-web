@@ -10,7 +10,7 @@ const eyeglass = require('eyeglass');
 const chalk = require('chalk');
 
 const paths = require('./paths.js');
-const browserSync = require('./browsersync.js');
+const { plServerReload, plServerRefreshCss } = require('./patternlab.js');
 
 const taskNamePrefix = 'ui-lib:';
 
@@ -34,7 +34,6 @@ function sassBuildTask () {
     }))
     .pipe(mainSassFileFilter.restore)
     .pipe(gulp.dest(paths.bldUiLibDir))
-    .pipe(browserSync.stream());
 }
 sassBuildTask.displayName = taskNamePrefix + 'sass';
 sassBuildTask.description = 'Compiles SASS.';
@@ -97,23 +96,27 @@ function svgSymbolsTask () {
       }
     }))
     .pipe(svgFileFilter) // Exclude JSON file from passing through cheerio
-    .pipe(cheerio(function($, file) {
-      // Add an ID to the <title> element of each SVG symbol
-      // This is so that we can later reference it via
-      // aria-labelledby for better a11y.
-      $('symbol').each(function(){
-        const symbol = $(this);
-        const symbolId = symbol.attr('id');
-        const title = symbol.children('title');
-        title.attr('id', symbolId + titleIdSuffix);
-      })
+    .pipe(cheerio({
+      run: function($, file) {
+        // Add an ID to the <title> element of each SVG symbol
+        // This is so that we can later reference it via
+        // aria-labelledby for better a11y.
+        $('symbol').each(function(){
+          const symbol = $(this);
+          const symbolId = symbol.attr('id');
+          const title = symbol.children('title');
+          title.attr('id', symbolId + titleIdSuffix);
+        });
+      },
+      parserOptions: {
+        xmlMode: true
+      }
     }))
     .pipe(svgFileFilter.restore)
     .pipe(rename({
       basename: paths.symbolsBasename
     }))
     .pipe(gulp.dest(paths.bldUiLibDir))
-    .pipe(browserSync.stream());
 }
 svgSymbolsTask.displayName = taskNamePrefix + 'svg-symbols';
 svgSymbolsTask.description = 'Compiles symbols.svg file.';
@@ -137,20 +140,20 @@ function watchTask() {
     {
       name: 'SASS',
       paths: [paths.normalizePath(paths.srcSassDir, '**', '*.scss')],
-      config: { awaitWriteFinish: true },
-      tasks: gulp.series(sassBuildTask, browserSync.reloadCSS)
+      config: {},
+      tasks: gulp.series(sassBuildTask, plServerRefreshCss)
     },
     {
       name: 'SVG Sprites',
       paths: [paths.normalizePath(paths.srcSymbolsDir, '**', '*.svg')],
-      config: { awaitWriteFinish: true },
+      config: {},
       tasks: svgSymbolsTask
     },
     {
       name: 'JS',
       paths: [paths.normalizePath(paths.srcJsDir, '**', '*.js')],
-      config: { awaitWriteFinish: true },
-      tasks: gulp.series(copyJsTask, browserSync.reload)
+      config: {},
+      tasks: gulp.series(copyJsTask, plServerReload)
     }
   ];
 

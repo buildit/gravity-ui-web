@@ -1,8 +1,5 @@
 language: node_js
-node_js:
-  - lts/*
-before_install:
-  - npm i -g npm@~5.8.0
+# Not specifying Node version here, so that Travis uses .nvmrc
 
 env:
   global:
