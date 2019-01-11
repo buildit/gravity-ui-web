@@ -68,7 +68,7 @@
     "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.2",
     "gulp-svg-symbols": "^3.1.1",
-    "gulp-svgo": "^1.5.4",
+    "gulp-svgo": "^2.0.0",
     "husky": "^1.2.0",
     "minimist": "^1.2.0",
     "styleguidekit-assets-default": "^3.5.2",
