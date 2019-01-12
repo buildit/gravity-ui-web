@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Changed
+- Updated various dependencies
+- Travis PR builds will no longer notify our internal Slack channel
+
+### Fixed
+- Typo in docs
 
 
 ## [0.11.1] - 2018-11-28
