@@ -10,6 +10,7 @@
     "eyeglass-exports.js"
   ],
   "scripts": {
+    "commit": "git-cz",
     "clean": "gulp clean",
     "build": "gulp",
     "styleguide": "gulp styleguide",
@@ -60,6 +61,7 @@
     "@pattern-lab/engine-mustache": "^2.0.0-beta.0",
     "@pattern-lab/uikit-workshop": "^1.0.0-beta.0",
     "chalk": "^2.4.2",
+    "cz-conventional-changelog": "^2.1.0",
     "del": "^3.0.0",
     "eyeglass": "^1.6.0",
     "gulp": "^4.0.0",
@@ -81,7 +83,6 @@
   "dependencies": {
     "@buildit/gravy": "^2.1.0",
     "commitizen": "^3.0.7",
-    "cz-conventional-changelog": "^2.1.0",
     "modularscale-sass": "^3.0.8",
     "normalize-scss": "^7.0.1"
   },
@@ -94,5 +95,10 @@
     "name": "gravity-ui-sass",
     "exports": "eyeglass-exports.js",
     "needs": "^1.4.1 || ^2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
