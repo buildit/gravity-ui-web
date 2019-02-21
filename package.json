@@ -80,6 +80,8 @@
   },
   "dependencies": {
     "@buildit/gravy": "^2.1.0",
+    "commitizen": "^3.0.7",
+    "cz-conventional-changelog": "^2.1.0",
     "modularscale-sass": "^3.0.8",
     "normalize-scss": "^7.0.1"
   },
