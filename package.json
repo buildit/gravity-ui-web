@@ -1,6 +1,6 @@
 {
   "name": "@buildit/gravity-ui-sass",
-  "version": "0.11.1",
+  "version": "0.0.0-development",
   "description": "A SASS UI library from the Buildit's Gravity design system",
   "main": "index.js",
   "files": [
@@ -16,11 +16,12 @@
     "styleguide": "gulp styleguide",
     "start": "gulp serve",
     "test": "npm run lint",
-    "lint": "stylelint 'src/ui-lib/sass/**/*.scss'"
+    "lint": "stylelint 'src/ui-lib/sass/**/*.scss'",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/buildit/gravity-ui-sass.git"
+    "url": "https://github.com/buildit/gravity-ui-sass.git"
   },
   "keywords": [
     "eyeglass-module",
@@ -78,7 +79,8 @@
     "stylelint": "^9.9.0",
     "stylelint-config-sass-guidelines": "^5.3.0",
     "stylelint-order": "^2.0.0",
-    "stylelint-scss": "^3.4.4"
+    "stylelint-scss": "^3.4.4",
+    "semantic-release": "^15.13.3"
   },
   "dependencies": {
     "@buildit/gravy": "^2.1.0",

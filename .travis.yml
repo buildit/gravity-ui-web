@@ -56,3 +56,5 @@ notifications:
     on_failure: always
 after_deploy:
   - ./scripts/notify.sh
+after_success:
+  - npx semantic-release
