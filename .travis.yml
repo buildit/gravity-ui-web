@@ -35,15 +35,10 @@ deploy:
     on:
       tags: true
       condition: $TRAVIS_TAG =~ $PROD_TAG_REGEXP
-jobs:
-  include:
-    - stage: release
-      node_js: lts/*
-      deploy:
-        provider: script
-        skip_cleanup: true
-        script:
-          - npx semantic-release
+  - provider: script
+    skip_cleanup: true
+    script:
+      npx semantic-release
 notifications:
   slack:
     rooms:
