@@ -69,7 +69,7 @@
     "chalk": "^2.4.2",
     "commitizen": "^3.0.7",
     "cz-conventional-changelog": "^2.1.0",
-    "del": "^3.0.0",
+    "del": "^4.0.0",
     "eyeglass": "^2.1.0",
     "gulp": "^4.0.0",
     "gulp-cheerio": "^0.6.3",
