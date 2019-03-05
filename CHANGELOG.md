@@ -1,3 +1,10 @@
+## [0.12.1](https://github.com/buildit/gravity-ui-sass/compare/v0.12.0...v0.12.1) (2019-03-05)
+
+
+### Bug Fixes
+
+* **releases:** releases now always trigger on master instead of by tag ([0f2e23f](https://github.com/buildit/gravity-ui-sass/commit/0f2e23f))
+
 # [0.12.0](https://github.com/buildit/gravity-ui-sass/compare/v0.11.1...v0.12.0) (2019-03-05)
 
 
