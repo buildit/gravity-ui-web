@@ -1,8 +1,5 @@
 {
-  "control": {
-    "label": "Toggle something",
-    "pressed": false
-  },
-  "symbolId": "buildit-logo-hollow",
-  "titleId": "buildit-logo-hollow__title"
+  "text": "Toggle something",
+  "pressed": false,
+  "symbolId": "buildit-logo-hollow"
 }

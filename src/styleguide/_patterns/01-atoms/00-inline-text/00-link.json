@@ -1,5 +1,4 @@
 {
-  "control": {
-    "label": "Go somewhere"
-  }
+  "text": "Go somewhere",
+  "url": "#"
 }

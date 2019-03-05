@@ -1,0 +1,13 @@
+{# Reusable macro for other templates to import: #}
+{%- macro link(htmlContent, url, classNames, title) -%}
+<a
+  {%- if classNames %} class="{{ classNames }}"{%- endif -%}
+  {%- if url %} href="{{ url }}"{%- endif -%}
+  {%- if title %} title="{{ title }}"{%- endif -%}
+>
+  {{- htmlContent | safe -}}
+</a>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- link(text, url, class) | safe -}}

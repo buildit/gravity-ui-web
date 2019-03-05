@@ -62,7 +62,7 @@
     "@commitlint/config-conventional": "^7.5.0",
     "@commitlint/travis-cli": "^7.5.2",
     "@pattern-lab/core": "^3.0.0-beta.1",
-    "@pattern-lab/engine-mustache": "^2.0.0-beta.0",
+    "@pattern-lab/engine-nunjucks": "^0.1.4-beta.1",
     "@pattern-lab/uikit-workshop": "^1.0.0-beta.0",
     "@semantic-release/changelog": "^3.0.2",
     "@semantic-release/git": "^7.0.8",
@@ -70,7 +70,7 @@
     "commitizen": "^3.0.7",
     "cz-conventional-changelog": "^2.1.0",
     "del": "^4.0.0",
-    "eyeglass": "^2.1.0",
+    "eyeglass": "^2.2.1",
     "gulp": "^4.0.0",
     "gulp-cheerio": "^0.6.3",
     "gulp-filter": "^5.1.0",
@@ -85,7 +85,7 @@
     "styleguidekit-mustache-default": "^3.1.0",
     "stylelint": "^9.9.0",
     "stylelint-config-sass-guidelines": "^5.3.0",
-    "stylelint-order": "^2.0.0",
+    "stylelint-order": "^2.1.0",
     "stylelint-scss": "^3.4.4"
   },
   "dependencies": {

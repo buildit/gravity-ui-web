@@ -1,62 +1,62 @@
 {
-  "table": {
+  "tableData": {
     "rows": [
       [
         {
-          "content": "Name",
+          "htmlContent": "Name",
           "isHeaderCell": true
         },
         {
-          "content": "Super power",
+          "htmlContent": "Super power",
           "isHeaderCell": true
         },
         {
-          "content": "Team",
+          "htmlContent": "Team",
           "isHeaderCell": true
         }
       ],
       [
         {
-          "content": "Ironman"
+          "htmlContent": "Ironman"
         },
         {
-          "content": "Genius engineer"
+          "htmlContent": "Genius engineer"
         },
         {
-          "content": "Avengers"
+          "htmlContent": "Avengers"
         }
       ],
       [
         {
-          "content": "Thor"
+          "htmlContent": "Thor"
         },
         {
-          "content": "Lightning and magic hammer"
+          "htmlContent": "Lightning and magic hammer"
         },
         {
-          "content": "Avengers"
+          "htmlContent": "Avengers"
         }
       ],
       [
         {
-          "content": "Black Widow"
+          "htmlContent": "Black Widow"
         },
         {
-          "content": "Master assassin"
+          "htmlContent": "Master assassin"
         },
         {
-          "content": "Avengers"
+          "htmlContent": "Avengers"
         }
       ],
       [
         {
-          "content": "Superman"
+          "htmlContent": "Superman"
         },
         {
-          "content": "Flying"
+          "htmlContent": "Flying"
         },
         {
-          "content": "Justice League"
+          "htmlContent": "Justice League"
         }
       ]
     ]

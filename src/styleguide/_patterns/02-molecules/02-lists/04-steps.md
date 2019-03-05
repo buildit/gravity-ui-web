@@ -1,4 +1,4 @@
-## Purpose
+## Purpose
 
 This is a very simple ordered list with a very custom look and feel. It has been concieved to represent steps of a process.
 

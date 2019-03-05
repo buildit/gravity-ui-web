@@ -1,0 +1,24 @@
+{%- extends 'atoms-unordered-list' -%}
+
+{%- from 'atoms-link' import link -%}
+
+{#
+  Extend the unordered-list's unorderedListItem block
+  to insert a link instead of arbitrary content.
+#}
+{%- block unorderedListItem -%}
+  <li>{{ link(item.text, item.url) | safe }}</li>
+{% endblock -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro listInlineRow(items) -%}
+  {{ unorderedList(items, "grav-c-list-inline-row") | safe }}
+{%- endmacro -%}
+
+{# Example rendering: #}
+{%- block example -%}
+  {{ listInlineRow(listItems) | safe }}
+{%- endblock -%}
+
+
+

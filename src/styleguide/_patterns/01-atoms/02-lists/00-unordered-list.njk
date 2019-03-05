@@ -1,0 +1,34 @@
+{# Reusable macro for other templates to import: #}
+{%- macro unorderedList(items, classNames) -%}
+  <ul
+    {%- if classNames %} class="{{ classNames }}"{%- endif -%}
+  >
+  {#
+    Specialised list components can extend this unorderedListItems
+    (plural) block to change the iteration behaviour.
+  #}
+  {%- block unorderedListItems -%}
+    {%- for item in items -%}
+      {#
+        Specialised list components can extend this unorderedListItem
+        (singular) block to change the rendering of an indiividual list item.
+
+        The value of the current `items` element will be available as
+        `item` within this block.
+      #}
+      {%- block unorderedListItem %}
+      <li
+        {%- if item.classNames %} class="{{ item.classNames }}"{%- endif -%}
+      >
+        {{ item.htmlContent | safe }}
+      </li>
+      {% endblock -%}
+    {%- endfor-%}
+  {%- endblock -%}
+  </ul>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{%- block example -%}
+  {{ unorderedList(listItems, class) | safe }}
+{%- endblock -%}

@@ -68,7 +68,7 @@
       "css": "dist/css"
     }
   },
-  "patternExtension": "mustache",
+  "patternExtension": "njk",
   "patternStateCascade": ["inprogress", "inreview", "complete"],
   "patternExportDirectory": "./pattern_exports/",
   "patternExportPatternPartials": [],

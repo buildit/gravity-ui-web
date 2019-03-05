@@ -1,0 +1,9 @@
+{%- from 'atoms-icon-button' import iconButton -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro iconToggleButton(label, pressed, disabled, iconSymbolId)  -%}
+  {{ iconButton(label, 'button', disabled, iconSymbolId, extraAttrs = { 'aria-pressed': pressed }) | safe }}
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- iconToggleButton(text, pressed, disabled, symbolId) | safe -}}

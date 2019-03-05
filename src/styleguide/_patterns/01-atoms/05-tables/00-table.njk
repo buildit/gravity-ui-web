@@ -1,0 +1,54 @@
+{# Local helper macro for rendering TRs and TD / THs #}
+{%- macro renderRows(rows) -%}
+  {%- for row in rows -%}
+    <tr>
+      {% for col in row -%}
+        {%- if col.isHeaderCell -%}
+          <th>
+            {{- col.htmlContent | safe -}}
+          </th>
+        {%- else -%}
+          <td>
+            {{- col.htmlContent | safe -}}
+          </td>
+        {%- endif %}
+      {% endfor -%}
+    </tr>
+  {% endfor -%}
+{%- endmacro -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro table(tableData) -%}
+<table>
+  {%- if tableData.caption %}
+    <caption>{{tableData.caption}}</caption>
+  {% endif -%}
+
+  {# Header rows #}
+  {%- if tableData.head %}
+  <thead>
+    {{ renderRows(tableData.head.rows) | safe -}}
+  </thead>
+  {% endif -%}
+
+  {# Plain table rows (not inside a <tbody>) #}
+  {{- renderRows(tableData.rows) | safe -}}
+
+  {# <tbody> groups of rows #}
+  {%- for body in tableData.body %}
+  <tbody>
+    {{ renderRows(body.rows) | safe -}}
+  </tbody>
+  {% endfor -%}
+
+  {# Footer rows #}
+  {%- if tableData.foot %}
+  <tfoot>
+    {{ renderRows(tableData.foot.rows) | safe -}}
+  </tfoot>
+  {% endif -%}
+</table>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- table(tableData) | safe -}}

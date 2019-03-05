@@ -1,5 +1,3 @@
 {
-  "excerpt": {
-    "short": "const gravity = Buildit.getDesignSystem();"
-  }
+  "text": "const gravity = Buildit.getDesignSystem();"
 }

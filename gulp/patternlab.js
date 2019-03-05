@@ -35,7 +35,8 @@ function paths() {
 // Exported array of glob patterns that clean tasks can use to
 // delete any files generated at build-time
 const generatedFileGlobs = [
-  path.join(__dirname, '..', 'dependencyGraph.json')
+  path.join(__dirname, '..', 'dependencyGraph.json'),
+  pkgPaths.normalizePath(paths().source.root, '_meta', '*.mustache')
 ];
 
 const generatedPatternsDir = pkgPaths.normalizePath(paths().source.patterns, '_generated');
@@ -44,7 +45,7 @@ generatedFileGlobs.push('!' + path.join(generatedPatternsDir, 'README.md')); // 
 
 function preSvgSymbolsTask () {
   return gulp.src(pkgPaths.bldSvgSymbolsFilePath)
-    .pipe(rename('symbols.mustache'))
+    .pipe(rename('symbols.njk'))
     .pipe(gulp.dest(generatedPatternsDir));
 };
 preSvgSymbolsTask.displayName = taskNamePrefix + 'pre:symbols';

@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated various dependencies
 - Travis PR builds will no longer notify our internal Slack channel
 
+### Removed
+- BREAKING: Removed `.grav-c-icon-toggle-button` class. Use `.grav-c-icon-button` together with `aria-pressed` instead.
+
 ### Fixed
 - Typo in docs
 
