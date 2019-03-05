@@ -1,3 +1,10 @@
+# [0.12.0](https://github.com/buildit/gravity-ui-sass/compare/v0.11.1...v0.12.0) (2019-03-05)
+
+
+### Features
+
+* **package.json:** added support for Semantic Release ([4292a3a](https://github.com/buildit/gravity-ui-sass/commit/4292a3a))
+
 # Changelog
 All notable changes to the [`gravity-ui-sass` project](./README.md) will be documented in this file.
 
