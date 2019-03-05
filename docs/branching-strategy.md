@@ -21,6 +21,17 @@ Once ready for review, the feature branch should be pushed to this Github repo a
 
 The maintainers will then review the PR and either merge into `develop` (and then delete that feature branch), or request additional changes.
 
+## Releases
+
+Releases should be named with a unique name like `metal-gear` instead of a version (which will automatically be added by Travis CI when building master). Releases should follow GitFlow's name strategy `release/NAME`.
+
+As Git Flow dictates, a release needs to be merged into `master` and `develop`. DO NOT merge `master` back into `develop` after Travis CI runs the release build. This may trigger corruption in the `develop` branch by causing merges to flow upstream.
+
+1. Create a PR for your release branch `release/NAME` from `develop` to merge with `master`
+1. Get the PR approved
+1. Message an admin run GIT Flow's release command locally into `master` and `develop`
+1. Wait for the release to be completed
+1. Close the PR and delete the branch on GitHub
 
 ## `master` branch
 
