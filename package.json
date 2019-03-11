@@ -2,9 +2,10 @@
   "name": "@buildit/gravity-ui-sass",
   "version": "0.12.1",
   "description": "A SASS UI library from the Buildit's Gravity design system",
-  "main": "index.js",
+  "main": "dist/ui-lib/gravity.js",
   "files": [
-    "index.js",
+    "build-api.js",
+    "build-consts.js",
     "dist/ui-lib/",
     "src/ui-lib/",
     "eyeglass-exports.js"
