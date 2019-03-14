@@ -1,13 +1,17 @@
 ul,
 ol {
-  padding-left: 0;
-  list-style-position: inside;
+  padding-left: $grav-sp-l;
+}
 
-  @media all and (min-width: gravy-breakpoint(regular)) {
-    list-style-position: outside;
-  }
+li + li {
+  // Decrease default vertical space
+  // between successive list items
+  margin-top: $grav-sp-m;
+}
 
-  li + li {
-    margin-top: $grav-sp-m;
-  }
+li > ul,
+li > ol {
+  // Add space above nested lists and their
+  // parent list item's text
+  margin-top: $grav-sp-m;
 }
