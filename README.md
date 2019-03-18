@@ -65,7 +65,38 @@ You need to get Gravity's CSS into your website or app somehow. Possible strateg
     * You can keep them in separate CSS files and link to them individually from your HTML, or you can concatenate the CSS.
     * Whichever way you choose, **Gravity's CSS must come first** since it includes normalisation rules and sets global default styles.
 * Compiling Gravity's SASS source to CSS yourself.
-    * By itself this is probably pointless (just grab the pre-compiled CSS!), but when adding your own, bespoke styling on top of Gravity this is useful. As with the CSS, you should ensure that Gravity's rules come first in the output. In practice, this amounts to making sure `@import "gravity-ui-sass";` is the first statement in our main SASS file.
+    * It's possible to import each ITCSS layer into your index SCSS file. This gives you the ability to add your own local tools, objects, components etc in the same specificty order as Gravity. This has the benefit of potentially making your SASS cleaner and easier to integrate back into Gravity, should it be something that other projects can benefit from.
+
+    For example:
+    ```
+    // === Settings layer ===
+    @import 'gravity-ui-sass/00-settings/settings.all';
+
+    // === Tools layer ===
+    @import 'gravity-ui-sass/01-tools/tools.all';
+    @import 'components/<YOUR_TOOL_NAME>.scss';
+
+    // === Generic layer ===
+    @import 'normalize';
+    @import 'gravity-ui-sass/02-generic/generic.all';
+
+    // === Elements layer ===
+    @import 'gravity-ui-sass/03-elements/elements.all';
+
+    // === Objects layer ===
+    @import 'gravity-ui-sass/04-objects/objects.all';
+
+    // === Components layer ===
+    @import 'gravity-ui-sass/05-components/components.all';
+    @import 'components/<YOUR_COMPONENT_NAME>.scss';
+
+    // === Utilities layer ===
+    @import 'gravity-ui-sass/06-utilities/utilities.all';
+    ```
+
+    If this is not a requirement then you can simply include all of Gravty's SASS using:
+    `@import 'gravity-ui-sass';
+
 * Embedding Gravity's CSS in a bundle
     * `import`ing Gravity's CSS or SASS into a JS bundle (with the appropriate loaders setup) is a perfectly valid approach
     * However, you should **avoid using tools that mangle the CSS class names** (e.g. [CSS Modules](https://github.com/css-modules/css-modules)). Gravity's CSS is designed to be global. Attempting to scope it is not supported and may well break things. If you do this, you're on your own.
