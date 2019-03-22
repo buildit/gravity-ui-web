@@ -1,6 +1,9 @@
 // a simple mixin to create a container for the page
 @mixin grav-l-container($no-margin: false) {
   max-width: $grav-page-content-max-width;
+  margin-right: $grav-page-content-inset;
+  margin-left: $grav-page-content-inset;
+
 
   // IE10+ bug that happens when using margin: auto
   // to fill all the available space between flex items.
@@ -11,17 +14,8 @@
     }
   }
 
-  @if (not $no-margin) {
-    margin-right: $grav-page-content-inset;
-    margin-left: $grav-page-content-inset;
-  }
-
   @media (min-width: gravy-breakpoint(regular)) {
     margin-right: auto;
     margin-left: auto;
-  }
-
-  @media (min-width: gravy-breakpoint(large)) {
-    max-width: $grav-page-content-max-width-large;
   }
 }

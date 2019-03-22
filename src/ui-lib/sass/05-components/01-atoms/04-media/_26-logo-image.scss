@@ -10,8 +10,4 @@
   @media all and (min-width: gravy-breakpoint(medium)) {
     max-height: $logo-size-m;
   }
-
-  @media all and (min-width: gravy-breakpoint(extra-large)) {
-    max-height: $logo-size-xl;
-  }
 }
