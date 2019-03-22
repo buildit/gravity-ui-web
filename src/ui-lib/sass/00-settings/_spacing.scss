@@ -48,3 +48,8 @@ $grav-sp-inset-squished-l: $grav-sp-l $grav-sp-xl;
 
 // Outer margin between page content and viewport edge on narrow viewports
 $grav-sp-page-content-inset: $grav-sp-m;
+
+// Standard vertical gap between successive block elements
+// Note that is expressed as an `em` value, so it will scale according to the
+// `font-size` of the block elements it affects.
+$grav-sp-vertical-gap: 1em;
