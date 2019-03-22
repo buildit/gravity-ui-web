@@ -14,6 +14,8 @@ const eyeglass = require('eyeglass');
 const rename = require("gulp-rename");
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
+
+const uiLibPaths = require('../build-api.js');
 const pkgPaths = require('./paths.js');
 
 const taskNamePrefix = 'patternlab:';
@@ -22,9 +24,8 @@ const taskNamePrefix = 'patternlab:';
 const config = require('../patternlab-config.json');
 const patternlab = require('@pattern-lab/core')(config);
 
-function paths() {
-  return config.paths;
-}
+const plPaths = config.paths;
+
 
 /******************************************************
  * PRE-BUILD TASKS
@@ -35,29 +36,29 @@ function paths() {
 // Exported array of glob patterns that clean tasks can use to
 // delete any files generated at build-time
 const generatedFileGlobs = [
-  path.join(__dirname, '..', 'dependencyGraph.json'),
-  pkgPaths.normalizePath(paths().source.root, '_meta', '*.mustache')
+  pkgPaths.pkgRootPath('dependencyGraph.json'),
+  pkgPaths.pkgRootPath(plPaths.source.meta, '*.mustache')
 ];
 
-const generatedPatternsDir = pkgPaths.normalizePath(paths().source.patterns, '_generated');
-generatedFileGlobs.push(path.join(generatedPatternsDir, '*'));
-generatedFileGlobs.push('!' + path.join(generatedPatternsDir, 'README.md')); // Prevent README.md from being deleted
+const generatedPatternsDirname = '_generated';
+generatedFileGlobs.push(pkgPaths.srcPatternsPath(generatedPatternsDirname, '*'));
+generatedFileGlobs.push(`!${pkgPaths.srcPatternsPath(generatedPatternsDirname, 'README.md')}`); // Prevent README.md from being deleted
 
 function preSvgSymbolsTask () {
-  return gulp.src(pkgPaths.bldSvgSymbolsFilePath)
+  return gulp.src(uiLibPaths.distPath(uiLibPaths.distSvgSymbolsFilename))
     .pipe(rename('symbols.njk'))
-    .pipe(gulp.dest(generatedPatternsDir));
+    .pipe(gulp.dest(pkgPaths.srcPatternsPath(generatedPatternsDirname)));
 };
 preSvgSymbolsTask.displayName = taskNamePrefix + 'pre:symbols';
 preSvgSymbolsTask.description = 'Copies Gravity\'s symbols.svg file to the patterns folder.';
 
 
 const generatedSymbolInfoFilename = '00-svg-symbols.json';
-const generatedSymbolInfoDir = pkgPaths.normalizePath(paths().source.patterns, '00-particles', '05-logos-and-icons');
+const generatedSymbolInfoDir = pkgPaths.srcPatternsPath('00-particles', '05-logos-and-icons');
 generatedFileGlobs.push(path.join(generatedSymbolInfoDir, generatedSymbolInfoFilename));
 
 function preSvgSymbolsInfoTask () {
-  return gulp.src(pkgPaths.bldSvgSymbolsInfoFilePath)
+  return gulp.src(uiLibPaths.distPath(uiLibPaths.distSvgSymbolsInfoFilename))
     .pipe(rename(generatedSymbolInfoFilename))
     .pipe(gulp.dest(generatedSymbolInfoDir));
 };
@@ -72,9 +73,9 @@ const preBuildTask = gulp.parallel(preSvgSymbolsTask, preSvgSymbolsInfoTask);
 ******************************************************/
 
 function plSassTask() {
-  return gulp.src(pkgPaths.normalizePath(paths().source.root, 'sass', 'pattern-scaffolding.scss'))
+  return gulp.src(pkgPaths.pkgRootPath(plPaths.source.root, 'sass', 'pattern-scaffolding.scss'))
     .pipe(sass(eyeglass(sass.sync().on('error', sass.logError))))
-    .pipe(gulp.dest(pkgPaths.normalizePath(paths().public.css)))
+    .pipe(gulp.dest(pkgPaths.pkgRootPath(plPaths.public.css)))
 };
 plSassTask.displayName = taskNamePrefix + 'sass';
 plSassTask.description = 'Compiles pattern library CSS files from source SASS.';
@@ -158,7 +159,7 @@ plBuildTask.description = 'Compiles the patterns and frontend, outputting to con
 
 function plWatchSassTask() {
   gulp.watch(
-    pkgPaths.normalizePath(paths().source.root, 'sass', '**', '*.scss'),
+    pkgPaths.pkgRootPath(plPaths.source.root, 'sass', '**', '*.scss'),
     gulp.series(plSassTask, patternlab.server.refreshCSS)
   );
 }
