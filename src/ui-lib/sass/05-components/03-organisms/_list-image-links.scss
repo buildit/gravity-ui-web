@@ -38,13 +38,6 @@
       margin-right: $grav-sp-m;
     }
   }
-
-  @media all and (min-width: gravy-breakpoint(extra-large)) {
-    > li {
-      flex: 1 0 $image-width-l;
-      margin-right: $grav-sp-l;
-    }
-  }
 }
 
 
