@@ -1,0 +1,3 @@
+
+// The maximum width of the page content
+$grav-page-content-max-width: calc(#{map-get(map-get($gravy, breakpoints), large)} - #{2 * $grav-sp-page-content-inset});
