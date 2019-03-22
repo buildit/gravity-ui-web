@@ -21,7 +21,7 @@
 
 // Default vertical margin *between* block elements
 * + * {
-  margin-top: $grav-sp-l;
+  margin-top: $grav-sp-vertical-gap;
 }
 
 html {
@@ -40,6 +40,6 @@ dd,
 th,
 td,
 option,
-body > header {
+body > * {
   margin-top: 0;
 }
