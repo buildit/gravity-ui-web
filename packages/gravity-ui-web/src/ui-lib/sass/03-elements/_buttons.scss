@@ -20,51 +20,60 @@ button:not([type]) {
 
 /* == Styles for specific kinds of buttons == */
 
-@mixin grav-button-styles($interactive, $contrast, $hover, $isToggle: false) {
-  border: $grav-st-thickness $grav-st-style $interactive;
-  background-color: $interactive;
-  color: $contrast;
+/// Applies `border`, `background-color` and `color` properties for buttons.
+///
+/// @access private
+@mixin grav-apply-button-colors($color-name, $is-primary) {
+  @include grav-color-grp-b-apply('border-color', $color-name, true);
+  @if $is-primary {
+    @include grav-color-grp-b-apply('background-color', $color-name, true);
+    @include grav-color-grp-a-apply('color', 'neutral', true);
+  }
+  @else {
+    @include grav-color-grp-a-apply('background-color', 'neutral', true);
+    @include grav-color-grp-b-apply('color', $color-name, true );
+  }
+}
+
+
+@mixin grav-button-styles($is-primary, $is-toggle: false) {
+  @include grav-apply-button-colors('control', $is-primary);
+
+  border-width: $grav-st-thickness;
+  border-style: $grav-st-style;
 
   &:hover {
-    background-color: $hover;
-    border-color: $hover;
+    @include grav-apply-button-colors('control-emphasis', $is-primary);
   }
 
   &:active {
-    background-color: $contrast;
-    border-color: unset;
-    color: $interactive;
+    @include grav-apply-button-colors('control-active', $is-primary);
   }
 
-  @if $isToggle {
+  @if $is-toggle {
     &[aria-pressed=true] {
       // Same styles as :active
-      background-color: $contrast;
-      border-color: unset;
-      color: $interactive;
+      @include grav-apply-button-colors('control-active', $is-primary);
     }
   }
 
   &:disabled {
     &,
     &:hover {
-      background-color: $grav-co-disabled;
-      border-color: $grav-co-disabled;
-      color: $grav-co-disabled-contrast;
-      cursor: auto;
+      @include grav-apply-button-colors('control-disabled', $is-primary);
     }
   }
 }
 
 [type=button] {
-  @include grav-button-styles($grav-co-interactive-secondary, $grav-co-interactive-secondary-contrast, $grav-co-interactive-secondary-hover, true);
+  @include grav-button-styles(false, true);
 }
 
 [type=reset] {
-  @include grav-button-styles($grav-co-interactive-secondary, $grav-co-interactive-secondary-contrast, $grav-co-interactive-secondary-hover);
+  @include grav-button-styles(false);
 }
 
 [type=submit],
 button:not([type]) {
-  @include grav-button-styles($grav-co-interactive-primary, $grav-co-interactive-primary-contrast, $grav-co-interactive-primary-hover);
+  @include grav-button-styles(true);
 }

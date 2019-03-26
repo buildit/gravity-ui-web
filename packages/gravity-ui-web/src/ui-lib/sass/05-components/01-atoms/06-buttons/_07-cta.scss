@@ -23,19 +23,21 @@
     color: inherit;
 
     &::after {
+      @include grav-color-grp-a-apply('background-color', 'accent', true);
+
       height: 100%;
-      background-color: $grav-co-accent-primary-light;
     }
   }
 
   &::after {
+    @include grav-color-grp-b-apply('background-color', 'accent', true);
+
     content: '';
     width: 100%;
     height: $grav-st-thickness-large;
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: $grav-co-accent-primary;
     transition-duration: $grav-tr-speed;
     transition-property: height, background-color;
     z-index: -1;

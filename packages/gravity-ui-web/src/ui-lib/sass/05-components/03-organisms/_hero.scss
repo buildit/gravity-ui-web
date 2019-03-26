@@ -1,12 +1,7 @@
 .grav-c-hero {
   position: relative;
   padding: ($grav-sp-xl + $grav-sp-l) 0 $grav-sp-xl 0;
-  background: $grav-co-bg;
   text-align: center;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $grav-co-fg;
-  }
 
   .grav-c-pullout,
   p {

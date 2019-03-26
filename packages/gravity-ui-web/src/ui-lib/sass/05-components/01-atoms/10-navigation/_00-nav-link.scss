@@ -1,36 +1,21 @@
 .grav-c-nav-link {
   display: inline-block;
   padding: $grav-sp-inset-squished-xs;
-  color: $grav-co-neutral-asphalt;
+  color: currentColor;
   text-decoration: none;
   white-space: nowrap;
-
-  @media (prefers-color-scheme: dark) {
-    color: $grav-co-neutral-dirty-snow-white;
-  }
-
 
   &[href] {
     @include gravy-font(primary);
 
     &:link,
     &:visited {
-      color: $grav-co-neutral-asphalt;
-
-      @media (prefers-color-scheme: dark) {
-        color: $grav-co-neutral-dirty-snow-white;
-      }
-    
+      color: currentColor;
     }
 
     &:hover,
     &:active {
-      border-color: $grav-co-accent-secondary;
-      color: $grav-co-neutral-warm-grey;
-
-      @media (prefers-color-scheme: dark) {
-        color: $grav-co-neutral-ashtray;
-      }
+      @include grav-color-grp-b-apply('color', 'neutral-emphasis', true);
     }
   }
 }

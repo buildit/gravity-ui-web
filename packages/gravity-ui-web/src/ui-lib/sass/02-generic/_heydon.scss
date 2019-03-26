@@ -24,17 +24,15 @@
   margin-top: $grav-sp-vertical-gap;
 }
 
-html {
+:root {
   // font-size & line-height are set by Gravy. See gravy.scss
   @include gravy-font('primary');
 
-  background-color: $grav-co-bg;
-  color: $grav-co-fg;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $grav-co-fg;
-    color: $grav-co-bg;
-  }
+  // Define CSS custom properties for default color scheme
+  @include grav-color-scheme-props($grav-co-scheme-default);
+  // Apply default color scheme with a fallback for older
+  // browsers that do not support CSS custom properties.
+  @include grav-color-scheme-apply(true);
 }
 
 // Exceptions to the * + * rule

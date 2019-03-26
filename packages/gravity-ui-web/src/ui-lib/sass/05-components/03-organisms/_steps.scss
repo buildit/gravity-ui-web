@@ -5,6 +5,8 @@
   list-style-type: none;
 
   > li {
+    @include grav-color-grp-b-apply('border-color', 'accent', true);
+
     position: relative;
     margin-top: 0;
     margin-left: $grav-sp-l;
@@ -12,7 +14,6 @@
     padding-left: $grav-sp-l;
     border-width: 0;
     border-left-width: $grav-st-thickness;
-    border-color: $grav-co-accent-primary;
     border-style: dashed;
     counter-increment: steps;
   }
@@ -42,12 +43,14 @@
 
   > li::before {
     @include gravy-font(secondary, bold);
+    @include grav-color-grp-b-apply('background-color', 'accent', true);
+    @include grav-color-grp-a-apply('color', 'neutral', true);
+
     content: counters(steps, '.');
     width: 1rem;
     position: absolute;
     left: -$grav-sp-m;
     padding: $grav-sp-inset-squished-xs;
-    background-color: $grav-co-accent-primary;
     text-align: center;
   }
 
