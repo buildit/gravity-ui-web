@@ -1,0 +1,14 @@
+{%- from 'atoms-label' import label -%}
+{%- from 'atoms-text-input' import textInput -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro formGroup(form) -%}
+<div class="grav-c-form-group">
+  {{ label(form.label, form.id) }}
+  {{ textInput(form.id,"",form.type) }}
+</div>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- formGroup(form) | safe -}}
+

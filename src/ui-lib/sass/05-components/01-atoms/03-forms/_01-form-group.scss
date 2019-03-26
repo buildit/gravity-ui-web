@@ -1,0 +1,12 @@
+.grav-c-form-group {
+  position: relative;
+
+  * {
+    margin: 0;
+  }
+
+  > label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+}

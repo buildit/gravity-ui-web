@@ -1,0 +1,13 @@
+{%- from 'atoms-button' import button -%}
+{%- from 'molecules-form-group' import formGroup -%}
+
+<form>
+  {% if form.title -%}
+    <h2>{{form.title}}</h2>
+    
+  {%- endif %}
+  {% for group in form.groups -%}
+      {{ formGroup(group) }}
+  {% endfor %}
+  {{ button(form.ctaText, 'submit', false, null, null, null ) | safe }}
+</form>

@@ -1,0 +1,11 @@
+{# Reusable macro for other templates to import: #}
+{%- macro label(text, forId) -%}
+  <label
+  {%- if forId %} for="{{forId}}"{%- endif -%}
+  >
+    {{ text }}
+  </label>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{ label(text, forId) | safe }}

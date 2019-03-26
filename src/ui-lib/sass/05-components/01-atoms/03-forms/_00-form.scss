@@ -1,0 +1,11 @@
+form {
+  > [type=submit] {
+    padding-right: $grav-sp-l;
+    padding-left: $grav-sp-l;
+    min-width: 100%;
+
+    @media all and (min-width: gravy-breakpoint(small)) {
+      min-width: 0;
+    }
+  }
+}

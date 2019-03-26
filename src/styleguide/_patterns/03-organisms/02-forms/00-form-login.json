@@ -1,0 +1,18 @@
+{
+  "form": {
+    "title": "Login",
+    "groups": [
+      {
+        "id": "usernameExample",
+        "label": "Username",
+        "type": "text"
+      },
+      {
+        "id": "passwordExample",
+        "label": "Password",
+        "type": "password"
+      }
+    ],
+    "ctaText": "Login"
+  }
+}
