@@ -2,12 +2,6 @@ body > footer {
   @include typi('small-text');
   margin-top: vr(3);
   padding: $grav-sp-l 0;
-  background-color: $grav-co-fg;
-  color: $grav-co-bg;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $grav-co-secondary-twilight;
-  }
 
   > * {
     @include grav-l-container;
@@ -17,15 +11,6 @@ body > footer {
     &:last-child {
       padding: 0;
     }
-  }
-
-  a[href]:link,
-  a[href]:visited {
-    color: $grav-co-neutral-dirty-snow-white;
-  }
-
-  a[href]:hover {
-    color: $grav-co-neutral-ashtray;
   }
 
   .grav-c-logo {

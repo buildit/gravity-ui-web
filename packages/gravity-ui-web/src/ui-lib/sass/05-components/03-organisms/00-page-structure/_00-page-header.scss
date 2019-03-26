@@ -24,11 +24,7 @@ body > header {
   .grav-c-logo {
     display: block;
     max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
-    fill: $grav-co-neutral-asphalt;
-
-    @media (prefers-color-scheme: dark) {
-      fill: $grav-co-neutral-dirty-snow-white;
-    }
+    fill: currentColor;
 
     @media (min-width: $grav-page-heading-trigger-breakpoint) {
       width: 100%;
@@ -38,11 +34,7 @@ body > header {
 
   /* stylelint-disable-next-line selector-max-compound-selectors */
   a:hover .grav-c-logo {
-    fill: $grav-co-neutral-warm-grey;
-    
-    @media (prefers-color-scheme: dark) {
-      fill: $grav-co-neutral-ashtray;
-    }
+    @include grav-color-grp-b-apply('fill', 'neutral-emphasis', true);
   }
 
   .grav-c-toggle-menu {

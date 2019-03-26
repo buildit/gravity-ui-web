@@ -1,28 +1,32 @@
 /** @define sg-example */
 .sg-example--inline-block {
+  @include grav-color-grp-b-apply('background-color', 'neutral', true);
+
   content: ' ';
   display: inline-block;
   width: 1em;
   height: 1em;
-  background-color: $grav-co-neutral-warm-grey;
   margin-right: 0.5rem;
   vertical-align: middle;
 }
 
 .sg-example--padded-block {
+  @include grav-color-grp-b-apply('background-color', 'accent', true);
+
   max-width: 8rem;
-  background-color: $grav-co-primary-satsuma;
 }
 
 .sg-example--padded-block > div {
+  @include grav-color-grp-b-apply('background-color', 'accent', true);
+
   height: 6rem;
   position: relative;
-  background-color: $grav-co-primary-satsuma;
   box-sizing: border-box;
 }
 
 .sg-example--padded-block > div > div {
+  @include grav-color-grp-b-apply('background-color', 'neutral', true);
+
   position: absolute;
-  background-color: $grav-co-neutral-warm-grey;
   box-sizing: border-box;
 }

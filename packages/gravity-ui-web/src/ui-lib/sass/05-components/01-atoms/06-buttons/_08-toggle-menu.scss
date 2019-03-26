@@ -24,12 +24,8 @@
     height: $grav-st-thickness-large;
     position: relative;
     margin-top: auto;
-    background-color: $grav-co-neutral-asphalt;
+    background-color: currentColor;
     transition: all $grav-tr-speed-slow;
-    
-    @media (prefers-color-scheme: dark) {
-      background-color: $grav-co-neutral-dirty-snow-white;
-    }
 
     &::before,
     &::after {
@@ -40,13 +36,9 @@
       height: $grav-st-thickness-large;
       position: absolute;
       left: 0;
-      background-color: $grav-co-neutral-asphalt;
+      background-color: currentColor;
 
       transition: all $grav-tr-speed-slow;
-
-      @media (prefers-color-scheme: dark) {
-        background-color: $grav-co-neutral-dirty-snow-white;
-      }
     }
 
     &::before {top: -$grav-sp-icon;}

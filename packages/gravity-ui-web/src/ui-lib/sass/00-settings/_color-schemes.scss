@@ -1,0 +1,122 @@
+////
+/// Definitions of Gravity's out-of-the-box colour scheme maps.
+///
+/// @group  colours
+/// @access public
+////
+
+
+/// Light colour scheme.
+$grav-co-scheme-light: (
+  // == Group A colours ==
+  'group-a': (
+    // Base neutral colour.
+    //
+    // Always used for container background,
+    // may be used for other things.
+    'neutral': $grav-co-wipro-white,
+
+    // Alternative neutral colour to be used
+    // for subtle, NON-ESSENTIAL, effects. E.g.
+    // banding alternate table rows.
+    'neutral-alt': $grav-co-wipro-white,
+
+    // Accent colour for elements that should draw the user's
+    // focus.
+    // Typically, this should be paired with the corresponing
+    // layer 1 accent colour, because colour schemes may assign
+    // neutral colours to either the layer 0 or layer 1 accent
+    // colours.
+    // For example: highlighted text, calls to action, etc.
+    'accent': $grav-co-wipro-white,
+
+    // Accent colour for elements that indicate success or
+    // completion.
+    // For example: Status messages or icons that indicate that
+    // something is OK or complete.
+    'accent-success': $grav-co-wipro-white,
+
+    // Accent colour for elements that require the user's
+    // attention.
+    // For example: Warning messages or alerts.
+    'accent-attention': $grav-co-wipro-white,
+
+    // Accent colour for elements that indicate danger or risk.
+    // For example: Error messages or destructive actions.
+    'accent-danger': $grav-co-wipro-white,
+
+  ),
+
+  // == Group B colours ==
+  'group-b': (
+    // Base neutral colour.
+    // Always used for container foreground (i.e. text).
+    // May be used for other non-interactive things that need
+    // to be visibly distinguishable against the background
+    // such as table borders, dividers, etc.
+    'neutral': $grav-co-wipro-dark-gray,
+
+    // Alternative neutral colour to be used
+    // for non-interactive items that need to visually stand out
+    // less against their surroundings. E.g. small text, code
+    // comments, etc.
+    'neutral-subtle': $grav-co-wipro-dark-gray,
+
+    // Alternative neutral colour to be used
+    // for non-interactive items that need to visually stand out
+    // more against their surroundings. E.g. emphasized text,
+    // quotes, etc.
+    'neutral-emphasis': $grav-co-wipro-dark-gray,
+
+    // Colour intended for interactive controls (links, buttons, etc.)
+    // that need to be visually distinguishable against the background.
+    'control': $grav-co-wipro-teal-100,
+
+    // Colour intended for an alternative state or type of interactive
+    // control. For example, a visited link.
+    'control-alt': $grav-co-wipro-violet-100,
+
+    // Colour intended for states of interactive controls that need
+    // to be visually emphasised somehow. Typically this will be used
+    // for hover and/or focus states.
+    'control-emphasis': $grav-co-wipro-teal-80,
+
+    // Colour intended for the active state of interactive controls.
+    // Typically this will be used when a button is pressed or a link
+    // is clicked.
+    'control-active': $grav-co-wipro-teal-80,
+
+    // Colour intended for the disbaled state of interactive controls.
+    'control-disabled': $grav-co-wipro-dark-gray,
+
+    // Accent colour for elements that should draw the user's
+    // focus.
+    // Typically, this should be paired with the corresponing
+    // layer 0 accent colour, because colour schemes may assign
+    // neutral colours to either the layer 0 or layer 1 accent
+    // colours.
+    // For example: highlighted text, calls to action, etc.
+    'accent': $grav-co-wipro-red-100,
+
+    // Accent colour for elements that indicate success or
+    // completion.
+    // For example: Status messages or icons that indicate that
+    // something is OK or complete.
+    'accent-success': $grav-co-wipro-dark-gray,
+
+    // Accent colour for elements that require the user's
+    // attention.
+    // For example: Warning messages or alerts.
+    'accent-attention': $grav-co-wipro-dark-gray,
+
+    // Accent colour for elements that indicate danger or risk.
+    // For example: Error messages or destructive actions.
+    'accent-danger': $grav-co-wipro-dark-gray,
+  ),
+);
+
+
+
+
+/// The default colour scheme that is applied to pages
+$grav-co-scheme-default: $grav-co-scheme-light;

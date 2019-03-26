@@ -3,30 +3,19 @@ a {
 
   &[href] {
     &:link {
-      color: $grav-co-interactive-secondary;
-
-      @media (prefers-color-scheme: dark) {
-        color: $grav-co-accent-secondary-light;
-      }      
+      @include grav-color-grp-b-apply('color', 'control', true);
     }
 
     &:visited {
-      color: $grav-co-interactive-secondary-visited;
-
-      @media (prefers-color-scheme: dark) {
-        color: $grav-co-accent-secondary-dark;
-      }  
+      @include grav-color-grp-b-apply('color', 'control-alt', true);
     }
 
     &:hover {
-      color: $grav-co-interactive-secondary-hover;
-      @media (prefers-color-scheme: dark) {
-        color: $grav-co-accent-secondary;
-      }
+      @include grav-color-grp-b-apply('color', 'control-emphasis', true);
     }
 
     &:active {
-      color: $grav-co-accent-primary-light;
+      @include grav-color-grp-b-apply('color', 'control-active', true);
     }
   }
 }

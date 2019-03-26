@@ -6,45 +6,10 @@
   padding: 0;
   list-style-type: none;
   text-align: center;
-  
+
   > li {
     flex: auto;
     margin-top: $grav-sp-m;
     margin-left: $grav-sp-m;
-  }
-
-  a {
-    display: inline-block;
-    text-decoration: underline;
-
-    &:hover {
-      color: $grav-co-neutral-asphalt;
-    }
-    
-    &:active {
-      background: transparent;
-    }
-  }
-
-  svg {
-    border-bottom: $grav-st-thickness solid $grav-co-neutral-charcoal;
-    fill: $grav-co-neutral-charcoal;
-
-    @media (prefers-color-scheme: dark) {
-      border-bottom: $grav-st-thickness solid $grav-co-neutral-dirty-snow-white;
-      fill: $grav-co-neutral-dirty-snow-white;
-      opacity: 0.8;
-    }
-
-    &:hover {
-      border-color: $grav-co-neutral-asphalt;
-      fill: $grav-co-neutral-asphalt;
-      opacity: 1;
-
-      @media (prefers-color-scheme: dark) {
-        border-color: $grav-co-neutral-dirty-snow-white;
-        fill: $grav-co-neutral-dirty-snow-white;
-      }
-    }
   }
 }

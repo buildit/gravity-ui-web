@@ -37,11 +37,11 @@
 }
 
 .sg-swatch-check__item--light::before {
-  color: $grav-co-neutral-dirty-snow-white;
+  @include grav-color-grp-a-apply('color', 'neutral', true);
 }
 
 .sg-swatch-check__item--dark::before {
-  color: $grav-co-neutral-charcoal;
+  @include grav-color-grp-b-apply('color', 'neutral', true);
 }
 
 .sg-swatch-check__item--small::before {
@@ -53,10 +53,11 @@
 }
 
 .sg-swatch-check__item-label {
+  @include grav-color-grp-b-apply('background-color', 'neutral', true);
+  @include grav-color-grp-a-apply('color', 'neutral', true);
+
   padding: 2px 4px;
-  background-color: $grav-co-neutral-charcoal;
   border-radius: 5px;
-  color: $grav-co-neutral-dirty-snow-white;
   font-size: 0.7em;
   text-align: center;
   text-transform: uppercase;
