@@ -1,0 +1,7 @@
+input[type=text],
+input[type=password] {
+  padding-right: $grav-sp-xs;
+  padding-left: $grav-sp-xs;
+  width: 100%;
+  max-width: 40ch;
+}

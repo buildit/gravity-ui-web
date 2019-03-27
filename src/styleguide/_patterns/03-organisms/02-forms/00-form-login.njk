@@ -1,10 +1,8 @@
 {%- from 'atoms-button' import button -%}
 {%- from 'molecules-form-group' import formGroup -%}
-
 <form>
+  <h2>{{form.title}}</h2>
   {% if form.title -%}
-    <h2>{{form.title}}</h2>
-    
   {%- endif %}
   {% for group in form.groups -%}
       {{ formGroup(group) }}

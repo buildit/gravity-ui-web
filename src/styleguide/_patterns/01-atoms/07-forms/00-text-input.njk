@@ -1,12 +1,12 @@
 {# Reusable macro for other templates to import: #}
-{%- macro textInput(id, class, type, disabled) -%}
+{%- macro textInput(id, classNames, type, disabled) -%}
   <input
   {%- if id %} id="{{id}}"{%- endif -%}
-   class="grav-c-text-input {%- if class %}{{class}}{%- endif -%}"
+  {%- if classNames %} class="{{ classNames }}"{%- endif -%}
   {%- if type %} type="{{type}}"{%- endif -%}
   {%- if disabled %} disabled{%- endif -%}
   >
 {%- endmacro -%}
 
 {# Example rendering: #}
-{{ textInput(id, class, type, disabled) | safe }}
+{{ textInput(id, classNames, type, disabled) | safe }}
