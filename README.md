@@ -1,8 +1,8 @@
-# gravity-ui-sass
+# gravity-ui-web
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/buildit/gravity-ui-sass.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/buildit/gravity-ui-web.svg)](https://greenkeeper.io/)
 
-A SASS UI library from the Buildit's Gravity design system.
+Library of styles, components and associated assets to build UIs for the web. Part of Buildit's Gravity design system.
 
 ---
 
@@ -42,12 +42,12 @@ If you intend to compile Gravity's SASS yourself, we strong recommend:
 ### Installation
 
 ```bash
-$ npm install --save-dev @buildit/gravity-ui-sass
+$ npm install --save-dev @buildit/gravity-ui-web
 ```
 
 ### Build integration
 
-Once installed as a dependency, you need to integrate Gravity into your project's build. The [Gravity UI library NPM package](https://www.npmjs.com/package/@buildit/gravity-ui-sass) ships with the following files:
+Once installed as a dependency, you need to integrate Gravity into your project's build. The [Gravity UI library NPM package](https://www.npmjs.com/package/@buildit/gravity-ui-web) ships with the following files:
 
 * **Pre-compiled CSS file**
     * The SASS source from which the CSS was compiled
@@ -70,32 +70,32 @@ You need to get Gravity's CSS into your website or app somehow. Possible strateg
     For example:
     ```
     // === Settings layer ===
-    @import 'gravity-ui-sass/00-settings/settings.all';
+    @import 'gravity-ui-web/00-settings/settings.all';
 
     // === Tools layer ===
-    @import 'gravity-ui-sass/01-tools/tools.all';
+    @import 'gravity-ui-web/01-tools/tools.all';
     @import 'components/<YOUR_TOOL_NAME>.scss';
 
     // === Generic layer ===
     @import 'normalize';
-    @import 'gravity-ui-sass/02-generic/generic.all';
+    @import 'gravity-ui-web/02-generic/generic.all';
 
     // === Elements layer ===
-    @import 'gravity-ui-sass/03-elements/elements.all';
+    @import 'gravity-ui-web/03-elements/elements.all';
 
     // === Objects layer ===
-    @import 'gravity-ui-sass/04-objects/objects.all';
+    @import 'gravity-ui-web/04-objects/objects.all';
 
     // === Components layer ===
-    @import 'gravity-ui-sass/05-components/components.all';
+    @import 'gravity-ui-web/05-components/components.all';
     @import 'components/<YOUR_COMPONENT_NAME>.scss';
 
     // === Utilities layer ===
-    @import 'gravity-ui-sass/06-utilities/utilities.all';
+    @import 'gravity-ui-web/06-utilities/utilities.all';
     ```
 
     If this is not a requirement then you can simply include all of Gravty's SASS using:
-    `@import 'gravity-ui-sass';
+    `@import 'gravity-ui-web';
 
 * Embedding Gravity's CSS in a bundle
     * `import`ing Gravity's CSS or SASS into a JS bundle (with the appropriate loaders setup) is a perfectly valid approach
@@ -171,7 +171,7 @@ Each component also has notes (shown in the pattern info panel) which describe w
 
 ### One-time setup
 
-1. Clone this repo: https://github.com/buildit/gravity-ui-sass
+1. Clone this repo: https://github.com/buildit/gravity-ui-web
 1. Run `npm install` to install all the dev dependencies
 
 ### Building and running the pattern library locally
@@ -208,7 +208,7 @@ To only build the UI library (without the pattern library), use:
 $ npm run build
 ```
 
-The build output will go into `dist/` and, in this instance, only contains the artefacts that are needed when publishing the [`@buildit/gravity-ui-sass` NPM package](https://www.npmjs.com/package/@buildit/gravity-ui-sass).
+The build output will go into `dist/` and, in this instance, only contains the artefacts that are needed when publishing the [`@buildit/gravity-ui-web` NPM package](https://www.npmjs.com/package/@buildit/gravity-ui-web).
 
 
 ### Making commits

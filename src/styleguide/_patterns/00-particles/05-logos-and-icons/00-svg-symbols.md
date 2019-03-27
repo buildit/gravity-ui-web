@@ -1,6 +1,6 @@
 ## Consuming SVG symbols
 
-`gravity-ui-sass` provides all the logos and icons shown here, as SVG `<symbol>` elements in the `symbols.svg` file. The contents of that file must be _inlined_ into your HTML document.
+`gravity-ui-web` provides all the logos and icons shown here, as SVG `<symbol>` elements in the `symbols.svg` file. The contents of that file must be _inlined_ into your HTML document.
 
 Then, whereever individual logos or icons need to be displayed, you can do so using the following markup:
 
@@ -22,7 +22,7 @@ Without further styling, the logo or icon will appear as black (`#000`) on a tra
 
 ## Generating the SVG symbols
 
-`gravity-ui-sass` uses an SVG icon system instead of an icon font. Furthermore, [we use `<symbols>` rather than `<defs>`](https://css-tricks.com/svg-symbol-good-choice-icons/), so that we don't need to specify the `viewBox` each time a glyph is referenced. The benefits of this approach are covered in the CSS-Tricks [Icon System with SVG Sprites](https://css-tricks.com/svg-sprites-use-better-icon-fonts/) article. Of particular appeal to us were the following:
+`gravity-ui-web` uses an SVG icon system instead of an icon font. Furthermore, [we use `<symbols>` rather than `<defs>`](https://css-tricks.com/svg-symbol-good-choice-icons/), so that we don't need to specify the `viewBox` each time a glyph is referenced. The benefits of this approach are covered in the CSS-Tricks [Icon System with SVG Sprites](https://css-tricks.com/svg-sprites-use-better-icon-fonts/) article. Of particular appeal to us were the following:
 
 * Richer styling control via CSS than what you can achieve with icon font glyphs.
 * Easier positioning and sizing since it behaves more like an image and avoids inline quirkiness (line-heights, vertical positioning, etc.)
