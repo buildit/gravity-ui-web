@@ -7,5 +7,5 @@
   {% for group in form.groups -%}
       {{ formGroup(group) }}
   {% endfor %}
-  {{ button(form.ctaText, 'submit', false, null, null, null ) | safe }}
+  {{ button(form.ctaText, 'submit', false ) | safe }}
 </form>
