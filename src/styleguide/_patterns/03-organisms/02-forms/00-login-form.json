@@ -5,12 +5,14 @@
       {
         "id": "usernameExample",
         "label": "Username",
-        "type": "text"
+        "type": "text",
+        "required": true
       },
       {
         "id": "passwordExample",
         "label": "Password",
-        "type": "password"
+        "type": "password",
+        "required": true
       }
     ],
     "ctaText": "Login"

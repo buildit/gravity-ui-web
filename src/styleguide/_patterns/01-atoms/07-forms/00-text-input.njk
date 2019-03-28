@@ -1,9 +1,10 @@
 {# Reusable macro for other templates to import: #}
-{%- macro textInput(id, classNames, type = "text", disabled = false) -%}
+{%- macro textInput(id, classNames, type = "text", required = false, disabled = false) -%}
   <input
   {%- if id %} id="{{id}}"{%- endif -%}
   {%- if classNames %} class="{{classNames}}"{%- endif -%}
   {%- if type %} type="{{type}}"{%- endif -%}
+  {%- if required %} required{%- endif -%}
   {%- if disabled %} disabled{%- endif -%}
   >
 {%- endmacro -%}
