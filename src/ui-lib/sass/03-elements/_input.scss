@@ -1,5 +1,4 @@
-input[type=text],
-input[type=password] {
+input:not([type=radio]):not([type=checkbox]) {
   padding-right: $grav-sp-xs;
   padding-left: $grav-sp-xs;
   width: 100%;

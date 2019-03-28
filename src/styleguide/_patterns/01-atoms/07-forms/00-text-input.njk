@@ -1,5 +1,5 @@
 {# Reusable macro for other templates to import: #}
-{%- macro textInput(id, classNames, type, disabled) -%}
+{%- macro textInput(id, classNames, type = "text", disabled) -%}
   <input
   {%- if id %} id="{{id}}"{%- endif -%}
   {%- if classNames %} class="{{ classNames }}"{%- endif -%}
@@ -9,4 +9,4 @@
 {%- endmacro -%}
 
 {# Example rendering: #}
-{{ textInput(id, classNames, type, disabled) | safe }}
+{{ textInput(id, classNames) | safe }}

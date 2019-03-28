@@ -4,7 +4,7 @@
 {# Reusable macro for other templates to import: #}
 {%- macro formGroup(form) -%}
 <div class="grav-c-form-group">
-  {{ label(form.label, form.id) }}
+  {{ label(form.label, form.id) | safe }}
   {{ textInput(form.id, null, form.type) }}
 </div>
 {%- endmacro -%}
