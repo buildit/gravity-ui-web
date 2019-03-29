@@ -120,3 +120,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# SASS
+.sass-cache
