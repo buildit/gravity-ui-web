@@ -116,6 +116,35 @@ $grav-co-scheme-light: (
 );
 
 
+/// Dark colour scheme.
+$grav-co-scheme-dark: (
+  // == Group A colours ==
+  'group-a': (
+    'neutral': $grav-co-wipro-dark-gray,
+    'neutral-alt': $grav-co-wipro-dark-gray,
+    'accent': $grav-co-wipro-dark-gray,
+    'accent-success': $grav-co-wipro-dark-gray,
+    'accent-attention': $grav-co-wipro-dark-gray,
+    'accent-danger': $grav-co-wipro-dark-gray,
+  ),
+
+  // == Group B colours ==
+  'group-b': (
+    'neutral': $grav-co-wipro-white,
+    'neutral-subtle': $grav-co-wipro-white,
+    'neutral-emphasis': $grav-co-wipro-white,
+    'control': $grav-co-wipro-teal-80,
+    'control-alt': $grav-co-wipro-violet-80,
+    'control-emphasis': $grav-co-wipro-teal-100,
+    'control-active': $grav-co-wipro-teal-100,
+    'control-disabled': $grav-co-wipro-white,
+    'accent': $grav-co-wipro-red-60,
+    'accent-success': $grav-co-wipro-white,
+    'accent-attention': $grav-co-wipro-white,
+    'accent-danger': $grav-co-wipro-white,
+  ),
+);
+
 
 
 /// The default colour scheme that is applied to pages

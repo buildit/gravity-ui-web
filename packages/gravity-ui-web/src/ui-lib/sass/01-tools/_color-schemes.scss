@@ -83,10 +83,12 @@
   @include grav-color-grp-b-apply('color', 'neutral', $use-fallback);
 }
 
-/// Defines a color scheme CSS class.
-@mixin grav-color-scheme-define-class($color-scheme-name, $color-scheme-map) {
-  #{grav-color-scheme-class-name($color-scheme-name)} {
-    @include grav-color-scheme-props($color-scheme-map);
-    @include grav-color-scheme-apply;
+/// Defines a color scheme CSS class(es).
+@mixin grav-color-scheme-define-class($color-scheme-names, $color-scheme-map) {
+  @each $name in $color-scheme-names {
+    #{grav-color-scheme-class-name($name)} {
+      @include grav-color-scheme-props($color-scheme-map);
+      @include grav-color-scheme-apply;
+    }
   }
 }
