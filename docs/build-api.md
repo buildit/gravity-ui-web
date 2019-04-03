@@ -1,16 +1,16 @@
 # Build API
 
-The `@buildit/gravity-ui-sass` NPM package provides a Node.js API for build scripts to use. It provides file names and paths to the relevant assets contained in the NPM package, as well as useful metadata about the package.
+The `@buildit/gravity-ui-web` NPM package provides a Node.js API for build scripts to use. It provides file names and paths to the relevant assets contained in the NPM package, as well as useful metadata about the package.
 
-Projects that use Gravity's UI library are **strongly encouraged** to use this API within their build scripts (e.g. [Gulp](https://gulpjs.com/) files or [Webpack](https://webpack.js.org/) configs), instead of hard-coding paths like `../node_modules/@buildit/gravity-ui-sass/some/file.ext`. The build API is part of this package's public API surface, but the actual assets file names and locations are not. So, if `gravity.css` was renamed to `foo.css` in a future release, that would _not_ be considered a breaking change. However, renaming or remoing the `distCssFilename` property of the build API _would_ be a breaking change.
+Projects that use Gravity's UI library are **strongly encouraged** to use this API within their build scripts (e.g. [Gulp](https://gulpjs.com/) files or [Webpack](https://webpack.js.org/) configs), instead of hard-coding paths like `../node_modules/@buildit/gravity-ui-web/some/file.ext`. The build API is part of this package's public API surface, but the actual assets file names and locations are not. So, if `gravity.css` was renamed to `foo.css` in a future release, that would _not_ be considered a breaking change. However, renaming or remoing the `distCssFilename` property of the build API _would_ be a breaking change.
 
 ⚠️ **Note:** The build API is strictly intended for build-time scripts and tools. It should never be embedded into your actual build artefacts.
 
 ## Using the API
-Simply `require()` (or `import`) `@buildit/gravity-ui-sass/build-api` and then use the properties and functions of the object you receive:
+Simply `require()` (or `import`) `@buildit/gravity-ui-web/build-api` and then use the properties and functions of the object you receive:
 
 ```js
-const gravityPaths = require('@buildit/gravity-ui-sass/build-api');
+const gravityPaths = require('@buildit/gravity-ui-web/build-api');
 
 // === Metadata ===
 console.log(gravityPaths.version); // The Gravity version you have installed. E.g. '0.12.0'
@@ -27,17 +27,17 @@ console.log( gravityPaths.distJsFilename ); // Filename of main JS file. E.g. 'g
 
 // For example:
 console.log( gravityPaths.distPath(gravityPaths.distCssFilename) );
-// Will output something like: '/Users/xy123456/code/gravity-ui-sass/dist/ui-lib/gravity.css'
+// Will output something like: '/Users/xy123456/code/gravity-ui-web/dist/ui-lib/gravity.css'
 
 // If invoked with no arguments, it returns the path to the distributables directory:
 console.log( gravityPaths.distPath() );
-// Will output something like: '/Users/xy123456/code/gravity-ui-sass/dist/ui-lib'
+// Will output something like: '/Users/xy123456/code/gravity-ui-web/dist/ui-lib'
 
 // If invoked with multiple arguments, they are treated as path segments relative to the
 // distributables directory. This can be useful for constructing globs that have the
 // correct path separators for your OS:
 console.log( gravityPaths.distPath('**', '*.css') );
-// Will output something like: '/Users/xy123456/code/gravity-ui-sass/dist/ui-lib/**/*.css'
+// Will output something like: '/Users/xy123456/code/gravity-ui-web/dist/ui-lib/**/*.css'
 
 
 // === SASS source code ===
@@ -48,9 +48,9 @@ console.log( gravityPaths.srcSassDebugFilename ); // Filename of debug SASS file
 // to any file in SASS source directory. It behaves exactly like the distPath() counterpart
 // described above:
 
-console.log( gravityPaths.srcSassPath() ); // '/Users/xy123456/code/gravity-ui-sass/src/ui-lib/sass
-console.log( gravityPaths.srcSassPath(gravityPaths.srcSassMainFilename) ); // '/Users/xy123456/code/gravity-ui-sass/src/ui-lib/sass/index.scss'
-console.log( gravityPaths.srcSassPath('**', '*.scss') ); // '/Users/xy123456/code/gravity-ui-sass/src/ui-lib/sass/**/*.scss'
+console.log( gravityPaths.srcSassPath() ); // '/Users/xy123456/code/gravity-ui-web/src/ui-lib/sass
+console.log( gravityPaths.srcSassPath(gravityPaths.srcSassMainFilename) ); // '/Users/xy123456/code/gravity-ui-web/src/ui-lib/sass/index.scss'
+console.log( gravityPaths.srcSassPath('**', '*.scss') ); // '/Users/xy123456/code/gravity-ui-web/src/ui-lib/sass/**/*.scss'
 ```
 
 ## Gulp example
@@ -61,7 +61,7 @@ Here's a simple example of how you might use this API within a Gulp build script
 
 const path = require('path');
 const gulp = require('gulp');
-const gravityPaths = require('@buildit/gravity-ui-sass/build-api');
+const gravityPaths = require('@buildit/gravity-ui-web/build-api');
 
 // This project's build output dir
 const buildDir = path.resolve(__dirname, 'public');
@@ -84,6 +84,6 @@ module.exports = {
 };
 ```
 
-⚠️ **Note on SASS compilation:** When compiling your own SASS, it may be tempting to simply point the SASS compiler at `gravityPaths.srcSassMainFilename` (or to add `gravityPaths.srcSassPath()` to Node SASS's `inludePaths` and then `@import "gravity-ui-sass";` in one of your own SASS files). However, this alone will not work. Gravity's SASS depends on a few external SASS libraries (`@buildit/gravy`, `modularscale-sass` & `normalize-scss`). You must therefore ensure that each library's SASS directory is also added to the Node SASS's `includePaths` option.
+⚠️ **Note on SASS compilation:** When compiling your own SASS, it may be tempting to simply point the SASS compiler at `gravityPaths.srcSassMainFilename` (or to add `gravityPaths.srcSassPath()` to Node SASS's `inludePaths` and then `@import "gravity-ui-web";` in one of your own SASS files). However, this alone will not work. Gravity's SASS depends on a few external SASS libraries (`@buildit/gravy`, `modularscale-sass` & `normalize-scss`). You must therefore ensure that each library's SASS directory is also added to the Node SASS's `includePaths` option.
 
 Note that Gravity itself and all of those SASS libraries support [Eyeglass](https://github.com/linkedin/eyeglass) which avoids the need to manually set the `includePaths` like that. We therefore recommend using Eyeglass to simplify your SASS build configuration.

@@ -1,6 +1,6 @@
 # Contributing
 
-We welcome all forms of contribution! Feedback, [bug reports](https://github.com/buildit/gravity-ui-sass/issues/new?template=bug-report.md) and [feature requests](https://github.com/buildit/gravity-ui-sass/issues/new?template=feature-request.md) can be just as valuable as code contributions!
+We welcome all forms of contribution! Feedback, [bug reports](https://github.com/buildit/gravity-ui-web/issues/new?template=bug-report.md) and [feature requests](https://github.com/buildit/gravity-ui-web/issues/new?template=feature-request.md) can be just as valuable as code contributions!
 
 If you want to make code contributions, please follow the process outlined below. Whether you have a specific fix or feature in mind already, or if you have spare time and just want to help out - we'd love to hear from you!
 
@@ -18,7 +18,7 @@ To avoid wasted effort, please always follow this process:
     * As per our [branching strategy](./docs/branching-strategy.md)
 1. **Write your code**
     * Make sure you follow all the relevant conventions (see next section)
-1. **[Create a pull request](https://github.com/buildit/gravity-ui-sass/pulls)** once your code is ready
+1. **[Create a pull request](https://github.com/buildit/gravity-ui-web/pulls)** once your code is ready
     * The maintainers will then review your code and, if necessary, request changes
     * Once approved, your PR will be merged and the associated feature branch will be deleted.
 

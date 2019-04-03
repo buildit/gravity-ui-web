@@ -1,6 +1,6 @@
 /**
  * Provides programatic access to CSS, asset and SASS file paths
- * that are published by the gravity-ui-sass NPM package.
+ * that are published by the gravity-ui-web NPM package.
  *
  * This is so that consumers of this package can access those files
  * in their own build processes (e.g. to copy them to their build dir)

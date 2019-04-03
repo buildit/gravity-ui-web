@@ -15,7 +15,7 @@ Toggle buttons must use the `aria-pressed` attribute to denote pressed (`true`) 
 
 Currently, browsers will not automatically toggle that attribute when the button is clicked, so some JavaScript is required to make it work. Essentially, all it needs to do is react to the button element's `click` event (which is triggered not only by mouse clicks but also screen taps and keyboard input) and toggle the value of the `aria-pressed` attribute between `true` and `false`.
 
-`gravity-ui-sass`'s simple JS library (`gravity.js`) implements this behaviour and may be used as a reference.
+`gravity-ui-web`'s simple JS library (`gravity.js`) implements this behaviour and may be used as a reference.
 
 
 ## See also

@@ -17,7 +17,7 @@ One of the main reasons for inlining SVGs, is that the page's CSS can also style
 ## Usage in Gravity
 
 
-Gravity's `gravity-ui-sass` library provides a range of logos and icons as SVG `<symbol>`s in its `symbols.svg` file, which is intended to be inlined into HTML documents. This UI element is then used to display one of the available symbols.
+Gravity's `gravity-ui-web` library provides a range of logos and icons as SVG `<symbol>`s in its `symbols.svg` file, which is intended to be inlined into HTML documents. This UI element is then used to display one of the available symbols.
 
 Refer to _**Particles** > **Logos and Icons** > **SVG symbols**_ for a complete list of all available logos and icons and their respective IDs.
 

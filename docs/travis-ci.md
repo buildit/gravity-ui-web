@@ -80,7 +80,7 @@ You must be logged-in on the Travis-CI CLI in order to link your CLI environment
 Run the following command to encrypt the NPM API key:
 
 ```bash
-> travis encrypt <API_KEY> -r buildit/gravity-ui-sass --org
+> travis encrypt <API_KEY> -r buildit/gravity-ui-web --org
 ```
 
 > **NOTE**: Do not use the `--add env.global` or any other permutation to the `travis encrypt` command, as it may overwrite other variables in your .travis.yml file.
