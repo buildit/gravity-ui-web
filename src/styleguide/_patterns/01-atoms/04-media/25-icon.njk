@@ -1,0 +1,7 @@
+{%- from 'atoms-inline-svg-symbol' import inlineSvg -%}
+
+{%- macro icon(symbolId, customLabel) -%}
+  {{ inlineSvg(symbolId, 24, 24, class='grav-c-icon', customLabel=customLabel) | safe }}
+{%- endmacro -%}
+
+{{- icon(symbolId) | safe -}}

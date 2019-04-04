@@ -1,0 +1,11 @@
+{# Reusable macro for other templates to import: #}
+{%- macro blockquote(htmlContent, classNames) -%}
+<blockquote
+  {%- if classNames %} class="{{ classNames }}"{%- endif -%}
+>
+  {{ htmlContent | safe }}
+</blockquote>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- blockquote((htmlContent if htmlContent else text)) | safe -}}

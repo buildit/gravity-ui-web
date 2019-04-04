@@ -1,0 +1,9 @@
+{%- from 'atoms-link' import link -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro navLink(text, url) -%}
+  {{ link(text, url, 'grav-c-nav-link') | safe }}
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- navLink(text, url) | safe -}}

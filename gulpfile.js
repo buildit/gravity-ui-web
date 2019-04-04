@@ -11,7 +11,7 @@
 
 const gulp = require('gulp');
 const del = require('del');
-const pkgPaths = require('./index.js');
+const pkgPaths = require('./gulp/paths.js');
 const plTasks = require('./gulp/patternlab.js');
 const uiLibTasks = require('./gulp/ui-lib.js');
 
@@ -19,7 +19,7 @@ const uiLibTasks = require('./gulp/ui-lib.js');
 
 gulp.task('clean', function(){
   return del([
-    pkgPaths.normalizePath(pkgPaths.bldRootDir, '*'),
+    pkgPaths.pkgRootPath('dist', '**', '*'),
     ...plTasks.generatedFileGlobs
   ]);
 });

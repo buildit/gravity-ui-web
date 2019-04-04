@@ -1,0 +1,25 @@
+{%- extends 'templates-basic-page' -%}
+
+{%- from 'atoms-cta' import cta -%}
+{%- from 'molecules-steps' import steps -%}
+{%- from 'organisms-job-list' import jobList -%}
+
+{%- block pageContent %}
+  <main class="grav-o-container">
+    <h1>{{title}}</h1>
+    {{ intro | safe }}
+
+    <p class="grav-u-text-centered">
+      {{ cta(processLink.text, processLink.url) | safe }}
+    </p>
+
+    {% for location in locations -%}
+      {{ jobList(location) | safe }}
+    {%- endfor %}
+
+    <h2 id="the-hiring-process">{{ processTitle }}</h2>
+    <p>{{ processText }}</p>
+
+    {{ steps(processSteps) | safe }}
+  </main>
+{%- endblock -%}

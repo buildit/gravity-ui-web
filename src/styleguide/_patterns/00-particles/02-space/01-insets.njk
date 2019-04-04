@@ -1,0 +1,16 @@
+{% for inset in insets %}
+  <p><strong>{{inset.name}}</strong></p>
+  <div class="sg-example--padded-block">
+    <div style="padding: {{inset.vLength}} {{inset.hLength}};">
+      <div style="width: calc(100% - 2 * {{inset.hLength}}); height: calc(100% - 2 * {{inset.vLength}});"></div>
+    </div>
+  </div>
+  <dl class="sg-datalist sg-datalist--code">
+    <dt><span class="sg-datalist__label">Horizontal</span></dt>
+    <dd><code>{{inset.hLength}}</code></dd>
+    <dt><span class="sg-datalist__label">Vertical</span></dt>
+    <dd><code>{{inset.vLength}}</code></dd>
+    <dt><span class="sg-datalist__label">SASS</span></dt>
+    <dd><code>{{inset.var}}</code></dd>
+  </dl>
+{% endfor %}

@@ -6,82 +6,23 @@
 */
 
 // === Settings layer ===
-// Used with preprocessors and contain font, colors definitions, etc.
-// Must not output any CSS.
-@import '00-settings/typography';
-@import '00-settings/modularscale';
-@import '00-settings/gravy';
-@import '00-settings/colors';
-@import '00-settings/spacing';
-@import '00-settings/strokes';
-@import '00-settings/animations';
+@import '00-settings/settings.all';
 
 // === Tools layer ===
-// Globally used mixins and functions.
-// Must not output any CSS.
-@import '01-tools/container';
-@import '01-tools/clear';
+@import '01-tools/tools.all';
 
 // === Generic layer ===
-// Reset and/or normalize styles, box-sizing definition, etc.
-// This is the first layer which generates actual CSS.
 @import 'normalize';
-@import '02-generic/heydon';
-@import '02-generic/layout';
+@import '02-generic/generic.all';
 
 // === Elements layer ===
-// Styling for bare HTML elements (like H1, A, etc.).
-// These come with default styling from the browser so we can redefine them here.
-@import '03-elements/inline-text';
-@import '03-elements/block-text';
-@import '03-elements/headings';
-@import '03-elements/media';
-@import '03-elements/tables';
-@import '03-elements/buttons';
-@import '03-elements/forms';
-@import '03-elements/section';
-@import '03-elements/main';
-@import '03-elements/lists';
+@import '03-elements/elements.all';
 
 // === Objects layer ===
-// Class-based selectors which define undecorated design patterns, for example
-// media object known from OOCSS.
-@import '04-objects/section';
-@import '04-objects/container';
-@import '04-objects/container-banner';
-
+@import '04-objects/objects.all';
 
 // === Components layer ===
-// Specific UI components. This is where majority of our work takes place and our UI
-// components are often composed of Objects and Components.
-@import '05-components/01-atoms/01-block-text/pullout';
-@import '05-components/01-atoms/01-block-text/05-ascii-art';
-@import '05-components/01-atoms/02-lists/01-list-horizontal';
-@import '05-components/01-atoms/02-lists/02-two-columns-text';
-@import '05-components/01-atoms/04-media/20-logo';
-@import '05-components/01-atoms/04-media/25-icon';
-@import '05-components/01-atoms/04-media/26-logo-image';
-@import '05-components/01-atoms/06-buttons/05-icon-button';
-@import '05-components/01-atoms/06-buttons/06-icon-toggle-button';
-@import '05-components/01-atoms/06-buttons/07-cta';
-@import '05-components/01-atoms/06-buttons/08-toggle-menu';
-@import '05-components/01-atoms/10-navigation/00-nav-link';
-
-@import '05-components/02-molecules/00-navigation/00-nav-menu';
-@import '05-components/02-molecules/01-cards/location-card';
-@import '05-components/02-molecules/01-cards/job-card';
-
-@import '05-components/03-organisms/00-page-structure/00-page-header';
-@import '05-components/03-organisms/00-page-structure/01-page-footer';
-@import '05-components/03-organisms/job-list';
-@import '05-components/03-organisms/steps';
-@import '05-components/03-organisms/list-img-cards';
-@import '05-components/03-organisms/list-inline-row';
-@import '05-components/03-organisms/list-image-links';
-@import '05-components/03-organisms/two-columns-block';
-@import '05-components/03-organisms/hero';
+@import '05-components/components.all';
 
 // === Utilities layer ===
-// Utilities and helper classes with ability to override anything which goes before in the
-// triangle, eg. hide helper class.
-@import '06-utilities/text';
+@import '06-utilities/utilities.all';

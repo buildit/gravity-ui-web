@@ -1,0 +1,13 @@
+{%- from 'atoms-cta' import cta -%}
+{%- from 'atoms-pullout' import pullout -%}
+
+<section class="grav-c-hero">
+  <canvas></canvas>
+  {% if hero.pullout -%}
+    {{ pullout(hero.pullout) | safe }}
+  {%- endif %}
+  {% if hero.paragraph -%}
+    <p>{{hero.paragraph}}</p>
+  {%- endif %}
+  {{ cta(hero.cta.text, hero.cta.url) | safe }}
+</section>

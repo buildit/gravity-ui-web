@@ -9,8 +9,8 @@
 // Used with preprocessors and contain font, colors definitions, etc.
 // Must not output any CSS.
 @import '../../ui-lib/sass/00-settings/typography';
-@import '../../ui-lib/sass/00-settings/modularscale';
-@import '../../ui-lib/sass/00-settings/gravy';
+@import '../../ui-lib/sass/00-settings/modularscale-settings';
+@import '../../ui-lib/sass/00-settings/gravy-settings';
 @import '../../ui-lib/sass/00-settings/colors';
 @import '../../ui-lib/sass/00-settings/spacing';
 @import '../../ui-lib/sass/00-settings/strokes';

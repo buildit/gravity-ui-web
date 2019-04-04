@@ -1,3 +1,4 @@
+const path = require('path');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const svgo = require('gulp-svgo');
@@ -9,7 +10,9 @@ const filter = require('gulp-filter');
 const eyeglass = require('eyeglass');
 const chalk = require('chalk');
 
-const paths = require('./paths.js');
+const pkgPaths = require('./paths.js');
+const bldConsts = require('../build-consts.js');
+const uiLibPaths = require('../build-api.js');
 const { plServerReload, plServerRefreshCss } = require('./patternlab.js');
 
 const taskNamePrefix = 'ui-lib:';
@@ -19,21 +22,19 @@ function sassBuildTask () {
   const sassOptions = {};
 
   const mainSassFileFilter = filter(
-    `**/${paths.mainSassFilename.replace(/\.scss$/, '.css')}`,
+    `**/${uiLibPaths.srcSassMainFilename.replace(/\.scss$/, '.css')}`,
     {
       restore: true
     }
   );
 
-  return gulp.src(`${paths.srcSassDir}/*.scss`)
+  return gulp.src(uiLibPaths.srcSassPath('*.scss'))
     .pipe(sass(eyeglass(sassOptions))).on('error', sass.logError)
     // Only rename the main CSS file
     .pipe(mainSassFileFilter)
-    .pipe(rename({
-      basename: paths.cssFileBasename,
-    }))
+    .pipe(rename(uiLibPaths.distCssFilename))
     .pipe(mainSassFileFilter.restore)
-    .pipe(gulp.dest(paths.bldUiLibDir))
+    .pipe(gulp.dest(uiLibPaths.distPath()))
 }
 sassBuildTask.displayName = taskNamePrefix + 'sass';
 sassBuildTask.description = 'Compiles SASS.';
@@ -44,7 +45,7 @@ const titleIdSuffix = '__title';
 function svgSymbolsTask () {
   const svgFileFilter = filter('**/*.svg', { restore: true });
 
-  return gulp.src(paths.normalizePath(paths.srcSymbolsDir, '**', '*.svg'))
+  return gulp.src(pkgPaths.srcSvgSymbolsPath('**', '*.svg'))
     .pipe(svgo({
       plugins: [
         {
@@ -85,7 +86,7 @@ function svgSymbolsTask () {
       },
       templates: [
         'default-svg',
-        paths.normalizePath(__dirname, 'templates', 'symbols.json')
+        path.resolve(__dirname, 'templates', 'symbols.json')
       ],
       transformData: function(svg, defaultData, options) {
         // Add the titleIdSuffix to the data passed into our
@@ -114,17 +115,17 @@ function svgSymbolsTask () {
     }))
     .pipe(svgFileFilter.restore)
     .pipe(rename({
-      basename: paths.symbolsBasename
+      basename: bldConsts.svgSymbolsBasename
     }))
-    .pipe(gulp.dest(paths.bldUiLibDir))
+    .pipe(gulp.dest(uiLibPaths.distPath()))
 }
 svgSymbolsTask.displayName = taskNamePrefix + 'svg-symbols';
-svgSymbolsTask.description = 'Compiles symbols.svg file.';
+svgSymbolsTask.description = `Compiles ${uiLibPaths.distSvgSymbolsFilename} file.`;
 
 
 function copyJsTask() {
-  return gulp.src(paths.normalizePath(paths.srcJsDir, '**', '*.js'))
-    .pipe(gulp.dest(paths.bldUiLibDir));
+  return gulp.src(pkgPaths.srcJsPath('**', '*.js'))
+    .pipe(gulp.dest(uiLibPaths.distPath()));
 }
 copyJsTask.displayName = taskNamePrefix + 'js';
 copyJsTask.description = 'Copies JS files.';
@@ -139,19 +140,19 @@ function watchTask() {
   const watchers = [
     {
       name: 'SASS',
-      paths: [paths.normalizePath(paths.srcSassDir, '**', '*.scss')],
+      paths: [uiLibPaths.srcSassPath('**', '*.scss')],
       config: {},
       tasks: gulp.series(sassBuildTask, plServerRefreshCss)
     },
     {
       name: 'SVG Sprites',
-      paths: [paths.normalizePath(paths.srcSymbolsDir, '**', '*.svg')],
+      paths: [pkgPaths.srcSvgSymbolsPath('**', '*.svg')],
       config: {},
       tasks: svgSymbolsTask
     },
     {
       name: 'JS',
-      paths: [paths.normalizePath(paths.srcJsDir, '**', '*.js')],
+      paths: [pkgPaths.srcJsPath('**', '*.js')],
       config: {},
       tasks: gulp.series(copyJsTask, plServerReload)
     }

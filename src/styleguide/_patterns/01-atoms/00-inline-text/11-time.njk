@@ -1,0 +1,11 @@
+{# Reusable macro for other templates to import: #}
+{%- macro time(htmlContent, datetime) -%}
+<time
+  {%- if datetime %} datetime="{{ datetime }}"{%- endif -%}
+>
+  {{- htmlContent | safe -}}
+</time>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- time(text, datetime) | safe -}}

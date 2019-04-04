@@ -1,0 +1,11 @@
+{# Reusable macro for other templates to import: #}
+{%- macro abbreviation(htmlContent, title) -%}
+<abbr
+  {%- if title %} title="{{ title }}"{%- endif -%}
+>
+  {{- htmlContent | safe -}}
+</abbr>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- abbreviation(text, titleText) | safe -}}

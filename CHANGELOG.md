@@ -1,19 +1,19 @@
-## [0.12.1](https://github.com/buildit/gravity-ui-sass/compare/v0.12.0...v0.12.1) (2019-03-05)
+## [0.12.1](https://github.com/buildit/gravity-ui-web/compare/v0.12.0...v0.12.1) (2019-03-05)
 
 
 ### Bug Fixes
 
-* **releases:** releases now always trigger on master instead of by tag ([0f2e23f](https://github.com/buildit/gravity-ui-sass/commit/0f2e23f))
+* **releases:** releases now always trigger on master instead of by tag ([0f2e23f](https://github.com/buildit/gravity-ui-web/commit/0f2e23f))
 
-# [0.12.0](https://github.com/buildit/gravity-ui-sass/compare/v0.11.1...v0.12.0) (2019-03-05)
+# [0.12.0](https://github.com/buildit/gravity-ui-web/compare/v0.11.1...v0.12.0) (2019-03-05)
 
 
 ### Features
 
-* **package.json:** added support for Semantic Release ([4292a3a](https://github.com/buildit/gravity-ui-sass/commit/4292a3a))
+* **package.json:** added support for Semantic Release ([4292a3a](https://github.com/buildit/gravity-ui-web/commit/4292a3a))
 
 # Changelog
-All notable changes to the [`gravity-ui-sass` project](./README.md) will be documented in this file.
+All notable changes to the [`gravity-ui-web` project](./README.md) will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
@@ -23,6 +23,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated various dependencies
 - Travis PR builds will no longer notify our internal Slack channel
+
+### Removed
+- BREAKING: Removed `.grav-c-icon-toggle-button` class. Use `.grav-c-icon-button` together with `aria-pressed` instead.
 
 ### Fixed
 - Typo in docs
@@ -245,7 +248,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - NVM config
 - Basic font styles
 - Normalize and modularscale SASS libs
-- `gravity-ui-sass` is now an [SASS Eyeglass](https://github.com/sass-eyeglass/eyeglass) module
+- `gravity-ui-web` is now an [SASS Eyeglass](https://github.com/sass-eyeglass/eyeglass) module
 - Package now exposes paths to CSS and SASS to cosnumers via its main entry point (`index.js`)
 
 ### Changed

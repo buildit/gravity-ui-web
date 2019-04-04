@@ -1,0 +1,9 @@
+{% for size in sizes %}
+  <p><strong>{{size.name}}</strong></p>
+  <dl class="sg-datalist sg-datalist--code">
+    <dt><span class="sg-datalist__label">Size</span></dt>
+    <dd><span class="sg-example--inline-block" style="width: {{size.length}};"></span><code>{{size.length}}</code></dd>
+    <dt><span class="sg-datalist__label">SASS</span></dt>
+    <dd><code>{{size.var}}</code></dd>
+  </dl>
+{% endfor %}

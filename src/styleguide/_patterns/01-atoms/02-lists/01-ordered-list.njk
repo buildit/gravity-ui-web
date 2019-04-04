@@ -1,0 +1,34 @@
+{# Reusable macro for other templates to import: #}
+{%- macro orderedList(items, classNames) -%}
+  <ol
+    {%- if classNames %} class="{{ classNames }}"{%- endif -%}
+  >
+  {#
+    Specialised list components can extend this orderedListItems
+    (plural) block to change the iteration behaviour.
+  #}
+  {%- block orderedListItems -%}
+    {%- for item in items -%}
+      {#
+        Specialised list components can extend this orderedListItem
+        (singular) block to change the rendering of an indiividual list item.
+
+        The value of the current `items` element will be available as
+        `item` within this block.
+      #}
+      {%- block orderedListItem %}
+      <li
+        {%- if item.classNames -%} class="{{ item.classNames }}"{%- endif -%}
+      >
+        {{- item.htmlContent | safe -}}
+      </li>
+      {% endblock -%}
+    {%- endfor -%}
+  {%- endblock -%}
+  </ol>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{%- block example -%}
+  {{ orderedList(listItems, class) | safe }}
+{%- endblock -%}

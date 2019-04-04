@@ -1,0 +1,51 @@
+{
+  "header": {
+    "links": [
+      {},
+      {
+        "url": false
+      }
+    ]
+  },
+  "locations": [
+    {
+      "name": "Bukimi no tani genshō",
+      "addressline1": "666 Masahiro Mori Street",
+      "addressline2": "",
+      "city": "Uncanny Valley",
+      "postcode": "1970 XXX",
+      "country": "Wakanda",
+      "mapUrl": "#",
+      "img": {
+        "src": "../../images/img-4x3.png",
+        "alt": "Map showing how to get to the London studio"
+      }
+    },
+    {
+      "name": "Chocolate Factory",
+      "addressline1": "Wonka Avenue",
+      "addressline2": "",
+      "city": "Dahl Town",
+      "postcode": "RO4 LD1",
+      "country": "UK",
+      "mapUrl": "#",
+      "img": {
+        "src": "../../images/img-4x3.png",
+        "alt": "Map showing how to get to the London studio"
+      }
+    },
+    {
+      "name": "Section 9 HQ",
+      "addressline1": "CLASSIFIED",
+      "addressline2": "",
+      "city": "Niihama-shi",
+      "postcode": "CLASSIFIED",
+      "country": "Japan",
+      "mapUrl": "#",
+      "img": {
+        "src": "../../images/img-4x3.png",
+        "alt": "Map showing how to get to the London studio"
+      }
+    }
+  ]
+}

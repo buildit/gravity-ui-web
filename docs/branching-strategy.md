@@ -39,4 +39,4 @@ The `master` branch always contains the most recent _production ready_ code.
 
 This has been configured as a restricted branch on GitHub and only project maintainers are able to push to this branch (or merge pull requests into it).
 
-After being merged into `master`, new releases are tagged using the semver format (`v1.2.3`) by the project maintainers. This then triggers an automated build and deployment of both the [Buildit Living Style Guide](http://style.buildit.digital/) and the [`@buildit/gravity-ui-sass` NPM package](https://www.npmjs.com/package/@buildit/gravity-ui-sass).
+After being merged into `master`, new releases are tagged using the semver format (`v1.2.3`) by the project maintainers. This then triggers an automated build and deployment of both the [Buildit Living Style Guide](http://style.buildit.digital/) and the [`@buildit/gravity-ui-web` NPM package](https://www.npmjs.com/package/@buildit/gravity-ui-web).

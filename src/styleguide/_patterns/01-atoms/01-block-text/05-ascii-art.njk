@@ -1,0 +1,7 @@
+{# Reusable macro for other templates to import: #}
+{%- macro asciiArt( text ) -%}
+  <pre class="grav-c-ascii-art" aria-hidden="true">{{ text }}</pre>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- asciiArt(text) | safe -}}
