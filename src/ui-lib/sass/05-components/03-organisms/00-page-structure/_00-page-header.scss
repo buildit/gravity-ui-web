@@ -1,6 +1,5 @@
 $grav-page-heading-logo-width: 250px;
-// stylelint-disable-next-line scss/dollar-variable-pattern
-$trigger-breakpoint: gravy-breakpoint(medium);
+$grav-page-heading-trigger-breakpoint: gravy-breakpoint(medium);
 
 // Note: The Page Header always spans the full width of the viewport. This
 // is in case we want to give it any kind of full-bleed background styling.
@@ -16,7 +15,7 @@ body > header > div {
   align-items: center;
   justify-content: space-between;
 
-  @media (min-width: $trigger-breakpoint) {
+  @media (min-width: $grav-page-heading-trigger-breakpoint) {
     padding-top: 0;
   }
 }
@@ -28,7 +27,7 @@ body > header > div {
     display: block;
   }
 
-  @media (min-width: $trigger-breakpoint) {
+  @media (min-width: $grav-page-heading-trigger-breakpoint) {
     max-width: 250px;
     margin: $grav-sp-m $grav-sp-m 0 0;
     flex-shrink: 0;
@@ -40,7 +39,7 @@ body > header > div {
   max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
   fill: $grav-co-neutral-asphalt;
 
-  @media (min-width: $trigger-breakpoint) {
+  @media (min-width: $grav-page-heading-trigger-breakpoint) {
     width: 100%;
   }
 }
@@ -53,7 +52,7 @@ a:hover .grav-c-logo {
 .grav-c-toggle-menu {
   flex-shrink: 0;
 
-  @media (min-width: $trigger-breakpoint) {
+  @media (min-width: $grav-page-heading-trigger-breakpoint) {
     display: none;
   }
 
@@ -64,7 +63,7 @@ a:hover .grav-c-logo {
     overflow: hidden;
     transition: max-height $grav-tr-speed-slow;
 
-    @media (min-width: $trigger-breakpoint) { // stylelint-disable-line max-nesting-depth
+    @media (min-width: $grav-page-heading-trigger-breakpoint) { // stylelint-disable-line max-nesting-depth
       display: flex;
       max-height: none;
       overflow: visible;
@@ -75,7 +74,7 @@ a:hover .grav-c-logo {
   &[aria-pressed='true'] ~ .grav-c-nav-menu {
     max-height: 100vh;
 
-    @media (min-width: $trigger-breakpoint) { // stylelint-disable-line max-nesting-depth
+    @media (min-width: $grav-page-heading-trigger-breakpoint) { // stylelint-disable-line max-nesting-depth
       display: flex;
     }
   }
@@ -85,7 +84,7 @@ a:hover .grav-c-logo {
   width: 100%;
   margin-top: $grav-sp-s;
 
-  @media (min-width: $trigger-breakpoint) {
+  @media (min-width: $grav-page-heading-trigger-breakpoint) {
     width: auto;
     margin-top: $grav-sp-m;
   }
