@@ -47,3 +47,4 @@ notifications:
     on_failure: always
 after_deploy:
   - ./scripts/notify.sh
+
