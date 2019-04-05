@@ -9,7 +9,7 @@ env:
 install:
   - npm ci
 script:
-#  - commitlint-travis
+  - commitlint-travis
   - npm run-script styleguide
 before_deploy:
   - pip install --user awscli
