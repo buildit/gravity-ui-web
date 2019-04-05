@@ -1,3 +1,33 @@
+# [1.0.0](https://github.com/buildit/gravity-ui-web/compare/v0.12.1...v1.0.0) (2019-04-04)
+
+
+### Bug Fixes
+
+* **lists:** fixes list layout ([89194b6](https://github.com/buildit/gravity-ui-web/commit/89194b6)), closes [#173](https://github.com/buildit/gravity-ui-web/issues/173)
+* **pattern-library:** miscellaneous fixes for the Nunjucks conversion ([1907a9c](https://github.com/buildit/gravity-ui-web/commit/1907a9c))
+* **sass:** removed redundant `.grav-c-icon-toggle-button` class ([d545e61](https://github.com/buildit/gravity-ui-web/commit/d545e61))
+* pin eyeglass to 2.2.1 ([efa74bb](https://github.com/buildit/gravity-ui-web/commit/efa74bb))
+
+
+### Code Refactoring
+
+* renames package and repo references to gravity-ui-web ([25fb2b8](https://github.com/buildit/gravity-ui-web/commit/25fb2b8)), closes [#201](https://github.com/buildit/gravity-ui-web/issues/201)
+
+
+### Features
+
+* added scss files so each itcss layer can be imported individually ([c8e9f61](https://github.com/buildit/gravity-ui-web/commit/c8e9f61)), closes [#189](https://github.com/buildit/gravity-ui-web/issues/189)
+* **build-api:** new, cleaner build-api ([f935362](https://github.com/buildit/gravity-ui-web/commit/f935362)), closes [#189](https://github.com/buildit/gravity-ui-web/issues/189)
+* **pattern-library:** switched from Mustache to Nunjucks templates ([f67fe96](https://github.com/buildit/gravity-ui-web/commit/f67fe96))
+
+
+### BREAKING CHANGES
+
+* NPM package has been renamed from `@buildit/gravity-ui-sass` to
+`@buildit/gravity-ui-web`.
+* **build-api:** The build API is no longer the package's main entry point. You need to
+`require('@buildit/gravity-ui-sass/build-api')` now. The available keys have also changed.
+
 ## [0.12.1](https://github.com/buildit/gravity-ui-web/compare/v0.12.0...v0.12.1) (2019-03-05)
 
 
