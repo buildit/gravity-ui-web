@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "lerna": "lerna",
+    "lerna:bootstrap": "lerna bootstrap"
+  },
+  "devDependencies": {
+    "lerna": "^3.13.1"
+  }
+}
