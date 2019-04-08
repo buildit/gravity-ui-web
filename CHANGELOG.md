@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/buildit/gravity-ui-web/compare/v1.0.0...v1.0.1) (2019-04-08)
+
+
+### Bug Fixes
+
+* adjust position of outline when logo is focused ([2b182c5](https://github.com/buildit/gravity-ui-web/commit/2b182c5)), closes [#211](https://github.com/buildit/gravity-ui-web/issues/211)
+* **.travis.yml:** post Travis CI notifications to #buildit-gravity ([4706d82](https://github.com/buildit/gravity-ui-web/commit/4706d82))
+
 # [1.0.0](https://github.com/buildit/gravity-ui-web/compare/v0.12.1...v1.0.0) (2019-04-04)
 
 
