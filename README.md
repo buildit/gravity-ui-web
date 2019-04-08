@@ -4,12 +4,6 @@
 
 Library of styles, components and associated assets to build UIs for the web. Part of Buildit's Gravity design system.
 
----
-
-⚠️ This library is still under heavy development and does not yet have a stable API.
-
----
-
 ## Table of contents
 * [Using this library](#using-this-library)
     * [Pre-requisites](#pre-requisites)
