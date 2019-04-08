@@ -2,7 +2,7 @@
 /// Mixins for defining color schemes in CSS.
 ///
 ///
-/// @group  colours
+/// @group  colors
 /// @access public
 ////
 
@@ -50,7 +50,7 @@
 
 /// Applys a group A color value to the given CSS property.
 ///
-/// If `$use-fallback` is set, the default colour scheme's color value will be
+/// If `$use-fallback` is set, the default color scheme's color value will be
 /// set first as a fallback for older browsers that do not support CSS custom
 /// properties.
 @mixin grav-color-grp-a-apply($css-property, $color-name, $use-fallback: false) {
@@ -62,7 +62,7 @@
 
 /// Applies a group B color value to the given CSS property.
 ///
-/// If `$use-fallback` is set, the default colour scheme's color value will be
+/// If `$use-fallback` is set, the default color scheme's color value will be
 /// set first as a fallback for older browsers that do not support CSS custom
 /// properties.
 @mixin grav-color-grp-b-apply($css-property, $color-name, $use-fallback: false) {
