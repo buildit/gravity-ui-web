@@ -1,8 +1,8 @@
-// Utility class for default colour scheme
+// Utility class for default color scheme
 @include grav-color-scheme-define-class('default', $grav-co-scheme-default);
 
-// Utility class for light colour scheme
+// Utility class for light color scheme
 @include grav-color-scheme-define-class('light', $grav-co-scheme-light);
 
-// Utility class for dark colour scheme
+// Utility class for dark color scheme
 @include grav-color-scheme-define-class('dark', $grav-co-scheme-dark);
