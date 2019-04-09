@@ -58,9 +58,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
-    "@commitlint/travis-cli": "^7.5.2",
     "@pattern-lab/core": "^3.0.0-beta.1",
     "@pattern-lab/engine-nunjucks": "^0.1.4-beta.1",
     "@pattern-lab/uikit-workshop": "^1.0.0-beta.0",

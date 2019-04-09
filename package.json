@@ -6,9 +6,18 @@
     "lerna:bootstrap": "lerna bootstrap",
     "commit": "git-cz"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@commitlint/travis-cli": "^7.5.2",
     "commitizen": "^3.0.7",
     "cz-lerna-changelog": "^2.0.2",
+    "husky": "^1.3.1",
     "lerna": "^3.13.1"
   },
   "config": {
