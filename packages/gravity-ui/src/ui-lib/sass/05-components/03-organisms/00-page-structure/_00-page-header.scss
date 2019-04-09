@@ -6,7 +6,6 @@ $grav-page-heading-trigger-breakpoint: gravy-breakpoint(medium);
 // The child elements within therefore need to respect the maximum content
 // width ($grav-page-content-max-width) themselves, where necessary.
 body > header {
-  
   > div {
     @include grav-l-container;
 
@@ -33,7 +32,7 @@ body > header {
   }
   
 
-/* stylelint-disable-next-line selector-max-compound-selectors */
+  /* stylelint-disable-next-line selector-max-compound-selectors */
   a:hover .grav-c-logo {
     fill: $grav-co-neutral-warm-grey;
   }
