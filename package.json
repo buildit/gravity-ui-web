@@ -3,9 +3,17 @@
   "private": true,
   "scripts": {
     "lerna": "lerna",
-    "lerna:bootstrap": "lerna bootstrap"
+    "lerna:bootstrap": "lerna bootstrap",
+    "commit": "git-cz"
   },
   "devDependencies": {
+    "commitizen": "^3.0.7",
+    "cz-lerna-changelog": "^2.0.2",
     "lerna": "^3.13.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
   }
 }

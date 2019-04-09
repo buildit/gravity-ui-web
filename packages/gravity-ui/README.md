@@ -204,15 +204,6 @@ $ npm run build
 
 The build output will go into `dist/` and, in this instance, only contains the artefacts that are needed when publishing the [`@buildit/gravity-ui-web` NPM package](https://www.npmjs.com/package/@buildit/gravity-ui-web).
 
-
-### Making commits
-
-This project uses [Commitizen](https://github.com/commitizen/cz-cli) for commit formatting.
-Please use the following command after `git add` to properly check in files. Commits not checked
-in this way may cause your PR to be rejected.
-
-`npm run commit`
-
 ### Further information
 
 * Coding standards (TBC)
