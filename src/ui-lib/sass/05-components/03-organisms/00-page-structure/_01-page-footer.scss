@@ -2,9 +2,12 @@ body > footer {
   @include typi('small-text');
   margin-top: vr(3);
   padding: $grav-sp-l 0;
-  background-color: $grav-co-neutral-charcoal;
-  color: $grav-co-neutral-dirty-snow-white;
+  background-color: $grav-co-fg;
+  color: $grav-co-bg;
 
+  @media (prefers-color-scheme: dark) {
+    background-color: $grav-co-secondary-twilight;
+  }
 
   > * {
     @include grav-l-container;

@@ -26,6 +26,10 @@
     margin-top: auto;
     background-color: $grav-co-neutral-asphalt;
     transition: all $grav-tr-speed-slow;
+    
+    @media (prefers-color-scheme: dark) {
+      background-color: $grav-co-neutral-dirty-snow-white;
+    }
 
     &::before,
     &::after {
@@ -39,6 +43,10 @@
       background-color: $grav-co-neutral-asphalt;
 
       transition: all $grav-tr-speed-slow;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: $grav-co-neutral-dirty-snow-white;
+      }
     }
 
     &::before {top: -$grav-sp-icon;}
