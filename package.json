@@ -4,7 +4,8 @@
   "scripts": {
     "lerna": "lerna",
     "lerna:bootstrap": "lerna bootstrap",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "lint": "lerna run lint"
   },
   "husky": {
     "hooks": {
