@@ -5,12 +5,8 @@
     "lerna": "lerna",
     "lerna:bootstrap": "lerna bootstrap",
     "commit": "git-cz",
-    "lint": "lerna run lint"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "lint": "lerna run lint",
+    "test": "lerna run test"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",

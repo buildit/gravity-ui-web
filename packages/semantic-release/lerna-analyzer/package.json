@@ -1,0 +1,41 @@
+{
+  "name": "@buildit/semantic-release-lerna-analyzer",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Ash Blue <ash@blueashes.com>",
+  "homepage": "https://github.com/buildit/gravity-ui-sass#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildit/gravity-ui-sass.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "postinstall": "npm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/buildit/gravity-ui-sass/issues"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.4",
+    "jest": "^24.7.1",
+    "semantic-release": "^15.13.3",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.3"
+  },
+  "dependencies": {
+    "@semantic-release/commit-analyzer": "^6.1.0"
+  }
+}
