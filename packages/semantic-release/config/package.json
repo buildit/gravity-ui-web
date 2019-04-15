@@ -1,0 +1,32 @@
+{
+  "name": "@ablue-test/semantic-release",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Ash Blue <ash@blueashes.com>",
+  "homepage": "https://github.com/buildit/gravity-ui-sass#readme",
+  "license": "ISC",
+  "main": "lib/semantic-release.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildit/gravity-ui-sass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/buildit/gravity-ui-sass/issues"
+  },
+  "dependencies": {
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
+    "@buildit/semantic-release-lerna-analyzer": "^1.0.0",
+    "@buildit/semantic-release-lerna-release-notes-generator": "^1.0.0"
+  },
+  "devDependencies": {
+    "semantic-release": "^15.13.3"
+  }
+}

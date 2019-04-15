@@ -1,6 +1,6 @@
 {
-  "name": "@buildit/semantic-release-release-notes-generator",
-  "version": "0.0.0",
+  "name": "@buildit/semantic-release-lerna-release-notes-generator",
+  "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Ash Blue <ash@blueashes.com>",
   "homepage": "https://github.com/buildit/gravity-ui-sass#readme",

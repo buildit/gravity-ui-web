@@ -1,6 +1,6 @@
 {
   "name": "@buildit/semantic-release-lerna-analyzer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Ash Blue <ash@blueashes.com>",
   "homepage": "https://github.com/buildit/gravity-ui-sass#readme",
