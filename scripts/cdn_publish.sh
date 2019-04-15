@@ -13,6 +13,6 @@ done
 file_contents=$(<./cdn-index.template)
 echo "${file_contents//\{versionlist\}/$versionList}" > cdn-dist/gravity/index.html
 
-~/.local/bin/aws s3 sync cdn-dist s3://${CDN_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8"
-~/.local/bin/aws s3 sync cdn-dist s3://${CDN_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8"
-~/.local/bin/aws s3 sync cdn-dist s3://${CDN_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8"
+~/.local/bin/aws s3 sync cdn-dist s3://${CDN_BUCKET} --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8"
+~/.local/bin/aws s3 sync cdn-dist s3://${CDN_BUCKET} --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8"
+~/.local/bin/aws s3 sync cdn-dist s3://${CDN_BUCKET} --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8"
