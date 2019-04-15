@@ -1,4 +1,4 @@
-# Semantic Release Lerna Analyzer
+# Semantic Release - Lerna Analyzer
 
 A custom wrapper around semantic release's commit analyzer to support Lerna syntax.
 
