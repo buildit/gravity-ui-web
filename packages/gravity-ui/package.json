@@ -58,11 +58,10 @@
     "access": "public"
   },
   "devDependencies": {
+    "@buildit/semantic-release": "^1.0.0",
     "@pattern-lab/core": "^3.0.0-beta.1",
     "@pattern-lab/engine-nunjucks": "^0.1.4-beta.1",
     "@pattern-lab/uikit-workshop": "^1.0.0-beta.0",
-    "@semantic-release/changelog": "^3.0.2",
-    "@semantic-release/git": "^7.0.8",
     "chalk": "^2.4.2",
     "del": "^4.0.0",
     "eyeglass": "^2.4.0",
