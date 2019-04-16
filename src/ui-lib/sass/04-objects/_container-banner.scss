@@ -2,6 +2,10 @@
   padding: $grav-sp-xl;
   background-color: $grav-co-neutral-ashtray;
 
+  @media (prefers-color-scheme: dark) {
+    background-color: $grav-co-secondary-deep-ocean;
+  }
+
   @media all and (min-width: gravy-breakpoint(extra-large)) {
     padding-right: $grav-sp-xxl;
     padding-left: $grav-sp-xxl;
