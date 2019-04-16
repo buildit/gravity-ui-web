@@ -8,7 +8,7 @@
 #}
 {%- block unorderedListItem -%}
   <li>
-    {{ image(item.image.src, item.image.alt) | safe }}
+    {{ image(item.image.src, item.image.alt, item.image.class) | safe }}
     <h3 class="grav-c-list-img-cards__title">{{item.title}}</h3>
     <p>{{item.content}}</p>
   </li>
