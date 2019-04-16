@@ -53,7 +53,7 @@
   "bugs": {
     "url": "https://github.com/buildit/gravity-ui-web/issues"
   },
-  "homepage": "https://github.com/buildit/gravity-ui-web#readme",
+  "homepage": "https://github.com/buildit/gravity-ui-web/packages/gravity-ui#readme",
   "publishConfig": {
     "access": "public"
   },

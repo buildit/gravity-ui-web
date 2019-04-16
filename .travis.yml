@@ -8,6 +8,7 @@ env:
     - secure: "RKsKsLHCiNnJwgvZzU8bpSwYCe1Eq2c5xhotB9K7tXv3baPfbWu+hwDqmWnRk2LGEBYmPK1Z/omhAfPX27CFwUtFSr664td9uNGOyQBzac9K1kLeUwCJqgDAhueI8rmwvivMnjqsiGJ49nsUVGumydqz+qKNDBuk8PfNgeJUtCDWLc2NNQXWJk2cNf4bCo6BaApZpSRjpO453EcqDllbUCXYo4KU9rjjmcTiHJty/poUly5yabs0SZzD2wrsf5V6dtzFbI2gt1/GtlaG0xD9+TQMl4m0yE5QXl/lvU4B+1t4jb4BBHyV3iAt1TCysofxb/88zjGFpv+0LoY2aaUnGczaAA0wMNhkk6fsSMJ4Z6lYZksR9pAWRBjnPyzGf1yf3Aq9IlSWeQn5BgSeyd1DIduHQk7K/b6wtlT2zWKqw2zF1jt9KHB6WQ7O0gQl6PqL9uCZTCwgSNxU1QxZO3uuFZI5Vd8pjvZs/mS+Jxkq2BTINYnSxZYXAdM5wkH/ys9guyNc05hpUjepchL/q7mpBB2XorofMbDA3oas5SvnJqRRb9oWy3Har1rtb58GeiRrhLCZLqJk7cZmCYNnlHsXt3GLRt3kkDYLe2X4enBcuJcuhYUxub1b8U6Pz0j13sIMRhYmtw5IwwOnm1VXQKPc9lRXNBG9lOXQi8AcCDERKNg=" #ENCRYPTD_NPM_AUTH_TOKEN environment variable
 install:
   - npm ci
+  - npm run lerna bootstrap
 script:
   - commitlint-travis
   - npm run-script styleguide
@@ -17,24 +18,24 @@ deploy:
   - provider: script
     skip_cleanup: true
     script:
-      npx semantic-release
+      npm run semantic-release
   # deploy develop to Staging
   - provider: script
     script:
-      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css"
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "packages/gravity-ui/*.html" --content-type "text/html; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "packages/gravity-ui/*.css" --content-type "text/css; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "packages/gravity-ui/*.js" --content-type "application/javascript; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --include "*" --exclude "packages/gravity-ui/*.js" --exclude "*.html" --exclude "*.css"
     skip_cleanup: true
     on:
       branch: develop
   # deploy tags matching v#.#.*  to Production
   - provider: script
     script:
-      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css"
+      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "packages/gravity-ui/*.html" --content-type "text/html; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "packages/gravity-ui/*.css" --content-type "text/css; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "packages/gravity-ui/*.js" --content-type "application/javascript; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --include "*" --exclude "packages/gravity-ui/*.js" --exclude "*.html" --exclude "*.css"
     skip_cleanup: true
     on:
       branch: master

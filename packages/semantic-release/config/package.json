@@ -21,10 +21,11 @@
     "url": "https://github.com/buildit/gravity-ui-sass/issues"
   },
   "dependencies": {
+    "@buildit/semantic-release-lerna-analyzer": "^1.0.0",
+    "@buildit/semantic-release-lerna-release-notes-generator": "^1.0.0",
     "@semantic-release/changelog": "^3.0.2",
     "@semantic-release/git": "^7.0.8",
-    "@buildit/semantic-release-lerna-analyzer": "^1.0.0",
-    "@buildit/semantic-release-lerna-release-notes-generator": "^1.0.0"
+    "@semantic-release/npm": "^5.1.4"
   },
   "devDependencies": {
     "semantic-release": "^15.13.3"

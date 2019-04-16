@@ -6,7 +6,9 @@
     "lerna:bootstrap": "lerna bootstrap",
     "commit": "git-cz",
     "lint": "lerna run lint",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "styleguide": "lerna run styleguide",
+    "semantic-release": "lerna run semantic-release"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
@@ -21,5 +23,9 @@
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
     }
+  },
+  "engines": {
+    "node": "^8.11.1",
+    "npm": "^5.8.0"
   }
 }
