@@ -12,3 +12,14 @@ Please use the following command after `git add` to properly check in files. Com
 in this way may cause your PR to be rejected.
 
 `npm run commit`
+
+## Current Packages
+
+Below is a list of the current packages maintained by this monorepo.
+
+* [Gravity UI](https://github.com/buildit/gravity-ui-web/tree/develop/packages/gravity-ui)
+* Semantic Release
+  * [Lerna Config](https://github.com/buildit/gravity-ui-web/tree/develop/packages/semantic-release/config)
+  * [Lerna Analyzer](https://github.com/buildit/gravity-ui-web/tree/develop/packages/semantic-release/lerna-analyzer)
+  * [Lerna Release Notes Generator](https://github.com/buildit/gravity-ui-web/tree/develop/packages/semantic-release/release-notes-generator)
+ 
