@@ -17,7 +17,7 @@ in this way may cause your PR to be rejected.
 
 Below is a list of the current packages maintained by this monorepo.
 
-* [Gravity UI](https://github.com/buildit/gravity-ui-web/tree/develop/packages/gravity-ui)
+* [Gravity UI](https://github.com/buildit/gravity-ui-web/tree/develop/packages/gravity-ui-web)
 * Semantic Release
   * [Lerna Config](https://github.com/buildit/gravity-ui-web/tree/develop/packages/semantic-release/config)
   * [Lerna Analyzer](https://github.com/buildit/gravity-ui-web/tree/develop/packages/semantic-release/lerna-analyzer)

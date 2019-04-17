@@ -18,10 +18,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/buildit/gravity-ui-sass.git"
+    "url": "git+https://github.com/buildit/gravity-ui-web.git"
   },
   "bugs": {
-    "url": "https://github.com/buildit/gravity-ui-sass/issues"
+    "url": "https://github.com/buildit/gravity-ui-web/issues"
   },
   "dependencies": {
     "@buildit/semantic-release-lerna-analyzer": "^1.0.0",
