@@ -1,9 +1,12 @@
 {
   "name": "@buildit/semantic-release",
   "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "Ash Blue <ash@blueashes.com>",
-  "homepage": "https://github.com/buildit/gravity-ui-sass#readme",
+  "description": "A premade configuration for using Lerna with Semantic Release",
+  "author": {
+    "name": "Buildit",
+    "url": "http://buildit.wiprodigital.com/"
+  },
+  "homepage": "https://github.com/buildit/gravity-ui-web/tree/develop/packages/semantic-release/config#readme",
   "license": "ISC",
   "main": "lib/semantic-release.js",
   "directories": {

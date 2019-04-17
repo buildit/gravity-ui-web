@@ -1,9 +1,12 @@
 {
   "name": "@buildit/semantic-release-lerna-analyzer",
   "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "Ash Blue <ash@blueashes.com>",
-  "homepage": "https://github.com/buildit/gravity-ui-sass#readme",
+  "description": "Light wrapper around @semantic-release/commit-analyzer to work with Lerna packages",
+  "author": {
+    "name": "Buildit",
+    "url": "http://buildit.wiprodigital.com/"
+  },
+  "homepage": "https://github.com/buildit/gravity-ui-web/tree/develop/packages/semantic-release/lerna-analyzer#readme",
   "license": "ISC",
   "main": "dist/index.js",
   "directories": {
