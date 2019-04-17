@@ -42,12 +42,16 @@
     "url": "http://buildit.wiprodigital.com/"
   },
   "contributors": [
-    "Matteo Pescarin (http://peach.smartart.it)",
+    "Gregg Anderson",
+    "Ash Blue",
+    "Daniel Bull",
+    "Allan Corbett (http://superallan.com)",
+    "Valerio Francescangeli",
+    "James Nash (http://cirrus.twiddles.com/)",
     "Ben Oakenfull",
     "Marcos Peebles",
-    "James Nash (http://cirrus.twiddles.com/)",
-    "Valerio Francescangeli",
-    "Daniel Bull"
+    "Matteo Pescarin (http://peach.smartart.it)",
+    "Daniel Wilkinson"
   ],
   "license": "MIT",
   "bugs": {
