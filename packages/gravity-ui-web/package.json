@@ -1,6 +1,6 @@
 {
   "name": "@buildit/gravity-ui-web",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Library of styles, components and associated assets to build UIs for the web. Part of Buildit's Gravity design system.",
   "main": "dist/ui-lib/gravity.js",
   "files": [
@@ -43,7 +43,7 @@
   },
   "contributors": [
     "Gregg Anderson",
-    "Ash Blue",
+    "Ash Blue (https://twitter.com/AshBlueWD)",
     "Daniel Bull",
     "Allan Corbett (http://superallan.com)",
     "Valerio Francescangeli",
@@ -80,7 +80,7 @@
     "semantic-release": "^15.13.3",
     "styleguidekit-assets-default": "^3.5.2",
     "styleguidekit-mustache-default": "^3.1.0",
-    "stylelint": "^9.9.0",
+    "stylelint": "^10.0.0",
     "stylelint-config-sass-guidelines": "^5.3.0",
     "stylelint-order": "^2.1.0",
     "stylelint-scss": "^3.4.4"
