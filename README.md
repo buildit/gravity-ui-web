@@ -3,6 +3,7 @@
 This project is a [Lerna](https://lernajs.io/) monorepo composed of several sub-packages. Everything is binded
 together with a custom [Semantic Release](https://github.com/semantic-release/semantic-release) pipeline configuration.
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/buildit/gravity-ui-web.svg)](https://greenkeeper.io/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ## Making commits
