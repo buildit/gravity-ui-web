@@ -12,7 +12,7 @@
         "ignore": [ "attribute" ]
       }
     ],
-    "max-nesting-depth": 2,
+    "max-nesting-depth": 3,
     "color-named": [
       "never",
        {
