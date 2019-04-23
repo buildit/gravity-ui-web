@@ -1,5 +1,6 @@
 # Exclude build Output
 dist/
+cdn-dist/
 
 # Exclude unwanted stuff Pattern Lab generates
 dependencyGraph.json
