@@ -1,7 +1,7 @@
 #!/bin/bash
 cdnGravityDir="gravity-ui-web"
 cdnDir="cdn-dist"
-version="$(git describe --abbrev=0 --tags --match *v[0-1000].[0-1000].[0-1000]*)"
+version="$(git describe --abbrev=0 --tags --match *v[0-9]*.[0-9]*.[0-9]*)"
 # be sure we get only the version part and discard any prefix
 version=`expr $version : '.*\(v[0-9].*\)'`
 
