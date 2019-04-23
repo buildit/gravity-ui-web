@@ -5,6 +5,10 @@
   text-decoration: none;
   white-space: nowrap;
 
+  @media (prefers-color-scheme: dark) {
+    color: $grav-co-neutral-dirty-snow-white;
+  }
+
 
   &[href] {
     @include gravy-font(primary);
@@ -12,12 +16,21 @@
     &:link,
     &:visited {
       color: $grav-co-neutral-asphalt;
+
+      @media (prefers-color-scheme: dark) {
+        color: $grav-co-neutral-dirty-snow-white;
+      }
+    
     }
 
     &:hover,
     &:active {
       border-color: $grav-co-accent-secondary;
       color: $grav-co-neutral-warm-grey;
+
+      @media (prefers-color-scheme: dark) {
+        color: $grav-co-neutral-ashtray;
+      }
     }
   }
 }

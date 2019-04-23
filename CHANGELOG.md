@@ -1,3 +1,22 @@
+# [2.0.0](https://github.com/buildit/gravity-ui-web/compare/v1.0.1...v2.0.0) (2019-04-18)
+
+
+### Bug Fixes
+
+* **page-header:** fixes linter issues ([48be1ce](https://github.com/buildit/gravity-ui-web/commit/48be1ce))
+* add invertable state to images ([e47b265](https://github.com/buildit/gravity-ui-web/commit/e47b265))
+* update package.json from develop ([5b23432](https://github.com/buildit/gravity-ui-web/commit/5b23432))
+
+
+### Features
+
+* dark mode ([aec230b](https://github.com/buildit/gravity-ui-web/commit/aec230b))
+
+
+### BREAKING CHANGES
+
+* it could all go horribly wrong
+
 ## [1.0.1](https://github.com/buildit/gravity-ui-web/compare/v1.0.0...v1.0.1) (2019-04-08)
 
 

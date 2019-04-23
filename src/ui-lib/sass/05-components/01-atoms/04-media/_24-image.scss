@@ -1,0 +1,7 @@
+.grav-c-image {
+  &__invertible {
+    @media (prefers-color-scheme: dark) {
+      filter: invert(100);
+    }
+  }
+}
