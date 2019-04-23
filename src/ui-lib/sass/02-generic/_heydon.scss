@@ -30,6 +30,11 @@ html {
 
   background-color: $grav-co-bg;
   color: $grav-co-fg;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $grav-co-fg;
+    color: $grav-co-bg;
+  }
 }
 
 // Exceptions to the * + * rule

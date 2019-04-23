@@ -1,4 +1,8 @@
 .grav-o-container-banner {
   padding: $grav-sp-xl;
   background-color: $grav-co-neutral-ashtray;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $grav-co-secondary-deep-ocean;
+  }
 }
