@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/buildit/gravity-ui-web/compare/v2.1.0...v2.1.1) (2019-04-23)
+
+
+### Bug Fixes
+
+* **.travis.yml:** cdn publish script now gets called correctly ([598b974](https://github.com/buildit/gravity-ui-web/commit/598b974))
+
 # [2.1.0](https://github.com/buildit/gravity-ui-web/compare/v2.0.0...v2.1.0) (2019-04-23)
 
 

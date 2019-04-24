@@ -44,7 +44,7 @@ deploy:
       ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" &&
       ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" &&
       ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css"
+      ~/.local/bin/aws s3 sync dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css" &&
       ./scripts/cdn_publish.sh
     skip_cleanup: true
     on:
