@@ -1,3 +1,6 @@
+# Project-specific stuff
+cdn-dist/
+
 # Logs
 logs
 *.log

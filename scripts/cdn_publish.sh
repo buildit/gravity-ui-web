@@ -1,16 +1,19 @@
 #!/bin/bash
 cdnGravityDir="gravity-ui-web"
 cdnDir="cdn-dist"
-version="$(git describe --abbrev=0 --tags --match *v[0-9]*.[0-9]*.[0-9]*)"
+allVersions=`git tag --list --sort=-committerdate | grep -E '^(gravity-ui-web-)?v[0-9]*.[0-9]*.[0-9]*'`
+
+# First tag in the list will be the latest one, but may be prefixed (e.g. "gravity-ui-web-v1.2.3")
+version=`echo $allVersions | cut -d" " -f1`
 # be sure we get only the version part and discard any prefix
 version=`expr $version : '.*\(v[0-9].*\)'`
 
 mkdir -p ${cdnDir}/${cdnGravityDir}/${version}
 
-cp dist/ui-lib/* ${cdnDir}/${cdnGravityDir}/${version}
+cp packages/gravity-ui-web/dist/ui-lib/* ${cdnDir}/${cdnGravityDir}/${version}
 
 versionList=""
-for thisVersion in $(git tag -l --sort=-committerdate); do
+for thisVersion in $allVersions; do
   versionList+="<li>`expr $thisVersion : '.*\(v[0-9].*\)'`</li>"
 done
 
