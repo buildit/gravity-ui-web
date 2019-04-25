@@ -89,7 +89,7 @@
     "stylelint-scss": "^3.6.0"
   },
   "dependencies": {
-    "@buildit/gravity-particles": "^0.1.0",
+    "@buildit/gravity-particles": "^0.2.0",
     "@buildit/gravy": "^2.1.0",
     "modularscale-sass": "^3.0.8",
     "normalize-scss": "^7.0.1"

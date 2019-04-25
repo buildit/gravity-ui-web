@@ -37,14 +37,16 @@
 // Specific UI components. This is where majority of our work takes place and our UI
 // components are often composed of Objects and Components.
 
-@import 'components/colors';
+@import 'components/color-contrast';
+@import 'components/color-palette';
+@import 'components/color-prop';
+@import 'components/color-swatch';
 @import 'components/datalist';
 @import 'components/datatype';
 @import 'components/example';
 @import 'components/fonts';
 @import 'components/label';
 @import 'components/sub-heading';
-@import 'components/swatch';
 
 
 // === Utilities layer ===
