@@ -6,9 +6,13 @@
 /// @access public
 ////
 
+@function grav-color-scheme-map($name: $grav-co-scheme-default-name) {
+  @return map-get($grav-co-schemes, $name);
+}
 
-@function grav-color-scheme-class-name($color-scheme-name) {
-  @return '.grav-u-color-scheme-#{$color-scheme-name}';
+
+@function grav-color-scheme-class-name($class-name-suffix) {
+  @return '.grav-u-color-scheme-#{$class-name-suffix}';
 }
 
 
@@ -25,19 +29,21 @@
 
 /// Returns the default color scheme's value for a given group A color.
 @function grav-color-grp-a-default-value($color-name) {
-  $group-a-colors: map-get($grav-co-scheme-default, 'group-a');
+  $group-a-colors: map-get(grav-color-scheme-map(), 'group-a');
   @return map-get($group-a-colors, $color-name);
 }
 
 /// Returns the default color scheme's value for a given group A color.
 @function grav-color-grp-b-default-value($color-name) {
-  $group-b-colors: map-get($grav-co-scheme-default, 'group-b');
+  $group-b-colors: map-get(grav-color-scheme-map(), 'group-b');
   @return map-get($group-b-colors, $color-name);
 }
 
 
 /// Outputs CSS custom property definitions for a color scheme.
-@mixin grav-color-scheme-props($color-scheme-map) {
+@mixin grav-color-scheme-props($color-scheme-name: $grav-co-scheme-default-name) {
+  $color-scheme-map: grav-color-scheme-map($color-scheme-name);
+
   @each $name, $color in map-get($color-scheme-map, 'group-a') {
     #{grav-color-grp-a-prop-name($name)}: $color;
   }
@@ -84,11 +90,15 @@
 }
 
 /// Defines a color scheme CSS class(es).
-@mixin grav-color-scheme-define-class($color-scheme-names, $color-scheme-map) {
-  @each $name in $color-scheme-names {
-    #{grav-color-scheme-class-name($name)} {
-      @include grav-color-scheme-props($color-scheme-map);
-      @include grav-color-scheme-apply;
-    }
+@mixin grav-color-scheme-define-class($class-name-suffix, $color-scheme-name: null) {
+  @if ($color-scheme-name == null) {
+    // If no color scheme name was explicitly set, we make it
+    // the same as the class name suffix
+    $color-scheme-name: $class-name-suffix;
+  }
+
+  #{grav-color-scheme-class-name($class-name-suffix)} {
+    @include grav-color-scheme-props($color-scheme-name);
+    @include grav-color-scheme-apply;
   }
 }
