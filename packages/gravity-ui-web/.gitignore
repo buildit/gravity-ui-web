@@ -8,6 +8,8 @@ src/styleguide/_meta/*.mustache
 # Exclude generated files
 src/styleguide/_patterns/_generated/*.njk
 src/styleguide/_patterns/00-particles/05-logos-and-icons/00-svg-symbols.json
+src/styleguide/_patterns/00-particles/00-color/01-color-palettes.json
+src/styleguide/_patterns/00-particles/00-color/02-color-schemes.json
 
 
 ######### App / OS-specific guff ##########

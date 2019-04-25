@@ -12,11 +12,14 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const eyeglass = require('eyeglass');
 const rename = require("gulp-rename");
+const file = require('gulp-file');
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
+const { colors } = require('@buildit/gravity-particles');
 
 const uiLibPaths = require('../build-api.js');
 const pkgPaths = require('./paths.js');
+const colorSchemeTables = require('./color-scheme-tables.js');
 
 const taskNamePrefix = 'patternlab:';
 
@@ -66,7 +69,34 @@ preSvgSymbolsInfoTask.displayName = taskNamePrefix + 'pre:symbols-info';
 preSvgSymbolsInfoTask.description = 'Copies Gravity\'s symbols.json file to the patterns folder.';
 
 
-const preBuildTask = gulp.parallel(preSvgSymbolsTask, preSvgSymbolsInfoTask);
+const generatedColorPalettesDataFilename = '01-color-palettes.json';
+const generatedColorPalettesDataDir = pkgPaths.srcPatternsPath('00-particles', '00-color');
+generatedFileGlobs.push(path.join(generatedColorPalettesDataDir, generatedColorPalettesDataFilename));
+
+function preColorPaletteDataTask () {
+  const colorPalettesData = {};
+  colorPalettesData.colors = colors;
+
+  return file(generatedColorPalettesDataFilename, JSON.stringify(colorPalettesData, null, 2), { src: true })
+    .pipe(gulp.dest(generatedColorPalettesDataDir));
+}
+
+
+const generatedColorSchemeDataFilename = '02-color-schemes.json';
+const generatedColorSchemeDataDir = pkgPaths.srcPatternsPath('00-particles', '00-color');
+generatedFileGlobs.push(path.join(generatedColorSchemeDataDir, generatedColorSchemeDataFilename));
+
+function preColorSchemeTableDataTask () {
+  const colorSchemeTableData = {};
+  colorSchemeTableData.colorSchemes = colorSchemeTables;
+
+  return file(generatedColorSchemeDataFilename, JSON.stringify(colorSchemeTableData, null, 2), { src: true })
+    .pipe(gulp.dest(generatedColorSchemeDataDir));
+}
+
+
+
+const preBuildTask = gulp.parallel(preSvgSymbolsTask, preSvgSymbolsInfoTask, preColorSchemeTableDataTask, preColorPaletteDataTask);
 
 /******************************************************
  * STYLEGUIDE CSS TASKS
