@@ -1,5 +1,7 @@
 # Gravity UI
 
+<img src="https://repository-images.githubusercontent.com/94554467/a6c75480-66ac-11e9-985d-1978138937a1?sanitize=true">
+
 This project is a [Lerna](https://lernajs.io/) monorepo composed of several sub-packages. Everything is binded
 together with a custom [Semantic Release](https://github.com/semantic-release/semantic-release) pipeline configuration.
 
