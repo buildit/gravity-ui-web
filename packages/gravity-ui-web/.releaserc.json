@@ -1,0 +1,4 @@
+{
+  "extends": "@buildit/semantic-release",
+  "tagFormat": "gravity-ui-web-v${version}"
+}

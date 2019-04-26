@@ -1,3 +1,15 @@
+# [2.2.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.1.1...gravity-ui-web-v2.2.0) (2019-04-26)
+
+
+### Bug Fixes
+
+* **travis:** pointed AWS paths to the correct location ([a42243f](https://github.com/buildit/gravity-ui-web/commit/a42243f))
+
+
+### Features
+
+* **commitizen:** new commitizen lerna flavored setup ([ec298b3](https://github.com/buildit/gravity-ui-web/commit/ec298b3))
+
 ## [2.1.1](https://github.com/buildit/gravity-ui-web/compare/v2.1.0...v2.1.1) (2019-04-23)
 
 

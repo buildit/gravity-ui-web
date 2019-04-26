@@ -1,0 +1,44 @@
+{
+  "name": "@buildit/semantic-release-lerna-release-notes-generator",
+  "version": "1.0.0",
+  "description": "Light wrapper around @semantic-release/release-notes-generator to work with Lerna packages",
+  "author": {
+    "name": "Buildit",
+    "url": "http://buildit.wiprodigital.com/"
+  },
+  "homepage": "https://github.com/buildit/gravity-ui-web/tree/develop/packages/semantic-release/release-notes-generator#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildit/gravity-ui-web.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "postinstall": "npm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/buildit/gravity-ui-web/issues"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.4",
+    "jest": "^24.7.1",
+    "semantic-release": "^15.13.3",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.3"
+  },
+  "dependencies": {
+    "@semantic-release/release-notes-generator": "^7.1.4"
+  }
+}
