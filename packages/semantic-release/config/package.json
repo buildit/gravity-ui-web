@@ -1,0 +1,36 @@
+{
+  "name": "@buildit/semantic-release",
+  "version": "1.0.0",
+  "description": "A premade configuration for using Lerna with Semantic Release",
+  "author": {
+    "name": "Buildit",
+    "url": "http://buildit.wiprodigital.com/"
+  },
+  "homepage": "https://github.com/buildit/gravity-ui-web/tree/develop/packages/semantic-release/config#readme",
+  "license": "ISC",
+  "main": "lib/semantic-release.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildit/gravity-ui-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/buildit/gravity-ui-web/issues"
+  },
+  "dependencies": {
+    "@buildit/semantic-release-lerna-analyzer": "^1.0.0",
+    "@buildit/semantic-release-lerna-release-notes-generator": "^1.0.0",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/npm": "^5.1.4"
+  },
+  "devDependencies": {
+    "semantic-release": "^15.13.3"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "packages": [
+    "packages/*",
+    "packages/semantic-release/*"
+  ],
+  "version": "0.0.0"
+}
