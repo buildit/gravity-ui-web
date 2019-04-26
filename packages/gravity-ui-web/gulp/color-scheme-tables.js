@@ -12,7 +12,7 @@ function wcagRating(contrastRatio) {
     return 'AA';
   }
   if (contrastRatio > 3) {
-    return 'A';
+    return 'AA-lrg'; // AA for large text (>-18pt) and UI elements
   }
   return 'Fail';
 }
