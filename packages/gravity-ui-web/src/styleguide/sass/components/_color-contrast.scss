@@ -28,7 +28,7 @@
       @include grav-color-grp-a-apply('color', 'accent-danger', true);
     }
 
-    &--a {
+    &--aa-lrg {
       @include grav-color-grp-b-apply('background-color', 'accent-attention', true);
       @include grav-color-grp-a-apply('color', 'accent-attention', true);
     }
