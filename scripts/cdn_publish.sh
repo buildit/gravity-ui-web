@@ -2,10 +2,10 @@
 cdnGravityDir="gravity-ui-web"
 cdnDir="cdn-dist"
 
-if [ ! -z "$TRAVIS_COMMIT_RANGE"]
+if [ ! -z "$TRAVIS_COMMIT_RANGE" ]
 then
   # TRAVIS_COMMIT_RANGE has a bug that includes commits outside the PR, so fix with known workaround that is future safe
-  cdnChanges=`git diff --pretty="format:" --name-only ${TRAVIS_COMMIT_RANGE/.../..} | grep -E '^packages/gravity-ui-web/src*'`
+  cdnChanges=`git diff --pretty="format:" --name-only ${TRAVIS_COMMIT_RANGE/.../..} | grep -E '^packages/gravity-ui-web/*'`
 fi
 
 if [ ! -z "$cdnChanges" ]
