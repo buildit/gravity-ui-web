@@ -190,8 +190,9 @@ npm start
 
 ### Further information
 
-* Coding standards (TBC)
-  * [Naming conventions](./docs/naming-conventions.md)
+* [Naming conventions](./docs/naming-conventions.md)
+* [Color system](./docs/layout-and-grid.md)
+* [Layout and grid](./docs/color-system.md)
 * [Contribution guidelines](../../CONTRIBUTING.md)
 * [`git` branching strategy](../../docs/branching-strategy.md)
 
