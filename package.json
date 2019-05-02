@@ -7,7 +7,9 @@
     "commit": "git-cz",
     "lint": "lerna run lint",
     "test": "lerna run test",
-    "styleguide": "lerna run styleguide",
+    "build": "lerna run build",
+    "start": "lerna run start --parallel",
+    "clean": "lerna run clean",
     "semantic-release": "lerna run semantic-release"
   },
   "devDependencies": {

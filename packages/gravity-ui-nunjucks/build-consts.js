@@ -19,9 +19,4 @@ module.exports = {
    * Name of root distributables directory.
    */
   distDirname: 'dist',
-
-  /**
-   * Base filename used by various SVG symbols files.
-   */
-  svgSymbolsBasename: 'symbols',
 };

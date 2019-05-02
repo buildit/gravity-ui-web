@@ -13,7 +13,6 @@ const chalk = require('chalk');
 const pkgPaths = require('./paths.js');
 const bldConsts = require('../build-consts.js');
 const uiLibPaths = require('../build-api.js');
-const { plServerReload, plServerRefreshCss } = require('./patternlab.js');
 
 const taskNamePrefix = 'ui-lib:';
 
@@ -136,13 +135,13 @@ buildTasks.displayName = taskNamePrefix + 'build';
 buildTasks.description = 'Builds the Gravity UI library.';
 
 
-function watchTask() {
+function watchTask(done) {
   const watchers = [
     {
       name: 'SASS',
       paths: [uiLibPaths.srcSassPath('**', '*.scss')],
       config: {},
-      tasks: gulp.series(sassBuildTask, plServerRefreshCss)
+      tasks: sassBuildTask
     },
     {
       name: 'SVG Sprites',
@@ -154,7 +153,7 @@ function watchTask() {
       name: 'JS',
       paths: [pkgPaths.srcJsPath('**', '*.js')],
       config: {},
-      tasks: gulp.series(copyJsTask, plServerReload)
+      tasks: copyJsTask
     }
   ];
 
@@ -163,7 +162,7 @@ function watchTask() {
     watcher.paths.forEach(p => console.log('  ' + p));
     gulp.watch(watcher.paths, watcher.config, watcher.tasks);
   });
-  console.log();
+  done();
 }
 watchTask.displayName = taskNamePrefix + 'watch';
 watchTask.description = 'Watches UI library files';

@@ -12,19 +12,20 @@
 const gulp = require('gulp');
 const del = require('del');
 const pkgPaths = require('./gulp/paths.js');
-const uiLibTasks = require('./gulp/ui-lib.js');
+const plTasks = require('./gulp/patternlab.js');
+const gravityTasks = require('./gulp/gravity.js');
 
 // Define composite tasks:
 
 gulp.task('clean', function(){
   return del([
-    pkgPaths.pkgRootPath('dist', '**', '*')
+    pkgPaths.pkgRootPath('dist', '**', '*'),
+    ...plTasks.generatedFileGlobs
   ]);
 });
 
-gulp.task('watch', gulp.series(
-  uiLibTasks.buildTasks,
-  uiLibTasks.watchTask
-));
 
-gulp.task('default', uiLibTasks.buildTasks);
+module.exports = {
+  default: gulp.parallel(plTasks.plBuildTask, gravityTasks.copy),
+  serve: gulp.parallel(plTasks.plServeTask, gravityTasks.watch)
+};

@@ -17,7 +17,7 @@ const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
 const { colors } = require('@buildit/gravity-particles');
 
-const uiLibPaths = require('../build-api.js');
+const uiLibPaths = require('@buildit/gravity-ui-web/build-api.js');
 const pkgPaths = require('./paths.js');
 const colorSchemeTables = require('./color-scheme-tables.js');
 
@@ -47,26 +47,48 @@ const generatedPatternsDirname = '_generated';
 generatedFileGlobs.push(pkgPaths.srcPatternsPath(generatedPatternsDirname, '*'));
 generatedFileGlobs.push(`!${pkgPaths.srcPatternsPath(generatedPatternsDirname, 'README.md')}`); // Prevent README.md from being deleted
 
-function preSvgSymbolsTask () {
-  return gulp.src(uiLibPaths.distPath(uiLibPaths.distSvgSymbolsFilename))
-    .pipe(rename('symbols.njk'))
-    .pipe(gulp.dest(pkgPaths.srcPatternsPath(generatedPatternsDirname)));
+function makePreSvgSymbolsTask (allowEmpty = false) {
+  const preSvgSymbolsTask = function () {
+    return gulp.src(uiLibPaths.distPath(uiLibPaths.distSvgSymbolsFilename), { allowEmpty })
+      .pipe(rename('symbols.njk'))
+      .pipe(gulp.dest(pkgPaths.srcPatternsPath(generatedPatternsDirname)));
+  }
+  preSvgSymbolsTask.displayName = taskNamePrefix + 'pre:symbols';
+  preSvgSymbolsTask.description = 'Copies Gravity\'s symbols.svg file to the patterns folder.';
+
+  return preSvgSymbolsTask;
 };
-preSvgSymbolsTask.displayName = taskNamePrefix + 'pre:symbols';
-preSvgSymbolsTask.description = 'Copies Gravity\'s symbols.svg file to the patterns folder.';
+
+function placeholderSvgSymbolsTask() {
+  return file('symbols.njk', ' ', { src: true })
+    .pipe(gulp.dest(pkgPaths.srcPatternsPath(generatedPatternsDirname)));
+}
+placeholderSvgSymbolsTask.displayName = taskNamePrefix + 'placeholder:symbols';
+placeholderSvgSymbolsTask.description = 'Creates an empty symbols.svg file in the patterns folder.';
 
 
 const generatedSymbolInfoFilename = '00-svg-symbols.json';
 const generatedSymbolInfoDir = pkgPaths.srcPatternsPath('00-particles', '05-logos-and-icons');
 generatedFileGlobs.push(path.join(generatedSymbolInfoDir, generatedSymbolInfoFilename));
 
-function preSvgSymbolsInfoTask () {
-  return gulp.src(uiLibPaths.distPath(uiLibPaths.distSvgSymbolsInfoFilename))
-    .pipe(rename(generatedSymbolInfoFilename))
-    .pipe(gulp.dest(generatedSymbolInfoDir));
+function makePreSvgSymbolsInfoTask (allowEmpty = false) {
+  const preSvgSymbolsInfoTask = function () {
+    return gulp.src(uiLibPaths.distPath(uiLibPaths.distSvgSymbolsInfoFilename), { allowEmpty })
+      .pipe(rename(generatedSymbolInfoFilename))
+      .pipe(gulp.dest(generatedSymbolInfoDir));
+  }
+  preSvgSymbolsInfoTask.displayName = taskNamePrefix + 'pre:symbols-info';
+  preSvgSymbolsInfoTask.description = 'Copies Gravity\'s symbols.json file to the patterns folder.';
+
+  return preSvgSymbolsInfoTask;
 };
-preSvgSymbolsInfoTask.displayName = taskNamePrefix + 'pre:symbols-info';
-preSvgSymbolsInfoTask.description = 'Copies Gravity\'s symbols.json file to the patterns folder.';
+
+function placeholderSvgSymbolsInfoTask() {
+  return file(generatedSymbolInfoFilename, '{}', { src: true })
+    .pipe(gulp.dest(generatedSymbolInfoDir));
+}
+placeholderSvgSymbolsInfoTask.displayName = taskNamePrefix + 'placeholder:symbols-info';
+placeholderSvgSymbolsInfoTask.description = 'Creates an empty symbols.json file in the patterns folder.';
 
 
 const generatedColorPalettesDataFilename = '01-color-palettes.json';
@@ -96,7 +118,8 @@ function preColorSchemeTableDataTask () {
 
 
 
-const preBuildTask = gulp.parallel(preSvgSymbolsTask, preSvgSymbolsInfoTask, preColorSchemeTableDataTask, preColorPaletteDataTask);
+const preBuildTask = gulp.parallel(makePreSvgSymbolsTask(), makePreSvgSymbolsInfoTask(), preColorSchemeTableDataTask, preColorPaletteDataTask);
+const placeholderTask = gulp.parallel(placeholderSvgSymbolsTask, placeholderSvgSymbolsInfoTask);
 
 /******************************************************
  * STYLEGUIDE CSS TASKS
@@ -184,14 +207,67 @@ plBuildTask.description = 'Compiles the patterns and frontend, outputting to con
 
 
 /******************************************************
+ * Server reload functions
+******************************************************/
+
+// NOTE: If multiple packages' watch/serve tasks are being run
+// in parallel via Lerna, there can be a situation where these
+// reload tasks are triggered before the Pattern Lab server
+// is up and running.
+let serverReady = false;
+
+function plServerReload() {
+  if (serverReady) {
+    return patternlab.server.reload();
+  }
+  else {
+    console.warn('Server not ready. Skipping reload.');
+    return Promise.resolve();
+  }
+}
+
+function plServerRefreshCss() {
+  if (serverReady) {
+    return patternlab.server.refreshCSS();
+  }
+  else {
+    console.warn('Server not ready. Skipping refreshCSS.');
+    return Promise.resolve();
+  }
+}
+
+
+/******************************************************
  * WATCH TASKS
 ******************************************************/
 
-function plWatchSassTask() {
+function plWatchSvgSymbols(done) {
+  gulp.watch(
+    uiLibPaths.distPath(uiLibPaths.distSvgSymbolsFilename),
+    gulp.series(makePreSvgSymbolsInfoTask(true), plServerReload)
+  );
+  done()
+}
+plWatchSvgSymbols.displayName = taskNamePrefix + 'symbols-info:watch';
+plWatchSvgSymbols.description = 'Watches for changes to Gravity SVG symbols';
+
+function plWatchSvgSymbolsInfo(done) {
+  gulp.watch(
+    uiLibPaths.distPath(uiLibPaths.distSvgSymbolsInfoFilename),
+    gulp.series(makePreSvgSymbolsTask(true), plServerReload)
+  );
+  done()
+}
+plWatchSvgSymbolsInfo.displayName = taskNamePrefix + 'symbols:watch';
+plWatchSvgSymbolsInfo.description = 'Watches for changes to Gravity SVG symbols info file';
+
+
+function plWatchSassTask(done) {
   gulp.watch(
     pkgPaths.pkgRootPath(plPaths.source.root, 'sass', '**', '*.scss'),
-    gulp.series(plSassTask, patternlab.server.refreshCSS)
+    gulp.series(plSassTask, plServerRefreshCss)
   );
+  done()
 }
 plWatchSassTask.displayName = taskNamePrefix + 'css:watch';
 plWatchSassTask.description = 'Watches for changes to styleguide SASS and compiles to CSS.';
@@ -208,8 +284,9 @@ plWatchSgTask.description = 'Watches for changes to styleguide source files.';
 
 
 const plWatchTask = gulp.series(
-  gulp.parallel(plSassTask, preBuildTask),
-  gulp.parallel(plWatchSassTask, plWatchSgTask)
+  placeholderTask,
+  gulp.parallel(plSassTask, makePreSvgSymbolsTask(true), makePreSvgSymbolsInfoTask(true)),
+  gulp.parallel(plWatchSassTask, plWatchSgTask, plWatchSvgSymbols, plWatchSvgSymbolsInfo)
 );
 plWatchTask.displayName = taskNamePrefix + 'watch';
 plWatchTask.description = 'Builds the styleguide and starts watching styleguide source files.';
@@ -223,6 +300,8 @@ function plServeSgTask() {
   return patternlab.server.serve({
     watch: true,
     cleanPublic: config.cleanPublic
+  }).then(() => {
+    serverReady = true;
   });
 }
 plServeSgTask.displayName = taskNamePrefix + 'sg:serve';
@@ -230,8 +309,9 @@ plServeSgTask.description = 'Builds styleguide HTML only and launches Pattern La
 
 
 const plServeTask = gulp.series(
-  gulp.parallel(plSassTask, preBuildTask),
-  gulp.parallel(plWatchSassTask, plServeSgTask)
+  placeholderTask,
+  gulp.parallel(plSassTask, makePreSvgSymbolsTask(true), makePreSvgSymbolsInfoTask(true)),
+  gulp.parallel(plWatchSassTask, plServeSgTask, plWatchSvgSymbols, plWatchSvgSymbolsInfo)
 );
 plServeTask.displayName = taskNamePrefix + 'serve';
 plServeTask.description = 'Builds styleguide and launches Pattern Lab\'s built-in server.';
@@ -240,8 +320,6 @@ plServeTask.description = 'Builds styleguide and launches Pattern Lab\'s built-i
 
 module.exports = {
   // Pre-build tasks
-  preSvgSymbolsTask,
-  preSvgSymbolsInfoTask,
   preBuildTask,
 
   // CLI
@@ -265,7 +343,7 @@ module.exports = {
   generatedFileGlobs,
 
   // Export Pattern Lab server reload functions, so
-  // other tasks can trigger reloads
-  plServerReload: () => patternlab.server.reload(),
-  plServerRefreshCss: () => patternlab.server.refreshCSS(),
+  // other tasks can trigger reloads.
+  plServerReload,
+  plServerRefreshCss,
 }
