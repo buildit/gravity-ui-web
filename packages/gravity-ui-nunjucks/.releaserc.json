@@ -1,0 +1,4 @@
+{
+  "extends": "@buildit/semantic-release",
+  "tagFormat": "gravity-ui-nunjucks-v${version}"
+}

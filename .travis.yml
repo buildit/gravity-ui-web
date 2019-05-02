@@ -11,7 +11,7 @@ install:
   - npm run lerna bootstrap
 script:
   - commitlint-travis
-  - npm run-script styleguide
+  - npm run-script build
 before_deploy:
   - pip install --user awscli
 deploy:

@@ -8,12 +8,12 @@
 // === Settings layer ===
 // Used with preprocessors and contain font, colors definitions, etc.
 // Must not output any CSS.
-@import '../../ui-lib/sass/00-settings/settings.all';
+@import 'gravity-ui-web/00-settings/settings.all';
 
 // === Tools layer ===
 // Globally used mixins and functions.
 // Must not output any CSS.
-@import '../../ui-lib/sass/01-tools/color-schemes';
+@import 'gravity-ui-web/01-tools/color-schemes';
 
 // === Generic layer ===
 // Reset and/or normalize styles, box-sizing definition, etc.

@@ -7,7 +7,6 @@
  * builds.
  */
 const path = require('path');
-const patternLabConfig = require('../patternlab-config.json');
 const bldConsts = require('../build-consts.js');
 
 const gulpDir = __dirname;
@@ -21,20 +20,7 @@ function pkgRootPath(...pathSegements) {
 // ==== UI library ====
 
 function srcUiLibPath(...pathSegements) {
-  return pkgRootPath(bldConsts.srcDirname, bldConsts.uiLibDirname, ...pathSegements)
-}
-
-
-// ==== Pattern library ====
-
-// Resolves the given path segments relative to Pattern Lab's patterns source dir
-function srcPatternsPath(...pathSegments) {
-  return pkgRootPath(patternLabConfig.paths.source.patterns, ...pathSegments);
-}
-
-// Resolves the given path segments relative to the SASS src dir
-function distPatternLibPath(...pathSegements) {
-  return pkgRootPath(bldConsts.distDirname, bldConsts.patternLibDirname, ...pathSegements);
+  return pkgRootPath(bldConsts.srcDirname, ...pathSegements)
 }
 
 
@@ -50,30 +36,6 @@ module.exports = {
    *        directory or file.
    */
   pkgRootPath,
-
-  /**
-   * Takes a sequence of path segments relative to the pattern
-   * library's source patterns directory and returns the absolute path.
-   *
-   * @param  {...string} pathSegements One or more path segments
-   *        relative to the pattern library's source patterns directory.
-   *
-   * @return {string} Absolute file path to the specified source
-   *        directory or file.
-   */
-  srcPatternsPath,
-
-  /**
-   * Takes a sequence of path segments relative to the pattern
-   * library's distributables directory and returns the absolute path.
-   *
-   * @param  {...string} pathSegements One or more path segments
-   *        relative to the pattern library's distributables directory.
-   *
-   * @return {string} Absolute file path to the specified distributable
-   *        directory or file.
-   */
-  distPatternLibPath,
 
   /**
    * The absolute path to SVG symbols source directory.
