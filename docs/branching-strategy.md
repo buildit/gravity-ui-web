@@ -10,16 +10,24 @@ Commits to the `develop` branch trigger an automated build and deployment of the
 
 This has been configured as a restricted branch on GitHub and only project maintainers are able to push to this branch (or merge pull requests into it).
 
+## `next` branch
+
+Development changes targeting the next major release reside in `next`. This allows us to batch up multiple breaking changes and release them in one go, without blocking any fixes or updates to the _current_ major version (which would go into `develop`).
+
+Commits to the `next` branch trigger an automated build and deployment of the Buildit Living Style Guide [next environment](http://style-next.buildit.digital/). (Refer to our [Travis CI doc](./travis-ci.md) for further details)
+
+This has been configured as a restricted branch on GitHub and only project maintainers are able to push to this branch (or merge pull requests into it).
+
 
 ## Feature branches
 
-Contributors making changes or adding new features should always create a feature branch (with a short, descriptive [kebab-case](http://wiki.c2.com/?KebabCase) name) off of the current `HEAD` of `develop`. These are short-lived branches that are deleted once the feature is complete and has been merged.
+Contributors making changes or adding new features should always create a feature branch (with a short, descriptive [kebab-case](http://wiki.c2.com/?KebabCase) name) off of the current `HEAD` of `develop` (or off `next`, if targeting the next major release). These are short-lived branches that are deleted once the feature is complete and has been merged.
 
 **Only do one feature per branch**. If you are working on several things in parallel, create separate branches for each.
 
 Once ready for review, the feature branch should be pushed to this Github repo and a [pull request](https://help.github.com/articles/creating-a-pull-request/) should be raised.
 
-The maintainers will then review the PR and either merge into `develop` (and then delete that feature branch), or request additional changes.
+The maintainers will then review the PR and either merge into `develop` or `next` (and then delete that feature branch), or request additional changes.
 
 ## Releases
 
@@ -39,4 +47,4 @@ The `master` branch always contains the most recent _production ready_ code.
 
 This has been configured as a restricted branch on GitHub and only project maintainers are able to push to this branch (or merge pull requests into it).
 
-After being merged into `master`, new releases are tagged using the semver format (`v1.2.3`) by the project maintainers. This then triggers an automated build and deployment of both the [Buildit Living Style Guide](http://style.buildit.digital/) and the [`@buildit/gravity-ui-web` NPM package](https://www.npmjs.com/package/@buildit/gravity-ui-web).
+After being merged into `master`, new releases are tagged using the semver format (`v1.2.3`) by the project maintainers. This then triggers an automated build and deployment of the [Buildit Living Style Guide](http://style.buildit.digital/), [Gravity CDN](https://static.buildit.digital/gravity-ui-web/) and the various NPM packages in this repo.
