@@ -59,6 +59,7 @@ function makePreSvgSymbolsTask (allowEmpty = false) {
   return preSvgSymbolsTask;
 };
 
+
 function placeholderSvgSymbolsTask() {
   return file('symbols.njk', ' ', { src: true })
     .pipe(gulp.dest(pkgPaths.srcPatternsPath(generatedPatternsDirname)));
@@ -82,6 +83,7 @@ function makePreSvgSymbolsInfoTask (allowEmpty = false) {
 
   return preSvgSymbolsInfoTask;
 };
+
 
 function placeholderSvgSymbolsInfoTask() {
   return file(generatedSymbolInfoFilename, '{}', { src: true })
@@ -285,7 +287,7 @@ plWatchSgTask.description = 'Watches for changes to styleguide source files.';
 
 const plWatchTask = gulp.series(
   placeholderTask,
-  gulp.parallel(plSassTask, makePreSvgSymbolsTask(true), makePreSvgSymbolsInfoTask(true)),
+  gulp.parallel(plSassTask, makePreSvgSymbolsTask(true), makePreSvgSymbolsInfoTask(true), preColorSchemeTableDataTask, preColorPaletteDataTask),
   gulp.parallel(plWatchSassTask, plWatchSgTask, plWatchSvgSymbols, plWatchSvgSymbolsInfo)
 );
 plWatchTask.displayName = taskNamePrefix + 'watch';
@@ -310,7 +312,7 @@ plServeSgTask.description = 'Builds styleguide HTML only and launches Pattern La
 
 const plServeTask = gulp.series(
   placeholderTask,
-  gulp.parallel(plSassTask, makePreSvgSymbolsTask(true), makePreSvgSymbolsInfoTask(true)),
+  gulp.parallel(plSassTask, makePreSvgSymbolsTask(true), makePreSvgSymbolsInfoTask(true), preColorSchemeTableDataTask, preColorPaletteDataTask),
   gulp.parallel(plWatchSassTask, plServeSgTask, plWatchSvgSymbols, plWatchSvgSymbolsInfo)
 );
 plServeTask.displayName = taskNamePrefix + 'serve';
