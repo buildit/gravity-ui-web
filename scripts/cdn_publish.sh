@@ -3,7 +3,7 @@ cdnGravityDir="gravity-ui-web"
 cdnDistDir="cdn-dist"
 cdnCurrentVersionDir="$cdnDistDir/currentVersion"
 cdnCurrentVersionGravityDir="$cdnCurrentVersionDir/$cdnGravityDir"
-cdnLatestVersionsDir="$cdnDistDir/latestsVersions"
+cdnLatestVersionsDir="$cdnDistDir/latestVersions"
 cdnLatestVersionsGravityDir="$cdnLatestVersionsDir/$cdnGravityDir"
 
 if [ ! -z "$TRAVIS_COMMIT_RANGE" ]
@@ -28,7 +28,7 @@ then
   for thisVersion in $allVersions; do
     versionList+="<li>`expr $thisVersion : '.*\(v[0-9].*\)'`</li>"
   done
-  
+
   file_contents=$(<./cdn-index.template)
   echo "${file_contents//\{versionlist\}/$versionList}" > ${cdnCurrentVersionGravityDir}/index.html
 
