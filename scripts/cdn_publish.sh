@@ -39,8 +39,8 @@ then
 
   majorVersion=`echo $version | cut -dv -f2 | cut -d. -f1`
 
-  mkdir -p ${cdnLatestVersionsGravityDir}/${majorVersion}.x
-  cp packages/gravity-ui-web/dist/ui-lib/* ${cdnLatestVersionsGravityDir}/${majorVersion}.x
+  mkdir -p ${cdnLatestVersionsGravityDir}/v${majorVersion}.x
+  cp packages/gravity-ui-web/dist/ui-lib/* ${cdnLatestVersionsGravityDir}/v${majorVersion}.x
   mkdir -p ${cdnLatestVersionsGravityDir}/latest
   cp packages/gravity-ui-web/dist/ui-lib/* ${cdnLatestVersionsGravityDir}/latest
 
