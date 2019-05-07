@@ -1,6 +1,6 @@
 {
   "name": "@buildit/gravity-ui-nunjucks",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Nunjucks HTML templates for Gravity web UI components.",
   "main": "index.js",
   "private": true,
