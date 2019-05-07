@@ -3,6 +3,20 @@
   "version": "2.1.1",
   "description": "Library of styles, components and associated assets to build UIs for the web. Part of Buildit's Gravity design system.",
   "main": "dist/ui-lib/gravity.js",
+  "bundlesize": [
+    {
+      "path": "dist/ui-lib/*.js",
+      "maxSize": "30 kB"
+    },
+    {
+      "path": "dist/ui-lib/*.css",
+      "maxSize": "30 kB"
+    },
+    {
+      "path": "dist/ui-lib/*.svg",
+      "maxSize": "60 kB"
+    }
+  ],
   "files": [
     "build-api.js",
     "build-consts.js",
@@ -15,7 +29,7 @@
     "build": "gulp",
     "styleguide": "gulp styleguide",
     "start": "gulp serve",
-    "test": "npm run lint",
+    "test": "npm run lint && bundlesize",
     "lint": "stylelint 'src/ui-lib/sass/**/*.scss'",
     "semantic-release": "semantic-release"
   },
