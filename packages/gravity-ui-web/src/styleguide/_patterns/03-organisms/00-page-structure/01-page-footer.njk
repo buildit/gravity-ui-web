@@ -1,14 +1,24 @@
 {%- from 'atoms-icon' import icon -%}
+{%- from 'atoms-image' import image -%}
 
-<footer class="{{ footer.class }}">
-  <p>{{footer.copy}} <br><a href="{{url}}">{% include 'atoms-logotype' %}</a></p>
-  <ul class="grav-c-list-horizontal">
-    {% for socialLink in footer.social -%}
-      <li>
-        <a href="{{socialLink.url}}">
-          {{ icon(socialLink.symbolId, socialLink.label) | safe }}
-        </a>
-      </li>
-    {%- endfor %}
-  </ul>
+<footer class="grav-c-footer {{ footer.class }}">
+  {{ image("/images/logos/logo-buildit-footer.png", "Buildit a wipro digital company", "grav-c-footer__logo") | safe }}
+
+  <div class="grav-c-footer__lists">
+    <ul class="grav-c-footer__lists-entry">
+      <li><a href="#">Stories</a></li>
+      <li><a href="#">People</a></li>
+      <li><a href="#">Jobs</a></li>
+    </ul>
+
+    <ul class="grav-c-footer__lists-entry">
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Accessibility</a></li>
+      <li><a href="https://wiprodigital.com/privacy-policy">Privacy & Cookie Policy</a></li>
+    </ul>
+  </div>
+
+  <p>
+    &copy; 2019 <strong>Buildit</strong>. All rights reserved.
+  </p>
 </footer>
