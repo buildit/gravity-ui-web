@@ -6,7 +6,11 @@ const svgSymbols = require('gulp-svg-symbols');
 const rename = require("gulp-rename");
 const cheerio = require('gulp-cheerio');
 const filter = require('gulp-filter');
+const sourcemaps = require('gulp-sourcemaps');
+const postcss = require('gulp-postcss');
 
+const cssnano = require('cssnano');
+const cssMqPacker = require('css-mqpacker');
 const eyeglass = require('eyeglass');
 const chalk = require('chalk');
 
@@ -29,11 +33,22 @@ function sassBuildTask () {
   );
 
   return gulp.src(uiLibPaths.srcSassPath('*.scss'))
+    .pipe(sourcemaps.init())
     .pipe(sass(eyeglass(sassOptions))).on('error', sass.logError)
-    // Only rename the main CSS file
+
+  // Rename index.css to gravity.css, but leave other
+  // filenames unchanged
     .pipe(mainSassFileFilter)
     .pipe(rename(uiLibPaths.distCssFilename))
     .pipe(mainSassFileFilter.restore)
+
+  // Post-process CSS to optimize and minify
+    .pipe(postcss([
+      cssMqPacker(),
+      cssnano()
+    ]))
+
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(uiLibPaths.distPath()))
 }
 sassBuildTask.displayName = taskNamePrefix + 'sass';
