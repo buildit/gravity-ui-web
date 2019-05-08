@@ -1,41 +1,64 @@
 .grav-c-footer {
-  background: #424242;
+  $breakpoint-medium: gravy-breakpoint(medium);
+
+  margin-top: vr(3);
   padding: $grav-sp-l 0;
+  background: #424242;
+  border-bottom: 2px solid #00b49d;
   color: #9b9b9b;
   font-size: 16px;
-  border-bottom: 2px solid #00b49d;
 
   &__logo {
     max-width: 100px;
+    margin-bottom: $grav-sp-m;
+
+    @media all and (max-width: $breakpoint-medium) {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   &__lists {
     display: flex;
+    margin: 0 0 $grav-sp-m;
 
-    &-entry {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      text-decoration: none;
+    @media all and (max-width: $breakpoint-medium) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
 
+  &__lists-entry {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+    @media all and (min-width: $breakpoint-medium) {
       &:first-of-type {
         padding-right: 100px;
       }
+    }
 
-      li {
-        margin: 0;
-        padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    a[href]:link {
+      color: #9b9b9b;
+      font-weight: 400;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
       }
+    }
+  }
 
-      a[href]:link {
-        text-decoration: none;
-        color: #9b9b9b;
-        font-weight: 400;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+  * {
+    @media all and (max-width: $breakpoint-medium) {
+      text-align: center;
     }
   }
 }

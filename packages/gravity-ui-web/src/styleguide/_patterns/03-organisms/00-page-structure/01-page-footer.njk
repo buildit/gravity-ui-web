@@ -2,23 +2,25 @@
 {%- from 'atoms-image' import image -%}
 
 <footer class="grav-c-footer {{ footer.class }}">
-  {{ image("/images/logos/logo-buildit-footer.png", "Buildit a wipro digital company", "grav-c-footer__logo") | safe }}
+  <div class="grav-o-container">
+    {{ image("/images/logos/logo-buildit-footer.png", "Buildit a wipro digital company", "grav-c-footer__logo") | safe }}
 
-  <div class="grav-c-footer__lists">
-    <ul class="grav-c-footer__lists-entry">
-      <li><a href="#">Stories</a></li>
-      <li><a href="#">People</a></li>
-      <li><a href="#">Jobs</a></li>
-    </ul>
+    <div class="grav-c-footer__lists">
+      <ul class="grav-c-footer__lists-entry">
+        <li><a href="#">Stories</a></li>
+        <li><a href="#">People</a></li>
+        <li><a href="#">Jobs</a></li>
+      </ul>
 
-    <ul class="grav-c-footer__lists-entry">
-      <li><a href="#">Terms</a></li>
-      <li><a href="#">Accessibility</a></li>
-      <li><a href="https://wiprodigital.com/privacy-policy">Privacy & Cookie Policy</a></li>
-    </ul>
+      <ul class="grav-c-footer__lists-entry">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Accessibility</a></li>
+        <li><a href="https://wiprodigital.com/privacy-policy">Privacy & Cookie Policy</a></li>
+      </ul>
+    </div>
+
+    <p>
+      &copy; 2019 <strong>Buildit</strong>. All rights reserved.
+    </p>
   </div>
-
-  <p>
-    &copy; 2019 <strong>Buildit</strong>. All rights reserved.
-  </p>
 </footer>
