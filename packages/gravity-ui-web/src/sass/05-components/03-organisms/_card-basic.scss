@@ -1,0 +1,10 @@
+.grav-c-card-basic {
+  &__title {
+    @include typi('large-text');
+    @include gravy-font('secondary');
+  }
+
+  p {
+    @include typi('small-text');
+  }
+}

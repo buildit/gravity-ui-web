@@ -2,15 +2,15 @@
 
 {%- from 'atoms-image' import image -%}
 
+{%- from 'molecules-card-basic' import cardBasic -%}
+
 {#
   Extend the unordered-list's unorderedListItem block
   to insert a card
 #}
 {%- block unorderedListItem -%}
   <li>
-    {{ image(item.image.src, item.image.alt, item.image.class) | safe }}
-    <h3 class="grav-c-list-img-cards__title">{{item.title}}</h3>
-    <p>{{item.content}}</p>
+    {{ cardBasic(item.title, item.image, item.content) | safe }}
   </li>
 {% endblock -%}
 

@@ -12,8 +12,6 @@
   }
 
   > li {
-    text-align: center;
-
     @media all and (min-width: $breakpoint-1) {
       max-width: 50%;
       padding: 0 $grav-sp-l;
@@ -28,14 +26,5 @@
 
   > li + li {
     margin-top: $grav-sp-xl;
-  }
-
-  &__title {
-    @include typi('large-text');
-    @include gravy-font('secondary');
-  }
-
-  p {
-    @include typi('small-text');
   }
 }

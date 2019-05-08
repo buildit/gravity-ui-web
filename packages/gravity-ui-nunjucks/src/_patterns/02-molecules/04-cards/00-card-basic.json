@@ -1,0 +1,9 @@
+{
+  "title": "Basic cards have a title",
+  "img": {
+    "src": "../../images/img-random-1.png",
+    "alt": "Brief description of this fascinating image"
+  },
+  "content": "Space for a paragraph of text is ideal for when you need space for a paragraph of text.",
+  "href": "#"
+}
