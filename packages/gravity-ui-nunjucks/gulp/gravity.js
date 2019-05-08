@@ -13,7 +13,7 @@ function makeCopyCssTask( allowEmpty = false ) {
     return gulp.src(uiLibPaths.distPath('**', '*.css'), { allowEmpty })
       .pipe(gulp.dest(pkgPaths.distGravityPath()));
   }
-  copyCss.displayName = taskNamePrefix + 'css';
+  copyCss.displayName = `${taskNamePrefix}css`;
   copyCss.description = 'Copies Gravity\'s CSS files to the build output.';
 
   return copyCss;
@@ -26,7 +26,7 @@ function makeCopyOtherTask( allowEmpty = false ) {
       .pipe(filter(['**', '!**/*.css']))
       .pipe(gulp.dest(pkgPaths.distGravityPath()));
   }
-  copyOther.displayName = taskNamePrefix + 'other';
+  copyOther.displayName = `${taskNamePrefix}other`;
   copyOther.description = 'Copies Gravity\'s other assets to the build output.';
 
   return copyOther;
