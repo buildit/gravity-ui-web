@@ -53,7 +53,7 @@ function plVersionTask (done) {
   patternlab.version();
   done();
 };
-plVersionTask.displayName = taskNamePrefix + 'version';
+plVersionTask.displayName = `${taskNamePrefix}version`;
 plVersionTask.description = 'eturn the version of patternlab-node you have installed';
 
 
@@ -61,14 +61,14 @@ function plHelpTask (done) {
   patternlab.help();
   done();
 };
-plHelpTask.displayName = taskNamePrefix + 'help';
+plHelpTask.displayName = `${taskNamePrefix}help`;
 plHelpTask.description = 'Get more information about patternlab-node, pattern lab in general, and where to report issues.';
 
 
 function plPatternsOnlyTask (done) {
   patternlab.patternsonly(done, getConfiguredCleanOption());
 };
-plPatternsOnlyTask.displayName = taskNamePrefix + 'patternsonly';
+plPatternsOnlyTask.displayName = `${taskNamePrefix}patternsonly`;
 plPatternsOnlyTask.description = 'Compiles the patterns only, outputting to config.paths.public';
 
 
@@ -76,7 +76,7 @@ function plListStarterKitsTask (done) {
   patternlab.liststarterkits();
   done();
 };
-plListStarterKitsTask.displayName = taskNamePrefix + 'liststarterkits';
+plListStarterKitsTask.displayName = `${taskNamePrefix}liststarterkits`;
 plListStarterKitsTask.description = 'Returns a url with the list of available starterkits hosted on the Pattern Lab organization Github account';
 
 
@@ -84,7 +84,7 @@ function plLoadStarterKitsTask (done) {
   patternlab.loadstarterkit(argv.kit, argv.clean);
   done();
 };
-plLoadStarterKitsTask.displayName = taskNamePrefix + 'loadstarterkit';
+plLoadStarterKitsTask.displayName = `${taskNamePrefix}loadstarterkit`;
 plLoadStarterKitsTask.description = 'Load a starterkit into config.paths.source/*';
 
 
@@ -92,7 +92,7 @@ function plInstallPluginTask (done) {
   patternlab.installplugin(argv.plugin);
   done();
 };
-plInstallPluginTask.displayName = taskNamePrefix + 'installplugin';
+plInstallPluginTask.displayName = `${taskNamePrefix}installplugin`;
 
 
 /******************************************************
@@ -105,7 +105,7 @@ function buildPatternLibrary() {
     cleanPublic: config.cleanPublic
   });
 }
-buildPatternLibrary.displayName = taskNamePrefix + 'build';
+buildPatternLibrary.displayName = `${taskNamePrefix}build`;
 buildPatternLibrary.description = 'Builds the styleguide';
 
 
@@ -165,7 +165,7 @@ function watchPatternLibrary() {
     cleanPublic: config.cleanPublic
   });
 }
-watchPatternLibrary.displayName = taskNamePrefix + 'watch';
+watchPatternLibrary.displayName = `${taskNamePrefix}watch`;
 watchPatternLibrary.description = 'Watches for changes to styleguide source files.';
 
 

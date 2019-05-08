@@ -39,7 +39,7 @@ function makeCopySvgSymbolsTask (allowEmpty = false) {
       .pipe(rename('symbols.njk'))
       .pipe(gulp.dest(pkgPaths.srcPatternsPath(generatedPatternsDirname)));
   }
-  copySvgSymbols.displayName = taskNamePrefix + 'symbols';
+  copySvgSymbols.displayName = `${taskNamePrefix}symbols`;
   copySvgSymbols.description = 'Copies Gravity\'s symbols.svg file to the patterns folder.';
 
   return copySvgSymbols;
@@ -80,7 +80,7 @@ function makeCopySvgSymbolsInfoTask (allowEmpty = false) {
       .pipe(rename(generatedSymbolInfoFilename))
       .pipe(gulp.dest(generatedSymbolInfoPath()));
   }
-  copySvgSymbolsInfo.displayName = taskNamePrefix + 'symbols-info';
+  copySvgSymbolsInfo.displayName = `${taskNamePrefix}symbols-info`;
   copySvgSymbolsInfo.description = 'Copies Gravity\'s symbols.json file to the patterns folder.';
 
   return copySvgSymbolsInfo;
@@ -123,7 +123,7 @@ function createColorPaletteData () {
     .pipe(gulp.dest(generatedColorPalettesDataPath()
     ));
 }
-createColorPaletteData.displayName = taskNamePrefix + 'color-palette-data';
+createColorPaletteData.displayName = `${taskNamePrefix}color-palette-data`;
 createColorPaletteData.description = 'Creates a color palette JSON file in the patterns folder.';
 
 
@@ -143,7 +143,7 @@ function createColorSchemeData () {
   return file(generatedColorSchemeDataFilename, JSON.stringify(colorSchemeTableData, null, 2), { src: true })
     .pipe(gulp.dest(generatedColorSchemeDataPath()));
 }
-createColorSchemeData.displayName = taskNamePrefix + 'color-schemes-data';
+createColorSchemeData.displayName = `${taskNamePrefix}color-schemes-data`;
 createColorSchemeData.description = 'Creates a color schemes JSON file in the patterns folder.';
 
 

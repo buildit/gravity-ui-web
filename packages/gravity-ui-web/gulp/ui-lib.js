@@ -35,7 +35,7 @@ function sassBuildTask () {
     .pipe(mainSassFileFilter.restore)
     .pipe(gulp.dest(uiLibPaths.distPath()))
 }
-sassBuildTask.displayName = taskNamePrefix + 'sass';
+sassBuildTask.displayName = `${taskNamePrefix}sass`;
 sassBuildTask.description = 'Compiles SASS.';
 
 
@@ -118,7 +118,7 @@ function svgSymbolsTask () {
     }))
     .pipe(gulp.dest(uiLibPaths.distPath()))
 }
-svgSymbolsTask.displayName = taskNamePrefix + 'svg-symbols';
+svgSymbolsTask.displayName = `${taskNamePrefix}svg-symbols`;
 svgSymbolsTask.description = `Compiles ${uiLibPaths.distSvgSymbolsFilename} file.`;
 
 
@@ -126,12 +126,12 @@ function copyJsTask() {
   return gulp.src(pkgPaths.srcJsPath('**', '*.js'))
     .pipe(gulp.dest(uiLibPaths.distPath()));
 }
-copyJsTask.displayName = taskNamePrefix + 'js';
+copyJsTask.displayName = `${taskNamePrefix}js`;
 copyJsTask.description = 'Copies JS files.';
 
 // Composite task to do complete UI lib build
 const buildTasks = gulp.parallel(sassBuildTask, svgSymbolsTask, copyJsTask);
-buildTasks.displayName = taskNamePrefix + 'build';
+buildTasks.displayName = `${taskNamePrefix}build`;
 buildTasks.description = 'Builds the Gravity UI library.';
 
 
@@ -164,7 +164,7 @@ function watchTask(done) {
   });
   done();
 }
-watchTask.displayName = taskNamePrefix + 'watch';
+watchTask.displayName = `${taskNamePrefix}watch`;
 watchTask.description = 'Watches UI library files';
 
 
