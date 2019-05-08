@@ -8,6 +8,12 @@ together with a custom [Semantic Release](https://github.com/semantic-release/se
 [![Greenkeeper badge](https://badges.greenkeeper.io/buildit/gravity-ui-web.svg)](https://greenkeeper.io/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+## Getting Started
+
+1. Install packages normally with `npm install` 
+2. `npm run lerna:bootstrap` to locally link Lerna packages
+3. Navigate to your desired folder in `packages/` to start coding (see individual README.md) 
+
 ## Making commits
 
 This project uses [Commitizen](https://github.com/commitizen/cz-cli) for commit formatting.
