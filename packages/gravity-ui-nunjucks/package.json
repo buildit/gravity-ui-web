@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@buildit/gravity-particles": "^0.2.0",
-    "@buildit/gravity-ui-web": "^2.1.1",
+    "@buildit/gravity-ui-web": "^3.0.0-alpha.0",
     "@buildit/semantic-release": "^1.0.0",
     "@pattern-lab/core": "^3.0.1-alpha.0",
     "@pattern-lab/engine-nunjucks": "^0.1.5-alpha.0",
@@ -60,7 +60,7 @@
     "gulp-sass": "^4.0.2",
     "lodash.kebabcase": "^4.1.1",
     "minimist": "^1.2.0",
-    "semantic-release": "^15.13.12"
+    "semantic-release": "^15.13.13"
   },
   "peerDependencies": {
     "@buildit/gravity-ui-web": "^2.0.0",
