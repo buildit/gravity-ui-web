@@ -10,7 +10,7 @@
 #}
 {%- block unorderedListItem -%}
   <li>
-    {{ cardBasic(item.title, item.image, item.content) | safe }}
+    {{ cardBasic(item.title, item.image, item.content, item.href) | safe }}
   </li>
 {% endblock -%}
 

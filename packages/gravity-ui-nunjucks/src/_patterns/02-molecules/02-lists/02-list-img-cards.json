@@ -17,6 +17,15 @@
       }
     },
     {
+      "title": "Can has linkburger?",
+      "content": "I can has!",
+      "image": {
+        "src": "../../images/img-random-1.png",
+        "alt": "lolcat says hi"
+      },
+      "href": "#"
+    },
+    {
       "title": "Nanotechnology immersion along the information highway",
       "content": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
       "image": {
