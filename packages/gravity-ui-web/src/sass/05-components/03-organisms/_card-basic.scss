@@ -9,14 +9,6 @@
   }
 
   > a img {
-    clip-path: polygon(
-        0% 0%,
-        0% 100%,
-        2rem 100%,
-        3rem calc(100% - 1rem),
-        4rem 100%,
-        100% 100%,
-        100% 0%
-    );
+    @include grav-decoration-notch-in;
   }
 }
