@@ -1,20 +1,20 @@
 {%- from 'atoms-icon' import icon -%}
 {%- from 'atoms-image' import image -%}
 
-<footer class="grav-c-footer {{ footer.class }}">
+<footer>
   <div class="grav-o-container">
-    {{ image("/images/logos/logo-buildit-footer.png", "Buildit a wipro digital company", "grav-c-footer__logo") | safe }}
+    {% include 'atoms-logotype' %}
 
-    <div class="grav-c-footer__lists">
-      <ul class="grav-c-footer__lists-entry">
+    <div class="grav-c-page-footer__lists">
+      <ul>
         {% for link in footer.linksA -%}
-          <li><a src="{{link.url}}">{{link.label}}</a></li>
+          <li><a href="{{link.url}}">{{link.label}}</a></li>
         {%- endfor %}
       </ul>
 
-      <ul class="grav-c-footer__lists-entry">
+      <ul>
           {% for link in footer.linksB -%}
-            <li><a src="{{link.url}}">{{link.label}}</a></li>
+            <li><a href="{{link.url}}">{{link.label}}</a></li>
           {%- endfor %}
       </ul>
     </div>
