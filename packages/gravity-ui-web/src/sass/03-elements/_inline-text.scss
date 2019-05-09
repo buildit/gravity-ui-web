@@ -1,5 +1,5 @@
 a {
-  @include gravy-font(primary, bold);
+  @include fw(primary, bold);
 
   &[href] {
     &:link {
@@ -22,11 +22,11 @@ a {
 
 b,
 strong {
-  @include gravy-font(primary, bold);
+  @include fw(primary, bold);
 }
 
 code,
 kbd,
 samp {
-  font-family: monospace;
+  @include gravy-font(mono, regular);
 }

@@ -1,5 +1,5 @@
 pre {
-  font-family: monospace;
+  @include gravy-font(mono, regular);
 }
 
 blockquote {

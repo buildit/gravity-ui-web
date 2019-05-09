@@ -4,11 +4,5 @@ h3,
 h4,
 h5,
 h6 {
-  @include gravy-font(secondary, regular);
-}
-
-h4,
-h5,
-h6 {
-  @include gravy-font(secondary, bold);
+  @include fw(primary, bold);
 }

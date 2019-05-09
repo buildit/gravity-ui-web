@@ -5,7 +5,7 @@
 [type=submit],
 // Button with no type attribute defaults to "submit"
 button:not([type]) {
-  @include gravy-font(primary, bold);
+  @include fw(primary, bold);
   padding: $grav-sp-inset-squished-xs;
   cursor: pointer;
 

@@ -12,17 +12,17 @@ $gravy: (
   ),
   typefaces: (
     primary: (
-      stack: ('Roboto', sans-serif),
+      stack: ($grav-font-family-base, 'Akkurat', 'Arial', system-ui, sans-serif),
       weights: (
-        regular: 300,
-        bold: 500
+        light: 300,
+        regular: normal,
+        bold: bold
       )
     ),
-    secondary: (
-      stack: ('Cabin', sans-serif),
+    mono: (
+      stack: ($grav-font-family-mono, 'Akkurat Mono', monospace),
       weights: (
-        regular: 400,
-        bold: 600
+        regular: normal
       )
     )
   ),

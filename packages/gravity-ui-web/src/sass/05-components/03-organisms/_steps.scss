@@ -42,7 +42,7 @@
   }
 
   > li::before {
-    @include gravy-font(secondary, bold);
+    @include fw(primary, bold);
     @include grav-color-grp-b-apply('background-color', 'accent', true);
     @include grav-color-grp-a-apply('color', 'neutral', true);
 

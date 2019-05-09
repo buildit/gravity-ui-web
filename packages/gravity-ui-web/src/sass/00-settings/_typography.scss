@@ -1,8 +1,73 @@
 /**
   Typography-related values
 */
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,600|Roboto:300,500');
 
 $grav-font-size-base: 16px;
 
 $grav-line-max-width-m: 40em;
+
+$grav-font-family-base: 'Wipro Akkurat TT';
+$grav-font-family-mono: 'Wipro Akkurat Mono TT';
+
+/**
+  Map of web fonts to declare in the CSS output.
+
+  The organisation is as follows:
+
+  Font family > CSS font weight > CSS font style
+
+  Note: To understand where the local() names come from, refer to the
+  comments for the grav-font-face() mixin.
+*/
+$grav-font-faces: (
+  $grav-font-family-base: (
+    // Light
+    300: (
+      normal: (
+        local-name: 'WiproAkkuratTT-Light',
+        base-name: 'WiproAkkuratWeb-Light'
+      ),
+      italic: (
+        local-name: 'WiproAkkuratTT-LightItalic',
+        base-name: 'WiproAkkuratWeb-LightItalic'
+      )
+    ),
+
+    // Regular
+    normal: (
+      normal: (
+        local-name: 'WiproAkkuratTT-Regular',
+        base-name: 'WiproAkkuratWeb-Regular'
+      ),
+      italic: (
+        local-name: 'WiproAkkuratTT-Italic',
+        base-name: 'WiproAkkuratWeb-Italic'
+      )
+    ),
+
+    // Bold
+    bold: (
+      normal: (
+        local-name: 'WiproAkkuratTT-Bold',
+        base-name: 'WiproAkkuratWeb-Bold'
+      ),
+      italic: (
+        local-name: 'WiproAkkuratTT-BoldItalic',
+        base-name: 'WiproAkkuratWeb-BoldItalic'
+      )
+    )
+  ),
+
+  $grav-font-family-mono: (
+    // Regular
+    normal: (
+      normal: (
+        local-name: 'WiproAkkuratMonoTT-Regular',
+        base-name: 'WiproAkkuratMonoWeb-Regular'
+      )
+    )
+  )
+);
+
+
+$grav-font-src-path: 'https://static.buildit.digital/fonts/v1.0.0';
