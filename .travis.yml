@@ -12,6 +12,7 @@ install:
 script:
   - commitlint-travis
   - npm run-script build
+  - npm run test
 before_deploy:
   - pip install --user awscli
 deploy:

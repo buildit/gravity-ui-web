@@ -3,6 +3,20 @@
   "version": "3.0.0-alpha.0",
   "description": "Library of styles, components and associated assets to build UIs for the web. Part of Buildit's Gravity design system.",
   "main": "dist/gravity.js",
+  "bundlesize": [
+    {
+      "path": "dist/*.js",
+      "maxSize": "30 kB"
+    },
+    {
+      "path": "dist/*.css",
+      "maxSize": "30 kB"
+    },
+    {
+      "path": "dist/*.svg",
+      "maxSize": "60 kB"
+    }
+  ],
   "files": [
     "build-api.js",
     "build-consts.js",
@@ -14,7 +28,7 @@
     "clean": "gulp clean",
     "build": "gulp",
     "start": "gulp watch",
-    "test": "npm run lint",
+    "test": "npm run lint && bundlesize",
     "lint": "stylelint 'src/sass/**/*.scss'",
     "semantic-release": "semantic-release"
   },
@@ -62,14 +76,19 @@
   },
   "devDependencies": {
     "@buildit/semantic-release": "^1.0.0",
+    "bundlesize": "^0.17.1",
     "chalk": "^2.4.2",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
     "del": "^4.1.0",
     "eyeglass": "^2.4.1",
     "gulp": "^4.0.1",
     "gulp-cheerio": "^0.6.3",
     "gulp-filter": "^5.1.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-symbols": "^3.2.3",
     "gulp-svgo": "^2.1.1",
     "semantic-release": "^15.13.13",
