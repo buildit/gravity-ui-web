@@ -8,14 +8,18 @@
     "lint": "lerna run lint",
     "test": "lerna run test",
     "styleguide": "lerna run styleguide",
-    "semantic-release": "lerna run semantic-release"
+    "semantic-release": "lerna run semantic-release",
+    "clean:cdn": "del 'cdn-dist/**/*'",
+    "clean": "npm run clean:cdn && lerna run clean"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
     "@commitlint/travis-cli": "^7.5.2",
+    "bundlesize": "^0.17.1",
     "commitizen": "^3.1.1",
     "cz-lerna-changelog": "^2.0.2",
+    "del-cli": "^1.1.0",
     "husky": "^2.0.0",
     "lerna": "^3.13.3"
   },
