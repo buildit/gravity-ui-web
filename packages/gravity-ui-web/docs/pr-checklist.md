@@ -10,6 +10,10 @@ If there are any exceptions, please make sure to explain why this is the case:
 - [ ] The code has been tested across the major desktop browsers (Chrome, Firefox, Edge, Safari) and mobile browsers (Chrome, Samsung Internet, Safari) to work consistently.
 - [ ] The code should _degrade gracefully_ on older browsers (please provide an example on how this is the case).
 
+## Commits
+
+- [ ] All commit messages must follow the [Conventional Commit message format](https://www.conventionalcommits.org/en/v1.0.0-beta.4/)
+
 ## Filetypes
 
 ### JSON
@@ -27,7 +31,7 @@ If there are any exceptions, please make sure to explain why this is the case:
 
 ### SASS
 
-- [ ] The SASS (and related pattern files) follow the [naming conventions](/docs/naming-conventions.md), architecture and structure outlined in the documentation.
+- [ ] The SASS (and related pattern files) follow the [naming conventions](./naming-conventions.md), architecture and structure outlined in the documentation.
 
 ### Images
 
@@ -36,4 +40,3 @@ If there are any exceptions, please make sure to explain why this is the case:
 ### Other
 
 - [ ] Documentation for any new feature and functionality has been added.
-- [ ] The `CHANGELOG.md` has been updated.

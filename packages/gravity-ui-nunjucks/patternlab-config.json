@@ -33,11 +33,11 @@
   },
   "paths": {
     "source": {
-      "root": "./src/styleguide/",
-      "patterns": "./src/styleguide/_patterns/",
-      "data": "./src/styleguide/_data/",
-      "meta": "./src/styleguide/_meta/",
-      "annotations": "./src/styleguide/_annotations/",
+      "root": "./src/",
+      "patterns": "./src/_patterns/",
+      "data": "./src/_data/",
+      "meta": "./src/_meta/",
+      "annotations": "./src/_annotations/",
       "styleguide": "dist/",
       "patternlabFiles": {
         "general-header":
@@ -51,10 +51,10 @@
         "viewall":
           "views/viewall.mustache"
       },
-      "js": "./src/styleguide/js",
-      "images": "./src/styleguide/images",
-      "fonts": "./src/styleguide/fonts",
-      "css": "./src/styleguide/css"
+      "js": "./src/js",
+      "images": "./src/images",
+      "fonts": "./src/fonts",
+      "css": "./src/css"
     },
     "public": {
       "root": "dist/",

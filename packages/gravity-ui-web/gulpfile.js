@@ -12,23 +12,19 @@
 const gulp = require('gulp');
 const del = require('del');
 const pkgPaths = require('./gulp/paths.js');
-const plTasks = require('./gulp/patternlab.js');
 const uiLibTasks = require('./gulp/ui-lib.js');
 
 // Define composite tasks:
 
 gulp.task('clean', function(){
   return del([
-    pkgPaths.pkgRootPath('dist', '**', '*'),
-    ...plTasks.generatedFileGlobs
+    pkgPaths.pkgRootPath('dist', '**', '*')
   ]);
 });
 
-gulp.task('styleguide', gulp.series(uiLibTasks.buildTasks, plTasks.plBuildTask));
-
-gulp.task('serve', gulp.series(
+gulp.task('watch', gulp.series(
   uiLibTasks.buildTasks,
-  gulp.parallel(plTasks.plServeTask, uiLibTasks.watchTask),
+  uiLibTasks.watchTask
 ));
 
 gulp.task('default', uiLibTasks.buildTasks);

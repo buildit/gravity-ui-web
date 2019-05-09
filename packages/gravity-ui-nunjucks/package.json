@@ -1,0 +1,73 @@
+{
+  "name": "@buildit/gravity-ui-nunjucks",
+  "version": "0.0.0",
+  "description": "Nunjucks HTML templates for Gravity web UI components.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "clean": "gulp clean",
+    "build": "gulp",
+    "start": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildit/gravity-ui-web.git"
+  },
+  "keywords": [
+    "gravity",
+    "design-system",
+    "nunjucks",
+    "web",
+    "html",
+    "templates",
+    "ui"
+  ],
+  "author": "Buildit",
+  "contributors": [
+    "Gregg Anderson",
+    "Ash Blue (https://twitter.com/AshBlueWD)",
+    "Daniel Bull",
+    "Allan Corbett (http://superallan.com)",
+    "Valerio Francescangeli",
+    "James Nash (http://cirrus.twiddles.com/)",
+    "Ben Oakenfull",
+    "Marcos Peebles",
+    "Matteo Pescarin (http://peach.smartart.it)",
+    "Daniel Wilkinson"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buildit/gravity-ui-web/issues"
+  },
+  "homepage": "https://github.com/buildit/gravity-ui-web/tree/develop/packages/gravity-ui-nunjucks#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@buildit/gravity-particles": "^0.2.0",
+    "@buildit/gravity-ui-web": "^3.0.0-alpha.0",
+    "@buildit/semantic-release": "^1.0.0",
+    "@pattern-lab/core": "^3.0.1-alpha.0",
+    "@pattern-lab/engine-nunjucks": "^0.1.5-alpha.0",
+    "@pattern-lab/uikit-workshop": "^1.0.1-alpha.0",
+    "color": "^3.1.1",
+    "del": "^4.1.0",
+    "eyeglass": "^2.4.1",
+    "gulp": "^4.0.1",
+    "gulp-file": "^0.4.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.2",
+    "lodash.kebabcase": "^4.1.1",
+    "minimist": "^1.2.0",
+    "semantic-release": "^15.13.13"
+  },
+  "peerDependencies": {
+    "@buildit/gravity-ui-web": "^2.0.0",
+    "nunjucks": "^3.1.3"
+  },
+  "engines": {
+    "node": "^8.11.1",
+    "npm": "^5.8.0"
+  }
+}

@@ -6,14 +6,17 @@ const svgSymbols = require('gulp-svg-symbols');
 const rename = require("gulp-rename");
 const cheerio = require('gulp-cheerio');
 const filter = require('gulp-filter');
+const sourcemaps = require('gulp-sourcemaps');
+const postcss = require('gulp-postcss');
 
+const cssnano = require('cssnano');
+const cssMqPacker = require('css-mqpacker');
 const eyeglass = require('eyeglass');
 const chalk = require('chalk');
 
 const pkgPaths = require('./paths.js');
 const bldConsts = require('../build-consts.js');
 const uiLibPaths = require('../build-api.js');
-const { plServerReload, plServerRefreshCss } = require('./patternlab.js');
 
 const taskNamePrefix = 'ui-lib:';
 
@@ -29,14 +32,25 @@ function sassBuildTask () {
   );
 
   return gulp.src(uiLibPaths.srcSassPath('*.scss'))
+    .pipe(sourcemaps.init())
     .pipe(sass(eyeglass(sassOptions))).on('error', sass.logError)
-    // Only rename the main CSS file
+
+  // Rename index.css to gravity.css, but leave other
+  // filenames unchanged
     .pipe(mainSassFileFilter)
     .pipe(rename(uiLibPaths.distCssFilename))
     .pipe(mainSassFileFilter.restore)
+
+  // Post-process CSS to optimize and minify
+    .pipe(postcss([
+      cssMqPacker(),
+      cssnano()
+    ]))
+
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(uiLibPaths.distPath()))
 }
-sassBuildTask.displayName = taskNamePrefix + 'sass';
+sassBuildTask.displayName = `${taskNamePrefix}sass`;
 sassBuildTask.description = 'Compiles SASS.';
 
 
@@ -119,7 +133,7 @@ function svgSymbolsTask () {
     }))
     .pipe(gulp.dest(uiLibPaths.distPath()))
 }
-svgSymbolsTask.displayName = taskNamePrefix + 'svg-symbols';
+svgSymbolsTask.displayName = `${taskNamePrefix}svg-symbols`;
 svgSymbolsTask.description = `Compiles ${uiLibPaths.distSvgSymbolsFilename} file.`;
 
 
@@ -127,22 +141,22 @@ function copyJsTask() {
   return gulp.src(pkgPaths.srcJsPath('**', '*.js'))
     .pipe(gulp.dest(uiLibPaths.distPath()));
 }
-copyJsTask.displayName = taskNamePrefix + 'js';
+copyJsTask.displayName = `${taskNamePrefix}js`;
 copyJsTask.description = 'Copies JS files.';
 
 // Composite task to do complete UI lib build
 const buildTasks = gulp.parallel(sassBuildTask, svgSymbolsTask, copyJsTask);
-buildTasks.displayName = taskNamePrefix + 'build';
+buildTasks.displayName = `${taskNamePrefix}build`;
 buildTasks.description = 'Builds the Gravity UI library.';
 
 
-function watchTask() {
+function watchTask(done) {
   const watchers = [
     {
       name: 'SASS',
       paths: [uiLibPaths.srcSassPath('**', '*.scss')],
       config: {},
-      tasks: gulp.series(sassBuildTask, plServerRefreshCss)
+      tasks: sassBuildTask
     },
     {
       name: 'SVG Sprites',
@@ -154,7 +168,7 @@ function watchTask() {
       name: 'JS',
       paths: [pkgPaths.srcJsPath('**', '*.js')],
       config: {},
-      tasks: gulp.series(copyJsTask, plServerReload)
+      tasks: copyJsTask
     }
   ];
 
@@ -163,9 +177,9 @@ function watchTask() {
     watcher.paths.forEach(p => console.log('  ' + p));
     gulp.watch(watcher.paths, watcher.config, watcher.tasks);
   });
-  console.log();
+  done();
 }
-watchTask.displayName = taskNamePrefix + 'watch';
+watchTask.displayName = `${taskNamePrefix}watch`;
 watchTask.description = 'Watches UI library files';
 
 
