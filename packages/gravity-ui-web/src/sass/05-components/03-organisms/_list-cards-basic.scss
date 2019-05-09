@@ -1,8 +1,6 @@
-.grav-c-list-img-cards {
+.grav-c-list-cards-basic {
   $breakpoint-1: gravy-breakpoint(medium);
   $breakpoint-2: gravy-breakpoint(large);
-  margin-top: $grav-sp-xl;
-  margin-bottom: $grav-sp-xl;
   padding: 0;
   list-style-type: none;
 
@@ -11,20 +9,30 @@
     flex-wrap: wrap;
   }
 
-  > li {
-    @media all and (min-width: $breakpoint-1) {
-      max-width: 50%;
-      padding: 0 $grav-sp-l;
-    }
+  .grav-c-list-cards-basic-callout {
+    flex-basis: 100%;
   }
 
-  > li:nth-child(2) {
+  > li {
     @media all and (min-width: $breakpoint-1) {
-      margin-top: 0;
+      display: flex;
+      flex: 50%;
+      padding: 0 $grav-sp-l;
     }
   }
 
   > li + li {
     margin-top: $grav-sp-xl;
+
+    &:nth-child(2):not(.grav-c-list-cards-basic-callout) {
+      margin-top: 0;
+    }
+  }
+
+  > .grav-c-list-cards-basic-callout + li:nth-child(2) {
+    margin-top: $grav-sp-xl;
   }
 }
+
+// nth-child
+// not(.grav-c-list-cards-basic-callout)

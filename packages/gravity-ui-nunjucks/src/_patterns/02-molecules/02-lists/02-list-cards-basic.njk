@@ -16,11 +16,11 @@
 
 
 {# Reusable macro for other templates to import: #}
-{%- macro listImgCards(imgCards) -%}
-  {{ unorderedList(imgCards, "grav-c-list-img-cards") | safe }}
+{%- macro listCardsBasic(cardsBasic) -%}
+  {{ unorderedList(cardsBasic, "grav-c-list-cards-basic") | safe }}
 {%- endmacro -%}
 
 {# Example rendering: #}
 {%- block example -%}
-  {{ listImgCards(imgCards) | safe }}
+  {{ listCardsBasic(cardsBasic) | safe }}
 {%- endblock -%}
