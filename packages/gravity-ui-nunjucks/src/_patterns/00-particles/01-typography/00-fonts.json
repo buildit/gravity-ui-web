@@ -1,34 +1,38 @@
 {
   "fonts": [
     {
-      "name": "Primary",
-      "cssFontFamily": "Roboto",
+      "name": "primary",
+      "cssFontFamily": "Wipro Akkurat TT",
       "weights": [
         {
+          "name": "Light",
+          "gravyWeight": "light",
+          "cssFontWeight": "300",
+          "hasItalic": true
+        },
+        {
           "name": "Regular",
-          "cssFontWeight": "400",
+          "gravyWeight": "regular",
+          "cssFontWeight": "normal",
           "hasItalic": true
         },
         {
           "name": "Bold",
+          "gravyWeight": "bold",
           "cssFontWeight": "bold",
           "hasItalic": true
         }
       ]
     },
     {
-      "name": "Headings",
-      "cssFontFamily": "Cabin",
+      "name": "mono",
+      "cssFontFamily": "Wipro Akkurat Mono TT",
       "weights": [
         {
           "name": "Regular",
-          "cssFontWeight": "400",
-          "hasItalic": true
-        },
-        {
-          "name": "Bold",
-          "cssFontWeight": "bold",
-          "hasItalic": true
+          "gravyWeight": "regular",
+          "cssFontWeight": "normal",
+          "hasItalic": false
         }
       ]
     }
