@@ -1,28 +1,30 @@
 .grav-c-hero {
   position: relative;
-  padding: ($grav-sp-xl + $grav-sp-l) 0 $grav-sp-xl 0;
   text-align: center;
 
-  .grav-c-pullout,
-  p {
-    margin-top: 0;
-  }
-
-  p {
-    margin-bottom: $grav-sp-l;
-  }
-
-  > canvas {
+  .grav-c-hero__banner {
     width: 100%;
-    max-width: initial;
-    height: 100%;
+    height: 420px;
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
+    background: url('/images/hero.jpg') center;
+    background-size: cover;
+    z-index: 0;
   }
 
-  > :not(canvas) {
+  .grav-c-hero__container {
+    max-width: 992px;
     position: relative;
+    top: 356px;
+    margin: 0 auto;
+    padding: 0 80px;
+    background-color: #fff;
+    z-index: 1;
+
+    h1 {
+      margin-bottom: 40px;
+      padding-top: 55px;
+      font-size: 70px;
+      line-height: 100%;
+    }
   }
 }

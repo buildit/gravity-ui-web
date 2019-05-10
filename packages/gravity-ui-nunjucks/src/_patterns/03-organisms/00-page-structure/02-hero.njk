@@ -1,13 +1,14 @@
-{%- from 'atoms-cta' import cta -%}
-{%- from 'atoms-pullout' import pullout -%}
+{%- from 'atoms-image' import image -%}
 
 <section class="grav-c-hero">
-  <canvas></canvas>
-  {% if hero.pullout -%}
-    {{ pullout(hero.pullout) | safe }}
-  {%- endif %}
-  {% if hero.paragraph -%}
-    <p>{{hero.paragraph}}</p>
-  {%- endif %}
-  {{ cta(hero.cta.text, hero.cta.url) | safe }}
+  <div class="grav-c-hero__banner"></div>
+
+  <div class="grav-c-hero__container">
+    <h1>We <strong>build brands</strong> for the digital world</h1>
+    <p>
+      Welcome to our new Buildit website featuring stories by and about our technical <strong>people</strong> and
+      teams. News from our <strong>community</strong>, and an easy way to search the entire range of relevant
+      <strong>jobs</strong>
+    </p>
+  </div>
 </section>
