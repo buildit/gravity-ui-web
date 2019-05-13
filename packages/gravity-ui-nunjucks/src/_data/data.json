@@ -19,17 +19,33 @@
     }
   ],
   "footer": {
-    "copy": "something something something",
-    "social": [
+    "copy": "&copy; 2019 <strong>Buildit</strong>. All rights reserved.",
+    "linksA": [
       {
-        "label": "Something",
-        "symbolId": "buildit-logo",
+        "label": "Stories",
         "url": "#"
       },
       {
-        "label": "Something",
-        "symbolId": "buildit-logo",
+        "label": "People",
         "url": "#"
+      },
+      {
+        "label": "Jobs",
+        "url": "#"
+      }
+    ],
+    "linksB": [
+      {
+        "label": "Terms",
+        "url": "#"
+      },
+      {
+        "label": "Accessibility",
+        "url": "#"
+      },
+      {
+        "label": "Privacy & Cookie Policy",
+        "url": "https://wiprodigital.com/privacy-policy"
       }
     ]
   },

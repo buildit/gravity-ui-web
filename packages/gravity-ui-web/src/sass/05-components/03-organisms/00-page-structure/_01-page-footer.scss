@@ -1,35 +1,54 @@
+$grav-page-breakpoint-medium: gravy-breakpoint(medium);
+
 body > footer {
-  @include typi('small-text');
-  margin-top: vr(3);
   padding: $grav-sp-l 0;
+  background: #424242;
+  border-bottom: 2px solid #00b49d;
+  color: #9b9b9b;
+  font-size: 16px;
 
-  > * {
-    @include grav-l-container;
-    padding-bottom: $grav-sp-s;
-    text-align: center;
+  .grav-c-logo {
+    margin-bottom: $grav-sp-m;
 
-    &:last-child {
-      padding: 0;
+    @media all and (max-width: $grav-page-breakpoint-medium) {
+      display: block;
+      margin: 0 auto;
     }
   }
 
-  .grav-c-logo {
-    max-width: 7rem;
-    height: 1rem;
-    border-bottom: 1px solid currentColor;
+  * {
+    @media all and (max-width: $grav-page-breakpoint-medium) {
+      text-align: center;
+    }
   }
+}
 
-  .grav-c-icon {
-    width: 24px; // To ensure icon renders at the correct size in IE
-    height: 24px;
+.grav-c-page-footer__lists {
+  $grav-page-breakpoint-medium: gravy-breakpoint(medium);
+
+  display: flex;
+  margin: 0 0 $grav-sp-m;
+
+  @media all and (max-width: $grav-page-breakpoint-medium) {
+    flex-direction: column;
+    text-align: center;
   }
 
   ul {
-    justify-content: center;
-  }
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
 
-  /* stylelint-disable-next-line selector-no-qualifying-type */
-  &.grav-c-footer-no-margin {
-    margin-top: 0;
+    @media all and (min-width: $grav-page-breakpoint-medium) {
+      &:first-of-type {
+        padding-right: 100px;
+      }
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
   }
 }
