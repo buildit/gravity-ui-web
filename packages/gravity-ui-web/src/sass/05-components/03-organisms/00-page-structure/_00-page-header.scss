@@ -20,7 +20,7 @@ body > header {
       padding-top: 0;
     }
   }
-  
+
   .grav-c-logo {
     display: block;
     max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
@@ -30,7 +30,7 @@ body > header {
       width: 100%;
     }
   }
-  
+
 
   /* stylelint-disable-next-line selector-max-compound-selectors */
   a:hover .grav-c-logo {

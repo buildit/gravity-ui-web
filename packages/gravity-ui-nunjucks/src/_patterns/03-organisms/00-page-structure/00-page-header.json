@@ -3,41 +3,15 @@
     "url": "#",
     "links": [
       {
-        "text": "Lorem ipsum",
+        "text": "Stories",
         "url": "#"
       },
       {
-        "text": "Quis autem",
+        "text": "People",
         "url": "#"
       },
       {
-        "text": "Sed ut perspiciatis unde omnis",
-        "url": "#"
-      },
-      {
-        "text": "Neque porro",
-        "url": false
-      },
-      {
-        "text": "Nemo",
-        "url": "#"
-      },
-      {
-        "text": "Unquam sit",
-        "url": "#"
-      },
-      {
-        "text": "Mors tua vita mea",
-        "url": "#"
-      }
-    ],
-    "externalLinks": [
-      {
-        "text": "Praesent eu",
-        "url": "#"
-      },
-      {
-        "text": "Donec sagittis",
+        "text": "Jobs",
         "url": "#"
       }
     ]
