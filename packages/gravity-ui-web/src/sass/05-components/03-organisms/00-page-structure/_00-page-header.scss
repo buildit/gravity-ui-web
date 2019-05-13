@@ -21,6 +21,10 @@ body > header {
     }
   }
 
+  li {
+    padding: 0 30px;
+  }
+
   .grav-c-logo {
     display: block;
     max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
