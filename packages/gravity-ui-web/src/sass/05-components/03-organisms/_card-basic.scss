@@ -1,7 +1,12 @@
 .grav-c-card-basic {
   width: 100%;
 
-  &__title {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @include typi('large-text');
     @include gravy-font('secondary');
   }
