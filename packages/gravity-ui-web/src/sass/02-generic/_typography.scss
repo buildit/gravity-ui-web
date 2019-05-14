@@ -17,27 +17,17 @@
   // scale of repsonsive font-sizes. These will all
   // be rem values:
   @for $i from $grav-scale-min through $grav-scale-max {
-    @if $i != 0 {
-      @include ms-respond(grav-font-size-css-propname($i), $i);
-    }
-    @else {
-      #{grav-font-size-css-propname($i)}: 1rem;
-    }
+    @include ms-respond(grav-font-size-css-propname($i), $i);
   }
 
   font-family: grav-font-stack('primary');
-
-  // Responsive base font size (to scale what 1rem equates to):
-  font-size: $grav-font-size-smallest-viewport;
-
-  @media (min-width: $grav-breakpoint-smallest) and (max-width: $grav-breakpoint-largest) {
-    font-size: ms-fluid($grav-font-size-smallest-viewport, $grav-font-size-largest-viewport, $grav-breakpoint-smallest, $grav-breakpoint-largest);
-  }
-
-  @media (min-width: $grav-breakpoint-largest) {
-    font-size: $grav-font-size-largest-viewport;
-  }
-
   line-height: $grav-line-height;
   -webkit-text-size-adjust: 100%; // stylelint-disable property-no-vendor-prefix
+}
+
+body {
+  // Set default font-size on body for everything else to inherit.
+  // Note: We intentionally do *not* set this on :root, as that seems to interfere
+  // with the fluid text sizing.
+  @include grav-font-size(0);
 }
