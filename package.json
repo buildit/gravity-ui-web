@@ -20,7 +20,7 @@
     "commitizen": "^3.1.1",
     "cz-lerna-changelog": "^2.0.2",
     "del-cli": "^1.1.0",
-    "husky": "^2.0.0",
+    "husky": "^2.3.0",
     "lerna": "^3.13.3"
   },
   "config": {
