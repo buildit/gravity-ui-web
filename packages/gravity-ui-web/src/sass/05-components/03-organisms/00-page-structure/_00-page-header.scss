@@ -1,5 +1,5 @@
 $grav-page-heading-logo-width: 250px;
-$grav-page-heading-trigger-breakpoint: gravy-breakpoint(medium);
+$grav-page-heading-trigger-breakpoint: grav-breakpoint(medium);
 
 // Note: The Page Header always spans the full width of the viewport. This
 // is in case we want to give it any kind of full-bleed background styling.
@@ -20,7 +20,7 @@ body > header {
       padding-top: 0;
     }
   }
-  
+
   .grav-c-logo {
     display: block;
     max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
@@ -30,7 +30,7 @@ body > header {
       width: 100%;
     }
   }
-  
+
 
   /* stylelint-disable-next-line selector-max-compound-selectors */
   a:hover .grav-c-logo {

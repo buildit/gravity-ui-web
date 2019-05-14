@@ -1,0 +1,9 @@
+// Global color settings
+
+:root {
+  // Define CSS custom properties for default color scheme
+  @include grav-color-scheme-props;
+  // Apply default color scheme with a fallback for older
+  // browsers that do not support CSS custom properties.
+  @include grav-color-scheme-apply(true);
+}

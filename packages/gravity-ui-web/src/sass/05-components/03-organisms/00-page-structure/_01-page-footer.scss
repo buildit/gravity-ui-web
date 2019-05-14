@@ -1,7 +1,6 @@
-$grav-page-breakpoint-medium: gravy-breakpoint(medium);
-
 body > footer {
   @include grav-color-grp-b-apply('border-bottom-color', 'accent');
+  @include grav-font-size(-1);
 
   padding: $grav-sp-l 0;
   border-bottom-width: 2px;
@@ -9,14 +8,14 @@ body > footer {
   font-size: 16px;
 
   * {
-    @media all and (max-width: $grav-page-breakpoint-medium) {
+    @media all and (max-width: grav-breakpoint(medium)) {
       text-align: center;
     }
   }
 }
 
 .grav-c-page-footer__lists {
-  $grav-page-breakpoint-medium: gravy-breakpoint(medium);
+  $grav-page-breakpoint-medium: grav-breakpoint(medium);
 
   display: flex;
 

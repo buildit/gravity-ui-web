@@ -1,0 +1,43 @@
+// Setting global typography defaults
+
+* {
+  // Text rendering tweaks (formerly came from Gravy lib)
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  line-height: inherit;
+
+  // Text rendering tweaks (formerly came from Gravy lib)
+  text-rendering: optimizeLegibility;
+}
+
+
+:root {
+  // Generate a set of CSS custom properties for our
+  // scale of repsonsive font-sizes. These will all
+  // be rem values:
+  @for $i from $grav-scale-min through $grav-scale-max {
+    @if $i != 0 {
+      @include ms-respond(grav-font-size-css-propname($i), $i);
+    }
+    @else {
+      #{grav-font-size-css-propname($i)}: 1rem;
+    }
+  }
+
+  font-family: grav-font-stack('primary');
+
+  // Responsive base font size (to scale what 1rem equates to):
+  font-size: $grav-font-size-smallest-viewport;
+
+  @media (min-width: $grav-breakpoint-smallest) and (max-width: $grav-breakpoint-largest) {
+    font-size: ms-fluid($grav-font-size-smallest-viewport, $grav-font-size-largest-viewport, $grav-breakpoint-smallest, $grav-breakpoint-largest);
+  }
+
+  @media (min-width: $grav-breakpoint-largest) {
+    font-size: $grav-font-size-largest-viewport;
+  }
+
+  line-height: $grav-line-height;
+  -webkit-text-size-adjust: 100%; // stylelint-disable property-no-vendor-prefix
+}

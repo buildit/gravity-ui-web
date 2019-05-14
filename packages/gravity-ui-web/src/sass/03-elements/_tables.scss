@@ -4,7 +4,7 @@ table {
 }
 
 th {
-  @include fw(primary, bold);
+  font-weight: grav-font-weight('primary', 'bold');
 }
 
 th,

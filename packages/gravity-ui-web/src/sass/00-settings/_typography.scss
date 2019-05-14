@@ -2,11 +2,14 @@
   Typography-related values
 */
 
-$grav-font-size-base: 16px;
+$grav-font-size-smallest-viewport: 1rem;
+$grav-font-size-largest-viewport: 1.5rem;
+
+$grav-line-height: 1.5;
 
 $grav-line-max-width-m: 40em;
 
-$grav-font-family-base: 'Wipro Akkurat TT';
+$grav-font-family-primary: 'Wipro Akkurat TT';
 $grav-font-family-mono: 'Wipro Akkurat Mono TT';
 
 /**
@@ -20,7 +23,7 @@ $grav-font-family-mono: 'Wipro Akkurat Mono TT';
   comments for the grav-font-face() mixin.
 */
 $grav-font-faces: (
-  $grav-font-family-base: (
+  $grav-font-family-primary: (
     // Light
     300: (
       normal: (
@@ -71,3 +74,24 @@ $grav-font-faces: (
 
 
 $grav-font-src-path: 'https://static.buildit.digital/fonts/v1.0.0';
+
+
+/**
+  Map of available typefaces.
+*/
+$grav-typefaces: (
+  primary: (
+    stack: ($grav-font-family-primary, 'Akkurat', 'Arial', system-ui, sans-serif),
+    weights: (
+      light: 300,
+      regular: normal,
+      bold: bold
+    )
+  ),
+  mono: (
+    stack: ($grav-font-family-mono, 'Akkurat Mono', monospace),
+    weights: (
+      regular: normal
+    )
+  )
+);

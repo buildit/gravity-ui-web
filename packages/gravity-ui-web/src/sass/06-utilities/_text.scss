@@ -7,3 +7,11 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+
+// Generate utility classes for available text sizes
+@for $i from $grav-scale-min through $grav-scale-max {
+  .grav-u-font-size-#{grav-font-size-varname-suffix($i)} {
+    @include grav-font-size($i);
+  }
+}

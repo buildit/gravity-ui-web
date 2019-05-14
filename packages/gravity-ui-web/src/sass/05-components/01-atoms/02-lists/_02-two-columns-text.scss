@@ -1,11 +1,11 @@
 .grav-c-two-columns-text {
-  max-width: gravy-breakpoint(medium);
+  max-width: grav-breakpoint(medium);
   margin-right: auto;
   margin-left: auto;
   list-style-type: none;
 
 
-  @media all and (min-width: gravy-breakpoint(medium)) {
+  @media all and (min-width: grav-breakpoint(medium)) {
     column-gap: $grav-sp-l;
     columns: 2;
   }

@@ -9,12 +9,12 @@
   // to fill all the available space between flex items.
   // More info: https://github.com/philipwalton/flexbugs#flexbug-15
   @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    @media (min-width: gravy-breakpoint(large)) {
+    @media (min-width: grav-breakpoint(extra-large)) {
       align-self: center;
     }
   }
 
-  @media (min-width: gravy-breakpoint(large)) {
+  @media (min-width: grav-breakpoint(extra-large)) {
     margin-right: auto;
     margin-left: auto;
   }

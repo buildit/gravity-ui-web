@@ -7,12 +7,11 @@
   h4,
   h5,
   h6 {
-    @include typi('large-text');
-    @include gravy-font('secondary');
+    @include grav-font-size(1);
   }
 
   p {
-    @include typi('small-text');
+    @include grav-font-size(-1);
   }
 
   img {

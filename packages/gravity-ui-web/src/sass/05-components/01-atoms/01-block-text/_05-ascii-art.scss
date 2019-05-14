@@ -1,4 +1,4 @@
 .grav-c-ascii-art {
-  @include typi(larger-text);
+  @include grav-font-size(2);
   margin-bottom: $grav-sp-l;
 }

@@ -1,7 +1,8 @@
 // === Generic layer ===
 // Reset and/or normalize styles, box-sizing definition, etc.
 // This is the first layer which generates actual CSS.
-@import 'normalize';
-@import 'fonts';
+@import 'font-faces';
+@import 'colors';
+@import 'typography';
 @import 'heydon';
 @import 'layout';

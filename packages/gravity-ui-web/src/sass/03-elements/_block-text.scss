@@ -1,8 +1,8 @@
 pre {
-  @include gravy-font(mono, regular);
+  font-family: grav-font-stack('mono');
 }
 
 blockquote {
-  @include typi('large-text');
+  @include grav-font-size(4);
   text-align: center;
 }

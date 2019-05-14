@@ -5,34 +5,21 @@
   * https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/
 */
 
-@include gravy-init;
-@include gravy-text-defaults;
-
 
 * {
   // Zero any margins coming from user-agent stylesheets
   margin: 0;
 
+  box-sizing: border-box;
+
   // Make everything inherit key typography properties by default
   color: inherit; // Note, border-color defaults to this too, unless overridden
   font-family: inherit;
-  line-height: inherit;
 }
 
 // Default vertical margin *between* block elements
 * + * {
   margin-top: $grav-sp-vertical-gap;
-}
-
-:root {
-  // font-size & line-height are set by Gravy. See gravy.scss
-  @include gravy-font('primary');
-
-  // Define CSS custom properties for default color scheme
-  @include grav-color-scheme-props;
-  // Apply default color scheme with a fallback for older
-  // browsers that do not support CSS custom properties.
-  @include grav-color-scheme-apply(true);
 }
 
 // Exceptions to the * + * rule

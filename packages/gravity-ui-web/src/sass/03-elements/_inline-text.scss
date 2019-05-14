@@ -1,5 +1,5 @@
 a {
-  @include fw(primary, bold);
+  font-weight: grav-font-weight('primary', 'bold');
 
   &[href] {
     &:link {
@@ -22,11 +22,11 @@ a {
 
 b,
 strong {
-  @include fw(primary, bold);
+  font-weight: grav-font-weight('primary', 'bold');
 }
 
 code,
 kbd,
 samp {
-  @include gravy-font(mono, regular);
+  font-family: grav-font-stack('mono');
 }
