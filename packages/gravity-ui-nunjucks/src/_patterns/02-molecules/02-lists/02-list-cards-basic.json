@@ -1,5 +1,5 @@
 {
-  "imgCards": [
+  "cardsBasic": [
     {
       "title": "Some fascinating, attention-grabbing headling",
       "content": "Ideally, with a click-baity tagline that entices to you to visit!",
@@ -15,6 +15,15 @@
         "src": "../../images/img-random-1.png",
         "alt": "Phasellus tempus, orci non mattis"
       }
+    },
+    {
+      "title": "Can has linkburger?",
+      "content": "I can has!",
+      "image": {
+        "src": "../../images/img-random-1.png",
+        "alt": "lolcat says hi"
+      },
+      "href": "#"
     },
     {
       "title": "Nanotechnology immersion along the information highway",
@@ -39,6 +48,15 @@
         "src": "../../images/img-random-1.png",
         "alt": "Yarrrrr"
       }
+    },
+    {
+      "title": "Out of scope back of the net shelfware",
+      "content": "Paddle on both sides. We need distributors to evangelize the new line to local markets, or I have zero cycles for this, but we need to leverage our synergies.",
+      "image": {
+        "src": "../../images/img-random-1.png",
+        "alt": "Out of scope"
+      },
+      "href": "#"
     }
   ]
 }
