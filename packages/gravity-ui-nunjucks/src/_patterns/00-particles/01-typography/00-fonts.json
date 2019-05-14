@@ -6,19 +6,19 @@
       "weights": [
         {
           "name": "Light",
-          "gravyWeight": "light",
+          "gravityWeight": "light",
           "cssFontWeight": "300",
           "hasItalic": true
         },
         {
           "name": "Regular",
-          "gravyWeight": "regular",
+          "gravityWeight": "regular",
           "cssFontWeight": "normal",
           "hasItalic": true
         },
         {
           "name": "Bold",
-          "gravyWeight": "bold",
+          "gravityWeight": "bold",
           "cssFontWeight": "bold",
           "hasItalic": true
         }
@@ -30,7 +30,7 @@
       "weights": [
         {
           "name": "Regular",
-          "gravyWeight": "regular",
+          "gravityWeight": "regular",
           "cssFontWeight": "normal",
           "hasItalic": false
         }
