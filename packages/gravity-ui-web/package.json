@@ -29,7 +29,7 @@
     "build": "gulp",
     "styleguide": "gulp styleguide",
     "start": "gulp serve",
-    "test": "npm run lint && bundlesize",
+    "test": "npm run lint && npm run build && bundlesize",
     "lint": "stylelint 'src/ui-lib/sass/**/*.scss'",
     "semantic-release": "semantic-release"
   },
