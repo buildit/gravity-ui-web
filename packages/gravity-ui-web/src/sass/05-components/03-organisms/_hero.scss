@@ -12,19 +12,22 @@
   }
 
   .grav-c-hero__container {
-    max-width: 992px;
     position: relative;
     top: 356px;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 106px;
     background-color: #fff;
     z-index: 1;
 
     h1 {
-      margin-bottom: 40px;
+      margin-bottom: $grav-sp-m;
       padding-top: 55px;
       font-size: 70px;
       line-height: 100%;
+    }
+
+    p {
+      font-size: 24px;
     }
   }
 }
