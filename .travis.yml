@@ -16,7 +16,7 @@ script:
 before_deploy:
   - pip install --user awscli
   - npm install -g file-size-report
-  - ./scripts/track_file_size.sh
+  - ./scripts/track_file_sizes.sh
 deploy:
   - provider: script
     skip_cleanup: true
