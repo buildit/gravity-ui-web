@@ -4,15 +4,15 @@
     {% for weight in font.weights %}
       <li class="sg-fonts__font">
         <strong class="sg-fonts__weight">{{weight.name}} weight</strong>
-        <span class="sg-fonts__css">SCSS: <code>@include gravy-font({{font.name}}, {{weight.gravyWeight}});</code></span>
-        <span class="sg-fonts__css">CSS: <code>font-family: {{font.cssFontFamily}}; font-weight: {{weight.cssFontWeight}}; font-style: normal;</code></span>
+        <span class="sg-fonts__css"><strong>CSS</strong>: <code>font-family: {{font.cssFontFamily}}; font-weight: {{weight.cssFontWeight}}; font-style: normal;</code></span>
+        <span class="sg-fonts__css"><strong>SCSS</strong>: <code>@include gravy-font({{font.name}}, {{weight.gravyWeight}});</code></span>
         <p class="sg-fonts__sample" style="font-family: {{font.cssFontFamily}}; font-weight: {{weight.cssFontWeight}}; font-style: normal;">{{ text }}</p>
       </li>
       {% if weight.hasItalic %}
         <li class="sg-fonts__font">
           <strong class="sg-fonts__weight">{{weight.name}} weight (italic)</strong>
-          <span class="sg-fonts__css">SCSS: <code>@include gravy-font({{font.name}}, {{weight.gravyWeight}}); font-style: italic;</code></span>
-          <span class="sg-fonts__css">CSS: <code>font-family: {{font.cssFontFamily}}; font-weight: {{weight.cssFontWeight}}; font-style: italic;</code></span>
+          <span class="sg-fonts__css"><strong>CSS</strong>: <code>font-family: {{font.cssFontFamily}}; font-weight: {{weight.cssFontWeight}}; font-style: italic;</code></span>
+          <span class="sg-fonts__css"><strong>SCSS</strong>: <code>@include gravy-font({{font.name}}, {{weight.gravyWeight}}); font-style: italic;</code></span>
           <p class="sg-fonts__sample" style="font-family: {{font.cssFontFamily}}; font-weight: {{weight.cssFontWeight}}; font-style: italic;">{{ text}}</p>
         </li>
       {% endif %}
