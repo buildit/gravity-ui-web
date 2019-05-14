@@ -5,7 +5,7 @@ cdnGravityDir="gravity-ui-web"
 historyFilename="$TRAVIS_BRANCH-file-size-history.js"
 historyFile="$gravityDir/$historyFilename"
 currentSizesFile="$gravityDir/currentfilesizes.json"
-reportPageName="filehistory.html"
+reportPageName="filesizehistory.html"
 reportPage="$gravityDir/$reportPageName"
 
 if [ ! -z "$TRAVIS_COMMIT" ] && [[ "develop" == "$TRAVIS_BRANCH" || "master" == "$TRAVIS_BRANCH" ]]
