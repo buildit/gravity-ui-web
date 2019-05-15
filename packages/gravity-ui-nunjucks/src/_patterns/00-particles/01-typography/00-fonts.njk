@@ -5,18 +5,17 @@
       <li class="sg-fonts__font">
         <strong class="sg-fonts__weight">{{weight.name}} weight</strong>
         <span class="sg-fonts__css"><strong>CSS</strong>: <code>font-family: {{font.cssFontFamily}}; font-weight: {{weight.cssFontWeight}}; font-style: normal;</code></span>
-        <span class="sg-fonts__css"><strong>SCSS</strong>: <code>@include gravy-font({{font.name}}, {{weight.gravityWeight}});</code></span>
+        <span class="sg-fonts__css"><strong>SCSS</strong>: <code>font-family: grav-font-stack({{font.name}}); font-weight: grav-font-weight({{font.name}}, {{weight.gravityWeight}});</code></span>
         <p class="sg-fonts__sample" style="font-family: {{font.cssFontFamily}}; font-weight: {{weight.cssFontWeight}}; font-style: normal;">{{ text }}</p>
       </li>
       {% if weight.hasItalic %}
         <li class="sg-fonts__font">
           <strong class="sg-fonts__weight">{{weight.name}} weight (italic)</strong>
           <span class="sg-fonts__css"><strong>CSS</strong>: <code>font-family: {{font.cssFontFamily}}; font-weight: {{weight.cssFontWeight}}; font-style: italic;</code></span>
-          <span class="sg-fonts__css"><strong>SCSS</strong>: <code>@include gravy-font({{font.name}}, {{weight.gravityWeight}}); font-style: italic;</code></span>
+          <span class="sg-fonts__css"><strong>SCSS</strong>: <code>font-family: grav-font-stack({{font.name}}); font-weight: grav-font-weight({{font.name}}, {{weight.gravityWeight}}); font-style: italic;</code></span>
           <p class="sg-fonts__sample" style="font-family: {{font.cssFontFamily}}; font-weight: {{weight.cssFontWeight}}; font-style: italic;">{{ text}}</p>
         </li>
       {% endif %}
     {% endfor %}
   </ul>
 {% endfor %}
-
