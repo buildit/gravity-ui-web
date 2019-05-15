@@ -1,0 +1,15 @@
+<section class="grav-c-related-items">
+  <h3>Next story</h3>
+
+  <p>
+    {% if relatedItems %}
+      <a href="{{ relatedItems.link }}">
+        {{ relatedItems.text }}
+      </a>
+    {% else %}
+      <a href="#">
+        Everything We Do is Driven By You
+      </a>
+    {% endif %}
+  </p>
+</section>
