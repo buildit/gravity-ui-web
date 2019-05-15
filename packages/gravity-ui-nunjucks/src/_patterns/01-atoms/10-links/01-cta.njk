@@ -1,9 +1,0 @@
-{%- from 'atoms-link' import link -%}
-
-{# Reusable macro for other templates to import: #}
-{%- macro cta(text, url) -%}
-  {{ link(text, url, 'grav-c-cta') | safe }}
-{%- endmacro -%}
-
-{# Example rendering: #}
-{{- cta(text, url) | safe -}}

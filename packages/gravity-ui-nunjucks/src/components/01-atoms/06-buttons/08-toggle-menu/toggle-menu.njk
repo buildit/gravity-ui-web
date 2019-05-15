@@ -1,0 +1,16 @@
+{%- extends '@button' -%}
+
+{# Override buttonContent block #}
+{%- block buttonContent %}
+  <span class="grav-c-toggle-menu__icon"></span>
+{% endblock -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro toggleMenu(pressed = false, label = "Toggle navigation menu") -%}
+  {{ button(null, 'button', false, null, "grav-c-toggle-menu", { 'aria-pressed': pressed, 'aria-label': label } ) | safe }}
+{%- endmacro -%}
+
+{# Example rendering: #}
+{%- block example -%}
+  {{ toggleMenu(pressed, text) | safe }}
+{%- endblock -%}

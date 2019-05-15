@@ -1,0 +1,64 @@
+{
+  "context": {
+    "cardsBasic": [
+      {
+        "title": "Some fascinating, attention-grabbing headling",
+        "content": "Ideally, with a click-baity tagline that entices to you to visit!",
+        "image": {
+          "src": "../../images/img-random-1.png",
+          "alt": "Brief description of this fascinating image"
+        }
+      },
+      {
+        "title": "Labore et dolore magna aliqua",
+        "content": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros.",
+        "image": {
+          "src": "../../images/img-random-1.png",
+          "alt": "Phasellus tempus, orci non mattis"
+        }
+      },
+      {
+        "title": "Can has linkburger?",
+        "content": "I can has!",
+        "image": {
+          "src": "../../images/img-random-1.png",
+          "alt": "lolcat says hi"
+        },
+        "href": "#"
+      },
+      {
+        "title": "Nanotechnology immersion along the information highway",
+        "content": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+        "image": {
+          "src": "../../images/img-random-1.png",
+          "alt": "Bring to the table win-win survival strategies"
+        }
+      },
+      {
+        "title": "Ma nizzle eget ipsum izzle est ullamcorpizzle yo.",
+        "content": "That's the shizzle nizzle mi non get down get down posuere bibendum. Aliquizzle dope viverra get down get down.",
+        "image": {
+          "src": "../../images/img-random-1.png",
+          "alt": "Altizzle ma image, yo"
+        }
+      },
+      {
+        "title": "Bounty black spot landlubber",
+        "content": "Plate Fleet yawl careen Pirate Round jolly boat league Admiral of the Black topsail holystone me.",
+        "image": {
+          "src": "../../images/img-random-1.png",
+          "alt": "Yarrrrr"
+        }
+      },
+      {
+        "title": "Out of scope back of the net shelfware",
+        "content": "Paddle on both sides. We need distributors to evangelize the new line to local markets, or I have zero cycles for this, but we need to leverage our synergies.",
+        "image": {
+          "src": "../../images/img-random-1.png",
+          "alt": "Out of scope"
+        },
+        "href": "#"
+      }
+    ]
+  }
+}

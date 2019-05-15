@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }} - Buildit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="/gravity/gravity.css" media="all" />
+    <link rel="stylesheet" href="/gravity/debug.css" media="all" />
+    <link rel="stylesheet" href="/pl-styles/pattern-scaffolding.css" media="all" />
+
+  </head>
+  <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+
+    {{ yield | safe }}
+
+    {% include '@symbols' %}
+    <script src="/gravity/gravity.js"></script>
+  </body>
+</html>

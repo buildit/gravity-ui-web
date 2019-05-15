@@ -1,0 +1,13 @@
+{
+  "context": {
+    "title": "Name of error",
+    "ascii": "(╯°Д°)╯︵ ┻━┻",
+    "homeLink": {
+      "url": "./homepage",
+      "text": "Go to the homepage"
+    },
+    "footer": {
+      "class": "grav-u-color-scheme-contrast"
+    }
+  }
+}

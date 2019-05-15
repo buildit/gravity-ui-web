@@ -1,0 +1,8 @@
+{%- extends '@basic-page' -%}
+
+{%- block mainContent -%}
+  {%- include '@hero' -%}
+  {%- for section in sections -%}
+    {% include '@section' %}
+  {%- endfor -%}
+{%- endblock -%}

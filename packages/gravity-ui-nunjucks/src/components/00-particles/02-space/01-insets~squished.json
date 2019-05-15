@@ -1,0 +1,24 @@
+{
+  "context": {
+    "insets": [
+      {
+        "name": "Small",
+        "var": "$grav-sp-inset-squished-s",
+        "vLength": "0.25rem",
+        "hLength": "0.5rem"
+      },
+      {
+        "name": "Medium",
+        "var": "$grav-sp-inset-squished-m",
+        "vLength": "0.5rem",
+        "hLength": "1rem"
+      },
+      {
+        "name": "Large",
+        "var": "$grav-sp-inset-squished-l",
+        "vLength": "1rem",
+        "hLength": "2rem"
+      }
+    ]
+  }
+}

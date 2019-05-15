@@ -3,7 +3,6 @@ const gulp = require('gulp');
 const filter = require('gulp-filter');
 const uiLibPaths = require('@buildit/gravity-ui-web/build-api.js');
 const pkgPaths = require('./paths.js');
-const { serverReload, serverRefreshCss } = require('./patternlab.js');
 
 const taskNamePrefix = 'gravity:';
 
@@ -33,7 +32,7 @@ function makeCopyOtherTask(allowEmpty = false) {
 function watchCss() {
   gulp.watch(
     uiLibPaths.distPath('**', '*.css'),
-    gulp.series(makeCopyCssTask(true), serverRefreshCss),
+    makeCopyCssTask(true),
   );
 }
 watchCss.displayName = `${taskNamePrefix}css:watch`;
@@ -45,7 +44,7 @@ function watchOther() {
       uiLibPaths.distPath('**', '*'),
       `!${uiLibPaths.distPath('**', '*.css')}`,
     ],
-    gulp.series(makeCopyOtherTask(true), serverReload),
+    makeCopyOtherTask(true),
   );
 }
 watchOther.displayName = `${taskNamePrefix}other:watch`;
