@@ -4,24 +4,31 @@
   .grav-c-hero__banner {
     width: 100%;
     height: 26.5rem;
-    background: url('/images/hero.jpg') center;
+    background-position: center;
     background-size: cover;
+  }
+
+  .grav-o-container {
+    margin-top: 0;
   }
 
   .grav-c-hero__container {
     @include grav-color-grp-a-apply('background-color', 'neutral', false);
     $container-offset: 3.5rem;
+    $container-offset-small: $grav-sp-m;
 
-    margin-top: $container-offset;
-    padding: $container-offset 106px 0;
-
-    h1 {
-      font-size: 70px;
-      line-height: 100%;
+    @media all and (max-width: grav-breakpoint(medium)) {
+      padding-right: $container-offset-small;
+      padding-left: $container-offset-small;
     }
 
-    p {
-      font-size: 24px;
+    max-width: 780px;
+    margin: ($container-offset * -1) auto 0;
+    padding: $container-offset 106px 0;
+    box-sizing: content-box;
+
+    h1 {
+      line-height: 100%;
     }
   }
 }

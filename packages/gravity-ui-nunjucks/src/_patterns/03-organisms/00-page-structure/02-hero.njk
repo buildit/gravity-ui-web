@@ -1,10 +1,12 @@
 <section class="grav-c-hero">
   <div class="grav-c-hero__banner" style="background-image: url('{{ image }}')"></div>
 
-  <div class="grav-c-hero__container grav-o-container">
-    {% block heroContainer %}
-      <h1>{{ title | safe }}</h1>
-      <p>{{ message | safe }}</p>
-    {% endblock %}
+  <div class="grav-o-container">
+    <div class="grav-c-hero__container">
+      {% block heroContainer %}
+        <h1>{{ title | safe }}</h1>
+        <p>{{ message | safe }}</p>
+      {% endblock %}
+    </div>
   </div>
 </section>
