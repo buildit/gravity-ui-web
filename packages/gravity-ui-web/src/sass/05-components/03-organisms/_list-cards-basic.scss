@@ -6,7 +6,7 @@
     margin-top: $grav-sp-xl;
   }
 
-  @media all and (min-width: grav-breakpoint(medium)) {
+  @media all and (min-width: grav-breakpoint(large)) {
     display: flex;
     flex-wrap: wrap;
     margin-right: -$grav-sp-l;
