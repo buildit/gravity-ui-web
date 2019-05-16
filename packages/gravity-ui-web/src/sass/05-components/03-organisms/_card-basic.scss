@@ -32,6 +32,7 @@
 
     > svg {
       @include grav-color-grp-a-apply('fill', 'neutral', true);
+      @include grav-transition(opacity);
 
       width: 4rem;
       height: $card-image-height;
@@ -41,13 +42,13 @@
       margin: 0;
       opacity: 0;
       transform: translate(-50%, 0);
-      transition: opacity 0.1s ease-in-out;
       z-index: 1;
     }
 
     &::after {
       @include grav-decoration-notch-in;
       @include grav-color-grp-b-apply('background-color', 'control-emphasis', true);
+      @include grav-transition(opacity);
 
       content: ''; // ::before and ::after both require content
       width: 100%;
@@ -56,7 +57,6 @@
       top: 0;
       left: 0;
       opacity: 0;
-      transition: opacity 0.1s ease-in-out;
     }
   }
 
