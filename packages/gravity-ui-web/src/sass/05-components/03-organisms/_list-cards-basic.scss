@@ -9,13 +9,15 @@
   @media all and (min-width: grav-breakpoint(medium)) {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -$grav-sp-l;
+    margin-right: -$grav-sp-l;
+    margin-left: -$grav-sp-l;
 
     > {
       // 2 col layout
       li {
         flex: 50%;
-        padding: 0 $grav-sp-l;
+        padding-right: $grav-sp-l;
+        padding-left: $grav-sp-l;
       }
 
       // Remove top margin from 2nd card
