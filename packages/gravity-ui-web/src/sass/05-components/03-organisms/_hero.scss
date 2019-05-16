@@ -1,27 +1,21 @@
 .grav-c-hero {
-  position: relative;
   text-align: center;
 
   .grav-c-hero__banner {
     width: 100%;
-    height: 420px;
-    position: absolute;
+    height: 26.5rem;
     background: url('/images/hero.jpg') center;
     background-size: cover;
-    z-index: 0;
   }
 
   .grav-c-hero__container {
-    position: relative;
-    top: 356px;
-    margin: 0 auto;
-    padding: 0 106px;
-    background-color: #fff;
-    z-index: 1;
+    @include grav-color-grp-a-apply('background-color', 'neutral', false);
+    $container-offset: 3.5rem;
+
+    margin-top: $container-offset;
+    padding: $container-offset 106px 0;
 
     h1 {
-      margin-bottom: $grav-sp-m;
-      padding-top: 55px;
       font-size: 70px;
       line-height: 100%;
     }
