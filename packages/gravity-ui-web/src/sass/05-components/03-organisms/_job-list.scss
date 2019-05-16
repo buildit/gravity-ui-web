@@ -3,17 +3,17 @@
     margin-top: $grav-sp-xl;
   }
 
-  @media all and (min-width: gravy-breakpoint(regular)) {
+  @media all and (min-width: grav-breakpoint(large)) {
     display: flex;
     align-items: baseline;
   }
 
   > header {
-    
+
     margin-right: $grav-sp-m;
     flex-shrink: 0;
 
-    @media all and (min-width: gravy-breakpoint(regular)) {
+    @media all and (min-width: grav-breakpoint(large)) {
       width: 30%;
     }
   }
@@ -23,13 +23,13 @@
     flex-grow: 1;
     list-style-type: none;
 
-    @media all and (min-width: gravy-breakpoint(small)) {
+    @media all and (min-width: grav-breakpoint(small)) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
 
-    @media all and (min-width: gravy-breakpoint(regular)) {
+    @media all and (min-width: grav-breakpoint(large)) {
       margin-top: 0;
     }
   }
@@ -39,7 +39,7 @@
       margin-top: $grav-sp-s;
     }
 
-    @media all and (min-width: gravy-breakpoint(small)) {
+    @media all and (min-width: grav-breakpoint(small)) {
       $jobs-per-row: 2;
       width: calc((100% - #{$grav-sp-m}) / #{$jobs-per-row});
 

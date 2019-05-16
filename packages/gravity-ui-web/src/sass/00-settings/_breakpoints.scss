@@ -1,0 +1,10 @@
+$grav-breakpoint-smallest: 32rem;
+$grav-breakpoint-largest: 75rem;
+
+/// Major layout breakpoints
+$grav-breakpoints: (
+  small: $grav-breakpoint-smallest,
+  medium: 44rem,
+  large: 56rem,
+  extra-large: $grav-breakpoint-largest
+);

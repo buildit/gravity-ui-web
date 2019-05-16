@@ -24,7 +24,7 @@
   }
 
   > li:nth-child(odd) {
-    @media all and (min-width: gravy-breakpoint(regular)) {
+    @media all and (min-width: grav-breakpoint(large)) {
       margin-right: 50%;
       margin-left: 0;
       padding-right: $grav-sp-l;
@@ -36,13 +36,12 @@
   }
 
   > li:nth-child(even) {
-    @media all and (min-width: gravy-breakpoint(regular)) {
+    @media all and (min-width: grav-breakpoint(large)) {
       margin-left: 50%;
     }
   }
 
   > li::before {
-    @include gravy-font(secondary, bold);
     @include grav-color-grp-b-apply('background-color', 'accent', true);
     @include grav-color-grp-a-apply('color', 'neutral', true);
 
@@ -51,11 +50,12 @@
     position: absolute;
     left: -$grav-sp-m;
     padding: $grav-sp-inset-squished-xs;
+    font-weight: grav-font-weight('primary', 'bold');
     text-align: center;
   }
 
   > li:nth-child(odd)::before {
-    @media all and (min-width: gravy-breakpoint(regular)) {
+    @media all and (min-width: grav-breakpoint(large)) {
       display: block;
       right: -$grav-sp-m;
       left: auto;
