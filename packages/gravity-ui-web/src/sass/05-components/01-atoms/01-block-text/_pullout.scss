@@ -1,4 +1,3 @@
 .grav-c-pullout {
-  @include gravy-font(secondary);
-  @include typi(larger-text);
+  @include grav-font-size(4);
 }

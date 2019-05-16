@@ -1,0 +1,7 @@
+<dl>
+{% for textSize in textSizes %}
+  <dt><strong>CSS util class</strong>: <code>.grav-u-font-size-{{ textSize.classSuffix }}</code></dt>
+  <dt><strong>SASS mixin</strong>: <code>@include grav-font-size({{ textSize.scale }});</code></dt>
+  <dd><p class="grav-u-font-size-{{ textSize.classSuffix }}">{{ text }}</p></dd>
+{% endfor %}
+</dl>

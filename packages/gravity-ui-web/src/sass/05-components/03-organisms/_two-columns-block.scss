@@ -1,12 +1,12 @@
 .grav-c-two-columns-block {
-  @media (min-width: gravy-breakpoint(medium)) {
+  @media (min-width: grav-breakpoint(medium)) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   > * {
-    @media (min-width: gravy-breakpoint(medium)) {
+    @media (min-width: grav-breakpoint(medium)) {
       flex-basis: calc(50% - 2em);
     }
   }
@@ -16,7 +16,7 @@
   }
 
   > *:nth-child(2) {
-    @media (min-width: gravy-breakpoint(medium)) {
+    @media (min-width: grav-breakpoint(medium)) {
       margin-top: 0;
     }
   }

@@ -1,0 +1,6 @@
+@function grav-breakpoint($name) {
+  @if (not map-has-key($grav-breakpoints, $name)) {
+    @error ('Breakpoint #{$name} not found');
+  }
+  @return map-get($grav-breakpoints, $name);
+}

@@ -99,9 +99,7 @@
   },
   "dependencies": {
     "@buildit/gravity-particles": "^0.2.0",
-    "@buildit/gravy": "^2.1.0",
-    "modularscale-sass": "^3.0.8",
-    "normalize-scss": "^7.0.1"
+    "modularscale-sass": "^3.0.8"
   },
   "engines": {
     "node": "^8.11.1",

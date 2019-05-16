@@ -39,7 +39,7 @@
     "scss/dollar-variable-no-missing-interpolation": true,
     "scss/at-mixin-argumentless-call-parentheses": "never",
     "scss/dollar-variable-pattern": [
-      "grav-(co|sp|st|tr|\\w\\w\\w+)-[-\\w]+",
+      "grav-((co|sp|st|tr)-[-\\w]+|\\w\\w\\w+(-[-\\w]+)?)",
       {
         "ignore": "local"
       }
