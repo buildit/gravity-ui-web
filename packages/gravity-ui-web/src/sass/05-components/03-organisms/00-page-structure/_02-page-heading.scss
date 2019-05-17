@@ -1,4 +1,7 @@
 .grav-c-page-heading {
+  $grav-c-page-heading-notch-size: 3rem;
+  $grav-c-page-content-inset: 3rem !default;
+
   > * {
     display: block;
   }
@@ -17,7 +20,7 @@
   }
 
   img {
-    @include grav-decoration-notch-out;
+    @include grav-decoration-notch-out($grav-c-page-heading-notch-size, $grav-c-page-content-inset);
 
     width: 100%;
     max-height: 30rem;
