@@ -10,8 +10,8 @@
     font-size: 0;
 
     img {
+      @include grav-transition(filter);
       filter: grayscale(100%);
-      transition: all $grav-tr-speed-slower;
     }
 
     &:hover img,
@@ -29,7 +29,7 @@
     line-height: 0;
   }
 
-  @media all and (min-width: gravy-breakpoint(medium)) {
+  @media all and (min-width: grav-breakpoint(medium)) {
     display: flex;
     flex-wrap: wrap;
 

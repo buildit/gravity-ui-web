@@ -1,0 +1,44 @@
+/**
+  Takes a list of local font names and formats them into
+  a list like: local("name 1"), local("name 2"), ...
+
+  This is intended for @font-face declarations, where we may need to specify
+  one or more local() names for a font.
+*/
+@function grav-format-local-names($local-names) {
+  $output: local('#{nth($local-names, 1)}');
+
+  @for $i from 2 to length($local-names) + 1 {
+    $output: $output, local('#{nth($local-names, $i)}');
+  }
+
+  @return $output;
+}
+
+
+/**
+  Generates a @font-face declaration.
+
+  Intentionally only uses WOFF2 and WOFF formats. This has sufficiently broad browser support,
+  so there's little point bloating our CSS with additional EOT or TTF sources.
+
+  You can find a font file's local name in macOS by opening the "Font Book" app, selecting the
+  font you're after and clicking the 'i' (info) button in the toolbar. The "PostScript name" is
+  the value you're after.
+
+  $src-path may be an absolute or relative URL path and should exclude the trailing slash.
+
+  See:
+  - https://css-tricks.com/snippets/css/using-font-face/
+  - https://stackoverflow.com/a/18134406
+*/
+@mixin grav-font-face($font-family, $font-weight, $font-style, $src-path, $src-basename, $local-names) {
+  @font-face {
+    font-family: '#{$font-family}';
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: grav-format-local-names($local-names),
+      url('#{$src-path}/#{$src-basename}.woff2') format('woff2'),
+      url('#{$src-path}/#{$src-basename}.woff') format('woff');
+  }
+}

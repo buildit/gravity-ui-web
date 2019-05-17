@@ -6,8 +6,6 @@
   white-space: nowrap;
 
   &[href] {
-    @include gravy-font(primary);
-
     &:link,
     &:visited {
       color: currentColor;

@@ -1,5 +1,5 @@
 .grav-c-nav-menu {
-  $trigger-breakpoint: gravy-breakpoint(medium);
+  $trigger-breakpoint: grav-breakpoint(medium);
   text-align: right;
 
   > ul {
@@ -24,12 +24,6 @@
     @media (min-width: $trigger-breakpoint) {
       margin-top: 0;
       margin-left: $grav-sp-s;
-    }
-  }
-
-  .grav-c-nav-link {
-    @media (max-width: $trigger-breakpoint - 1) {
-      @include typi(huge-text);
     }
   }
 }

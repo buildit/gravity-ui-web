@@ -1,0 +1,3 @@
+@mixin grav-transition($property, $transition-speed: $grav-tr-speed-regular, $ease: ease-out) {
+  transition: $property $transition-speed $ease;
+}

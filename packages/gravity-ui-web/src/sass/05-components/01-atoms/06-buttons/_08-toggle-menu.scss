@@ -19,16 +19,17 @@
   }
 
   &__icon {
+    @include grav-transition(all);
     display: block;
     width: $grav-width-icon;
     height: $grav-st-thickness-large;
     position: relative;
     margin-top: auto;
     background-color: currentColor;
-    transition: all $grav-tr-speed-slow;
 
     &::before,
     &::after {
+      @include grav-transition(all);
       content: '';
       display: block;
 
@@ -37,8 +38,6 @@
       position: absolute;
       left: 0;
       background-color: currentColor;
-
-      transition: all $grav-tr-speed-slow;
     }
 
     &::before {top: -$grav-sp-icon;}

@@ -1,5 +1,5 @@
 .grav-c-location-card {
-  @include typi(small-text);
+  @include grav-font-size(-1);
   display: grid;
   margin-top: $grav-sp-l;
   grid-gap: $grav-sp-m;
@@ -9,7 +9,7 @@
     'map';
   grid-template-columns: 1fr;
 
-  @media (min-width: gravy-breakpoint(small)) {
+  @media (min-width: grav-breakpoint(small)) {
     grid-template-areas:
       'title title'
       'map info';

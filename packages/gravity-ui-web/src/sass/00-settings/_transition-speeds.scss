@@ -1,0 +1,29 @@
+/// Slowest transition speed
+// Should be used only on elements that have no functional requirement and that change the user's perception of
+// information *during* the transition.
+// e.g. transitioning a marker's position such that during the transition it indicates different data points
+// This is mostly just here for reference. Use 3s to 10s depending on the use case
+$grav-tr-speed-slowest: 10s;
+
+/// Slower transition speed
+// This is the limit of the average user's flow of thought (1s)
+// This should only be used on large (viewport space) decorative animations. Not on any functional elements
+$grav-tr-speed-slower: 1s;
+
+/// Slow transition speed
+// Can be used where an obvious transition is desired on larger (viewport space) components
+$grav-tr-speed-slow: 0.5s;
+
+/// Regular transition speed
+// This speed should be perceived by the average person (230ms)
+// This is the default speed
+$grav-tr-speed-regular: 0.23s;
+
+/// Fast transition speed
+// This is considered the limit for the average person (100ms)
+// It may be perceived as instant for many people
+$grav-tr-speed-fast: 0.1s;
+
+/// Fastest transition speed
+// Only for decoration, most users will perceive this as instant
+$grav-tr-speed-fastest: 0.06s;

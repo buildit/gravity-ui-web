@@ -1,0 +1,64 @@
+
+/// Internal helper to return a given typeface's map
+@function grav-typeface($name) {
+  @if (not map-has-key($grav-typefaces, $name)) {
+    @error ('Typeface with name "#{$name}" not found');
+  }
+  @return map-get($grav-typefaces, $name);
+}
+
+/// Returns the font stack for the given typeface.
+@function grav-font-stack($name) {
+  $typeface: grav-typeface($name);
+
+  @if (not map-has-key($typeface, 'stack')) {
+    @error ('Typeface "#{$name}" has no font stack defined');
+  }
+  @return map-get($typeface, 'stack');
+}
+
+/// Returns the CSS font-weight value given typeface's weight.
+@function grav-font-weight($name, $weight) {
+  $typeface: grav-typeface($name);
+
+  @if (not map-has-key($typeface, 'weights')) {
+    @error ('Typeface "#{$name}" has no weights defined');
+  }
+  $weights: map-get($typeface, 'weights');
+
+  @if (not map-has-key($weights, $weight)) {
+    @error ('Typeface "#{$name}" has no weight called "#{$weight}".');
+  }
+
+  @return map-get($weights, $weight);
+}
+
+/// Returns font-size CSS custom property name suffix for
+/// a given point on our modular scale.
+@function grav-font-size-varname-suffix($scale) {
+  @if $scale < 0 {
+    @return 'minus-#{abs($scale)}';
+  }
+  @else if $scale > 0 {
+    @return 'plus-#{$scale}';
+  }
+  @else {
+    // No need to use the mixin, this will always be
+    // 1rem
+    // --grav-fs-base: 1rem;
+    @return 'base';
+  }
+}
+
+/// Returns the full font-size CSS property name for
+/// a given point on our modular scale.
+@function grav-font-size-css-propname($scale) {
+  @return --grav-fs-#{grav-font-size-varname-suffix($scale)};
+}
+
+
+/// Mixin for setting the font-size at a given point
+/// on our modular scale.
+@mixin grav-font-size($scale) {
+  font-size: var(#{grav-font-size-css-propname($scale)});
+}

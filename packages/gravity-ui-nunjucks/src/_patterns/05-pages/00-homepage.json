@@ -1,5 +1,5 @@
 {
-  "title": "Buildit @ Wipro Digital",
+  "title": "We <strong>build brands</strong> for the digital world",
   "header": {
     "url": false,
     "links": [
@@ -24,14 +24,8 @@
     ]
   },
 
-  "hero": {
-    "pullout": "Buildit is a global network of transformation studios.",
-    "paragraph": "We help connect the dots in an ever-changing world.",
-    "cta": {
-      "text": "About us",
-      "url": "link.pages-about"
-    }
-  },
+  "message": "Welcome to our new Buildit website featuring stories by and about our technical <strong>people</strong> and teams. News from our <strong>community</strong>, and an easy way to search the entire range of relevant <strong>jobs</strong>",
+  "image": "../../images/hero.jpg",
 
   "sections": [
     {

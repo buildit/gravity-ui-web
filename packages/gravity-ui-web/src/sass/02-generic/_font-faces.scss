@@ -1,0 +1,16 @@
+
+// Output @font-face declarations for all fonts defined in $grav-fonts
+@each $font-family, $font-weights in $grav-font-faces {
+  @each $font-weight, $font-styles in $font-weights {
+    @each $font-style, $font-details in $font-styles {
+      @include grav-font-face(
+        $font-family,
+        $font-weight,
+        $font-style,
+        $grav-font-src-path,
+        map-get($font-details, 'base-name'),
+        map-get($font-details, 'local-name')
+      );
+    }
+  }
+}
