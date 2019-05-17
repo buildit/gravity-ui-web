@@ -1,15 +1,10 @@
-<section class="grav-c-related-items">
-  <h3>Next story</h3>
-
-  <p>
-    {% if relatedItems %}
-      <a href="{{ relatedItems.link }}">
-        {{ relatedItems.text }}
+<ul class="grav-c-related-items">
+  {% for item in relatedItems %}
+    <li>
+      <span>{{ item.title }}</span>
+      <a href="{{ item.link }}">
+        {{ item.text }}
       </a>
-    {% else %}
-      <a href="#">
-        Everything We Do is Driven By You
-      </a>
-    {% endif %}
-  </p>
-</section>
+    </li>
+  {% endfor %}
+</ul>
