@@ -7,7 +7,7 @@
   &__sample,
   &__ratio,
   &__score {
-    flex-grow: 1;
+    flex-basis: 50%;
     margin-top: 0;
     text-align: center;
     white-space: nowrap;
@@ -15,12 +15,10 @@
   }
 
   &__ratio {
-    width: 5em;
     @include grav-color-grp-a-apply('background-color', 'neutral-alt', true);
   }
 
   &__score {
-    width: 2.5em;
     font-weight: 600;
 
     &--fail {
