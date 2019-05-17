@@ -34,4 +34,6 @@ then
 
   ~/.local/bin/aws s3 cp $historyFile s3://${CDN_BUCKET}/$cdnGravityDir/$historyFileName  --region=${PROD_BUCKET_REGION}
   ~/.local/bin/aws s3 cp $reportPage s3://${CDN_BUCKET}/$cdnGravityDir/$reportPageName  --region=${PROD_BUCKET_REGION}
+else 
+  echo "Not tracking file size changes for this branch: $TRAVIS_BRANCH"
 fi
