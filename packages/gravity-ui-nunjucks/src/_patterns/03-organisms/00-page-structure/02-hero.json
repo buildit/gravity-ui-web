@@ -1,5 +1,5 @@
 {
-  "title": "We <strong>build brands</strong> for the digital world",
-  "message": "Welcome to our new Buildit website featuring stories by and about our technical <strong>people</strong> and teams. News from our <strong>community</strong>, and an easy way to search the entire range of relevant <strong>jobs</strong>",
-  "image": "/images/hero.jpg"
+  "title": "Bold, heroic title text",
+  "message": "Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "image": "../../images/img-16x9.png"
 }

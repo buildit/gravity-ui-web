@@ -16,18 +16,28 @@
 
   .grav-c-hero__container {
     @include grav-color-grp-a-apply('background-color', 'neutral', false);
-    $container-offset: 3.5rem;
-    $container-offset-small: $grav-sp-m;
 
-    @media all and (max-width: grav-breakpoint(medium)) {
-      padding-right: $container-offset-small;
-      padding-left: $container-offset-small;
+    // The amount by which the container overlaps the image:
+    $container-vertical-shift: 3.5rem;
+
+    // The width to which the horizontal gaps between the container
+    // and the boundary of the content area can grow:
+    $container-horizontal-max-margin: 4rem;
+
+    // The width to which the horizontal gap between the container and
+    // the content within it can grow:
+    $container-horizontal-max-inset: 5rem;
+
+    width: calc(100% - #{$grav-sp-m * 2});
+    max-width: $grav-page-content-max-width - ($container-horizontal-max-margin * 2);
+    margin: ($container-vertical-shift * -1) auto 0;
+    padding: $container-vertical-shift $grav-sp-m $grav-sp-m $grav-sp-m;
+
+    > * {
+      max-width: $grav-page-content-max-width - ($container-horizontal-max-margin * 2) - ($container-horizontal-max-inset * 2);
+      margin-right: auto;
+      margin-left: auto;
     }
-
-    max-width: 780px;
-    margin: ($container-offset * -1) auto 0;
-    padding: $container-offset 106px 0;
-    box-sizing: content-box;
 
     h1 {
       line-height: 100%;
