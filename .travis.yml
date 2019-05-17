@@ -15,7 +15,6 @@ script:
   - npm run test
 before_deploy:
   - pip install --user awscli
-  - npm install -g file-size-report
   - ./scripts/track_file_sizes.sh
 deploy:
   - provider: script
