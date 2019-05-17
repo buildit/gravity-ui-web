@@ -2,13 +2,15 @@
   text-align: center;
 
   .grav-c-hero__banner {
+    display: block;
     width: 100%;
     height: 26.5rem;
-    background-position: center;
-    background-size: cover;
+    object-fit: cover;
+    object-position: center;
   }
 
   .grav-o-container {
+    position: relative;
     margin-top: 0;
   }
 
