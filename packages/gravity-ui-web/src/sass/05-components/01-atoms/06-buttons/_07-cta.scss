@@ -1,12 +1,11 @@
 [href].grav-c-cta {
+  @include grav-transition(color);
   display: inline-block;
   position: relative;
   margin: 0;
   padding: $grav-sp-inset-squished-xs;
   border-width: 0;
   text-decoration: none;
-  transition-duration: $grav-tr-speed;
-  transition-property: color;
   z-index: 0;
 
   &:link {
@@ -37,7 +36,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    transition-duration: $grav-tr-speed;
+    transition-duration: $grav-tr-speed-regular;
     transition-property: height, background-color;
     z-index: -1;
   }
