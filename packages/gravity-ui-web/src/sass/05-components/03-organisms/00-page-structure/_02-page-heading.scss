@@ -1,0 +1,27 @@
+.grav-c-page-heading {
+  > * {
+    display: block;
+  }
+
+  h1 {
+    @include grav-font-size(6);
+  }
+
+  p,
+  time {
+    @include grav-font-size(-1);
+
+    @media all and (min-width: grav-breakpoint(large)) {
+      max-width: 44rem;
+    }
+  }
+
+  img {
+    @include grav-decoration-notch-out;
+
+    width: 100%;
+    max-height: 30rem;
+    min-height: 16rem;
+    object-fit: cover;
+  }
+}
