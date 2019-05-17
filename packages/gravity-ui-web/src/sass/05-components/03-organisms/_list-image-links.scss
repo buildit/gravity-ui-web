@@ -10,8 +10,8 @@
     font-size: 0;
 
     img {
+      @include grav-transition(filter);
       filter: grayscale(100%);
-      transition: all $grav-tr-speed-slower;
     }
 
     &:hover img,

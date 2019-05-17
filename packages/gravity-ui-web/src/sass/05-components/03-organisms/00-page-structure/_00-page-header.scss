@@ -47,9 +47,9 @@ body > header {
     /* stylelint-disable-next-line selector-max-compound-selectors */
     &[aria-pressed] ~ .grav-c-nav-menu,
     &[aria-pressed='false'] ~ .grav-c-nav-menu {
+      @include grav-transition(max-height, $grav-tr-speed-slow);
       max-height: 0;
       overflow: hidden;
-      transition: max-height $grav-tr-speed-slow;
 
       @media (min-width: $grav-page-heading-trigger-breakpoint) { // stylelint-disable-line max-nesting-depth
         display: flex;
