@@ -29,7 +29,8 @@
     "build": "gulp",
     "styleguide": "gulp styleguide",
     "start": "gulp serve",
-    "test": "npm run lint && bundlesize",
+    "bundlesize": "npm run build && bundlesize",
+    "test": "npm run lint && npm run bundlesize",
     "lint": "stylelint 'src/ui-lib/sass/**/*.scss'",
     "semantic-release": "semantic-release"
   },
