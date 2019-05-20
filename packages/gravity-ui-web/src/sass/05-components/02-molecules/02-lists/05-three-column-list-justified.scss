@@ -1,0 +1,31 @@
+.grav-c-three-column-list-justified {
+  @media all and (min-width: grav-breakpoint(small)) {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media all and (max-width: grav-breakpoint(small)) {
+      margin: 0 0 16px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @media all and (min-width: grav-breakpoint(small)) {
+      &:nth-child(2) {
+        text-align: center;
+      }
+
+      &:nth-child(3) {
+        text-align: right;
+      }
+    }
+  }
+}
