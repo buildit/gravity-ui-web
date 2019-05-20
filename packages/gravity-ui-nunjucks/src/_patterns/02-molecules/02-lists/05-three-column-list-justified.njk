@@ -1,19 +1,7 @@
 <div class="grav-c-three-column-list-justified">
   <ul>
-    <li><a href="#">Bangalore</a></li>
-    <li><a href="#">Dallas</a></li>
-    <li><a href="#">Denver</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#">Dublin</a></li>
-    <li><a href="#">Edinburgh</a></li>
-    <li><a href="#">Gdansk</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#">London</a></li>
-    <li><a href="#">New York</a></li>
-    <li><a href="#">Warsaw</a></li>
+    {% for item in list -%}
+      <li><a href="{{ item.link }}">{{ item.text }}</a></li>
+    {%- endfor %}
   </ul>
 </div>
