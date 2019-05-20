@@ -1,23 +1,22 @@
 .grav-c-related-items {
-  max-width: 540px;
-  margin-right: auto;
-  margin-left: auto;
   padding: 0;
   list-style: none;
   text-align: center;
 
   > li {
+    max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+
     span {
-      @include grav-color-grp-b-apply('color', 'neutral-alt');
+      @include grav-color-grp-b-apply('color', 'neutral-subtle');
       display: block;
-      margin-bottom: 2.5rem;
-      font-size: 24px;
     }
 
     @media all and (min-width: $grav-page-breakpoint-medium) {
       a {
-        font-size: 48px;
-        line-height: 62px;
+        @include grav-font-size(4);
+        display: block;
       }
     }
   }
