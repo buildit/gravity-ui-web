@@ -12,11 +12,7 @@ if [ ! -z "$TRAVIS_COMMIT" ] && [[ "develop" == "$TRAVIS_BRANCH" || "master" == 
 then
   file-size-report -p $distDir -o $currentSizesFile
 
-  allVersions=`git tag --list --sort=-committerdate | grep -E '^(gravity-ui-web-)?v[0-9]*.[0-9]*.[0-9]*'`
-  # First tag in the list will be the latest one, but may be prefixed (e.g. "gravity-ui-web-v1.2.3")
-  version=`echo $allVersions | cut -d" " -f1`
-  # be sure we get only the version part and discard any prefix
-  version=`expr $version : '.*\(v[0-9].*\)'`
+  source ./scripts/get_latest_version.sh
 
   ~/.local/bin/aws s3 cp s3://${CDN_BUCKET}/$cdnGravityDir/$historyFileName $historyFile --region=${PROD_BUCKET_REGION} --quiet
 

@@ -38,9 +38,13 @@
 
         function getData(chartData) {
             var seriesRow = [];
+            var files = [];
             seriesRow.push('Date');
             for (var property in chartData.reports[0].files) {
-                seriesRow.push(property);
+                if (!property.endsWith("map") && !property.endsWith("json")) {
+                    seriesRow.push(property);
+                    files.push(property);
+                }
             };
             var rows = [];
             rows.push(seriesRow);
@@ -48,8 +52,8 @@
             chartData.reports.forEach(element => {
                 var dataRow = [];
                 dataRow.push(element.date);
-                for (const value of Object.values(element.files)) {
-                    dataRow.push(value.size);
+                for (const value of files) {
+                    dataRow.push(element.files[value].size);
                 };
                 rows.push(dataRow);
             });
