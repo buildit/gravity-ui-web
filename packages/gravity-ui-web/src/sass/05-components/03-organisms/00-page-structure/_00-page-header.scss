@@ -24,17 +24,10 @@ body > header {
   .grav-c-logo {
     display: block;
     max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
-    fill: currentColor;
 
     @media (min-width: $grav-page-heading-trigger-breakpoint) {
       width: 100%;
     }
-  }
-
-
-  /* stylelint-disable-next-line selector-max-compound-selectors */
-  a:hover .grav-c-logo {
-    @include grav-color-grp-b-apply('fill', 'neutral-emphasis', true);
   }
 
   .grav-c-toggle-menu {
@@ -84,6 +77,20 @@ body > header {
 
   a {
     display: block;
+
+    &:visited {
+      // Make visited logo link use some color as non-visited one
+      @include grav-color-grp-b-apply('color', 'control', true);
+    }
+
+    &:hover,
+    &:focus {
+      // Need to re-instate the hover/focus color since the previous block
+      // that overrides the usual visited color will otherwise still apply.
+      // This is because these selectors have a higher specificity that
+      // the ones that apply the basic <a> styles.
+      @include grav-color-grp-b-apply('color', 'control-emphasis', true);
+    }
   }
 
   @media (min-width: $grav-page-heading-trigger-breakpoint) {
