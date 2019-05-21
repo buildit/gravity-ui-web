@@ -1,5 +1,8 @@
 // Utility class for default color scheme
-@include grav-color-scheme-define-class('default', $grav-co-scheme-default-name);
+@include grav-color-scheme-define-class('default', $grav-co-scheme-default-name, $grav-co-scheme-default-dark-name);
+
+// Utility class for contrast color scheme
+@include grav-color-scheme-define-class('contrast', $grav-co-scheme-contrast-name, $grav-co-scheme-contrast-dark-name);
 
 // Generate utility classes for all color schemes imported from Gravity Particles package
 @each $color-scheme-name in map-keys($grav-co-schemes) {
