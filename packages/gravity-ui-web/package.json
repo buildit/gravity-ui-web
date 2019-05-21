@@ -30,7 +30,9 @@
     "start": "gulp watch",
     "bundlesize": "npm run build && bundlesize",
     "test": "npm run lint && npm run bundlesize",
-    "lint": "stylelint 'src/sass/**/*.scss'",
+    "lint": "npm run lint:js && npm run lint:style",
+    "lint:style": "stylelint 'src/sass/**/*.scss'",
+    "lint:js": "eslint '**/*.js'",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -82,6 +84,9 @@
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "del": "^4.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
     "eyeglass": "^2.4.1",
     "gulp": "^4.0.1",
     "gulp-cheerio": "^0.6.3",
