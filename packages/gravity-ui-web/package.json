@@ -1,6 +1,6 @@
 {
   "name": "@buildit/gravity-ui-web",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0-alpha.2",
   "description": "Library of styles, components and associated assets to build UIs for the web. Part of Buildit's Gravity design system.",
   "main": "dist/gravity.js",
   "bundlesize": [
