@@ -1,37 +1,28 @@
 .grav-c-three-column-list-justified {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    @media all and (max-width: grav-breakpoint(small)) {
-      margin: 0 0 16px;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
-  }
+  padding: 0;
+  list-style: none;
 
   @media all and (min-width: grav-breakpoint(small)) {
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
 
-    li {
+    > li {
       width: 33.3%;
+      padding-right: $grav-sp-m;
       flex-grow: 1;
 
       &:nth-child(3n+2) {
+        padding-left: $grav-sp-m;
         text-align: center;
       }
 
       &:nth-child(3n) {
+        padding-right: 0;
+        padding-left: $grav-sp-m;
         text-align: right;
       }
 
-      &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3) {
         margin-top: 0;
