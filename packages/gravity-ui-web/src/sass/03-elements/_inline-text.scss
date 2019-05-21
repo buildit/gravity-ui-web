@@ -27,3 +27,8 @@ kbd,
 samp {
   font-family: grav-font-stack('mono');
 }
+
+mark {
+  @include grav-color-grp-a-apply('color', 'accent-attention', true);
+  @include grav-color-grp-b-apply('background-color', 'accent-attention', true);
+}
