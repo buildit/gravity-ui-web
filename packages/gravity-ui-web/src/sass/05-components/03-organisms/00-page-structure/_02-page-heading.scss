@@ -1,5 +1,5 @@
 .grav-c-page-heading {
-  $grav-c-page-heading-notch-size: 3rem;
+  $grav-c-page-heading-notch-size: var(--grav-fs-plus-4);
   $grav-c-page-content-inset: 3rem !default;
 
   > * {
