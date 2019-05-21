@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://static.buildit.digital/gravity-ui-web/latest/gravity.css">
+    <script type="text/javascript" src="develop-file-size-history.js"></script>
+    <script type="text/javascript" src="master-file-size-history.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        var dataDefs = {}, select = null, branchChartData = null;
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(setup);
+
+        function setup() {
+            setupData();
+            drawChart();
+        }
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable(getData(branchChartData));
+
+            var options = {
+                title: 'File Size History',
+                curveType: 'function',
+                legend: { position: 'bottom' },
+                hAxis: {
+                    slantedText: true,
+                    slantedTextAngle: 90
+                },
+                vAxis: {
+                    title: 'File Size (bytes)'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+
+        function getData(chartData) {
+            var seriesRow = [];
+            var files = [];
+            seriesRow.push('Date');
+            for (var property in chartData.reports[0].files) {
+                if (!property.endsWith("map") && !property.endsWith("json")) {
+                    seriesRow.push(property);
+                    files.push(property);
+                }
+            };
+            var rows = [];
+            rows.push(seriesRow);
+
+            chartData.reports.forEach(element => {
+                var dataRow = [];
+                dataRow.push(element.date);
+                for (const value of files) {
+                    dataRow.push(element.files[value].size);
+                };
+                rows.push(dataRow);
+            });
+            return rows;
+        }
+
+        function updateChart(dataSelected) {
+            branchChartData = dataDefs[dataSelected];
+            drawChart();
+        }
+
+        function setupData() {
+            select = document.getElementById('branchselect');
+
+            if (typeof developChartData !== 'undefined') {
+                branchChartData = developChartData;
+                dataDefs.develop = developChartData;
+                addBranchToSelect('develop');
+            }
+            if (typeof masterChartData !== 'undefined') {
+                dataDefs.master = masterChartData;
+                addBranchToSelect('master');
+            }
+        }
+
+        function addBranchToSelect(branch) {
+            var opt = document.createElement('option');
+            opt.value = branch;
+            opt.innerHTML = branch;
+            select.appendChild(opt);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+    <form name="chartForm">
+        <select id="branchselect" onChange="updateChart(document.chartForm.branchselect.options[document.chartForm.branchselect.options.selectedIndex].value)">
+        </select>
+    </form>
+</body>
+
+</html>

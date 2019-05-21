@@ -1,8 +1,8 @@
 <html>
-<head><link rel="stylesheet" href="https://static.buildit.digital/gravity/v1.0.1/gravity.css"></head>
+<head><link rel="stylesheet" href="https://static.buildit.digital/gravity-ui-web/latest/gravity.css"></head>
 <body>
 <h1>Versions</h1>
 <ul>{versionlist}</ul>
-<a href="https://github.com/buildit/gravity-ui-web/blob/develop/CHANGELOG.md">See change log</a>
+<a href="https://github.com/buildit/gravity-ui-web/blob/develop/CHANGELOG.md">See change log</a> | <a href="filesizehistory.html">File size history</a>
 </body>
 </html>

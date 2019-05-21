@@ -1,0 +1,23 @@
+.grav-c-related-items {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  > li {
+    max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+
+    span {
+      @include grav-color-grp-b-apply('color', 'neutral-subtle');
+      display: block;
+    }
+
+    @media all and (min-width: grav-breakpoint(medium)) {
+      a {
+        @include grav-font-size(4);
+        display: block;
+      }
+    }
+  }
+}
