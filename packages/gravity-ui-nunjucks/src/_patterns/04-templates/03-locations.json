@@ -47,5 +47,8 @@
         "alt": "Map showing how to get to the London studio"
       }
     }
-  ]
+  ],
+  "footer": {
+    "class": "grav-u-color-scheme-contrast"
+  }
 }

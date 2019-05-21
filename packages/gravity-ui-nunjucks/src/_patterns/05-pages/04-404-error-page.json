@@ -33,6 +33,7 @@
   "text": "Sorry! We looked everywhere but we can't find the page you're looking for.",
 
   "footer": {
+    "class": "grav-u-color-scheme-contrast",
     "copy": "made with ❤️",
     "social": [
       {

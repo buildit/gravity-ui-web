@@ -1,7 +1,7 @@
 {%- from 'atoms-icon' import icon -%}
 {%- from 'atoms-image' import image -%}
 
-<footer>
+<footer {% if footer.class %} class="{{ footer.class }}"{% endif %}>
   <div class="grav-o-container">
     {% include 'atoms-logotype' %}
 
