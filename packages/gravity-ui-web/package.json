@@ -28,7 +28,8 @@
     "clean": "gulp clean",
     "build": "gulp",
     "start": "gulp watch",
-    "test": "npm run lint && npm run build && bundlesize",
+    "bundlesize": "npm run build && bundlesize",
+    "test": "npm run lint && npm run bundlesize",
     "lint": "stylelint 'src/sass/**/*.scss'",
     "semantic-release": "semantic-release"
   },
