@@ -5,6 +5,7 @@
   > ul {
     margin: 0 (-$grav-sp-s);
     padding: 0;
+    padding-right: $grav-sp-l;
     list-style-type: none;
 
     @media (min-width: $trigger-breakpoint) {
