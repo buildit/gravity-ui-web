@@ -1,7 +1,5 @@
-<div class="grav-c-three-column-list-justified">
-  <ul>
-    {% for item in list -%}
-      <li><a href="{{ item.link }}">{{ item.text }}</a></li>
-    {%- endfor %}
-  </ul>
-</div>
+<ul class="grav-c-three-column-list-justified">
+  {% for item in list -%}
+    <li><a href="{{ item.link }}">{{ item.text }}</a></li>
+  {%- endfor %}
+</ul>
