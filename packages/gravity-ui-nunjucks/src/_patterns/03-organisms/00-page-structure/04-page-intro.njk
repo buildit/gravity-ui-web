@@ -1,8 +1,8 @@
 {%- from 'atoms-image' import image -%}
 
 {%- macro pageHeading(title, description, dateTime, img) -%}
-<div class="grav-c-page-heading">
-  <h1 class="grav-c-page-heading__title">{{ title }}</h1>
+<div class="grav-c-page-intro">
+  <h1>{{ title }}</h1>
   <p>{{ description }}</p>
   {% if dateTime %}
     <time datetime="{{dateTime.machine}}">{{dateTime.human}}</time>
