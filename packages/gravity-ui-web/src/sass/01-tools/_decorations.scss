@@ -1,7 +1,7 @@
 @mixin grav-decoration-notch-in($size: 1rem, $inset: 2rem) {
-  clip-path: polygon(0% 0%, 0% 100%, $inset 100%, #{$inset + $size} calc(100% - #{$size}), #{$inset + ($size * 2)} 100%, 100% 100%, 100% 0%);
+  clip-path: polygon(0% 0%, 0% 100%, $inset 100%, calc(#{$inset} + #{$size}) calc(100% - #{$size}), calc(#{$inset} + #{$size} * 2) 100%, 100% 100%, 100% 0%);
 }
 
 @mixin grav-decoration-notch-out($size: 1rem, $inset: 2rem) {
-  clip-path: polygon(0% 0%, 0% calc(100% - #{$size}), $inset calc(100% - #{$size}), #{$inset + $size} 100%, #{$inset + ($size * 2)} calc(100% - #{$size}), 100% calc(100% - #{$size}), 100% 0%);
+  clip-path: polygon(0% 0%, 0% calc(100% - #{$size}), $inset calc(100% - #{$size}), calc(#{$inset} + #{$size}) 100%, calc(#{$inset} + #{$size} * 2) calc(100% - #{$size}), 100% calc(100% - #{$size}), 100% 0%);
 }
