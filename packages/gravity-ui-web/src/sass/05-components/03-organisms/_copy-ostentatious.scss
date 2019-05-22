@@ -1,0 +1,27 @@
+.grav-c-ostentatious-copy {
+  padding-right: $grav-sp-l;
+  padding-left: $grav-sp-l;
+
+  > * {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media all and (max-width: grav-breakpoint(small)) {
+    padding-right: $grav-sp-s;
+    padding-left: $grav-sp-s;
+  }
+
+  @media all and (min-width: grav-breakpoint(medium)) {
+    padding-left: calc(#{$grav-sp-l} * #{$grav-sp-ostentatious-padding-multiplier});
+
+    > blockquote {
+      margin-right: -$grav-sp-l;
+      margin-left: -$grav-sp-l;
+    }
+  }
+}
