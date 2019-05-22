@@ -1,7 +1,12 @@
 {%- from 'atoms-image' import image -%}
 
-{%- macro pageHeading(title, description, dateTime, img) -%}
+{%- macro pageIntro(title, description, dateTime, img) -%}
 <div class="grav-c-page-intro">
+  {{ pageIntroContents(title, description, dateTime, img) | safe }}
+</div>
+{%- endmacro -%}
+
+{%- macro pageIntroContents(title, description, dateTime, img) -%}
   <h1>{{ title }}</h1>
   <p>{{ description }}</p>
   {% if dateTime %}
@@ -10,7 +15,6 @@
   {% if img %}
     {{ image(img.src, img.alt, img.class) | safe }}
   {% endif %}
-</div>
 {%- endmacro -%}
 
-{{ pageHeading(title, description, dateTime, img) | safe }}
+{{ pageIntro(title, description, dateTime, img) | safe }}
