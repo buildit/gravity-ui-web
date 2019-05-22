@@ -16,13 +16,11 @@ function pkgRootPath(...pathSegements) {
   return path.resolve(gulpDir, '..', ...pathSegements);
 }
 
-
 // ==== UI library ====
 
 function srcUiLibPath(...pathSegements) {
-  return pkgRootPath(bldConsts.srcDirname, ...pathSegements)
+  return pkgRootPath(bldConsts.srcDirname, ...pathSegements);
 }
-
 
 module.exports = {
   /**
@@ -46,4 +44,4 @@ module.exports = {
    * The absolute path to the JS source directory.
    */
   srcJsPath: (...pathSegments) => srcUiLibPath('js', ...pathSegments),
-}
+};
