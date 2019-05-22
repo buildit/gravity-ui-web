@@ -19,7 +19,7 @@ function wcagRating(contrastRatio) {
 }
 
 function gravityCssCustomPropName(group, colorName) {
-  return `--grav-co-grp-${group}-${kebabCase(startCase(colorName))}`;
+  return `--grav-co-grp-${group}-${kebabCase(colorName)}`;
 }
 
 
@@ -58,7 +58,7 @@ function generateColorSchemeTableData(colorScheme) {
 }
 
 
-const colorSchemeTables = {};
+const colorSchemeTables = [];
 Object.keys(colorSchemes).forEach(colorSchemeName => {
   const colorScheme = colorSchemes[colorSchemeName];
   const colorSchemeData = {
@@ -67,7 +67,7 @@ Object.keys(colorSchemes).forEach(colorSchemeName => {
     kebabName: kebabCase(colorSchemeName)
   };
 
-  colorSchemeTables[colorSchemeName] = colorSchemeData;
+  colorSchemeTables.push(colorSchemeData);
 });
 
 module.exports = colorSchemeTables;
