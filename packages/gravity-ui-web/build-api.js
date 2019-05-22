@@ -25,7 +25,6 @@ const bldConsts = require('./build-consts.js');
 
 const pkgDir = __dirname;
 
-
 // Resolves the given path segments relative to the UI lib dist dir
 function distPath(...pathSegements) {
   return path.resolve(pkgDir, bldConsts.distDirname, ...pathSegements);
@@ -46,8 +45,6 @@ const distSvgSymbolsInfoFilename = `${bldConsts.svgSymbolsBasename}.json`;
 const distJsFileBasename = distCssFileBasename;
 const distJsFilename = `${distJsFileBasename}.js`;
 
-
-
 // Resolves the given path segments relative to the SASS src dir
 function srcSassPath(...pathSegements) {
   return path.resolve(pkgDir, bldConsts.srcDirname, 'sass', ...pathSegements);
@@ -57,8 +54,6 @@ function srcSassPath(...pathSegements) {
 const srcSassMainFilename = 'index.scss';
 
 const srcSassDebugFilename = `${distCssDebugFileBasename}.scss`;
-
-
 
 module.exports = {
   /**
@@ -118,8 +113,6 @@ module.exports = {
    * @public
    */
   distJsFilename,
-
-
 
   // ==== Published source files: ====
 
