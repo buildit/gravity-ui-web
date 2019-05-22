@@ -12,8 +12,8 @@
  * for Gravity's CSS to style them correctly.
  *
  */
-(function(){
-
+// eslint-disable-next-line func-names
+(function () {
   /**
    * Initialises all toggle buttons on the page.
    *
@@ -31,23 +31,24 @@
    *
    */
   function initToggleButtons() {
+    // eslint-disable-next-line no-undef
     const toggleButtons = document.querySelectorAll('[type=button][aria-pressed]');
 
     // IE-compatible way of iterating over the NodeList
     // (See: https://developer.mozilla.org/en-US/docs/Web/API/NodeList)
-    Array.prototype.forEach.call(toggleButtons, function(toggleButton) {
-      toggleButton.addEventListener('click', function(e) {
-        let pressed = toggleButton.getAttribute('aria-pressed') === 'true';
+    Array.prototype.forEach.call(toggleButtons, (toggleButton) => {
+      toggleButton.addEventListener('click', () => {
+        const pressed = toggleButton.getAttribute('aria-pressed') === 'true';
         toggleButton.setAttribute('aria-pressed', String(!pressed));
-      })
+      });
     });
   }
 
   /**
    * Runs the various init functions once the DOM has loaded.
    */
-  document.addEventListener("DOMContentLoaded", function(e) {
+  // eslint-disable-next-line no-undef
+  document.addEventListener('DOMContentLoaded', () => {
     initToggleButtons();
   });
-
-})();
+}());
