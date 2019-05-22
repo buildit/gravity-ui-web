@@ -9,11 +9,6 @@
     object-position: center;
   }
 
-  .grav-o-container {
-    position: relative;
-    margin-top: 0;
-  }
-
   .grav-c-hero__container {
     @include grav-color-grp-a-apply('background-color', 'neutral', false);
 
@@ -30,7 +25,8 @@
 
     width: calc(100% - #{$grav-sp-m * 2});
     max-width: $grav-page-content-max-width - ($container-horizontal-max-margin * 2);
-    margin: ($container-vertical-shift * -1) auto 0;
+    position: relative; // Needed to let container DIV overlap banner IMG element
+    margin: (-1 * $container-vertical-shift) auto 0;
     padding: $container-vertical-shift $grav-sp-m $grav-sp-m $grav-sp-m;
 
     > * {
