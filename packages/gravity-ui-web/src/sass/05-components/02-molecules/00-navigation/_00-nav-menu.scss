@@ -5,7 +5,6 @@
   > ul {
     margin: 0 (-$grav-sp-s);
     padding: 0;
-    padding-right: $grav-sp-l;
     list-style-type: none;
 
     @media (min-width: $trigger-breakpoint) {
@@ -19,12 +18,18 @@
     margin: 0;
   }
 
+  @media (min-width: $trigger-breakpoint) {
+    li + li {
+      margin-left: $grav-sp-l;
+    }
+  }
+
   li:not(#{&}__external-link) + li#{&}__external-link {
-    margin-top: $grav-sp-s;
+    margin-top: $grav-sp-m;
 
     @media (min-width: $trigger-breakpoint) {
       margin-top: 0;
-      margin-left: $grav-sp-s;
+      margin-left: $grav-sp-xl;
     }
   }
 }
