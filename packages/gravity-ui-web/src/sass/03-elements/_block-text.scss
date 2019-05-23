@@ -4,6 +4,20 @@ pre {
 }
 
 blockquote {
-  @include grav-font-size(4);
-  text-align: center;
+  @include grav-font-size(3);
+  margin-bottom: 2 * $grav-sp-vertical-gap;
+
+  &:last-child {
+    margin-bottom: $grav-sp-vertical-gap;
+  }
+}
+
+* + blockquote {
+  margin-top: 2 * $grav-sp-vertical-gap;
+}
+
+cite {
+  @include grav-font-size(-2);
+  font-style: normal;
+}
 }
