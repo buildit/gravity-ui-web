@@ -4,6 +4,10 @@
 
   > * {
     display: block;
+
+    + * {
+      margin-top: $grav-sp-vertical-gap-l;
+    }
   }
 
   img {
@@ -29,6 +33,6 @@
   }
 
   @media all and (min-width: grav-breakpoint(large)) {
-    padding-left: calc(#{$grav-sp-l} * #{$grav-sp-ostentatious-padding-multiplier});
+    padding-left: $grav-sp-l * $grav-sp-ostentatious-padding-left-multiplier;
   }
 }
