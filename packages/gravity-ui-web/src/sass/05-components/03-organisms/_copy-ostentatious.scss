@@ -11,17 +11,24 @@
     height: auto;
   }
 
-  @media all and (max-width: grav-breakpoint(small)) {
+  @media all and (max-width: grav-breakpoint(medium)) {
     padding-right: $grav-sp-s;
     padding-left: $grav-sp-s;
+
+    > blockquote {
+      margin-right: -$grav-sp-s;
+      margin-left: -$grav-sp-s;
+    }
   }
 
   @media all and (min-width: grav-breakpoint(medium)) {
-    padding-left: calc(#{$grav-sp-l} * #{$grav-sp-ostentatious-padding-multiplier});
-
     > blockquote {
       margin-right: -$grav-sp-l;
       margin-left: -$grav-sp-l;
     }
+  }
+
+  @media all and (min-width: grav-breakpoint(large)) {
+    padding-left: calc(#{$grav-sp-l} * #{$grav-sp-ostentatious-padding-multiplier});
   }
 }
