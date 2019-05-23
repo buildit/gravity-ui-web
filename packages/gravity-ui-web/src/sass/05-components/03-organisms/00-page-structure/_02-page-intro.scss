@@ -18,6 +18,10 @@
     }
   }
 
+  time {
+    @include grav-color-grp-b-apply('color', 'neutral-subtle', true);
+  }
+
   img {
     @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-l);
 
