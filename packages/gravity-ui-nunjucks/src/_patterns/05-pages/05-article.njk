@@ -3,8 +3,8 @@
 {%- extends 'templates-basic-page' -%}
 
 {%- block pageContent %}
-<main class="grav-o-container">
-  <article class="grav-c-article">
+<main>
+  <article class="grav-o-container grav-c-article">
     <header class="grav-c-page-intro">
       {{ pageIntroContents(article.title, article.description, article.dateTime, article.img) | safe }}
     </header>
@@ -12,5 +12,18 @@
       {{ article.copy | safe }}
     </div>
   </article>
+  <hr />
+  <aside class="grav-o-container">
+    <ul class="grav-c-related-items">
+      {% for item in relatedItems %}
+        <li>
+          <span>{{ item.title }}</span>
+          <a href="{{ item.link }}">
+            {{ item.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
 </main>
 {%- endblock -%}
