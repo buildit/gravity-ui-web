@@ -11,4 +11,3 @@ The pattern currently has the capacity of hosting a title (`<h2>`) followed by a
 - unordered list
 - list-inline-row
 - list-cards-basic
-- list-image-links
