@@ -20,4 +20,8 @@ cite {
   @include grav-font-size(-2);
   font-style: normal;
 }
+
+hr {
+  @include grav-font-size(3);
+  margin-top: 2 * $grav-sp-vertical-gap;
 }
