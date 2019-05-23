@@ -77,5 +77,8 @@
       "title": "This is the third step",
       "description": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros."
     }
-  ]
+  ],
+  "footer": {
+    "class": "grav-u-color-scheme-contrast"
+  }
 }

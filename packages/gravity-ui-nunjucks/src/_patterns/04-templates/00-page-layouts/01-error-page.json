@@ -4,5 +4,8 @@
   "homeLink": {
     "url": "link.templates-homepage",
     "text": "Go to the homepage"
+  },
+  "footer": {
+    "class": "grav-u-color-scheme-contrast"
   }
 }

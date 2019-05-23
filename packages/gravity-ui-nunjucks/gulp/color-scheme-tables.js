@@ -1,5 +1,6 @@
 const Color = require('color');
 const kebabCase = require('lodash.kebabcase');
+const startCase = require('lodash.startcase');
 const { colorSchemes } = require('@buildit/gravity-particles');
 
 
@@ -57,10 +58,16 @@ function generateColorSchemeTableData(colorScheme) {
 }
 
 
-const colorSchemeTables = {};
+const colorSchemeTables = [];
 Object.keys(colorSchemes).forEach(colorSchemeName => {
   const colorScheme = colorSchemes[colorSchemeName];
-  colorSchemeTables[colorSchemeName] = generateColorSchemeTableData(colorScheme);
+  const colorSchemeData = {
+    table: generateColorSchemeTableData(colorScheme),
+    humanName: startCase(colorSchemeName),
+    kebabName: kebabCase(colorSchemeName)
+  };
+
+  colorSchemeTables.push(colorSchemeData);
 });
 
 module.exports = colorSchemeTables;
