@@ -1,5 +1,6 @@
 .grav-c-page-intro {
   $grav-c-page-intro-notch-size: var(--grav-fs-plus-4);
+  margin-top: 2 * $grav-sp-vertical-gap;
 
   > * {
     display: block;
