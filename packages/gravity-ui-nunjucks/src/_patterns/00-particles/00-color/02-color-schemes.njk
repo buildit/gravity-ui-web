@@ -15,7 +15,7 @@
 {% endmacro -%}
 
 {%- macro colorSchemeTable(tableData) %}
-<table>
+<table class="grav-u-font-size-minus-2">
   {% for row in tableData %}
     <tr>
       {% if loop.first %}
@@ -50,10 +50,10 @@
 </table>
 {% endmacro -%}
 
-{% for schemeName, schemeTableData in colorSchemes %}
-<section class="sg-color-scheme grav-u-color-scheme-{{ schemeName }}">
-  <h4>{{ schemeName | title }} color scheme</h4>
-  <p>Can be applied to containers using the <code>grav-u-color-scheme-{{ schemeName }}</code> utility class.</p>
-  {{ colorSchemeTable(schemeTableData) | safe }}
+{% for schemeData in colorSchemes %}
+<section class="sg-color-scheme grav-u-color-scheme-{{ schemeData.kebabName }}">
+  <h4>{{ schemeData.humanName | title }} color scheme</h4>
+  <p>Can be applied to containers using the <code>grav-u-color-scheme-{{ schemeData.kebabName }}</code> utility class.</p>
+  {{ colorSchemeTable( schemeData.table ) | safe }}
 </section>
 {% endfor %}

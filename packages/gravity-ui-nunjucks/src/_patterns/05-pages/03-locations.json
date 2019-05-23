@@ -118,6 +118,7 @@
   ],
 
   "footer": {
+    "class": "grav-u-color-scheme-contrast",
     "copy": "made with ❤️",
     "social": [
       {

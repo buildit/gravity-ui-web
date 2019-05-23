@@ -1,22 +1,19 @@
-a {
-  font-weight: grav-font-weight('primary', 'bold');
+a[href] {
+  &:link {
+    @include grav-color-grp-b-apply('color', 'control', true);
+  }
 
-  &[href] {
-    &:link {
-      @include grav-color-grp-b-apply('color', 'control', true);
-    }
+  &:visited {
+    @include grav-color-grp-b-apply('color', 'control-alt', true);
+  }
 
-    &:visited {
-      @include grav-color-grp-b-apply('color', 'control-alt', true);
-    }
+  &:hover,
+  &:focus {
+    @include grav-color-grp-b-apply('color', 'control-emphasis', true);
+  }
 
-    &:hover {
-      @include grav-color-grp-b-apply('color', 'control-emphasis', true);
-    }
-
-    &:active {
-      @include grav-color-grp-b-apply('color', 'control-active', true);
-    }
+  &:active {
+    @include grav-color-grp-b-apply('color', 'control-active', true);
   }
 }
 
@@ -29,4 +26,9 @@ code,
 kbd,
 samp {
   font-family: grav-font-stack('mono');
+}
+
+mark {
+  @include grav-color-grp-a-apply('color', 'accent-attention', true);
+  @include grav-color-grp-b-apply('background-color', 'accent-attention', true);
 }

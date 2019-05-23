@@ -60,11 +60,14 @@
     }
   }
 
-  > a:hover::after {
-    opacity: 0.75;
-  }
+  > a:hover,
+  > a:focus {
+    &::after {
+      opacity: 0.75;
+    }
 
-  > a:hover > svg {
-    opacity: 1;
+    > svg {
+      opacity: 1;
+    }
   }
 }

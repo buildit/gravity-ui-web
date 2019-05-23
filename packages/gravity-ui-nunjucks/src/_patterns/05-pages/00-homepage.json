@@ -172,7 +172,7 @@
   ],
 
   "footer": {
-    "class": "grav-c-footer-no-margin",
+    "class": "grav-u-color-scheme-contrast",
     "copy": "made with ❤️",
     "social": [
       {
