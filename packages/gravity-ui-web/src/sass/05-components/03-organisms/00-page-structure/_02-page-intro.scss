@@ -15,8 +15,6 @@
 
   p,
   time {
-    @include grav-font-size(-1);
-
     @media all and (min-width: grav-breakpoint(large)) {
       max-width: 44rem;
     }
