@@ -27,18 +27,18 @@
   }
 
   img {
-    @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-l);
+    @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-s);
 
     width: 100%;
     max-height: 30rem;
     min-height: 16rem;
     object-fit: cover;
 
-    @media all and (max-width: grav-breakpoint(small)) {
-      @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-s);
+    @media all and (min-width: grav-breakpoint(medium)) {
+      @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-l);
     }
 
-    @media all and (min-width: grav-breakpoint(medium)) {
+    @media all and (min-width: grav-breakpoint(large)) {
       @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-l * $grav-sp-ostentatious-padding-left-multiplier);
     }
   }

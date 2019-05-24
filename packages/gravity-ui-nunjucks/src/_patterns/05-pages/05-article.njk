@@ -14,16 +14,7 @@
   </article>
   <hr />
   <aside class="grav-o-container">
-    <ul class="grav-c-related-items">
-      {% for item in relatedItems %}
-        <li>
-          <span>{{ item.title }}</span>
-          <a href="{{ item.link }}">
-            {{ item.text }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+    {% include 'organisms-related-items' %}
   </aside>
 </main>
 {%- endblock -%}
