@@ -1,4 +1,3 @@
-
 // Output @font-face declarations for all fonts defined in $grav-fonts
 @each $font-family, $font-weights in $grav-font-faces {
   @each $font-weight, $font-styles in $font-weights {

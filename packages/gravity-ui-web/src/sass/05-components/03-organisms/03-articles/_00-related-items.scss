@@ -4,7 +4,7 @@
   text-align: center;
 
   > li {
-    max-width: 540px;
+    max-width: grav-px2rem(540); // equivalent to 540px
     margin-right: auto;
     margin-left: auto;
 

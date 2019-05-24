@@ -1,4 +1,3 @@
-
 /// Internal helper to return a given typeface's map
 @function grav-typeface($name) {
   @if (not map-has-key($grav-typefaces, $name)) {

@@ -18,6 +18,9 @@
   * Karl Groves' Diagnosic CSS - http://www.karlgroves.com/2013/09/07/diagnostic-css-super-quick-web-accessibility-testing/
 */
 
+@import './00-settings/settings.all';
+@import './01-tools/tools.all';
+
 // ====================================================================
 // Mixins for highlighting offending items on the page
 // ====================================================================
@@ -29,23 +32,27 @@
   the top left corner of the element. Note, that this will set
   the element's position property to "relative"!
 */
-@mixin highlight($highlight-color, $message) {
-  outline: 3px solid $highlight-color;
+@mixin highlight($accent-color-name, $message) {
+  $outline-color: var(#{grav-color-grp-b-prop-name($accent-color-name)});
+  $text-color: var(#{grav-color-grp-a-prop-name($accent-color-name)});
+
+  outline: grav-px2rem(3) solid $outline-color;
 
   @if type-of($message) == string and  str-length($message) > 0 {
     position: relative;
 
     &::after {
+      @include grav-font-size(-1);
+
       content: $message;
       display: block;
       position: absolute;
       top: 0;
       left: 0;
       padding: 0.3rem;
-      background-color: rgba($highlight-color, 0.7);
+      background-color: $outline-color;
       border-radius: 0 0 0.5rem;
-      color: #fff;
-      font-size: 14px;
+      color: $text-color;
       font-weight: bold;
     }
   }
@@ -55,7 +62,7 @@
   Highlights elements with errors in red.
 */
 @mixin highlight-error($message: '') {
-  @include highlight(red, $message);
+  @include highlight('accent-danger', $message);
 }
 
 

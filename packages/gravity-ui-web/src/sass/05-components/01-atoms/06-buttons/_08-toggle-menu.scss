@@ -1,10 +1,10 @@
 .grav-c-toggle-menu {
-  $grav-sp-icon: 11px;
-  $grav-tr-icon-hover: 2px;
+  $grav-sp-icon: grav-px2rem(11);
+  $grav-tr-icon-hover: grav-px2rem(2);
   $grav-tr-icon-rotate: 135deg;
   $grav-tr-icon-scale: 1.2;
-  $grav-size-icon: 50px;
-  $grav-width-icon: 33px;
+  $grav-size-icon: grav-px2rem(50);
+  $grav-width-icon: grav-px2rem(33);
 
   height: $grav-size-icon;
   margin-top: 0;

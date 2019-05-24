@@ -3,9 +3,8 @@ body > footer {
   @include grav-font-size(-1);
 
   padding: $grav-sp-l 0;
-  border-bottom-width: 2px;
+  border-bottom-width: $grav-st-thickness-medium;
   border-bottom-style: solid;
-  font-size: 16px;
 
   * {
     @media all and (max-width: grav-breakpoint(medium)) {
@@ -30,7 +29,7 @@ body > footer {
 
     @media all and (min-width: grav-breakpoint(medium)) {
       &:first-of-type {
-        padding-right: 100px;
+        padding-right: grav-px2rem(100);
       }
     }
 
