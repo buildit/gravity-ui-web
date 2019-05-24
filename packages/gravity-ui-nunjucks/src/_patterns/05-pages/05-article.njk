@@ -1,0 +1,20 @@
+{%- from 'organisms-page-intro' import pageIntroContents -%}
+
+{%- extends 'templates-basic-page' -%}
+
+{%- block pageContent %}
+<main>
+  <article class="grav-o-container grav-c-article">
+    <header class="grav-c-page-intro">
+      {{ pageIntroContents(article.title, article.description, article.dateTime, article.img) | safe }}
+    </header>
+    <div class="grav-c-ostentatious-copy">
+      {{ article.copy | safe }}
+    </div>
+  </article>
+  <hr />
+  <aside class="grav-o-container">
+    {% include 'organisms-related-items' %}
+  </aside>
+</main>
+{%- endblock -%}

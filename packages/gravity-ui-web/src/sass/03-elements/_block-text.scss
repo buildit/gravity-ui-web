@@ -1,8 +1,15 @@
 pre {
   font-family: grav-font-stack('mono');
+  overflow: scroll;
 }
 
 blockquote {
-  @include grav-font-size(4);
-  text-align: center;
+  @include grav-font-size(3);
+  margin-top: $grav-sp-vertical-gap-l;
+  margin-bottom: $grav-sp-vertical-gap-l;
+}
+
+hr {
+  @include grav-font-size(3);
+  margin-top: $grav-sp-vertical-gap-l;
 }

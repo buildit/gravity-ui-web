@@ -32,3 +32,9 @@ mark {
   @include grav-color-grp-a-apply('color', 'accent-attention', true);
   @include grav-color-grp-b-apply('background-color', 'accent-attention', true);
 }
+
+cite {
+  @include grav-font-size(-2);
+  @include grav-color-grp-b-apply('color', 'neutral-subtle', true);
+  font-style: normal;
+}
