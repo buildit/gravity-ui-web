@@ -45,11 +45,17 @@ $grav-sp-inset-squished-s: $grav-sp-s $grav-sp-m;
 $grav-sp-inset-squished-m: $grav-sp-m $grav-sp-l;
 $grav-sp-inset-squished-l: $grav-sp-l $grav-sp-xl;
 
-
 // Outer margin between page content and viewport edge on narrow viewports
 $grav-sp-page-content-inset: $grav-sp-m;
+
+// Multiplier for ostentatious copy on medium and above viewports
+$grav-sp-ostentatious-padding-left-multiplier: 8;
 
 // Standard vertical gap between successive block elements
 // Note that is expressed as an `em` value, so it will scale according to the
 // `font-size` of the block elements it affects.
-$grav-sp-vertical-gap: 1em;
+$grav-sp-vertical-gap: 1.5em;
+// Larger vertical gap for use on specific block elements
+// Note that is expressed as an `em` value, so it will scale according to the
+// `font-size` of the block elements it affects.
+$grav-sp-vertical-gap-l: 2.5em;

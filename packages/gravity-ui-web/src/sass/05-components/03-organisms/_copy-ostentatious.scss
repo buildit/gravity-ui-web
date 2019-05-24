@@ -1,0 +1,36 @@
+.grav-c-ostentatious-copy {
+  padding-right: $grav-sp-s;
+  padding-left: $grav-sp-s;
+
+  > blockquote {
+    margin-right: -$grav-sp-s;
+    margin-left: -$grav-sp-s;
+  }
+
+  > * {
+    display: block;
+
+    + * {
+      margin-top: $grav-sp-vertical-gap-l;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media all and (min-width: grav-breakpoint(medium)) {
+    padding-right: $grav-sp-l;
+    padding-left: $grav-sp-l;
+
+    > blockquote {
+      margin-right: -$grav-sp-l;
+      margin-left: -$grav-sp-l;
+    }
+  }
+
+  @media all and (min-width: grav-breakpoint(large)) {
+    padding-left: $grav-sp-l * $grav-sp-ostentatious-padding-left-multiplier;
+  }
+}

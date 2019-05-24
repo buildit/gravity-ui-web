@@ -1,0 +1,43 @@
+.grav-c-page-intro {
+  $grav-c-page-intro-notch-size: var(--grav-fs-plus-4);
+
+  @media all and (min-width: grav-breakpoint(medium)) {
+    margin-top: $grav-sp-vertical-gap-l;
+  }
+
+  > * {
+    display: block;
+  }
+
+  h1 {
+    @include grav-font-size(6);
+  }
+
+  p,
+  time {
+    @media all and (min-width: grav-breakpoint(large)) {
+      max-width: 44rem;
+    }
+  }
+
+  time {
+    @include grav-color-grp-b-apply('color', 'neutral-subtle', true);
+  }
+
+  img {
+    @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-s);
+
+    width: 100%;
+    max-height: 30rem;
+    min-height: 16rem;
+    object-fit: cover;
+
+    @media all and (min-width: grav-breakpoint(medium)) {
+      @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-l);
+    }
+
+    @media all and (min-width: grav-breakpoint(large)) {
+      @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-l * $grav-sp-ostentatious-padding-left-multiplier);
+    }
+  }
+}
