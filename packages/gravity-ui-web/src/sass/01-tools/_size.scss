@@ -1,0 +1,9 @@
+/// Converts a px value to the rem equivalent.
+///
+/// Note, that this conversion assumes the typical default value
+/// of 16px / 1rem. If users have changed their OS or browser's
+/// default text sizes, then the REM values will appear bigger.
+/// But, that's the behaviour we want anyway! ;-)
+@function grav-px2rem($unitless-px-value) {
+  @return ($unitless-px-value / 16) * 1rem;
+}

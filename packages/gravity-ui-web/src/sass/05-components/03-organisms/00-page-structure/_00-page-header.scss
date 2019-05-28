@@ -1,4 +1,4 @@
-$grav-page-heading-logo-width: 250px;
+$grav-page-heading-logo-width: grav-px2rem(250);
 $grav-page-heading-trigger-breakpoint: grav-breakpoint(medium);
 
 // Note: The Page Header always spans the full width of the viewport. This
@@ -23,7 +23,7 @@ body > header {
 
   .grav-c-logo {
     display: block;
-    max-height: 33px; // Otherwise IE11 makes it 150px tall :-(
+    max-height: grav-px2rem(33); // Otherwise IE11 makes it 150px tall :-(
 
     @media (min-width: $grav-page-heading-trigger-breakpoint) {
       width: 100%;
@@ -94,7 +94,7 @@ body > header {
   }
 
   @media (min-width: $grav-page-heading-trigger-breakpoint) {
-    max-width: 250px;
+    max-width: grav-px2rem(250);
     margin: $grav-sp-m $grav-sp-m 0 0;
     flex-shrink: 0;
   }

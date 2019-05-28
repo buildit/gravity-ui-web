@@ -4,8 +4,10 @@
 
 $grav-st-style: solid;
 
-$grav-st-thickness: 1px;
-$grav-st-thickness-medium: 2px;
-$grav-st-thickness-large: 5px;
+// Can't use grav-px2rem() function here because it gets
+// defined later, in the tools
+$grav-st-thickness: 1 / 16 * 1rem; // 1px
+$grav-st-thickness-medium: 2 / 16 * 1rem; // 2px
+$grav-st-thickness-large: 5 / 16 * 1rem; // 5px
 
-$grav-st-radius: 5px;
+$grav-st-radius: 5 / 16 * 1rem; // 5px
