@@ -29,7 +29,6 @@ function distPath(...pathSegements) {
   return pkgRootPath(bldConsts.distDirname, ...pathSegements);
 }
 
-
 module.exports = {
   /**
    * Takes a sequence of path segments relative to the package's
@@ -78,4 +77,4 @@ module.exports = {
    *        directory or file.
    */
   distGravityPath: (...pathSegements) => distPath('gravity', ...pathSegements),
-}
+};

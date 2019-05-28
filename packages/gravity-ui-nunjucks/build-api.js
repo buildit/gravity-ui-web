@@ -25,7 +25,6 @@ const bldConsts = require('./build-consts.js');
 
 const pkgDir = __dirname;
 
-
 // Resolves the given path segments relative to the UI lib dist dir
 function distPath(...pathSegements) {
   return path.resolve(pkgDir, bldConsts.distDirname, ...pathSegements);
