@@ -1,4 +1,9 @@
 language: node_js
+addons:
+  apt:
+    packages:
+      - "python3"
+      - "python3-pip"
 # Not specifying Node version here, so that Travis uses .nvmrc
 
 env:
@@ -14,7 +19,7 @@ script:
   - npm run-script styleguide
   - npm run test
 before_deploy:
-  - pip install --user awscli
+  - pip3 install --user awscli
   - ./scripts/track_file_sizes.sh
 deploy:
   - provider: script
