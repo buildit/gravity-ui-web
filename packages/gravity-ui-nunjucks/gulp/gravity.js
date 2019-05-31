@@ -7,8 +7,7 @@ const { serverReload, serverRefreshCss } = require('./patternlab.js');
 
 const taskNamePrefix = 'gravity:';
 
-
-function makeCopyCssTask( allowEmpty = false ) {
+function makeCopyCssTask(allowEmpty = false) {
   function copyCss() {
     return gulp.src(uiLibPaths.distPath('**', '*.css'), { allowEmpty })
       .pipe(gulp.dest(pkgPaths.distGravityPath()));
@@ -19,8 +18,7 @@ function makeCopyCssTask( allowEmpty = false ) {
   return copyCss;
 }
 
-
-function makeCopyOtherTask( allowEmpty = false ) {
+function makeCopyOtherTask(allowEmpty = false) {
   function copyOther() {
     return gulp.src(uiLibPaths.distPath('**', '*'), { allowEmpty })
       .pipe(filter(['**', '!**/*.css']))
@@ -32,38 +30,38 @@ function makeCopyOtherTask( allowEmpty = false ) {
   return copyOther;
 }
 
-
 function watchCss() {
   gulp.watch(
     uiLibPaths.distPath('**', '*.css'),
-    gulp.series(makeCopyCssTask(true), serverRefreshCss)
+    gulp.series(makeCopyCssTask(true), serverRefreshCss),
   );
 }
-watchCss.displayName = taskNamePrefix + 'css:watch';
+watchCss.displayName = `${taskNamePrefix}css:watch`;
 watchCss.description = 'Watches for changes to Gravity\'s CSS files.';
-
 
 function watchOther() {
   gulp.watch(
     [
       uiLibPaths.distPath('**', '*'),
-      `!${uiLibPaths.distPath('**', '*.css')}`
+      `!${uiLibPaths.distPath('**', '*.css')}`,
     ],
-    gulp.series(makeCopyOtherTask(true), serverReload)
+    gulp.series(makeCopyOtherTask(true), serverReload),
   );
 }
-watchOther.displayName = taskNamePrefix + 'other:watch';
+watchOther.displayName = `${taskNamePrefix}other:watch`;
 watchOther.description = 'Watches for changes to Gravity\'s other assets.';
 
-
 module.exports = {
-  makeCopyTask: (allowEmpty = false) => gulp.parallel(makeCopyCssTask(allowEmpty), makeCopyOtherTask(allowEmpty)),
+  makeCopyTask: (allowEmpty = false) => gulp.parallel(
+    makeCopyCssTask(allowEmpty),
+    makeCopyOtherTask(allowEmpty),
+  ),
 
   // Watch task should be able to launch with no errors, even if `gravity-ui-web`
   // has not yet been built. This is to support Lerna running `npm start`
   // for `gravity-ui-web` and `gravity-ui-nunjucks` concurrently.
   watch: gulp.series(
     gulp.parallel(makeCopyCssTask(true), makeCopyOtherTask(true)),
-    gulp.parallel(watchCss, watchOther)
-  )
+    gulp.parallel(watchCss, watchOther),
+  ),
 };
