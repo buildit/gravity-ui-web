@@ -13,7 +13,7 @@
     "clean": "npm run clean:cdn && lerna run clean"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
+    "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
     "@commitlint/travis-cli": "^7.5.2",
     "bundlesize": "^0.17.1",
