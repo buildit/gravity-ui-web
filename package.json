@@ -15,7 +15,7 @@
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
-    "@commitlint/travis-cli": "^7.5.2",
+    "@commitlint/travis-cli": "^8.0.0",
     "bundlesize": "^0.17.1",
     "commitizen": "^3.1.1",
     "cz-lerna-changelog": "^2.0.2",
