@@ -1,0 +1,42 @@
+{
+  "text": "<strong>We're worldwide.</strong><br/>That's right next to you.",
+  "backgroundImage": "https://picsum.photos/id/135/1920/1080",
+  "links": [
+    {
+      "text": "Bangalore",
+      "link": "#"
+    },
+    {
+      "text": "Dallas",
+      "link": "#"
+    },
+    {
+      "text": "Denver",
+      "link": "#"
+    },
+    {
+      "text": "Dublin",
+      "link": "#"
+    },
+    {
+      "text": "Edinburgh",
+      "link": "#"
+    },
+    {
+      "text": "Gdansk",
+      "link": "#"
+    },
+    {
+      "text": "London",
+      "link": "#"
+    },
+    {
+      "text": "New York",
+      "link": "#"
+    },
+    {
+      "text": "Warsaw",
+      "link": "#"
+    }
+  ]
+}

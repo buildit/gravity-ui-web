@@ -1,5 +1,9 @@
-<ul class="grav-c-three-column-list-justified">
-  {% for item in list -%}
-    <li><a href="{{ item.link }}">{{ item.text }}</a></li>
-  {%- endfor %}
-</ul>
+{%- macro threeColumnListJustified(list) -%}
+  <ul class="grav-c-three-column-list-justified">
+    {% for item in list -%}
+      <li><a href="{{ item.link }}">{{ item.text }}</a></li>
+    {%- endfor %}
+  </ul>
+{%- endmacro -%}
+
+{{- threeColumnListJustified(list) | safe -}}

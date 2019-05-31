@@ -1,0 +1,44 @@
+.grav-c-callout {
+  position: relative;
+
+  p {
+    font-size: 1.5rem;
+    line-height: 100%;
+
+    @media all and (min-width: grav-breakpoint(small)) {
+      margin-right: 1.5em;
+    }
+
+    @media all and (min-width: grav-breakpoint(medium)) {
+      font-size: 2.25rem;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+
+  .grav-c-callout__columns {
+    max-width: $grav-page-content-max-width;
+    margin: $grav-sp-vertical-gap auto;
+    padding: 0 $grav-sp-m;
+
+    @media all and (min-width: grav-breakpoint(small)) {
+      display: flex;
+      margin-bottom: $grav-sp-vertical-gap;
+      justify-content: space-between;
+    }
+  }
+
+  .grav-c-three-column-list-justified {
+    max-width: 18em;
+  }
+}
