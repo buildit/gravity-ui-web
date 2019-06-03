@@ -14,8 +14,7 @@ script:
   - npm run-script styleguide
   - npm run test
 before_deploy:
-  - sudo apt-get -y install python3
-  - sudo apt-get -y install python3-pip
+  - pyenv global 3.6.1
   - pip3 install --user awscli
   - ./scripts/track_file_sizes.sh
 deploy:
