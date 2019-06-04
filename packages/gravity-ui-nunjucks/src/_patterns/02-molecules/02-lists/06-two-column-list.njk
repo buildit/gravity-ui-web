@@ -1,0 +1,9 @@
+{%- macro twoColumnList(list) -%}
+  <ul class="grav-c-two-column-list">
+    {% for item in list -%}
+      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+    {%- endfor %}
+  </ul>
+{%- endmacro -%}
+
+{{- twoColumnList(list) | safe -}}

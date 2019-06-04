@@ -1,0 +1,26 @@
+.grav-c-two-column-list {
+  padding: 0;
+  list-style: none;
+
+  > li {
+    margin-top: 0.5rem;
+  }
+
+  @media all and (min-width: grav-breakpoint(small)) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    > li {
+      width: 50%;
+      padding-right: 0;
+      padding-left: 0;
+      flex-grow: 1;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+  }
+}
