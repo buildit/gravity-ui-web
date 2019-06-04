@@ -54,26 +54,48 @@
       border-radius: 0 0 0.5rem;
       color: $text-color;
       font-weight: bold;
+      line-height: 1;
     }
   }
 }
 
 /**
-  Highlights elements with errors in red.
+  Highlights elements with errors in danger accent color
 */
 @mixin highlight-error($message: '') {
   @include highlight('accent-danger', $message);
 }
 
+/**
+  Highlights elements with warnings in attention accent color
+*/
+@mixin highlight-warning($message: '') {
+  @include highlight('accent-attention', $message);
+}
+
 
 // ====================================================================
-// Tests for misuse of Gravity's classes and components
+// Tests for misuse of Gravity's styles, classes and components
 // ====================================================================
 
 .grav-o-container .grav-o-container {
   @include highlight-error('Nesting of .grav-o-container is not allowed.');
 }
 
+body meta:first-child,
+body link:first-child,
+body script:first-child,
+body style:first-child,
+body [hidden]:first-child {
+  @include highlight-warning('Invisible first child may cause following visible element to have unwanted top margin.');
+
+  // Make element visible, so that we can show error
+  display: block;
+  height: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+}
 
 // ====================================================================
 // Tests for generic HTML & CSS naughtiness
