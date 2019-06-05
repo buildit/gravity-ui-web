@@ -1,6 +1,4 @@
 .grav-c-callout {
-  position: relative;
-
   p {
     @include grav-font-size(2);
     line-height: 100%;
@@ -12,18 +10,6 @@
     @media all and (min-width: grav-breakpoint(medium)) {
       @include grav-font-size(3);
     }
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    margin: 0;
-    object-fit: cover;
-    object-position: center;
-    z-index: -1;
   }
 
   .grav-c-callout__columns {
