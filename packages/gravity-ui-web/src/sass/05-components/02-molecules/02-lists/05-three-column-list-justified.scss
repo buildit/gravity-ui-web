@@ -2,6 +2,10 @@
   padding: 0;
   list-style: none;
 
+  > li {
+    margin-top: 0.5rem;
+  }
+
   @media all and (min-width: grav-breakpoint(small)) {
     display: flex;
     flex-wrap: wrap;
@@ -9,20 +13,19 @@
 
     > li {
       width: 33.3%;
-      padding-right: $grav-sp-m;
+      padding-right: 0;
+      padding-left: 0;
       flex-grow: 1;
 
       &:nth-child(3n+2) {
-        padding-left: $grav-sp-m;
         text-align: center;
       }
 
       &:nth-child(3n) {
-        padding-right: 0;
-        padding-left: $grav-sp-m;
         text-align: right;
       }
 
+      &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3) {
         margin-top: 0;
