@@ -4,11 +4,11 @@
 {# Reusable macro for other templates to import: #}
 {%- macro locationCard(location) %}
   {% set mapImage -%}
-    {{ image(location.img.src, location.img.alt ) | safe }}
+    {{ image(location.img.src, location.img.alt ) | safe }}<br>View map
   {%- endset -%}
 
   <div class="grav-c-location-card">
-    <h2>{{location.name}}</h2>
+    <h2>{{ link( location.name, "#", false) }}</h2>
     <p>
       {% if location.addressline1 %}{{location.addressline1}}<br>{% endif %}
       {% if location.addressline2 %}{{location.addressline2}}<br>{% endif %}
