@@ -4,14 +4,13 @@
 {%- from 'molecules-steps' import steps -%}
 {%- from 'molecules-two-column-list' import twoColumnList -%}
 
-{%- block pageContent %}
-  <main class="grav-o-container">
-    <h1>{{title}}</h1>
-    {{ intro | safe }}
-
-    {% for location in locations -%}
-      <h2>{{ location.city }}, {{ location.country }}</h2>
+{%- block mainSections %}
+  {% for location in locations -%}
+    <section class="grav-o-container">
+      <header>
+        <h2>{{ location.city }}, {{ location.country }}</h2>
+      </header>
       {{ twoColumnList(location.jobs) | safe }}
-    {%- endfor %}
-  </main>
+    </section>
+  {%- endfor %}
 {%- endblock -%}

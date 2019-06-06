@@ -1,14 +1,5 @@
 {
-  "header": {
-    "links": [
-      {
-        "url": false
-      }
-    ]
-  },
-
-  "intro": "<p>Intro blurb. Phasellus tempus, orci non mattis sagittis.</p>",
-
+  "description": "Intro blurb. Phasellus tempus, orci non mattis sagittis.",
   "locations": [
     {
       "city": "The Uncanny Valley",
