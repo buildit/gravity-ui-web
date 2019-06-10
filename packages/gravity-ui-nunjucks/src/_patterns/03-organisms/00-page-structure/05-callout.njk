@@ -1,8 +1,12 @@
 {%- from 'molecules-three-column-list-justified' import threeColumnListJustified -%}
 
-<div class="grav-c-callout">
-  <div class="grav-c-callout__columns">
-    <p>{{ text | safe }}</p>
-    {{- threeColumnListJustified(links) | safe -}}
+<div style="background-color: black">
+  <div class="grav-o-container">
+    <div class="grav-c-callout">
+      <div class="grav-c-callout__columns">
+        <p>{{ text | safe }}</p>
+        {{- threeColumnListJustified(links) | safe -}}
+      </div>
+    </div>
   </div>
 </div>

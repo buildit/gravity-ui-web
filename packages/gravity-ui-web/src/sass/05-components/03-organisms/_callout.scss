@@ -15,7 +15,6 @@
   .grav-c-callout__columns {
     max-width: $grav-page-content-max-width;
     margin: $grav-sp-vertical-gap auto;
-    padding: 0 $grav-sp-m;
 
     @media all and (min-width: grav-breakpoint(small)) {
       display: flex;
