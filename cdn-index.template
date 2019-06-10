@@ -3,6 +3,7 @@
 <body>
 <h1>Versions</h1>
 <ul>{versionlist}</ul>
-<a href="https://github.com/buildit/gravity-ui-web/blob/develop/packages/gravity-ui-web/CHANGELOG.md">See change log</a> | <a href="filesizehistory.html">File size history</a>
+<a href="https://github.com/buildit/gravity-ui-web/blob/develop/packages/gravity-ui-web/CHANGELOG.md">See change log</a>
+<a href="filesizehistory.html">File size history</a>
 </body>
 </html>
