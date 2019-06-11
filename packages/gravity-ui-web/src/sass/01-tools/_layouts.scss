@@ -1,0 +1,34 @@
+// a mixin to add column based layout styles
+@mixin grav-l-column-layout($column-count: 2, $include-list-styles: false) {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 0;
+  padding-left: 0;
+
+  @if $include-list-styles == true {
+    list-style: none;
+  }
+
+  > * {
+    width: calc((100% - #{(($column-count - 1) * 2) * $grav-sp-m}) / #{$column-count});
+    margin-right: $grav-sp-m;
+    margin-left: $grav-sp-m;
+  }
+
+  > *:nth-child(#{$column-count}n) {
+    margin-right: 0;
+  }
+
+  > *:nth-child(#{$column-count}n - #{$column-count - 1}) {
+    margin-left: 0;
+  }
+
+  > *:nth-child(-n + #{$column-count}) {
+    margin-top: 0;
+  }
+
+  > li {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
