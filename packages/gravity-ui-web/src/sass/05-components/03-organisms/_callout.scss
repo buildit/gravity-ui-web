@@ -1,10 +1,11 @@
 .grav-c-callout {
   p {
     @include grav-font-size(2);
-    line-height: 100%;
+    line-height: 1.2;
 
     @media all and (min-width: grav-breakpoint(small)) {
-      margin-right: 1.5em;
+      max-width: 24rem;
+      margin-right: $grav-sp-l;
     }
 
     @media all and (min-width: grav-breakpoint(medium)) {
@@ -13,18 +14,19 @@
   }
 
   .grav-c-callout__columns {
-    max-width: $grav-page-content-max-width;
-    margin: $grav-sp-vertical-gap auto;
-    padding: 0 $grav-sp-m;
+    @include grav-l-container;
+
+    padding-top: $grav-sp-vertical-gap;
+    padding-bottom: $grav-sp-vertical-gap;
 
     @media all and (min-width: grav-breakpoint(small)) {
       display: flex;
-      margin-bottom: $grav-sp-vertical-gap;
+      align-items: center;
       justify-content: space-between;
     }
   }
 
   .grav-c-three-column-list-justified {
-    max-width: 18em;
+    max-width: 28rem;
   }
 }
