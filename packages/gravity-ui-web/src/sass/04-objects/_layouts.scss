@@ -1,0 +1,28 @@
+// some utility classes to use the grav-l-column-layout mixin directly as classes with sensible breakpoints.
+.grav-o-two-column {
+  @media (min-width: grav-breakpoint(small)) {
+    @include grav-l-column-layout(2);
+  }
+}
+
+.grav-o-up-to-four-column {
+  @media all and (min-width: grav-breakpoint(large)) {
+    @include grav-l-column-layout(4);
+  }
+  @media all and (min-width: grav-breakpoint(medium)) and (max-width: grav-breakpoint(large)) {
+    @include grav-l-column-layout(3);
+  }
+  @media all and (min-width: grav-breakpoint(small)) and (max-width: grav-breakpoint(medium)) {
+    @include grav-l-column-layout(2);
+  }
+}
+
+// utility class to remove list styles which might interfere with column's layout purposes
+.grav-o-column-list {
+  @include grav-l-column-list;
+}
+
+// utility class to expand items in column layouts if the final row is not full.
+.grav-o-column-no-danglies {
+  @include grav-l-column-no-danglies;
+}

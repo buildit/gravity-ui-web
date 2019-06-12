@@ -1,18 +1,14 @@
 // a mixin to add column based layout styles
-@mixin grav-l-column-layout($column-count: 2, $include-list-styles: false) {
+@mixin grav-l-column-layout($column-count: 2, $column-spacing: $grav-sp-m) {
   display: flex;
   flex-wrap: wrap;
   padding-right: 0;
   padding-left: 0;
 
-  @if $include-list-styles == true {
-    list-style: none;
-  }
-
   > * {
-    width: calc((100% - #{(($column-count - 1) * 2) * $grav-sp-m}) / #{$column-count});
-    margin-right: $grav-sp-m;
-    margin-left: $grav-sp-m;
+    width: calc((100% - #{(($column-count - 1) * 2) * $column-spacing}) / #{$column-count});
+    margin-right: $column-spacing;
+    margin-left: $column-spacing;
   }
 
   > *:nth-child(#{$column-count}n) {
@@ -30,5 +26,28 @@
   > li {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+// a mixin remove list styles which might interfere with column's layout purposes
+@mixin grav-l-column-list {
+  padding-right: 0;
+  padding-left: 0;
+  list-style: none;
+
+  > li {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+// a mixin to expand items in column layouts if the final row is not full.
+@mixin grav-l-column-no-danglies {
+  > * {
+    flex-grow: 1;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

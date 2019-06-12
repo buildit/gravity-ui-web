@@ -1,4 +1,3 @@
-{%- from 'atoms-two-columns-text' import twoColumnsText -%}
 {%- from 'molecules-list-inline-row' import listInlineRow -%}
 {%- from 'molecules-list-cards-basic' import listCardsBasic -%}
 
@@ -16,10 +15,6 @@
     {%- if contentItem.blockquote -%}
       {%- set htmlContent = contentItem.blockquote -%}
       {% include "atoms-blockquote" %}
-    {%- endif -%}
-
-    {%- if contentItem.twoColumnsList -%}
-      {{ twoColumnsText(contentItem.twoColumnsList) | safe }}
     {%- endif -%}
 
     {# Molecules #}

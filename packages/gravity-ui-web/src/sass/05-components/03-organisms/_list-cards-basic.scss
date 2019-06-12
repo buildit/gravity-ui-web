@@ -1,31 +1,28 @@
 .grav-c-list-cards-basic {
-  padding: 0;
-  list-style-type: none;
+  @include grav-l-column-list;
 
   > li + li {
     margin-top: $grav-sp-xl;
   }
 
   @media all and (min-width: grav-breakpoint(large)) {
-    display: flex;
-    flex-wrap: wrap;
+    @include grav-l-column-layout(3, $grav-sp-l);
+    @include grav-l-column-no-danglies;
+
     margin-right: -$grav-sp-l;
     margin-left: -$grav-sp-l;
 
+    > * {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    > li {
+      padding-right: $grav-sp-l;
+      padding-left: $grav-sp-l;
+    }
+
     > {
-      // 2 col layout
-      li {
-        flex: 50%;
-        padding-right: $grav-sp-l;
-        padding-left: $grav-sp-l;
-      }
-
-      // Remove top margin from 2nd card
-      // since it appears at top of list now
-      li:nth-child(2) {
-        margin-top: 0;
-      }
-
       // Callouts go full-width
       .grav-c-list-cards-basic__item--callout {
         flex-basis: 100%;
