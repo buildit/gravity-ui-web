@@ -6,7 +6,7 @@
   }
 
   @media all and (min-width: grav-breakpoint(large)) {
-    @include grav-l-column-layout(3, $grav-sp-l);
+    @include grav-l-column-layout(2, $grav-sp-l);
     @include grav-l-column-no-danglies;
 
     margin-right: -$grav-sp-l;

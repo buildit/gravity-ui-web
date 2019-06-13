@@ -10,8 +10,8 @@
   </ul>
 {%- endmacro -%}
 
-{%- macro nColumnList(list) -%}
-    <ul class="grav-o-up-to-four-column grav-o-column-list">
+{%- macro fourColumnList(list) -%}
+    <ul class="grav-o-four-column grav-o-column-list">
     {% for item in list -%}
       <li>
         {% if item.url %}<a href="{{ item.url }}">{% endif %}
@@ -27,6 +27,6 @@
   {{- twoColumnList(list) | safe -}}
 </section>
 <section>
-  <h2>Up to Four Column List</h2>
-  {{- nColumnList(list) | safe -}}
+  <h2>Four Column List</h2>
+  {{- fourColumnList(list) | safe -}}
 </section>
