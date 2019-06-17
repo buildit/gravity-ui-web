@@ -3,24 +3,16 @@
   $column-spacing: $column-gap / 2;
   display: flex;
   flex-wrap: wrap;
+  margin-right: -$column-spacing;
+  margin-left: -$column-spacing;
   padding-right: 0;
   padding-left: 0;
 
   // All children start with margin on their sides
   > * {
-    width: calc((100% - #{(($column-count - 1) * 2) * $column-spacing}) / #{$column-count});
+    width: calc((100% - #{($column-count * 2) * $column-spacing}) / #{$column-count});
     margin-right: $column-spacing;
     margin-left: $column-spacing;
-  }
-
-  // Select the right-most column's children and remove the right margin
-  > *:nth-child(#{$column-count}n) {
-    margin-right: 0;
-  }
-
-  // Select the left-most column's children and remove the left margin
-  > *:nth-child(#{$column-count}n - #{$column-count - 1}) {
-    margin-left: 0;
   }
 
   // Select the top row's children and remove the top margin
@@ -54,5 +46,22 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+// a mixin that can be applied to items in a "no-danglies" column layout
+// to make them span the full width of the parent element.
+@mixin grav-l-column-item-full-width($column-count: 2, $margin-top: $grav-sp-vertical-gap) {
+  flex-basis: 100%;
+
+  // Multi-column layouts remove the top margin of all items in
+  // the first row. If the item being stretched is one of those,
+  // then it will necessarily create a new row and therefore need
+  // its top margin reinstated. Likewise, subsequent items that
+  // would have otherwise been in the first row also need their
+  // top margins reinstated.
+  :not(:first-child),
+  + :nth-child(-n + #{$column-count}) {
+    margin-top: $margin-top;
   }
 }
