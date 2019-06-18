@@ -1,0 +1,16 @@
+{%- extends 'templates-basic-page' -%}
+
+{%- from 'atoms-cta' import cta -%}
+{%- from 'molecules-steps' import steps -%}
+{%- from 'atoms-n-column-list' import twoColumnList -%}
+
+{%- block mainSections %}
+  {% for location in locations -%}
+    <section class="grav-o-container">
+      <header>
+        <h2>{{ location.city }}, {{ location.country }}</h2>
+      </header>
+      {{ twoColumnList(location.jobs) | safe }}
+    </section>
+  {%- endfor %}
+{%- endblock -%}

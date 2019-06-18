@@ -8,8 +8,8 @@
         "text": "About us"
       },
       {
-        "url": "link.pages-careers",
-        "text": "Careers"
+        "url": "link.pages-jobs",
+        "text": "Jobs"
       },
       {
         "url": false,
@@ -97,8 +97,8 @@
       "postcode": "EC2M 2PA",
       "country": "UK",
       "img": {
-        "src": "https://maps.googleapis.com/maps/api/staticmap?format=jpg&key=AIzaSyAa-P3u_B9zTs_DJ_dXRK5og7r3_n7vlT0&maptype=roadmap&scale=2&size=425x300&markers=51.5199873%2C-0.0870466&zoom=17",
-        "alt": "London skline"
+        "src": "https://maps.googleapis.com/maps/api/staticmap?format=jpg&maptype=roadmap&scale=2&size=425x300&markers=51.5199873,-0.0870466&zoom=17",
+        "alt": "London skyline"
       },
       "mapUrl": "https://www.google.com/maps/place/2+Finsbury+Ave,+London+EC2M+2PA/@51.519953,-0.0869968,17z/data=!3m1!4b1!4m5!3m4!1s0x48761caddbaf7049:0x43297396a2bf6fec!8m2!3d51.5199497!4d-0.0848081?hl=en-US&shorturl=1"
     },
@@ -118,29 +118,6 @@
   ],
 
   "footer": {
-    "class": "grav-u-color-scheme-contrast",
-    "copy": "made with ❤️",
-    "social": [
-      {
-        "titleId": "icon-instagram__title",
-        "symbolId": "icon-instagram",
-        "url": "https://www.instagram.com/buildit_tech"
-      },
-      {
-        "titleId": "icon-twitter__title",
-        "symbolId": "icon-twitter",
-        "url": "https://twitter.com/buildit_tech"
-      },
-      {
-        "titleId": "icon-linkedin__title",
-        "symbolId": "icon-linkedin",
-        "url": "https://www.linkedin.com/company/buildit"
-      },
-      {
-        "titleId": "icon-github__title",
-        "symbolId": "icon-github",
-        "url": "https://github.com/buildit"
-      }
-    ]
+    "class": "grav-u-color-scheme-contrast"
   }
 }

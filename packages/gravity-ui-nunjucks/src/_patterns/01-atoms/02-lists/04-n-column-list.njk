@@ -1,0 +1,32 @@
+{%- macro twoColumnList(list) -%}
+  <ul class="grav-o-two-column grav-o-column-list">
+    {% for item in list -%}
+      <li>
+        {% if item.url %}<a href="{{ item.url }}">{% endif %}
+          {{ item.title }}
+          {% if item.url %}</a>{% endif %}
+      </li>
+    {%- endfor %}
+  </ul>
+{%- endmacro -%}
+
+{%- macro fourColumnList(list) -%}
+    <ul class="grav-o-four-column grav-o-column-list">
+    {% for item in list -%}
+      <li>
+        {% if item.url %}<a href="{{ item.url }}">{% endif %}
+          {{ item.title }}
+        {% if item.url %}</a>{% endif %}
+      </li>
+    {%- endfor %}
+  </ul>
+{%- endmacro -%}
+
+<section>
+  <h2>Two Column List</h2>
+  {{- twoColumnList(list) | safe -}}
+</section>
+<section>
+  <h2>Four Column List</h2>
+  {{- fourColumnList(list) | safe -}}
+</section>

@@ -16,21 +16,17 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  h2 {
+  > h2 {
     grid-area: title;
   }
 
-  p {
+  > p {
     margin: 0;
     grid-area: info;
   }
 
-  a {
+  > a {
     margin: 0;
     grid-area: map;
-  }
-
-  img {
-    border-radius: $grav-st-radius;
   }
 }

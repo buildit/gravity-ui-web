@@ -8,12 +8,17 @@
       and replace this block with whatever they
       need.
     #}
-    <div class="grav-o-container">
-      <h1>{{title}}</h1>
-    </div>
-    {% for section in sections -%}
-      {% include 'organisms-section' %}
-    {% endfor %}
+    {% block pageIntro -%}
+      <div class="grav-c-page-intro grav-o-container">
+        <h1>{{title}}</h1>
+        {% if description %}<p>{{ description | safe }}</p>{% endif %}
+      </div>
+    {% endblock %}
+    {% block mainSections -%}
+      {% for section in sections -%}
+        {% include 'organisms-section' %}
+      {% endfor %}
+    {% endblock %}
   {%- endblock -%}
 </main>
 {%- endblock -%}

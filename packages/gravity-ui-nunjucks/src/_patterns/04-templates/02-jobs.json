@@ -1,0 +1,55 @@
+{
+  "description": "Intro blurb. Phasellus tempus, orci non mattis sagittis.",
+  "locations": [
+    {
+      "city": "The Uncanny Valley",
+      "country": "Neverneverland",
+      "jobs": [
+        {
+          "title": "Supreme overloard of delivery",
+          "type": "full-time",
+          "url": "#"
+        },
+        {
+          "title": "UX Wizard",
+          "type": "full-time",
+          "url": "#"
+        },
+        {
+          "title": "Software guru",
+          "type": "part-time",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "city": "Gotham",
+      "country": "US",
+      "jobs": [
+        {
+          "title": "Masked vigilante",
+          "type": "full-time",
+          "url": "#"
+        },
+        {
+          "title": "Police commissionar",
+          "type": "full-time",
+          "url": "#"
+        },
+        {
+          "title": "Butler",
+          "type": "full-time",
+          "url": "#"
+        },
+        {
+          "title": "Clown",
+          "type": "full-time",
+          "url": "#"
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "class": "grav-u-color-scheme-contrast"
+  }
+}
