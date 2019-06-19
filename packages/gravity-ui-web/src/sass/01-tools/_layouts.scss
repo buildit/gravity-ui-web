@@ -60,7 +60,7 @@
   // its top margin reinstated. Likewise, subsequent items that
   // would have otherwise been in the first row also need their
   // top margins reinstated.
-  :not(:first-child),
+  &:not(:first-child),
   + :nth-child(-n + #{$column-count}) {
     margin-top: $margin-top;
   }

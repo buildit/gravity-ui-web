@@ -8,7 +8,7 @@
   }
 
   @media all and (min-width: grav-breakpoint(large)) {
-    @include grav-l-column-layout($columns, $grav-sp-l);
+    @include grav-l-column-layout($columns, $grav-sp-xl);
     @include grav-l-column-no-danglies;
 
     // Callouts go full-width
