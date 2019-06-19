@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.0...gravity-ui-web-v2.2.1) (2019-06-19)
+
+
+### Bug Fixes
+
+* adds missing width property to grav-l-container() mixin ([bab1f9a](https://github.com/buildit/gravity-ui-web/commit/bab1f9a))
+
 # [2.2.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.1.1...gravity-ui-web-v2.2.0) (2019-04-26)
 
 
