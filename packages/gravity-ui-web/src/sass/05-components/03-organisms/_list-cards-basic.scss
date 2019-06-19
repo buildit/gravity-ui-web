@@ -1,40 +1,19 @@
 .grav-c-list-cards-basic {
   @include grav-l-column-list;
 
+  $columns: 2;
+
   > li + li {
     margin-top: $grav-sp-xl;
   }
 
   @media all and (min-width: grav-breakpoint(large)) {
-    @include grav-l-column-layout(2, $grav-sp-l);
+    @include grav-l-column-layout($columns, $grav-sp-xl);
     @include grav-l-column-no-danglies;
 
-    margin-right: -$grav-sp-l;
-    margin-left: -$grav-sp-l;
-
-    > * {
-      margin-right: 0;
-      margin-left: 0;
-    }
-
-    > li {
-      padding-right: $grav-sp-l;
-      padding-left: $grav-sp-l;
-    }
-
-    > {
-      // Callouts go full-width
-      .grav-c-list-cards-basic__item--callout {
-        flex-basis: 100%;
-      }
-
-      // Special cases that need top margin reinstated:
-      // - any callout (except in 1st position)
-      .grav-c-list-cards-basic__item--callout:not(:first-child),
-      // - the 2nd card, if it follows a callout
-      .grav-c-list-cards-basic__item--callout + li:nth-child(2) {
-        margin-top: $grav-sp-xl;
-      }
+    // Callouts go full-width
+    > .grav-c-list-cards-basic__item--callout {
+      @include grav-l-column-item-full-width($columns, $grav-sp-xl);
     }
   }
 }
