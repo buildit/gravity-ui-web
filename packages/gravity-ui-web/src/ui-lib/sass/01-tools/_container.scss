@@ -1,6 +1,6 @@
 // a simple mixin to create a container for the page
 @mixin grav-l-container($no-margin: false) {
-  width: 100%;
+  width: calc(100% - #{2 * $grav-page-content-inset});
   max-width: $grav-page-content-max-width;
 
   // IE10+ bug that happens when using margin: auto
