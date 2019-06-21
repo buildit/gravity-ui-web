@@ -47,7 +47,7 @@
   "devDependencies": {
     "@buildit/eslint-config": "^1.0.0",
     "@buildit/gravity-particles": "^0.3.0",
-    "@buildit/gravity-ui-web": "^3.0.0-alpha.2",
+    "@buildit/gravity-ui-web": "^3.0.0-alpha.6",
     "@buildit/semantic-release": "^1.0.0",
     "@pattern-lab/core": "^3.0.1",
     "@pattern-lab/engine-nunjucks": "^0.1.5-alpha.0",
