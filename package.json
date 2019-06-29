@@ -16,7 +16,7 @@
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
     "@commitlint/travis-cli": "^8.0.0",
-    "bundlesize": "^0.17.1",
+    "bundlesize": "^0.18.0",
     "commitizen": "^3.1.1",
     "cz-lerna-changelog": "^2.0.2",
     "del-cli": "^2.0.0",
