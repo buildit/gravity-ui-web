@@ -2,6 +2,7 @@ body > footer {
   @include grav-color-grp-b-apply('border-bottom-color', 'accent');
   @include grav-font-size(-1);
 
+  margin-top: $grav-sp-vertical-gap;
   padding: $grav-sp-l 0;
   border-bottom-width: $grav-st-thickness-medium;
   border-bottom-style: solid;
