@@ -16,6 +16,7 @@
   }
 
   img {
+    @include grav-color-grp-a-apply('background', 'neutral-alt', true);
     display: block;
     width: 100%;
     height: $card-image-height;
