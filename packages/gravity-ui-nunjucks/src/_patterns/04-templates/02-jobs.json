@@ -1,4 +1,5 @@
 {
+  "bodyClass": "grav-o-sticky-footer",
   "description": "Intro blurb. Phasellus tempus, orci non mattis sagittis.",
   "locations": [
     {

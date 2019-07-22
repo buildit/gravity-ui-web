@@ -1,4 +1,5 @@
 {
+  "bodyClass": "grav-o-sticky-footer",
   "footer": {
     "class": "grav-u-color-scheme-contrast"
   }

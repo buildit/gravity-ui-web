@@ -1,4 +1,5 @@
 {
+  "bodyClass": "grav-o-sticky-footer",
   "title": "We <strong>build brands</strong> for the digital world",
   "header": {
     "url": false,
@@ -78,7 +79,7 @@
       "content": [
         {
           "paragraph": "Here are some of the clients we have worked with:"
-        },
+        }
       ]
     }
   ],

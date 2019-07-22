@@ -1,4 +1,5 @@
 {
+  "bodyClass": "grav-o-sticky-footer",
   "title": "About us",
   "header": {
     "url": "link.pages-homepage",

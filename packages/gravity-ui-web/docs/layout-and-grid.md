@@ -45,11 +45,13 @@ However, occasionally there is a need for "full-bleed" elements that span the en
 Note that **nesting elements with `grav-o-page-content` is not supported** as it will create oversized margins on small viewports.
 
 
-### Sticky footer by default
+### Sticky footer
 Gravity expects that your page or application declares `<header>`, `<main>` and `<footer>` elements as _direct_ children of the `<body>` for the page or app's main header, content and footer respectively.
 
-To avoid an unattractive empty gap _below_ the page footer, we have some CSS rules that will push the footer down to sit flush the bottom edge of the viewport on short pages. This is done by expanding the height of `<main>` as needed. On pages where the content exceeds the height of the viewport, the page scrolls as usual.
+To avoid an unattractive empty gap _below_ the page footer, you can apply the `.grav-o-sticky-footer` class to the `<body>` element. This will push the footer down to sit flush the bottom edge of the viewport on short pages. This is done by making the `<body>` element (or whatever element the class was applied to) a flexbox column with a minimum height of `100vh` and then setting the `<main>` child element to grow vertically, filling any excess sapce and pushing the footer downwards. On pages where the content exceeds the height of the viewport, the page scrolls as usual.
 
 ![Diagram to illustrate the sticky footer positioning on tall and short pages](./layout-sticky-footer.png)
+
+If, for some reason, your footer needs to be wrapped in another element, you can alternatively use the `.grav-o-sticky-footer__footer` class on the whatever element needs to be pushed down to the bottom of the viewport. Likewise, if `<main>` is not a direct child of the sticky footer container, you can apply the `.grav-o-sticky-footer__main` class to the equivalent element.
 
 These elements also have the default vertical gap removed, so that they sit flush against each other.

@@ -1,0 +1,15 @@
+.grav-o-sticky-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  > main,
+  &__main {
+    flex-grow: 1;
+  }
+
+  > footer,
+  &__footer {
+    flex-shrink: 0;
+  }
+}
