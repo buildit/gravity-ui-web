@@ -190,7 +190,7 @@ npm start
 
 ### Further information
 
-* [Naming conventions](./docs/naming-conventions.md)
+* [Coding standards](./docs/coding-standards.md)
 * [Color system](./docs/layout-and-grid.md)
 * [Layout and grid](./docs/color-system.md)
 * [Contribution guidelines](../../CONTRIBUTING.md)

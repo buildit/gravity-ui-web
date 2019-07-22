@@ -33,8 +33,7 @@ This should also open the pattern library in your default web browser. In any ca
 
 ### Further information
 
-* Coding standards (TBC)
-  * [Naming conventions](./docs/naming-conventions.md)
+* [Coding standards](./docs/coding-standards.md)
 * [Contribution guidelines](../../CONTRIBUTING.md)
 * [`git` branching strategy](../../docs/branching-strategy.md)
 
