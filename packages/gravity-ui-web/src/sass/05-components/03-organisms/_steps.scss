@@ -24,7 +24,7 @@
   }
 
   > li:nth-child(odd) {
-    @media all and (min-width: grav-breakpoint(large)) {
+    @media (min-width: grav-breakpoint(large)) {
       margin-right: 50%;
       margin-left: 0;
       padding-right: $grav-sp-l;
@@ -36,7 +36,7 @@
   }
 
   > li:nth-child(even) {
-    @media all and (min-width: grav-breakpoint(large)) {
+    @media (min-width: grav-breakpoint(large)) {
       margin-left: 50%;
     }
   }
@@ -55,7 +55,7 @@
   }
 
   > li:nth-child(odd)::before {
-    @media all and (min-width: grav-breakpoint(large)) {
+    @media (min-width: grav-breakpoint(large)) {
       display: block;
       right: -$grav-sp-m;
       left: auto;
