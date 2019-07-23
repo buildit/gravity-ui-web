@@ -46,8 +46,8 @@ module.exports = {
         name: 'include',
         hasBlock: false,
       },
-      'custom-properties',
       'dollar-variables',
+      'custom-properties',
       'declarations',
       {
         type: 'at-rule',

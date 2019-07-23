@@ -94,11 +94,11 @@ Within a CSS block, declarations should be ordered as follows:
   // SASS mixin @includes that do NOT use content blocks
   @include grav-fancy-mixin(...);
 
-  // CSS custom properties
-  --foobar-barfoo: 42;
-
   // SASS variable declartions
   $foobar: 666;
+
+  // CSS custom properties
+  --foobar-barfoo: 42;
 
   // SASS mixing @includes that have content blocks
   @include grav-block-mixin(...) {
