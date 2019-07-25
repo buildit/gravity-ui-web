@@ -1,18 +1,24 @@
 // a mixin to add column based layout styles
-@mixin grav-l-column-layout($column-count: 2, $column-gap: $grav-sp-l) {
+@mixin grav-l-column-layout($column-count: 2, $column-gap: $grav-sp-l, $additive: false) {
   $column-spacing: $column-gap / 2;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -$column-spacing;
-  margin-left: -$column-spacing;
-  padding-right: 0;
-  padding-left: 0;
+
+  @if not $additive {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -$column-spacing;
+    margin-left: -$column-spacing;
+    padding-right: 0;
+    padding-left: 0;
+  }
 
   // All children start with margin on their sides
   > * {
     width: calc((100% - #{($column-count * 2) * $column-spacing}) / #{$column-count});
-    margin-right: $column-spacing;
-    margin-left: $column-spacing;
+
+    @if not $additive {
+      margin-right: $column-spacing;
+      margin-left: $column-spacing;
+    }
   }
 
   // Select the top row's children and remove the top margin
@@ -20,9 +26,11 @@
     margin-top: 0;
   }
 
-  > li {
-    padding-right: 0;
-    padding-left: 0;
+  @if not $additive {
+    > li {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 }
 

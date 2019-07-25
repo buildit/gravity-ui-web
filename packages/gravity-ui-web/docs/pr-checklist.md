@@ -31,7 +31,7 @@ If there are any exceptions, please make sure to explain why this is the case:
 
 ### SASS
 
-- [ ] The SASS (and related pattern files) follow the [naming conventions](./naming-conventions.md), architecture and structure outlined in the documentation.
+- [ ] The SASS (and related pattern files) follow the [coding standards](./coding-standards.md), architecture and structure outlined in the documentation.
 
 ### Images
 

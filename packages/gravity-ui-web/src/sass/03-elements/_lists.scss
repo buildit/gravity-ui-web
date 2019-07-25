@@ -3,11 +3,11 @@ ol {
   padding-left: $grav-sp-l;
 
   > li {
-    @media all and (min-width: grav-breakpoint(medium)) {
+    @media (min-width: grav-breakpoint(medium)) {
       padding-left: $grav-sp-s;
     }
 
-    @media all and (min-width: grav-breakpoint(large)) {
+    @media (min-width: grav-breakpoint(large)) {
       padding-left: $grav-sp-m;
     }
   }

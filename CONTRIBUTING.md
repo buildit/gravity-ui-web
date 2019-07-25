@@ -27,7 +27,7 @@ To avoid wasted effort, please always follow this process:
 
 Before diving into the code, please familiarise yourself with the following:
 
-* Our [naming conventions](./docs/naming-conventions.md) for the code
+* Our [coding standards](./docs/coding-standards.md) for the code
 * Our [branching strategy](./docs/branching-strategy.md)
 * Our [pull reuqest checklist](./docs/pr-checklist.md)
 

@@ -13,7 +13,7 @@
       display: block;
     }
 
-    @media all and (min-width: grav-breakpoint(medium)) {
+    @media (min-width: grav-breakpoint(medium)) {
       a {
         @include grav-font-size(4);
         display: block;
