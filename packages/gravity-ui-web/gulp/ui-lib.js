@@ -42,7 +42,9 @@ function sassBuildTask() {
 
   // Post-process CSS to optimize and minify
     .pipe(postcss([
-      cssMqPacker(),
+      cssMqPacker({
+        sort: true,
+      }),
       cssnano(),
     ]))
 

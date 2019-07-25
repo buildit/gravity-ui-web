@@ -25,6 +25,12 @@ module.exports = {
     'max-empty-lines': 2,
     'max-nesting-depth': 3,
     'media-feature-name-case': 'lower',
+    'media-feature-name-value-whitelist': {
+      '/width$/': [
+        '/^grav-breakpoint\\(.+\\)$/',
+        '/^\\$\\w[\\w\\d-]+$/',
+      ],
+    },
     'no-duplicate-selectors': true,
     'no-empty-first-line': true,
     'no-eol-whitespace': true,
@@ -40,8 +46,8 @@ module.exports = {
         name: 'include',
         hasBlock: false,
       },
-      'custom-properties',
       'dollar-variables',
+      'custom-properties',
       'declarations',
       {
         type: 'at-rule',

@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.1...gravity-ui-web-v2.2.2) (2019-06-21)
+
+
+### Bug Fixes
+
+* undoes layout regression caused by previous "fix" ([c5564ea](https://github.com/buildit/gravity-ui-web/commit/c5564ea))
+
 ## [2.2.1](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.0...gravity-ui-web-v2.2.1) (2019-06-19)
 
 

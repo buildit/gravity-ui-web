@@ -6,16 +6,19 @@
   }
 }
 
-// max 4 column, breaks down through 3, 2 and 1 column layouts
+// Max 4 column.
+// Starts with 1 column on narrow viewports and
+// increases to 2, 3 and then 4 columns as the width
+// increases.
 .grav-o-four-column {
-  @media all and (min-width: grav-breakpoint(large)) {
-    @include grav-l-column-layout(4);
-  }
-  @media all and (min-width: grav-breakpoint(medium)) and (max-width: grav-breakpoint(large)) {
-    @include grav-l-column-layout(3);
-  }
-  @media all and (min-width: grav-breakpoint(small)) and (max-width: grav-breakpoint(medium)) {
+  @media (min-width: grav-breakpoint(small)) {
     @include grav-l-column-layout(2);
+  }
+  @media (min-width: grav-breakpoint(medium)) {
+    @include grav-l-column-layout(3, $additive: true);
+  }
+  @media (min-width: grav-breakpoint(large)) {
+    @include grav-l-column-layout(4, $additive: true);
   }
 }
 
