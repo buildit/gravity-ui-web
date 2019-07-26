@@ -5,12 +5,12 @@
     @include grav-font-size(2);
     line-height: 1.2;
 
-    @media all and (min-width: grav-breakpoint($columns-breakpoint)) {
+    @media (min-width: grav-breakpoint($columns-breakpoint)) {
       max-width: 24rem;
       margin-right: $grav-sp-l;
     }
 
-    @media all and (min-width: grav-breakpoint(medium)) {
+    @media (min-width: grav-breakpoint(medium)) {
       @include grav-font-size(3);
     }
   }
@@ -21,7 +21,7 @@
     padding-top: $grav-sp-vertical-gap;
     padding-bottom: $grav-sp-vertical-gap;
 
-    @media all and (min-width: grav-breakpoint($columns-breakpoint)) {
+    @media (min-width: grav-breakpoint($columns-breakpoint)) {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -31,7 +31,7 @@
   .grav-c-three-column-list-justified {
     max-width: 28rem;
 
-    @media all and (min-width: grav-breakpoint($columns-breakpoint)) {
+    @media (min-width: grav-breakpoint($columns-breakpoint)) {
       margin-top: 0;
     }
   }
