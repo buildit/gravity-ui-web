@@ -1,5 +1,5 @@
-$sides: (top, bottom, left, right);
-$space-map: ("xs": $grav-sp-s,"s": $grav-sp-s, "m": $grav-sp-m, "l": $grav-sp-l, "xl": $grav-sp-xl, "xxl": $grav-sp-xl);
+$grav-sides: (top, bottom, left, right);
+$grav-space-map: ('xs': $grav-sp-s,'s': $grav-sp-s, 'm': $grav-sp-m, 'l': $grav-sp-l, 'xl': $grav-sp-xl, 'xxl': $grav-sp-xl);
 
 // Generate utility classes for available spacing sizes
 @each $name, $space in $space-map {
