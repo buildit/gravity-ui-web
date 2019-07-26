@@ -1,0 +1,11 @@
+$sides: (top, bottom, left, right);
+$space-map: ("xs": $grav-sp-s,"s": $grav-sp-s, "m": $grav-sp-m, "l": $grav-sp-l, "xl": $grav-sp-xl, "xxl": $grav-sp-xl);
+
+// Generate utility classes for available spacing sizes
+@each $name, $space in $space-map {
+  @each $side in $sides {
+    .grav-u-p#{str-slice($side, 0, 1)}-#{$name} {
+      padding-#{$side}: #{$space} !important;
+    }
+  }
+}
