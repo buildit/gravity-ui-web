@@ -20,7 +20,7 @@
     height: auto;
   }
 
-  @media all and (min-width: grav-breakpoint(medium)) {
+  @media (min-width: grav-breakpoint(medium)) {
     padding-right: $grav-sp-l;
     padding-left: $grav-sp-l;
 
@@ -30,7 +30,7 @@
     }
   }
 
-  @media all and (min-width: grav-breakpoint(large)) {
+  @media (min-width: grav-breakpoint(large)) {
     padding-left: $grav-sp-l * $grav-sp-ostentatious-padding-left-multiplier;
   }
 }
