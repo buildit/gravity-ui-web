@@ -34,6 +34,18 @@ $grav-sp-l: grav-sp-calc(1);
 $grav-sp-xl: grav-sp-calc(2);
 $grav-sp-xxl: grav-sp-calc(3);
 
+
+// Global map of one-dimensional space sizes, plus zero
+$grav-sp-map: (
+  'none': 0,
+  'xs': $grav-sp-xs,
+  's': $grav-sp-s,
+  'm': $grav-sp-m,
+  'l': $grav-sp-l,
+  'xl': $grav-sp-xl,
+  'xxl': $grav-sp-xl
+);
+
 // Global set of two-dimensional insets (typically used as padding values)
 $grav-sp-inset-xs: $grav-sp-xs $grav-sp-xs;
 $grav-sp-inset-s: $grav-sp-s $grav-sp-s;
