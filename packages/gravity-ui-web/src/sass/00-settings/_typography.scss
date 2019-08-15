@@ -1,29 +1,65 @@
-/**
-  Typography-related values
-*/
+////
+/// Typography-related values
+///
+/// @group typography
+////
 
+/// The base font size used at the narrowest viewport width.
+///
+/// @type length value
+///
+/// @access private
 $grav-font-size-smallest-viewport: 1rem;
+
+/// The base font size used at the widest viewport width.
+///
+/// @type length value
+///
+/// @access private
 $grav-font-size-largest-viewport: 1.5rem;
 
+/// The default line height.
+///
+/// @type number
 $grav-line-height: 1.5;
 
+
+/// The optimal maximum width for a line of text.
+///
+/// @type length value
 $grav-line-max-width-m: 40em;
 
-$grav-font-family-primary: 'Wipro Akkurat TT';
-$grav-font-family-mono: 'Wipro Akkurat Mono TT';
+/// The primary font family.
+///
+/// This is the font family that is applied to most UI elements.
+///
+/// @access private
+$_grav-font-family-primary: 'Wipro Akkurat TT';
 
-/**
-  Map of web fonts to declare in the CSS output.
+/// The monospace font family.
+///
+/// This is the font family is applied to select UI elements that
+/// should render with a monospaces font. For example `<pre>` or
+/// `<code>`.
+///
+/// @access private
+$_grav-font-family-mono: 'Wipro Akkurat Mono TT';
 
-  The organisation is as follows:
 
-  Font family > CSS font weight > CSS font style
-
-  Note: To understand where the local() names come from, refer to the
-  comments for the grav-font-face() mixin.
-*/
+/// Map of web fonts to declare in the CSS output.
+///
+/// This map is used internally by Gravity to generate
+/// `@font-face` declarations.
+///
+/// The organisation is as follows:
+/// Font family > CSS font weight > CSS font style
+///
+/// Note: To understand where the `local()` names come from, refer to the
+/// comments for the `grav-font-face()` mixin.
+///
+/// @access private
 $grav-font-faces: (
-  $grav-font-family-primary: (
+  $_grav-font-family-primary: (
     // Light
     300: (
       normal: (
@@ -61,7 +97,7 @@ $grav-font-faces: (
     )
   ),
 
-  $grav-font-family-mono: (
+  $_grav-font-family-mono: (
     // Regular
     normal: (
       normal: (
@@ -72,16 +108,24 @@ $grav-font-faces: (
   )
 );
 
-
+/// The default URL path that is prefixed to font filenames.
+///
+/// This variable is used internally by Gravity to generate
+/// `@font-face` declarations.
+///
+/// @access private
 $grav-font-src-path: 'https://static.buildit.digital/fonts/v1.0.0';
 
 
-/**
-  Map of available typefaces.
-*/
+/// Map of available typefaces.
+///
+/// This map is used internally by Gravity's typography
+/// SASS functions.
+///
+/// @access private
 $grav-typefaces: (
   primary: (
-    stack: ($grav-font-family-primary, 'Akkurat', 'Arial', system-ui, sans-serif),
+    stack: ($_grav-font-family-primary, 'Akkurat', 'Arial', system-ui, sans-serif),
     weights: (
       light: 300,
       regular: normal,
@@ -89,7 +133,7 @@ $grav-typefaces: (
     )
   ),
   mono: (
-    stack: ($grav-font-family-mono, 'Akkurat Mono', monospace),
+    stack: ($_grav-font-family-mono, 'Akkurat Mono', monospace),
     weights: (
       regular: normal
     )

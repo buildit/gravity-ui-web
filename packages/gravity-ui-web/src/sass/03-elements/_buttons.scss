@@ -20,18 +20,16 @@ button:not([type]) {
 
 /* == Styles for specific kinds of buttons == */
 
-/// Applies `border`, `background-color` and `color` properties for buttons.
-///
-/// @access private
+// Applies `border`, `background-color` and `color` properties for buttons.
 @mixin grav-apply-button-colors($color-name, $is-primary) {
-  @include grav-color-grp-b-apply('border-color', $color-name, true);
+  @include grav-color-apply('border-color', 'b', $color-name);
   @if $is-primary {
-    @include grav-color-grp-b-apply('background-color', $color-name, true);
-    @include grav-color-grp-a-apply('color', 'neutral', true);
+    @include grav-color-apply('background-color', 'b', $color-name);
+    @include grav-color-apply('color', 'a', 'neutral');
   }
   @else {
-    @include grav-color-grp-a-apply('background-color', 'neutral', true);
-    @include grav-color-grp-b-apply('color', $color-name, true );
+    @include grav-color-apply('background-color', 'a', 'neutral');
+    @include grav-color-apply('color', 'b', $color-name, true );
   }
 }
 

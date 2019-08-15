@@ -81,7 +81,7 @@ body > header,
 
     &:visited {
       // Make visited logo link use some color as non-visited one
-      @include grav-color-grp-b-apply('color', 'control', true);
+      @include grav-color-apply('color', 'b', 'control');
     }
 
     &:hover,
@@ -90,7 +90,7 @@ body > header,
       // that overrides the usual visited color will otherwise still apply.
       // This is because these selectors have a higher specificity that
       // the ones that apply the basic <a> styles.
-      @include grav-color-grp-b-apply('color', 'control-emphasis', true);
+      @include grav-color-apply('color', 'b', 'control-emphasis');
     }
   }
 

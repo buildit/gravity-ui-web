@@ -21,14 +21,14 @@
     color: inherit;
 
     &::after {
-      @include grav-color-grp-a-apply('background-color', 'accent', true);
+      @include grav-color-apply('background-color', 'a', 'accent');
 
       height: 100%;
     }
   }
 
   &::after {
-    @include grav-color-grp-b-apply('background-color', 'accent', true);
+    @include grav-color-apply('background-color', 'b', 'accent');
 
     content: '';
     width: 100%;

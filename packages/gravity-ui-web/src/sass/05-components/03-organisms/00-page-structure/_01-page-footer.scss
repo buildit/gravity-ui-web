@@ -1,6 +1,6 @@
 body > footer,
 .grav-c-page-footer {
-  @include grav-color-grp-b-apply('border-bottom-color', 'accent');
+  @include grav-color-apply('border-bottom-color', 'b', 'accent');
   @include grav-font-size(-1);
 
   padding: $grav-sp-l 0;

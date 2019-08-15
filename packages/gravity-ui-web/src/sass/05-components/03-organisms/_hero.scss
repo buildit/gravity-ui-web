@@ -10,7 +10,7 @@
   }
 
   .grav-c-hero__container {
-    @include grav-color-grp-a-apply('background-color', 'neutral', false);
+    @include grav-color-apply('background-color', 'a', 'neutral');
 
     // The amount by which the container overlaps the image:
     $container-vertical-shift: 3.5rem;

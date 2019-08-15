@@ -21,12 +21,12 @@
   }
 
   time {
-    @include grav-color-grp-b-apply('color', 'neutral-subtle', true);
+    @include grav-color-apply('color', 'b', 'neutral-subtle');
   }
 
   img {
     @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-s);
-    @include grav-color-grp-a-apply('background', 'neutral-alt', true);
+    @include grav-color-apply('background', 'a', 'neutral-alt');
 
     width: 100%;
     max-height: 30rem;

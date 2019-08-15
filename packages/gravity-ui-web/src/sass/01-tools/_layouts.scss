@@ -1,4 +1,20 @@
-// a mixin to add column based layout styles
+////
+/// @group layout
+////
+
+/// Creates a multi-column layout.
+///
+/// Note: This will apply negative horizontal margins, so this mixin should not
+/// be used on elements that nned to set any other horizontal margin values.
+///
+/// @param {number} $column-count [2] - How many equal width columns the space
+///                       should be divided into.
+/// @param {length} $column-gap [$grav-sp-l] - The width of the gap between
+///                       columns.
+/// @param {boolean} $additive - Whether or not this layout is overriding another column
+///                       layout (for instance in a media query that is altering the number
+///                       of columns). If `true` only CSS declarations that would differ are
+///                       output. Any declarations common to any column layout are omitted.
 @mixin grav-l-column-layout($column-count: 2, $column-gap: $grav-sp-l, $additive: false) {
   $column-spacing: $column-gap / 2;
 
@@ -34,7 +50,10 @@
   }
 }
 
-// a mixin remove list styles which might interfere with column's layout purposes
+/// Removes list styles which might interfere with column's layout purposes.
+///
+/// When using the `grav-l-column-layout()` mixin on `<ul>` or `<ol>` elements,
+/// you should also apply this mixin.
 @mixin grav-l-column-list {
   padding-right: 0;
   padding-left: 0;
@@ -46,15 +65,21 @@
   }
 }
 
-// a mixin to expand items in column layouts if the final row is not full.
+/// Expands items in the last row of a column layout, if there aren't enough
+/// to fill all columns in that row.
 @mixin grav-l-column-no-danglies {
   > * {
     flex-grow: 1;
   }
 }
 
-// a mixin that can be applied to items in a "no-danglies" column layout
-// to make them span the full width of the parent element.
+/// Makes an item within a "no-danglies" column layout span the full width of the parent
+/// element.
+///
+/// @param {number} $column-count [2] - The number of columns the column layout has
+///                       that this item is within.
+/// @param {length} $margin-top [$grav-sp-vertical-gap] - The size of the vertical gap
+///                       between rows in this column layout.
 @mixin grav-l-column-item-full-width($column-count: 2, $margin-top: $grav-sp-vertical-gap) {
   flex-basis: 100%;
 
