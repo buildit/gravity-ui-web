@@ -1,6 +1,6 @@
 /** @define sg-example */
 .sg-example--inline-block {
-  @include grav-color-grp-b-apply('background-color', 'neutral', true);
+  @include grav-color-apply('background-color', 'b', 'neutral', true);
 
   content: ' ';
   display: inline-block;
@@ -11,13 +11,13 @@
 }
 
 .sg-example--padded-block {
-  @include grav-color-grp-b-apply('background-color', 'accent', true);
+  @include grav-color-apply('background-color', 'b', 'accent', true);
 
   max-width: 8rem;
 }
 
 .sg-example--padded-block > div {
-  @include grav-color-grp-b-apply('background-color', 'accent', true);
+  @include grav-color-apply('background-color', 'b', 'accent', true);
 
   height: 6rem;
   position: relative;
@@ -25,7 +25,7 @@
 }
 
 .sg-example--padded-block > div > div {
-  @include grav-color-grp-b-apply('background-color', 'neutral', true);
+  @include grav-color-apply('background-color', 'b', 'neutral', true);
 
   position: absolute;
   box-sizing: border-box;
