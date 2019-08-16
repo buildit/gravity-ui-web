@@ -32,6 +32,9 @@ fractal.web.set('builder.dest', bldApi.distPatternLibraryPath());
 
 /* Tweak BrowserSync config */
 fractal.web.set('server.syncOptions', {
+  // Automatically open localhost URL in default brwoser
+  open: 'local',
+
   snippetOptions: {
     // Make BrowerSync JS snippet get appended
     // to <head> instead of <body>, so that it doesn't
