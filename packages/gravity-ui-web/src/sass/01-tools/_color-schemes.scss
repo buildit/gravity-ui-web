@@ -119,9 +119,11 @@
   // Add optional overrides for users who have enabled their
   // OS's "dark mode" or equivalent
   @if ($dark-scheme-name != false) {
-    @each $group in $groups {
-      @each $purpose, $color-value in grav-color-scheme-group($dark-scheme-name, $group) {
-        #{grav-color-css-prop-name($group, $purpose)}: $color-value;
+    @media (prefers-color-scheme: dark) {
+      @each $group in $groups {
+        @each $purpose, $color-value in grav-color-scheme-group($dark-scheme-name, $group) {
+          #{grav-color-css-prop-name($group, $purpose)}: $color-value;
+        }
       }
     }
   }
