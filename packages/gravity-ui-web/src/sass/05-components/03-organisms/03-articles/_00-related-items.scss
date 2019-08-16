@@ -9,7 +9,7 @@
     margin-left: auto;
 
     span {
-      @include grav-color-grp-b-apply('color', 'neutral-subtle');
+      @include grav-color-apply('color', 'b', 'neutral-subtle');
       display: block;
     }
 

@@ -1,8 +1,17 @@
+////
+/// @group typography
+////
+
 @import 'modularscale';
 
-
-// stylelint-disable-next-line scss/dollar-variable-pattern
+/* stylelint-disable scss/dollar-variable-pattern */
+/// Configuration map for the modularscale SASS library.
+///
+/// @link https://github.com/modularscale/modularscale-sass#readme Modular Scale SASS library
+///
+/// @access private
 $modularscale: (
+
   // Note: We must *only* alter the ratio across breakpoints here.
   // We will be using this to generate CSS custom props for scaling
   // the base font-size
@@ -20,6 +29,14 @@ $modularscale: (
     base: $grav-font-size-largest-viewport,
   )
 );
+/* stylelint-enable scss/dollar-variable-pattern */
 
+/// The lowest point on Gravity's modular scale of font sizes.
+///
+/// @type number
 $grav-scale-min: -2;
+
+/// The highest point on Gravity's modular scale of font sizes.
+///
+/// @type number
 $grav-scale-max: 6;

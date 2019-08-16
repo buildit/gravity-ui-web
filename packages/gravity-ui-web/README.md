@@ -12,14 +12,10 @@ Published as the NPM package [`@buildit/gravity-ui-web`](https://www.npmjs.com/p
     * [Build integration](#build-integration)
     * [Usage](#usage)
 * [Development](#development)
-    * [One-time setup](#one-time-setup)
-    * [Building and running the pattern library locally](#building-and-running-the-pattern-library-locally)
-    * [Building the UI library only](#building-the-ui-library-only)
-    * [Making commits](#making-commits)
+    * [Setup and local dev](#setup-and-local-dev)
+    * [Other build tasks](#other-build-tasks)
     * [Further information](#further-information)
-* [Deployment](#deployment)
-    * [Travis CI notes](#travis-ci-notes)
-    * [Further information](#further-information-1)
+* [Deployment](#deployment--releasing)
 
 
 ## Using this library
@@ -186,6 +182,14 @@ npm run clean
 ```
 npm start
 ```
+
+**Build SASS API docs**
+```
+npm run docs
+```
+(The generated docs go into: `dist/docs/sass/`)
+
+The above command only includes _public_ SASS APIs that are also available to consumers of the `@buildit/gravity-ui-web` package. Developers working on the library itself can also use `npm run docs:dev` to generate SASS API docs that also include the _private_ APIs. These get output to `dist/docs/sass-dev/`.
 
 
 ### Further information

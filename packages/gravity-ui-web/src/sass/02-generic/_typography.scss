@@ -20,7 +20,7 @@
     @include ms-respond(grav-font-size-css-propname($i), $i);
   }
 
-  font-family: grav-font-stack('primary');
+  font-family: grav-font-family-stack('primary');
   line-height: $grav-line-height;
   -webkit-text-size-adjust: 100%; // stylelint-disable property-no-vendor-prefix
 }

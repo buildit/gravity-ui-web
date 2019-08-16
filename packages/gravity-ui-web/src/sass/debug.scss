@@ -1,4 +1,8 @@
-/**
+////
+/// @group debug
+/// @access private
+////
+/*
   DEBUG.CSS
 
   Consumers of Gravity can include this CSS file in debug builds to
@@ -25,16 +29,19 @@
 // Mixins for highlighting offending items on the page
 // ====================================================================
 
-/**
-  Adds a colored outline around an element.
+/* stylelint-disable scss/at-mixin-pattern */
 
-  Optionally, if a message is provided it will be displayed in
-  the top left corner of the element. Note, that this will set
-  the element's position property to "relative"!
-*/
+/// Adds a colored outline around an element.
+///
+/// Optionally, if a message is provided it will be displayed in
+/// the top left corner of the element. Note, that this will set
+/// the element's position property to "relative"!
+///
+/// @param {string} $accent-color-name - One of the `accent-*` color purpose names.
+/// @param {string} $message - The error or warning message to display to the user.
 @mixin highlight($accent-color-name, $message) {
-  $outline-color: var(#{grav-color-grp-b-prop-name($accent-color-name)});
-  $text-color: var(#{grav-color-grp-a-prop-name($accent-color-name)});
+  $outline-color: var(#{grav-color-css-prop-name('b', $accent-color-name)});
+  $text-color: var(#{grav-color-css-prop-name('a', $accent-color-name)});
 
   outline: grav-px2rem(3) solid $outline-color;
 
@@ -59,20 +66,21 @@
   }
 }
 
-/**
-  Highlights elements with errors in danger accent color
-*/
+///  Highlights elements with errors in danger accent color
+///
+/// @param {string} $message [''] - The error message to display to the user.
 @mixin highlight-error($message: '') {
   @include highlight('accent-danger', $message);
 }
 
-/**
-  Highlights elements with warnings in attention accent color
-*/
+/// Highlights elements with warnings in attention accent color
+///
+/// @param {string} $message [''] - The warning message to display to the user.
 @mixin highlight-warning($message: '') {
   @include highlight('accent-attention', $message);
 }
 
+/* stylelint-enable scss/at-mixin-pattern */
 
 // ====================================================================
 // Tests for misuse of Gravity's styles, classes and components

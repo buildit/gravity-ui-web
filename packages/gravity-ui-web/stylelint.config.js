@@ -100,16 +100,18 @@ module.exports = {
       },
     ],
     'scss/at-extend-no-missing-placeholder': true,
+    'scss/at-function-pattern': '^_?grav-\\w+(-[-\\w]+)?$',
     'scss/at-mixin-argumentless-call-parentheses': 'never',
+    'scss/at-mixin-pattern': '^_?grav-\\w+(-[-\\w]+)?$',
     'scss/dollar-variable-no-missing-interpolation': true,
     'scss/dollar-variable-pattern': [
-      'grav-((co|sp|st|tr)-[-\\w]+|\\w\\w\\w+(-[-\\w]+)?)',
+      '^_?grav-((co|sp|st|tr)-[-\\w]+|\\w\\w\\w+(-[-\\w]+)?)$',
       {
         ignore: 'local',
       },
     ],
     'scss/selector-no-redundant-nesting-selector': true,
-    'selector-class-pattern': 'grav-[cou]-[a-z]+(?:(?:--|-|_)?[a-z]+)*',
+    'selector-class-pattern': '^grav-[cou]-[a-z]+((--|-|__)?[a-z]+)*$',
     'selector-combinator-space-after': 'always',
     'selector-combinator-space-before': 'always',
     'selector-no-qualifying-type': [

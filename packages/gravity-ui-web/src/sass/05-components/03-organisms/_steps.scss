@@ -5,7 +5,7 @@
   list-style-type: none;
 
   > li {
-    @include grav-color-grp-b-apply('border-color', 'accent', true);
+    @include grav-color-apply('border-color', 'b', 'accent');
 
     position: relative;
     margin-top: 0;
@@ -42,8 +42,8 @@
   }
 
   > li::before {
-    @include grav-color-grp-b-apply('background-color', 'accent', true);
-    @include grav-color-grp-a-apply('color', 'neutral', true);
+    @include grav-color-apply('background-color', 'b', 'accent');
+    @include grav-color-apply('color', 'a', 'neutral');
 
     content: counters(steps, '.');
     width: 1rem;

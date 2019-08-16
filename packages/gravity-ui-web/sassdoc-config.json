@@ -1,0 +1,8 @@
+{
+  "dest": "dist/docs/sass",
+  "exclude": ["debug.scss"],
+  "display": {
+    "access": ["public"]
+  },
+  "description": "# Gravity SASS API\n\nDocs for `gravity-ui-web`'s public SASS API. Downstream consumers of this library are welcome to make use of this API when extending Gravity for their own needs."
+}
