@@ -4,12 +4,12 @@
 {%- from '@toggle-menu' import toggleMenu -%}
 
 {# Reusable macro for other templates to import: #}
-{%- macro pageHeader(links, externalLinks, logoLink = false, navMenuExpanded = false) -%}
+{%- macro pageHeader(links, externalLinks, logoLink = false, navMenuExpanded = false, withClass = false) -%}
   {%- set logoType -%}
     {% include '@logotype' %}
   {%- endset -%}
 
-  <header>
+  <header{% if withClass %} class="grav-c-page-header"{% endif %}>
     <div>
       <div class="grav-c-page-header__logo">
         {% if logoLink -%}
@@ -28,5 +28,5 @@
 
 {# Example rendering: #}
 {%- block example -%}
-  {{ pageHeader(header.links, header.externalLinks, header.url) | safe }}
+  {{ pageHeader(header.links, header.externalLinks, header.url, withClass = header.withClass) | safe }}
 {%- endblock -%}
