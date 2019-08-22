@@ -1,0 +1,30 @@
+{% from '@inline-svg-symbol' import inlineSvg %}
+
+<table class="sg-symbol-table">
+  <thead>
+    <tr>
+      <th>Preview</th>
+      <th>ID</th>
+      <th>Title ID</th>
+      <th>Original dimensions</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for symbol in symbols %}
+    <tr>
+      <td>
+        {{ inlineSvg(symbol.symbolId, symbol.width, symbol.height, symbol.titleId, 'sg-symbol-table__preview' ) }}
+      </td>
+      <td>
+        <code>#{{symbol.symbolId}}</code>
+      </td>
+      <td>
+        <code>#{{symbol.titleId}}</code>
+      </td>
+      <td>
+        <code>{{symbol.width}}</code> &times; <code>{{symbol.height}}</code>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>

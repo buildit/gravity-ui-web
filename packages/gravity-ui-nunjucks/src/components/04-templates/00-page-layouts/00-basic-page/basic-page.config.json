@@ -1,0 +1,7 @@
+{
+  "config": {
+    "footer": {
+      "class": "grav-u-color-scheme-contrast"
+    }
+  }
+}

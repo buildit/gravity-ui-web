@@ -1,0 +1,23 @@
+{%- extends '@ordered-list' -%}
+
+{#
+  Extend the ordered-list's orderedListItem block
+  to insert a card
+#}
+{%- block orderedListItem %}
+  <li>
+    <h3>{{item.title}}</h3>
+    <p>{{item.description}}</p>
+  </li>
+{%- endblock -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro steps(stepsList) -%}
+  {{ orderedList(stepsList, "grav-c-steps") | safe }}
+{%- endmacro -%}
+
+{# Example rendering: #}
+{%- block example -%}
+  {{ steps(stepsList) | safe }}
+{%- endblock -%}
+
