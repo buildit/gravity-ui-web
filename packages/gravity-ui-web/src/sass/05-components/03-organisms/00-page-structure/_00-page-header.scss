@@ -7,9 +7,9 @@ $grav-page-heading-trigger-breakpoint: grav-breakpoint(medium);
 // width ($grav-page-content-max-width) themselves, where necessary.
 body > header,
 .grav-c-page-header {
-  > div {
-    @include grav-l-container;
+  margin-top: -1 * $grav-sp-page-content-inset;
 
+  > div {
     display: flex;
     flex-wrap: wrap;
     padding-top: $grav-sp-m;
@@ -98,5 +98,19 @@ body > header,
     max-width: grav-px2rem(250);
     margin: $grav-sp-m $grav-sp-m 0 0;
     flex-shrink: 0;
+  }
+}
+
+
+// Special case:
+// Header within a full-bleed body, should use its DIV
+// as a content container
+/* stylelint-disable-next-line selector-no-qualifying-type */
+body.grav-o-full-bleed > header,
+.grav-o-full-bleed .grav-c-page-header {
+  margin-top: 0;
+
+  > div {
+    @include grav-l-container;
   }
 }

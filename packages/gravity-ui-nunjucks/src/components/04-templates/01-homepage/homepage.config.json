@@ -1,5 +1,6 @@
 {
   "context": {
+    "bodyClass": "grav-o-full-bleed",
     "header": {
       "url": false
     },

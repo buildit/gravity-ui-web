@@ -1,5 +1,6 @@
 {
   "context": {
+    "bodyClass": "grav-o-full-bleed",
     "description": "Intro blurb. Phasellus tempus, orci non mattis sagittis.",
     "locations": [
       {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ title }} - Buildit</title>
+    <title>{{ _target.title }} - Buildit Gravity pattern library</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/pl-styles/pattern-scaffolding.css" media="all" />
 
   </head>
-  <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+  <body{% if _target.context.bodyClass %} class="{{ _target.context.bodyClass }}"{% endif %}>
 
     {{ yield | safe }}
 

@@ -1,5 +1,6 @@
 {
   "context": {
+    "bodyClass": "grav-o-full-bleed",
     "title": "We <strong>build brands</strong> for the digital world",
     "header": {
       "url": false,
@@ -29,7 +30,7 @@
     "sections": [
       {
         "title": false,
-        "class": "grav-o-container",
+        "class": "grav-o-full-bleed__content",
         "content": [
           {
             "paragraph": false,
@@ -39,7 +40,7 @@
       },
       {
         "title": false,
-        "class": "grav-o-container grav-u-text-centered",
+        "class": "grav-o-full-bleed__content grav-u-text-centered",
         "content": [
           {
             "paragraph": "Some areas of practice we are passionate about:"
@@ -73,7 +74,7 @@
       },
       {
         "title": false,
-        "class": "grav-u-text-centered grav-o-container-banner",
+        "class": "grav-u-text-centered grav-o-full-bleed__content-banner",
         "content": [
           {
             "paragraph": "Here are some of the clients we have worked with:"

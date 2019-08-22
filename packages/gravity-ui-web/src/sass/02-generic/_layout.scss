@@ -1,10 +1,14 @@
-// Make body at least as tall as viewport
-// and use flexbox to vertically spread out
-// header, main and footer so that footer
-// appears at bottom of viewport on short
-// pages.
 body {
+  @include grav-l-container;
+
+  // Make body at least as tall as viewport
+  // and use flexbox to vertically spread out
+  // header, main and footer so that footer
+  // appears at bottom of viewport on short
+  // pages.
   display: flex;
+  padding-top: $grav-sp-page-content-inset;
+  padding-bottom: $grav-sp-page-content-inset;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;

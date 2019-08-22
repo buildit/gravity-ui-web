@@ -4,7 +4,7 @@
 
 {%- block pageContent %}
 <main>
-  <article class="grav-o-container grav-c-article">
+  <article class="grav-o-full-bleed__content grav-c-article">
     <header class="grav-c-page-intro">
       {{ pageIntroContents(article.title, article.description, article.dateTime, article.img) | safe }}
     </header>
@@ -13,7 +13,7 @@
     </div>
   </article>
   <hr />
-  <aside class="grav-o-container">
+  <aside class="grav-o-full-bleed__content">
     {% include '@related-items' %}
   </aside>
 </main>

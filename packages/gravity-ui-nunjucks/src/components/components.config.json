@@ -103,7 +103,7 @@
     "sections": [
       {
         "title": "Example section",
-        "class": "grav-o-container",
+        "class": "grav-o-full-bleed__content",
         "content": [
           {
             "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
@@ -113,7 +113,7 @@
     ],
     "section": {
       "title": "This is the title for a section",
-      "class": "grav-o-container",
+      "class": "grav-o-full-bleed__content",
       "content": [
         {
           "paragraph": "Paragraph lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

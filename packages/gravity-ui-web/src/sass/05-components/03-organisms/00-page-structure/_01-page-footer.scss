@@ -3,6 +3,7 @@ body > footer,
   @include grav-color-apply('border-bottom-color', 'b', 'accent');
   @include grav-font-size(-1);
 
+  margin-bottom: -1 * $grav-sp-page-content-inset;
   padding: $grav-sp-l 0;
   border-bottom-width: $grav-st-thickness-medium;
   border-bottom-style: solid;
@@ -38,5 +39,18 @@ body > footer,
       margin: 0;
       padding: 0;
     }
+  }
+}
+
+// Special case:
+// Footer within a full-bleed body, should use its DIV
+// as a content container
+/* stylelint-disable-next-line selector-no-qualifying-type */
+body.grav-o-full-bleed > footer,
+.grav-o-full-bleed .grav-c-page-footer {
+  margin-bottom: 0;
+
+  > div {
+    @include grav-l-container;
   }
 }

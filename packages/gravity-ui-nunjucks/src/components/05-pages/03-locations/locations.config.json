@@ -1,5 +1,6 @@
 {
   "context": {
+    "bodyClass": "grav-o-full-bleed",
     "title": "We are global",
     "header": {
       "url": "./page-homepage",

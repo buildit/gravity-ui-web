@@ -1,0 +1,13 @@
+// Undos the effects of grav-l-container() mixin
+.grav-o-full-bleed {
+  width: auto;
+  max-width: none;
+  margin-right: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &__content {
+    @include grav-l-container;
+  }
+}
