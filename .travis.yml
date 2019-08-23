@@ -24,30 +24,30 @@ deploy:
   # deploy develop to Staging
   - provider: script
     script:
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css"
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${STAGING_BUCKET} --delete --region=${STAGING_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css"
     skip_cleanup: true
     on:
       branch: develop
   # deploy next to Next (staging)
   - provider: script
     script:
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${NEXT_BUCKET} --delete --region=${NEXT_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${NEXT_BUCKET} --delete --region=${NEXT_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${NEXT_BUCKET} --delete --region=${NEXT_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${NEXT_BUCKET} --delete --region=${NEXT_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css"
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${NEXT_BUCKET} --delete --region=${NEXT_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${NEXT_BUCKET} --delete --region=${NEXT_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${NEXT_BUCKET} --delete --region=${NEXT_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${NEXT_BUCKET} --delete --region=${NEXT_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css"
     skip_cleanup: true
     on:
       branch: next
   # deploy tags matching v#.#.*  to Production
   - provider: script
     script:
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" &&
-      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css" &&
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.html" --content-type "text/html; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.css" --content-type "text/css; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --exclude "*" --include "*.js" --content-type "application/javascript; charset=utf-8" &&
+      ~/.local/bin/aws s3 sync packages/gravity-ui-nunjucks/dist/pattern-library s3://${PROD_BUCKET} --delete --region=${PROD_BUCKET_REGION} --include "*" --exclude "*.js" --exclude "*.html" --exclude "*.css" &&
       ./scripts/cdn_publish.sh
     skip_cleanup: true
     on:

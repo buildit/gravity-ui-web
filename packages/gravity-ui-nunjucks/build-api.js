@@ -52,5 +52,5 @@ module.exports = {
    *
    * @public
    */
-  distPath,
+  distPatternLibraryPath: (...pathSegments) => distPath('pattern-library', ...pathSegments),
 };

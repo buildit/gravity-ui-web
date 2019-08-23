@@ -1,0 +1,11 @@
+{%- from '@button' import button -%}
+{%- from '@form-group' import formGroup -%}
+<form>
+  <h2>{{form.title}}</h2>
+  {% if form.title -%}
+  {%- endif %}
+  {% for group in form.groups -%}
+      {{ formGroup(group) }}
+  {% endfor %}
+  {{ button(form.ctaText, 'submit', false ) | safe }}
+</form>

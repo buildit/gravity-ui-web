@@ -12,9 +12,11 @@ const gulp = require('gulp');
 const del = require('del');
 
 const pkgPaths = require('./gulp/paths.js');
-const patternLibraryTasks = require('./gulp/patternlab.js');
+const patternLibraryTasks = require('./gulp/fractal-tasks.js');
 const preBuildTasks = require('./gulp/pre-build.js');
 const gravityTasks = require('./gulp/gravity.js');
+const plStyleTasks = require('./gulp/pl-styles.js');
+const plAssetTasks = require('./gulp/pl-assets.js');
 
 // Define composite tasks:
 
@@ -25,7 +27,8 @@ const build = gulp.series(
     preBuildTasks.createColorSchemeData,
     preBuildTasks.createColorPaletteData,
     gravityTasks.makeCopyTask(),
-    patternLibraryTasks.buildSass,
+    plStyleTasks.buildSass,
+    plAssetTasks.copyAssets,
   ),
   patternLibraryTasks.buildPatternLibrary,
 );
@@ -39,13 +42,15 @@ const serve = gulp.series(
     preBuildTasks.createColorSchemeData,
     preBuildTasks.createColorPaletteData,
     gravityTasks.makeCopyTask(true),
-    patternLibraryTasks.buildSass,
+    plStyleTasks.buildSass,
+    plAssetTasks.copyAssets,
   ),
   gulp.parallel(
     preBuildTasks.watchSvgSymbols,
     preBuildTasks.watchSvgSymbolsInfo,
     gravityTasks.watch,
-    patternLibraryTasks.watchSass,
+    plStyleTasks.watchSass,
+    plAssetTasks.watchAssets,
     patternLibraryTasks.startServer,
   ),
 );
@@ -54,7 +59,6 @@ serve.description = 'Launches the pattern library\'s local dev server, and watch
 function clean() {
   return del([
     pkgPaths.pkgRootPath('dist', '**', '*'),
-    ...patternLibraryTasks.generatedFileGlobs,
     ...preBuildTasks.generatedFileGlobs,
   ]);
 }

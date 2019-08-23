@@ -1,0 +1,24 @@
+{%- from '@link' import link -%}
+{%- from '@image' import image -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro locationCard(location) %}
+  {% set mapImage -%}
+    {{ image(location.img.src, location.img.alt ) | safe }}<br>View map
+  {%- endset -%}
+
+  <div class="grav-c-location-card">
+    <h2>{{ link( location.name, "#", false) }}</h2>
+    <p>
+      {% if location.addressline1 %}{{location.addressline1}}<br>{% endif %}
+      {% if location.addressline2 %}{{location.addressline2}}<br>{% endif %}
+      {% if location.city %}{{location.city}}<br>{% endif %}
+      {% if location.postcode %}{{location.postcode}}<br>{% endif %}
+      {% if location.country %}{{location.country}}{% endif %}
+    </p>
+    {{ link( mapImage, location.mapUrl, false, "See "+location.name+" office on Google Maps") }}
+  </div>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{{- locationCard(location) | safe -}}

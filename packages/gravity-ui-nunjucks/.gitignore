@@ -1,11 +1,15 @@
 # Exclude build Output
 dist/
 
-# Exclude unwanted stuff Pattern Lab generates
+# Exclude generated files
+src/components/_generated/*.njk
+src/components/00-particles/00-color/01-color-palettes/color-palettes.config.json
+src/components/00-particles/00-color/02-color-schemes/color-schemes.config.json
+src/components/00-particles/05-logos-and-icons/00-svg-symbols/svg-symbols.config.json
+
+# Legacy excludes (to be removed eventually)
 dependencyGraph.json
 src/_meta/*.mustache
-
-# Exclude generated files
 src/_patterns/_generated/*.njk
 src/_patterns/00-particles/05-logos-and-icons/00-svg-symbols.json
 src/_patterns/00-particles/00-color/01-color-palettes.json

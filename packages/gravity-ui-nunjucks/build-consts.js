@@ -11,11 +11,6 @@
 
 module.exports = {
   /**
-   * Name of root source directory.
-   */
-  srcDirname: 'src',
-
-  /**
    * Name of root distributables directory.
    */
   distDirname: 'dist',

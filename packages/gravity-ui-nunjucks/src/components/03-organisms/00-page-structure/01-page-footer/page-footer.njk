@@ -1,0 +1,26 @@
+{%- from '@icon' import icon -%}
+{%- from '@image' import image -%}
+
+<footer{% if footer.class %} class="{{ footer.class }}"{% endif %}>
+  <div class="grav-o-container">
+    {% include '@logotype' %}
+
+    <div class="grav-c-page-footer__lists">
+      <ul>
+        {% for link in footer.linksA -%}
+          <li><a href="{{link.url}}">{{link.label}}</a></li>
+        {%- endfor %}
+      </ul>
+
+      <ul>
+          {% for link in footer.linksB -%}
+            <li><a href="{{link.url}}">{{link.label}}</a></li>
+          {%- endfor %}
+      </ul>
+    </div>
+
+    <p>
+      {{footer.copy | safe}}
+    </p>
+  </div>
+</footer>

@@ -7,7 +7,6 @@
  * builds.
  */
 const path = require('path');
-const patternLabConfig = require('../patternlab-config.json');
 const bldConsts = require('../build-consts.js');
 
 const gulpDir = __dirname;
@@ -17,16 +16,16 @@ function pkgRootPath(...pathSegements) {
   return path.resolve(gulpDir, '..', ...pathSegements);
 }
 
-// ==== Pattern library ====
-
-// Resolves the given path segments relative to Pattern Lab's patterns source dir
-function srcPatternsPath(...pathSegments) {
-  return pkgRootPath(patternLabConfig.paths.source.patterns, ...pathSegments);
+// Resolves the given path segments relative to the source dir
+function srcPath(...pathSegements) {
+  return pkgRootPath('src', ...pathSegements);
 }
 
-// Resolves the given path segments relative to the SASS src dir
-function distPath(...pathSegements) {
-  return pkgRootPath(bldConsts.distDirname, ...pathSegements);
+// ==== Pattern library ====
+
+// Resolves the given path segments relative to the temporary assets dir
+function distAssetsPath(...pathSegements) {
+  return pkgRootPath(bldConsts.distDirname, 'pattern-library-assets', ...pathSegements);
 }
 
 module.exports = {
@@ -44,37 +43,85 @@ module.exports = {
 
   /**
    * Takes a sequence of path segments relative to the pattern
-   * library's source patterns directory and returns the absolute path.
+   * library's source components directory and returns the absolute path.
    *
    * @param  {...string} pathSegements One or more path segments
-   *        relative to the pattern library's source patterns directory.
+   *        relative to the pattern library's source components directory.
    *
    * @return {string} Absolute file path to the specified source
    *        directory or file.
    */
-  srcPatternsPath,
-
-  /**
-   * Takes a sequence of path segments relative to the distributables
-   * directory and returns the absolute path.
-   *
-   * @param  {...string} pathSegements One or more path segments
-   *        relative to the distributables directory.
-   *
-   * @return {string} Absolute file path to the specified distributable
-   *        directory or file.
-   */
-  distPath,
+  srcComponentsPath: (...pathSegments) => srcPath('components', ...pathSegments),
 
   /**
    * Takes a sequence of path segments relative to the pattern
-   * library's distributables directory and returns the absolute path.
+   * library's source docs directory and returns the absolute path.
    *
    * @param  {...string} pathSegements One or more path segments
-   *        relative to the Gravity distributables directory.
+   *        relative to the pattern library's source docs directory.
+   *
+   * @return {string} Absolute file path to the specified source
+   *        directory or file.
+   */
+  srcDocsPath: (...pathSegments) => srcPath('docs', ...pathSegments),
+
+  /**
+   * Takes a sequence of path segments relative to the pattern
+   * library's source SASS directory and returns the absolute path.
+   *
+   * @param  {...string} pathSegements One or more path segments
+   *        relative to the pattern library's source SASS directory.
+   *
+   * @return {string} Absolute file path to the specified source
+   *        directory or file.
+   */
+  srcPlSassPath: (...pathSegments) => srcPath('sass', ...pathSegments),
+
+  /**
+   * Takes a sequence of path segments relative to the pattern
+   * library's source assets directory and returns the absolute path.
+   *
+   * @param  {...string} pathSegements One or more path segments
+   *        relative to the pattern library's source assets directory.
+   *
+   * @return {string} Absolute file path to the specified source
+   *        directory or file.
+   */
+  srcAssetsPath: (...pathSegments) => srcPath('assets', ...pathSegments),
+
+  /**
+   * Takes a sequence of path segments relative to Fractal's temporary
+   * static assets directory and returns the absolute path.
+   *
+   * @param  {...string} pathSegements One or more path segments
+   *        relative to the temporary assets directory.
    *
    * @return {string} Absolute file path to the specified distributable
    *        directory or file.
    */
-  distGravityPath: (...pathSegements) => distPath('gravity', ...pathSegements),
+  distAssetsPath,
+
+  /**
+   * Takes a sequence of path segments relative to the temporary Gravity
+   * distributables directory and returns the absolute path.
+   *
+   * @param  {...string} pathSegements One or more path segments
+   *        relative to the temporary Gravity distributables directory.
+   *
+   * @return {string} Absolute file path to the specified temporary
+   *        directory or file.
+   */
+  distGravityPath: (...pathSegements) => distAssetsPath('gravity', ...pathSegements),
+
+  /**
+   * Takes a sequence of path segments relative to the temporary pattern
+   * library styles distributables directory and returns the absolute path.
+   *
+   * @param  {...string} pathSegements One or more path segments
+   *        relative to the temporary pattern library styles directory.
+   *
+   * @return {string} Absolute file path to the specified temporary
+   *        directory or file.
+   */
+  distPlStylesPath: (...pathSegements) => distAssetsPath('pl-styles', ...pathSegements),
 };
