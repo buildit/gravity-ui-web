@@ -1,6 +1,7 @@
 // === Settings layer ===
 // Used with preprocessors and contain font, colors definitions, etc.
 // Must not output any CSS.
+@import 'config';
 @import 'breakpoints';
 @import 'typography';
 @import 'modularscale-settings';
