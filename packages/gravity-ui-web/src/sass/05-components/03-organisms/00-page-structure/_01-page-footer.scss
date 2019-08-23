@@ -2,9 +2,10 @@ body > footer,
 .grav-c-page-footer {
   @include grav-color-apply('border-bottom-color', 'b', 'accent');
   @include grav-font-size(-1);
+  @include grav-padded-border(top, $grav-sp-l, $color-b-purpose: 'neutral-subtle');
 
   margin-bottom: -1 * $grav-sp-page-content-inset;
-  padding: $grav-sp-l 0;
+  padding-bottom: $grav-sp-l;
   border-bottom-width: $grav-st-thickness-medium;
   border-bottom-style: solid;
 
