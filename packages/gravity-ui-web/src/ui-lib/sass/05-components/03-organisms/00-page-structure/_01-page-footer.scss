@@ -13,10 +13,6 @@ body > footer {
     @include grav-l-container;
     padding-bottom: $grav-sp-s;
     text-align: center;
-
-    &:last-child {
-      padding: 0;
-    }
   }
 
   a[href]:link,
