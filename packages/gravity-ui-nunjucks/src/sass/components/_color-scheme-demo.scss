@@ -1,0 +1,28 @@
+.sg-color-scheme-demo {
+  @include grav-padded-border($smart: false);
+
+  // Regardless of light or dark mode, this color scheme
+  // will stand out against the default page background and
+  // therefore does not need a visible border.
+  &.grav-u-color-scheme-teal-black {
+    border-color: transparent;
+  }
+
+  // In dark mode, the page theme is "teal dark gray", so
+  // the "teal white" color scheme's background stands out
+  // and it does not need a visible border.
+  @media (prefers-color-scheme: dark) {
+    &.grav-u-color-scheme-teal-white {
+      border-color: transparent;
+    }
+  }
+
+  // In light mode, the page theme is "teal white", so
+  // the "teal dark gray" color scheme's background stands out
+  // and it does not need a visible border.
+  @media (prefers-color-scheme: light) {
+    &.grav-u-color-scheme-teal-dark-gray {
+      border-color: transparent;
+    }
+  }
+}
