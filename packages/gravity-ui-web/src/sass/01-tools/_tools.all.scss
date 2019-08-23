@@ -1,6 +1,7 @@
 // === Tools layer ===
 // Globally used mixins and functions.
 // Must not output any CSS.
+@import 'borders';
 @import 'breakpoints';
 @import 'container';
 @import 'color-schemes';

@@ -7,4 +7,7 @@
   // Apply default color scheme with a fallback for older
   // browsers that do not support CSS custom properties.
   @include grav-color-scheme-apply(true);
+
+  // Used by the smart border mixin
+  --grav-co-transparent: transparent;
 }
