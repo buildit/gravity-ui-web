@@ -1,4 +1,9 @@
-/**
+/*
+  Tweaks to Fractal's default Mandelbrot theme in order to make
+  our pattern library a bit more Gravity-like
+*/
+// ================================================================
+/*
   Import settings and tools layers from Gravity.
 
   Partials are organised as per Harry Roberts' ITCSS architecture.
@@ -29,28 +34,39 @@
 // Class-based selectors which define undecorated design patterns, for example
 // media object known from OOCSS.
 
-@import 'objects/main';
-@import 'objects/symbol';
-
 
 // === Components layer ===
 // Specific UI components. This is where majority of our work takes place and our UI
 // components are often composed of Objects and Components.
 
-@import 'components/color-contrast';
-@import 'components/color-palette';
-@import 'components/color-prop';
-@import 'components/color-scheme-demo';
-@import 'components/color-swatch';
-@import 'components/datalist';
-@import 'components/datatype';
-@import 'components/example';
-@import 'components/fonts';
-@import 'components/label';
-@import 'components/sub-heading';
+// Make the header use our accent color
+.Header {
+  color: grav-color-default-value('a','neutral');
+  background-color: grav-color-default-value('b','accent');
+}
 
+.Header-navToggle svg {
+  fill: currentColor;
+}
+
+
+.Gravity-Hero {
+  display: block;
+  margin: 0 auto;
+  max-height: 30vh;
+}
+
+.Gravity-Env-List {
+  li > a,
+  li > strong {
+    font-size: 1.125rem;
+  }
+
+  li + li {
+    margin-top: 1em;
+  }
+}
 
 // === Utilities layer ===
 // Utilities and helper classes with ability to override anything which goes before in the
 // triangle, eg. hide helper class.
-@import 'utilities/utilities';

@@ -67,6 +67,18 @@ module.exports = {
 
   /**
    * Takes a sequence of path segments relative to the pattern
+   * library's theme overrides directory and returns the absolute path.
+   *
+   * @param  {...string} pathSegements One or more path segments
+   *        relative to the pattern library's source docs directory.
+   *
+   * @return {string} Absolute file path to the specified source
+   *        directory or file.
+   */
+  srcThemeOverridesPath: (...pathSegments) => srcPath('theme-overrides', ...pathSegments),
+
+  /**
+   * Takes a sequence of path segments relative to the pattern
    * library's source SASS directory and returns the absolute path.
    *
    * @param  {...string} pathSegements One or more path segments

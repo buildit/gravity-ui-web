@@ -1,0 +1,73 @@
+{% import "macros/status.nunj" as status %}
+{% set docsContext = frctl.get('docs.default.context') %}
+
+<img class="Gravity-Hero" src="/gravity-assets/gravity-logo.svg" alt="Gravity design system logo">
+
+<p><strong>Gravity</strong> is <a href="https://buildit.wiprodigital.com/">Buildit @ Wipro Digital</a>'s design system. This pattern library showcases all of Gravity's styles and components for web-based projects, which are provided by the <a href="https://www.npmjs.com/package/@buildit/gravity-ui-web"><code>@buildit/gravity-ui-web</code> NPM package</a>.</p>
+<p>As long as you have Gravity's CSS integrated into your project, all you need to do to "use" a component you find here is to copy the HTML markup shown in this pattern library. For complete setup and usage instructions, please refer to <a href="https://github.com/buildit/gravity-ui-web/tree/develop/packages/gravity-ui-web#readme"><code>@buildit/gravity-ui-web</code>'s documentation</a> on GitHub.</p>
+<p>(In future, we plan to make the underlying Nunjucks templates directly available via another NPM package. Until then, you need to produce your own markup though)</p>
+
+
+<h3>Package versions</h3>
+<p>The following Gravity package versions were used to build this pattern library:</p>
+<table>
+  <tr>
+    <th>Package</th>
+    <th>Version</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>@buildit/gravity-particles</code></td>
+    <td>v{{ docsContext.gravity.particles.version }}</td>
+    <td>Gravity's design tokens and shared assets.</td>
+  </tr>
+  <tr>
+    <td><code>@buildit/gravity-ui-web</code></td>
+    <td>v{{ docsContext.gravity.uiWeb.version }}</td>
+    <td>Gravity's core web UI library. Provides CSS, JavaScript and SVG assets.</td>
+  </tr>
+  <tr>
+    <td><code>@buildit/gravity-nunjucks</code></td>
+    <td>v{{ frctl.get('project.version') }}</td>
+    <td>Nunjucks templates and Fractal config used to generate this pattern library.</td>
+  </tr>
+</table>
+
+
+<h3>Available Gravity pattern libraries</h3>
+<p>There are multiple versions of this pattern library available online:</p>
+<ul class="Gravity-Env-List">
+{% for envName in docsContext.envs.availableEnvNames %}
+  {% set envInfo = docsContext.envs.getEnvInfo(envName) %}
+  {# Omit local-dev unless this build itself is local-dev #}
+  {% if envName !=  docsContext.envs.defaultEnvName or docsContext.envs.getCurrentEnvName() == docsContext.envs.defaultEnvName %}
+  <li>
+    {% if envName == docsContext.envs.getCurrentEnvName() %}
+    <strong>{{ envInfo.name }}</strong> (Currently viewing)
+    {% else %}
+    <a href="{{ envInfo.url }}">{{ envInfo.name }}</a>
+    {% endif %}
+    <p>{{ envInfo.description | safe }}</p>
+    {% if envInfo.gitBranch %}
+    <p>Builds from the <a href="https://github.com/buildit/gravity-ui-web/tree/{{ envInfo.gitBranch }}/"><code>{{ envInfo.gitBranch }}</code> git branch</a>.</p>
+    {% endif %}
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+
+<h3>Component statuses</h3>
+<p>Components and their variants have been given statuses reflecting their state of completion. The available statuses are listed below.</p>
+<table>
+<tr>
+    <th>Label</th>
+    <th>Description</th>
+</tr>
+{% for handle, st in frctl.get('components.statuses') %}
+<tr>
+    <td>{{ status.tag(st) }}</td>
+    <td>{{ st.description }}</td>
+</tr>
+{% endfor %}
+</table>

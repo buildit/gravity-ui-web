@@ -1,11 +1,17 @@
 const fractal = require('@frctl/fractal').create();
 const nunj = require('@frctl/nunjucks');
+const gravityUiWebBldApi = require('@buildit/gravity-ui-web/build-api');
+const gravityParticlesBldApi = require('@buildit/gravity-particles/build-api');
 
+const theme = require('./fractal/theme');
 const bldApi = require('./build-api');
 const bldPaths = require('./gulp/paths');
+const envs = require('./gulp/envs');
+
+const currentEnv = envs.getCurrentEnvInfo();
 
 /* Set the title of the project */
-fractal.set('project.title', 'Build Gravity pattern library');
+fractal.set('project.title', `Buildit Gravity pattern library${currentEnv.showNameInTitle ? ` (${currentEnv.name})` : ''}`);
 fractal.set('project.version', bldApi.version);
 
 /* Tell Fractal where the components will live */
@@ -23,6 +29,23 @@ fractal.docs.set('path', bldPaths.srcDocsPath());
 // Set engine to Nunjucks
 fractal.docs.engine(nunj);
 fractal.docs.set('ext', '.md');
+
+// Add some global context data for docs to use
+fractal.docs.set('default.context', {
+  gravity: {
+    uiWeb: {
+      version: gravityUiWebBldApi.version,
+    },
+    particles: {
+      version: gravityParticlesBldApi.version,
+    },
+  },
+
+  envs,
+});
+
+// Use our customised version of the Mandelbrot theme
+fractal.web.theme(theme);
 
 /* Tell Fractal which directory to serve up for static assets */
 fractal.web.set('static.path', bldPaths.distAssetsPath());
