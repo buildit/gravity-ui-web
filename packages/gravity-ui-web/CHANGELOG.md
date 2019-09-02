@@ -1,3 +1,10 @@
+## [2.2.3](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.2...gravity-ui-web-v2.2.3) (2019-08-30)
+
+
+### Bug Fixes
+
+* removes left padding from specialised lists ([b83b1bc](https://github.com/buildit/gravity-ui-web/commit/b83b1bc))
+
 ## [2.2.2](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.1...gravity-ui-web-v2.2.2) (2019-06-21)
 
 

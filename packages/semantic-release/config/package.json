@@ -26,11 +26,11 @@
   "dependencies": {
     "@buildit/semantic-release-lerna-analyzer": "^1.0.0",
     "@buildit/semantic-release-lerna-release-notes-generator": "^1.0.0",
-    "@semantic-release/changelog": "^3.0.2",
-    "@semantic-release/git": "^7.0.8",
-    "@semantic-release/npm": "^5.1.4"
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/npm": "^5.1.15"
   },
   "devDependencies": {
-    "semantic-release": "^15.13.3"
+    "semantic-release": "^15.13.24"
   }
 }
