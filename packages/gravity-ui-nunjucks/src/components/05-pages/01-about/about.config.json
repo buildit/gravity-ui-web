@@ -1,5 +1,6 @@
 {
   "context": {
+    "bodyClass": "grav-o-full-bleed",
     "title": "About us",
     "header": {
       "url": "./page-homepage",
@@ -53,7 +54,7 @@
     "sections": [
       {
         "title": "Who we are",
-        "class": "grav-o-container",
+        "class": "grav-o-full-bleed__content",
         "content": [
           {
             "paragraph": false,
@@ -100,7 +101,7 @@
       },
       {
         "title": "What we do",
-        "class": "grav-o-container",
+        "class": "grav-o-full-bleed__content",
         "content": [
           {
             "paragraph": "We partner with our clients to solve hard problems, and help them deliver world-class products. We help them improve the way they solve business problems, ultimately changing the way they change."
@@ -118,7 +119,7 @@
       },
       {
         "title": "How we do it",
-        "class": "grav-o-container",
+        "class": "grav-o-full-bleed__content",
         "content": [
           {
             "paragraph": "We are problem solvers who hone our craft through experimentation, continuous improvement and systems thinking."
@@ -136,7 +137,7 @@
       },
       {
         "title": "Our people",
-        "class": "grav-o-container",
+        "class": "grav-o-full-bleed__content",
         "content": [
           {
             "paragraph": "Buildit has an open structure, which means that employees work within wide boundaries."

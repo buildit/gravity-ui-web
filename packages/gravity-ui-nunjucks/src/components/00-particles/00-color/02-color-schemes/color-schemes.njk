@@ -51,7 +51,7 @@
 {% endmacro -%}
 
 {% for schemeData in colorSchemes %}
-<section class="sg-color-scheme grav-u-color-scheme-{{ schemeData.kebabName }}">
+<section class="sg-color-scheme-demo grav-u-color-scheme-{{ schemeData.kebabName }}">
   <h4>{{ schemeData.humanName | title }} color scheme</h4>
   <p>Can be applied to containers using the <code>grav-u-color-scheme-{{ schemeData.kebabName }}</code> utility class.</p>
   {{ colorSchemeTable( schemeData.table ) | safe }}

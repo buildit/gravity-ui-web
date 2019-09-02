@@ -1,0 +1,9 @@
+// Generate margin utility classes for available spacing sizes
+@each $name, $space in $grav-sp-map {
+  $sides: (top, bottom, left, right);
+  @each $side in $sides {
+    .grav-u-m#{str-slice($side, 0, 1)}-#{$name} {
+      margin-#{$side}: #{$space} !important;
+    }
+  }
+}

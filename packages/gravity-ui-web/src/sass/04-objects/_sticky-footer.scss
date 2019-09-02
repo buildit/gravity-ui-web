@@ -1,0 +1,20 @@
+.grav-o-sticky-footer {
+  // By default, <body> has top and bottom padding, so we need to subtract that
+  // from the sticky footer container's min height.
+  @include grav-sticky-footer( calc(100vh - #{2 * $grav-sp-page-content-inset}) );
+
+  // Special case:
+  // When on or within a full-bleed body, that vertical padding is gone, so we
+  // need to adjust our min-height accordingly:
+  &.grav-o-full-beed,
+  .grav-o-full-bleed & {
+    min-height: 100vh;
+  }
+
+
+  // "Modifier" to negate the sticky footer effect on a container.
+  &--unstick {
+    display: block;
+    min-height: none;
+  }
+}

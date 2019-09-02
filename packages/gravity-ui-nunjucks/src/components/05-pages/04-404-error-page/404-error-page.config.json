@@ -1,5 +1,6 @@
 {
   "context": {
+    "bodyClass": "grav-o-full-bleed",
     "title": "404 - Page not found",
     "header": {
       "links": [

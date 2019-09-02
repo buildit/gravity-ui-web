@@ -1,0 +1,12 @@
+////
+/// All configuration variables that can be overridden to customise
+/// Gravity builds.
+///
+/// @group config
+////
+
+/// Whether or not the `<body>` element should have the
+/// sticky footer effect applied by default.
+///
+/// @type boolean
+$grav-config-body-sticky-footer: true !default;
