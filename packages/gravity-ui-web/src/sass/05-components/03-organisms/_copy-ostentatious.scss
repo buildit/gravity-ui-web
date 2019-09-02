@@ -15,9 +15,14 @@
     }
   }
 
+  figcaption {
+    text-align: center;
+  }
+
   img {
-    width: 100%;
-    height: auto;
+    display: block;
+    max-height: 75vh;
+    margin: auto;
   }
 
   @media (min-width: grav-breakpoint(medium)) {
