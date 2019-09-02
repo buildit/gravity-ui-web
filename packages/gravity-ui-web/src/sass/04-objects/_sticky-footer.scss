@@ -4,14 +4,17 @@
   @include grav-sticky-footer( calc(100vh - #{2 * $grav-sp-page-content-inset}) );
 
   // Special case:
-  // When within a full-bleed body, that vertical padding is gone, so we
+  // When on or within a full-bleed body, that vertical padding is gone, so we
   // need to adjust our min-height accordingly:
+  &.grav-o-full-beed,
   .grav-o-full-bleed & {
     min-height: 100vh;
   }
-}
 
-.grav-o-undo-sticky-footer {
-  display: block;
-  min-height: none;
+
+  // "Modifier" to negate the sticky footer effect on a container.
+  &--unstick {
+    display: block;
+    min-height: none;
+  }
 }
