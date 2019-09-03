@@ -3,31 +3,31 @@ Rather than referencing specific color values when styling UI components, _all_ 
 
 Multiple color schemes are defined in `gravity-ui-web` and consumers can add their own additional ones. A default color scheme is applied to pages automatically. However, using some utility classes, different color schemes can be applied to the page or any container within it. The colors of all UI components within then change accordingly.
 
+![Animated demonstration of some UI components having different color schemes applied to them](gravity-color-system-anim.gif)
+
 This decoupling of UI components and color values means that _all_ UI components (now and in the future) can work with _all_ color schemes. This completely eliminates the need for different color variants of UI components as commonly found in other UI libraries.
 
 
 ## Applying color schemes to a page or container
-`gravity-ui-web` provides a number of `grav-u-color-scheme-*` CSS classes which can be applied to any container element, or the `<body>` if you want to change the color scheme of the whole page. They will set the `color` and `background-color` of the container as per the chosen color scheme and also alter the colors of all UI elements within.
+`gravity-ui-web` provides a number of `grav-u-color-scheme-*` CSS classes which can be applied to any container element, or the `<html>` if you want to change the color scheme of the whole page. They will set the `color` and `background-color` of the container as per the chosen color scheme and also alter the colors of all UI elements within.
 
 You can nest containers with different color schemes. For instance, you could have a dark section on a light page and that dark section can then have a light sub-section within it.
 
 
 ## Styling UI components
-As described in the intro, Gravity's UI components _never_ have explicit color _values_ applied to any of their styling properties. Instead, they must always reference one of the available **color purposes**, which are implemented as CSS custom properties. SASS mixins are also available to do so with the option of backwards-compatible default color values for older browsers that do not support custom properties. Within `gravity-ui-web`'s own code, the SASS mixins are the preferred way to apply colors:
+As described in the intro, Gravity's UI components _never_ have explicit color _values_ applied to any of their styling properties. Instead, they must always reference one of the available **color purposes**, which are implemented as CSS custom properties. SASS mixins are also available to do so with a backwards-compatible default color values for older browsers that do not support custom properties. Within `gravity-ui-web`'s own code, the SASS mixins are the preferred way to apply colors:
 
 ```scss
 .grav-c-cool-thing {
-
-  // Applies the group B accent color purpose to the color
-  // property.
-  @include grav-color-grp-b-apply('color', 'accent');
-
-
   // Applies the group A accent color purpose to the
   // background-color property, and adds a fallback value
   // using the default color scheme's group A accent color
   // value.
-  @include grav-color-grp-a-apply('background-color', 'accent', true);
+  @include grav-color-apply('a', 'background-color', 'accent');
+
+  // Applies the group B accent color purpose to the color
+  // property, but omits the fallback.
+  @include grav-color-apply('b', 'color', 'accent', false);
 }
 ```
 
@@ -35,15 +35,15 @@ The CSS output of the above code would be something like this:
 
 ```css
 .grav-c-cool-thing {
-  color: var(--grav-co-grp-b-accent);
-
   background-color: #ffffff;
   background-color: var(--grav-co-grp-a-accent);
+
+  color: var(--grav-co-grp-b-accent);
 }
 ```
 
 ### Color purpose groups
-Color purposes have been divided into 2 groups: **Group A** and **group B**. Every color scheme assigns colors in such a way that **the contrast ratio between _any_ group A and _any_ group B color will be _at least_ [WCAG 2.1 AA](https://www.w3.org/TR/WCAG21/#contrast-minimum) standard**, i.e. 4.5:1. (There is no requirement on the constrast ratios between pairs of colors from the same group, and typically these will be quite low.)
+Color purposes have been divided into 2 groups: **Group A** and **group B**. Every color scheme must assign colors in such a way that **the contrast ratio between _any_ group A and _any_ group B color will be _at least_ [WCAG 2.1 AA](https://www.w3.org/TR/WCAG21/#contrast-minimum) standard (for large text)**, i.e. 3:1. (There is no requirement on the constrast ratios between pairs of colors from the same group, and typically these will be quite low.)
 
 Therefore, whenever an element of a UI component needs to be perceivable against it's surroundings, a color from the _other_ group should be applied. For instance, if the current background color is a group B color, then any text on that background should use a group A color.
 
