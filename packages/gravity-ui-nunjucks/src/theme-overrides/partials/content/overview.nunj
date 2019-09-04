@@ -1,7 +1,7 @@
 {% import "macros/status.nunj" as status %}
 {% set docsContext = frctl.get('docs.default.context') %}
 
-<img class="Gravity-Hero" src="/gravity-assets/gravity-logo.svg" alt="Gravity design system logo">
+<img class="Gravity-Hero" src="/doc-assets/gravity-logo.svg" alt="Gravity design system logo">
 
 <p><strong>Gravity</strong> is <a href="https://buildit.wiprodigital.com/">Buildit @ Wipro Digital</a>'s design system. This pattern library showcases all of Gravity's styles and components for web-based projects, which are provided by the <a href="https://www.npmjs.com/package/@buildit/gravity-ui-web"><code>@buildit/gravity-ui-web</code> NPM package</a>.</p>
 <p>As long as you have Gravity's CSS integrated into your project, all you need to do to "use" a component you find here is to copy the HTML markup shown in this pattern library. For complete setup and usage instructions, please refer to <a href="https://github.com/buildit/gravity-ui-web/tree/develop/packages/gravity-ui-web#readme"><code>@buildit/gravity-ui-web</code>'s documentation</a> on GitHub.</p>

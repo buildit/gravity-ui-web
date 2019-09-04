@@ -1,9 +1,8 @@
-# Color system
 Rather than referencing specific color values when styling UI components, _all_ UI components in `gravity-ui-web` instead reference one of the **color purposes** defined by the Gravity design system. Then, one of Gravity's **color schemes** assigns color values to the various purposes and all UI components take on that scheme's colors.
 
 Multiple color schemes are defined in `gravity-ui-web` and consumers can add their own additional ones. A default color scheme is applied to pages automatically. However, using some utility classes, different color schemes can be applied to the page or any container within it. The colors of all UI components within then change accordingly.
 
-![Animated demonstration of some UI components having different color schemes applied to them](gravity-color-system-anim.gif)
+![Animated demonstration of some UI components having different color schemes applied to them]({{ '/doc-assets/gravity-color-system-anim.gif' | path }})
 
 This decoupling of UI components and color values means that _all_ UI components (now and in the future) can work with _all_ color schemes. This completely eliminates the need for different color variants of UI components as commonly found in other UI libraries.
 

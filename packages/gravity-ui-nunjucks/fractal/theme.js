@@ -15,6 +15,7 @@ const customisedTheme = mandelbrot({
     'default',
     '/pl-styles/fractal-theme.css',
   ],
+  nav: ['docs', 'components'],
 });
 
 customisedTheme.addLoadPath(paths.srcThemeOverridesPath());

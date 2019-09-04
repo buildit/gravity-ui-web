@@ -1,5 +1,3 @@
-# Layout and grids
-
 <!--
   Tip: If using VSCode, get the "Auto Markdown TOC" extension by
   Hunter Tran to automatically update this table of contents.
@@ -44,7 +42,7 @@ Our CSS approach is inspired by [Heydon Pickering](http://www.heydonworks.com/)'
 
 We therefore have a global "lobotomized owl" (`* + *`) CSS rule that sets a default vertical `margin-top` _between_ successive block elements, but not above the first element. Components and pages are encouraged to just let this rule do its thing as much as possible and only selectively override it when absolutely necessary.
 
-![Diagram showing the vertical gap between successive block elements](./layout-vertical-gap.png)
+![Diagram showing the vertical gap between successive block elements]({{ '/doc-assets/layout-vertical-gap.png' | path }})
 
 The SASS variable `$grav-sp-vertical-gap` defines the size of this standard vertical gap.
 
@@ -54,14 +52,14 @@ Similarly, all components inherit `font-family` and `line-height` by default. As
 ## Horizontal page layout
 By default, the `<body>` element has a small outer margin (defined by `$grav-page-content-inset`) on all sides, so that oage content doesn't touch the edges of the screen or browser window. Furthermore, once the viewport exceeds a certain width, the `<body>` element gets locked to a fixed width (defined by `$grav-page-content-max-width`) and appears centered within the viewport.
 
-![Diagram visualising the margin and width of the body element on narrow and wide viewports](./layout-default.png)
+![Diagram visualising the margin and width of the body element on narrow and wide viewports]({{ '/doc-assets/layout-default.png' | path }})
 
 ### Full-bleed layouts
 The default page layout behaviour can be overridden by adding the `.grav-o-full-bleed` class to the `<body>` element. This will remove _all_ margins and remove the `<body>`'s `max-width`. Elements within will therefore fill the entire width of the viewport - i.e. be "full bleed". There will also no longer be a margin above and below the first and last elements respectively.
 
 If you want to "box in" specific child elements so that they have the same horizontal behaviour as `<body>` does by default - i.e. small margins left and right on narrow viewports and a centered with a fixed width on wider viewports - you can do so by adding the `.grav-o-full-bleed__content` class to them.
 
-![Diagram visualising the margin and width of the body element on narrow and wide viewports](./layout-full-bleed.png)
+![Diagram visualising the margin and width of the body element on narrow and wide viewports]({{ '/doc-assets/layout-full-bleed.png' | path }})
 
 Note that **nesting elements with `.grav-o-full-bleed__content` is not supported** as it will create oversized margins on small viewports.
 
@@ -69,7 +67,7 @@ Note that **nesting elements with `.grav-o-full-bleed__content` is not supported
 ## Sticky footer
 Gravity provides various means for having "sticky" page footers, i.e. a page footer that "sticks" to the bottom of the viewport on short pages where it would otherwise appear higher up. On pages with enough content to be taller than the viewport, the page scrolls as usual with the footer appearing at the end.
 
-![Diagram visualising the sticky footer effect on a long and a short page](./layout-sticky-footer.png)
+![Diagram visualising the sticky footer effect on a long and a short page]({{ '/doc-assets/layout-sticky-footer.png' | path }})
 
 ### Default on `<body>`
 Pages whose footers are direct children of the `<body>` element will have the sticky footer behaviour by default.

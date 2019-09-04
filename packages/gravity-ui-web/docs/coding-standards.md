@@ -7,7 +7,7 @@ All code contributions are expected to adhere to these conventions. Where possib
   Hunter Tran to automatically update this table of contents.
   https://github.com/huntertran/markdown-toc
 -->
-<!-- TOC depthFrom:2 -->
+<!-- TOC depthfrom:2 -->
 
 - [File formatting](#file-formatting)
 - [File names](#file-names)
@@ -74,10 +74,10 @@ We use SASS (specifically, the SCSS syntax) to author our CSS. Most of the follo
     * As a rule of thumb, write your HTML first. See how it looks without any additional CSS and then selectively add or override only the properties you need to.
     * Browser dev tools can be helpful here as they let you quickly identify redundant overrides.
 * Use only relative length units
-    * `px` values are forbidden. Font sizes, spacing and dimensions should be set using relative units like `em`, `rem` or `%`. Note, that often times [components should _not_ be setting explicit widths or heights on themselves anyway](./layout-and-grid.md#per-component-rules). As much as possible, we want to allow their default behaviour of growing to fill their parent's width and to accommodate their contents.
+    * `px` values are forbidden. Font sizes, spacing and dimensions should be set using relative units like `em`, `rem` or `%`. Note, that often times [components should _not_ be setting explicit widths or heights on themselves anyway](http://style.buildit.digital/docs/gravity-for-the-web/layout.html#per-component-rules). As much as possible, we want to allow their default behaviour of growing to fill their parent's width and to accommodate their contents.
     * Using `em` and `rem` for text and media queries also means that our entire UI layout can scale up or down and responsively adapt based on the user's default text size preference.
 * Avoid hard-coded values
-    * Global SASS variables (based on the [`gravity-particles` design tokens](https://github.com/buildit/gravity-particles/)), functions and mixins exist for most values you are likely to need, such as typography values, [colors](./color-system.md), spacing values (for margins and paddings), etc.
+    * Global SASS variables (based on the [`gravity-particles` design tokens](https://github.com/buildit/gravity-particles/)), functions and mixins exist for most values you are likely to need, such as typography values, [colors](http://style.buildit.digital/docs/gravity-for-the-web/color-system.html), spacing values (for margins and paddings), etc.
     * Drawing from the global values helps enforce visual consistency in our UIs. It also makes future redesigns or reskins much easier to implement, since we can simply alter those central values.
     * It also makes the code easier to understand since the variable and function names convey the _purpose_ of the values, whereas the raw values do not.
 
