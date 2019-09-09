@@ -8,6 +8,7 @@ const availableEnvs = {
     url: 'http://localhost:3000',
     description: 'A local development version running on your computer. Will auto-referesh whenever you save changes to the source code.',
     gitBranch: null,
+    excludeRobots: true,
   },
   production: {
     name: 'Production',
@@ -15,6 +16,7 @@ const availableEnvs = {
     url: 'http://style.buildit.digital',
     description: 'Always shows the most recently released Gravity styles and components. Updates whenever new releases of <code>@buildit/gravity-ui-web</code> are made.',
     gitBranch: 'master',
+    excludeRobots: false,
   },
   staging: {
     name: 'Staging',
@@ -22,6 +24,7 @@ const availableEnvs = {
     url: 'http://style-staging.buildit.digital',
     description: 'Shows unreleased updates the current major version of <code>@buildit/gravity-ui-web</code>.',
     gitBranch: 'develop',
+    excludeRobots: true,
   },
   next: {
     name: 'Staging for Next',
@@ -29,6 +32,7 @@ const availableEnvs = {
     url: 'http://style-next.buildit.digital',
     description: 'Shows unreleased updates targeting the <em>next</em> major release of <code>@buildit/gravity-ui-web</code>.',
     gitBranch: 'next',
+    excludeRobots: true,
   },
 };
 const availableEnvNames = Object.keys(availableEnvs);

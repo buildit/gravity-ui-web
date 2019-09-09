@@ -1,5 +1,5 @@
-const fractal = require('../fractal');
-const envs = require('../gulp/envs');
+const fractal = require('../../fractal');
+const envs = require('../envs');
 
 const taskNamePrefix = 'fractal:';
 

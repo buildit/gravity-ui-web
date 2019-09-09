@@ -9,11 +9,16 @@
 const path = require('path');
 const bldConsts = require('../build-consts.js');
 
-const gulpDir = __dirname;
+const buildDir = __dirname;
+
+// Resolves the given path segments relative to the build scripts dir
+function buildScriptsPath(...pathSegements) {
+  return path.resolve(buildDir, ...pathSegements);
+}
 
 // Resolves the given path segments relative to the package root dir
 function pkgRootPath(...pathSegements) {
-  return path.resolve(gulpDir, '..', ...pathSegements);
+  return buildScriptsPath('..', ...pathSegements);
 }
 
 // Resolves the given path segments relative to the source dir
@@ -66,16 +71,28 @@ module.exports = {
   srcDocsPath: (...pathSegments) => srcPath('docs', ...pathSegments),
 
   /**
-   * Takes a sequence of path segments relative to the pattern
-   * library's theme overrides directory and returns the absolute path.
+   * Takes a sequence of path segments relative to the Fractal theme overrides
+   * directory and returns the absolute path.
    *
    * @param  {...string} pathSegements One or more path segments
-   *        relative to the pattern library's source docs directory.
+   *        relative to the Fractal theme overrides directory.
    *
    * @return {string} Absolute file path to the specified source
    *        directory or file.
    */
-  srcThemeOverridesPath: (...pathSegments) => srcPath('theme-overrides', ...pathSegments),
+  fractalThemeOverridesPath: (...pathSegments) => buildScriptsPath('fractal', 'theme-overrides', ...pathSegments),
+
+  /**
+   * Takes a sequence of path segments relative to the Fractal extras
+   * directory and returns the absolute path.
+   *
+   * @param  {...string} pathSegements One or more path segments
+   *        relative to the Fractal extras directory.
+   *
+   * @return {string} Absolute file path to the specified source
+   *        directory or file.
+   */
+  fractalExtrasPath: (...pathSegments) => buildScriptsPath('fractal', 'extras', ...pathSegments),
 
   /**
    * Takes a sequence of path segments relative to the pattern

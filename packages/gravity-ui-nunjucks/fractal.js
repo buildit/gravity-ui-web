@@ -3,10 +3,10 @@ const nunj = require('@frctl/nunjucks');
 const gravityUiWebBldApi = require('@buildit/gravity-ui-web/build-api');
 const gravityParticlesBldApi = require('@buildit/gravity-particles/build-api');
 
-const theme = require('./fractal/theme');
+const theme = require('./build/fractal/theme');
 const bldApi = require('./build-api');
-const bldPaths = require('./gulp/paths');
-const envs = require('./gulp/envs');
+const bldPaths = require('./build/paths');
+const envs = require('./build/envs');
 
 const currentEnv = envs.getCurrentEnvInfo();
 

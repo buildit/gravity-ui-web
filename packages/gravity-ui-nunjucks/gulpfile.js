@@ -11,12 +11,12 @@
 const gulp = require('gulp');
 const del = require('del');
 
-const pkgPaths = require('./gulp/paths.js');
-const patternLibraryTasks = require('./gulp/fractal-tasks.js');
-const preBuildTasks = require('./gulp/pre-build.js');
-const gravityTasks = require('./gulp/gravity.js');
-const plStyleTasks = require('./gulp/pl-styles.js');
-const plAssetTasks = require('./gulp/pl-assets.js');
+const pkgPaths = require('./build/paths.js');
+const patternLibraryTasks = require('./build/gulp/fractal-tasks.js');
+const preBuildTasks = require('./build/gulp/pre-build.js');
+const gravityTasks = require('./build/gulp/gravity.js');
+const plStyleTasks = require('./build/gulp/pl-styles.js');
+const plAssetTasks = require('./build/gulp/pl-assets.js');
 
 // Define composite tasks:
 
@@ -28,6 +28,7 @@ const build = gulp.series(
     preBuildTasks.createColorPaletteData,
     gravityTasks.makeCopyTask(),
     plStyleTasks.buildSass,
+    plAssetTasks.generateAssets,
     plAssetTasks.copyAssets,
   ),
   patternLibraryTasks.buildPatternLibrary,
@@ -43,6 +44,7 @@ const serve = gulp.series(
     preBuildTasks.createColorPaletteData,
     gravityTasks.makeCopyTask(true),
     plStyleTasks.buildSass,
+    plAssetTasks.generateAssets,
     plAssetTasks.copyAssets,
   ),
   gulp.parallel(

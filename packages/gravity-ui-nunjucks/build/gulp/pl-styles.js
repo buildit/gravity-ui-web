@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const eyeglass = require('eyeglass');
 
-const pkgPaths = require('./paths.js');
+const pkgPaths = require('../paths.js');
 
 const taskNamePrefix = 'pl-styles:';
 

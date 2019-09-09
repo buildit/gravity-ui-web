@@ -5,7 +5,7 @@
   https://fractal.build/guide/web/default-theme.html#configuration
 */
 const mandelbrot = require('@frctl/mandelbrot');
-const paths = require('../gulp/paths');
+const paths = require('../paths');
 
 // create a new instance with custom config options
 const customisedTheme = mandelbrot({
@@ -18,6 +18,6 @@ const customisedTheme = mandelbrot({
   nav: ['docs', 'components'],
 });
 
-customisedTheme.addLoadPath(paths.srcThemeOverridesPath());
+customisedTheme.addLoadPath(paths.fractalThemeOverridesPath());
 
 module.exports = customisedTheme;

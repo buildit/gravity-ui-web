@@ -9,7 +9,7 @@ const file = require('gulp-file');
 const jsonEditor = require('gulp-json-editor');
 const { colors } = require('@buildit/gravity-particles');
 const uiLibPaths = require('@buildit/gravity-ui-web/build-api.js');
-const pkgPaths = require('./paths.js');
+const pkgPaths = require('../paths.js');
 const colorSchemeTables = require('./color-scheme-tables.js');
 
 const taskNamePrefix = 'pre-build:';
