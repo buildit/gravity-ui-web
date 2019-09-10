@@ -1,4 +1,4 @@
-**Gravity** is the name of [Buildit @ Wipro Digital](https://buildit.wiprodigital.com/)'s [design system]({{ '/docs/further-reading/what-is-a-design-system' | path }}). As such, it strives to provide Buildit staff with all the support and resources they need to create high-quality and consistent user interfaces. We want all our apps, websites and, potentially, collaterol in other media to be instantly recognisable and familiar as Buildit products.
+**Gravity** is [Buildit @ Wipro Digital](https://buildit.wiprodigital.com/)'s [design system]({{ '/docs/further-reading/what-is-a-design-system' | path }}). As such, it strives to provide Buildit staff with all the support and resources they need to create high-quality and consistent user interfaces. We want all our apps, websites and, potentially, collaterol in other media to be instantly recognisable and familiar as Buildit products.
 
 <img class="Gravity-Hero" src="{{ '/doc-assets/gravity-logo.svg' | path }}" alt="Gravity design system logo">
 

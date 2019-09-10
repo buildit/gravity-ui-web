@@ -36,7 +36,7 @@ const availableEnvs = {
   },
 };
 const availableEnvNames = Object.keys(availableEnvs);
-const defaultEnvName = availableEnvNames[0];
+const defaultEnvName = 'local-dev';
 
 const knownOptions = {
   string: 'env',
