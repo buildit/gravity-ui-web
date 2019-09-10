@@ -2,12 +2,12 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const eyeglass = require('eyeglass');
 
-const pkgPaths = require('./paths.js');
+const pkgPaths = require('../paths.js');
 
 const taskNamePrefix = 'pl-styles:';
 
 function buildSass() {
-  return gulp.src(pkgPaths.srcPlSassPath('pattern-scaffolding.scss'))
+  return gulp.src(pkgPaths.srcPlSassPath('*.scss'))
     .pipe(sass(eyeglass(sass.sync().on('error', sass.logError))))
     .pipe(gulp.dest(pkgPaths.distPlStylesPath()));
 }

@@ -35,7 +35,7 @@ If there are any exceptions, please make sure to explain why this is the case:
 
 ### Images
 
-- [ ] The images have been added to Gravity only if specifically needed, otherwise they should belong to PatternLab itself (there are some live examples in the code base).
+- [ ] The images have been added to Gravity's UI library (`@buildit/gravity-ui-web`) only if specifically needed. Otherwise they should belong to the pattern library itself (i.e., they should be placed under `packages/gravity-ui-nunjucks/src/assets/`).
 
 ### Other
 

@@ -2,7 +2,7 @@
 const gulp = require('gulp');
 const filter = require('gulp-filter');
 const uiLibPaths = require('@buildit/gravity-ui-web/build-api.js');
-const pkgPaths = require('./paths.js');
+const pkgPaths = require('../paths.js');
 
 const taskNamePrefix = 'gravity:';
 

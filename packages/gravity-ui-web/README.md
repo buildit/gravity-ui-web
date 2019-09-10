@@ -194,9 +194,8 @@ The above command only includes _public_ SASS APIs that are also available to co
 
 ### Further information
 
+* [Documentation section in pattern library](http://style.buildit.digital/docs/)
 * [Coding standards](./docs/coding-standards.md)
-* [Color system](./docs/layout-and-grid.md)
-* [Layout and grid](./docs/color-system.md)
 * [Contribution guidelines](../../CONTRIBUTING.md)
 * [`git` branching strategy](../../docs/branching-strategy.md)
 

@@ -1,4 +1,5 @@
-const fractal = require('../fractal');
+const fractal = require('../../fractal');
+const envs = require('../envs');
 
 const taskNamePrefix = 'fractal:';
 
@@ -37,6 +38,7 @@ startServer.displayName = `${taskNamePrefix}start`;
  * configuration option set above.
  */
 async function buildPatternLibrary() {
+  logger.success(`Fractal build for environment: ${envs.getCurrentEnvInfo().name}`);
   const builder = fractal.web.builder();
 
   builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
