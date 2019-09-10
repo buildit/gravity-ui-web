@@ -175,7 +175,7 @@ function watchTask(done) {
     console.log(`\n${chalk.bold(`Watching ${watcher.name}:`)}`);
 
     // eslint-disable-next-line no-console
-    watcher.paths.forEach(p => console.log(`  ${p}`));
+    watcher.paths.forEach((p) => console.log(`  ${p}`));
 
     gulp.watch(watcher.paths, watcher.config, watcher.tasks);
   });

@@ -25,7 +25,7 @@ function generateColorSchemeTableData(colorScheme) {
   const groupBColorNames = Object.keys(colorScheme.groupB);
 
   const tableData = [];
-  const headerRow = [null].concat(groupAColorNames.map(name => gravityCssCustomPropName('a', name))); // top-left cell is empty
+  const headerRow = [null].concat(groupAColorNames.map((name) => gravityCssCustomPropName('a', name))); // top-left cell is empty
   tableData.push(headerRow);
 
   // Loop "down" the rows of the table, one for each group B color

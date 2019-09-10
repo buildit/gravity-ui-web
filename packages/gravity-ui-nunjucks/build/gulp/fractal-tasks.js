@@ -20,7 +20,7 @@ async function startServer() {
     sync: true,
   });
 
-  server.on('error', err => logger.error(err.message));
+  server.on('error', (err) => logger.error(err.message));
 
   await server.start();
   logger.success(`Fractal server is now running at ${server.url}`);
@@ -42,7 +42,7 @@ async function buildPatternLibrary() {
   const builder = fractal.web.builder();
 
   builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
-  builder.on('error', err => logger.error(err.message));
+  builder.on('error', (err) => logger.error(err.message));
 
   await builder.build();
   logger.success('Fractal build completed!');
