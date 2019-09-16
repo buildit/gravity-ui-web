@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@commitlint/travis-cli": "^8.1.0",
     "bundlesize": "^0.18.0",
     "commitizen": "^4.0.3",
