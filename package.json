@@ -13,9 +13,9 @@
     "clean": "npm run clean:cdn && lerna run clean"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
-    "@commitlint/travis-cli": "^8.1.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/travis-cli": "^8.2.0",
     "bundlesize": "^0.18.0",
     "commitizen": "^4.0.3",
     "cz-lerna-changelog": "^2.0.2",
