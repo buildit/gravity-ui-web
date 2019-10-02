@@ -91,12 +91,11 @@
 
   @if $version-to-be-removed {
     // Append message with version to be removed
-    $message: '#{$message} and is due to be removed in v#{$version-to-be-removed}.';
+    $message: '#{$message} and is due to be removed in v#{$version-to-be-removed}';
   }
-  @else {
-    // End the sentence
-    $message: '#{$message}.';
-  }
+
+  // End the sentence
+  $message: '#{$message}.';
 
   @if $migration-message {
     // Append migration message
@@ -135,7 +134,7 @@
 // ====================================================================
 
 .grav-o-full-bleed__content .grav-o-full-bleed__content {
-  @include highlight-error('Nesting of .ggrav-o-full-bleed__content is not allowed.');
+  @include highlight-error('Nesting of .grav-o-full-bleed__content is not allowed.');
 }
 
 body meta:first-child,
