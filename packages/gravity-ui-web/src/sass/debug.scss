@@ -66,7 +66,7 @@
   }
 }
 
-///  Highlights elements with errors in danger accent color
+/// Highlights elements with errors in danger accent color
 ///
 /// @param {string} $message [''] - The error message to display to the user.
 @mixin highlight-error($message: '') {
@@ -80,21 +80,68 @@
   @include highlight('accent-attention', $message);
 }
 
+/// Generates CSS to display a warning message for classes that have
+/// been deprecated and will eventually be removed from Gravity.
+///
+/// @param {string} $class - The CSS class selector
+/// @param {string} $version-to-be-removed - (Optional) The Gravity UI Web version in which the class will be removed.
+/// @param {string} $migration-message - Optional migration instructions.
+@mixin deprecated-class($class, $version-to-be-removed: false, $migration-message: false) {
+  $message: '#{$class} has been deprecated';
+
+  @if $version-to-be-removed {
+    // Append message with version to be removed
+    $message: '#{$message} and is due to be removed in v#{$version-to-be-removed}';
+  }
+
+  // End the sentence
+  $message: '#{$message}.';
+
+  @if $migration-message {
+    // Append migration message
+    $message: '#{$message} #{$migration-message}';
+  }
+
+  #{$class} {
+    @include highlight-warning($message);
+  }
+}
+
+/// Generates CSS to display an error message for classes that have
+/// been removed from Gravity.
+///
+/// @param {string} $class - The CSS class selector
+/// @param {string} $version-removed - The Gravity UI Web version in which the class was removed.
+/// @param {string} $migration-message - Optional migration instructions.
+@mixin removed-class($class, $version-removed, $migration-message: false) {
+  $message: '#{$class} was removed in v#{$version-removed}.';
+
+  @if $migration-message {
+    // Append migration message
+    $message: '#{$message} #{$migration-message}';
+  }
+
+  #{$class} {
+    @include highlight-error($message);
+  }
+}
+
+
 /* stylelint-enable scss/at-mixin-pattern */
 
 // ====================================================================
 // Tests for misuse of Gravity's styles, classes and components
 // ====================================================================
 
-.grav-o-container .grav-o-container {
-  @include highlight-error('Nesting of .grav-o-container is not allowed.');
+.grav-o-full-bleed__content .grav-o-full-bleed__content {
+  @include highlight-error('Nesting of .grav-o-full-bleed__content is not allowed.');
 }
 
 body meta:first-child,
 body link:first-child,
 body script:first-child,
 body style:first-child,
-body [hidden]:first-child {
+[hidden]:first-child {
   @include highlight-warning('Invisible first child may cause following visible element to have unwanted top margin.');
 
   // Make element visible, so that we can show error
@@ -113,3 +160,27 @@ body [hidden]:first-child {
 // ====================================================================
 
 // TBC...
+
+
+// ====================================================================
+// Flag deprecated Gravity classes and components
+// ====================================================================
+
+// Add warnings here as needed...
+// @include deprecated-class( ... );
+
+
+// ====================================================================
+// Flag removed Gravity classes and components
+// ====================================================================
+
+// Things removed in gravity-ui-web v3
+@include removed-class('.grav-o-container', 3, 'Use .grav-o-full-bleed__content instead.');
+@include removed-class('.grav-o-container-banner', 3, 'Consider applying a color scheme instead (.grav-u-color-scheme-*).');
+@include removed-class('.grav-o-section', 3);
+@include removed-class('.grav-c-two-columns-text', 3);
+@include removed-class('.grav-c-logo-image', 3);
+@include removed-class('.grav-c-job-list', 3, 'A similar layout can be achieved with .grav-o-two-column.');
+@include removed-class('.grav-c-list-image-links', 3, 'Consider using .grav-c-list-inline-row instead.');
+@include removed-class('.grav-c-list-img-cards', 3, 'Consider using .grav-c-list-cards-basic or .grav-o-two-column instead.');
+@include removed-class('.grav-c-two-columns-block', 3, 'Please use .grav-o-two-column instead.');
