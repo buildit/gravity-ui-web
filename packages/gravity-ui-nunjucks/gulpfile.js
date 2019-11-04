@@ -17,6 +17,7 @@ const preBuildTasks = require('./build/gulp/pre-build.js');
 const gravityTasks = require('./build/gulp/gravity.js');
 const plStyleTasks = require('./build/gulp/pl-styles.js');
 const plAssetTasks = require('./build/gulp/pl-assets.js');
+const tests = require('./build/gulp/tests');
 
 // Define composite tasks:
 
@@ -66,8 +67,13 @@ function clean() {
 }
 clean.description = 'Deletes all intermediated and final build output files.';
 
+const test = gulp.series(
+  tests.runA11yTests,
+);
+
 module.exports = {
   default: build,
   serve,
   clean,
+  test,
 };
