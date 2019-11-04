@@ -24,4 +24,29 @@ module.exports = {
    * Base filename used by various SVG symbols files.
    */
   svgSymbolsBasename: 'symbols',
+
+  /**
+   * Name of source dir for SASS source code.
+   */
+  srcSassDirname: 'sass',
+
+  /**
+   * Name of source dir for copies of external SASS libraries.
+   */
+  srcLibCopyDirname: '_external',
+
+  /**
+   * Name of source dir for copy of modularscale lib.
+   */
+  modularscaleDirname: 'modularscale-sass',
+
+  /**
+   * Name of source dir for copy of Gravity Particles lib.
+   */
+  gravityParticlesDirname: 'gravity-particles',
+
+  /**
+   * External library version filename.
+   */
+  versionFilename: 'version.json',
 };
