@@ -1,35 +1,47 @@
 const AxeBuilder = require('axe-webdriverjs');
 const selenium = require('selenium-webdriver');
-const util = require('util');
+const chrome = require('selenium-webdriver/chrome');
+const { getComponentsNames, getViolations } = require('./_helpers');
+const pkgEnvs = require('../build/envs');
+const pkgPaths = require('../build/paths');
 
 let driver;
 
 describe('A11y tests', () => {
-  beforeEach((done) => {
-    driver = new selenium.Builder().forBrowser('chrome').build();
+  const components = getComponentsNames(pkgPaths.srcComponentsPath(), '.njk');
 
-    driver.get('http://localhost:3000/components/preview/text-input').then(() => done());
-  });
+  components.forEach((component) => {
+    describe(`${component}`, () => {
+      beforeEach((done) => {
+        driver = new selenium.Builder()
+          .forBrowser('chrome')
+          .setChromeOptions(
+            new chrome.Options()
+              .headless()
+              .windowSize({ width: 640, height: 480 }),
+          )
+          .build();
+        const test = `${pkgEnvs.getCurrentEnvInfo().url}/components/preview/${component}`;
+        driver.get(test).then(() => done());
+      });
 
-  afterEach((done) => {
-    driver.quit().then(() => {
-      done();
-    });
-  });
+      afterEach((done) => {
+        driver.quit().then(() => {
+          done();
+        });
+      });
 
-  it('should have no accessibility violations', (done) => {
-    driver
-      .findElement(selenium.By.css('input'))
-      .then(() => {
-        AxeBuilder(driver)
-          .analyze((err, results) => {
-            console.log('Accessibility Violations: ', results.violations.length);
-            if (results.violations.length > 0) {
-              console.log(util.inspect(results.violations, true, null));
-            }
-            expect(results.violations.length).toBe(0);
-            done();
+      it('should have no accessibility violations', (done) => {
+        driver
+          .findElement(selenium.By.css('body'))
+          .then(() => {
+            AxeBuilder(driver)
+              .analyze((err, results) => {
+                expect(results.violations.length).toBe(0, getViolations(results.violations));
+                done();
+              });
           });
       });
+    });
   });
 });
