@@ -50,10 +50,9 @@ const getComponentsNames = (startPath) => getFilesFromDirectory(startPath, '.njk
    */
 const getViolations = (violations) => {
   const messages = violations.map(
-    // (violation) => JSON.stringify(violation),
-    (violation) => `\n- ${violation.impact}\n${violation.description}\n${violation.help} (${violation.nodes.length} elements affected)\nHelp: ${violation.helpUrl}`,
+    (violation) => `${violation.description}\n ${violation.help}\n Help: ${violation.helpUrl}\n`,
   );
-  return `${violations.length} violations found:\n${messages.join()}`;
+  return messages;
 };
 
 module.exports = {
