@@ -52,6 +52,12 @@ npm start
 ```
 This should also open the pattern library in your default web browser. In any case, the URL will be listed in the console output. By default it is: http://localhost:3000/
 
+#### Run accessibility tests
+Outputs to the `dist/` directory.
+```
+npm run test:a11y
+```
+
 #### Environment options
 Both `npm run build` and `npm run start` can build different variations of the pattern library, based on environment configs defined in `gulp/envs.js`. These options are primrily intended to tailor the pattern library's overview page so that users are aware which version they are currently viewing.
 
