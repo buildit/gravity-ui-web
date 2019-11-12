@@ -53,7 +53,7 @@ npm start
 This should also open the pattern library in your default web browser. In any case, the URL will be listed in the console output. By default it is: http://localhost:3000/
 
 #### Run accessibility tests
-Outputs to the `dist/` directory.
+Runs component's accessibility tests using [axe-webdriverjs](https://github.com/dequelabs/axe-webdriverjs)
 ```
 npm run test:a11y
 ```
