@@ -33,13 +33,19 @@ const getFilesFromDirectory = (startPath, extension, result) => {
    * Takes an absolute path and returns an array
    * of file names in a recursive way.
    *
-   * @param  {string} startPath Absolute path.
+   * @param  {string} startPath absolute path.
    *
-   * @param {array} result array that will contain the final result
+   * @param {array} excludedFiles array with the name of the files
+   * to be excluded from the search
+   *
+   * @param {string} extension file extension type
    *
    * @return {array} List of files that match the extension given.
    */
-const getComponentsNames = (startPath) => getFilesFromDirectory(startPath, '.njk');
+const getComponentsNames = (startPath, excludedFiles, extension) => (
+  getFilesFromDirectory(startPath, extension)
+    .filter((name) => !excludedFiles.includes(name))
+);
 
 /**
    * Takes a set of objects and returns an array of formatted error messages.

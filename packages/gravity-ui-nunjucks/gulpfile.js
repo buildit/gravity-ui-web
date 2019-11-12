@@ -5,6 +5,7 @@
  *
  * - Build the UI lib
  * - Build the living style guide
+ * - Run tests
  *
 ***************************************************** */
 
