@@ -33,7 +33,7 @@ You can also run the following commands from within this package's directory.
 
 **Note:** You will need to have built the [`@buildit/gravity-ui-web`](../gravity-ui-web/) package first, otherwise the Gravity styles will be missing!
 
-#### Build the pattern library 
+#### Build the pattern library
 Outputs to the `dist/` directory.
 ```
 npm run build
@@ -53,7 +53,11 @@ npm start
 This should also open the pattern library in your default web browser. In any case, the URL will be listed in the console output. By default it is: http://localhost:3000/
 
 #### Run accessibility tests
-Runs component's accessibility tests using [axe-webdriverjs](https://github.com/dequelabs/axe-webdriverjs)
+Runs component's accessibility tests using [axe-webdriverjs](https://github.com/dequelabs/axe-webdriverjs).
+
+First download and install the lastest `chromedriver` from [here](https://chromedriver.storage.googleapis.com/index.html).
+
+[See more on Webdriver requirements and setup](https://selenium.dev/documentation/en/webdriver/driver_requirements/).
 ```
 npm run test:a11y
 ```

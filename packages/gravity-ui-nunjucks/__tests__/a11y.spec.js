@@ -27,7 +27,7 @@ describe('A11y tests', () => {
   const components = getComponentsNames(pkgPaths.srcComponentsPath(), excludedFiles, '.njk');
 
   components.forEach((component) => {
-    fdescribe(`${component} component`, () => {
+    describe(`${component} component`, () => {
       beforeEach((done) => {
         driver = new selenium.Builder()
           .forBrowser('chrome')

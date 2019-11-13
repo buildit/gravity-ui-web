@@ -15,18 +15,19 @@ const path = require('path');
    */
 const getFilesFromDirectory = (startPath, extension, result) => {
   const files = fs.readdirSync(startPath);
-  // eslint-disable-next-line no-param-reassign
-  result = result || [];
+
+  const finalResult = result || [];
+
   for (let i = 0; i < files.length; i += 1) {
     const filename = path.join(startPath, files[i]);
     const stat = fs.lstatSync(filename);
     if (stat.isDirectory()) {
-      getFilesFromDirectory(filename, extension, result);
+      getFilesFromDirectory(filename, extension, finalResult);
     } else if (filename.indexOf(extension) >= 0) {
-      result.push(path.basename(filename, extension));
+      finalResult.push(path.basename(filename, extension));
     }
   }
-  return result;
+  return finalResult;
 };
 
 /**
@@ -54,12 +55,8 @@ const getComponentsNames = (startPath, excludedFiles, extension) => (
    *
    * @return {array} Array of formatted messages.
    */
-const getViolations = (violations) => {
-  const messages = violations.map(
-    (violation) => `${violation.description}\n ${violation.help}\n Help: ${violation.helpUrl}\n`,
-  );
-  return messages;
-};
+const getViolations = (violations) => violations
+  .map((violation) => `${violation.description}\n ${violation.help}\n Help: ${violation.helpUrl}\n`);
 
 module.exports = {
   getViolations,
