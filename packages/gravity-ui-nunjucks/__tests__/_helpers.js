@@ -1,35 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
-/**
-   * Takes an absolute path and an extesion file type to returns an array
-   * of file names in a recursive way.
-   *
-   * @param  {string} startPath Absolute path.
-   *
-   * @param {string} extension Extension file type
-   *
-   * @param {array} result Array that will contain the final result
-   *
-   * @return {array} List of files that match the extension given.
-   */
-const getFilesFromDirectory = (startPath, extension, result) => {
-  const files = fs.readdirSync(startPath);
-
-  const finalResult = result || [];
-
-  for (let i = 0; i < files.length; i += 1) {
-    const filename = path.join(startPath, files[i]);
-    const stat = fs.lstatSync(filename);
-    if (stat.isDirectory()) {
-      getFilesFromDirectory(filename, extension, finalResult);
-    } else if (filename.indexOf(extension) >= 0) {
-      finalResult.push(path.basename(filename, extension));
-    }
-  }
-  return finalResult;
-};
-
 /**
    * Takes an absolute path and returns an array
    * of file names in a recursive way.
@@ -43,9 +11,8 @@ const getFilesFromDirectory = (startPath, extension, result) => {
    *
    * @return {array} List of files that match the extension given.
    */
-const getComponentsNames = (startPath, excludedFiles, extension) => (
-  getFilesFromDirectory(startPath, extension)
-    .filter((name) => !excludedFiles.includes(name))
+const getComponentsNames = (components, excludedFiles) => (
+  components.filter((name) => !excludedFiles.includes(name))
 );
 
 /**
@@ -61,5 +28,4 @@ const getViolations = (violations) => violations
 module.exports = {
   getViolations,
   getComponentsNames,
-  getFilesFromDirectory,
 };

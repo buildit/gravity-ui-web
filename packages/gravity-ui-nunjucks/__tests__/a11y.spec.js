@@ -1,32 +1,25 @@
 const AxeBuilder = require('axe-webdriverjs');
 const selenium = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
-const { getComponentsNames, getViolations } = require('./_helpers');
+const { getViolations, getComponentsNames } = require('./_helpers');
 const pkgEnvs = require('../build/envs');
-const pkgPaths = require('../build/paths');
-
-const excludedFiles = [
-  '_preview',
-  'about',
-  '404-error-page',
-  'navigation',
-  'article',
-  'symbols',
-  'svg-symbols',
-  'image',
-  'inline-svg-symbol',
-  'logotype',
-  'logo',
-  'wiprodigital',
-  'designit',
-  'icon',
-];
+const { excludedA11yFiles: excludedFiles, excludedA11yRules: excludedRules } = require('../test-consts');
+const fractal = require('../fractal');
 
 describe('A11y tests', () => {
   let driver;
-  const components = getComponentsNames(pkgPaths.srcComponentsPath(), excludedFiles, '.njk');
+  const components = fractal.components
+    .flattenDeep()
+    .toArray()
+    .reduce((accumulator, currentValue) => {
+      if (currentValue.alias !== null) {
+        accumulator.push(currentValue.alias);
+      }
+      return accumulator;
+    }, []);
+  const componentNames = getComponentsNames(components, excludedFiles);
 
-  components.forEach((component) => {
+  componentNames.forEach((component) => {
     describe(`${component} component`, () => {
       beforeEach((done) => {
         driver = new selenium.Builder()
@@ -52,7 +45,7 @@ describe('A11y tests', () => {
           .findElement(selenium.By.tagName('body'))
           .then(() => {
             AxeBuilder(driver)
-              .disableRules(['landmark-one-main', 'page-has-heading-one', 'bypass', 'region'])
+              .disableRules(excludedRules)
               .analyze((err, results) => {
                 expect(results.violations.length).toBe(0);
                 if (results.violations.length > 0) {
