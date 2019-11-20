@@ -1,3 +1,11 @@
+/**
+ * Checks for the presence of a Gravity source SASS file in an array
+ * of filepaths.
+ *
+ * @param {string[]} files                  Array of filepaths.
+ * @param {string} gravitySassAbsFilePath   Absolute path to one of Gravity's
+ *                                          source SASS files.
+ */
 function isGravitySassFileIncluded(files, gravitySassAbsFilePath) {
   // Get the final part of the path to a SASS file within gravity-ui-web
   const gravitySassRelFilePath = gravitySassAbsFilePath.replace(
@@ -8,8 +16,15 @@ function isGravitySassFileIncluded(files, gravitySassAbsFilePath) {
   return files.find((path) => path.endsWith(gravitySassRelFilePath)) !== undefined;
 }
 
-function isGravityMainSassFileInclude(files, gravityBldApi) {
-  return isGravitySassFileIncluded(files, gravityBldApi.srcSassPath(gravityBldApi.srcSassMainFilename));
+/**
+ * Checks for the presence of one of Gravity's internal partials in an
+ * array of filepaths.
+ *
+ * @param {string[]} files        Array of filepaths.
+ * @param {string} gravityBldApi  The Gravity UI Web library's build API object.
+ */
+function isGravitySassPartialIncluded(files, gravityBldApi) {
+  return isGravitySassFileIncluded(files, gravityBldApi.srcSassPath('00-settings/_color-schemes.scss'));
 }
 
 
@@ -48,23 +63,27 @@ module.exports = {
    *
    * @param {object|null} err   `null` on success, an object containing error details
    *                            otherwise.
-   * @param {*} result     Ignored.
+   * @param {string} filename   The name of the SASS file being compiled.
+   * @param {function} done     Callback to signal async completion.
    */
-  getSassTestCompletionCallback(gravityBldApi){
+  getSassTestCompletionCallback(gravityBldApi, filename, done = undefined){
     return (err, result) => {
       if (err) {
-        console.error('  ❌ SASS compilation failed: ', err);
+        console.error(`  ❌ SASS compilation of ${filename} failed: `, err);
         process.exit(1);
       }
 
-      if (!isGravityMainSassFileInclude(result.stats.includedFiles, gravityBldApi)) {
-        console.error('  ❌ SASS compilation did not actually include Gravity\'s main SASS file.');
+      if (!isGravitySassPartialIncluded(result.stats.includedFiles, gravityBldApi)) {
+        console.error(`  ❌ SASS compilation of ${filename} did not actually include expected Gravity\'s SASS partial.`);
         // This can happen if the dist/gravity.css file is mistakenly imported instead.
         process.exit(1);
       }
 
-      console.log('  ✅ SASS compilation succeeded.');
-      process.exit(0);
+      console.log(`  ✅ SASS compilation of ${filename} succeeded.`);
+
+      if (done) {
+        done();
+      }
     };
   },
 
@@ -77,9 +96,10 @@ module.exports = {
    *
    * @param {object|null} err   `null` on success, an object containing error details
    *                            otherwise.
-   * @param {*} stats     Ignored.
+   * @param {string} filename   The name of the SASS file being compiled.
+   * @param {function} done     Callback to signal async completion.
    */
-  getWebpackSassTestCompletionCallback(gravityBldApi){
+  getWebpackSassTestCompletionCallback(gravityBldApi, filename, done = undefined){
     return (err, stats) => {
       if (err) {
         console.warn('  ⚠️ Fatal Webpack error. Did not get as far as attempting to compile SASS.');
@@ -90,18 +110,21 @@ module.exports = {
       console.log(stats.toString());
 
       if (stats.hasErrors()) {
-        console.error('  ❌ Webpack SASS compilation errored.');
+        console.error(`  ❌ Webpack SASS compilation of ${filename} errored.`);
         process.exit(1);
       }
 
-      if (!isGravityMainSassFileInclude(Array.from(stats.compilation.fileDependencies), gravityBldApi)) {
-        console.error('  ❌ SASS compilation did not actually include Gravity\'s main SASS file.');
+      if (!isGravitySassPartialIncluded(Array.from(stats.compilation.fileDependencies), gravityBldApi)) {
+        console.error(`  ❌ SASS compilation of ${filename} did not actually include expected Gravity\'s SASS partial.`);
         // This can happen if the dist/gravity.css file is mistakenly imported instead.
         process.exit(1);
       }
 
-      console.log('  ✅ Webpack SASS compilation succeeded.');
-      process.exit(0);
+      console.log(`  ✅ Webpack SASS compilation of ${filename} succeeded.`);
+
+      if (done) {
+        done();
+      }
     };
   },
 
