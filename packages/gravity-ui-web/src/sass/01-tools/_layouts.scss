@@ -23,8 +23,6 @@
     flex-wrap: wrap;
     margin-right: -$column-spacing;
     margin-left: -$column-spacing;
-    padding-right: 0;
-    padding-left: 0;
   }
 
   // All children start with margin on their sides
@@ -40,13 +38,6 @@
   // Select the top row's children and remove the top margin
   > *:nth-child(-n + #{$column-count}) {
     margin-top: 0;
-  }
-
-  @if not $additive {
-    > li {
-      padding-right: 0;
-      padding-left: 0;
-    }
   }
 }
 
