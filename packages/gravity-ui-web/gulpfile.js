@@ -17,6 +17,7 @@ const uiLibTasks = require('./gulp/ui-lib.js');
 
 gulp.task('clean', () => del([
   pkgPaths.pkgRootPath('dist', '**', '*'),
+  pkgPaths.srcSassExtPath('**', '*'),
 ]));
 
 gulp.task('watch', gulp.series(
