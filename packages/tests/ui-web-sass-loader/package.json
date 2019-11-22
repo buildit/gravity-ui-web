@@ -1,0 +1,34 @@
+{
+  "name": "ui-web-sass-loader",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Tests compiling `@buildit/gravity-ui-web`'s distributed SASS code via webpack's sass-loader",
+  "main": "build.js",
+  "scripts": {
+    "clean": "del dist/**/*",
+    "test": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildit/gravity-ui-web.git"
+  },
+  "keywords": [
+    "test",
+    "sass",
+    "eyeglass"
+  ],
+  "author": "Buildit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buildit/gravity-ui-web/issues"
+  },
+  "homepage": "https://github.com/buildit/gravity-ui-web/tree/develop/packages/gravity-ui-web#readme",
+  "devDependencies": {
+    "@buildit/gravity-ui-web": "^3.0.0-alpha.7",
+    "css-loader": "^3.2.0",
+    "del-cli": "^3.0.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.2"
+  }
+}
