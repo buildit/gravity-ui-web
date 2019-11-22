@@ -41,21 +41,6 @@
   }
 }
 
-/// Removes list styles which might interfere with column's layout purposes.
-///
-/// When using the `grav-l-column-layout()` mixin on `<ul>` or `<ol>` elements,
-/// you should also apply this mixin.
-@mixin grav-l-column-list {
-  padding-right: 0;
-  padding-left: 0;
-  list-style: none;
-
-  > li {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
 /// Expands items in the last row of a column layout, if there aren't enough
 /// to fill all columns in that row.
 @mixin grav-l-column-no-danglies {

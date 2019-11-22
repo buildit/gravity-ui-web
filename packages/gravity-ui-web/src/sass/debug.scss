@@ -184,3 +184,4 @@ body style:first-child,
 @include removed-class('.grav-c-list-image-links', 3, 'Consider using .grav-c-list-inline-row instead.');
 @include removed-class('.grav-c-list-img-cards', 3, 'Consider using .grav-c-list-cards-basic or .grav-o-two-column instead.');
 @include removed-class('.grav-c-two-columns-block', 3, 'Please use .grav-o-two-column instead.');
+@include removed-class('.grav-o-column-list', 3, 'Please use .grav-o-reset-list instead.');

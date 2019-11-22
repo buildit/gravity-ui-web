@@ -1,5 +1,5 @@
 .grav-c-three-column-list-justified {
-  @include grav-l-column-list;
+  @include grav-reset-list;
 
   > li {
     margin-top: 0.5rem;
