@@ -44,4 +44,13 @@ module.exports = {
    * The absolute path to the JS source directory.
    */
   srcJsPath: (...pathSegments) => srcUiLibPath('js', ...pathSegments),
+
+  /**
+   * The absolute path to the external SASS libs.
+   */
+  srcSassExtPath: (...pathSegments) => srcUiLibPath(
+    bldConsts.srcSassDirname,
+    bldConsts.srcLibCopyDirname,
+    ...pathSegments,
+  ),
 };

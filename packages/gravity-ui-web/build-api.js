@@ -20,6 +20,7 @@
 // gulp/paths.js instead of this file.
 
 const path = require('path');
+const fs = require('fs');
 const pkgManifest = require('./package.json');
 const bldConsts = require('./build-consts.js');
 
@@ -47,13 +48,29 @@ const distJsFilename = `${distJsFileBasename}.js`;
 
 // Resolves the given path segments relative to the SASS src dir
 function srcSassPath(...pathSegements) {
-  return path.resolve(pkgDir, bldConsts.srcDirname, 'sass', ...pathSegements);
+  return path.resolve(pkgDir, bldConsts.srcDirname, bldConsts.srcSassDirname, ...pathSegements);
 }
 
 // SASS
 const srcSassMainFilename = 'index.scss';
 
 const srcSassDebugFilename = `${distCssDebugFileBasename}.scss`;
+
+// Expose versions of embedded copies of gravity-particles & modularscale
+function readJson(file) {
+  try {
+    return JSON.parse(fs.readFileSync(file));
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      // File not found
+      return null;
+    }
+
+    // Other errors indicate something's actually broken
+    // so throw...
+    throw err;
+  }
+}
 
 module.exports = {
   /**
@@ -143,4 +160,50 @@ module.exports = {
    * @public
    */
   srcSassDebugFilename,
+
+  /**
+   * Returns the version number of the embedded copy of the
+   * `@buildit/gravity-particles` package.
+   *
+   * @return {string | null} The SemVer version string, or `null`
+   *          if the embedded copy of this package is not available.
+   *
+   * @public
+   */
+  gravityParticlesCopyVersion() {
+    const versionInfo = readJson(
+      srcSassPath(
+        bldConsts.srcLibCopyDirname,
+        bldConsts.gravityParticlesDirname,
+        bldConsts.versionFilename,
+      ),
+    );
+    if (versionInfo) {
+      return versionInfo.version;
+    }
+    return null;
+  },
+
+  /**
+   * Returns the version number of the embedded copy of the
+   * `modularscale-sass` package.
+   *
+   * @return {string | null} The SemVer version string, or `null`
+   *          if the embedded copy of this package is not available.
+   *
+   * @public
+   */
+  modularscaleCopyVersion() {
+    const versionInfo = readJson(
+      srcSassPath(
+        bldConsts.srcLibCopyDirname,
+        bldConsts.modularscaleDirname,
+        bldConsts.versionFilename,
+      ),
+    );
+    if (versionInfo) {
+      return versionInfo.version;
+    }
+    return null;
+  },
 };

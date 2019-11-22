@@ -8,17 +8,65 @@ const cheerio = require('gulp-cheerio');
 const filter = require('gulp-filter');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
+const file = require('gulp-file');
 
 const cssnano = require('cssnano');
 const cssMqPacker = require('css-mqpacker');
 const eyeglass = require('eyeglass');
 const chalk = require('chalk');
 
+const gravityParticlesbldApi = require('@buildit/gravity-particles/build-api');
+const msPackageJson = require('modularscale-sass/package.json');
+const msEyeglassExports = require('modularscale-sass/eyeglass-exports');
+
 const pkgPaths = require('./paths.js');
 const bldConsts = require('../build-consts.js');
 const uiLibPaths = require('../build-api.js');
 
 const taskNamePrefix = 'ui-lib:';
+
+function copyGravityParticles() {
+  return gulp.src(gravityParticlesbldApi.distPath('scss/**/*'))
+    // Add metadata JSON file
+    .pipe(file(
+      bldConsts.versionFilename,
+      JSON.stringify({
+        version: gravityParticlesbldApi.version,
+      }, undefined, 2),
+    ))
+    .pipe(gulp.dest(pkgPaths.srcSassExtPath(bldConsts.gravityParticlesDirname)));
+}
+copyGravityParticles.displayName = `${taskNamePrefix}copy-ext-lib:gravity-particles`;
+copyGravityParticles.description = 'Copies Gravity Particles SASS lib to source folder.';
+
+function copyModularscale() {
+  // Reliable way to figure out the path to modularscale-sass's directory
+  // within this project's node_modules/
+  const msPackageJsonPath = require.resolve('modularscale-sass/package.json');
+  const msPackageRoot = path.dirname(msPackageJsonPath);
+
+  // Use modularscale-sass's Eyeglass manifest to get the dir
+  // where its SASS sources are kept
+  const msEyeglassManifest = msEyeglassExports();
+
+  return gulp.src([
+    // Copy entire SASS sources
+    path.resolve(msEyeglassManifest.sassDir, '**', '*'),
+
+    // Copy license file
+    path.resolve(msPackageRoot, 'license.md'),
+  ])
+    // Add metadata JSON file
+    .pipe(file(
+      bldConsts.versionFilename,
+      JSON.stringify({
+        version: msPackageJson.version,
+      }, undefined, 2),
+    ))
+    .pipe(gulp.dest(pkgPaths.srcSassExtPath(bldConsts.modularscaleDirname)));
+}
+copyModularscale.displayName = `${taskNamePrefix}copy-ext-lib:modularscale-sass`;
+copyModularscale.description = 'Copies Modularscale SASS lib to source folder.';
 
 function sassBuildTask() {
   const sassOptions = {};
@@ -144,7 +192,10 @@ copyJsTask.displayName = `${taskNamePrefix}js`;
 copyJsTask.description = 'Copies JS files.';
 
 // Composite task to do complete UI lib build
-const buildTasks = gulp.parallel(sassBuildTask, svgSymbolsTask, copyJsTask);
+const buildTasks = gulp.series(
+  gulp.parallel(copyGravityParticles, copyModularscale),
+  gulp.parallel(sassBuildTask, svgSymbolsTask, copyJsTask),
+);
 buildTasks.displayName = `${taskNamePrefix}build`;
 buildTasks.description = 'Builds the Gravity UI library.';
 

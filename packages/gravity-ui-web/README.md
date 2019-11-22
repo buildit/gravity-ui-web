@@ -68,7 +68,6 @@ You need to get Gravity's CSS into your website or app somehow. Possible strateg
     @import 'components/<YOUR_TOOL_NAME>.scss';
 
     // === Generic layer ===
-    @import 'normalize';
     @import 'gravity-ui-web/02-generic/generic.all';
 
     // === Elements layer ===

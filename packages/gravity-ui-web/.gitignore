@@ -1,6 +1,9 @@
 # Exclude build Output
 dist/
 
+# Exclude copies of external SASS libs
+src/sass/_external/
+
 # Exclude unwanted stuff Pattern Lab generates
 dependencyGraph.json
 src/styleguide/_meta/*.mustache
