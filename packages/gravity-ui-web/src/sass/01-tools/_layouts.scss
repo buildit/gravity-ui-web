@@ -30,8 +30,6 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: -$column-gap;
-    padding-right: 0;
-    padding-left: 0;
   }
 
   // All children start with margin on their sides
@@ -46,28 +44,6 @@
   // Select the top row's children and remove the top margin
   > *:nth-child(-n + #{$column-count}) {
     margin-top: 0;
-  }
-
-  @if not $additive {
-    > li {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-}
-
-/// Removes list styles which might interfere with column's layout purposes.
-///
-/// When using the `grav-l-column-layout()` mixin on `<ul>` or `<ol>` elements,
-/// you should also apply this mixin.
-@mixin grav-l-column-list {
-  padding-right: 0;
-  padding-left: 0;
-  list-style: none;
-
-  > li {
-    padding-right: 0;
-    padding-left: 0;
   }
 }
 

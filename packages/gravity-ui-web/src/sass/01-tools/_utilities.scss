@@ -1,0 +1,16 @@
+////
+/// @group utils
+////
+
+/// Resets browser's default list styling that gets applied to `<ul>` or `<ol>`.
+///
+/// Useful for situations where something is semantically marked up as a list, but
+/// the standard bullet list styling is not wanted.
+@mixin grav-reset-list {
+  padding-left: 0;
+  list-style: none;
+
+  > li {
+    padding-left: 0;
+  }
+}

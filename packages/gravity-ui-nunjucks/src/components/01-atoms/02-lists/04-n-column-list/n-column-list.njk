@@ -1,5 +1,5 @@
 {%- macro twoColumnList(list) -%}
-  <ul class="grav-o-two-column grav-o-column-list">
+  <ul class="grav-o-two-column grav-o-reset-list">
     {% for item in list -%}
       <li>
         {% if item.url %}<a href="{{ item.url }}">{% endif %}
@@ -11,7 +11,7 @@
 {%- endmacro -%}
 
 {%- macro threeColumnList(list) -%}
-  <ul class="grav-o-three-column grav-o-column-list">
+  <ul class="grav-o-three-column grav-o-reset-list">
     {% for item in list -%}
       <li>
         {% if item.url %}<a href="{{ item.url }}">{% endif %}
@@ -23,7 +23,7 @@
 {%- endmacro -%}
 
 {%- macro fourColumnList(list) -%}
-    <ul class="grav-o-four-column grav-o-column-list">
+    <ul class="grav-o-four-column grav-o-reset-list">
     {% for item in list -%}
       <li>
         {% if item.url %}<a href="{{ item.url }}">{% endif %}
