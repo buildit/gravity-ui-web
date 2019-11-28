@@ -23,7 +23,8 @@ const getComponentsNames = (components, excludedFiles) => (
    * @return {array} Array of formatted messages.
    */
 const getViolations = (violations) => violations
-  .map((violation) => `${violation.description}\n ${violation.help}\n Help: ${violation.helpUrl}\n`);
+  .map((violation) => (
+    { message: `${violation.description}\n ${violation.help}\n Help: ${violation.helpUrl}\n`, nodes: violation.nodes }));
 
 module.exports = {
   getViolations,

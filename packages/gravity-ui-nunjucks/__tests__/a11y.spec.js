@@ -3,7 +3,7 @@ const selenium = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const { getViolations, getComponentsNames } = require('./_helpers');
 const pkgEnvs = require('../build/envs');
-const { excludedA11yFiles: excludedFiles, excludedA11yRules: excludedRules } = require('../test-consts');
+const { excludedA11yFiles, excludedA11yRules } = require('../test-consts');
 const fractal = require('../fractal');
 
 describe('A11y tests', () => {
@@ -17,7 +17,7 @@ describe('A11y tests', () => {
       }
       return accumulator;
     }, []);
-  const componentNames = getComponentsNames(components, excludedFiles);
+  const componentNames = getComponentsNames(components, excludedA11yFiles);
 
   componentNames.forEach((component) => {
     describe(`${component} component`, () => {
@@ -45,7 +45,7 @@ describe('A11y tests', () => {
           .findElement(selenium.By.tagName('body'))
           .then(() => {
             AxeBuilder(driver)
-              .disableRules(excludedRules)
+              .disableRules(excludedA11yRules)
               .analyze((err, results) => {
                 expect(results.violations.length).toBe(0);
                 if (results.violations.length > 0) {
@@ -54,7 +54,9 @@ describe('A11y tests', () => {
                   console.log('\x1b[34m', `\nURL: ${pkgEnvs.getCurrentEnvInfo().url}/components/preview/${component}`);
                   violations.forEach((violation) => {
                     // eslint-disable-next-line no-console
-                    console.log('\x1b[31m', violation);
+                    console.log('\x1b[31m', violation.message);
+                    // eslint-disable-next-line no-console
+                    violation.nodes.forEach((node) => (console.log('\x1b[37m', `${node.html}\n`)));
                   });
                 }
                 done();
