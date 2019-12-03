@@ -6,16 +6,26 @@ const { excludedA11yFiles, excludedA11yRules } = require('../test-consts');
 
 describe('A11y tests', () => {
   const componentNames = getComponentsNames(excludedA11yFiles);
+  let browser;
+  let page;
+
+  beforeAll(async (done) => {
+    browser = await puppeteer.launch();
+    page = await browser.newPage();
+    await page.setBypassCSP(true);
+    done();
+  });
+
+  afterAll(async (done) => {
+    await browser.close();
+    done();
+  });
 
   componentNames.forEach((component) => {
     describe(`${component} component`, () => {
       it('should have no accessibility violations', (done) => {
         try {
           (async () => {
-            const browser = await puppeteer.launch();
-            const page = await browser.newPage();
-            await page.setBypassCSP(true);
-
             await page.goto(`${pkgEnvs.getCurrentEnvInfo().url}/components/preview/${component}`);
 
             const results = await new AxePuppeteer(page)
@@ -33,7 +43,7 @@ describe('A11y tests', () => {
                 violation.nodes.forEach((node) => (console.log('\x1b[37m', `${node.html}\n`)));
               });
             }
-            await browser.close();
+
             done();
           })();
         } catch (error) {
