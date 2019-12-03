@@ -7,7 +7,6 @@
 
 const excludedA11yFiles = [
   '_preview',
-  'navigation',
   'symbols',
   'svg-symbols',
   'image',
@@ -17,6 +16,7 @@ const excludedA11yFiles = [
   'wiprodigital',
   'designit',
   'icon',
+  'color-schemes',
 ];
 
 /**

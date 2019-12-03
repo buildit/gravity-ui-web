@@ -1,3 +1,5 @@
+const fractal = require('../fractal');
+
 /**
    * Takes an absolute path and returns an array
    * of file names in a recursive way.
@@ -11,8 +13,17 @@
    *
    * @return {array} List of files that match the extension given.
    */
-const getComponentsNames = (components, excludedFiles) => (
-  components.filter((name) => !excludedFiles.includes(name))
+const getComponentsNames = (excludedFiles) => (
+  fractal.components
+    .flattenDeep()
+    .toArray()
+    .reduce((accumulator, currentValue) => {
+      if (currentValue.alias !== null) {
+        accumulator.push(currentValue.alias);
+      }
+      return accumulator;
+    }, [])
+    .filter((name) => !excludedFiles.includes(name))
 );
 
 /**
