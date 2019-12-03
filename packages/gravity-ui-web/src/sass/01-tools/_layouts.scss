@@ -4,8 +4,8 @@
 
 /// Creates a multi-column layout.
 ///
-/// Note: This will apply negative horizontal margins, so this mixin should not
-/// be used on elements that nned to set any other horizontal margin values.
+/// Note: This will apply a negative left margin, so this mixin should not
+/// be used on elements that need to set any other horizontal margin values.
 ///
 /// @param {number} $column-count [2] - How many equal width columns the space
 ///                       should be divided into.
@@ -16,52 +16,34 @@
 ///                       of columns). If `true` only CSS declarations that would differ are
 ///                       output. Any declarations common to any column layout are omitted.
 @mixin grav-l-column-layout($column-count: 2, $column-gap: $grav-sp-l, $additive: false) {
-  $column-spacing: $column-gap / 2;
+  // Note: We intentionally only use left margins to create the gap between
+  // columns. This is because the container has a _negative_ left margin to
+  // cancel out the left margins of the left-most items in each row.
+  // If we had instead use right margins (or both left and right margins) and
+  // thus had a negative right margin, we might encounter overflow issues when
+  // the negative right margin extends beyond the viewport and creates horizontal
+  // scrolling.
+  // Your read more about how negative margins behave in CSS here:
+  // https://www.smashingmagazine.com/2009/07/the-definitive-guide-to-using-negative-margins/
 
   @if not $additive {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -$column-spacing;
-    margin-left: -$column-spacing;
-    padding-right: 0;
-    padding-left: 0;
+    margin-left: -$column-gap;
   }
 
   // All children start with margin on their sides
   > * {
-    width: calc((100% - #{($column-count * 2) * $column-spacing}) / #{$column-count});
+    width: calc((100% - #{$column-count * $column-gap}) / #{$column-count});
 
     @if not $additive {
-      margin-right: $column-spacing;
-      margin-left: $column-spacing;
+      margin-left: $column-gap;
     }
   }
 
   // Select the top row's children and remove the top margin
   > *:nth-child(-n + #{$column-count}) {
     margin-top: 0;
-  }
-
-  @if not $additive {
-    > li {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-}
-
-/// Removes list styles which might interfere with column's layout purposes.
-///
-/// When using the `grav-l-column-layout()` mixin on `<ul>` or `<ol>` elements,
-/// you should also apply this mixin.
-@mixin grav-l-column-list {
-  padding-right: 0;
-  padding-left: 0;
-  list-style: none;
-
-  > li {
-    padding-right: 0;
-    padding-left: 0;
   }
 }
 

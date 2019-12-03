@@ -1,8 +1,7 @@
 .grav-c-steps {
-  margin-top: $grav-sp-l;
-  padding: 0;
+  @include grav-reset-list;
+
   counter-reset: steps;
-  list-style-type: none;
 
   > li {
     @include grav-color-apply('border-color', 'b', 'accent');
@@ -46,19 +45,22 @@
     @include grav-color-apply('color', 'a', 'neutral');
 
     content: counters(steps, '.');
-    width: 1rem;
+    min-width: 1em;
     position: absolute;
-    left: -$grav-sp-m;
-    padding: $grav-sp-inset-squished-xs;
+    left: 0;
+    padding: $grav-sp-inset-s;
     font-weight: grav-font-weight('primary', 'bold');
+    line-height: 1;
     text-align: center;
+    transform: translateX(-50%);
   }
 
   > li:nth-child(odd)::before {
     @media (min-width: grav-breakpoint(large)) {
       display: block;
-      right: -$grav-sp-m;
+      right: 0;
       left: auto;
+      transform: translateX(50%);
     }
   }
 

@@ -4,7 +4,10 @@ module.exports = {
     'stylelint-scss',
     'stylelint-order',
   ],
-  ignoreFiles: 'node_modules',
+  ignoreFiles: [
+    'node_modules',
+    'src/sass/_external/**/*',
+  ],
   rules: {
     'at-rule-name-case': 'lower',
     'color-named': 'never',
@@ -63,8 +66,10 @@ module.exports = {
         'flex',
         'flex-wrap',
         'width',
+        'min-width',
         'max-width',
         'height',
+        'min-height',
         'max-height',
         'position',
         'top',

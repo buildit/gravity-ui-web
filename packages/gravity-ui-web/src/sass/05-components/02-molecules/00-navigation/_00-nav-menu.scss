@@ -1,16 +1,19 @@
 .grav-c-nav-menu {
   $trigger-breakpoint: grav-breakpoint(medium);
+  $horizontal-gap: $grav-sp-l;
+  $nav-link-padding: $grav-sp-s;
+
   text-align: right;
 
   > ul {
-    margin: 0 (-$grav-sp-s);
-    padding: 0;
-    list-style-type: none;
+    @include grav-reset-list;
+
+    margin-right: -$nav-link-padding;
+    margin-left: -$nav-link-padding;
 
     @media (min-width: $trigger-breakpoint) {
       display: flex;
       flex-wrap: wrap;
-      margin-top: 0;
     }
   }
 
@@ -19,17 +22,23 @@
   }
 
   @media (min-width: $trigger-breakpoint) {
-    li + li {
-      margin-left: $grav-sp-l;
+    > ul {
+      margin-left: -1 * ($nav-link-padding + $horizontal-gap);
+    }
+
+    li {
+      margin-left: $horizontal-gap;
     }
   }
 
+  // Increase gap between last internal link and first
+  // external link
   li:not(#{&}__external-link) + li#{&}__external-link {
     margin-top: $grav-sp-m;
 
     @media (min-width: $trigger-breakpoint) {
       margin-top: 0;
-      margin-left: $grav-sp-xl;
+      margin-left: $horizontal-gap * 2;
     }
   }
 }

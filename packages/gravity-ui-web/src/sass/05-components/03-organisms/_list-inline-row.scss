@@ -1,10 +1,10 @@
 .grav-c-list-inline-row {
+  @include grav-reset-list;
+
   display: flex;
   flex-wrap: wrap;
-  margin-top: $grav-sp-m;
+  margin-top: 0; // Let 1st row items within create the top margin
   margin-left: -$grav-sp-m;
-  padding: 0;
-  list-style-type: none;
   text-align: center;
 
   > li {
