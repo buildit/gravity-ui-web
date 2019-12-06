@@ -164,8 +164,8 @@ function svgSymbolsTask() {
         // Add an ID to the <title> element of each SVG symbol
         // This is so that we can later reference it via
         // aria-labelledby for better a11y.
-        $('symbol').each(() => {
-          const symbol = $(this);
+        $('symbol').each((index, element) => {
+          const symbol = $(element);
           const symbolId = symbol.attr('id');
           const title = symbol.children('title');
           title.attr('id', symbolId + titleIdSuffix);
