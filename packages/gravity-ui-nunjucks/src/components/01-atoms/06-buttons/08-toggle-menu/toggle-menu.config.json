@@ -1,5 +1,6 @@
 {
   "context": {
-    "text": "Toggle menu"
+    "text": "Toggle menu",
+    "pressed": false
   }
 }
