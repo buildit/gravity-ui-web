@@ -22,8 +22,8 @@
     "cz-lerna-changelog": "^2.0.2",
     "del-cli": "^3.0.0",
     "file-size-report": "^1.0.2",
-    "husky": "^3.0.9",
-    "lerna": "^3.18.3"
+    "husky": "^3.1.0",
+    "lerna": "^3.19.0"
   },
   "config": {
     "commitizen": {

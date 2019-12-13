@@ -30,15 +30,15 @@
     "url": "https://github.com/buildit/gravity-ui-web/issues"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.22",
-    "@types/node": "^11.15.2",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^11.15.3",
     "jest": "^24.9.0",
-    "semantic-release": "^15.13.30",
-    "ts-jest": "^24.1.0",
+    "semantic-release": "^15.13.31",
+    "ts-jest": "^24.2.0",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.3"
   },
   "dependencies": {
-    "@semantic-release/release-notes-generator": "^7.3.2"
+    "@semantic-release/release-notes-generator": "^7.3.5"
   }
 }
