@@ -28,9 +28,5 @@
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
     }
-  },
-  "engines": {
-    "node": "^8.11.1",
-    "npm": "^5.8.0"
   }
 }
