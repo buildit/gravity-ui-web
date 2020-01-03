@@ -2,7 +2,7 @@
   "context": {
     "text": "Toggle something",
     "pressed": false,
-    "symbolId": "buildit-logo-hollow"
+    "symbolId": "avatar-impossible-b-outline"
   },
   "variants": [
     {
@@ -10,7 +10,7 @@
       "context": {
         "text": "Toggle something",
         "pressed": true,
-        "symbolId": "buildit-logo-hollow"
+        "symbolId": "avatar-impossible-b-outline"
       }
     }
   ]

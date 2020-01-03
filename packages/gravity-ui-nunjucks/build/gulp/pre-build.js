@@ -7,6 +7,7 @@ const gulp = require('gulp');
 const rename = require('gulp-rename');
 const file = require('gulp-file');
 const jsonEditor = require('gulp-json-editor');
+const startCase = require('lodash.startcase');
 const { colors } = require('@buildit/gravity-particles');
 const uiLibPaths = require('@buildit/gravity-ui-web/build-api.js');
 const pkgPaths = require('../paths.js');
@@ -59,9 +60,9 @@ watchSvgSymbols.displayName = `${taskNamePrefix}symbols:watch`;
 watchSvgSymbols.description = 'Watches for changes to Gravity SVG symbols';
 
 // ==== Tasks for: Gravity SVG symbols info ====
-const generatedSymbolInfoFilename = 'svg-symbols.config.json';
+const generatedSymbolInfoFilename = 'logos-and-icons.config.json';
 function generatedSymbolInfoPath(...segments) {
-  return pkgPaths.srcComponentsPath('00-particles', '05-logos-and-icons', '00-svg-symbols', ...segments);
+  return pkgPaths.srcComponentsPath('00-particles', '05-logos-and-icons', ...segments);
 }
 generatedFileGlobs.push(generatedSymbolInfoPath(generatedSymbolInfoFilename));
 
@@ -70,8 +71,34 @@ function makeCopySvgSymbolsInfoTask(allowEmpty = false) {
   const copySvgSymbolsInfo = () => gulp.src(uiLibPaths.distPath(uiLibPaths.distSvgSymbolsInfoFilename), { allowEmpty })
     .pipe(rename(generatedSymbolInfoFilename))
     .pipe(jsonEditor((json) => {
-      const fractalJson = {};
-      fractalJson.context = json;
+      const fractalJson = {
+        default: 'ui-svg-symbols',
+        variants: [],
+      };
+
+      // Divide SVG symbols into avatar, logo and UI categories and
+      // make a variant for each:
+      const symbolsByCategory = json.symbols.reduce((acc, symbol) => {
+        // Get symbol category:
+        const category = symbol.symbolId.substr(0, symbol.symbolId.indexOf('-'));
+        const catSymbols = acc[category] || [];
+        catSymbols.push(symbol);
+        acc[category] = catSymbols;
+        return acc;
+      }, {});
+
+      // Add a Fractal variant context for each category
+      Object.keys(symbolsByCategory).forEach((category) => {
+        fractalJson.variants.push({
+          name: `${category}-svg-symbols`,
+          label: `${category === 'ui' ? 'UI' : startCase(category)} SVG symbols`,
+          context: {
+            category,
+            symbols: symbolsByCategory[category],
+          },
+        });
+      });
+
       return fractalJson;
     }))
     .pipe(gulp.dest(generatedSymbolInfoPath()));
