@@ -110,8 +110,8 @@
     "normalize-scss": "^7.0.1"
   },
   "engines": {
-    "node": "^8.11.1",
-    "npm": "^5.8.0"
+    "node": ">=8",
+    "npm": ">=5.8.0"
   },
   "eyeglass": {
     "sassDir": "src/ui-lib/sass",
