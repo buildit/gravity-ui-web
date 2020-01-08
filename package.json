@@ -13,24 +13,20 @@
     "clean": "npm run clean:cdn && lerna run clean"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
-    "@commitlint/travis-cli": "^8.1.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/travis-cli": "^8.2.0",
     "bundlesize": "^0.18.0",
     "commitizen": "^4.0.3",
     "cz-lerna-changelog": "^2.0.2",
-    "del-cli": "^2.0.0",
+    "del-cli": "^3.0.0",
     "file-size-report": "^1.0.2",
-    "husky": "^3.0.4",
-    "lerna": "^3.16.4"
+    "husky": "^3.0.9",
+    "lerna": "^3.18.3"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
     }
-  },
-  "engines": {
-    "node": "^8.11.1",
-    "npm": "^5.8.0"
   }
 }
