@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.3...gravity-ui-web-v2.2.4) (2020-01-08)
+
+
+### Bug Fixes
+
+* **package:** explicitly states compatibility with newer NodeJS versions ([c683497](https://github.com/buildit/gravity-ui-web/commit/c6834974284ea475b25bc9f3b611b4163aac4dd7))
+
 ## [2.2.3](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.2...gravity-ui-web-v2.2.3) (2019-08-30)
 
 
