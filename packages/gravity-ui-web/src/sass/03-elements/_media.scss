@@ -3,3 +3,21 @@ svg {
   max-width: 100%;
   height: auto;
 }
+
+
+picture {
+  // Avoid slight gap below <img> when the
+  // <picture> is display:block due to <img>
+  // being display:inline by default.
+  // (The <img> is aligned with baseline, not
+  // the bottom of the text box)
+  display: inline-block;
+
+  > img {
+    display: block;
+
+    // Avoid <img> inside <picture> having
+    // top margin applied by the * + * rule
+    margin-top: 0;
+  }
+}

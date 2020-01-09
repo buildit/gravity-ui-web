@@ -27,7 +27,7 @@
     display: block;
     position: relative;
 
-    > img {
+    img {
       @include grav-decoration-notch-in;
     }
 

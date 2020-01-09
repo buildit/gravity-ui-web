@@ -25,6 +25,10 @@
     margin: auto;
   }
 
+  picture {
+    display: block;
+  }
+
   @media (min-width: grav-breakpoint(medium)) {
     padding-right: $grav-sp-l;
     padding-left: $grav-sp-l;
