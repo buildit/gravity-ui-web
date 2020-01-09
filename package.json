@@ -22,16 +22,12 @@
     "cz-lerna-changelog": "^2.0.2",
     "del-cli": "^3.0.0",
     "file-size-report": "^1.0.2",
-    "husky": "^3.1.0",
+    "husky": "^4.0.2",
     "lerna": "^3.19.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
     }
-  },
-  "engines": {
-    "node": "^8.11.1",
-    "npm": "^5.8.0"
   }
 }
