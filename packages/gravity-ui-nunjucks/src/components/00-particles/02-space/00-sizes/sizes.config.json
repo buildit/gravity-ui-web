@@ -25,6 +25,11 @@
         "name": "Extra large",
         "var": "$grav-sp-xl",
         "length": "4rem"
+      },
+      {
+        "name": "Extra extra large",
+        "var": "$grav-sp-xxl",
+        "length": "8rem"
       }
     ]
   }

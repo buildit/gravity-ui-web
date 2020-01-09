@@ -65,7 +65,7 @@ $grav-sp-l: grav-sp-calc(1);
 /// @type length value
 $grav-sp-xl: grav-sp-calc(2);
 
-/// Extra extra small space size.
+/// Extra extra large space size.
 ///
 /// @type length value
 $grav-sp-xxl: grav-sp-calc(3);
@@ -85,7 +85,7 @@ $grav-sp-map: (
   'm': $grav-sp-m,
   'l': $grav-sp-l,
   'xl': $grav-sp-xl,
-  'xxl': $grav-sp-xl
+  'xxl': $grav-sp-xxl
 );
 
 // Global set of two-dimensional insets (typically used as padding values)
