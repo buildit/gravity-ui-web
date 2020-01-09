@@ -113,7 +113,7 @@ Currently, Gravity's SVG symbol definitions need to be inlined into your HTML. T
 
 The `height` and `width` properties should be set to ensure that your inline SVG's intrinsic size matches the aspect ratio of the referenced symbol. If you omit them, browsers will [default to a width of `150px` and a height of `100px`](https://www.sitepoint.com/replaced-elements-html-myths-realities/) and the chosen symbol will appear centered within that area.
 
-The `aria-lebblledby` should be set to provide a text alternative for the SVG (equivalent to `alt` in `<img>` elements). All of Gravity's SVG symbol definitions contain alternative texts in their `<title>` elements and these have unique `id`s, so that they can be referenced from elsewhere via `aria-lebblledby`.
+The `aria-labelledby` should be set to provide a text alternative for the SVG (equivalent to `alt` in `<img>` elements). All of Gravity's SVG symbol definitions contain alternative texts in their `<title>` elements and these have unique `id`s, so that they can be referenced from elsewhere via `aria-labelledby`.
 
 You can look up these values manually in [Gravity's pattern library](http://style.buildit.digital/?p=particles-svg-symbols). For convenience and possible automation, Gravity also ships with a JSON file that contains the symbol and title IDs and the intrinsic width and height values for every available symbol. The format of this file is as follows:
 
