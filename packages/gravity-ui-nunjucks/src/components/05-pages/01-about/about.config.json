@@ -147,18 +147,6 @@
           },
           {
             "paragraph": "We are part of the larger <a href='http://wipro.com'>Wipro</a> network and partner with:"
-          },
-          {
-            "inlineRow": [
-              {
-                "href": "https://wiprodigital.com",
-                "text": "<svg role=\"img\" class=\"grav-c-logo\" aria-label=\"\" width=\"178\" height=\"33\"><use xlink:href=\"#logo-wiprodigital\"></use></svg>"
-              },
-              {
-                "href": "https://designit.com",
-                "text": "<svg role=\"img\" class=\"grav-c-logo\" aria-label=\"\" width=\"103\" height=\"33\"><use xlink:href=\"#logo-designit\"></use></svg>"
-              }
-            ]
           }
         ]
       }

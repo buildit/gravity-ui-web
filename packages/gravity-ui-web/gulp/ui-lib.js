@@ -1,7 +1,6 @@
 const path = require('path');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const svgo = require('gulp-svgo');
 const svgSymbols = require('gulp-svg-symbols');
 const rename = require('gulp-rename');
 const cheerio = require('gulp-cheerio');
@@ -107,40 +106,21 @@ const titleIdSuffix = '__title';
 function svgSymbolsTask() {
   const svgFileFilter = filter('**/*.svg', { restore: true });
 
-  return gulp.src(pkgPaths.srcSvgSymbolsPath('**', '*.svg'))
-    .pipe(svgo({
-      plugins: [
-        {
-          removeTitle: false,
-        },
-        {
-          removeViewBox: false,
-        },
-        {
-          removeDimensions: true,
-        },
-        {
-          sortAttrs: true,
-        },
-        {
-          // Our SVG symbols should be shapes only,
-          // therefore removing styling attributes.
-          // If this breaks the appearance of an SVG, then the
-          // SVG file needs fixing.
-          removeAttrs: {
-            attrs: [
-              'fill',
-              'font-.*',
-              'letter-.*',
-              'opacity',
-              'stroke',
-              'style',
-              'word-.*',
-            ],
-          },
-        },
-      ],
-    }))
+  return gulp.src(gravityParticlesbldApi.distWebSvgPath('**', '*.svg'))
+    .pipe(
+      // Rename SVG files to prefix their respective dirnames.
+      //
+      // E.g. logo/gravity.svg --> logo/logo-gravity.svg
+      //
+      // This is needed as only the filename will later be used
+      // to generate the symbol IDs. So we end up with an ID of
+      // "logo-gravity" in the above example rather than just
+      // "gravity".
+      rename((svgPath) => {
+        // eslint-disable-next-line no-param-reassign
+        svgPath.basename = `${path.basename(svgPath.dirname)}-${svgPath.basename}`;
+      }),
+    )
     .pipe(svgSymbols({
       svgAttrs: {
         style: 'display: none;',

@@ -21,3 +21,27 @@ picture {
     margin-top: 0;
   }
 }
+
+
+// Set default fill for inlineed SVGs.
+svg {
+  fill: currentColor;
+}
+
+// The following class names are defined in the source SVGs
+// provided by Gravity Particles and thus deviate from our
+// usual class-naming conventions.
+
+// stylelint-disable selector-class-pattern
+.grav-svg-hl-1 {
+  @include grav-color-apply('fill', 'b', 'accent');
+}
+
+.grav-svg-hl-2 {
+  @include grav-color-apply('fill', 'b', 'control-alt');
+}
+
+.grav-svg-hl-3 {
+  @include grav-color-apply('fill', 'b', 'accent-attention');
+}
+// stylelint-enable selector-class-pattern

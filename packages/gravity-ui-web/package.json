@@ -81,7 +81,7 @@
   },
   "devDependencies": {
     "@buildit/eslint-config": "^0.0.0",
-    "@buildit/gravity-particles": "^0.4.0",
+    "@buildit/gravity-particles": "^0.5.0",
     "@buildit/semantic-release": "^1.0.0",
     "bundlesize": "^0.18.0",
     "chalk": "^3.0.0",
@@ -100,7 +100,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-symbols": "^3.2.3",
-    "gulp-svgo": "^2.1.1",
     "modularscale-sass": "^3.0.10",
     "sassdoc": "^2.7.1",
     "semantic-release": "^15.13.27",

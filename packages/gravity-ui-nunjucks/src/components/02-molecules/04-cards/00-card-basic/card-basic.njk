@@ -5,7 +5,7 @@
 <div class="grav-c-card-basic">
   {% if href %}<a href="{{ href }}">{% endif %}
     {{ image(img.src, img.alt, img.class) | safe }}
-    {% if href %}{{ inlineSvg('decoration-arrow-right', customLabel="See more") }}{% endif %}
+    {% if href %}{{ inlineSvg('ui-arrow-right', customLabel="See more") }}{% endif %}
     <h3 class="grav-c-card-basic__title">{{ title }}</h3>
   {% if href %}</a>{% endif %}
   <p>{{ content }}</p>
