@@ -23,6 +23,10 @@
     object-fit: cover;
   }
 
+  picture {
+    display: block;
+  }
+
   > a {
     display: block;
     position: relative;
