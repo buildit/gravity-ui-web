@@ -17,7 +17,6 @@ const excludedA11yFiles = [
   'designit',
   'icon',
   'color-schemes',
-  'ostentatious-copy',
 ];
 
 /**
