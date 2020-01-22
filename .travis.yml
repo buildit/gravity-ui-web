@@ -13,6 +13,7 @@ script:
   - commitlint-travis
   - npm run-script build
   - npm run test
+  - npm run test:a11y
 before_deploy:
   - pyenv global 3.7
   - pip3 install --user awscli
