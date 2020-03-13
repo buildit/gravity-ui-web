@@ -1,3 +1,4 @@
+const process = require('process');
 const fractal = require('../../fractal');
 const envs = require('../envs');
 
@@ -5,6 +6,9 @@ const taskNamePrefix = 'fractal:';
 
 // keep a reference to the fractal CLI console utility
 const logger = fractal.cli.console;
+
+// Reference to Fractal's server
+let server;
 
 /*
  * Start the Fractal server
@@ -16,7 +20,7 @@ const logger = fractal.cli.console;
  * This task will also log any errors to the console.
  */
 async function startServer() {
-  const server = fractal.web.server({
+  server = fractal.web.server({
     sync: true,
   });
 
@@ -49,7 +53,30 @@ async function buildPatternLibrary() {
 }
 buildPatternLibrary.displayName = `${taskNamePrefix}build`;
 
+/**
+ * Programatically shuts down a running Fractal server.
+ *
+ * This is the equivalent of doing CTRL + C in your terminal.
+ * Useful for CI scenarios.
+ *
+ * If no server is running, nothing happens.
+ */
+function stopServer(done) {
+  if (server) {
+    server.on('stopped', done);
+    server.stop();
+    server = undefined;
+
+    // Something still hangs (maybe Fractal has a handle
+    // open somewhere?). So forcefully kill the process
+    // too...
+    process.exit(0);
+  }
+}
+stopServer.displayName = `${taskNamePrefix}stop`;
+
 module.exports = {
   startServer,
+  stopServer,
   buildPatternLibrary,
 };
