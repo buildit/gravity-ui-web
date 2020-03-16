@@ -185,5 +185,5 @@ body style:first-child,
 @include removed-class('.grav-c-list-img-cards', 3, 'Consider using .grav-c-list-cards-basic or .grav-o-two-column instead.');
 @include removed-class('.grav-c-two-columns-block', 3, 'Please use .grav-o-two-column instead.');
 @include removed-class('.grav-o-column-list', 3, 'Please use .grav-o-reset-list instead.');
-@include removed-class('.grav-c-icon__secondary-elements', 3, 'Consider using one of the .grav-svg-hl-1/2/3 classes to achieve a similar effect.');
-@include removed-class('.grav-c-logo', 3, 'Now redundant as inline SVG elements now get a default fill color.');
+@include removed-class('.grav-c-icon__secondary-elements', 3, 'Consider using one of the --grav-co-svg-hl-1/2/3 custom properties to achieve a similar effect.');
+@include removed-class('.grav-c-logo', 3, 'For logotype, use .grav-c-logotype instead. For other uses this class is now redundant as inline SVG elements now get a default fill color.');
