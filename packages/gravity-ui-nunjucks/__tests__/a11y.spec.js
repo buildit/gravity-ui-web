@@ -6,6 +6,7 @@ const { excludedA11yFiles, excludedA11yRules } = require('../test-consts');
 
 describe('A11y tests', () => {
   const componentNames = getComponentsNames(excludedA11yFiles);
+  const localDevPatternLibraryUrl = pkgEnvs.getEnvInfo(pkgEnvs.defaultEnvName).url;
   let browser;
   let page;
 
@@ -26,7 +27,7 @@ describe('A11y tests', () => {
       it('should have no accessibility violations', (done) => {
         try {
           (async () => {
-            await page.goto(`${pkgEnvs.getCurrentEnvInfo().url}/components/preview/${component}`);
+            await page.goto(`${localDevPatternLibraryUrl}/components/preview/${component}`);
 
             const results = await new AxePuppeteer(page)
               .disableRules(excludedA11yRules)
@@ -35,7 +36,7 @@ describe('A11y tests', () => {
               expect(results.violations.length).toBe(0);
               const violations = getViolations(results.violations);
               // eslint-disable-next-line no-console
-              console.log('\x1b[34m', `\nURL: ${pkgEnvs.getCurrentEnvInfo().url}/components/preview/${component}`);
+              console.log('\x1b[34m', `\nURL: ${localDevPatternLibraryUrl}/components/preview/${component}`);
               violations.forEach((violation) => {
                 // eslint-disable-next-line no-console
                 console.log('\x1b[31m', violation.message);

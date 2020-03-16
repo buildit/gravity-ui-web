@@ -71,6 +71,7 @@ clean.description = 'Deletes all intermediated and final build output files.';
 const test = gulp.series(
   patternLibraryTasks.startServer,
   tests.runA11yTests,
+  patternLibraryTasks.stopServer,
 );
 
 module.exports = {

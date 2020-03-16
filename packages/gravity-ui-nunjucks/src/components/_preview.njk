@@ -12,7 +12,9 @@
   </head>
   <body{% if _target.context.bodyClass %} class="{{ _target.context.bodyClass }}"{% endif %}>
 
-    {{ yield | safe }}
+    {% block componentPreview %}
+      {{ yield | safe }}
+    {% endblock %}
 
     {% include '@symbols' %}
     <script src="/gravity/gravity.js"></script>
