@@ -81,7 +81,7 @@
   },
   "devDependencies": {
     "@buildit/eslint-config": "^0.0.0",
-    "@buildit/gravity-particles": "^0.5.1",
+    "@buildit/gravity-particles": "^0.6.1",
     "@buildit/semantic-release": "^1.0.0",
     "bundlesize": "^0.18.0",
     "chalk": "^3.0.0",
@@ -89,8 +89,8 @@
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.19.1",
-    "eyeglass": "^2.4.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eyeglass": "^2.4.2",
     "gulp": "^4.0.2",
     "gulp-cheerio": "^1.0.0",
     "gulp-file": "^0.4.0",
@@ -102,11 +102,11 @@
     "gulp-svg-symbols": "^3.2.3",
     "modularscale-sass": "^3.0.10",
     "sassdoc": "^2.7.1",
-    "semantic-release": "^15.13.27",
-    "stylelint": "^12.0.0",
-    "stylelint-config-sass-guidelines": "^6.2.0",
-    "stylelint-order": "^3.1.1",
-    "stylelint-scss": "^3.12.0"
+    "semantic-release": "^17.0.4",
+    "stylelint": "^13.2.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.15.0"
   },
   "engines": {
     "node": ">=8",
