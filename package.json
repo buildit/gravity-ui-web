@@ -15,16 +15,16 @@
     "semantic-release": "lerna run semantic-release"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
-    "@commitlint/travis-cli": "^8.2.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/travis-cli": "^8.3.5",
     "bundlesize": "^0.18.0",
     "commitizen": "^4.0.3",
     "cz-lerna-changelog": "^2.0.2",
     "del-cli": "^3.0.0",
     "file-size-report": "^1.0.2",
-    "husky": "^4.0.2",
-    "lerna": "^3.19.0"
+    "husky": "^4.2.3",
+    "lerna": "^3.20.2"
   },
   "config": {
     "commitizen": {

@@ -47,8 +47,8 @@
   },
   "devDependencies": {
     "@buildit/eslint-config": "^0.0.0",
-    "@buildit/gravity-particles": "^0.5.1",
-    "@buildit/gravity-ui-web": "^3.0.0-alpha.9",
+    "@buildit/gravity-particles": "^0.6.1",
+    "@buildit/gravity-ui-web": "^3.0.0-alpha.10",
     "@buildit/semantic-release": "^1.0.0",
     "@frctl/fractal": "^1.2.1",
     "@frctl/mandelbrot": "^1.2.1",
@@ -73,10 +73,10 @@
     "minimist": "^1.2.5",
     "nunjucks": "^3.2.0",
     "puppeteer": "^1.10.0",
-    "semantic-release": "^15.13.31"
+    "semantic-release": "^17.0.4"
   },
   "peerDependencies": {
-    "@buildit/gravity-ui-web": "^3.0.0-alpha.9",
+    "@buildit/gravity-ui-web": "^3.0.0-alpha.10",
     "nunjucks": "^3.2.0"
   },
   "engines": {

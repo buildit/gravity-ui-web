@@ -15,14 +15,14 @@
     "url": "https://github.com/buildit/gravity-ui-sass/issues"
   },
   "dependencies": {
-    "eslint-config-airbnb-base": "^14.0.0"
+    "eslint-config-airbnb-base": "^14.1.0"
   },
   "peerDependencies": {
     "eslint": "^6.1.0",
     "eslint-plugin-import": "^2.18.2"
   },
   "devDependencies": {
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.19.1"
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1"
   }
 }
