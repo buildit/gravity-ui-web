@@ -1,0 +1,28 @@
+{
+  "name": "@buildit/eslint-config",
+  "version": "0.0.0",
+  "description": "Shareable eslint configuration",
+  "author": "Ash Blue <ash@blueashes.com>",
+  "homepage": "https://github.com/buildit/gravity-ui-sass/packages/eslint#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildit/gravity-ui-sass.git"
+  },
+  "scripts": {},
+  "bugs": {
+    "url": "https://github.com/buildit/gravity-ui-sass/issues"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.1.0"
+  },
+  "peerDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1"
+  }
+}

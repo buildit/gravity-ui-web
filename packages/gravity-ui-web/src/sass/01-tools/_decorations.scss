@@ -1,0 +1,45 @@
+////
+/// @group styling
+////
+
+/// Adds a `clip-path` which creates an inward pointing notch along the
+/// bottom of the element.
+///
+/// The notch is triangular begins `$inset` away from the bottom left corner of the element:
+///
+/// ```
+/// ┌-----------┐
+/// |           |
+/// |           |
+/// |___/\______| ├-- $size
+/// --┬-
+/// $inset
+/// ```
+///
+/// @param {length} $size [1rem] - The height of the triangular notch.
+/// @param {length} $inset [2rem] - The horizontal distance from the bottom left corner to the start of the notch.
+@mixin grav-decoration-notch-in($size: 1rem, $inset: 2rem) {
+  clip-path: polygon(0% 0%, 0% 100%, $inset 100%, calc(#{$inset} + #{$size}) calc(100% - #{$size}), calc(#{$inset} + #{$size} * 2) 100%, 100% 100%, 100% 0%);
+}
+
+/// Adds a `clip-path` which creates an outward pointing notch along the
+/// bottom of the element.
+///
+/// The notch is triangular begins `$inset` away from the bottom left corner of the element.
+/// Note that - apart from the notch - this essentially crops the bottom portion of the element:
+///
+/// ```
+/// ┌-----------┐
+/// |           |
+/// |           |
+/// |___  ______|
+/// ....\/....... ├-- $size
+/// --┬-
+/// $inset
+/// ```
+///
+/// @param {length} $size [1rem] - The height of the triangular notch.
+/// @param {length} $inset [2rem] - The horizontal distance from the bottom left corner to the start of the notch.
+@mixin grav-decoration-notch-out($size: 1rem, $inset: 2rem) {
+  clip-path: polygon(0% 0%, 0% calc(100% - #{$size}), $inset calc(100% - #{$size}), calc(#{$inset} + #{$size}) 100%, calc(#{$inset} + #{$size} * 2) calc(100% - #{$size}), 100% calc(100% - #{$size}), 100% 0%);
+}

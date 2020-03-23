@@ -1,0 +1,42 @@
+.sg-color-swatch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: $grav-sp-inset-s;
+
+  &__preview {
+    text-align: center;
+    line-height: 1;
+
+    > span {
+      $size: 4em;
+
+      display: inline-block;
+      width: $size;
+      height: $size;
+      margin-right: $grav-sp-xs;
+
+      border-width: $grav-st-thickness-medium;
+      border-style: solid;
+      border-radius: 50%;
+    }
+  }
+
+  &__details {
+    margin-top: 0;
+    min-width: 8rem;
+
+    > strong {
+      display: block;
+    }
+
+    > code {
+      margin-top: $grav-sp-xs;
+      display: inline-block;
+      padding: $grav-sp-inset-squished-xs;
+
+      @include grav-color-apply('background-color', 'b', 'neutral', true);
+      @include grav-color-apply('color', 'a', 'neutral', true);
+    }
+  }
+}

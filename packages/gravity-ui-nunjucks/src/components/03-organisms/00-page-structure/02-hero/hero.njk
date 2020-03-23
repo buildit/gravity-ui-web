@@ -1,0 +1,10 @@
+<section class="grav-c-hero">
+  <img class="grav-c-hero__banner" src="{{ image }}" alt="{{ altDescription }}" />
+
+  <div class="grav-c-hero__container">
+    {% block heroContainer %}
+      <h1>{{ title | safe }}</h1>
+      <p>{{ message | safe }}</p>
+    {% endblock %}
+  </div>
+</section>

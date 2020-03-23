@@ -1,0 +1,128 @@
+////
+/// @group styling
+////
+
+/// Returns a list of side suffixes that can be used to generate CSS property names.
+///
+/// Given a list of CSS side names, e.g. `(top bottom)`, this function will return a
+/// that list of side names each prefixed by a hyphen (e.g. `(-top -bottom)`). This is
+/// useful when wanting to dynamically generate CSS property names in an `@each` loop
+/// for each desired direction (see example below).
+///
+/// Furthermore, if an empty list is provided, a list with a single empty string is returned.
+/// This allows code like the example below to also generate shorthand properties that apply
+/// to all sides.
+///
+/// @example scss
+///   @each $side-suffix in grav-side-suffixes(top left right) {
+///     border#{$side-suffix}: ...;
+///     padding#{$side-suffix}: ...;
+///   }
+///
+/// @param {list} $sides [()] - List of CSS side names for which to generate suffixes. Valid
+///           side names are: `top`, `right`, `bottom`, `left`, `inline-start`, `inline-end`,
+///           `block-start` and `block-end`. Attempting to use any other side name will throw
+///           an error.
+///
+/// @return {list} A list of side names, each prefixed by a hyphen. Or, if an empty list was provided,
+///           a list containing an empty string.
+///
+/// @group utilities
+/// @access private
+@function grav-side-suffixes($sides: ()) {
+  $valid-sides: top left bottom right inline-start inline-end block-start block-end;
+
+  @if length($sides) == 0 {
+    @return ('');
+  }
+  @else {
+    $side-suffixes: ();
+    @each $side in $sides {
+      @if not index($valid-sides, $side) {
+        @error '"#{$side}" is not a valid side name in CSS.';
+      }
+
+      $side-suffixes: append($side-suffixes, -#{$side});
+    }
+    @return $side-suffixes;
+  }
+}
+
+
+/// Generates CSS border declarations.
+///
+/// This mixin will output `border-width`, `-style` and `-color` declarations for all the
+/// sides specified. Border colors will always be a group B color, so you can only choose
+/// from the available group B color purposes. Colors will be declared with a fallback value
+/// (from the page's default theme) for compatibility with older browsers that do not support
+/// CSS custom properties.
+///
+/// You can also opt to have "smart" borders which will become transparent if the element also
+/// has a `grav-u-color-scheme-*` class applied to it. This is useful for containers that should
+/// always be visually boxed in. With smart borders they get a visible border by default, but if
+/// authors intentionally apply a color scheme whose background color provides enough contrast
+/// against the surrounding area's background to make the bounds of the container visible, then
+/// the border is redundant and disappears. Note that **it is the author's responsibility to apply
+/// a color scheme whose background provides sufficient color contrast**.
+///
+/// @param {list} $sides [()] - List of CSS side names for which to generate suffixes. Valid
+///           side names are: `top`, `right`, `bottom`, `left`, `inline-start`, `inline-end`,
+///           `block-start` and `block-end`. Attempting to use any other side name will throw
+///           an error.
+/// @param {length} $thickness [$grav-st-thickness] - The value used for the `border-width`.
+/// @param {CSS border style} $style [$grav-st-style] - The value used for the `border-style`.
+/// @param {string} $color-b-purpose [neutral] - One of Gravity's group B color purposes.
+/// @param {boolean} $smart [true] - Whether or not to generate "smart" borders.
+@mixin grav-border($sides: (), $thickness: $grav-st-thickness, $style: $grav-st-style, $color-b-purpose: 'neutral', $smart: true) {
+  // Apply the specified borders
+  @each $side-suffix in grav-side-suffixes($sides) {
+    border#{$side-suffix}-width: $thickness;
+    border#{$side-suffix}-style: $style;
+    @include grav-color-apply(border#{$side-suffix}-color , 'b', $color-b-purpose);
+  }
+
+  @if $smart {
+    // Set the borders to transparent when a color scheme class is
+    // applied to the element.
+    &[class*=grav-u-color-scheme-] {
+      @each $side-suffix in grav-side-suffixes($sides) {
+        border#{$side-suffix}-color: var(--grav-co-transparent);
+      }
+    }
+  }
+}
+
+/// Generates CSS border and padding declarations such that they widths add up to a
+/// specified value.
+///
+/// This mixin is useful for styling containers whose content is inset by one of the
+/// standard Gravity padding amounts, but may also need (smart) borders. When those
+/// borders are visible, you don't want the width of the border to push the content
+/// further inwards. This mixin therefore works out the remainder of the target padding
+/// width minus the border width and applies that.
+///
+/// @param {list} $sides [()] - List of CSS side names for which to generate suffixes. Valid
+///           side names are: `top`, `right`, `bottom`, `left`, `inline-start`, `inline-end`,
+///           `block-start` and `block-end`. Attempting to use any other side name will throw
+///           an error.
+/// @param {length} $padding [$grav-sp-m] - The _target_ padding amount. I.e. by how much
+///           the element's content should be inset.
+/// @param {length} $thickness [$grav-st-thickness] - The value used for the `border-width`.
+/// @param {CSS border style} $style [$grav-st-style] - The value used for the `border-style`.
+/// @param {string} $color-b-purpose [neutral] - One of Gravity's group B color purposes.
+/// @param {boolean} $smart [true] - Whether or not to generate "smart" borders.
+@mixin grav-padded-border($sides: (), $padding: $grav-sp-m, $thickness: $grav-st-thickness, $style: $grav-st-style, $color-b-purpose: 'neutral', $smart: true) {
+  @include grav-border($sides, $thickness, $style, $color-b-purpose, $smart);
+
+  $padding-remainder: $padding - $thickness;
+
+  @if $padding-remainder < 0 {
+    @warn 'Border thickness is bigger than padding.';
+  }
+
+  @each $side-suffix in grav-side-suffixes($sides) {
+    @if $padding-remainder > 0 {
+      padding#{$side-suffix}: $padding-remainder;
+    }
+  }
+}

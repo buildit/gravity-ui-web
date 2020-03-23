@@ -1,0 +1,80 @@
+.grav-c-toggle-menu {
+  $grav-sp-icon: grav-px2rem(11);
+  $grav-tr-icon-hover: grav-px2rem(2);
+  $grav-tr-icon-rotate: 135deg;
+  $grav-tr-icon-scale: 1.2;
+  $grav-size-icon: grav-px2rem(50);
+  $grav-width-icon: grav-px2rem(33);
+
+  height: $grav-size-icon;
+  margin-top: 0;
+  background: none;
+  border-style: hidden;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &[aria-pressed] {
+    background: none;
+  }
+
+  &__icon {
+    @include grav-transition(all);
+    display: block;
+    width: $grav-width-icon;
+    height: $grav-st-thickness-large;
+    position: relative;
+    margin-top: auto;
+    background-color: currentColor;
+
+    &::before,
+    &::after {
+      @include grav-transition(all);
+      content: '';
+      display: block;
+
+      width: $grav-width-icon;
+      height: $grav-st-thickness-large;
+      position: absolute;
+      left: 0;
+      background-color: currentColor;
+    }
+
+    &::before {top: -$grav-sp-icon;}
+
+    &::after {top: $grav-sp-icon;}
+
+  }
+
+  &:focus &__icon::before,
+  &:active &__icon::before,
+  &:hover &__icon::before {
+    transform: translateY(-$grav-tr-icon-hover);
+  }
+
+  &:focus &__icon::after,
+  &:active &__icon::after,
+  &:hover &__icon::after {
+    transform: translateY($grav-tr-icon-hover);
+  }
+
+  &[aria-pressed='true']:focus &__icon,
+  &[aria-pressed='true']:active &__icon,
+  &[aria-pressed='true']:hover &__icon {
+    transform: scale($grav-tr-icon-scale);
+  }
+
+  &[aria-pressed='true'] &__icon {
+    background-color: inherit;
+
+    &::before {
+      top: 0;
+      transform: rotate($grav-tr-icon-rotate);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(-$grav-tr-icon-rotate);
+    }
+  }
+}

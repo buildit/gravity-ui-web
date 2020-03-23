@@ -1,0 +1,8 @@
+////
+/// @group  layout
+////
+
+/// The maximum width of the page content.
+///
+/// @type length value
+$grav-page-content-max-width: $grav-breakpoint-largest - 2 * $grav-sp-page-content-inset;

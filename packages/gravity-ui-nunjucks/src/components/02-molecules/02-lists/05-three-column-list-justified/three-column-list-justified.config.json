@@ -1,0 +1,42 @@
+{
+  "context": {
+    "list": [
+      {
+        "text": "Bangalore",
+        "link": "#"
+      },
+      {
+        "text": "Dallas",
+        "link": "#"
+      },
+      {
+        "text": "Denver",
+        "link": "#"
+      },
+      {
+        "text": "Dublin",
+        "link": "#"
+      },
+      {
+        "text": "Edinburgh",
+        "link": "#"
+      },
+      {
+        "text": "Gdansk",
+        "link": "#"
+      },
+      {
+        "text": "London",
+        "link": "#"
+      },
+      {
+        "text": "New York",
+        "link": "#"
+      },
+      {
+        "text": "Warsaw",
+        "link": "#"
+      }
+    ]
+  }
+}

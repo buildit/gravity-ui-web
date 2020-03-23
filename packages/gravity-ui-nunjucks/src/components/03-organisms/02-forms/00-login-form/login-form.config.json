@@ -1,0 +1,22 @@
+{
+  "context": {
+    "form": {
+      "title": "Login",
+      "groups": [
+        {
+          "id": "usernameExample",
+          "label": "Username",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "passwordExample",
+          "label": "Password",
+          "type": "password",
+          "required": true
+        }
+      ],
+      "ctaText": "Login"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+a[href] {
+  &:link {
+    @include grav-color-apply('color', 'b', 'control');
+  }
+
+  &:visited {
+    @include grav-color-apply('color', 'b', 'control-alt');
+  }
+
+  &:hover,
+  &:focus {
+    @include grav-color-apply('color', 'b', 'control-emphasis');
+  }
+
+  &:active {
+    @include grav-color-apply('color', 'b', 'control-active');
+  }
+}
+
+b,
+strong {
+  font-weight: grav-font-weight('primary', 'bold');
+}
+
+code,
+kbd,
+samp {
+  font-family: grav-font-family-stack('mono');
+}
+
+mark {
+  @include grav-color-apply('color', 'a', 'accent-attention');
+  @include grav-color-apply('background-color', 'b', 'accent-attention');
+}
+
+cite {
+  @include grav-font-size(-2);
+  @include grav-color-apply('color', 'b', 'neutral-subtle');
+  font-style: normal;
+}

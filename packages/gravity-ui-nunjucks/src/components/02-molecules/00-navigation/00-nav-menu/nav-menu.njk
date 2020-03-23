@@ -1,0 +1,34 @@
+{%- extends '@unordered-list' -%}
+
+{%- from '@nav-link' import navLink -%}
+
+{#
+  Extend the unordered-list's unorderedListItems block
+  to iterate over our 2 sets of links (which we have passed
+  in as unorderList()'s `items` argument)
+#}
+{%- block unorderedListItems -%}
+  {%- for link in items.links %}
+    <li>
+      {{ navLink(link.text, link.url) | safe }}
+    </li>
+  {% endfor -%}
+  {%- for link in items.externalLinks %}
+    <li class="grav-c-nav-menu__external-link">
+      {{ navLink(link.text, link.url) | safe }}
+    </li>
+  {% endfor %}
+{%- endblock -%}
+
+
+{# Reusable macro for other templates to import: #}
+{%- macro navMenu(links, externalLinks) -%}
+<nav class="grav-c-nav-menu">
+  {{ unorderedList( { links: links, externalLinks: externalLinks } ) | safe }}
+</nav>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{%- block example -%}
+  {{ navMenu(links, externalLinks) | safe }}
+{%- endblock -%}

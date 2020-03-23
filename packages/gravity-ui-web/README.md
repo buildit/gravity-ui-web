@@ -1,10 +1,9 @@
-# gravity-ui-web
-
+# Gravity Web UI library
 <img src="https://repository-images.githubusercontent.com/94554467/a6c75480-66ac-11e9-985d-1978138937a1?sanitize=true">
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/buildit/gravity-ui-web.svg)](https://greenkeeper.io/)
-
 Library of styles, components and associated assets to build UIs for the web. Part of Buildit's Gravity design system.
+
+Published as the NPM package [`@buildit/gravity-ui-web`](https://www.npmjs.com/package/@buildit/gravity-ui-web).
 
 ## Table of contents
 * [Using this library](#using-this-library)
@@ -13,14 +12,10 @@ Library of styles, components and associated assets to build UIs for the web. Pa
     * [Build integration](#build-integration)
     * [Usage](#usage)
 * [Development](#development)
-    * [One-time setup](#one-time-setup)
-    * [Building and running the pattern library locally](#building-and-running-the-pattern-library-locally)
-    * [Building the UI library only](#building-the-ui-library-only)
-    * [Making commits](#making-commits)
+    * [Setup and local dev](#setup-and-local-dev)
+    * [Other build tasks](#other-build-tasks)
     * [Further information](#further-information)
-* [Deployment](#deployment)
-    * [Travis CI notes](#travis-ci-notes)
-    * [Further information](#further-information-1)
+* [Deployment](#deployment--releasing)
 
 
 ## Using this library
@@ -73,7 +68,6 @@ You need to get Gravity's CSS into your website or app somehow. Possible strateg
     @import 'components/<YOUR_TOOL_NAME>.scss';
 
     // === Generic layer ===
-    @import 'normalize';
     @import 'gravity-ui-web/02-generic/generic.all';
 
     // === Elements layer ===
@@ -119,7 +113,7 @@ Currently, Gravity's SVG symbol definitions need to be inlined into your HTML. T
 
 The `height` and `width` properties should be set to ensure that your inline SVG's intrinsic size matches the aspect ratio of the referenced symbol. If you omit them, browsers will [default to a width of `150px` and a height of `100px`](https://www.sitepoint.com/replaced-elements-html-myths-realities/) and the chosen symbol will appear centered within that area.
 
-The `aria-lebblledby` should be set to provide a text alternative for the SVG (equivalent to `alt` in `<img>` elements). All of Gravity's SVG symbol definitions contain alternative texts in their `<title>` elements and these have unique `id`s, so that they can be referenced from elsewhere via `aria-lebblledby`.
+The `aria-labelledby` should be set to provide a text alternative for the SVG (equivalent to `alt` in `<img>` elements). All of Gravity's SVG symbol definitions contain alternative texts in their `<title>` elements and these have unique `id`s, so that they can be referenced from elsewhere via `aria-labelledby`.
 
 You can look up these values manually in [Gravity's pattern library](http://style.buildit.digital/?p=particles-svg-symbols). For convenience and possible automation, Gravity also ships with a JSON file that contains the symbol and title IDs and the intrinsic width and height values for every available symbol. The format of this file is as follows:
 
@@ -165,66 +159,44 @@ Each component also has notes (shown in the pattern info panel) which describe w
 
 ## Development
 
-### One-time setup
+### Setup and local dev
 
-1. Clone this repo: https://github.com/buildit/gravity-ui-web
-1. Run `npm install` to install all the dev dependencies
+This package's code resides in a monorepo. Please follow the [instructions in the root `README.md`](../../README.md#development) for inital setup and local development.
 
-### Building and running the pattern library locally
+### Other build tasks
 
-We use [Pattern Lab](https://patternlab.io/) to generate our [Buildit Living Pattern Library](http://style.buildit.digital/). During development, it's useful to build and run the pattern library locally via:
+You can also run the following commands from within this package's directory:
 
-```bash
-$ npm start
+**Build the UI library** to the `dist/` directory.
+```
+npm run build
 ```
 
-This should also open the pattern library in your default web browser. In any case, the URL will be listed in the console output. By default it is: http://localhost:3000/
-
-The local server will then also watch source files under `src/` for changes and automatically trigger rebuilds & browser refreshes as necessary.
-
-
-### Building the pattern library
-
-To only build the pattern library (which is, in effect, a static HTML website) but _not_ run a local server, do:
-
-```bash
-$ npm run styleguide
+**Clean build output** - deletes everything in `dist/`
+```
+npm run clean
 ```
 
-Note that this will _also_ build the UI library. The build output will go into `dist/`. You can view the pattern library locally by opening `dist/index.html` in your browser.
-
-This is mainly intended for automated build and deployments to our hosted [Buildit Living Style Guide](http://style.buildit.digital/).
-
-
-### Building the UI library only
-
-To only build the UI library (without the pattern library), use:
-
-```bash
-$ npm run build
+**Build & watch UI library**
+```
+npm start
 ```
 
-The build output will go into `dist/` and, in this instance, only contains the artefacts that are needed when publishing the [`@buildit/gravity-ui-web` NPM package](https://www.npmjs.com/package/@buildit/gravity-ui-web).
+**Build SASS API docs**
+```
+npm run docs
+```
+(The generated docs go into: `dist/docs/sass/`)
+
+The above command only includes _public_ SASS APIs that are also available to consumers of the `@buildit/gravity-ui-web` package. Developers working on the library itself can also use `npm run docs:dev` to generate SASS API docs that also include the _private_ APIs. These get output to `dist/docs/sass-dev/`.
+
 
 ### Further information
 
-* Coding standards (TBC)
-  * [Naming conventions](./docs/naming-conventions.md)
-* [Contribution guidelines](/CONTRIBUTING.md)
-* [`git` branching strategy](./docs/branching-strategy.md)
+* [Documentation section in pattern library](http://style.buildit.digital/docs/)
+* [Coding standards](./docs/coding-standards.md)
+* [Contribution guidelines](../../CONTRIBUTING.md)
+* [`git` branching strategy](../../docs/branching-strategy.md)
 
-## Deployment
-
-### Travis CI notes
-The current Travis CI configuration utilises `npm ci` to ensure reproducibility for every build.
-
-`.travis.yml` takes care of installing the correct npm version before running `npm ci`.
-
-To be able to run `npm ci` on your machine, and to be sure to create a `package-lock.json` file compatible with it, make sure to update to npm version 5.8.0.
-
-`.nvmrc` only allows us to specify Node.js version, but that alone is not enough at the moment, since Node.js 8 comes out of the box with npm version 5.6.0.
-
-### Further information
-* [Release process](./docs/releasing.md)
-* [Travis CI setup](./docs/travis-ci.md) (for automated build & deplpoyments)
-* [npm ci docs](https://docs.npmjs.com/cli/ci)
+## Deployment & releasing
+See [Travis CI pipeline doc](../../travis-ci.md)

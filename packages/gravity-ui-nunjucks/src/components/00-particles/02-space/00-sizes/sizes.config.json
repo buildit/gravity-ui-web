@@ -1,0 +1,36 @@
+{
+  "context": {
+    "sizes": [
+      {
+        "name": "Extra small",
+        "var": "$grav-sp-xs",
+        "length": "0.25rem"
+      },
+      {
+        "name": "Small",
+        "var": "$grav-sp-s",
+        "length": "0.5rem"
+      },
+      {
+        "name": "Medium",
+        "var": "$grav-sp-m",
+        "length": "1rem"
+      },
+      {
+        "name": "Large",
+        "var": "$grav-sp-l",
+        "length": "2rem"
+      },
+      {
+        "name": "Extra large",
+        "var": "$grav-sp-xl",
+        "length": "4rem"
+      },
+      {
+        "name": "Extra extra large",
+        "var": "$grav-sp-xxl",
+        "length": "8rem"
+      }
+    ]
+  }
+}

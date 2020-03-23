@@ -1,0 +1,7 @@
+{
+  "dest": "dist/docs/sass-dev",
+  "display": {
+    "access": ["public", "private"]
+  },
+  "description": "# Gravity internal SASS API\n\nDocs for `gravity-ui-web`'s private and public SASS API. All items marked \"private\" are only for internal use within the `gravity-ui-web` library itself.\n\nNote that items from the \"debig\" group are only available within the `debug.scss` file."
+}

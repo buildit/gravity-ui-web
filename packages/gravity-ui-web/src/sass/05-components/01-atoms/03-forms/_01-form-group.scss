@@ -1,0 +1,9 @@
+.grav-c-form-group {
+  > label {
+    display: block;
+  }
+
+  > input {
+    margin-top: $grav-sp-s;
+  }
+}

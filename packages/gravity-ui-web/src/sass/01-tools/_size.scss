@@ -1,0 +1,20 @@
+////
+/// @group utilities
+////
+
+/// Converts a px value to the rem equivalent.
+///
+/// The input to this must be a _unitless_ number, since Gravity's
+/// SASS linting rules forbid `px` values.
+///
+/// Note, that this conversion assumes the typical default value
+/// of 16px / 1rem. If users have changed their OS or browser's
+/// default text sizes, then the REM values will appear bigger.
+/// But, that's the behaviour we want anyway! ;-)
+///
+/// @param {number} $px-value - The pixel value to convert.
+///
+/// @return {length (in rem)} The equivalent value in rem (assuming a 16px default font size).
+@function grav-px2rem($px-value) {
+  @return ($px-value / 16) * 1rem;
+}

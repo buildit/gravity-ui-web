@@ -1,0 +1,53 @@
+////
+/// @group layout
+////
+
+/// Turns an element into a sticky footer container.
+///
+/// A "sticky footer" is a page footer that "sticks" to the bottom
+/// of the viewport on short pages that don't have enough content to
+/// naturally push the footer down to the bottom of the viewport or
+/// beyond. Without the "sticky footer" effect, the page footer
+/// would just appear immediately after any preceding content and leave
+/// an empty space below it.
+///
+/// This mixin should be applied to whatever element is a direct parent
+/// of the page footer.
+///
+/// It words by setting the `min-height` of the container to be the height
+/// of the viewport (unless you provide a different value) and turning it
+/// into a column flexbox. Then, an `::after` pseudo element is inserted and
+/// positioned _before_ the page footer (which is assumed to tbe the last
+/// visible element within the container). This pseudo element has a
+/// `margin-top: auto;` which, in a flexbox context, will expand to fill any
+/// excess space. So, if there is excess space in the container, this will
+/// fill it up and push the subsequent page footer downwards so that it is
+/// flush with the bottom of the container.
+///
+/// @param {length} $min-height [100vh] - The `min-height` to set on the
+///           container.
+@mixin grav-sticky-footer($min-height: 100vh) {
+  // An order value that should be high enough
+  // to always place items to the end of a flexbox
+  $last-order: 100;
+
+  display: flex;
+  min-height: $min-height;
+  flex-direction: column;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: auto; // Expands to fill any excess space
+    order: $last-order;
+  }
+
+  // Move footer after the pseudo element
+  > footer {
+    order: $last-order + 1;
+  }
+  @at-root .grav-c-page-footer {
+    order: $last-order + 1;
+  }
+}

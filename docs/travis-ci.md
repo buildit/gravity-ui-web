@@ -6,9 +6,14 @@ If you do not want to build the pipeline because all you are changing is the [`R
 
 ## Pipeline
 
-- Any pushed commit got build (`npm run-script styleguide`)
-- Any successful build of `develop` branch get deployed to Staging
-- Any successful build of a Tag that begins with `v#.#.#`  (case-sensitive) get deployed to Production
+- Any pushed commit gets built (`npm run-script build`)
+- Any successful build of `develop` branch deploys the pattern library to Staging: http://style-staging.buildit.digital/
+- Any successful build of `next` branch deploys the pattern library to Next: http://style-next.buildit.digital/
+- Any successful build of `master` branch:
+    - runs `semantic-release`, which publishes NPM packages and commits updated changelogs and tags back to the git repo
+    - deploys the pattern library Production: http://style.buildit.digital/
+    - deploys the UI library files to CDN: https://static.buildit.digital/gravity-ui-web/
+
 
 ## Travis CI Setup
 
@@ -87,6 +92,6 @@ Run the following command to encrypt the NPM API key:
 
 ### Deployment
 
-Currently, deployment only means synchronising the output of the build (`./dist`) with an S3 bucket.
+Currently, deployment only means synchronising the output of the build with an S3 bucket.
 
 S3 buckets and DNS have to be set up manually.

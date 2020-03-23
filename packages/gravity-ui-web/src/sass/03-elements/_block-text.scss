@@ -1,0 +1,21 @@
+pre {
+  font-family: grav-font-family-stack('mono');
+  overflow: scroll;
+}
+
+blockquote {
+  @include grav-font-size(3);
+  margin-top: $grav-sp-vertical-gap-l;
+  margin-bottom: $grav-sp-vertical-gap-l;
+}
+
+hr {
+  @include grav-font-size(3);
+  margin-top: $grav-sp-vertical-gap-l;
+}
+
+figcaption {
+  @include grav-font-size(-2);
+  @include grav-color-apply('color', 'b', 'neutral-subtle');
+  font-style: normal;
+}

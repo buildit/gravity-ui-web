@@ -1,0 +1,70 @@
+.grav-c-steps {
+  @include grav-reset-list;
+
+  counter-reset: steps;
+
+  > li {
+    @include grav-color-apply('border-color', 'b', 'accent');
+
+    position: relative;
+    margin-top: 0;
+    margin-left: $grav-sp-l;
+    padding-bottom: $grav-sp-m;
+    padding-left: $grav-sp-l;
+    border-width: 0;
+    border-left-width: $grav-st-thickness;
+    border-style: dashed;
+    counter-increment: steps;
+  }
+
+  > li:last-child,
+  > li:nth-child(odd):last-child {
+    border-width: 0;
+  }
+
+  > li:nth-child(odd) {
+    @media (min-width: grav-breakpoint(large)) {
+      margin-right: 50%;
+      margin-left: 0;
+      padding-right: $grav-sp-l;
+      padding-left: 0;
+      border-right-width: $grav-st-thickness;
+      border-left-width: 0;
+      text-align: right;
+    }
+  }
+
+  > li:nth-child(even) {
+    @media (min-width: grav-breakpoint(large)) {
+      margin-left: 50%;
+    }
+  }
+
+  > li::before {
+    @include grav-color-apply('background-color', 'b', 'accent');
+    @include grav-color-apply('color', 'a', 'neutral');
+
+    content: counters(steps, '.');
+    min-width: 1em;
+    position: absolute;
+    left: 0;
+    padding: $grav-sp-inset-s;
+    font-weight: grav-font-weight('primary', 'bold');
+    line-height: 1;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+
+  > li:nth-child(odd)::before {
+    @media (min-width: grav-breakpoint(large)) {
+      display: block;
+      right: 0;
+      left: auto;
+      transform: translateX(50%);
+    }
+  }
+
+  p {
+    margin-top: 0;
+  }
+}

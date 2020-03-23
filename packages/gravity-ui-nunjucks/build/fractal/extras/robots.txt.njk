@@ -1,0 +1,11 @@
+{%if envs.getCurrentEnvInfo().excludeRobots %}
+# Non-production environment
+
+# Prevent all other bots from crawing and
+# indexing...
+User-agent: *
+Disallow: /
+{% else %}
+User-agent: *
+Disallow:
+{% endif %}

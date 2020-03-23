@@ -1,0 +1,8 @@
+{
+  "context": {
+    "bodyClass": "grav-o-full-bleed",
+    "footer": {
+      "class": "grav-u-color-scheme-contrast"
+    }
+  }
+}

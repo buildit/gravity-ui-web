@@ -1,0 +1,40 @@
+.grav-c-page-intro {
+  $grav-c-page-intro-notch-size: var(--grav-fs-plus-4);
+
+  > * {
+    display: block;
+  }
+
+  h1 {
+    @include grav-font-size(6);
+  }
+
+  p,
+  time {
+    @media (min-width: grav-breakpoint(large)) {
+      max-width: 44rem;
+    }
+  }
+
+  time {
+    @include grav-color-apply('color', 'b', 'neutral-subtle');
+  }
+
+  img {
+    @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-s);
+    @include grav-color-apply('background', 'a', 'neutral-alt');
+
+    width: 100%;
+    min-height: 16rem;
+    max-height: 30rem;
+    object-fit: cover;
+
+    @media (min-width: grav-breakpoint(medium)) {
+      @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-l);
+    }
+
+    @media (min-width: grav-breakpoint(large)) {
+      @include grav-decoration-notch-out($grav-c-page-intro-notch-size, $grav-sp-l * $grav-sp-ostentatious-padding-left-multiplier);
+    }
+  }
+}

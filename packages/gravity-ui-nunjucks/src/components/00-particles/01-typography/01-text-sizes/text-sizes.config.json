@@ -1,0 +1,43 @@
+{
+  "context": {
+    "textSizes": [
+      {
+        "scale": -2,
+        "classSuffix": "minus-2"
+      },
+      {
+        "scale": -1,
+        "classSuffix": "minus-1"
+      },
+      {
+        "scale": 0,
+        "classSuffix": "base"
+      },
+      {
+        "scale": 1,
+        "classSuffix": "plus-1"
+      },
+      {
+        "scale": 2,
+        "classSuffix": "plus-2"
+      },
+      {
+        "scale": 3,
+        "classSuffix": "plus-3"
+      },
+      {
+        "scale": 4,
+        "classSuffix": "plus-4"
+      },
+      {
+        "scale": 5,
+        "classSuffix": "plus-5"
+      },
+      {
+        "scale": 6,
+        "classSuffix": "plus-6"
+      }
+    ],
+    "text": "The quick brown fox jumps over the lazy dog"
+  }
+}

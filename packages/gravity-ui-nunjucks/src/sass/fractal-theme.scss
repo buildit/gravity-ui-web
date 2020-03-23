@@ -1,0 +1,72 @@
+/*
+  Tweaks to Fractal's default Mandelbrot theme in order to make
+  our pattern library a bit more Gravity-like
+*/
+// ================================================================
+/*
+  Import settings and tools layers from Gravity.
+
+  Partials are organised as per Harry Roberts' ITCSS architecture.
+  See: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+*/
+
+// === Settings layer ===
+// Used with preprocessors and contain font, colors definitions, etc.
+// Must not output any CSS.
+@import 'gravity-ui-web/00-settings/settings.all';
+
+// === Tools layer ===
+// Globally used mixins and functions.
+// Must not output any CSS.
+@import 'gravity-ui-web/01-tools/tools.all';
+
+// === Generic layer ===
+// Reset and/or normalize styles, box-sizing definition, etc.
+// This is the first layer which generates actual CSS.
+
+
+// === Elements layer ===
+// Styling for bare HTML elements (like H1, A, etc.).
+// These come with default styling from the browser so we can redefine them here.
+
+
+// === Objects layer ===
+// Class-based selectors which define undecorated design patterns, for example
+// media object known from OOCSS.
+
+
+// === Components layer ===
+// Specific UI components. This is where majority of our work takes place and our UI
+// components are often composed of Objects and Components.
+
+// Make the header use our accent color
+.Header {
+  color: grav-color-default-value('a','neutral');
+  background-color: grav-color-default-value('b','accent');
+}
+
+.Header-navToggle svg {
+  fill: currentColor;
+}
+
+
+.Gravity-Hero {
+  display: block;
+  margin: 0 auto;
+  max-height: 30vh;
+}
+
+.Gravity-Env-List {
+  li > a,
+  li > strong {
+    font-size: 1.125rem;
+  }
+
+  li + li {
+    margin-top: 1em;
+  }
+}
+
+// === Utilities layer ===
+// Utilities and helper classes with ability to override anything which goes before in the
+// triangle, eg. hide helper class.

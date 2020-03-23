@@ -1,0 +1,28 @@
+.grav-c-nav-link {
+  display: inline-block;
+  padding: $grav-sp-inset-squished-xs;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &[href] {
+    &:visited {
+      // Make visited links use some color as non-visited ones
+      @include grav-color-apply('color', 'b', 'control');
+    }
+
+    &:hover,
+    &:focus {
+      // Need to re-instate the hover/focus color since the previous block
+      // that overrides the usual visited color will otherwise still apply.
+      // This is because these selectors have a higher specificity that
+      // the ones that apply the basic <a> styles.
+      @include grav-color-apply('color', 'b', 'control-emphasis');
+    }
+  }
+
+  // Placeholder nav links are used to highlight the
+  // current page, so we want them to appear bold
+  &:not([href]) {
+    font-weight: grav-font-weight('primary', 'bold');
+  }
+}

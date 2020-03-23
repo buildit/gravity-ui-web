@@ -1,0 +1,17 @@
+{
+  "context": {
+    "text": "Toggle something",
+    "pressed": false,
+    "symbolId": "avatar-impossible-b-outline"
+  },
+  "variants": [
+    {
+      "name": "pressed",
+      "context": {
+        "text": "Toggle something",
+        "pressed": true,
+        "symbolId": "avatar-impossible-b-outline"
+      }
+    }
+  ]
+}

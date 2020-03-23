@@ -1,0 +1,32 @@
+{%- from '@nav-menu' import navMenu -%}
+
+{%- from '@link' import link -%}
+{%- from '@toggle-menu' import toggleMenu -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro pageHeader(links, externalLinks, logoLink = false, navMenuExpanded = false, withClass = false) -%}
+  {%- set logoType -%}
+    {% include '@logotype' %}
+  {%- endset -%}
+
+  <header{% if withClass %} class="grav-c-page-header"{% endif %}>
+    <div>
+      <div class="grav-c-page-header__logo">
+        {% if logoLink -%}
+          {{ link(logoType, logoLink) | safe }}
+        {%- else -%}
+          <h1>
+            {% include '@logotype' %}
+          </h1>
+        {%- endif %}
+      </div>
+      {{ toggleMenu(navMenuExpanded) }}
+      {{ navMenu(links, externalLinks) | safe }}
+    </div>
+  </header>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{%- block example -%}
+  {{ pageHeader(header.links, header.externalLinks, header.url, withClass = header.withClass) | safe }}
+{%- endblock -%}

@@ -1,0 +1,9 @@
+body {
+  @include grav-l-container;
+  @if $grav-config-body-sticky-footer {
+    @include grav-sticky-footer;
+  }
+
+  padding-top: $grav-sp-page-content-inset;
+  padding-bottom: $grav-sp-page-content-inset;
+}

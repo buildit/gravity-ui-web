@@ -1,0 +1,33 @@
+// Setting global typography defaults
+
+* {
+  // Text rendering tweaks (formerly came from Gravy lib)
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  line-height: inherit;
+
+  // Text rendering tweaks (formerly came from Gravy lib)
+  text-rendering: optimizeLegibility;
+}
+
+
+:root {
+  // Generate a set of CSS custom properties for our
+  // scale of repsonsive font-sizes. These will all
+  // be rem values:
+  @for $i from $grav-scale-min through $grav-scale-max {
+    @include ms-respond(grav-font-size-css-propname($i), $i);
+  }
+
+  font-family: grav-font-family-stack('primary');
+  line-height: $grav-line-height;
+  -webkit-text-size-adjust: 100%; /* stylelint-disable-line property-no-vendor-prefix */
+}
+
+body {
+  // Set default font-size on body for everything else to inherit.
+  // Note: We intentionally do *not* set this on :root, as that seems to interfere
+  // with the fluid text sizing.
+  @include grav-font-size(0);
+}

@@ -1,0 +1,11 @@
+.sg-color-palette {
+  $swatch-min-width: 8rem;
+
+  display: grid;
+  grid-column-gap: $grav-sp-xs;
+  grid-template-columns: repeat(auto-fit, minmax(#{$swatch-min-width}, 1fr));
+
+  > * {
+    margin-top: 0;
+  }
+}

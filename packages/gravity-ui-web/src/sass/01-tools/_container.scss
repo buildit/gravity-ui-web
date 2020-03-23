@@ -1,0 +1,42 @@
+////
+/// @group layout
+////
+
+/// Turns an element into a page content container.
+///
+/// Page containers are intended to wrap top-level page sections. On narrow
+/// viewports they create small margin (`$grav-sp-page-content-inset`) to the left and right,
+/// to ensure that content within does not touch the edges of the viewport. The content area
+/// will the expand horizontally until its width is `$grav-page-content-max-width`, at which
+/// point it stops expanding and will be horizontally centered if the viewport is even wider.
+///
+/// @param {boolean} $no-margin [false] - If set to `true`, the page content container will be not
+///     have outer margins on narrow viewports ("full-bleed" in other words) and expand up
+///     the width of the `extra-large` breakpoint and then stop and be centered on the page.
+///
+@mixin grav-l-container($no-margin: false) {
+  max-width: $grav-page-content-max-width;
+
+  @if ($no-margin) {
+    width: 100%;
+  }
+  @else {
+    width: calc(100% - #{2 * $grav-sp-page-content-inset});
+    margin-right: $grav-sp-page-content-inset;
+    margin-left: $grav-sp-page-content-inset;
+  }
+
+  // IE10+ bug that happens when using margin: auto
+  // to fill all the available space between flex items.
+  // More info: https://github.com/philipwalton/flexbugs#flexbug-15
+  @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @media (min-width: grav-breakpoint(extra-large)) {
+      align-self: center;
+    }
+  }
+
+  @media (min-width: grav-breakpoint(extra-large)) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

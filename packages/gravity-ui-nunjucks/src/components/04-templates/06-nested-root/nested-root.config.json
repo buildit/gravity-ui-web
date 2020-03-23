@@ -1,0 +1,16 @@
+{
+  "variants": [
+    {
+      "name": "default",
+      "label": "Long"
+    }
+  ],
+  "context": {
+    "header": {
+      "withClass": true
+    },
+    "footer": {
+      "class": "grav-c-page-footer"
+    }
+  }
+}

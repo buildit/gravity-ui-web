@@ -1,0 +1,38 @@
+// some utility classes to use the grav-l-column-layout mixin directly as classes with sensible breakpoints.
+// max 2 column, min 1 column
+.grav-o-two-column,
+%grav-o-two-column {
+  @media (min-width: grav-breakpoint(small)) {
+    @include grav-l-column-layout(2);
+  }
+}
+
+// Max 3 column.
+// Starts with 1 column on narrow viewports and
+// increases to 2 and then 3 columns as the width
+// increases.
+.grav-o-three-column,
+%grav-o-three-column {
+  @extend %grav-o-two-column;
+
+  @media (min-width: grav-breakpoint(medium)) {
+    @include grav-l-column-layout(3, $additive: true);
+  }
+}
+
+// Max 4 column.
+// Starts with 1 column on narrow viewports and
+// increases to 2, 3 and then 4 columns as the width
+// increases.
+.grav-o-four-column {
+  @extend %grav-o-three-column;
+
+  @media (min-width: grav-breakpoint(large)) {
+    @include grav-l-column-layout(4, $additive: true);
+  }
+}
+
+// utility class to expand items in column layouts if the final row is not full.
+.grav-o-column-no-danglies {
+  @include grav-l-column-no-danglies;
+}

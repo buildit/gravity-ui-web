@@ -1,0 +1,21 @@
+.grav-c-three-column-list-justified {
+  @include grav-reset-list;
+
+  > li {
+    margin-top: 0.5rem;
+  }
+
+  @media (min-width: grav-breakpoint(small)) {
+    @include grav-l-column-layout(3);
+
+    > li {
+      &:nth-child(3n+2) {
+        text-align: center;
+      }
+
+      &:nth-child(3n) {
+        text-align: right;
+      }
+    }
+  }
+}

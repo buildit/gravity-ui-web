@@ -1,0 +1,40 @@
+.sg-color-contrast {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-content: space-between;
+
+  &__sample,
+  &__ratio,
+  &__score {
+    flex-basis: 50%;
+    margin-top: 0;
+    text-align: center;
+    white-space: nowrap;
+    padding: $grav-sp-inset-squished-xs;
+  }
+
+  &__ratio {
+    @include grav-color-apply('background-color', 'a', 'neutral-alt', true);
+  }
+
+  &__score {
+    font-weight: 600;
+
+    &--fail {
+      @include grav-color-apply('background-color', 'b', 'accent-danger', true);
+      @include grav-color-apply('color', 'a', 'accent-danger', true);
+    }
+
+    &--aa-lrg {
+      @include grav-color-apply('background-color', 'b', 'accent-attention', true);
+      @include grav-color-apply('color', 'a', 'accent-attention', true);
+    }
+
+    &--aa,
+    &--aaa {
+      @include grav-color-apply('background-color', 'b', 'accent-success', true);
+      @include grav-color-apply('color', 'a', 'accent-success', true);
+    }
+  }
+}

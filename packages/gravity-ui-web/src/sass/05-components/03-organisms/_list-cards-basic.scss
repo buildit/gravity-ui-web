@@ -1,0 +1,19 @@
+.grav-c-list-cards-basic {
+  @include grav-reset-list;
+
+  $columns: 2;
+
+  > li + li {
+    margin-top: $grav-sp-xl;
+  }
+
+  @media (min-width: grav-breakpoint(large)) {
+    @include grav-l-column-layout($columns, $grav-sp-xl);
+    @include grav-l-column-no-danglies;
+
+    // Callouts go full-width
+    > .grav-c-list-cards-basic__item--callout {
+      @include grav-l-column-item-full-width($columns, $grav-sp-xl);
+    }
+  }
+}

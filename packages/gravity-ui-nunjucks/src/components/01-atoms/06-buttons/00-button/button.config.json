@@ -1,0 +1,39 @@
+{
+  "context": {
+    "text": "Do something",
+    "type": "button"
+  },
+  "variants": [
+    {
+      "name": "disabled",
+      "context": {
+        "text": "Not allowed to do something",
+        "type": "button",
+        "disabled": true
+      }
+    },
+    {
+      "name": "submit",
+      "context": {
+        "text": "Submit something",
+        "type": "submit"
+      }
+    },
+    {
+      "name": "disabled submit",
+      "context": {
+        "text": "Not allowed to submit something",
+        "type": "submit",
+        "disabled": true
+      }
+    },
+    {
+      "name": "with icon",
+      "context": {
+        "text": "Do something",
+        "type": "button",
+        "symbolId": "avatar-impossible-b-outline"
+      }
+    }
+  ]
+}
