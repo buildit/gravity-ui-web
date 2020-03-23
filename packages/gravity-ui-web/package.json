@@ -56,20 +56,28 @@
     "style-guide"
   ],
   "author": {
-    "name": "Buildit",
+    "name": "Buildit | Wipro Digital",
     "url": "http://buildit.wiprodigital.com/"
   },
   "contributors": [
-    "Gregg Anderson",
-    "Ash Blue (https://twitter.com/AshBlueWD)",
-    "Daniel Bull",
     "Allan Corbett (http://superallan.com)",
-    "Valerio Francescangeli",
-    "James Nash (http://cirrus.twiddles.com/)",
+    "Ana Escontrela",
+    "Ash Blue (https://twitter.com/AshBlueWD)",
     "Ben Oakenfull",
+    "Brodie McIntyre",
+    "Daniel Bull (http://danbull.uk/)",
+    "Daniel Macedo",
+    "Daniel Wilkinson",
+    "Elohina Guevara (https://elohina.dev/)",
+    "Gregg Anderson",
+    "James Nash (http://cirrus.twiddles.com/)",
+    "Jimmy McMillan",
+    "Lorenzo Nicora",
     "Marcos Peebles",
     "Matteo Pescarin (http://peach.smartart.it)",
-    "Daniel Wilkinson"
+    "Priya Ranjan Singh",
+    "Valerio Francescangeli",
+    "Zane Cunningham"
   ],
   "license": "MIT",
   "bugs": {
