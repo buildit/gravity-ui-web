@@ -1,4 +1,5 @@
 # Gravity UI Nunjucks
+![Gravity UI Nunjucks banner](./docs/gravity-ui-nunjucks-banner.png)
 
 Nunjucks HTML templates for Gravity web UI components. Also contains the docs and sources used to generate [Gravity's pattern library](http://style.buildit.digital/). Part of Buildit's Gravity design system.
 
@@ -10,13 +11,14 @@ Nunjucks HTML templates for Gravity web UI components. Also contains the docs an
 <!-- TOC depthfrom:2 -->
 
 - [Development](#development)
-    - [Setup and local dev](#setup-and-local-dev)
-    - [Build tasks](#build-tasks)
-        - [Build the pattern library](#build-the-pattern-library)
-        - [Clean build output](#clean-build-output)
-        - [Launch local dev server](#launch-local-dev-server)
-        - [Environment options](#environment-options)
-    - [Further information](#further-information)
+  - [Setup and local dev](#setup-and-local-dev)
+  - [Build tasks](#build-tasks)
+    - [Build the pattern library](#build-the-pattern-library)
+    - [Clean build output](#clean-build-output)
+    - [Launch local dev server](#launch-local-dev-server)
+    - [Run accessibility tests](#run-accessibility-tests)
+    - [Environment options](#environment-options)
+  - [Further information](#further-information)
 - [Deployment & releasing](#deployment--releasing)
 
 <!-- /TOC -->
