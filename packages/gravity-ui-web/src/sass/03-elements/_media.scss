@@ -28,20 +28,28 @@ svg {
   fill: currentColor;
 }
 
+/*
+  To enable recolouring of SVG symbols that get pulled in
+  via <use> we have to use CSS custom properties. This is
+  because the original SVG is essentially cloned into a
+  shadow DOM of the parent <svg> and so, you can't select
+  elements within it via CSS selectors. However, some
+  values including custom properties are inherited across
+  the shadow DOM boundary.
+*/
 // The following class names are defined in the source SVGs
 // provided by Gravity Particles and thus deviate from our
-// usual class-naming conventions.
-
+// usual class-naming conventions:
 // stylelint-disable selector-class-pattern
 .grav-svg-hl-1 {
-  @include grav-color-apply('fill', 'b', 'accent');
+  fill: var(--grav-co-svg-hl-1, currentColor);
 }
 
 .grav-svg-hl-2 {
-  @include grav-color-apply('fill', 'b', 'control-alt');
+  fill: var(--grav-co-svg-hl-2, currentColor);
 }
 
 .grav-svg-hl-3 {
-  @include grav-color-apply('fill', 'b', 'accent-attention');
+  fill: var(--grav-co-svg-hl-3, currentColor);
 }
 // stylelint-enable selector-class-pattern

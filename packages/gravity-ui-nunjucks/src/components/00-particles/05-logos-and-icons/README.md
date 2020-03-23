@@ -20,6 +20,9 @@ Without further styling, the logo or icon will appear as black (`#000`) on a tra
 }
 ```
 
+## Multi-coloured SVGs
+Some of the available SVGs contain shapes that can be independently coloured. By default, they will all share the same current colour. However, you can selectively re-colour them via the <code>--grav-co-svg-hl-1 / 2 / 3</code> custom properties. Refer to the preview tables in the pattern library to see what regions of an SVG those custom properties correspond to.
+
 ## Generating the SVG symbols
 
 `gravity-ui-web` uses an SVG icon system instead of an icon font. Furthermore, [we use `<symbols>` rather than `<defs>`](https://css-tricks.com/svg-symbol-good-choice-icons/), so that we don't need to specify the `viewBox` each time a glyph is referenced. The benefits of this approach are covered in the CSS-Tricks [Icon System with SVG Sprites](https://css-tricks.com/svg-sprites-use-better-icon-fonts/) article. Of particular appeal to us were the following:

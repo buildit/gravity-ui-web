@@ -1,4 +1,5 @@
 {% from '@inline-svg-symbol' import inlineSvg %}
+{% from '@color-schemes' import colorProp %}
 
 <table class="sg-symbol-table">
   <thead>
@@ -12,7 +13,7 @@
   <tbody>
   {% for symbol in symbols %}
     <tr>
-      <td>
+      <td class="sg-svg-highlight">
         {{ inlineSvg(symbol.symbolId, symbol.width, symbol.height, symbol.titleId, 'sg-symbol-table__preview', 'Arrow right' ) }}
       </td>
       <td>
@@ -28,3 +29,18 @@
   {% endfor %}
   </tbody>
 </table>
+<p>Some SVGs have shapes that can be independently filled via the <code>--grav-co-svg-hl-*</code> custom properties. To visualise this, the above SVGs have such regions coloured in as follows:</p>
+<ul class="sg-highlight-preview sg-svg-highlight">
+  <li>
+    {{ colorProp('--grav-co-svg-hl-1') | safe }}
+  </li>
+  <li>
+    {{ colorProp('--grav-co-svg-hl-2') | safe }}
+  </li>
+  <li>
+    {{ colorProp('--grav-co-svg-hl-3') | safe }}
+  </li>
+</ul>
+
+
+
