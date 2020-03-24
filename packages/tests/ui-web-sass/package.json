@@ -16,7 +16,10 @@
     "sass",
     "eyeglass"
   ],
-  "author": "Buildit",
+  "author": {
+    "name": "Buildit | Wipro Digital",
+    "url": "http://buildit.wiprodigital.com/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/buildit/gravity-ui-web/issues"

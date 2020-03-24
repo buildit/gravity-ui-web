@@ -1,6 +1,11 @@
 {
   "name": "root",
   "private": true,
+  "author": {
+    "name": "Buildit | Wipro Digital",
+    "url": "http://buildit.wiprodigital.com/"
+  },
+  "license": "MIT",
   "scripts": {
     "lerna": "lerna",
     "lerna:bootstrap": "lerna bootstrap",

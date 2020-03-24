@@ -1,5 +1,5 @@
 # Gravity Web UI packages monorepo
-<img src="https://repository-images.githubusercontent.com/94554467/a6c75480-66ac-11e9-985d-1978138937a1?sanitize=true">
+!["Gravity UI Web monorepo" banner image](./docs/gravity-ui-web-repo-img.png)
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/buildit/gravity-ui-web.svg)](https://greenkeeper.io/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)

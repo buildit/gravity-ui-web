@@ -1,5 +1,5 @@
 # Gravity Web UI library
-<img src="https://repository-images.githubusercontent.com/94554467/a6c75480-66ac-11e9-985d-1978138937a1?sanitize=true">
+![Gravity UI Web banner](./docs/gravity-ui-web-banner.png)
 
 Library of styles, components and associated assets to build UIs for the web. Part of Buildit's Gravity design system.
 

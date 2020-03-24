@@ -2,7 +2,13 @@
   "name": "@buildit/eslint-config",
   "version": "0.0.0",
   "description": "Shareable eslint configuration",
-  "author": "Ash Blue <ash@blueashes.com>",
+  "author": {
+    "name": "Buildit | Wipro Digital",
+    "url": "http://buildit.wiprodigital.com/"
+  },
+  "contributors": [
+    "Ash Blue <ash@blueashes.com>"
+  ],
   "homepage": "https://github.com/buildit/gravity-ui-sass/packages/eslint#readme",
   "license": "ISC",
   "main": "index.js",

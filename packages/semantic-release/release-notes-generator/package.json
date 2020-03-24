@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Light wrapper around @semantic-release/release-notes-generator to work with Lerna packages",
   "author": {
-    "name": "Buildit",
+    "name": "Buildit | Wipro Digital",
     "url": "http://buildit.wiprodigital.com/"
   },
+  "contributors": [
+    "Ash Blue <ash@blueashes.com>"
+  ],
   "homepage": "https://github.com/buildit/gravity-ui-web/tree/develop/packages/semantic-release/release-notes-generator#readme",
   "license": "ISC",
   "main": "dist/index.js",
