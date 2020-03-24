@@ -1,0 +1,25 @@
+{%- from '@list-inline-row' import listInlineRow -%}
+{%- from '@list-cards-basic' import listCardsBasic -%}
+
+<section{% if section.class %} class="{{section.class}}"{% endif %}>
+  {% if section.title -%}
+    <h2>{{section.title}}</h2>
+  {%- endif %}
+  {% for contentItem in section.content -%}
+    {# Atoms #}
+    {%- if contentItem.paragraph -%}
+      {%- set htmlContent = contentItem.paragraph -%}
+      {% include "@paragraph" %}
+    {%- endif -%}
+
+    {%- if contentItem.blockquote -%}
+      {%- set htmlContent = contentItem.blockquote -%}
+      {% include "@blockquote" %}
+    {%- endif -%}
+
+    {# Molecules #}
+    {%- if contentItem.inlineRow -%}
+      {{ listInlineRow(contentItem.inlineRow) | safe }}
+    {%- endif -%}
+  {% endfor %}
+</section>

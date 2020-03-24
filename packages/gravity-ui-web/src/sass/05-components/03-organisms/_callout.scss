@@ -1,0 +1,38 @@
+.grav-c-callout {
+  $columns-breakpoint: small;
+
+  p {
+    @include grav-font-size(2);
+    line-height: 1.2;
+
+    @media (min-width: grav-breakpoint($columns-breakpoint)) {
+      max-width: 24rem;
+      margin-right: $grav-sp-l;
+    }
+
+    @media (min-width: grav-breakpoint(medium)) {
+      @include grav-font-size(3);
+    }
+  }
+
+  .grav-c-callout__columns {
+    @include grav-l-container;
+
+    padding-top: $grav-sp-vertical-gap;
+    padding-bottom: $grav-sp-vertical-gap;
+
+    @media (min-width: grav-breakpoint($columns-breakpoint)) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .grav-c-three-column-list-justified {
+    max-width: 28rem;
+
+    @media (min-width: grav-breakpoint($columns-breakpoint)) {
+      margin-top: 0;
+    }
+  }
+}

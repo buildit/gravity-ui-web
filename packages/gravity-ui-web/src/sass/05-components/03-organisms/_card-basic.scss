@@ -1,0 +1,78 @@
+.grav-c-card-basic {
+  $card-image-height: 16rem;
+  width: 100%;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include grav-font-size(1);
+  }
+
+  p {
+    @include grav-font-size(-2);
+  }
+
+  img {
+    @include grav-color-apply('background', 'a', 'neutral-alt');
+    display: block;
+    width: 100%;
+    height: $card-image-height;
+    object-fit: cover;
+  }
+
+  picture {
+    display: block;
+  }
+
+  > a {
+    display: block;
+    position: relative;
+
+    img {
+      @include grav-decoration-notch-in;
+    }
+
+    > svg {
+      @include grav-color-apply('fill', 'a', 'neutral');
+      @include grav-transition(opacity);
+
+      width: 4rem;
+      height: $card-image-height;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin: 0;
+      opacity: 0;
+      transform: translate(-50%, 0);
+      z-index: 1;
+    }
+
+    &::after {
+      @include grav-decoration-notch-in;
+      @include grav-color-apply('background-color', 'b', 'control-emphasis');
+      @include grav-transition(opacity);
+
+      content: ''; // ::before and ::after both require content
+      width: 100%;
+      height: $card-image-height;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+  }
+
+  > a:hover,
+  > a:focus {
+    &::after {
+      opacity: 0.75;
+    }
+
+    > svg {
+      opacity: 1;
+    }
+  }
+}

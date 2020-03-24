@@ -1,0 +1,60 @@
+{
+  "context": {
+    "bodyClass": "grav-o-full-bleed",
+    "title": "404 - Page not found",
+    "header": {
+      "links": [
+        {
+          "url": "./page-about",
+          "text": "About us"
+        },
+        {
+          "url": "./page-jobs",
+          "text": "Jobs"
+        },
+        {
+          "url": "./page-locations",
+          "text": "Locations"
+        }
+      ],
+      "externalLinks": [
+        {
+          "url": "./page-404-error-page",
+          "text": "Blog"
+        }
+      ]
+    },
+    "ascii": "(╯°Д°)╯︵ ┻━┻",
+    "homeLink": {
+      "url": "./page-homepage",
+      "text": "Go to the homepage"
+    },
+    "text": "Sorry! We looked everywhere but we can't find the page you're looking for.",
+    "footer": {
+      "class": "grav-u-color-scheme-contrast",
+      "copy": "made with ❤️",
+      "social": [
+        {
+          "titleId": "icon-instagram__title",
+          "symbolId": "icon-instagram",
+          "url": "https://www.instagram.com/buildit_tech"
+        },
+        {
+          "titleId": "icon-twitter__title",
+          "symbolId": "icon-twitter",
+          "url": "https://twitter.com/buildit_tech"
+        },
+        {
+          "titleId": "icon-linkedin__title",
+          "symbolId": "icon-linkedin",
+          "url": "https://www.linkedin.com/company/buildit"
+        },
+        {
+          "titleId": "icon-github__title",
+          "symbolId": "icon-github",
+          "url": "https://github.com/buildit"
+        }
+      ]
+    }
+  }
+}

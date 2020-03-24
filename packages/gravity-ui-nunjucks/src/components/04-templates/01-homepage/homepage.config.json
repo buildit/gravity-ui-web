@@ -1,0 +1,13 @@
+{
+  "context": {
+    "bodyClass": "grav-o-full-bleed",
+    "header": {
+      "url": false
+    },
+    "message": "Attention-grabbing strapline",
+    "image": "../../images/img-16x9.png",
+    "footer": {
+      "class": "grav-u-color-scheme-contrast"
+    }
+  }
+}

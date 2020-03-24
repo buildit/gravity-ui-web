@@ -1,0 +1,32 @@
+{
+  "name": "ui-web-eyeglass",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Tests compiling `@buildit/gravity-ui-web`'s distributed SASS code via Eyeglass",
+  "main": "build.js",
+  "scripts": {
+    "test": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildit/gravity-ui-web.git"
+  },
+  "keywords": [
+    "test",
+    "sass",
+    "eyeglass"
+  ],
+  "author": {
+    "name": "Buildit | Wipro Digital",
+    "url": "http://buildit.wiprodigital.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buildit/gravity-ui-web/issues"
+  },
+  "homepage": "https://github.com/buildit/gravity-ui-web/tree/develop/packages/gravity-ui-web#readme",
+  "devDependencies": {
+    "@buildit/gravity-ui-web": "3.0.0-alpha.10",
+    "node-sass": "^4.13.1"
+  }
+}

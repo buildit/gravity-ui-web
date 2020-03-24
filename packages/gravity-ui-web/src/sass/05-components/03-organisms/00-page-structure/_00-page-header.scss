@@ -1,0 +1,127 @@
+$grav-page-heading-logo-width: grav-px2rem(250);
+$grav-page-heading-trigger-breakpoint: grav-breakpoint(medium);
+
+// Note: The Page Header always spans the full width of the viewport. This
+// is in case we want to give it any kind of full-bleed background styling.
+// The child elements within therefore need to respect the maximum content
+// width ($grav-page-content-max-width) themselves, where necessary.
+body > header,
+.grav-c-page-header {
+  margin-top: -1 * $grav-sp-page-content-inset;
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: $grav-sp-m;
+    padding-bottom: $grav-sp-m;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: $grav-page-heading-trigger-breakpoint) {
+      padding-top: 0;
+    }
+  }
+
+  .grav-c-toggle-menu {
+    flex-shrink: 0;
+
+    @media (min-width: $grav-page-heading-trigger-breakpoint) {
+      display: none;
+    }
+
+    /* stylelint-disable-next-line selector-max-compound-selectors */
+    &[aria-pressed] ~ .grav-c-nav-menu,
+    &[aria-pressed='false'] ~ .grav-c-nav-menu {
+      @include grav-transition(max-height, $grav-tr-speed-slow);
+      max-height: 0;
+      overflow: hidden;
+
+      @media (min-width: $grav-page-heading-trigger-breakpoint) { // stylelint-disable-line max-nesting-depth
+        display: flex;
+        max-height: none;
+        overflow: visible;
+      }
+    }
+
+    /* stylelint-disable-next-line selector-max-compound-selectors */
+    &[aria-pressed='true'] ~ .grav-c-nav-menu {
+      max-height: 100vh;
+
+      @media (min-width: $grav-page-heading-trigger-breakpoint) { // stylelint-disable-line max-nesting-depth
+        display: flex;
+      }
+    }
+  }
+
+  .grav-c-nav-menu {
+    width: 100%;
+    margin-top: $grav-sp-s;
+
+    @media (min-width: $grav-page-heading-trigger-breakpoint) {
+      width: auto;
+      margin-top: $grav-sp-m;
+    }
+  }
+
+  // Special rule for adjacent elements
+  + * {
+    // This creates a gap equivalent to $grav-sp-vertical-gap-l applied to an element that has
+    // the base font size, regardless of what the element's actual font-size is. This ensures
+    // a consistent gap between the page header and the first item that follows it, regardless
+    // of whether that happens to be <h1>, <p>, <main>, or anything else.
+    margin-top: calc(var(#{grav-font-size-css-propname(0)}) * #{$grav-sp-vertical-gap-l / 1em});
+  }
+}
+
+
+.grav-c-page-header__logo {
+  width: 70%; // 2/3 ish of the space
+
+  a {
+    display: block;
+
+    &:visited {
+      // Make visited logo link use some color as non-visited one
+      @include grav-color-apply('color', 'b', 'control');
+    }
+
+    &:hover,
+    &:focus {
+      // Need to re-instate the hover/focus color since the previous block
+      // that overrides the usual visited color will otherwise still apply.
+      // This is because these selectors have a higher specificity that
+      // the ones that apply the basic <a> styles.
+      @include grav-color-apply('color', 'b', 'control-emphasis');
+    }
+  }
+
+  svg {
+    display: block;
+    max-height: grav-px2rem(33); // Otherwise IE11 makes it 150px tall :-(
+  }
+
+
+  @media (min-width: $grav-page-heading-trigger-breakpoint) {
+    max-width: grav-px2rem(250);
+    margin: $grav-sp-m $grav-sp-m 0 0;
+    flex-shrink: 0;
+
+    svg {
+      width: 100%;
+    }
+  }
+}
+
+
+// Special case:
+// Header within a full-bleed body, should use its DIV
+// as a content container
+/* stylelint-disable-next-line selector-no-qualifying-type */
+body.grav-o-full-bleed > header,
+.grav-o-full-bleed .grav-c-page-header {
+  margin-top: 0;
+
+  > div {
+    @include grav-l-container;
+  }
+}

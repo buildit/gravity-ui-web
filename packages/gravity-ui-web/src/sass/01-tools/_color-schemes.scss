@@ -1,0 +1,188 @@
+////
+/// Functions and mixins for working with color schemes.
+///
+/// @group  colors
+////
+
+// ---- Internal helper functions ----
+
+/// Retrieves the color scheme map associated with a given name.
+///
+/// The color scheme names must be taken from the ones provided by the
+/// `@buildit/gravity-particles` package.
+///
+/// @param {string} $scheme-name - The name of the color scheme to retrieve.
+///
+/// @return {color scheme map} A color scheme map.
+///
+/// @throw Throws an error message if the color scheme name is not valid.
+///
+/// @access private
+@function grav-color-scheme-map($scheme-name) {
+  @if (not map-has-key($grav-co-schemes, $scheme-name)) {
+    @error 'Color scheme #{$scheme-name} not found';
+  }
+  @return map-get($grav-co-schemes, $scheme-name);
+}
+
+/// Generates a Gravity color scheme utility class selector.
+///
+/// @param {string} $suffix - The suffix to append to the CSS class selector.
+///
+/// @return {string} A CSS class selector.
+///
+/// @access private
+@function grav-color-scheme-class-selector($suffix) {
+  @return '.grav-u-color-scheme-#{$suffix}';
+}
+
+/// Checks the validity of a color group name and errors if
+/// it is invalid.
+///
+/// Only `a` and `b` are valid group names.
+///
+/// @param {string} $group - The group name to check.
+///
+/// @return {boolean} `true` if the group name is valid.
+///
+/// @throw Throws an error message if the color group name is not valid.
+///
+/// @access private
+@function grav-is-valid-color-scheme-group($group) {
+  $valid-groups: ('a', 'b');
+
+  @if not index($valid-groups, $group) {
+    @error '"#{$group}" is not a valid color group name.';
+    @return false;
+  }
+  @else {
+    @return true;
+  }
+}
+
+/// Retrieves a group of color purposes from a color scheme.
+///
+/// @param {string} $scheme-name - The name of the color scheme.
+/// @param {string} $group - The group to retrieve (must be `a` or `b`).
+///
+/// @return {color group map} A color scheme group map.
+///
+/// @access private
+@function grav-color-scheme-group($scheme-name, $group) {
+  @if grav-is-valid-color-scheme-group($group) {
+    $color-scheme-map: grav-color-scheme-map($scheme-name);
+    $group-key: 'group-#{$group}';
+    @return map-get($color-scheme-map, $group-key);
+  }
+}
+
+
+// ---- Public API ----
+
+/// Returns the CSS custom property name of a given color purpose.
+///
+/// @param {string} $group - The color purpose's group name.
+/// @param {string} $purpose - One of the Gravity color purpose names.
+///
+/// @return {string} A CSS custom property name.
+@function grav-color-css-prop-name($group, $purpose) {
+  @if grav-is-valid-color-scheme-group($group) {
+    @return --grav-co-grp-#{$group}-#{$purpose};
+  }
+}
+
+/// Returns the default color scheme's color value for a given group's color purpose.
+///
+/// @param {string} $group - The color purpose's group name.
+/// @param {string} $purpose - One of the color purpose names.
+///
+/// @return {color value} The default scheme's color value for the given group A purpose.
+@function grav-color-default-value($group, $purpose) {
+  $group: grav-color-scheme-group($grav-co-scheme-default-name, $group);
+  @return map-get($group, $purpose);
+}
+
+
+/// Outputs CSS custom property definitions for a color scheme.
+///
+/// @param {string} $scheme-name - The name of the color scheme that should be used.
+/// @param {string} $dark-scheme-name - An optional 2nd color scheme that will be used when the user has enabled dark mode.
+@mixin grav-color-scheme-props($scheme-name, $dark-scheme-name: false) {
+  $groups: ('a', 'b');
+
+  @each $group in $groups {
+    @each $purpose, $color-value in grav-color-scheme-group($scheme-name, $group) {
+      #{grav-color-css-prop-name($group, $purpose)}: $color-value;
+    }
+  }
+
+  // Add optional overrides for users who have enabled their
+  // OS's "dark mode" or equivalent
+  @if ($dark-scheme-name != false) {
+    @media (prefers-color-scheme: dark) {
+      @each $group in $groups {
+        @each $purpose, $color-value in grav-color-scheme-group($dark-scheme-name, $group) {
+          #{grav-color-css-prop-name($group, $purpose)}: $color-value;
+        }
+      }
+    }
+  }
+}
+
+/// Applies a color purpose value to the given CSS property.
+///
+/// @param {string} $css-property - The CSS property that the color shoud be applied to.
+/// @param {string} $group - The color purpose's group name.
+/// @param {string} $purpose - One of the Gravity group A color purposes.
+/// @param {boolean} $use-fallback [true] - If `true`, the default color scheme's color value will be
+///         set first as a fallback for older browsers that do not support CSS custom
+///         properties. Otherwise, only the CSS custom property value will be used.
+@mixin grav-color-apply($css-property, $group, $purpose, $use-fallback: true) {
+  @if $use-fallback {
+    #{$css-property}: grav-color-default-value($group, $purpose);
+  }
+  #{$css-property}: var(#{grav-color-css-prop-name($group, $purpose)});
+}
+
+/// Sets the `color` and `background-color` to the `neutral` colors of group A and B
+/// respectively.
+///
+/// Color scheme classes must always do this to visually "apply" the new color scheme
+/// to the element they are set on.
+///
+/// @param {boolean} $use-fallback [false] - If `true`, the default color scheme's color values
+///         will be set first as a fallback for older browsers that do not support CSS custom
+///         properties. Otherwise, only the CSS custom property value will be used.
+@mixin grav-color-scheme-apply($use-fallback: false) {
+  @include grav-color-apply('background', 'a', 'neutral', $use-fallback);
+  @include grav-color-apply('color', 'b', 'neutral', $use-fallback);
+}
+
+/// Defines a color scheme CSS utility class.
+///
+/// A color scheme class will do the following:
+///
+/// - Set `background-color` to the color scheme's group A `neutral` color value.
+/// - Set `color` to the color scheme's group B `neutral` color value.
+/// - Sets the values of all color purpose CSS custom properties.
+///
+/// In effect, the element the class is applied and all its children will have their
+/// colors changed as per what the color scheme defines.
+///
+/// @param {string} $class-suffix - The suffix that will be appended to the generated class name.
+/// @param {string} $scheme-name - Optional name of the color scheme that should be used. If omitted, the
+///         `$class-suffix` will be used as the color scheme name.
+/// @param {string} $dark-scheme-name - An optional 2nd color scheme that will be used when the user has
+///         enabled dark mode.
+@mixin grav-color-scheme-define-class($class-suffix, $scheme-name: false, $dark-scheme-name: false) {
+  @if ($scheme-name == false) {
+    // If no color scheme name was explicitly set, we make it
+    // the same as the class name suffix
+    $scheme-name: $class-suffix;
+  }
+
+  #{grav-color-scheme-class-selector($class-suffix)} {
+    @include grav-color-scheme-props($scheme-name, $dark-scheme-name);
+    @include grav-color-scheme-apply;
+  }
+}

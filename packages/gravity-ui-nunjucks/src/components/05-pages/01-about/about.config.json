@@ -1,0 +1,155 @@
+{
+  "context": {
+    "bodyClass": "grav-o-full-bleed",
+    "title": "About us",
+    "header": {
+      "url": "./page-homepage",
+      "links": [
+        {
+          "url": false,
+          "text": "About us"
+        },
+        {
+          "url": "./page-jobs",
+          "text": "Jobs"
+        },
+        {
+          "url": "./page-locations",
+          "text": "Locations"
+        }
+      ],
+      "externalLinks": [
+        {
+          "url": "./page-404-error-page",
+          "text": "Blog"
+        }
+      ]
+    },
+    "footer": {
+      "class": "grav-u-color-scheme-contrast",
+      "copy": "made with ❤️",
+      "social": [
+        {
+          "titleId": "icon-instagram__title",
+          "symbolId": "icon-instagram",
+          "url": "https://www.instagram.com/buildit_tech"
+        },
+        {
+          "titleId": "icon-twitter__title",
+          "symbolId": "icon-twitter",
+          "url": "https://twitter.com/buildit_tech"
+        },
+        {
+          "titleId": "icon-linkedin__title",
+          "symbolId": "icon-linkedin",
+          "url": "https://www.linkedin.com/company/buildit"
+        },
+        {
+          "titleId": "icon-github__title",
+          "symbolId": "icon-github",
+          "url": "https://github.com/buildit"
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Who we are",
+        "class": "grav-o-full-bleed__content",
+        "content": [
+          {
+            "paragraph": false,
+            "imgCards": [
+              {
+                "image": {
+                  "src": "/images/spaceman.svg",
+                  "alt": "A man in a space suit, possibly in space.",
+                  "class": "grav-c-image__invertible"
+                },
+                "title": "Innovative",
+                "content": "Self-confessed geeks, always curious to explore technology and better ways of working that deliver maximum business impact."
+              },
+              {
+                "image": {
+                  "src": "/images/cube.svg",
+                  "alt": "A cube made of interconnected nodes, with one highlighted node.",
+                  "class": "grav-c-image__invertible"
+                },
+                "title": "Problem solvers",
+                "content": "We enjoy finding ways to make complicated tasks easy. We tackle root-causes, not symptoms. We are user-centric but keep an eye on the big picture."
+              },
+              {
+                "image": {
+                  "src": "/images/bull.svg",
+                  "alt": "A stylised head of a bull.",
+                  "class": "grav-c-image__invertible"
+                },
+                "title": "No \"bull\"",
+                "content": "From open-minded to open source, as natural collaborators, we are not afraid to <em>'do the right thing'</em> for our clients and their customers."
+              },
+              {
+                "image": {
+                  "src": "/images/r2d2.svg",
+                  "alt": "A stylised version of R2-D2 from Star Wars.",
+                  "class": "grav-c-image__invertible"
+                },
+                "title": "Battle tested",
+                "content": "Resilience is our most valuable quality, with teams that own, commit and have the ability to adapt to unique organisational aspirations and challenges."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "What we do",
+        "class": "grav-o-full-bleed__content",
+        "content": [
+          {
+            "paragraph": "We partner with our clients to solve hard problems, and help them deliver world-class products. We help them improve the way they solve business problems, ultimately changing the way they change."
+          },
+          {
+            "paragraph": "We help organisations understand what they need to do to survive in an ever more rapidly changing world."
+          },
+          {
+            "paragraph": "True transformation only happens when change touches all areas of a company. We believe that change must be holistic and consider all aspects of the organisational stack, from recruitment to procurement, from operations to engineering, and from sales to support. We call this vertical transformation."
+          },
+          {
+            "paragraph": "<em>Read more about some of the <a href='https://medium.com/buildit/technology/home'>technologies</a> we work with, and our thoughts on <a href='https://medium.com/buildit/design-systems/home'>Design Systems</a> on our  Medium blog.</em>"
+          }
+        ]
+      },
+      {
+        "title": "How we do it",
+        "class": "grav-o-full-bleed__content",
+        "content": [
+          {
+            "paragraph": "We are problem solvers who hone our craft through experimentation, continuous improvement and systems thinking."
+          },
+          {
+            "paragraph": "We are pragmatic partners who seek out the challenging work in all engagements, whether at enterprise scale or startup speed."
+          },
+          {
+            "paragraph": "We enable learning behaviours through high psychological safety; we empower people through trust and autonomy."
+          },
+          {
+            "paragraph": "<em>Read more about how we approach <a href='https://medium.com/buildit/org-change/home'>organisational change</a> on our Medium blog.</em>"
+          }
+        ]
+      },
+      {
+        "title": "Our people",
+        "class": "grav-o-full-bleed__content",
+        "content": [
+          {
+            "paragraph": "Buildit has an open structure, which means that employees work within wide boundaries."
+          },
+          {
+            "paragraph": "The environment and culture, which is shaped by Buildit’s people, is driven by several key factors including transparency, curiosity, inclusivity, pragmatism and responsibility. Buildit employees work in an environment where everyone is encouraged to continually develop through a cohesive unit of learning, and perhaps more importantly, given the autonomy to do so."
+          },
+          {
+            "paragraph": "We are part of the larger <a href='http://wipro.com'>Wipro</a> network and partner with:"
+          }
+        ]
+      }
+    ]
+  }
+}

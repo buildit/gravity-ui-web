@@ -1,0 +1,9 @@
+{
+  "context": {
+    "form": {
+      "id": "textInputExample",
+      "label": "Username",
+      "type": "text"
+    }
+  }
+}

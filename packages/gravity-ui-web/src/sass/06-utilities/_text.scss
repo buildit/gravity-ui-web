@@ -1,0 +1,17 @@
+.grav-u-text-centered {
+  text-align: center;
+}
+
+.grav-u-max-word-count-m {
+  max-width: $grav-line-max-width-m;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+// Generate utility classes for available text sizes
+@for $i from $grav-scale-min through $grav-scale-max {
+  .grav-u-font-size-#{grav-font-size-varname-suffix($i)} {
+    @include grav-font-size($i);
+  }
+}

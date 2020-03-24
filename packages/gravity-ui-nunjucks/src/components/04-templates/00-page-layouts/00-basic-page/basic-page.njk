@@ -1,0 +1,25 @@
+{%- include '@page-header' -%}
+{%- block pageContent %}
+<main>
+  {% block mainContent -%}
+    {#
+      Just some dummy example content.
+      Other templates should extend this template
+      and replace this block with whatever they
+      need.
+    #}
+    {% block pageIntro -%}
+      <div class="grav-c-page-intro grav-o-full-bleed__content">
+        <h1>{{title}}</h1>
+        {% if description %}<p>{{ description | safe }}</p>{% endif %}
+      </div>
+    {% endblock %}
+    {% block mainSections -%}
+      {% for section in sections -%}
+        {% include '@section' %}
+      {% endfor %}
+    {% endblock %}
+  {%- endblock -%}
+</main>
+{%- endblock -%}
+{%- include '@page-footer' -%}

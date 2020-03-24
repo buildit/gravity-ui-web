@@ -1,0 +1,34 @@
+/**
+  Some low-specifity defaults inspired by Heydon Pickering's Aximoatic CSS
+
+  * https://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+  * https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/
+*/
+
+
+* {
+  // Zero any margins coming from user-agent stylesheets
+  margin: 0;
+
+  box-sizing: border-box;
+
+  // Make everything inherit key typography properties by default
+  color: inherit; // Note, border-color defaults to this too, unless overridden
+  font-family: inherit;
+}
+
+// Default vertical margin *between* block elements
+* + * {
+  margin-top: $grav-sp-vertical-gap;
+}
+
+// Exceptions to the * + * rule
+body,
+br,
+dt + dt,
+dd,
+th,
+td,
+option {
+  margin-top: 0;
+}

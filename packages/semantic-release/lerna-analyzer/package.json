@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Light wrapper around @semantic-release/commit-analyzer to work with Lerna packages",
   "author": {
-    "name": "Buildit",
+    "name": "Buildit | Wipro Digital",
     "url": "http://buildit.wiprodigital.com/"
   },
+  "contributors": [
+    "Ash Blue <ash@blueashes.com>"
+  ],
   "homepage": "https://github.com/buildit/gravity-ui-web/tree/develop/packages/semantic-release/lerna-analyzer#readme",
   "license": "ISC",
   "main": "dist/index.js",
@@ -30,15 +33,15 @@
     "url": "https://github.com/buildit/gravity-ui-sass/issues"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.22",
-    "@types/node": "^11.15.2",
-    "jest": "^24.9.0",
-    "semantic-release": "^15.13.30",
-    "ts-jest": "^24.1.0",
-    "tslint": "^5.20.1",
-    "typescript": "^3.7.2"
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.1",
+    "jest": "^25.1.0",
+    "semantic-release": "^17.0.4",
+    "ts-jest": "^25.2.1",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@semantic-release/commit-analyzer": "^6.3.3"
+    "@semantic-release/commit-analyzer": "^8.0.1"
   }
 }

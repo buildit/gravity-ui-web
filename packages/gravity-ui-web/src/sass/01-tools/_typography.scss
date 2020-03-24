@@ -1,0 +1,107 @@
+////
+/// Typography-related functions and mixins
+///
+/// @group typography
+////
+
+// ---- Private helpers -----
+
+/// Returns a given typeface's map
+///
+/// @param {string} $name - One of the typeface names defined
+///             in the `$grav-typefaces` map.
+/// @return {map} A map of the typeface's details.
+///
+/// @access private
+@function grav-typeface($name) {
+  @if (not map-has-key($grav-typefaces, $name)) {
+    @error ('Typeface with name "#{$name}" not found');
+  }
+  @return map-get($grav-typefaces, $name);
+}
+
+/// Returns the CSS `font-weight` value for a given typeface and weight.
+///
+/// @param {string} $name - One of the typeface names defined
+///             in the `$grav-typefaces` map.
+/// @param {string} $weight - One of the typeface's weight names.
+/// @return {string} The typeface's CSS `font-weight`.
+///
+/// @access private
+@function grav-font-weight($name, $weight) {
+  $typeface: grav-typeface($name);
+
+  @if (not map-has-key($typeface, 'weights')) {
+    @error ('Typeface "#{$name}" has no weights defined');
+  }
+  $weights: map-get($typeface, 'weights');
+
+  @if (not map-has-key($weights, $weight)) {
+    @error ('Typeface "#{$name}" has no weight called "#{$weight}".');
+  }
+
+  @return map-get($weights, $weight);
+}
+
+/// Returns font-size CSS custom property name suffix for
+/// a given point on our modular scale.
+///
+/// @param {number} $scale - A point on Gravity's typographic scale.
+/// @return {string} The corresponding CSS custom property name suffix.
+///
+/// @access private
+@function grav-font-size-varname-suffix($scale) {
+  @if ($scale < $grav-scale-min) or ($scale > $grav-scale-max) {
+    @error '#{$scale} is not a valid point on Gravity\'s typographic scale. Valuse must be in the range from #{$grav-scale-min} to #{$grav-scale-max}.';
+  }
+
+  @if $scale < 0 {
+    @return 'minus-#{abs($scale)}';
+  }
+  @else if $scale > 0 {
+    @return 'plus-#{$scale}';
+  }
+  @else {
+    // No need to use the mixin, this will always be
+    // 1rem
+    // --grav-fs-base: 1rem;
+    @return 'base';
+  }
+}
+
+
+// ---- Public API -----
+
+/// Returns the CSS `font-family` stack for the given typeface.
+///
+/// Intended to be used when setting `font-family` in your CSS code.
+///
+/// @param {string} $name - One of Gravity's typeface names. Supported
+///             values are: `primary` and `mono`.
+/// @return {list} The typeface's CSS font stack.
+@function grav-font-family-stack($name) {
+  $typeface: grav-typeface($name);
+
+  @if (not map-has-key($typeface, 'stack')) {
+    @error ('Typeface "#{$name}" has no font stack defined');
+  }
+  @return map-get($typeface, 'stack');
+}
+
+/// Returns the full `font-size` CSS property name for
+/// a given point on our modular scale.
+///
+/// @param {number} $scale - A point on Gravity's typographic scale.
+/// @return {string} The corresponding CSS custom property name.
+@function grav-font-size-css-propname($scale) {
+  @return --grav-fs-#{grav-font-size-varname-suffix($scale)};
+}
+
+
+/// Mixin for setting the font-size at a given point
+/// on our modular scale.
+///
+/// @param {number} $scale - A point on Gravity's typographic scale.
+@mixin grav-font-size($scale) {
+  font-size: var(#{grav-font-size-css-propname($scale)});
+}

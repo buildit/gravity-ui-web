@@ -1,0 +1,189 @@
+////
+/// @group debug
+/// @access private
+////
+/*
+  DEBUG.CSS
+
+  Consumers of Gravity can include this CSS file in debug builds to
+  visually highlight issues that need fixing, such as:
+
+  * Incorrect use of Gravity classes & components
+  * Undesirable HTML (e.g. a11y issues)
+
+  Note that this approach cannot exhaustively test all potential issues
+  in your UI code. It is intended to *complement* other linting and testing
+  techniques. It goes without saying that production builds should generally
+  NOT use this file.
+
+  This approach was inspired by:
+  * Eric Meyer's Diagnostic CSS - https://meyerweb.com/eric/tools/css/diagnostics/
+  * "CSS Diagnostics" on CSS Tricks - https://css-tricks.com/snippets/css/css-diagnostics/
+  * Karl Groves' Diagnosic CSS - http://www.karlgroves.com/2013/09/07/diagnostic-css-super-quick-web-accessibility-testing/
+*/
+
+@import './00-settings/settings.all';
+@import './01-tools/tools.all';
+
+// ====================================================================
+// Mixins for highlighting offending items on the page
+// ====================================================================
+
+/* stylelint-disable scss/at-mixin-pattern */
+
+/// Adds a colored outline around an element.
+///
+/// Optionally, if a message is provided it will be displayed in
+/// the top left corner of the element. Note, that this will set
+/// the element's position property to "relative"!
+///
+/// @param {string} $accent-color-name - One of the `accent-*` color purpose names.
+/// @param {string} $message - The error or warning message to display to the user.
+@mixin highlight($accent-color-name, $message) {
+  $outline-color: var(#{grav-color-css-prop-name('b', $accent-color-name)});
+  $text-color: var(#{grav-color-css-prop-name('a', $accent-color-name)});
+
+  outline: grav-px2rem(3) solid $outline-color;
+
+  @if type-of($message) == string and  str-length($message) > 0 {
+    position: relative;
+
+    &::after {
+      @include grav-font-size(-1);
+
+      content: $message;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.3rem;
+      background-color: $outline-color;
+      border-radius: 0 0 0.5rem;
+      color: $text-color;
+      font-weight: bold;
+      line-height: 1;
+    }
+  }
+}
+
+/// Highlights elements with errors in danger accent color
+///
+/// @param {string} $message [''] - The error message to display to the user.
+@mixin highlight-error($message: '') {
+  @include highlight('accent-danger', $message);
+}
+
+/// Highlights elements with warnings in attention accent color
+///
+/// @param {string} $message [''] - The warning message to display to the user.
+@mixin highlight-warning($message: '') {
+  @include highlight('accent-attention', $message);
+}
+
+/// Generates CSS to display a warning message for classes that have
+/// been deprecated and will eventually be removed from Gravity.
+///
+/// @param {string} $class - The CSS class selector
+/// @param {string} $version-to-be-removed - (Optional) The Gravity UI Web version in which the class will be removed.
+/// @param {string} $migration-message - Optional migration instructions.
+@mixin deprecated-class($class, $version-to-be-removed: false, $migration-message: false) {
+  $message: '#{$class} has been deprecated';
+
+  @if $version-to-be-removed {
+    // Append message with version to be removed
+    $message: '#{$message} and is due to be removed in v#{$version-to-be-removed}';
+  }
+
+  // End the sentence
+  $message: '#{$message}.';
+
+  @if $migration-message {
+    // Append migration message
+    $message: '#{$message} #{$migration-message}';
+  }
+
+  #{$class} {
+    @include highlight-warning($message);
+  }
+}
+
+/// Generates CSS to display an error message for classes that have
+/// been removed from Gravity.
+///
+/// @param {string} $class - The CSS class selector
+/// @param {string} $version-removed - The Gravity UI Web version in which the class was removed.
+/// @param {string} $migration-message - Optional migration instructions.
+@mixin removed-class($class, $version-removed, $migration-message: false) {
+  $message: '#{$class} was removed in v#{$version-removed}.';
+
+  @if $migration-message {
+    // Append migration message
+    $message: '#{$message} #{$migration-message}';
+  }
+
+  #{$class} {
+    @include highlight-error($message);
+  }
+}
+
+
+/* stylelint-enable scss/at-mixin-pattern */
+
+// ====================================================================
+// Tests for misuse of Gravity's styles, classes and components
+// ====================================================================
+
+.grav-o-full-bleed__content .grav-o-full-bleed__content {
+  @include highlight-error('Nesting of .grav-o-full-bleed__content is not allowed.');
+}
+
+body meta:first-child,
+body link:first-child,
+body script:first-child,
+body style:first-child,
+[hidden]:first-child {
+  @include highlight-warning('Invisible first child may cause following visible element to have unwanted top margin.');
+
+  // Make element visible, so that we can show error
+  display: block;
+  height: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+// ====================================================================
+// Tests for generic HTML & CSS naughtiness
+//
+// (We do not need to add things that the w3c validator catches - for
+// example missing alt attributes, deprecated elements, etc. - in here)
+// ====================================================================
+
+// TBC...
+
+
+// ====================================================================
+// Flag deprecated Gravity classes and components
+// ====================================================================
+
+// Add warnings here as needed...
+// @include deprecated-class( ... );
+
+
+// ====================================================================
+// Flag removed Gravity classes and components
+// ====================================================================
+
+// Things removed in gravity-ui-web v3
+@include removed-class('.grav-o-container', 3, 'Use .grav-o-full-bleed__content instead.');
+@include removed-class('.grav-o-container-banner', 3, 'Consider applying a color scheme instead (.grav-u-color-scheme-*).');
+@include removed-class('.grav-o-section', 3);
+@include removed-class('.grav-c-two-columns-text', 3);
+@include removed-class('.grav-c-logo-image', 3);
+@include removed-class('.grav-c-job-list', 3, 'A similar layout can be achieved with .grav-o-two-column.');
+@include removed-class('.grav-c-list-image-links', 3, 'Consider using .grav-c-list-inline-row instead.');
+@include removed-class('.grav-c-list-img-cards', 3, 'Consider using .grav-c-list-cards-basic or .grav-o-two-column instead.');
+@include removed-class('.grav-c-two-columns-block', 3, 'Please use .grav-o-two-column instead.');
+@include removed-class('.grav-o-column-list', 3, 'Please use .grav-o-reset-list instead.');
+@include removed-class('.grav-c-icon__secondary-elements', 3, 'Consider using one of the --grav-co-svg-hl-1/2/3 custom properties to achieve a similar effect.');
+@include removed-class('.grav-c-logo', 3, 'For logotype, use .grav-c-logotype instead. For other uses this class is now redundant as inline SVG elements now get a default fill color.');

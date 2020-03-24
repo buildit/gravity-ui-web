@@ -1,0 +1,17 @@
+// Utility class to remove default bullet or numbered list styles.
+// Often useful in conjunction with things like column layout classes.
+.grav-o-reset-list,
+%grav-o-reset-list {
+  @include grav-reset-list;
+}
+
+// Utility class to remove default bullet or numbered list styles,
+// including all nested lists.
+.grav-o-reset-list-deep {
+  @extend %grav-o-reset-list;
+
+  ul,
+  ol {
+    @include grav-reset-list;
+  }
+}

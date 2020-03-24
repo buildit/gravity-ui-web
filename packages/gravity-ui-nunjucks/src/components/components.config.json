@@ -1,0 +1,215 @@
+{
+  "context": {
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    "url": "#",
+    "listItems": [
+      {
+        "htmlContent": "Some list item content"
+      },
+      {
+        "htmlContent": "More list item content"
+      },
+      {
+        "htmlContent": "Even more list item content"
+      },
+      {
+        "htmlContent": "I can't believe there's still more list item content"
+      },
+      {
+        "htmlContent": "Seriously?! That's enough now."
+      }
+    ],
+    "footer": {
+      "copy": "&copy; 2019 <strong>Buildit</strong>. All rights reserved.",
+      "linksA": [
+        {
+          "label": "Stories",
+          "url": "#"
+        },
+        {
+          "label": "People",
+          "url": "#"
+        },
+        {
+          "label": "Jobs",
+          "url": "#"
+        }
+      ],
+      "linksB": [
+        {
+          "label": "Terms",
+          "url": "#"
+        },
+        {
+          "label": "Accessibility",
+          "url": "#"
+        },
+        {
+          "label": "Privacy & Cookie Policy",
+          "url": "https://wiprodigital.com/privacy-policy"
+        }
+      ]
+    },
+    "hero": {
+      "pullout": "Big, attention-grabbing headline",
+      "paragraph": "Witty subtitle",
+      "cta": {
+        "text": "Clickbaity label",
+        "url": "#"
+      }
+    },
+    "img": {
+      "random": {
+        "src": "/images/img-random-1.png",
+        "alt": "A placeholder image with an arbitrary aspect ratio."
+      },
+      "square": {
+        "src": "/images/img-1x1.png",
+        "alt": "A placeholder image with a perfect square (1:1) aspect ratio."
+      },
+      "tv": {
+        "src": "/images/img-4x3.png",
+        "alt": "A placeholder image with a 4:3 aspect ratio, like an old TV."
+      },
+      "widescreen": {
+        "src": "/images/img-16x9.png",
+        "alt": "A placeholder image with a 16:9 aspect ratio, like a widescreen TV."
+      },
+      "logo": {
+        "src": "/images/img-random-2.png",
+        "alt": "A test image for a logo with an arbitrary aspect ratio."
+      }
+    },
+    "title": "Page title",
+    "header": {
+      "url": "./homepage",
+      "links": [
+        {
+          "text": "Jobs",
+          "url": "./jobs"
+        },
+        {
+          "text": "Locations",
+          "url": "./locations"
+        }
+      ],
+      "externalLinks": [
+        {
+          "text": "Fancy external website",
+          "url": "./error-page"
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Example section",
+        "class": "grav-o-full-bleed__content",
+        "content": [
+          {
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+          }
+        ]
+      }
+    ],
+    "section": {
+      "title": "This is the title for a section",
+      "class": "grav-o-full-bleed__content",
+      "content": [
+        {
+          "paragraph": "Paragraph lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "blockquote": "Blockquote lorem ipsum dolor sit amet, consectetur adipisicing elit"
+        },
+        {
+          "twoColumnsList": [
+            {
+              "htmlContent": "Vestibulum auctor dapibus neque."
+            },
+            {
+              "htmlContent": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+            },
+            {
+              "htmlContent": "Aliquam tincidunt mauris eu risus."
+            },
+            {
+              "htmlContent": "Labore et dolore magna aliqua."
+            },
+            {
+              "htmlContent": "Phasellus tempus, orci non mattis sagittis."
+            }
+          ]
+        },
+        {
+          "inlineRow": [
+            {
+              "text": "First link",
+              "url": "#"
+            },
+            {
+              "text": "Second link",
+              "url": "#"
+            },
+            {
+              "text": "Third link",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "imgCards": [
+            {
+              "title": "Some fascinating, attention-grabbing headling",
+              "content": "Ideally, with a click-baity tagline that entices to you to visit!",
+              "image": {
+                "src": "/images/img-random-1.png",
+                "alt": "Brief description of this fascinating image"
+              }
+            },
+            {
+              "title": "Labore et dolore magna aliqua",
+              "content": "Vestibulum pharetra arcu enim, nec porttitor quam ullamcorper et. Phasellus tempus, orci non mattis sagittis, lectus erat fringilla odio, nec auctor erat augue quis eros.",
+              "image": {
+                "src": "/images/img-random-1.png",
+                "alt": "Phasellus tempus, orci non mattis"
+              }
+            },
+            {
+              "title": "Nanotechnology immersion along the information highway",
+              "content": "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+              "image": {
+                "src": "/images/img-random-1.png",
+                "alt": "Bring to the table win-win survival strategies"
+              }
+            }
+          ]
+        },
+        {
+          "imgLinks": [
+            {
+              "url": "#",
+              "image": {
+                "src": "/images/img-random-1.png",
+                "alt": "Image linke #1"
+              }
+            },
+            {
+              "url": "#",
+              "image": {
+                "src": "/images/img-random-2.png",
+                "alt": "Image linke #2"
+              }
+            },
+            {
+              "url": "#",
+              "image": {
+                "src": "/images/img-random-3.png",
+                "alt": "Image linke #3"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.sg-color-prop {
+  > span {
+    $size: 0.8em;
+
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+
+    width: $size;
+    height: $size;
+
+    border-width: $grav-st-thickness-medium;
+    border-style: solid;
+    border-radius: 50%;
+  }
+
+  code {
+    margin: 0;
+  }
+}

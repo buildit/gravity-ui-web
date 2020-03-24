@@ -1,0 +1,32 @@
+////
+/// @group breakpoints
+/// @access private
+////
+
+/// The width of the narrowest horizontal breakpoint.
+///
+/// Note, this breakpoint is also the width at which the text
+/// sizes will begin scaling up from their minimum.
+$grav-breakpoint-smallest: 32rem;
+
+/// The width of the widest horizontal breakpoint.
+///
+/// Note, this breakpoint is also the width at which the text
+/// sizes will reach their maximum and stop scaling up.
+$grav-breakpoint-largest: 75rem;
+
+/// Major horizontal layout breakpoints.
+///
+/// To access the values you should use the `grav-breakpount()` function, which uses this map
+/// internally.
+///
+/// @prop {length value} small - Roughly the width of a large smartphone screen in portrait orientation
+/// @prop {length value} medium - Roughly the width or a smartphone screen in landscape orientation, or a small tablet in portrait
+/// @prop {length value} large - Roughly the width of a larger tablet in portrait
+/// @prop {length value} extra-large - Roughly the width of a laptop screen or small desktop monitor
+$grav-breakpoints: (
+  small: $grav-breakpoint-smallest,
+  medium: 44rem,
+  large: 56rem,
+  extra-large: $grav-breakpoint-largest
+);

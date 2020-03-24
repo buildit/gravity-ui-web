@@ -1,0 +1,22 @@
+////
+/// Config to select which of Gravity's out-of-the-box color scheme maps
+/// are applied to the default theme.
+///
+/// @group  colors
+////
+
+@import '../_external/gravity-particles/color-schemes';
+
+/// The name of the default color scheme that is applied to pages.
+$grav-co-scheme-default-name: 'teal-white';
+
+/// The name of the default color scheme that is applied to pages, when
+/// the user is using their system's dark mode.
+$grav-co-scheme-default-dark-name: 'teal-dark-gray';
+
+/// The name of the contrast color scheme that is applied to pages.
+$grav-co-scheme-contrast-name: 'teal-dark-gray';
+
+/// The name of the contrast color scheme that is applied to pages, when
+/// the user is using their system's dark mode.
+$grav-co-scheme-contrast-dark-name: 'teal-black';

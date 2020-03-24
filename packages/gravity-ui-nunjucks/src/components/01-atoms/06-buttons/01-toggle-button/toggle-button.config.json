@@ -1,0 +1,15 @@
+{
+  "context": {
+    "text": "Toggle something",
+    "pressed": false
+  },
+  "variants": [
+    {
+      "name": "pressed",
+      "context": {
+        "text": "Toggle something",
+        "pressed": true
+      }
+    }
+  ]
+}

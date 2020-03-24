@@ -1,0 +1,55 @@
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+
+picture {
+  // Avoid slight gap below <img> when the
+  // <picture> is display:block due to <img>
+  // being display:inline by default.
+  // (The <img> is aligned with baseline, not
+  // the bottom of the text box)
+  display: inline-block;
+
+  > img {
+    display: block;
+
+    // Avoid <img> inside <picture> having
+    // top margin applied by the * + * rule
+    margin-top: 0;
+  }
+}
+
+
+// Set default fill for inlineed SVGs.
+svg {
+  fill: currentColor;
+}
+
+/*
+  To enable recolouring of SVG symbols that get pulled in
+  via <use> we have to use CSS custom properties. This is
+  because the original SVG is essentially cloned into a
+  shadow DOM of the parent <svg> and so, you can't select
+  elements within it via CSS selectors. However, some
+  values including custom properties are inherited across
+  the shadow DOM boundary.
+*/
+// The following class names are defined in the source SVGs
+// provided by Gravity Particles and thus deviate from our
+// usual class-naming conventions:
+// stylelint-disable selector-class-pattern
+.grav-svg-hl-1 {
+  fill: var(--grav-co-svg-hl-1, currentColor);
+}
+
+.grav-svg-hl-2 {
+  fill: var(--grav-co-svg-hl-2, currentColor);
+}
+
+.grav-svg-hl-3 {
+  fill: var(--grav-co-svg-hl-3, currentColor);
+}
+// stylelint-enable selector-class-pattern

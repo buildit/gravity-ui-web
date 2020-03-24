@@ -1,0 +1,27 @@
+ul,
+ol {
+  padding-left: $grav-sp-l;
+
+  > li {
+    @media (min-width: grav-breakpoint(medium)) {
+      padding-left: $grav-sp-s;
+    }
+
+    @media (min-width: grav-breakpoint(large)) {
+      padding-left: $grav-sp-m;
+    }
+  }
+}
+
+li + li {
+  // Decrease default vertical space
+  // between successive list items
+  margin-top: $grav-sp-l;
+}
+
+li > ul,
+li > ol {
+  // Add space above nested lists and their
+  // parent list item's text
+  margin-top: $grav-sp-l;
+}

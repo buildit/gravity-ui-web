@@ -1,0 +1,186 @@
+////
+/// Space values to be used for margins, paddings, etc.
+///
+/// Inspired by posts like:
+/// * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
+///
+///
+/// @group space
+////
+
+/// Calculates a length on Gravity's spacing scale.
+///
+/// This is just a local helper function and not intended to be
+/// used outside of this file.
+///
+/// @param {number} $n - The point on Gravity's spacing scale.
+/// @return {length value} The corresponding size from Gravity's spacing scale.
+///
+/// @access private
+@function grav-sp-calc($n) {
+  $space-base-size: 1rem;
+  $space-multiplier: 2;
+
+  $result: $space-base-size;
+
+  @if $n > 0 {
+    @for $i from 1 through $n {
+      $result: $result * $space-multiplier;
+    }
+  }
+  @else if $n < 0 {
+    @for $i from $n through -1 {
+      $result: $result / $space-multiplier;
+    }
+  }
+
+  @return $result;
+}
+
+
+/* Global set of one-dimensional space sizes */
+
+/// Extra small space size.
+///
+/// @type length value
+$grav-sp-xs: grav-sp-calc(-2);
+
+/// Small space size.
+///
+/// @type length value
+$grav-sp-s: grav-sp-calc(-1);
+
+/// Medium space size.
+///
+/// @type length value
+$grav-sp-m: grav-sp-calc(0);
+
+/// Large space size.
+///
+/// @type length value
+$grav-sp-l: grav-sp-calc(1);
+
+/// Extra large space size.
+///
+/// @type length value
+$grav-sp-xl: grav-sp-calc(2);
+
+/// Extra extra large space size.
+///
+/// @type length value
+$grav-sp-xxl: grav-sp-calc(3);
+
+
+/// Global map of one-dimensional space sizes, plus zero
+///
+/// These are the same values as the corresponding `$grav-sp-*`
+/// variables. This map is for situations where you need to
+/// iterate over the available space values.
+///
+/// @type map
+$grav-sp-map: (
+  'none': 0,
+  'xs': $grav-sp-xs,
+  's': $grav-sp-s,
+  'm': $grav-sp-m,
+  'l': $grav-sp-l,
+  'xl': $grav-sp-xl,
+  'xxl': $grav-sp-xxl
+);
+
+// Global set of two-dimensional insets (typically used as padding values)
+
+/// Extra small inset.
+///
+/// Intended to be used as a value for the CSS `padding` shorthand property.
+/// Creates an even inset on all sides.
+///
+/// @type length value list
+$grav-sp-inset-xs: $grav-sp-xs $grav-sp-xs;
+
+/// Small inset.
+///
+/// Intended to be used as a value for the CSS `padding` shorthand property.
+/// Creates an even inset on all sides.
+///
+/// @type length value list
+$grav-sp-inset-s: $grav-sp-s $grav-sp-s;
+
+/// Medium inset.
+///
+/// Intended to be used as a value for the CSS `padding` shorthand property.
+/// Creates an even inset on all sides.
+///
+/// @type length value list
+$grav-sp-inset-m: $grav-sp-m $grav-sp-m;
+
+/// Large inset.
+///
+/// Intended to be used as a value for the CSS `padding` shorthand property.
+/// Creates an even inset on all sides.
+///
+/// @type length value list
+$grav-sp-inset-l: $grav-sp-l $grav-sp-l;
+
+/// Extra small squished inset.
+///
+/// Intended to be used as a value for the CSS `padding` shorthand property.
+/// Creates an inset that is wider horizontally than it is vertically. Good
+/// for inline block elements and components like buttons, chips, etc.
+///
+/// @type length value list
+$grav-sp-inset-squished-xs: $grav-sp-xs $grav-sp-s;
+
+/// Small squished inset.
+///
+/// Intended to be used as a value for the CSS `padding` shorthand property.
+/// Creates an inset that is wider horizontally than it is vertically. Good
+/// for inline block elements and components like buttons, chips, etc.
+///
+/// @type length value list
+$grav-sp-inset-squished-s: $grav-sp-s $grav-sp-m;
+
+/// Medium squished inset.
+///
+/// Intended to be used as a value for the CSS `padding` shorthand property.
+/// Creates an inset that is wider horizontally than it is vertically. Good
+/// for inline block elements and components like buttons, chips, etc.
+///
+/// @type length value list
+$grav-sp-inset-squished-m: $grav-sp-m $grav-sp-l;
+
+/// Large squished inset.
+///
+/// Intended to be used as a value for the CSS `padding` shorthand property.
+/// Creates an inset that is wider horizontally than it is vertically. Good
+/// for inline block elements and components like buttons, chips, etc.
+///
+/// @type length value list
+$grav-sp-inset-squished-l: $grav-sp-l $grav-sp-xl;
+
+/// Outer horizontal margin between page content and viewport edge on narrow
+/// viewports.
+///
+/// @type length value
+$grav-sp-page-content-inset: $grav-sp-m;
+
+/// Multiplier for ostentatious copy on `medium` and above viewports.
+///
+/// @type number
+$grav-sp-ostentatious-padding-left-multiplier: 8;
+
+/// Standard vertical gap between successive block elements.
+///
+/// Note that is expressed as an `em` value, so it will scale according to the
+/// `font-size` of the block elements it affects.
+///
+/// @type length value
+$grav-sp-vertical-gap: 1.5em;
+
+/// Larger vertical gap for use on specific block elements.
+///
+/// Note that is expressed as an `em` value, so it will scale according to the
+/// `font-size` of the block elements it affects.
+///
+/// @type length value
+$grav-sp-vertical-gap-l: 2.5em;

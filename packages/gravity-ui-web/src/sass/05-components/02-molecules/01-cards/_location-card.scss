@@ -1,0 +1,32 @@
+.grav-c-location-card {
+  @include grav-font-size(-1);
+  display: grid;
+  margin-top: $grav-sp-l;
+  grid-gap: $grav-sp-m;
+  grid-template-areas:
+    'title'
+    'info'
+    'map';
+  grid-template-columns: 1fr;
+
+  @media (min-width: grav-breakpoint(small)) {
+    grid-template-areas:
+      'title title'
+      'map info';
+    grid-template-columns: 1fr 1fr;
+  }
+
+  > h2 {
+    grid-area: title;
+  }
+
+  > p {
+    margin: 0;
+    grid-area: info;
+  }
+
+  > a {
+    margin: 0;
+    grid-area: map;
+  }
+}

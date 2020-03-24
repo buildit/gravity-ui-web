@@ -1,0 +1,27 @@
+////
+/// Stroke thicknesses and styles used for borders.
+///
+/// @group strokes
+////
+
+/// The default border style.
+$grav-st-style: solid;
+
+// Can't use grav-px2rem() function here because it gets
+// defined later, in the tools
+
+/// The default (small) border thickness.
+///
+/// @type length value
+$grav-st-thickness: 1 / 16 * 1rem; // 1px
+
+/// Medium border thickness.
+///
+/// @type length value
+$grav-st-thickness-medium: 2 / 16 * 1rem; // 2px
+
+/// Large border thickness.
+///
+/// @type length value
+$grav-st-thickness-large: 5 / 16 * 1rem; // 5px
+

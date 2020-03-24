@@ -1,0 +1,25 @@
+{
+  "context": {
+    "location": {
+      "city": "London",
+      "country": "UK",
+      "jobs": [
+        {
+          "title": "Supreme overloard of delivery",
+          "type": "full-time",
+          "url": "#"
+        },
+        {
+          "title": "UX Wizard",
+          "type": "full-time",
+          "url": "#"
+        },
+        {
+          "title": "Software guru",
+          "type": "part-time",
+          "url": "#"
+        }
+      ]
+    }
+  }
+}

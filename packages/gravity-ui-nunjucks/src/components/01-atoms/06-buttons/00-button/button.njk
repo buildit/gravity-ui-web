@@ -1,0 +1,23 @@
+{%- from '@icon' import icon -%}
+
+{# Reusable macro for other templates to import: #}
+{%- macro button(label, type, disabled, iconSymbolId, class, extraAttrs) -%}
+<button
+  {%- if class %} class="{{class}}"{%- endif -%}
+  {%- if type %} type="{{type}}"{%- endif -%}
+  {%- if disabled %} disabled{%- endif -%}
+  {%- for attr, value in extraAttrs %} {{attr}}="{{value}}"{%- endfor -%}
+>
+  {%- block buttonContent -%}
+    {%- if iconSymbolId %}
+      {{ icon(iconSymbolId) | safe }}
+    {% endif -%}
+    {{label}}
+  {%- endblock -%}
+</button>
+{%- endmacro -%}
+
+{# Example rendering: #}
+{%- block example -%}
+  {{ button(text, type, disabled, symbolId) | safe }}
+{%- endblock -%}

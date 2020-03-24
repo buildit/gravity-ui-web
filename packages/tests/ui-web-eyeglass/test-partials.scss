@@ -1,0 +1,22 @@
+// If our Eyeglass support works as expected, these @imports should resolve without errors:
+
+// === Settings layer ===
+@import 'gravity-ui-web/00-settings/settings.all';
+
+// === Tools layer ===
+@import 'gravity-ui-web/01-tools/tools.all';
+
+// === Generic layer ===
+@import 'gravity-ui-web/02-generic/generic.all';
+
+// === Elements layer ===
+@import 'gravity-ui-web/03-elements/elements.all';
+
+// === Objects layer ===
+@import 'gravity-ui-web/04-objects/objects.all';
+
+// === Components layer ===
+@import 'gravity-ui-web/05-components/components.all';
+
+// === Utilities layer ===
+@import 'gravity-ui-web/06-utilities/utilities.all';

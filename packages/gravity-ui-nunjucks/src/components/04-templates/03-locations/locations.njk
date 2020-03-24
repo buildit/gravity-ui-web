@@ -1,0 +1,12 @@
+{%- extends '@basic-page' -%}
+{%- from '@location-card' import locationCard -%}
+
+{%- block pageContent %}
+<main class="grav-o-full-bleed__content">
+  <div class="grav-o-two-column">
+    {%- for loc in locations %}
+      {{ locationCard(loc) | safe }}
+    {%- endfor %}
+  </div>
+</main>
+{%- endblock -%}

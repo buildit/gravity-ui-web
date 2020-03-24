@@ -1,0 +1,10 @@
+{%- extends '@basic-page' -%}
+
+{%- block pageContent -%}
+<main class="grav-u-mt-none">
+  {%- include '@hero' -%}
+  {%- for section in sections -%}
+    {% include '@section' %}
+  {%- endfor -%}
+</main>
+{%- endblock -%}

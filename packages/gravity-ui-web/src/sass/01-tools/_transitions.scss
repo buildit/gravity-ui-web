@@ -1,0 +1,12 @@
+////
+/// @group animation
+////
+
+/// Applies a transition to a CSS property.
+///
+/// @param {string} $property - The CSS property to apply the transition to.
+/// @param {duration} $transition-speed [$grav-tr-speed-regular] - The duration of the transition.
+/// @param {easing function} $ease [ease-out] - The CSS easing function to apply to the transition.
+@mixin grav-transition($property, $transition-speed: $grav-tr-speed-regular, $ease: ease-out) {
+  transition: $property $transition-speed $ease;
+}

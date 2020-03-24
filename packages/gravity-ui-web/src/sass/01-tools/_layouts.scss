@@ -1,0 +1,78 @@
+////
+/// @group layout
+////
+
+/// Creates a multi-column layout.
+///
+/// Note: This will apply a negative left margin, so this mixin should not
+/// be used on elements that need to set any other horizontal margin values.
+///
+/// @param {number} $column-count [2] - How many equal width columns the space
+///                       should be divided into.
+/// @param {length} $column-gap [$grav-sp-l] - The width of the gap between
+///                       columns.
+/// @param {boolean} $additive - Whether or not this layout is overriding another column
+///                       layout (for instance in a media query that is altering the number
+///                       of columns). If `true` only CSS declarations that would differ are
+///                       output. Any declarations common to any column layout are omitted.
+@mixin grav-l-column-layout($column-count: 2, $column-gap: $grav-sp-l, $additive: false) {
+  // Note: We intentionally only use left margins to create the gap between
+  // columns. This is because the container has a _negative_ left margin to
+  // cancel out the left margins of the left-most items in each row.
+  // If we had instead use right margins (or both left and right margins) and
+  // thus had a negative right margin, we might encounter overflow issues when
+  // the negative right margin extends beyond the viewport and creates horizontal
+  // scrolling.
+  // Your read more about how negative margins behave in CSS here:
+  // https://www.smashingmagazine.com/2009/07/the-definitive-guide-to-using-negative-margins/
+
+  @if not $additive {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$column-gap;
+  }
+
+  // All children start with margin on their sides
+  > * {
+    width: calc((100% - #{$column-count * $column-gap}) / #{$column-count});
+
+    @if not $additive {
+      margin-left: $column-gap;
+    }
+  }
+
+  // Select the top row's children and remove the top margin
+  > *:nth-child(-n + #{$column-count}) {
+    margin-top: 0;
+  }
+}
+
+/// Expands items in the last row of a column layout, if there aren't enough
+/// to fill all columns in that row.
+@mixin grav-l-column-no-danglies {
+  > * {
+    flex-grow: 1;
+  }
+}
+
+/// Makes an item within a "no-danglies" column layout span the full width of the parent
+/// element.
+///
+/// @param {number} $column-count [2] - The number of columns the column layout has
+///                       that this item is within.
+/// @param {length} $margin-top [$grav-sp-vertical-gap] - The size of the vertical gap
+///                       between rows in this column layout.
+@mixin grav-l-column-item-full-width($column-count: 2, $margin-top: $grav-sp-vertical-gap) {
+  flex-basis: 100%;
+
+  // Multi-column layouts remove the top margin of all items in
+  // the first row. If the item being stretched is one of those,
+  // then it will necessarily create a new row and therefore need
+  // its top margin reinstated. Likewise, subsequent items that
+  // would have otherwise been in the first row also need their
+  // top margins reinstated.
+  &:not(:first-child),
+  + :nth-child(-n + #{$column-count}) {
+    margin-top: $margin-top;
+  }
+}

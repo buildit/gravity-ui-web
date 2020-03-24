@@ -1,0 +1,43 @@
+[href].grav-c-cta {
+  @include grav-transition(color);
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: $grav-sp-inset-squished-xs;
+  border-width: 0;
+  text-decoration: none;
+  z-index: 0;
+
+  &:link {
+    color: currentColor;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:focus,
+  &:hover {
+    color: inherit;
+
+    &::after {
+      @include grav-color-apply('background-color', 'a', 'accent');
+
+      height: 100%;
+    }
+  }
+
+  &::after {
+    @include grav-color-apply('background-color', 'b', 'accent');
+
+    content: '';
+    width: 100%;
+    height: $grav-st-thickness-large;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition-duration: $grav-tr-speed-regular;
+    transition-property: height, background-color;
+    z-index: -1;
+  }
+}

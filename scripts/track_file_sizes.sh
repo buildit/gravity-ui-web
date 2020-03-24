@@ -1,6 +1,6 @@
 #!/bin/bash
 gravityDir="packages/gravity-ui-web"
-distDir="$gravityDir/dist/ui-lib"
+distDir="$gravityDir/dist"
 cdnGravityDir="gravity-ui-web"
 historyFileName="$TRAVIS_BRANCH-file-size-history.js"
 historyFile="$gravityDir/$historyFileName"
@@ -30,6 +30,6 @@ then
 
   ~/.local/bin/aws s3 cp $historyFile s3://${CDN_BUCKET}/$cdnGravityDir/$historyFileName  --region=${PROD_BUCKET_REGION}
   ~/.local/bin/aws s3 cp $reportPage s3://${CDN_BUCKET}/$cdnGravityDir/$reportPageName  --region=${PROD_BUCKET_REGION}
-else 
+else
   echo "Not tracking file size changes for this branch: $TRAVIS_BRANCH"
 fi

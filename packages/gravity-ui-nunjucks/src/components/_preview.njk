@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ _target.title }} - Buildit Gravity pattern library</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="/gravity/gravity.css" media="all" />
+    <link rel="stylesheet" href="/gravity/debug.css" media="all" />
+    <link rel="stylesheet" href="/pl-styles/pattern-scaffolding.css" media="all" />
+
+  </head>
+  <body{% if _target.context.bodyClass %} class="{{ _target.context.bodyClass }}"{% endif %}>
+
+    {% block componentPreview %}
+      {{ yield | safe }}
+    {% endblock %}
+
+    {% include '@symbols' %}
+    <script src="/gravity/gravity.js"></script>
+  </body>
+</html>
