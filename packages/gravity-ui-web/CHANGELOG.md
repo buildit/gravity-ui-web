@@ -1,3 +1,108 @@
+# [3.0.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.4...gravity-ui-web-v3.0.0) (2020-03-24)
+
+
+### Bug Fixes
+
+* **a11y:** fix article's a11y violation ([743c605](https://github.com/buildit/gravity-ui-web/commit/743c6055e989ff8d4068ca0a363019e025eb9d4f))
+* **a11y:** fix card violations ([3f4cba1](https://github.com/buildit/gravity-ui-web/commit/3f4cba14c618c96b8f42f891d21f85164421a3bb)), closes [#375](https://github.com/buildit/gravity-ui-web/issues/375)
+* **a11y:** update gravity-particles version ([b864736](https://github.com/buildit/gravity-ui-web/commit/b864736cea44ccf59e3523dc89eab1593303b67f)), closes [#387](https://github.com/buildit/gravity-ui-web/issues/387)
+* **basic card list:** changed breakpoint for two column layout ([acbe86d](https://github.com/buildit/gravity-ui-web/commit/acbe86d676e87716c214daee3ffda5bb210ed748))
+* **basic card list:** only set required margins ([62cb841](https://github.com/buildit/gravity-ui-web/commit/62cb8410735b36557c0cbe70ba06131a9fb81c3b))
+* **basic cards list:** remove whitespace on list sides ([d9e4b2a](https://github.com/buildit/gravity-ui-web/commit/d9e4b2a256de8268eecc95175bd3b6711d204e63))
+* **callout:** remove margin from list when in columns ([5d7587d](https://github.com/buildit/gravity-ui-web/commit/5d7587d3f2bb26b30dd488ddaf418cac7332c40e))
+* **callout:** tweaks layout ([af320c1](https://github.com/buildit/gravity-ui-web/commit/af320c1d5182fed60ed56893ec551de0395c0bfa))
+* **card-basic:** fixes size of picture elements ([e44da69](https://github.com/buildit/gravity-ui-web/commit/e44da690f1685125d25219ca3606c7eb2a700be2))
+* **cite:** move cite to inline text ([8d347d3](https://github.com/buildit/gravity-ui-web/commit/8d347d34b919630d1f54126d44dc1737aba092ce))
+* **container:** undoes layout regression caused by previous "fix" ([d5c86ad](https://github.com/buildit/gravity-ui-web/commit/d5c86adfd263a1c8aa3f689a6a69aa4d9add86b0))
+* **hero:** makes container overlap banner ([aef22c2](https://github.com/buildit/gravity-ui-web/commit/aef22c270ca34f07c511425a9da1ac92a62a8289))
+* **layout:** fixes broken container max-width value ([cc4f453](https://github.com/buildit/gravity-ui-web/commit/cc4f4533063d7020b93bdca691b487ad5b7d7012))
+* **layouts:** n-column layouts no longer cause horizontal scrolling ([4c18a3c](https://github.com/buildit/gravity-ui-web/commit/4c18a3c75ccd0987e2022ec399b2b090df0f541f))
+* **package.json:** web package no longer fails on test ([d8edea6](https://github.com/buildit/gravity-ui-web/commit/d8edea69b3f4198c86d56fb1497aba89e2477fca))
+* **pre elements:** ensured pre elements with lots of text can scroll ([f52b60f](https://github.com/buildit/gravity-ui-web/commit/f52b60f594e5976c215cc7731cd3c49436fc2b2c))
+* **related items:** used breakpoint code from typography changes ([0bbddb1](https://github.com/buildit/gravity-ui-web/commit/0bbddb181f867b0a1ed106ee4e3908ac5da81f9d))
+* **spacing:** added incomplete xxl spacing unit ([4c3295b](https://github.com/buildit/gravity-ui-web/commit/4c3295b5a5cd05ee3870daf9ee7b0ca4abaeee70))
+* **svg symbols:** fixes missing title IDs ([256a828](https://github.com/buildit/gravity-ui-web/commit/256a8281d1614dbcebceb8f204734cbc670fab32)), closes [#369](https://github.com/buildit/gravity-ui-web/issues/369)
+* **typography:** fixes text scaling behaviour ([6ee3f92](https://github.com/buildit/gravity-ui-web/commit/6ee3f922ec27e128f4bb9baa11e22f3fcae04222))
+
+
+### Code Refactoring
+
+* removed job list component ([b1a972f](https://github.com/buildit/gravity-ui-web/commit/b1a972f2a3867a5fb3b5be267d5d316ab2e02081))
+* **column layout:** refactored layouts to use new column layout ([c3bcfe8](https://github.com/buildit/gravity-ui-web/commit/c3bcfe8c3f84d28192587c2fbf6661148ba7658b))
+* removes clear() SASS mixin ([6df5c7f](https://github.com/buildit/gravity-ui-web/commit/6df5c7f2692f7892dfd134cd4d71e8144b305e83))
+* removes list-image-links and logo-image components ([274cf6e](https://github.com/buildit/gravity-ui-web/commit/274cf6e6765453c14a6029df66388973d95caf6d)), closes [#275](https://github.com/buildit/gravity-ui-web/issues/275)
+* removes redundant `grav-o-section` class ([027782c](https://github.com/buildit/gravity-ui-web/commit/027782cf5cb801cde27981a846c82ec3cef2059c))
+
+
+### Features
+
+* **3 column class list:** add 3 column class ([58d1294](https://github.com/buildit/gravity-ui-web/commit/58d129456383ab7d2ca97e4217fd314dbdf7bbd4))
+* **3col-list-justified:** new 3 column list with justified text ([0d345df](https://github.com/buildit/gravity-ui-web/commit/0d345df1e7c91766c96e99a4b17696ad9eef8080))
+* **a11y:** add a11y tests to Travis CI ([85778f2](https://github.com/buildit/gravity-ui-web/commit/85778f2dc521ba8afb4695db1c158ec90e413c06))
+* **articles:** new related items component ([4735694](https://github.com/buildit/gravity-ui-web/commit/4735694cd2ca135548b4296b9052beff915b1f8e))
+* **basic card:** added hover colour and svg icon treatment ([cbe7ed6](https://github.com/buildit/gravity-ui-web/commit/cbe7ed61278d565bc16ad69d5c480c8b4247dc42))
+* **basic card:** adjusted font size for copy section ([3072504](https://github.com/buildit/gravity-ui-web/commit/307250459160c25b35598821901b96f48c5f31df))
+* **basic card component:** add notch to image when card is a link ([149e539](https://github.com/buildit/gravity-ui-web/commit/149e539df12f4bfea5ff86907e4d38557e1ab8e3))
+* **basic card component:** added basic card component ([a183257](https://github.com/buildit/gravity-ui-web/commit/a183257d17642d896ef315a29c50315c379fcfc7))
+* **basic cards list:** ensured top margin is applied consistently ([e179a88](https://github.com/buildit/gravity-ui-web/commit/e179a8880ceb63e918124763bebb98a5e5f0e7f2)), closes [#174](https://github.com/buildit/gravity-ui-web/issues/174)
+* **callout:** new callout organism component ([c8a23db](https://github.com/buildit/gravity-ui-web/commit/c8a23dbfac75a9d11870015d31a56cb03ae87f98))
+* **colors:** adds dark-mode support to color system ([5d07454](https://github.com/buildit/gravity-ui-web/commit/5d07454c7362b8579cc8ebad8d7d689ee8bc1951))
+* **colors:** adds SASS vars for Wipro brand colors ([434663e](https://github.com/buildit/gravity-ui-web/commit/434663e0de43de2cd205c54d04b3c5fcd1cede48))
+* **colors:** updates mark element styling to use Gravity's color system ([d8d1d40](https://github.com/buildit/gravity-ui-web/commit/d8d1d409016b8d29c2b3b14e681900f5c3bd85f0))
+* **colors:** updates to latest Gravity particles color schemes ([db8e888](https://github.com/buildit/gravity-ui-web/commit/db8e8889f48c67c1c83a6bdf0a5e9a3aea470252))
+* **column layout:** adds mixin for full-width items ([da9506c](https://github.com/buildit/gravity-ui-web/commit/da9506c517394916247544429be3773a3a28784b))
+* **debug.css:** adds warning about invisible first-children ([3ea62ae](https://github.com/buildit/gravity-ui-web/commit/3ea62ae9c0c113f3f004485bdba90f0f22883439)), closes [#200](https://github.com/buildit/gravity-ui-web/issues/200)
+* **eslint:** moved eslint settings to a shareable config ([51339e2](https://github.com/buildit/gravity-ui-web/commit/51339e23792ae7b62e70614dafb32ab65cf490d3))
+* **hero:** new hero component ([32c6870](https://github.com/buildit/gravity-ui-web/commit/32c687031b36ce16f9bad0a04a7dbeb24f83ef7e))
+* **layout:** adds list reset mixin and classes ([7335c63](https://github.com/buildit/gravity-ui-web/commit/7335c6334f30ede9265570f85eed43a40fa5b7e6))
+* **layout:** adds sticky-footer mixin and object class ([4dcefe1](https://github.com/buildit/gravity-ui-web/commit/4dcefe18181e948adeebe6f24375db0daadfa200))
+* **layout:** makes full-bleed page layout opt-in ([a807722](https://github.com/buildit/gravity-ui-web/commit/a80772279da8fe99a75e94483d9450dddb4cfc1c))
+* **layout:** makes sticky footer default configurable ([f7276b3](https://github.com/buildit/gravity-ui-web/commit/f7276b3f8bea7e953efb24940d6a1bf98e771f58))
+* **layout:** standardises gap after page header ([c55d85c](https://github.com/buildit/gravity-ui-web/commit/c55d85c78cb8002209508e3ca999f2cef8edfd29))
+* **links:** adjusts styling of link components ([4b36fca](https://github.com/buildit/gravity-ui-web/commit/4b36fca2e470c424e583acb372f03c61b2e3f075))
+* **linting:** updates stylelint rules ([f126ab2](https://github.com/buildit/gravity-ui-web/commit/f126ab28290f7de34927f87e31745947868c910a)), closes [#245](https://github.com/buildit/gravity-ui-web/issues/245)
+* adds margin utility classes ([f8c4b9c](https://github.com/buildit/gravity-ui-web/commit/f8c4b9caa45535df74be4cabc50f52de930343d9))
+* **logotype:** changes SVG colouring and adds new logotype component ([7a2728f](https://github.com/buildit/gravity-ui-web/commit/7a2728fccc4920e583c9ad886e72432d4581fc11))
+* **typography:** implements fluid modular scale ([c122fbf](https://github.com/buildit/gravity-ui-web/commit/c122fbfcb4e082e9ef9b341fcf796d88c293b813))
+* adds optional classes for page header and footer ([e481709](https://github.com/buildit/gravity-ui-web/commit/e481709d3e05253a59653637a8d93fa9b6ac8c74)), closes [#280](https://github.com/buildit/gravity-ui-web/issues/280)
+* **ostentatious copy:** added ostentatious copy component ([9c3d60c](https://github.com/buildit/gravity-ui-web/commit/9c3d60c1dd888085741c05384f354a07165679c9))
+* **page heading:** added page heading component ([b75fca9](https://github.com/buildit/gravity-ui-web/commit/b75fca94cc7af1f73de39820a1202de65849d6c3))
+* **page-footer:** adds smart border to top of footer ([ff2e5ab](https://github.com/buildit/gravity-ui-web/commit/ff2e5ab28304f72e6e7f9de315c67ccabd14d45e))
+* **spacing settings, new padding utils:** adds padding util classes ([9cb0e94](https://github.com/buildit/gravity-ui-web/commit/9cb0e94f699e9ce160470b64d9d3ad2319d2c2f5))
+* **svg:** improves colouring of inlined SVGs ([e04da74](https://github.com/buildit/gravity-ui-web/commit/e04da7417f113cb93e6a51169a9194d29ca8219c))
+* **svg:** replaces old SVG symbols with ones from gravity-particles ([49eb3b4](https://github.com/buildit/gravity-ui-web/commit/49eb3b42eca08e388434b9a3f03ee2771581756c))
+* **transitions:** added transition mixin and updated throughout ([0d0da87](https://github.com/buildit/gravity-ui-web/commit/0d0da87864a57c1569f79ba3b8889479569ab731))
+* **two column list:** added simple two column list component ([77e41eb](https://github.com/buildit/gravity-ui-web/commit/77e41eb8a73cf4562b86b29fd9b5c4a9ea33cfc5))
+* **typography:** changes fonts to Wipro Akkurat TT family ([9fca955](https://github.com/buildit/gravity-ui-web/commit/9fca955788eb8cfb4b7a8a1430676263b0214f6f))
+* adds SASS mixins for smart borders ([603ff6c](https://github.com/buildit/gravity-ui-web/commit/603ff6ce2113fcd8f1961e248b9cdeefd2168ebf))
+* bundles external SASS libs ([bb07594](https://github.com/buildit/gravity-ui-web/commit/bb07594779d251a1373d922add0447827125fb4b))
+* improves picture element layout ([31bd6bc](https://github.com/buildit/gravity-ui-web/commit/31bd6bc750ea131d534d2ed5ff1906d1afb74f58))
+* splits templates & PL setup into own NPM package ([949ca01](https://github.com/buildit/gravity-ui-web/commit/949ca01781ef8c4f89e2c574e3c1ab9cddc269b5)), closes [#241](https://github.com/buildit/gravity-ui-web/issues/241)
+
+
+### BREAKING CHANGES
+
+* **logotype:** Page header and footer components should now use grav-c-logotype class on logotype SVG.
+* **typography:** - The 'secondary' entry has been removed from Gravy's typefaces config. Any references to the
+'secondary' typeface should therefore be replace with 'primary' instead.
+- All fonts have changed, so the visual appearance will be different. You should probably visually
+inspect your layouts to ensure nothing has broken.
+* **svg:** All symbol IDs have changed. The social media, "hollow b", Designit and Wipro Digital logos have
+been removed.
+* **layout:** grav-l-column-list mixin and grav-o-column-list class have been removed. Use grav-reset-list and
+grav-o-reset-list instead.
+* `grav-o-section` class is no longer available. Consider altering your designs or using the padding
+utility classes instead.
+* **layout:** - `<body>` now has horizontal margins, vertical padding and max-width by default. Add the `grav-o-full-bleed` class to it to restore the old behaviour.
+- `.grav-o-container` class has been removed. Use `.grav-o-full-bleed__content` class instead (within a container that has the `.grav-o-full-bleed__content` class on it).
+* **svg:** grav-c-icon class has been removed. Inlined SVGs now automatically get filled with the currentColor.
+* **column layout:** removed `two-column-text` and `two-column-block` components
+* Job List component has been removed
+* The styles for the \`.grav-c-list-image-links\` and \`.grav-c-logo-image\` classes no longer exist.
+* **typography:** Gravy and normaliz-scss libs have been removed, so all associated functions and mixins are no longer
+available
+* The clear() SASS mixin has been removed. Replace any usage of it with your own CSS clearfix.
+
 ## [2.2.4](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.3...gravity-ui-web-v2.2.4) (2020-01-08)
 
 
