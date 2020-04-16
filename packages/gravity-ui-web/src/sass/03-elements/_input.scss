@@ -3,4 +3,6 @@ input:not([type=radio]):not([type=checkbox]) {
   max-width: 40ch;
   padding-right: $grav-sp-xs;
   padding-left: $grav-sp-xs;
+  border: grav-px2rem(1) solid var(--grav-co-grp-b-neutral);
+  background-color: var(--grav-co-grp-a-neutral);
 }
