@@ -6,7 +6,8 @@
  */
 
 const excludedA11yFiles = [
-  '_preview',
+  'preview',
+  'form-input-preview',
   'symbols',
   'svg-symbols',
   'image',
