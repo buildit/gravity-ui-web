@@ -1,3 +1,15 @@
+# [3.1.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v3.0.0...gravity-ui-web-v3.1.0) (2020-05-06)
+
+
+### Bug Fixes
+
+* **input:** sets border and background using Gravity's colour system ([3da72b6](https://github.com/buildit/gravity-ui-web/commit/3da72b6273dc6fcd8c4de387fc6dc4726b68d6b1)), closes [#404](https://github.com/buildit/gravity-ui-web/issues/404)
+
+
+### Features
+
+* **textarea:** adds textarea styles ([dba6efa](https://github.com/buildit/gravity-ui-web/commit/dba6efa53d4fa3eb9a3f77582fc461b78e1682f2)), closes [#404](https://github.com/buildit/gravity-ui-web/issues/404)
+
 # [3.0.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.4...gravity-ui-web-v3.0.0) (2020-03-24)
 
 
