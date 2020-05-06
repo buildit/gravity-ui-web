@@ -1,6 +1,6 @@
 {
   "preview": "@form-input-preview",
   "context": {
-    "type": "text"
+    "inputText": "Pedantic shitpost comment goes in here"
   }
 }
