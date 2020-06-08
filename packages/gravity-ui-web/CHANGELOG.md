@@ -1,3 +1,10 @@
+## [2.3.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.4...gravity-ui-web-v2.3.0) (2020-06-08)
+
+### Features
+
+* **svg:** updates logotype to Buildit 2.0 design ([543fd39](https://github.com/buildit/gravity-ui-web/commit/543fd39))
+
+
 ## [2.2.4](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v2.2.3...gravity-ui-web-v2.2.4) (2020-01-08)
 
 
