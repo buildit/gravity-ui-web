@@ -33,7 +33,7 @@
     "url": "https://github.com/buildit/gravity-ui-web/issues"
   },
   "devDependencies": {
-    "@types/jest": "^25.1.4",
+    "@types/jest": "^26.0.0",
     "@types/node": "^14.0.1",
     "jest": "^26.0.1",
     "semantic-release": "^17.0.4",
