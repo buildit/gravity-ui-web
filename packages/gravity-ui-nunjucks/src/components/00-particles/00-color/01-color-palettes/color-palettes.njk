@@ -11,16 +11,13 @@
 </div>
 {% endmacro -%}
 
-<p><strong>Note:</strong> The following color palettes are shown for reference only. Color values should never be hard-coded in the SASS/CSS and <code>gravity-ui-web</code>'s SASS code therefore does <em>not</em> provide variables for these colors. Instead, <em>only</em> the CSS custom properties provided Gravity's color system should be referenced when applying colors to UI elements. This ensures that all UI elements work with all available color schemes.</p>
+{% for palette, colors in palettes %}
+  <h5>{{ palette }}</h5>
+  <div class="sg-color-palette">
+    {% for colorName, colorValue in colors %}
+      {{ colorSwatch(colorName, colorValue) | safe }}
+    {% endfor %}
+  </div>
+{% endfor %}
 
-{%- for brand, palettes in colors %}
-  <h4>{{ brand }}</h4>
-  {% for palette, colors in palettes %}
-    <h5>{{ palette }}</h5>
-    <div class="sg-color-palette">
-      {% for colorName, colorValue in colors %}
-        {{ colorSwatch(colorName, colorValue) | safe }}
-      {% endfor %}
-    </div>
-  {% endfor %}
-{% endfor -%}
+<p><strong>Note:</strong> These colors are shown for reference only. Color values should never be hard-coded in the SASS/CSS and <code>gravity-ui-web</code>'s SASS code therefore does <em>not</em> provide variables for these colors. Instead, <em>only</em> the CSS custom properties provided Gravity's color system should be referenced when applying colors to UI elements. This ensures that all UI elements work with all available color schemes.</p>
