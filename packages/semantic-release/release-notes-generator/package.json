@@ -4,7 +4,7 @@
   "description": "Light wrapper around @semantic-release/release-notes-generator to work with Lerna packages",
   "author": {
     "name": "Buildit | Wipro Digital",
-    "url": "http://buildit.wiprodigital.com/"
+    "url": "https://buildit.wiprodigital.com/"
   },
   "contributors": [
     "Ash Blue <ash@blueashes.com>"
