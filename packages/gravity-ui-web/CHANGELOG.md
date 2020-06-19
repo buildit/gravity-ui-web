@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v3.1.0...gravity-ui-web-v3.2.0) (2020-06-19)
+
+
+### Features
+
+* adds \`grav-u-box\` utility class ([ffdcaf4](https://github.com/buildit/gravity-ui-web/commit/ffdcaf40d5bf811508c2fd79f1e498b2cb4024aa))
+
 # [3.1.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v3.0.0...gravity-ui-web-v3.1.0) (2020-05-06)
 
 
