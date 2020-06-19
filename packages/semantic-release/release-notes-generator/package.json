@@ -4,7 +4,7 @@
   "description": "Light wrapper around @semantic-release/release-notes-generator to work with Lerna packages",
   "author": {
     "name": "Buildit | Wipro Digital",
-    "url": "http://buildit.wiprodigital.com/"
+    "url": "https://buildit.wiprodigital.com/"
   },
   "contributors": [
     "Ash Blue <ash@blueashes.com>"
@@ -33,11 +33,11 @@
     "url": "https://github.com/buildit/gravity-ui-web/issues"
   },
   "devDependencies": {
-    "@types/jest": "^25.1.4",
-    "@types/node": "^13.9.1",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.1",
     "jest": "^26.0.1",
     "semantic-release": "^17.0.4",
-    "ts-jest": "^25.2.1",
+    "ts-jest": "^26.0.0",
     "tslint": "^6.1.0",
     "typescript": "^3.8.3"
   },
