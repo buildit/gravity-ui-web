@@ -20,7 +20,7 @@
     "semantic-release": "lerna run semantic-release"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^8.3.4",
     "@commitlint/travis-cli": "^9.0.1",
     "bundlesize": "^0.18.0",
