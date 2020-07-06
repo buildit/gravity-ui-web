@@ -27,11 +27,11 @@
   },
   "homepage": "https://github.com/buildit/gravity-ui-web/tree/develop/packages/gravity-ui-web#readme",
   "devDependencies": {
-    "@buildit/gravity-ui-web": "3.0.0-alpha.10",
-    "css-loader": "^3.4.2",
-    "del-cli": "^3.0.0",
-    "node-sass": "^4.13.1",
-    "sass-loader": "^9.0.0",
-    "webpack": "^4.42.0"
+    "@buildit/gravity-ui-web": "^3.0.0",
+    "css-loader": "^3.6.0",
+    "del-cli": "^3.0.1",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.1",
+    "webpack": "^4.43.0"
   }
 }

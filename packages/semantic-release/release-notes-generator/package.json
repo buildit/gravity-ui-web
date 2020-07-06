@@ -1,6 +1,6 @@
 {
   "name": "@buildit/semantic-release-lerna-release-notes-generator",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Light wrapper around @semantic-release/release-notes-generator to work with Lerna packages",
   "author": {
     "name": "Buildit | Wipro Digital",
@@ -36,10 +36,10 @@
     "@types/jest": "^26.0.0",
     "@types/node": "^14.0.1",
     "jest": "^26.0.1",
-    "semantic-release": "^17.0.4",
+    "semantic-release": "^17.1.1",
     "ts-jest": "^26.0.0",
-    "tslint": "^6.1.0",
-    "typescript": "^3.8.3"
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.6"
   },
   "dependencies": {
     "@semantic-release/release-notes-generator": "^9.0.1"

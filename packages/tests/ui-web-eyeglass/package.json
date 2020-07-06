@@ -26,8 +26,8 @@
   },
   "homepage": "https://github.com/buildit/gravity-ui-web/tree/develop/packages/gravity-ui-web#readme",
   "devDependencies": {
-    "@buildit/gravity-ui-web": "3.0.0-alpha.10",
-    "eyeglass": "^2.4.2",
-    "node-sass": "^4.13.1"
+    "@buildit/gravity-ui-web": "^3.0.0",
+    "eyeglass": "^3.0.1",
+    "node-sass": "^4.14.1"
   }
 }
