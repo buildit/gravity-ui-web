@@ -1,3 +1,16 @@
+# [3.3.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v3.2.0...gravity-ui-web-v3.3.0) (2020-07-09)
+
+
+### Bug Fixes
+
+* fixes corrupted package-lock.json files ([7bdbdfb](https://github.com/buildit/gravity-ui-web/commit/7bdbdfbb278bf3ace2ddcdb7451580e7a79bdaa0))
+* fixes lint issues picked up by new version of ESLint ([b8eff60](https://github.com/buildit/gravity-ui-web/commit/b8eff600cf24194d7b3a201ae19e160ef82864b9))
+
+
+### Features
+
+* extends Eyeglass compatibility to cover v3.0.0 ([496f8fe](https://github.com/buildit/gravity-ui-web/commit/496f8fefbbe12eca3698e1368dac355afb18c8f2))
+
 # [3.2.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v3.1.0...gravity-ui-web-v3.2.0) (2020-06-19)
 
 
