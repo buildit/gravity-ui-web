@@ -183,7 +183,10 @@ function watchTask(done) {
   const watchers = [
     {
       name: 'SASS',
-      paths: [uiLibPaths.srcSassPath('**', '*.scss')],
+      paths: [
+        uiLibPaths.srcSassPath('**', '*.scss'),
+        gravityParticlesbldApi.distPath('scss/**/*'),
+      ],
       config: {},
       tasks: sassBuildTask,
     },
