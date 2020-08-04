@@ -89,7 +89,7 @@
   },
   "devDependencies": {
     "@buildit/eslint-config": "0.0.0",
-    "@buildit/gravity-particles": "^0.6.1",
+    "@buildit/gravity-particles": "^1.0.0",
     "@buildit/semantic-release": "0.0.0",
     "bundlesize": "^0.18.0",
     "chalk": "^3.0.0",
