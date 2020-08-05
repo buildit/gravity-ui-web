@@ -15,7 +15,8 @@ script:
   - npm run test
   - npm run test:a11y
 before_deploy:
-  - pyenv global 3.7
+  - pyenv versions
+  - pyenv global 3.7.0
   - pip3 install --user awscli
   - ./scripts/track_file_sizes.sh
 deploy:
