@@ -1,13 +1,13 @@
 /* == Styles shared by all buttons == */
 
-[type=button],
-[type=reset],
-[type=submit],
 // Button with no type attribute defaults to "submit"
+[type="button"],
+[type="reset"],
+[type="submit"],
 button:not([type]) {
   padding: $grav-sp-inset-squished-xs;
   cursor: pointer;
-  font-weight: grav-font-weight('primary', 'bold');
+  font-weight: grav-font-weight("primary", "bold");
 
   // Scale icons in buttons to match the line-height
   > .grav-c-icon {
@@ -22,56 +22,55 @@ button:not([type]) {
 
 // Applies `border`, `background-color` and `color` properties for buttons.
 @mixin grav-apply-button-colors($color-name, $is-primary) {
-  @include grav-color-apply('border-color', 'b', $color-name);
+  @include grav-color-apply("border-color", "b", $color-name);
+
   @if $is-primary {
-    @include grav-color-apply('background-color', 'b', $color-name);
-    @include grav-color-apply('color', 'a', 'neutral');
-  }
-  @else {
-    @include grav-color-apply('background-color', 'a', 'neutral');
-    @include grav-color-apply('color', 'b', $color-name, true );
+    @include grav-color-apply("background-color", "b", $color-name);
+    @include grav-color-apply("color", "a", "neutral");
+  } @else {
+    @include grav-color-apply("background-color", "a", "neutral");
+    @include grav-color-apply("color", "b", $color-name, true);
   }
 }
 
-
 @mixin grav-button-styles($is-primary, $is-toggle: false) {
-  @include grav-apply-button-colors('control', $is-primary);
+  @include grav-apply-button-colors("control", $is-primary);
 
   border-width: $grav-st-thickness;
   border-style: $grav-st-style;
 
   &:hover {
-    @include grav-apply-button-colors('control-emphasis', $is-primary);
+    @include grav-apply-button-colors("control-emphasis", $is-primary);
   }
 
   &:active {
-    @include grav-apply-button-colors('control-active', $is-primary);
+    @include grav-apply-button-colors("control-active", $is-primary);
   }
 
   @if $is-toggle {
-    &[aria-pressed=true] {
+    &[aria-pressed="true"] {
       // Same styles as :active
-      @include grav-apply-button-colors('control-active', $is-primary);
+      @include grav-apply-button-colors("control-active", $is-primary);
     }
   }
 
   &:disabled {
     &,
     &:hover {
-      @include grav-apply-button-colors('control-disabled', $is-primary);
+      @include grav-apply-button-colors("control-disabled", $is-primary);
     }
   }
 }
 
-[type=button] {
+[type="button"] {
   @include grav-button-styles(false, true);
 }
 
-[type=reset] {
+[type="reset"] {
   @include grav-button-styles(false);
 }
 
-[type=submit],
+[type="submit"],
 button:not([type]) {
   @include grav-button-styles(true);
 }

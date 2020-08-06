@@ -17,6 +17,7 @@
   @if (not map-has-key($grav-typefaces, $name)) {
     @error ('Typeface with name "#{$name}" not found');
   }
+
   @return map-get($grav-typefaces, $name);
 }
 
@@ -34,6 +35,7 @@
   @if (not map-has-key($typeface, 'weights')) {
     @error ('Typeface "#{$name}" has no weights defined');
   }
+
   $weights: map-get($typeface, 'weights');
 
   @if (not map-has-key($weights, $weight)) {
@@ -52,15 +54,17 @@
 /// @access private
 @function grav-font-size-varname-suffix($scale) {
   @if ($scale < $grav-scale-min) or ($scale > $grav-scale-max) {
-    @error '#{$scale} is not a valid point on Gravity\'s typographic scale. Valuse must be in the range from #{$grav-scale-min} to #{$grav-scale-max}.';
+    @error '#{$scale} is not a valid point on Gravity\'s typographic scale. Values must be in the range from #{$grav-scale-min} to #{$grav-scale-max}.';
   }
 
   @if $scale < 0 {
     @return 'minus-#{abs($scale)}';
   }
-  @else if $scale > 0 {
+
+  @else if $scale>0 {
     @return 'plus-#{$scale}';
   }
+
   @else {
     // No need to use the mixin, this will always be
     // 1rem
@@ -85,6 +89,7 @@
   @if (not map-has-key($typeface, 'stack')) {
     @error ('Typeface "#{$name}" has no font stack defined');
   }
+
   @return map-get($typeface, 'stack');
 }
 

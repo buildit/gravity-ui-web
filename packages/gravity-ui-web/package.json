@@ -31,7 +31,7 @@
     "bundlesize": "npm run build && bundlesize",
     "test": "npm run lint && npm run bundlesize",
     "lint": "npm run lint:js && npm run lint:style",
-    "lint:style": "stylelint 'src/sass/**/*.scss'",
+    "lint:style": "stylelint 'src/sass/**/*.scss' --fix",
     "lint:js": "eslint '**/*.js'",
     "semantic-release": "semantic-release",
     "docs": "sassdoc src/sass/ -c sassdoc-config.json",

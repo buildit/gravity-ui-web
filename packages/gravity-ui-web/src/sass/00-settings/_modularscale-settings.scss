@@ -10,25 +10,20 @@
 /// @link https://github.com/modularscale/modularscale-sass#readme Modular Scale SASS library
 ///
 /// @access private
-$modularscale: (
-
-  // Note: We must *only* alter the ratio across breakpoints here.
+$modularscale: ( // Note: We must *only* alter the ratio across breakpoints here.
   // We will be using this to generate CSS custom props for scaling
   // the base font-size
 
-  ratio: $minor-second,
+  ratio: $augmented-fourth,
   base: $grav-font-size-smallest-viewport,
 
-  $grav-breakpoint-smallest: (
-    ratio: $minor-second,
+  $grav-breakpoint-smallest: (ratio: $augmented-fourth,
     base: $grav-font-size-smallest-viewport,
   ),
 
-  $grav-breakpoint-largest: (
-    ratio: $minor-third,
+  $grav-breakpoint-largest: (ratio: $fifth,
     base: $grav-font-size-largest-viewport,
-  )
-);
+  ));
 /* stylelint-enable scss/dollar-variable-pattern */
 
 /// The lowest point on Gravity's modular scale of font sizes.

@@ -16,13 +16,13 @@ $grav-font-size-smallest-viewport: 1rem;
 /// @type length value
 ///
 /// @access private
-$grav-font-size-largest-viewport: 1.5rem;
+$grav-font-size-largest-viewport: 1.375rem;
 
 /// The default line height.
 ///
 /// @type number
-$grav-line-height: 1.5;
-
+$grav-line-height: 1.414;
+$grav-line-height-title: 1.1;
 
 /// The optimal maximum width for a line of text.
 ///
@@ -34,7 +34,7 @@ $grav-line-max-width-m: 40em;
 /// This is the font family that is applied to most UI elements.
 ///
 /// @access private
-$_grav-font-family-primary: 'Wipro Akkurat TT';
+$_grav-font-family-primary: "Helvetica Neue";
 
 /// The monospace font family.
 ///
@@ -43,8 +43,7 @@ $_grav-font-family-primary: 'Wipro Akkurat TT';
 /// `<code>`.
 ///
 /// @access private
-$_grav-font-family-mono: 'Wipro Akkurat Mono TT';
-
+$_grav-font-family-mono: "Wipro Akkurat Mono TT";
 
 /// Map of web fonts to declare in the CSS output.
 ///
@@ -61,51 +60,46 @@ $_grav-font-family-mono: 'Wipro Akkurat Mono TT';
 $grav-font-faces: (
   $_grav-font-family-primary: (
     // Light
-    300: (
-      normal: (
-        local-name: 'WiproAkkuratTT-Light',
-        base-name: 'WiproAkkuratWeb-Light'
+      300:
+      (
+        normal: (
+          local-name: "HelveticaNeueLTStd-UltLt",
+        ),
+        italic: (
+          local-name: "HelveticaNeueLTStd-UltLtIt",
+        ),
       ),
-      italic: (
-        local-name: 'WiproAkkuratTT-LightItalic',
-        base-name: 'WiproAkkuratWeb-LightItalic'
-      )
-    ),
-
     // Regular
-    normal: (
-      normal: (
-        local-name: 'WiproAkkuratTT-Regular',
-        base-name: 'WiproAkkuratWeb-Regular'
+      400:
+      (
+        normal: (
+          local-name: "HelveticaNeueLTStd-Md",
+        ),
+        italic: (
+          local-name: "HelveticaNeueLTStd-MdIt",
+        ),
       ),
-      italic: (
-        local-name: 'WiproAkkuratTT-Italic',
-        base-name: 'WiproAkkuratWeb-Italic'
-      )
-    ),
-
     // Bold
-    bold: (
-      normal: (
-        local-name: 'WiproAkkuratTT-Bold',
-        base-name: 'WiproAkkuratWeb-Bold'
+      900:
+      (
+        normal: (
+          local-name: "HelveticaNeueLTStd-Blk",
+        ),
+        italic: (
+          local-name: "HelveticaNeueLTStd-BlkIt",
+        ),
       ),
-      italic: (
-        local-name: 'WiproAkkuratTT-BoldItalic',
-        base-name: 'WiproAkkuratWeb-BoldItalic'
-      )
-    )
   ),
-
   $_grav-font-family-mono: (
     // Regular
-    normal: (
+      normal:
+      (
       normal: (
-        local-name: 'WiproAkkuratMonoTT-Regular',
-        base-name: 'WiproAkkuratMonoWeb-Regular'
-      )
-    )
-  )
+          local-name: "WiproAkkuratMonoTT-Regular",
+          base-name: "WiproAkkuratMonoWeb-Regular",
+        ),
+      ),
+  ),
 );
 
 /// The default URL path that is prefixed to font filenames.
@@ -114,8 +108,7 @@ $grav-font-faces: (
 /// `@font-face` declarations.
 ///
 /// @access private
-$grav-font-src-path: 'https://static.buildit.digital/fonts/v1.0.0';
-
+$grav-font-src-path: "https://static.buildit.digital/fonts/v1.0.0";
 
 /// Map of available typefaces.
 ///
@@ -125,17 +118,28 @@ $grav-font-src-path: 'https://static.buildit.digital/fonts/v1.0.0';
 /// @access private
 $grav-typefaces: (
   primary: (
-    stack: ($_grav-font-family-primary, 'Akkurat', 'Arial', system-ui, sans-serif),
+    stack: (
+      $_grav-font-family-primary,
+      "Helvetica Neue",
+      "Helvetica",
+      "Arial",
+      system-ui,
+      sans-serif,
+    ),
     weights: (
       light: 300,
-      regular: normal,
-      bold: bold
-    )
+      regular: 500,
+      bold: 900,
+    ),
   ),
   mono: (
-    stack: ($_grav-font-family-mono, 'Akkurat Mono', monospace),
+    stack: (
+      $_grav-font-family-mono,
+      "Akkurat Mono",
+      monospace,
+    ),
     weights: (
-      regular: normal
-    )
-  )
+      regular: normal,
+    ),
+  ),
 );

@@ -36,6 +36,7 @@
     }
 
     h1 {
+      max-width: $grav-page-content-max-width - ($container-horizontal-max-margin * 2);
       line-height: 100%;
     }
   }

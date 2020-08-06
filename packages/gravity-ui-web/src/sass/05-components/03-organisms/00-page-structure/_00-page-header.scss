@@ -7,7 +7,10 @@ $grav-page-heading-trigger-breakpoint: grav-breakpoint(medium);
 // width ($grav-page-content-max-width) themselves, where necessary.
 body > header,
 .grav-c-page-header {
+  position: sticky;
+  top: 0;
   margin-top: -1 * $grav-sp-page-content-inset;
+  z-index: 1000;
 
   > div {
     display: flex;
@@ -36,7 +39,8 @@ body > header,
       max-height: 0;
       overflow: hidden;
 
-      @media (min-width: $grav-page-heading-trigger-breakpoint) { // stylelint-disable-line max-nesting-depth
+      @media (min-width: $grav-page-heading-trigger-breakpoint) {
+        // stylelint-disable-line max-nesting-depth
         display: flex;
         max-height: none;
         overflow: visible;
@@ -47,7 +51,8 @@ body > header,
     &[aria-pressed='true'] ~ .grav-c-nav-menu {
       max-height: 100vh;
 
-      @media (min-width: $grav-page-heading-trigger-breakpoint) { // stylelint-disable-line max-nesting-depth
+      @media (min-width: $grav-page-heading-trigger-breakpoint) {
+        // stylelint-disable-line max-nesting-depth
         display: flex;
       }
     }
@@ -69,7 +74,7 @@ body > header,
     // the base font size, regardless of what the element's actual font-size is. This ensures
     // a consistent gap between the page header and the first item that follows it, regardless
     // of whether that happens to be <h1>, <p>, <main>, or anything else.
-    margin-top: calc(var(#{grav-font-size-css-propname(0)}) * #{$grav-sp-vertical-gap-l / 1em});
+    margin-top: calc(var(#{grav-font-size-css-propname(0)}) * 1.5);
   }
 }
 

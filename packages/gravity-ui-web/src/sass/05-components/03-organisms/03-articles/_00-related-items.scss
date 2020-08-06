@@ -13,9 +13,13 @@
       display: block;
     }
 
+    a {
+      @include grav-font-size(2);
+      font-weight: grav-font-weight('primary', 'bold');
+    }
+
     @media (min-width: grav-breakpoint(medium)) {
       a {
-        @include grav-font-size(4);
         display: block;
       }
     }

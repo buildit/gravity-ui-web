@@ -1,26 +1,24 @@
 {
   "context": {
-    "fonts": [
-      {
+    "fonts": [{
         "name": "primary",
-        "cssFontFamily": "Wipro Akkurat TT",
-        "weights": [
-          {
+        "cssFontFamily": "Helvetica Neue",
+        "weights": [{
             "name": "Light",
             "gravityWeight": "light",
-            "cssFontWeight": "300",
+            "cssFontWeight": "200",
             "hasItalic": true
           },
           {
             "name": "Regular",
             "gravityWeight": "regular",
-            "cssFontWeight": "normal",
+            "cssFontWeight": "400",
             "hasItalic": true
           },
           {
             "name": "Bold",
             "gravityWeight": "bold",
-            "cssFontWeight": "bold",
+            "cssFontWeight": "900",
             "hasItalic": true
           }
         ]
@@ -28,14 +26,12 @@
       {
         "name": "mono",
         "cssFontFamily": "Wipro Akkurat Mono TT",
-        "weights": [
-          {
-            "name": "Regular",
-            "gravityWeight": "regular",
-            "cssFontWeight": "normal",
-            "hasItalic": false
-          }
-        ]
+        "weights": [{
+          "name": "Regular",
+          "gravityWeight": "regular",
+          "cssFontWeight": "normal",
+          "hasItalic": false
+        }]
       }
     ]
   }

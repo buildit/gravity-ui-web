@@ -1,13 +1,7 @@
 module.exports = {
-  extends: 'stylelint-config-sass-guidelines',
-  plugins: [
-    'stylelint-scss',
-    'stylelint-order',
-  ],
-  ignoreFiles: [
-    'node_modules',
-    'src/sass/_external/**/*',
-  ],
+  extends: ['stylelint-config-sass-guidelines', 'stylelint-config-prettier'],
+  plugins: ['stylelint-scss', 'stylelint-order'],
+  ignoreFiles: ['node_modules', 'src/sass/_external/**/*'],
   rules: {
     'at-rule-name-case': 'lower',
     'color-named': 'never',
@@ -24,15 +18,12 @@ module.exports = {
       // rule already takes care of that.
       '/color$/': '/(#[a-f0-9]{3,6}|rgba?\\(.*?\\)|hsla?\\(.*?\\))/',
     },
-    indentation: 2,
+    // indentation: 2,
     'max-empty-lines': 2,
     'max-nesting-depth': 3,
     'media-feature-name-case': 'lower',
     'media-feature-name-value-whitelist': {
-      '/width$/': [
-        '/^grav-breakpoint\\(.+\\)$/',
-        '/^\\$\\w[\\w\\d-]+$/',
-      ],
+      '/width$/': ['/^grav-breakpoint\\(.+\\)$/', '/^\\$\\w[\\w\\d-]+$/'],
     },
     'no-duplicate-selectors': true,
     'no-empty-first-line': true,
@@ -125,8 +116,6 @@ module.exports = {
         ignore: ['attribute'],
       },
     ],
-    'unit-blacklist': [
-      'px', 'q', 'mm', 'cm', 'in',
-    ],
+    'unit-blacklist': ['px', 'q', 'mm', 'cm', 'in'],
   },
 };
