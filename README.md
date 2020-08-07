@@ -35,7 +35,7 @@ npm lerna:bootstrap
 
 ### Local dev
 
-Typically, updating Gravity involves changing multiple packages - e.g. adding or modifiying Nunjucks templates in `gravity-ui-nunjucks` while also editing the corresponding SASS code in `gravity-ui-web`. The most convenient way to work is therefore to run the following **in the repo's root directory**:
+Typically, updating Gravity involves changing multiple packages - e.g. adding or modifying Nunjucks templates in `gravity-ui-nunjucks` while also editing the corresponding SASS code in `gravity-ui-web`. The most convenient way to work is therefore to run the following **in the repo's root directory**:
 
 ```
 npm start
