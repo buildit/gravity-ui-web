@@ -5,14 +5,11 @@ $grav-page-heading-trigger-breakpoint: grav-breakpoint(medium);
 // is in case we want to give it any kind of full-bleed background styling.
 // The child elements within therefore need to respect the maximum content
 // width ($grav-page-content-max-width) themselves, where necessary.
-body > header,
+body>header,
 .grav-c-page-header {
-  position: sticky;
-  top: 0;
   margin-top: -1 * $grav-sp-page-content-inset;
-  z-index: 1000;
 
-  > div {
+  >div {
     display: flex;
     flex-wrap: wrap;
     padding-top: $grav-sp-m;
@@ -33,8 +30,8 @@ body > header,
     }
 
     /* stylelint-disable-next-line selector-max-compound-selectors */
-    &[aria-pressed] ~ .grav-c-nav-menu,
-    &[aria-pressed='false'] ~ .grav-c-nav-menu {
+    &[aria-pressed]~.grav-c-nav-menu,
+    &[aria-pressed='false']~.grav-c-nav-menu {
       @include grav-transition(max-height, $grav-tr-speed-slow);
       max-height: 0;
       overflow: hidden;
@@ -48,7 +45,7 @@ body > header,
     }
 
     /* stylelint-disable-next-line selector-max-compound-selectors */
-    &[aria-pressed='true'] ~ .grav-c-nav-menu {
+    &[aria-pressed='true']~.grav-c-nav-menu {
       max-height: 100vh;
 
       @media (min-width: $grav-page-heading-trigger-breakpoint) {
@@ -69,7 +66,7 @@ body > header,
   }
 
   // Special rule for adjacent elements
-  + * {
+  +* {
     // This creates a gap equivalent to $grav-sp-vertical-gap-l applied to an element that has
     // the base font size, regardless of what the element's actual font-size is. This ensures
     // a consistent gap between the page header and the first item that follows it, regardless
@@ -122,11 +119,11 @@ body > header,
 // Header within a full-bleed body, should use its DIV
 // as a content container
 /* stylelint-disable-next-line selector-no-qualifying-type */
-body.grav-o-full-bleed > header,
+body.grav-o-full-bleed>header,
 .grav-o-full-bleed .grav-c-page-header {
   margin-top: 0;
 
-  > div {
+  >div {
     @include grav-l-container;
   }
 }

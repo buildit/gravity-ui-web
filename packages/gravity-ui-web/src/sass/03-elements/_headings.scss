@@ -6,6 +6,7 @@ h5,
 h6 {
   font-weight: grav-font-weight('primary', 'bold');
   line-height: $grav-line-height-title;
+  letter-spacing: -0.025em;
 }
 
 h1 {

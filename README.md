@@ -22,16 +22,10 @@ After an initial clone, or if any of the packages' dependencies have changed you
 
 ```
 npm install
-lerna bootstrap
+npm lerna:bootstrap
 ```
 
 This will install dependencies for all packages in the repo and configure any local cross-references between them.
-
-You may need to install [Lerna](https://lerna.js.org/) globally using:
-
-```
-npm lerna:bootstrap
-```
 
 ### Local dev
 
