@@ -29,7 +29,7 @@
     margin: (-1 * $container-vertical-shift) auto 0;
     padding: $container-vertical-shift $grav-sp-m $grav-sp-m $grav-sp-m;
 
-    >* {
+    > * {
       max-width: $grav-page-content-max-width - ($container-horizontal-max-margin * 2) - ($container-horizontal-max-inset * 2);
       margin-right: auto;
       margin-left: auto;
