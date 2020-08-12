@@ -16,13 +16,13 @@ $grav-font-size-smallest-viewport: 1rem;
 /// @type length value
 ///
 /// @access private
-$grav-font-size-largest-viewport: 1.375rem;
+$grav-font-size-largest-viewport: 1.25rem;
 
 /// The default line height.
 ///
 /// @type number
 $grav-line-height: 1.414;
-$grav-line-height-title: 1.1;
+$grav-line-height-title: 1.025;
 
 /// The optimal maximum width for a line of text.
 ///
@@ -57,48 +57,30 @@ $_grav-font-family-mono: "Wipro Akkurat Mono TT";
 /// comments for the `grav-font-face()` mixin.
 ///
 /// @access private
-$grav-font-faces: (
-  $_grav-font-family-primary: (
-    // Light
-      300:
-      (
-        normal: (
-          local-name: "HelveticaNeueLTStd-UltLt",
-        ),
-        italic: (
-          local-name: "HelveticaNeueLTStd-UltLtIt",
-        ),
+$grav-font-faces: ($_grav-font-family-primary: ( // Light
+    300: (normal: (local-name: "HelveticaNeueLTStd-UltLt",
       ),
+      italic: (local-name: "HelveticaNeueLTStd-UltLtIt",
+      ),
+    ),
     // Regular
-      400:
-      (
-        normal: (
-          local-name: "HelveticaNeueLTStd-Md",
-        ),
-        italic: (
-          local-name: "HelveticaNeueLTStd-MdIt",
-        ),
+    400: (normal: (local-name: "HelveticaNeueLTStd-Md",
       ),
+      italic: (local-name: "HelveticaNeueLTStd-MdIt",
+      ),
+    ),
     // Bold
-      900:
-      (
-        normal: (
-          local-name: "HelveticaNeueLTStd-Blk",
-        ),
-        italic: (
-          local-name: "HelveticaNeueLTStd-BlkIt",
-        ),
+    900: (normal: (local-name: "HelveticaNeueLTStd-Blk",
       ),
+      italic: (local-name: "HelveticaNeueLTStd-BlkIt",
+      ),
+    ),
   ),
-  $_grav-font-family-mono: (
-    // Regular
-      normal:
-      (
-      normal: (
-          local-name: "WiproAkkuratMonoTT-Regular",
-          base-name: "WiproAkkuratMonoWeb-Regular",
-        ),
+  $_grav-font-family-mono: ( // Regular
+    normal: (normal: (local-name: "WiproAkkuratMonoTT-Regular",
+        base-name: "WiproAkkuratMonoWeb-Regular",
       ),
+    ),
   ),
 );
 
@@ -116,30 +98,23 @@ $grav-font-src-path: "https://static.buildit.digital/fonts/v1.0.0";
 /// SASS functions.
 ///
 /// @access private
-$grav-typefaces: (
-  primary: (
-    stack: (
-      $_grav-font-family-primary,
+$grav-typefaces: (primary: (stack: ($_grav-font-family-primary,
       "Helvetica Neue",
       "Helvetica",
       "Arial",
       system-ui,
       sans-serif,
     ),
-    weights: (
-      light: 300,
+    weights: (light: 300,
       regular: 500,
       bold: 900,
     ),
   ),
-  mono: (
-    stack: (
-      $_grav-font-family-mono,
+  mono: (stack: ($_grav-font-family-mono,
       "Akkurat Mono",
       monospace,
     ),
-    weights: (
-      regular: normal,
+    weights: (regular: normal,
     ),
   ),
 );
