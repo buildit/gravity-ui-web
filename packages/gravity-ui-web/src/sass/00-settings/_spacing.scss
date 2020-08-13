@@ -19,15 +19,16 @@
 /// @access private
 @function grav-sp-calc($n) {
   $space-base-size: 1rem;
-  $space-multiplier: 2;
+  $space-multiplier: 1.3;
 
   $result: $space-base-size;
 
-  @if $n > 0 {
+  @if $n>0 {
     @for $i from 1 through $n {
       $result: $result * $space-multiplier;
     }
   }
+
   @else if $n < 0 {
     @for $i from $n through -1 {
       $result: $result / $space-multiplier;
@@ -78,15 +79,13 @@ $grav-sp-xxl: grav-sp-calc(3);
 /// iterate over the available space values.
 ///
 /// @type map
-$grav-sp-map: (
-  'none': 0,
-  'xs': $grav-sp-xs,
-  's': $grav-sp-s,
-  'm': $grav-sp-m,
-  'l': $grav-sp-l,
-  'xl': $grav-sp-xl,
-  'xxl': $grav-sp-xxl
-);
+$grav-sp-map: ('none': 0,
+'xs': $grav-sp-xs,
+'s': $grav-sp-s,
+'m': $grav-sp-m,
+'l': $grav-sp-l,
+'xl': $grav-sp-xl,
+'xxl': $grav-sp-xxl);
 
 // Global set of two-dimensional insets (typically used as padding values)
 
@@ -175,7 +174,7 @@ $grav-sp-ostentatious-padding-left-multiplier: 8;
 /// `font-size` of the block elements it affects.
 ///
 /// @type length value
-$grav-sp-vertical-gap: 1.5em;
+$grav-sp-vertical-gap: 0.75em;
 
 /// Larger vertical gap for use on specific block elements.
 ///
@@ -183,4 +182,4 @@ $grav-sp-vertical-gap: 1.5em;
 /// `font-size` of the block elements it affects.
 ///
 /// @type length value
-$grav-sp-vertical-gap-l: 2.5em;
+$grav-sp-vertical-gap-l: 1.5em;

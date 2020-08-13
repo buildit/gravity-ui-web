@@ -11,6 +11,7 @@
     "lerna:bootstrap": "lerna bootstrap",
     "commit": "git-cz",
     "lint": "lerna run lint",
+    "stylelint-check": "stylelint-config-prettier-check",
     "test": "lerna run test",
     "test:a11y": "lerna run test:a11y",
     "build": "lerna run build",
@@ -29,7 +30,9 @@
     "del-cli": "^3.0.1",
     "file-size-report": "^1.0.2",
     "husky": "^4.2.5",
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2"
   },
   "config": {
     "commitizen": {

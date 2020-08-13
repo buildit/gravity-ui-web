@@ -15,7 +15,8 @@ script:
   - npm run test
   - npm run test:a11y
 before_deploy:
-  - pyenv global 3.7
+  - pyenv versions
+  - pyenv global 3.7.1
   - pip3 install --user awscli
   - ./scripts/track_file_sizes.sh
 deploy:
@@ -56,6 +57,7 @@ deploy:
       branch: master
 notifications:
   slack:
+    if: branch in (master, develop, next)
     rooms:
       - secure: DTS+4w2beFCJ3byMW/YbYY69P5YDkou7fIf3h+mlLjIh3w8NBt7S2FOnoLwP/uRp271IcxobYlClQy51w+RVYlydo6Vap527x0bOycGbvL0KAB407nrslepqAzg2kGRp8YIk4HSu3O6s/ThJDigVXZG20trxJkX+/FF0HW5pUmb2ZngzXDqGKZC7Iqrm0cunIOoJYbHhLdHNm+Loc/czDvMxSSkyjVs4DpSukuarTSR60m0mhvLtBCXY8/FknNhuuAo5ir2nBGaN7aY1wwpcIucP5yxNjL1jB+dQuvZgRChTRPMUWZS3xA0jLycq8yjjDehxMUXwT5sxuDI/6irtu1kNGKCUxNF93tG9alWpB6P9MMRmh78lyKp4kraSeuqbrbN/Py6AUkCa1MZ4aQ/FkgXrv3aazDhJSCNTBD/yW/zh39nUYalVCyyJvX/RTB7z1s+y5Kqh7rAesSV0teSpjhvZC4+KyOXuyuihonexXTOk3GzCf7RNlyA1jegmJROBwfhXIEmFPhUAJkJRp4kaXao1O+2TKRlOOn4+Mwca+QDSLI+CmQRTZ5oqvRm11Mu/HxuJoB/7r56T6VPpdHtAi1vSQRkwrTz4ef89II6MUg7lpxl+VlI5I0Oycnuz/psFJJ2rSmnoggKuUCOagorahquDITUMIP8+9TB8dv2qCUg=
     on_pull_requests: false

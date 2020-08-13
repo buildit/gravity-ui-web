@@ -29,6 +29,24 @@
 // Styling for bare HTML elements (like H1, A, etc.).
 // These come with default styling from the browser so we can redefine them here.
 
+a[href] {
+  &:link {
+    @include grav-color-apply('color', 'b', 'control');
+  }
+
+  &:visited {
+    @include grav-color-apply('color', 'b', 'control-alt');
+  }
+
+  &:hover,
+  &:focus {
+    @include grav-color-apply('color', 'b', 'control-emphasis');
+  }
+
+  &:active {
+    @include grav-color-apply('color', 'b', 'control-active');
+  }
+}
 
 // === Objects layer ===
 // Class-based selectors which define undecorated design patterns, for example

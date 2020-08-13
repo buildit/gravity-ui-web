@@ -8,7 +8,6 @@ const rename = require('gulp-rename');
 const file = require('gulp-file');
 const jsonEditor = require('gulp-json-editor');
 const startCase = require('lodash.startcase');
-const { colors } = require('@buildit/gravity-particles');
 const uiLibPaths = require('@buildit/gravity-ui-web/build-api.js');
 const pkgPaths = require('../paths.js');
 const colorSchemeTables = require('./color-scheme-tables.js');
@@ -126,30 +125,6 @@ function watchSvgSymbolsInfo(done) {
 watchSvgSymbolsInfo.displayName = `${taskNamePrefix}symbols-info:watch`;
 watchSvgSymbolsInfo.description = 'Watches for changes to Gravity SVG symbols info file';
 
-// ==== Tasks for: Gravity color palette data ====
-
-const generatedColorPalettesDataFilename = 'color-palettes.config.json';
-function generatedColorPalettesDataPath(...segments) {
-  return pkgPaths.srcComponentsPath('00-particles', '00-color', '01-color-palettes', ...segments);
-}
-
-generatedFileGlobs.push(generatedColorPalettesDataPath(generatedColorPalettesDataFilename));
-
-function createColorPaletteData() {
-  const colorPalettesData = {};
-  colorPalettesData.context = {};
-  colorPalettesData.context.colors = colors;
-
-  return file(
-    generatedColorPalettesDataFilename,
-    JSON.stringify(colorPalettesData, null, 2),
-    { src: true },
-  )
-    .pipe(gulp.dest(generatedColorPalettesDataPath()));
-}
-createColorPaletteData.displayName = `${taskNamePrefix}color-palette-data`;
-createColorPaletteData.description = 'Creates a color palette JSON file in the patterns folder.';
-
 // ==== Tasks for: Gravity color schemes data ====
 
 const generatedColorSchemeDataFilename = 'color-schemes.config.json';
@@ -185,7 +160,7 @@ module.exports = {
   createSvgSymbolsInfoPlaceholder,
   watchSvgSymbolsInfo,
 
-  createColorPaletteData,
+  // createColorPaletteData,
   createColorSchemeData,
 
   placeholderTask: gulp.parallel(

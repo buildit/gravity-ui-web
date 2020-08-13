@@ -33,7 +33,7 @@
 
   // Increase gap between last internal link and first
   // external link
-  li:not(#{&}__external-link) + li#{&}__external-link {
+  li:not(#{&}__external-link)+li#{&}__external-link {
     margin-top: $grav-sp-m;
 
     @media (min-width: $trigger-breakpoint) {

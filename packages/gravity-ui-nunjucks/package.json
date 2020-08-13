@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@buildit/eslint-config": "0.0.0",
-    "@buildit/gravity-particles": "^0.6.1",
+    "@buildit/gravity-particles": "^1.0.0",
     "@buildit/gravity-ui-web": "^3.0.0",
     "@buildit/semantic-release": "0.0.0",
     "@frctl/fractal": "^1.3.0",
