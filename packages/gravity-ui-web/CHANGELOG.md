@@ -1,3 +1,21 @@
+# [3.4.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v3.3.0...gravity-ui-web-v3.4.0) (2020-08-13)
+
+
+### Bug Fixes
+
+* **autolinting:** linting fixes ([5b881c5](https://github.com/buildit/gravity-ui-web/commit/5b881c54858af4bab88bc579385504abcece7c5a))
+* **correct font-weight:** update font-weight from 500 to 400 for nicer text ([2c9b785](https://github.com/buildit/gravity-ui-web/commit/2c9b78542fb4fa625c167f9415cf1abf3c0e7fef))
+* **update based on pr feedback:** spoke to mr nash, he was correct about everything ([3593437](https://github.com/buildit/gravity-ui-web/commit/35934372c98a5465bd22ec8902cefdf2da9b2477))
+
+
+### Features
+
+* switches default colour schemes to Buildit 2.0 ones ([ab4558f](https://github.com/buildit/gravity-ui-web/commit/ab4558ffc2e3f8db94c0edfb24f7cb6b97561ad5))
+* upgrades to new Gravity Particles v1.0.0 ([be70998](https://github.com/buildit/gravity-ui-web/commit/be70998fde05ffb31644699c9747a9e84fa94286))
+* **allow hosted fonts:** re-add urls for hosted fonts ([bb85896](https://github.com/buildit/gravity-ui-web/commit/bb85896d2976c08098202eb75a98fa436397061f))
+* **tighten titles:** made the titles closer both vertically and horizontally ([8afd511](https://github.com/buildit/gravity-ui-web/commit/8afd511e943a0d194b90683e8892f69b944bda80))
+* **update fonts and spacing:** buildit brand guidelines have changed - these changes reflect those ([24ab364](https://github.com/buildit/gravity-ui-web/commit/24ab3640b5b1143adff957d467e7667adef75035))
+
 # [3.3.0](https://github.com/buildit/gravity-ui-web/compare/gravity-ui-web-v3.2.0...gravity-ui-web-v3.3.0) (2020-07-09)
 
 
