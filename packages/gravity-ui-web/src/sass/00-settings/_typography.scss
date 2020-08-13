@@ -59,20 +59,26 @@ $_grav-font-family-mono: "Wipro Akkurat Mono TT";
 /// @access private
 $grav-font-faces: ($_grav-font-family-primary: ( // Light
     300: (normal: (local-name: "HelveticaNeueLTStd-UltLt",
+        base-name: "HelveticaNeueLTStd-UltLt"
       ),
       italic: (local-name: "HelveticaNeueLTStd-UltLtIt",
+        base-name: "HelveticaNeueLTStd-UltLtIt"
       ),
     ),
     // Regular
     400: (normal: (local-name: "HelveticaNeueLTStd-Md",
+        base-name: "HelveticaNeueLTStd-Md"
       ),
       italic: (local-name: "HelveticaNeueLTStd-MdIt",
+        base-name: "HelveticaNeueLTStd-MdIt"
       ),
     ),
     // Bold
     900: (normal: (local-name: "HelveticaNeueLTStd-Blk",
+        base-name: "HelveticaNeueLTStd-Blk"
       ),
       italic: (local-name: "HelveticaNeueLTStd-BlkIt",
+        base-name: "HelveticaNeueLTStd-BlkIt"
       ),
     ),
   ),

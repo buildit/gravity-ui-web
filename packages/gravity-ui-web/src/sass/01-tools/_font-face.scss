@@ -22,7 +22,7 @@
 
   @for $i from 2 to length($local-names)+1 {
     $output: $output,
-      local('#{nth($local-names, $i)}');
+    local('#{nth($local-names, $i)}');
   }
 
   @return $output;
@@ -59,8 +59,8 @@
     font-family: '#{$font-family}';
     font-style: $font-style;
     font-weight: $font-weight;
-    src: grav-format-local-names($local-names);
-    // url('#{$src-path}/#{$src-basename}.woff2') format('woff2'),
-    // url('#{$src-path}/#{$src-basename}.woff') format('woff');
+    src: grav-format-local-names($local-names),
+    url('#{$src-path}/#{$src-basename}.woff2') format('woff2'),
+    url('#{$src-path}/#{$src-basename}.woff') format('woff');
   }
 }
