@@ -1,6 +1,7 @@
 .grav-c-nav-link {
   display: inline-block;
   padding: $grav-sp-inset-squished-xs;
+  font-weight: grav-font-weight('primary', 'bold');
   text-decoration: none;
   white-space: nowrap;
 

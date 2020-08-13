@@ -32,11 +32,13 @@
 @function grav-side-suffixes($sides: ()) {
   $valid-sides: top left bottom right inline-start inline-end block-start block-end;
 
-  @if length($sides) == 0 {
+  @if length($sides)==0 {
     @return ('');
   }
+
   @else {
     $side-suffixes: ();
+
     @each $side in $sides {
       @if not index($valid-sides, $side) {
         @error '"#{$side}" is not a valid side name in CSS.';
@@ -44,6 +46,7 @@
 
       $side-suffixes: append($side-suffixes, -#{$side});
     }
+
     @return $side-suffixes;
   }
 }
@@ -74,17 +77,19 @@
 /// @param {string} $color-b-purpose [neutral] - One of Gravity's group B color purposes.
 /// @param {boolean} $smart [true] - Whether or not to generate "smart" borders.
 @mixin grav-border($sides: (), $thickness: $grav-st-thickness, $style: $grav-st-style, $color-b-purpose: 'neutral', $smart: true) {
+
   // Apply the specified borders
   @each $side-suffix in grav-side-suffixes($sides) {
     border#{$side-suffix}-width: $thickness;
     border#{$side-suffix}-style: $style;
-    @include grav-color-apply(border#{$side-suffix}-color , 'b', $color-b-purpose);
+    @include grav-color-apply(border#{$side-suffix}-color, 'b', $color-b-purpose);
   }
 
   @if $smart {
+
     // Set the borders to transparent when a color scheme class is
     // applied to the element.
-    &[class*=grav-u-color-scheme-] {
+    &[class*='grav-u-color-scheme-'] {
       @each $side-suffix in grav-side-suffixes($sides) {
         border#{$side-suffix}-color: var(--grav-co-transparent);
       }
@@ -121,7 +126,7 @@
   }
 
   @each $side-suffix in grav-side-suffixes($sides) {
-    @if $padding-remainder > 0 {
+    @if $padding-remainder>0 {
       padding#{$side-suffix}: $padding-remainder;
     }
   }
