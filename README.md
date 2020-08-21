@@ -55,7 +55,7 @@ npm run commit
 ## Releases
 
 This project is a [Lerna](https://lernajs.io/) monorepo composed of several sub-packages. Everything is binded
-together with a custom [Semantic Release](https://github.com/semantic-release/semantic-release) pipeline configuration, which enables our CI to automatically make releases whenever changes are merged into the `master` branch.
+together with a custom [Semantic Release](https://github.com/semantic-release/semantic-release) pipeline configuration, which enables our CI to automatically make releases whenever changes are merged into the `master` branch. To use the newly created release simply point **your** app's package.json to use the new version that's just been created.
 
 ## Further reading
 
