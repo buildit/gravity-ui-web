@@ -39,7 +39,7 @@
     "semantic-release": "^17.1.1",
     "ts-jest": "^26.0.0",
     "tslint": "^6.1.2",
-    "typescript": "^3.9.6"
+    "typescript": "^4.0.5"
   },
   "dependencies": {
     "@semantic-release/commit-analyzer": "^8.0.1"
