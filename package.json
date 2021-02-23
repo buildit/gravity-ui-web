@@ -28,7 +28,7 @@
     "cz-lerna-changelog": "^2.0.3",
     "del-cli": "^3.0.1",
     "file-size-report": "^1.0.2",
-    "husky": "^4.2.5",
+    "husky": "^5.1.1",
     "lerna": "^3.22.1"
   },
   "config": {
