@@ -30,7 +30,7 @@
     "@buildit/gravity-ui-web": "^3.0.0",
     "css-loader": "^4.0.0",
     "del-cli": "^3.0.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "sass-loader": "^9.0.1",
     "webpack": "^4.43.0"
   }
